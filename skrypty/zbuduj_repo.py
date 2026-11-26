@@ -73,9 +73,9 @@ MAXB_CSV = MAXB
 MAX_PNG_DIR = 40          # katalog z wiecej png = klatki animacji -> nie do repo
 SKIP_DIRS = {"__pycache__", ".mplconfig", ".venv", "venv", "site-packages", "node_modules", "compiled", ".git",
              "profile", "qa_browser_profile", "_backup", "backups", "render", "frames", "klatki"}
-SKIP_DIR_RE = re.compile(r"(_qa_|_qa$|^qa_|_cache$|snapshots|deps|dependencies|site.packages|^lib$|^Lib$|browser_profile|^render_|^frames|^klatki|^backup|_backup$)", re.I)
+SKIP_DIR_RE = re.compile(r"(chrome-profile|dashboard_test|verify_profile|shared_proto_db|^Default$|_qa_|_qa$|^qa_|_cache$|snapshots|deps|dependencies|site.packages|^lib$|^Lib$|browser_profile|^render_|^frames|^klatki|^backup|_backup$)", re.I)
 SKIP_NAME = re.compile(r"(^residual_|hash_cache\.json|\.stale\.|_before_|\.przed_|\.lock$|AGENTS\.md|\.pyc$|\.class$)", re.I)
-SECRET_RE = re.compile(r"(podkey|pod_key|POD[_ ]?KEY|licen[cs]e[_ ]?key|api[_-]?key|token|password|haslo)\s*[:=]", re.I)
+SECRET_RE = re.compile(r"(AIza[0-9A-Za-z_-]{35}|podkey|pod_key|POD[_ ]?KEY|licen[cs]e[_ ]?key|api[_-]?key|token|password|haslo)\s*[:=]", re.I)
 
 def excluded(rel, excl):
     s = rel.as_posix()
