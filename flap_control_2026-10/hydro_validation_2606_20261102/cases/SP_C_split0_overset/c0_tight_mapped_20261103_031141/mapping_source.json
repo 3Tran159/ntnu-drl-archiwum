@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-03T03:09:31.677781+01:00",
+  "method": "Supported STAR restart using XYZ table of initial dependent variables. Only active source volume cells; no pressure/velocity clipping, no averaging, no coordinate changes.",
+  "source_checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+  "source_checkpoint_sha256": "932e6c274be656cdfab3c5d19c78c5f5d6f1fda8d3226b9633e950c3b637ee18",
+  "source_native_iteration": 1850,
+  "source_physical_time_s": 0,
+  "source_scientific_approved": false,
+  "source_purpose": "Numerically healthy first-order recovery field, not validated hydrodynamic data",
+  "inputs": {
+    "Background": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\Background_final_volume.csv",
+      "sha256": "95c58fcfbb8ac56442eca6f716ad114cd525902ed3a8dc2b4c301fcdacc6fdea"
+    },
+    "FlapOverset": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\FlapOverset_final_volume.csv",
+      "sha256": "a64b476e3d994d2d8f0be53db794756d6638b5e3356eee527c56ebb37f737799"
+    }
+  },
+  "rows": 372961,
+  "duplicate_positions": 0,
+  "columns_units": {
+    "X": "m",
+    "Y": "m",
+    "Z": "m",
+    "pressure": "Pa piezometric",
+    "ux": "m/s",
+    "uy": "m/s",
+    "uz": "m/s",
+    "k": "J/kg",
+    "omega": "1/s"
+  },
+  "source_max_speed_m_s": 21.80608816101449,
+  "source_pressure_range_Pa": [
+    -86802.54048182115,
+    166209.4074968216
+  ],
+  "source_k_range": [
+    4.888985709781648e-08,
+    2.0514398557991864
+  ],
+  "source_omega_range": [
+    2.589196258345695,
+    80445502.37384287
+  ],
+  "table": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\initialization\\c0_tight_from_flux1850\\warm_fields.csv",
+  "table_sha256": "0ea7c187f92634a10e57a30ad0b9f0a7c1ff96fb6133850d102a24ccecf621cd",
+  "table_bytes": 65347161,
+  "native_mapping_run": false,
+  "scientific_approved": false
+}

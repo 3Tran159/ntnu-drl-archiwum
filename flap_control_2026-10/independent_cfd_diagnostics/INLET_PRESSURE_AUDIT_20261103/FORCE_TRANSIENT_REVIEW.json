@@ -1,0 +1,48 @@
+{
+  "quantitative_static_acceptance": false,
+  "reason": "U remains time-dependent; forces and CD are still drifting. Initial saved forces match exactly. No static data point has been accepted.",
+  "values": {
+    "CL_hydro": {
+      "initial": 0.3206861558619269,
+      "final": 0.3224810376808079,
+      "change_percent": 0.5597004379739376,
+      "last25_vs_previous25_drift_percent": 0.13859500552454396,
+      "last25_range_percent": 0.4611039786240511
+    },
+    "CD": {
+      "initial": 0.007155867131695475,
+      "final": 0.0078138434748828,
+      "change_percent": 9.194921189536236,
+      "last25_vs_previous25_drift_percent": 2.777013883433082,
+      "last25_range_percent": 1.9782995722540948
+    },
+    "Mh_Nm": {
+      "initial": -11.778200215235007,
+      "final": -11.867038707149351,
+      "change_percent": -0.7542620289255477,
+      "last25_vs_previous25_drift_percent": 0.026660058122084235,
+      "last25_range_percent": 0.3580006176905671
+    }
+  },
+  "velocity_propagation": {
+    "first_inlet_layer": {
+      "cells": 105,
+      "mean_u_m_s": 17.79677810736156,
+      "min_u_m_s": 17.796426858237037,
+      "max_u_m_s": 17.799016215896916
+    },
+    "inlet_5m": {
+      "cells": 2636,
+      "mean_u_m_s": 17.81589038697358,
+      "min_u_m_s": 17.796426858237037,
+      "max_u_m_s": 17.995662345341323
+    },
+    "upstream_near_foil": {
+      "cells": 743,
+      "mean_u_m_s": 17.92529129408803,
+      "min_u_m_s": 17.721623702611197,
+      "max_u_m_s": 18.127854879614784
+    }
+  },
+  "preserved_force_gate": "After U reaches10 and at each static point: minimum200holdsteps; adjacent25-step windows, drift<0.5%,range<1%,last25 residual pass; two consecutive checks; max750holdsteps thenHOLD."
+}

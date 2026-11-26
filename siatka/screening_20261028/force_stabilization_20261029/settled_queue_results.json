@@ -1,0 +1,89 @@
+[
+  {
+    "id": "M03_until_settled_r1",
+    "status": "completed",
+    "acceptance": {
+      "status": "settled",
+      "criterion": "Both adjacent 0.2 s window means change by less than 0.5%; user accepted this criterion without an extra confirmation window.",
+      "physical_time_s": 1.7159999999999218,
+      "window_mean_shift_pct": {
+        "CD": -0.11277598520616061,
+        "CL_total": 0.1489488797093752
+      },
+      "windows": [
+        {
+          "start": 1.3159999999999217,
+          "end": 1.5159999999999219,
+          "n": 200,
+          "CD": {
+            "mean": 0.016641462389869556,
+            "rms_fluctuation": 6.749735254994135e-06,
+            "range": 2.3253042588992218e-05,
+            "drift_endpoints_pct": -0.13965273406761816
+          },
+          "CL_total": {
+            "mean": 0.29652486675922823,
+            "rms_fluctuation": 0.000157027446361901,
+            "range": 0.0005436567684192761,
+            "drift_endpoints_pct": 0.1833427241232735
+          },
+          "pressure_drag_N": {
+            "mean": 53.17267119546776,
+            "rms_fluctuation": 0.021878100611832974,
+            "range": 0.07535804053577522,
+            "drift_endpoints_pct": -0.14153425871143588
+          },
+          "viscous_drag_N": {
+            "mean": 10.990151194913315,
+            "rms_fluctuation": 0.00414635042502327,
+            "range": 0.014347589709545971,
+            "drift_endpoints_pct": -0.13054952070346962
+          }
+        },
+        {
+          "start": 1.5159999999999219,
+          "end": 1.7159999999999218,
+          "n": 200,
+          "CD": {
+            "mean": 0.016622694816706668,
+            "rms_fluctuation": 4.378874580346718e-06,
+            "range": 1.4987495784688637e-05,
+            "drift_endpoints_pct": -0.09005451720965471
+          },
+          "CL_total": {
+            "mean": 0.2969665372263258,
+            "rms_fluctuation": 0.00010406413826731829,
+            "range": 0.0003595330601267599,
+            "drift_endpoints_pct": 0.12106854310415134
+          },
+          "pressure_drag_N": {
+            "mean": 53.11155559442098,
+            "rms_fluctuation": 0.014366971983437992,
+            "range": 0.04914908476636981,
+            "drift_endpoints_pct": -0.09224900834804983
+          },
+          "viscous_drag_N": {
+            "mean": 10.97890654087326,
+            "rms_fluctuation": 0.002516358263307557,
+            "range": 0.008721472899306804,
+            "drift_endpoints_pct": -0.07943844741584893
+          }
+        }
+      ],
+      "source_completion_status": "stopped_by_marker"
+    }
+  },
+  {
+    "id": "M02_until_settled_r1",
+    "status": "completed",
+    "returncode": 0,
+    "elapsed_wall_s": 361.92774748802185,
+    "completed": {
+      "steps": 200,
+      "time_s": 1.3999999999999566,
+      "status": "stabilized",
+      "solver_wall_s": 212.622422
+    },
+    "original_unchanged": true
+  }
+]

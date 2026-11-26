@@ -1,0 +1,39 @@
+{
+  "folder": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\geometry\\gap_002500um",
+  "native_source": "NACA 66-012 modified from protected native C01 geometry",
+  "nominal_chord_m": 1.19,
+  "hinge_x_m": 0.952,
+  "hinge_z_m": 0.02128173276776986,
+  "hinge_axis": [
+    0,
+    1,
+    0
+  ],
+  "hinge_fraction": 0.8,
+  "gap_m": 0.0025,
+  "nose_radius_m": 0.03510113219921941,
+  "span_m": 0.02,
+  "boolean_tool_span_m": 0.04,
+  "native_profile_points": 575,
+  "main_area_m2": 0.10619978819242386,
+  "flap_area_m2": 0.009330092384759108,
+  "intact_area_m2": 0.11578979531563005,
+  "min_clearance_m": 0.0024971687561083033,
+  "tested_angle_step_deg": 0.1,
+  "parts_surface_triangle_counts": {
+    "Hydro_Main": {
+      "SpanCaps": 1212,
+      "NativeSkin": 998,
+      "HingeArc": 218
+    },
+    "Hydro_Flap": {
+      "SpanCaps": 404,
+      "NativeSkin": 150,
+      "HingeArc": 258
+    },
+    "Hydro_Intact": {
+      "SpanCaps": 1146,
+      "NativeSkin": 1150
+    }
+  }
+}

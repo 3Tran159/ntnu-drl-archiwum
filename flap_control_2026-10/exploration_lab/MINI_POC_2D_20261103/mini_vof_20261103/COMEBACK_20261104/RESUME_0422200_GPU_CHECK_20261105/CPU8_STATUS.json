@@ -1,0 +1,91 @@
+{
+  "operation": "HOLD_FIXED_GATE",
+  "production_checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_180821\\FINAL.sim",
+  "production_time_s": 0.5787999999999689,
+  "cpu2_solver_s": 1.5940205,
+  "cpu2_wall_s": 2.5209919,
+  "cpu8_indices": [
+    0,
+    1,
+    10,
+    11,
+    12,
+    13,
+    22,
+    23
+  ],
+  "cpu8_result": {
+    "status": "NUMERICAL_END_PASS",
+    "samples": 25,
+    "startup_s": 135.9934303,
+    "solver_step_median_s": 1.21717035,
+    "solver_step_mean_s": 1.447912035,
+    "end_to_end_s": 312.7732106999997,
+    "dt_s": 0.0002,
+    "checkpoint_sha256_input": "23aa5fe5ef977701e6e9cbd929fb0c71062aa0eed0a598ce247c83a301a2299f",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_BENCH_CPU8_20261105_180019\\FINAL.sim",
+    "checkpoint_sha256": "9b698048e7470f5e3f76b2e8baf594b989eace8958401a090bcd74fa3b475681",
+    "state": {
+      "foil": true,
+      "status": "NUMERICAL_END_PASS",
+      "amplitude_target": 0.0,
+      "training_approved": false,
+      "reason": "",
+      "residual_pass": true,
+      "solver_seconds": 35.115915799999996,
+      "time_s": 0.4271999999999856,
+      "steps": 25
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "cpu8_wall_s": 2.2013564,
+  "max_relative_differences": {
+    "CL": 1.0856263907406592e-06,
+    "CD": 6.279179928014186e-07,
+    "Mh": 1.916519612082564e-06
+  },
+  "selected_mpi": 2,
+  "selected_cpu_indices": [
+    22,
+    23
+  ],
+  "full_cpu2_s": 3.8873836612701416,
+  "full_cpu8_s": 5.2304145622253415,
+  "fixed_result": {
+    "status": "HOLD_CALM_FORCE_DRIFT",
+    "samples": 3136,
+    "startup_s": 128.14464659999976,
+    "solver_step_median_s": 1.7287268,
+    "solver_step_mean_s": 1.766117231523475,
+    "end_to_end_s": 17607.8501737,
+    "dt_s": 0.0002,
+    "checkpoint_sha256_input": "e98cad7ce062353d68d0052f71d16726808b7f759b9767574df145fc43647b9d",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_191547\\FINAL.sim",
+    "checkpoint_sha256": "3a4ecaa62a7d14f4e65bff1b3e142b3b66e5149934b0dfff49fd3cd08ae8c4e8",
+    "state": {
+      "foil": true,
+      "status": "HOLD_CALM_FORCE_DRIFT",
+      "amplitude_target": 0.0,
+      "training_approved": false,
+      "reason": "",
+      "residual_pass": true,
+      "solver_seconds": 5539.479606200003,
+      "time_s": 1.2059999999998998,
+      "steps": 3136
+    },
+    "transport_ok": true,
+    "training_approved": false,
+    "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\STABILIZE_FIRST\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_191547",
+    "stabilization": {
+      "CL_drift_fraction": 0.0019033700760446826,
+      "CL_range_fraction": 0.0017960775286566272,
+      "CL": 0.3249139931850666,
+      "CD_drift_fraction": 0.0070033167920876185,
+      "CD_range_fraction": 0.00666469387806744,
+      "CD": 0.004523173473095338,
+      "time_s": 1.2059999999998998,
+      "stable_windows": 0
+    }
+  }
+}

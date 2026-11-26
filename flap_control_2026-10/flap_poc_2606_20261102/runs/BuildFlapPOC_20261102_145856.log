@@ -1,0 +1,597 @@
+Starting local server: starserver.bat -new -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -cpubind off -np 4 
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-3
+Process rank 0 THINKPAD-LUCJAN 23884
+Total number of processes : 4
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 15:00:53 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Playing macro: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:85: warning: [deprecation] setUseAlternateHoleCutting(boolean) in star.common.IndirectRegionInterface has been deprecated
+   IndirectRegionInterface inter=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");inter.setInterfaceType(OversetMeshInterface.class);inter.setUseAlternateHoleCutting(true);inter.setEnabledZeroDonorCheck(true);
+                                                                                                                                                                                  ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:85: warning: [deprecation] setEnabledZeroDonorCheck(boolean) in star.common.IndirectRegionInterface has been deprecated
+   IndirectRegionInterface inter=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");inter.setInterfaceType(OversetMeshInterface.class);inter.setUseAlternateHoleCutting(true);inter.setEnabledZeroDonorCheck(true);
+                                                                                                                                                                                                                         ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:87: warning: [deprecation] getAxisOrigin() in star.motion.RotatingMotion has been deprecated
+   rot.getAxisOrigin().setComponents(xh,0,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);
+      ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:87: warning: [deprecation] getAxisDirection() in star.motion.RotatingMotion has been deprecated
+   rot.getAxisOrigin().setComponents(xh,0,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);
+                                                 ^
+
+POC_STAGE importing rounded native-profile parts
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Reading surface from .stl file: POC_Main.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.02, Wall Time: 0.01, Memory: 147.84 MB
+Imported surface statistics:
+  # Faces:         916
+  # Vertices:      460
+  # Special Edges: 0
+
+Reading surface from .stl file: POC_Flap.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.00, Wall Time: 0.00, Memory: 148.07 MB
+Imported surface statistics:
+  # Faces:         392
+  # Vertices:      198
+  # Special Edges: 0
+
+Started Parasolid modeler version 38.1.151
+Part surface "Block Surface" was split into 6 part surfaces.
+Part surface "Block Surface" was split into 6 part surfaces.
+Mesh Operation POC_Background_Boolean complete. CPU Time: 0.23, Wall Time: 0.20, Memory: 161.25 MB
+Mesh Operation POC_Overset_Boolean complete. CPU Time: 0.08, Wall Time: 0.08, Memory: 161.41 MB
+ Only 1 part was assigned to a region
+7 part surfaces were assigned to 7 boundaries
+No Interfaces were created
+ Only 1 part was assigned to a region
+7 part surfaces were assigned to 7 boundaries
+No Interfaces were created
+Loading module: MotionModel
+Loading module: MaterialModel
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: SegregatedFlowModel
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Part surface "Block Surface" was split into 6 part surfaces.
+POC_STAGE meshing coarse background
+----------------------------------------
+Executing Mesh Operation Coarse background
+----------------------------------------
+ Checking mesh-CAD association...done.  No problems found.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 0.00, Wall Time: 0.00, Memory: 211.38 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Running in serial
+ Growth rate for Triangle meshing with Default growth is 1.3
+ Project to CAD geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001         321      17.3
+   < 0.01          924      49.8
+   < 0.05          940      50.6
+   < 0.1          1042      56.1
+   < 0.2          1234      66.5
+   < 0.3          1438      77.5
+   < 0.4          1546      83.3
+   < 0.5          1592      85.8
+   < 0.6          1676      90.3
+   < 0.7          1786      96.2
+   < 0.8          1800      97.0
+   < 0.9          1848      99.6
+   < 1.0          1856     100.0
+ Worst Tri quality is 2.132e-05
+
+ initial number of faces: 1856
+
+ Phase 1: Apply Global Limits
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            6       0.5
+     < 0.05           24       1.8
+     < 0.1           260      19.9
+     < 0.2           435      33.3
+     < 0.3           451      34.5
+     < 0.4           490      37.5
+     < 0.5           554      42.4
+     < 0.6           599      45.9
+     < 0.7           667      51.1
+     < 0.8           812      62.2
+     < 0.9          1015      77.7
+     < 1.0          1306     100.0
+   Worst Tri quality is 0.004812
+
+
+ Phase 2: Improve Grading
+      current number of faces: 20000
+      current number of faces: 40000
+      current number of faces: 80000
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.05            0       0.0
+     < 0.1             0       0.0
+     < 0.2             0       0.0
+     < 0.3             0       0.0
+     < 0.4             0       0.0
+     < 0.5            25       0.0
+     < 0.6           383       0.4
+     < 0.7          1104       1.1
+     < 0.8          6031       6.0
+     < 0.9         42044      41.8
+     < 1.0        100704     100.0
+   Worst Tri quality is 0.457
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0.05
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.05            0       0.0
+   < 0.1             0       0.0
+   < 0.2             0       0.0
+   < 0.3             0       0.0
+   < 0.4             0       0.0
+   < 0.5             0       0.0
+   < 0.6             0       0.0
+   < 0.7            23       0.0
+   < 0.8          2346       2.2
+   < 0.9         33170      31.5
+   < 1.0        105180     100.0
+ Worst Tri quality is 0.6341
+
+ final number of faces: 105180
+                   |   Default Mesher | 
+           Patches |                7 | 
+         Triangles |           105180 | 
+ Aligned mesh created for 4 patches
+    1% of tris created by aligned mesher
+
+ Elapsed time: 2.75 secs total, 1.34 secs potentially parallelizable (48.69% of total)
+----------------------------------------
+Surface Remesher Completed: CPU Time: 2.67, Wall Time: 2.76, Memory: 233.26 MB
+----------------------------------------
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 105180, area: 23.1578, reference location: (-1.2 -0.01 -1.176)
+Total => Surfaces: 1, Faces: 105180, Area: 23.1578
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+  There are no prism growing surfaces.
+done Surface diagnostics.CPU Time: 0.02, Wall Time: 0.02, Memory: 234.75 MB
+
+Surface is valid for volume meshing.CPU Time: 0.44, Wall Time: 0.45, Memory: 230.73 MB
+----------------------------------------
+Executing Trimmer
+----------------------------------------
+Assuming valid input surface
+Generating custom mesh
+   computing sizes at surface faces
+   incorporating sizes
+   creating initial volume mesh to cut
+   done creating custom template mesh, CPU Time: 1.33, Wall Time: 1.33, Memory: 286.44 MB
+Custom mesh contains
+   cell count   = 266904
+   face count   = 847962
+   edge count   = 895987
+   vertex count = 314930
+   done, CPU Time: 0.19, Wall Time: 0.19, Memory: 305.25 MB
+Marking surface features
+   done, CPU Time: 0.03, Wall Time: 0.02, Memory: 305.32 MB
+Interacting Vertices
+   done, CPU Time: 0.08, Wall Time: 0.08, Memory: 313.05 MB
+Determining sidedness
+   done, CPU Time: 0.17, Wall Time: 0.17, Memory: 316.39 MB
+   deleting outside cells, faces, edges, and vertices and compressing
+      new cell count   = 77162
+      new face count   = 274824
+      new edge count   = 318990
+      new vertex count = 121328
+Interacting edges
+   done, CPU Time: 0.06, Wall Time: 0.07, Memory: 275.02 MB
+Interacting faces
+   done, CPU Time: 1.14, Wall Time: 1.15, Memory: 291.04 MB
+Interacting cells
+   deleting outside cells, faces, edges, and vertices and compressing
+      new cell count   = 75208
+      new face count   = 264823
+      new edge count   = 550783
+      new vertex count = 361168
+   done, CPU Time: 0.92, Wall Time: 0.92, Memory: 277.40 MB
+Marking special edges/vertices in volume mesh
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 277.56 MB
+Improving mesh quality
+   preprocessing
+   collapsing interior sliver faces
+   merging small boundary cells
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   splitting multiply-shared faces
+   fixing degenerate cells
+   merging boundary faces
+   merging surface edges
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.075
+   64 edges were collapsed in total
+   0 cells were removed
+Marking concave cells
+Executing Splitter..., Memory: 183.86 MB
+done, (Executing Splitter...), CPU Time: 0.03, Wall Time: 0.05, Memory: 279.81 MB
+Collapsing Small Internal Edges/Faces: ratio < 0.100000
+   7 edges were collapsed in total
+   0 cells were removed
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.100000
+   89 edges were collapsed in total
+   0 cells were removed
+   splitting multiply-shared faces
+Marking concave cells
+ Collapsing Small Edges/Faces: ratio < 0.100000
+   0 edges were collapsed in total
+   0 cells were removed
+   fixing degenerate cells
+   fixing poor volume ratios
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+Splitting concave boundary faces
+Compressing mesh
+Trimmed mesh contains
+   cell count   = 75208
+   face count   = 264766
+   edge count   = 304670
+   vertex count = 115112
+----------------------------------------
+Trimmer Completed: CPU Time: 5.59, Wall Time: 5.64, Memory: 258.76 MB
+----------------------------------------
+Running Optimizer in serial: 
+ParallelOptimizer<Quality>::execute, Memory: 162.59 MB
+ executing mesh optimizer in serial ...
+skipped 0 anisotropic cells.
+ Mesh Optimization, Memory: 162.59 MB
+  Tabu Search Optimizing, Memory: 163.98 MB
+   Computing cell volumes and centroids, Memory: 171.00 MB
+   done, (Computing cell volumes and centroids), CPU Time: 0.08, Wall Time: 0.08, Memory: 270.79 MB
+   Quality thresholds:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         0.000010           0.700000          0.011000      0.087156
+   Starting optimization on 75208 candidate cells
+   Skipped 0 anisotropic cells.
+   InterfaceMap not set.
+   Start outer iteration #1
+   Minimum quality metrics before outer iteration #1:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+   Found 0 cells that are below quality threshold
+   Found 0 cells that need optimization
+   Found 0 vertices that need optimization
+   Start outer iteration #2
+   Minimum quality metrics before outer iteration #2:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+   Found 0 cells that are below quality threshold
+   Found 0 cells that need optimization
+   Found 0 vertices that need optimization
+   Start outer iteration #3
+   Minimum quality metrics before outer iteration #3:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+   Found 0 cells that are below quality threshold
+   Found 0 cells that need optimization
+   Found 0 vertices that need optimization
+   After optimization, there are 0 cells that are below quality threshold
+   Final minimum quality metrics after optimization:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+  done, (Tabu Search Optimizing), CPU Time: 0.55, Wall Time: 0.57, Memory: 270.91 MB
+ done, (Mesh Optimization), CPU Time: 0.56, Wall Time: 0.59, Memory: 265.07 MB
+done, (ParallelOptimizer<Quality>::execute), CPU Time: 0.56, Wall Time: 0.59, Memory: 265.07 MB
+Converting mesh into finite volume representation in Region Background
+   Converted mesh for Background CPU Time: 0.05, Wall Time: 0.06, Memory: 262.84 MB
+Mesh conversion completed, CPU Time: 0.08, Wall Time: 0.11, Memory: 239.61 MB
+Converting mesh into finite volume representation completed: CPU Time: 0.08, Wall Time: 0.11, Memory: 239.65 MB
+	Cells: 75208	Faces: 187835	Vertices: 115112
+----------------------------------------
+Mesh Operation Coarse background complete. CPU Time: 9.45, Wall Time: 9.71, Memory: 236.03 MB
+----------------------------------------
+POC_STAGE meshing coarse overset
+----------------------------------------
+Executing Mesh Operation Coarse overset
+----------------------------------------
+ Checking mesh-CAD association...done.  No problems found.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 0.00, Wall Time: 0.00, Memory: 236.17 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Running in serial
+ Growth rate for Triangle meshing with Default growth is 1.3
+ Project to CAD geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001          10       1.2
+   < 0.01          306      37.5
+   < 0.05          404      49.5
+   < 0.1           504      61.8
+   < 0.2           582      71.3
+   < 0.3           702      86.0
+   < 0.4           731      89.6
+   < 0.5           761      93.3
+   < 0.6           782      95.8
+   < 0.7           804      98.5
+   < 0.8           810      99.3
+   < 0.9           812      99.5
+   < 1.0           816     100.0
+ Worst Tri quality is 0.0007456
+
+ initial number of faces: 816
+
+ Phase 1: Apply Global Limits
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.05            6       0.4
+     < 0.1            96       6.5
+     < 0.2           262      17.6
+     < 0.3           431      29.0
+     < 0.4           563      37.9
+     < 0.5           656      44.1
+     < 0.6           715      48.1
+     < 0.7           787      53.0
+     < 0.8           896      60.3
+     < 0.9          1104      74.3
+     < 1.0          1486     100.0
+   Worst Tri quality is 0.04437
+
+
+ Phase 2: Improve Grading
+      current number of faces: 20000
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.05            0       0.0
+     < 0.1             0       0.0
+     < 0.2             0       0.0
+     < 0.3             0       0.0
+     < 0.4             0       0.0
+     < 0.5            14       0.1
+     < 0.6           163       0.7
+     < 0.7           666       2.9
+     < 0.8          1797       7.9
+     < 0.9          7749      34.2
+     < 1.0         22688     100.0
+   Worst Tri quality is 0.4743
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0.05
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.05            0       0.0
+   < 0.1             0       0.0
+   < 0.2             0       0.0
+   < 0.3             0       0.0
+   < 0.4             0       0.0
+   < 0.5             0       0.0
+   < 0.6             0       0.0
+   < 0.7             5       0.0
+   < 0.8           480       2.1
+   < 0.9          4698      20.1
+   < 1.0         23318     100.0
+ Worst Tri quality is 0.6579
+
+ final number of faces: 23318
+                   |   Default Mesher | 
+           Patches |                7 | 
+         Triangles |            23318 | 
+ Aligned mesh created for 4 patches
+    5% of tris created by aligned mesher
+
+ Elapsed time: 0.61 secs total, 0.29 secs potentially parallelizable (47.00% of total)
+----------------------------------------
+Surface Remesher Completed: CPU Time: 0.61, Wall Time: 0.61, Memory: 236.79 MB
+----------------------------------------
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 23318, area: 0.964631, reference location: (0.738489 -0.01 -0.258707)
+Total => Surfaces: 1, Faces: 23318, Area: 0.964631
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+  There are no prism growing surfaces.
+done Surface diagnostics.CPU Time: 0.02, Wall Time: 0.01, Memory: 241.84 MB
+
+Surface is valid for volume meshing.CPU Time: 0.09, Wall Time: 0.10, Memory: 241.84 MB
+----------------------------------------
+Executing Trimmer
+----------------------------------------
+Assuming valid input surface
+Generating custom mesh
+   computing sizes at surface faces
+   incorporating sizes
+   creating initial volume mesh to cut
+   done creating custom template mesh, CPU Time: 0.23, Wall Time: 0.23, Memory: 246.61 MB
+Custom mesh contains
+   cell count   = 20252
+   face count   = 66159
+   edge count   = 71764
+   vertex count = 25858
+   done, CPU Time: 0.02, Wall Time: 0.02, Memory: 247.12 MB
+Marking surface features
+   done, CPU Time: 0.02, Wall Time: 0.00, Memory: 247.12 MB
+Interacting Vertices
+   done, CPU Time: 0.02, Wall Time: 0.01, Memory: 247.98 MB
+Determining sidedness
+   done, CPU Time: 0.00, Wall Time: 0.01, Memory: 248.58 MB
+   deleting outside cells, faces, edges, and vertices and compressing
+      new cell count   = 6865
+      new face count   = 24353
+      new edge count   = 28278
+      new vertex count = 10790
+Interacting edges
+   done, CPU Time: 0.02, Wall Time: 0.01, Memory: 241.72 MB
+Interacting faces
+   done, CPU Time: 0.12, Wall Time: 0.13, Memory: 244.28 MB
+Interacting cells
+   deleting outside cells, faces, edges, and vertices and compressing
+      new cell count   = 6829
+      new face count   = 24283
+      new edge count   = 64971
+      new vertex count = 47517
+   done, CPU Time: 0.14, Wall Time: 0.14, Memory: 245.92 MB
+Marking special edges/vertices in volume mesh
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 245.92 MB
+Improving mesh quality
+   preprocessing
+   collapsing interior sliver faces
+   merging small boundary cells
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   splitting multiply-shared faces
+   fixing degenerate cells
+   merging boundary faces
+   merging surface edges
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.075
+   77 edges were collapsed in total
+   0 cells were removed
+Marking concave cells
+Executing Splitter..., Memory: 143.93 MB
+done, (Executing Splitter...), CPU Time: 0.00, Wall Time: 0.00, Memory: 245.22 MB
+Collapsing Small Internal Edges/Faces: ratio < 0.100000
+   0 edges were collapsed in total
+   0 cells were removed
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.100000
+   31 edges were collapsed in total
+   0 cells were removed
+   splitting multiply-shared faces
+Marking concave cells
+ Collapsing Small Edges/Faces: ratio < 0.100000
+   0 edges were collapsed in total
+   0 cells were removed
+   fixing degenerate cells
+   fixing poor volume ratios
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+Splitting concave boundary faces
+Compressing mesh
+Trimmed mesh contains
+   cell count   = 6810
+   face count   = 24167
+   edge count   = 28069
+   vertex count = 10712
+----------------------------------------
+Trimmer Completed: CPU Time: 0.73, Wall Time: 0.73, Memory: 241.23 MB
+----------------------------------------
+Running Optimizer in serial: 
+ParallelOptimizer<Quality>::execute, Memory: 141.30 MB
+ executing mesh optimizer in serial ...
+skipped 0 anisotropic cells.
+ Mesh Optimization, Memory: 141.30 MB
+  Tabu Search Optimizing, Memory: 141.49 MB
+   Computing cell volumes and centroids, Memory: 143.29 MB
+   done, (Computing cell volumes and centroids), CPU Time: 0.02, Wall Time: 0.01, Memory: 243.88 MB
+   Quality thresholds:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         0.000010           0.700000          0.011000      0.087156
+   Starting optimization on 6810 candidate cells
+   Skipped 0 anisotropic cells.
+   InterfaceMap not set.
+   Start outer iteration #1
+   Minimum quality metrics before outer iteration #1:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+   Found 0 cells that are below quality threshold
+   Found 0 cells that need optimization
+   Found 0 vertices that need optimization
+   Start outer iteration #2
+   Minimum quality metrics before outer iteration #2:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+   Found 0 cells that are below quality threshold
+   Found 0 cells that need optimization
+   Found 0 vertices that need optimization
+   Start outer iteration #3
+   Minimum quality metrics before outer iteration #3:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+   Found 0 cells that are below quality threshold
+   Found 0 cells that need optimization
+   Found 0 vertices that need optimization
+   After optimization, there are 0 cells that are below quality threshold
+   Final minimum quality metrics after optimization:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+  done, (Tabu Search Optimizing), CPU Time: 0.02, Wall Time: 0.03, Memory: 243.88 MB
+ done, (Mesh Optimization), CPU Time: 0.02, Wall Time: 0.03, Memory: 243.88 MB
+done, (ParallelOptimizer<Quality>::execute), CPU Time: 0.02, Wall Time: 0.03, Memory: 243.88 MB
+Converting mesh into finite volume representation in Region FlapOverset
+   Converted mesh for FlapOverset CPU Time: 0.00, Wall Time: 0.01, Memory: 244.23 MB
+Mesh conversion completed, CPU Time: 0.02, Wall Time: 0.02, Memory: 237.52 MB
+Converting mesh into finite volume representation completed: CPU Time: 0.02, Wall Time: 0.02, Memory: 237.52 MB
+	Cells: 82018	Faces: 204782	Vertices: 125824
+----------------------------------------
+Mesh Operation Coarse overset complete. CPU Time: 1.48, Wall Time: 1.52, Memory: 237.52 MB
+----------------------------------------
+POC_STAGE assigning boundaries from coordinates
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Warning: resetting acceleration method for Pressure Equation due to overset mesh
+Warning: resetting acceleration method for Pressure Equation due to overset mesh
+POC_STAGE saving coarse motion-ready case
+Saving: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\FlapPOC_2606_mesh_ready.sim... complete (18.086MB in 0.082067s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

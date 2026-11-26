@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-30T11:07:59.415Z",
+  "all_network_mocked": true,
+  "real_actions": 0,
+  "views": [
+    {
+      "width": 1360,
+      "checks": {
+        "restoredWaveSelected": true,
+        "waveStartDisabled": true,
+        "messageVisible": true,
+        "messageCorrect": true,
+        "allWaveOptionsDisabled": true,
+        "noJsErrors": true,
+        "noPageOverflow": true,
+        "calmStartEnabled": true,
+        "noMutationRequest": true
+      },
+      "errors": [],
+      "requests": [
+        {
+          "path": "/mock-policy",
+          "method": "GET"
+        },
+        {
+          "path": "/api/catalog",
+          "method": "GET"
+        },
+        {
+          "path": "/api/status",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "checks": {
+        "restoredWaveSelected": true,
+        "waveStartDisabled": true,
+        "messageVisible": true,
+        "messageCorrect": true,
+        "allWaveOptionsDisabled": true,
+        "noJsErrors": true,
+        "noPageOverflow": true,
+        "calmStartEnabled": true,
+        "noMutationRequest": true
+      },
+      "errors": [],
+      "requests": [
+        {
+          "path": "/mock-policy",
+          "method": "GET"
+        },
+        {
+          "path": "/api/catalog",
+          "method": "GET"
+        },
+        {
+          "path": "/api/status",
+          "method": "GET"
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

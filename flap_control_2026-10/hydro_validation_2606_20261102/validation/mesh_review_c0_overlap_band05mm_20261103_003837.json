@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-03T00:44:42.062643+01:00",
+  "candidate": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837",
+  "background_control": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050",
+  "comparison": "same full-plane representation; not volume-cell centers",
+  "background": {
+    "control_cells": 304810,
+    "candidate_cells": 304810,
+    "unique_matches": 304810,
+    "max_center_error_m": 2.8546336281444334e-14,
+    "max_relative_volume_error": 1.0761835866901492e-11,
+    "max_quality_error": 2.605460291960071e-11,
+    "identity_pass": true
+  },
+  "regions": {
+    "Background": {
+      "cells": 304810,
+      "active": 209225,
+      "inactive": 93909,
+      "acceptors": 1676,
+      "error_cells": 0,
+      "difficult_cells": 0,
+      "min_volume": 1.0079977988834268e-11,
+      "min_quality": 0.0610481862401861,
+      "quality_quantiles": {
+        "0.001": 0.26421900365008977,
+        "0.01": 0.38142350601404873,
+        "0.5": 0.5729633408000008
+      },
+      "acceptor_size_ratio_quantiles": {
+        "0.0": 0.4429226851686591,
+        "0.5": 0.9141824666773455,
+        "0.95": 1.2249737658796915,
+        "0.99": 2.0208271418451553,
+        "1.0": 5.232021677110989
+      },
+      "ratio_above2": 19,
+      "ratio_below_half": 61
+    },
+    "FlapOverset": {
+      "cells": 274658,
+      "active": 163736,
+      "inactive": 109154,
+      "acceptors": 1768,
+      "error_cells": 0,
+      "difficult_cells": 0,
+      "min_volume": 9.026037388587097e-12,
+      "min_quality": 0.0634994802697206,
+      "quality_quantiles": {
+        "0.001": 0.2646768990122474,
+        "0.01": 0.3819053516530673,
+        "0.5": 0.5730340171458537
+      },
+      "acceptor_size_ratio_quantiles": {
+        "0.0": 0.1478705249716405,
+        "0.5": 1.1766080203908622,
+        "0.95": 2.4742254545562985,
+        "0.99": 3.339461939014958,
+        "1.0": 4.031998211043441
+      },
+      "ratio_above2": 219,
+      "ratio_below_half": 118
+    }
+  },
+  "scientific_approved": false,
+  "mesh_review_pass": true
+}

@@ -1,0 +1,260 @@
+Native meshing only; logical CPU 3
+Starting local server: starserver.bat -power -cpubind off -np 1 -printpids -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XE5BVElWRV9RVUFTSTJEX1ZPRl9XQUtFXzIwMjYxMTA1XFBBVVNFRF9WT0ZfU09VUkNFX0NPUFlAbWVzaGVkLnNpbQ==
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 42816
+Total number of processes : 1
+
+Host ID 0 Rank 0 on THINKPAD-LUCJAN with process ID 42816
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 8 days
+Thu Nov  5 13:26:27 2026
+
+Server::start -host THINKPAD-LUCJAN:47837
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\PAUSED_VOF_SOURCE_COPY@meshed.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: StarSweptMesher
+Loading module: ConservativeMapping
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\VerifyNativeVof.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\VerifyNativeVof.java:54: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.setPresentationName(name);
+                                        ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\VerifyNativeVof.java:60: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+  Scene sc=s.getSceneManager().createScene(name);sc.setPresentationName(name);sc.initializeAndWait();
+                                                                                ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\VerifyNativeVof.java:63: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+  sc.getCurrentView().setInput(v(x,y,0),v(x,y,5),v(0,1,0),scale,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);
+                     ^
+
+Loading/configuring connectivity (old|new partitions: 1|1)
+  MINI_water_air (index 0): 24515 cells, 72216 faces, 96364 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+Configuring finished
+
+Boundaries of region MINI_water_air:
+Boundary main: 227 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.4027093225e-04, 9.5200000000e-01] m
+  y: [-4.2145026273e-02, 1.0091055666e-01] m
+  z: [0.0000000000e+00, 2.0000000000e-02] m
+ surface area: 3.8737859730e-02 m^2
+ maximum boundary skewness angle = 2.4457076669e+01 deg
+Boundary flap: 56 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [9.5200000000e-01, 1.1900000000e+00] m
+  y: [-1.3820198341e-02, 5.6382864967e-02] m
+  z: [0.0000000000e+00, 2.0000000000e-02] m
+ surface area: 9.6656205349e-03 m^2
+ maximum boundary skewness angle = 4.5324665872e+01 deg
+Boundary inlet: 24 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.2000000000e+01, -1.2000000000e+01] m
+  y: [-1.0000000000e+01, 4.0000000000e+00] m
+  z: [0.0000000000e+00, 2.0000000000e-02] m
+ surface area: 2.8000000000e-01 m^2
+ maximum boundary skewness angle = 2.7175060373e+01 deg
+Boundary outlet: 24 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [2.8000000000e+01, 2.8000000000e+01] m
+  y: [-1.0000000000e+01, 4.0000000000e+00] m
+  z: [0.0000000000e+00, 2.0000000000e-02] m
+ surface area: 2.8000000000e-01 m^2
+ maximum boundary skewness angle = 2.5610946282e+01 deg
+Boundary top: 87 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.2000000000e+01, 2.8000000000e+01] m
+  y: [4.0000000000e+00, 4.0000000000e+00] m
+  z: [0.0000000000e+00, 2.0000000000e-02] m
+ surface area: 8.0000000000e-01 m^2
+ maximum boundary skewness angle = 2.3510148605e+01 deg
+Boundary bottom: 63 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.2000000000e+01, 2.8000000000e+01] m
+  y: [-1.0000000000e+01, -1.0000000000e+01] m
+  z: [0.0000000000e+00, 2.0000000000e-02] m
+ surface area: 8.0000000000e-01 m^2
+ maximum boundary skewness angle = 1.4197138155e+01 deg
+Boundary span_front: 24515 faces (3 triangular, 868 quadrilateral, 23644 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.2000000000e+01, 2.8000000000e+01] m
+  y: [-1.0000000000e+01, 4.0000000000e+00] m
+  z: [0.0000000000e+00, 6.9452304024e-18] m
+ surface area: 5.5988422911e+02 m^2
+ maximum boundary skewness angle = 1.2354376981e+01 deg
+Boundary span_back: 24515 faces (3 triangular, 868 quadrilateral, 23644 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.2000000000e+01, 2.8000000000e+01] m
+  y: [-1.0000000000e+01, 4.0000000000e+00] m
+  z: [2.0000000000e-02, 2.0000000000e-02] m
+ surface area: 5.5988421670e+02 m^2
+ maximum boundary skewness angle = 1.2374453807e+01 deg
+
+Region MINI_water_air: 
+     868 hexahedral cells
+       3 wedge cells
+   23644 polyhedral cells
+   24515 cells total
+       0 halo cells
+   72216 quadrilateral interior faces (0 halo faces)
+   96364 vertices (0 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |             24515 |             0 |        0.00 |          24515 |    72216 |     49511 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :     24515 STDDEV % :  0.00 IMBALANCE % :  0.00
+       Average number of halo cells :         0
+      Average number of total cells :     24515 STDDEV % :  0.00 IMBALANCE % :  0.00
+            Average number of faces :     72216 STDDEV % :  0.00 IMBALANCE % :  0.00
+   Average number of boundary faces :     49511 STDDEV % :  0.00 IMBALANCE % :  0.00
+   Maximum number of partition neighbours : 0
+
+
+
+ Extents:
+  x: [-1.2000000000e+01, 2.8000000000e+01] m
+  y: [-1.0000000000e+01, 4.0000000000e+00] m
+  z: [0.0000000000e+00, 2.0000000000e-02] m
+ Maximum interior cell index delta: 560, average: 2.1350916694e+02
+ Maximum cell face index delta: 1710, average: 9.1485388538e+02
+ Volume range: [6.2263096748e-09, 9.8465509533e-03] m^3
+ Minimum distance between centroids of neighbor cells = 1.5670855306e-04
+ Maximum skewness angle = 4.7336992707e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.0000000000e+00
+Maximum Face Validity: 1.0000000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity               24515   100.000%
+
+Volume Change: 
+Minimum Volume Change: 2.954240e-02
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           0    0.000%
+1e-02 <= Volume Change <  1e-01         257    1.048%
+1e-01 <= Volume Change <= 1e+00       24258   98.952%
+ Maximum boundary skewness angle in region = 4.532467e+01 deg
+
+Overall Face Validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity               24515   100.000%
+
+Overall Volume Change: 
+Minimum Volume Change: 2.954240e-02
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           0    0.000%
+1e-02 <= Volume Change <  1e-01         257    1.048%
+1e-01 <= Volume Change <= 1e+00       24258   98.952%
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\Sharp_Sealed_VOF_Native_Quasi2D.sim... complete (50.414MB in 0.27202s).
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\Sharp_Sealed_VOF_Native_Quasi2D.sim... complete (50.5MB in 0.26692s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

@@ -1,0 +1,49 @@
+QUASI-2D / PHASE 2.4 — 29 OCTOBER 2026
+START HERE
+Working STAR-CCM+ 2602 Double simulation:
+F:\\ntnu\\Q2D_012_20261029.sim
+Dashboard (self-contained; open directly in browser):
+F:\\ntnu\\phase2_012_20261029\\dashboard.html
+
+Three meshes and 14 pilot runs completed, including hydrostatic checks,
+18 m/s starts, two short timestep comparisons, CPU8/CPU24/GPU benchmarks.
+Final working file: M03, 123256 cells, exactly one spanwise layer,
+b=0.02 m, chord=1.19 m, verified t/c=0.119979, camber/c=0.025003.
+Original corrected CAD and baseline SIM are unchanged (SHA-256 checked).
+This slice models a constant section; it does not resolve finite-span tip effects.
+No incident waves have been run.
+
+Open the working file for inspection. It contains the GPU result at t=0.2 s.
+Physical stopping time is 0.25 s, intentionally bounded.
+Restart compute hardware is selected when launching the STAR server.
+Measured GPU configuration: -np 1 -gpgpu auto:1. GPU count was 1.
+All pilot runs used first-order time integration and 20 inner iterations.
+
+Final M03 GPU endpoint: Fx=67.344507 N, Fz=950.313431 N on the 2 cm slice.
+CD=0.017466674, CL_total=0.246476147, CL_minus_nominal_buoyancy=0.240583889.
+rho=1000 kg/m3; Sref=0.0238 m2; Uref=18 m/s. Divide slice force by 0.02 for N/m.
+y+ area mean=44.9251, min=4.6390, max=255.1713.
+These are STARTUP VALUES, NOT converged or mesh-independent NWAR results.
+
+40 steps, dt=0.0005 s, M03: CPU8 107.9 s / CPU24 75.2 s / GPU 53.3 s.
+200 steps, dt=0.001 s, GPU: M02 172.3 s / M03 280.0 s.
+Runtime excludes launching/licensing, meshing and final save.
+The complete M03 GPU batch, including both tests and overhead, took 558.1 s.
+
+Do not label the meshes accepted solely from quality statistics.
+At t=0.2 s CD differs by 60.5% (M02 relative to M03); CL is still changing.
+15 consecutive regular layers: M01 97.07%, M02 97.97%, M03 98.53%;
+shortfalls at the sharp trailing edge. Directed sweep drops PrismLayerNumber metadata.
+Global near-wall CFL differs from interface CFL; inspect interface_cfl.json.
+Review hydrostatic surface noise and local y+ before introducing waves.
+Next: resolve mesh-dependent drag, establish force settling and timestep sensitivity;
+then compare calm-water and wave cases using the same verified section setup.
+
+Full evidence:
+campaign_summary.json — all run endpoints, timing, short dt comparisons
+final_summary.json — final comparisons, drift, hashes and review settings
+M01/M02/M03 — mesh.sim, mesh.CGNS, quality and topology audits
+M*_GPU, M03_CPU24 — backend benchmarks, checkpoint.sim, CSV histories
+plots — actual mesh, pressure and force-history figures
+work_log.json — activity and findings
+Scripts/macros are preserved for reproducibility.

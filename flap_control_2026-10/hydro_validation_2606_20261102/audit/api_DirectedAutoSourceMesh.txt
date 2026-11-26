@@ -1,0 +1,22 @@
+Compiled from "DirectedAutoSourceMesh.java"
+public class star.sweptmesher.DirectedAutoSourceMesh extends star.sweptmesher.DirectedSourceSurfaceMeshBase implements star.meshing.AutoMeshBase {
+  public static final java.lang.String IS_DIRTY;
+  public star.sweptmesher.DirectedAutoSourceMesh(star.base.neo.ClientServerObjectKey);
+  public star.sweptmesher.DirectedMeshOperation getOperation();
+  public star.common.DynamicQuerySelectorInput getPartCollectionsInput();
+  public void setPartCollectionsInput(star.common.DynamicQuerySelectorInput);
+  public void updateAutoSourceMesh();
+  public boolean hasPrismMesher();
+  public star.meshing.AutoMesherManager getMeshers();
+  public java.util.Collection<star.meshing.MesherBase> getMeshersCollection();
+  public star.meshing.AutoMeshDefaultValuesManager getDefaultValues();
+  public star.meshing.CustomMeshControlManager getCustomMeshControls();
+  public boolean is2dOperation();
+  public boolean isShellOperation();
+  public <T extends star.base.neo.ClientServerObject> T getReparentedControl(java.lang.Class<T>);
+  public star.meshing.MeshOperation getParentOperation();
+  public boolean isEmpty();
+  public boolean isDirty();
+  public java.util.Collection<java.lang.Object> getChildren();
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+}

@@ -1,0 +1,42 @@
+{
+  "updated_at": "2026-10-30T09:47:53.408962+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+  "status": "propagation_pilot_complete_pending_review",
+  "max_gauge_time_s": 0.7500000000000006,
+  "max_history_time_s": 0.7500000000000006,
+  "all_independent_values_finite": true,
+  "phase_bounds": [
+    0.0,
+    1.0
+  ],
+  "max_speed_m_s": 21.475892159207447,
+  "max_interface_CFL": 0.19556059866955283,
+  "max_BDF2_mass_budget_pct_of_inlet": 0.01421415354968813,
+  "gauges": [
+    {
+      "x_m": 0,
+      "samples": 26,
+      "available_trace_RMS_difference_mm": 3.233425183914945,
+      "available_trace_max_abs_difference_mm": 7.205609637406241
+    },
+    {
+      "x_m": 2.5,
+      "samples": 26,
+      "available_trace_RMS_difference_mm": 4.456680376078253,
+      "available_trace_max_abs_difference_mm": 7.629998645242608
+    },
+    {
+      "x_m": 5,
+      "samples": 26,
+      "available_trace_RMS_difference_mm": 4.598253114848755,
+      "available_trace_max_abs_difference_mm": 8.426472723208178
+    }
+  ],
+  "source": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14\\gauges.csv",
+  "source_sha256": "b228f08dcb741e49d97d3334fe9ce91b51993a235580b91db2fbec58a793dd57",
+  "meaning": "Difference along the available partial trace only; not wave-height/phase/reflection validation or a force result. Period about0.8473s. Initialmeanleveloffset remains recorded.",
+  "figures": [
+    "wave_pilot_live.png",
+    "wave_pilot_live.svg"
+  ]
+}

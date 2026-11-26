@@ -1,0 +1,1888 @@
+{
+  "created_at": "2026-10-29T19:31:57.740248+01:00",
+  "user_intent": "Calculation settings, then mesh selection, then requested calm/wave cases at preserved24m water depth, then independently selected additional wave combinations.",
+  "execution": "PAUSED by user for meeting and unplugged computer. Resume only after explicit user signal following meeting and power reconnection. No automatic solver launch.",
+  "near_hour": [
+    {
+      "stage": "Paused",
+      "action": "Resume only on explicit user request. Review calibrated local phase imbalance fields; no further wave-force admission."
+    }
+  ],
+  "overnight_priority": [
+    "Completed: calm SECOND_ORDER1ms10inner configuration and selectedM09 halfdt check.",
+    "Completed: M09 common-window agreement with two component-wise finer cases; supported_calm_mesh_template. Wave gates remain separate.",
+    "Original calm and wave cases: After configuration and mesh gates, complete wave propagation/domain checks, matched C01, W01 H0.5m lambda20m, W02 lambda30m, U18m/s, submergence2m, depth24m, plus W01 3lambda sensitivity. Use second-order time with tested dt; compare complete settled cycles.",
+    "Additional wave combinations: After accepted C01/W01/W02 and requested W01 domain sensitivity, execute the prioritized wave_extension_plan.json batch. Change one wave parameter at a time; retain fixedfoil/U18/submergence2/depth24. Reuse a calm reference only for identical geometry and numerical settings; rerun baseline if resolution changes."
+  ],
+  "wave_cases": {
+    "W01": {
+      "lambda_m": 20,
+      "height_m": 0.5,
+      "depth_m": 24,
+      "current_m_s": 18,
+      "waterline_z_m": 2,
+      "bottom_z_m": -22,
+      "xmin_m": -35.0,
+      "xmax_m": 45.0,
+      "domain_lambda": 4,
+      "initial_forcing_zone": [
+        -35.0,
+        -15.0
+      ],
+      "initial_damping_zone": [
+        25.0,
+        45.0
+      ],
+      "foil_fixed_near_x_m": [
+        0,
+        1.19
+      ],
+      "linear_reference_encounter_period_s": 0.8478873476270993,
+      "reference_formula": "omega=sqrt(g*k*tanh(k*h)); omega_encounter=omega+k*U for this +X current/+X intrinsic wave convention; verify against STAR field/probes. Fifth-order harmonics may differ.",
+      "eight_periods_s": 6.783098781016794,
+      "ten_periods_s": 8.478873476270993,
+      "cost_at_current_M08_dt1ms_and_rate_h": [
+        3.420544029819015,
+        4.275680037273768
+      ],
+      "cost_limit": "Illustrative current-rate estimate, excludes setup and changed-domain cost. Measure actual wave rate before committing runtime.",
+      "surface_resolution_start_m": {
+        "dx": 0.2,
+        "dz": 0.025
+      },
+      "dt_status": "Undecided for foil; use second-order and tested dt. Existing no-foil dt0.002 is not foil approval.",
+      "top_z_m": 8,
+      "wave_model": "FifthOrderVofWave"
+    },
+    "W02": {
+      "lambda_m": 30,
+      "height_m": 0.5,
+      "depth_m": 24,
+      "current_m_s": 18,
+      "waterline_z_m": 2,
+      "bottom_z_m": -22,
+      "xmin_m": -52.5,
+      "xmax_m": 67.5,
+      "domain_lambda": 4,
+      "initial_forcing_zone": [
+        -52.5,
+        -22.5
+      ],
+      "initial_damping_zone": [
+        37.5,
+        67.5
+      ],
+      "foil_fixed_near_x_m": [
+        0,
+        1.19
+      ],
+      "linear_reference_encounter_period_s": 1.2075530192963326,
+      "reference_formula": "omega=sqrt(g*k*tanh(k*h)); omega_encounter=omega+k*U for this +X current/+X intrinsic wave convention; verify against STAR field/probes. Fifth-order harmonics may differ.",
+      "eight_periods_s": 9.660424154370661,
+      "ten_periods_s": 12.075530192963326,
+      "cost_at_current_M08_dt1ms_and_rate_h": [
+        4.8715059640925125,
+        6.089382455115642
+      ],
+      "cost_limit": "Illustrative current-rate estimate, excludes setup and changed-domain cost. Measure actual wave rate before committing runtime.",
+      "surface_resolution_start_m": {
+        "dx": 0.2,
+        "dz": 0.025
+      },
+      "dt_status": "Undecided for foil; use second-order and tested dt. Existing no-foil dt0.002 is not foil approval.",
+      "top_z_m": 8,
+      "wave_model": "FifthOrderVofWave"
+    },
+    "W01_domain_check": {
+      "lambda_m": 20,
+      "height_m": 0.5,
+      "depth_m": 24,
+      "current_m_s": 18,
+      "waterline_z_m": 2,
+      "bottom_z_m": -22,
+      "xmin_m": -25.0,
+      "xmax_m": 35.0,
+      "domain_lambda": 3,
+      "initial_forcing_zone": [
+        -25.0,
+        -5.0
+      ],
+      "initial_damping_zone": [
+        15.0,
+        35.0
+      ],
+      "foil_fixed_near_x_m": [
+        0,
+        1.19
+      ],
+      "linear_reference_encounter_period_s": 0.8478873476270993,
+      "reference_formula": "omega=sqrt(g*k*tanh(k*h)); omega_encounter=omega+k*U for this +X current/+X intrinsic wave convention; verify against STAR field/probes. Fifth-order harmonics may differ.",
+      "eight_periods_s": 6.783098781016794,
+      "ten_periods_s": 8.478873476270993,
+      "cost_at_current_M08_dt1ms_and_rate_h": [
+        3.420544029819015,
+        4.275680037273768
+      ],
+      "cost_limit": "Illustrative current-rate estimate, excludes setup and changed-domain cost. Measure actual wave rate before committing runtime.",
+      "surface_resolution_start_m": {
+        "dx": 0.2,
+        "dz": 0.025
+      },
+      "dt_status": "Undecided for foil; use second-order and tested dt. Existing no-foil dt0.002 is not foil approval.",
+      "top_z_m": 8,
+      "wave_model": "FifthOrderVofWave"
+    }
+  },
+  "calm_matching": "Retain verified vertical bounds z=-22..8m, waterlinez=2m, waterdepth24m. C01 must match each actual wave domain, mesh, timestep, time order, BC and normalization. Pilot24m depth alone does not make its shorter horizontal domain a matched calm reference.",
+  "wave_force_gate": "Supported mesh with bothCL/CDwithin1%ofdensercomparableevidence, validmesh/y+/CFL/innerconvergence, time-orderscreen andfinalmeshdtcheck, correct finite-depth direction/encounter, no forcing/damping overlap withfoil/wake, acceptable actualgaugeamplitude/phase/reflections. Do not publishverifieddeltaCDbeforedone.",
+  "fallback": "If finalmesh/timegatesfail, continue targeteddiagnostics and independentwavepropagationpreparation, preservingW01/W02inputs. Do not silently waive1% or promiseallwavesfinishedby morning.",
+  "performance_actions": [
+    "Measure perstepcost andinnerconvergence. KeepM08settingsfixedforcomparison.",
+    "After/currenttemporaltests, screen10versus20inneriterations fromsameacceptedcheckpoint beforeadoptingfeweriterations. Preserveforce/residual/masscriteria.",
+    "Do notincreasefoil dtto0.002 merelybecauseitworkedwithoutfoil. Use VOFsubstepstrategy andactualCFLtoinformtestedchoices."
+  ],
+  "stop_behavior": "Honor STOP_ALL; checkpoints/newattemptIDs onrecovery; do notoverwriteor interferewithotheractivework.",
+  "automation": "Existing ntnu-dob-r-siatki-i-fale resumedACTIVE every10minutes; notifyonlymeaningfulchanges.",
+  "temporal_efficiency_test": {
+    "id": "T04_M04_SO_dt1ms_inner10_r1",
+    "reference": "T02_M04_SO_dt1ms_r1",
+    "status": "Completed; T04/T02 +0.002573%CD and -0.001457%CL. Calm-screen configuration decision recorded.",
+    "change": "inner iterations20to10 only",
+    "extra_runtime_estimate_min": [
+      7,
+      12
+    ]
+  },
+  "updated_at": "2026-10-30T10:05:30.818474+01:00",
+  "ordered_stages": [
+    {
+      "stage": 1,
+      "name": "Calculation configuration",
+      "action": "Completed calm configuration screen: second-order time,1ms,10inner. Selected-mesh dt and wave-propagation accuracy remain to be checked."
+    },
+    {
+      "stage": 2,
+      "name": "Mesh selection",
+      "action": "Current PID15952: M09 then M08/M07 matched-setting force screens. Preserve all historicalFOdata. Check two finer comparable confirmations within1% and matched endpoint/windows if residual drift matters; then selected-mesh temporal check. M10\u2013M15 only if needed."
+    },
+    {
+      "stage": 3,
+      "name": "Original calm and wave cases",
+      "action": "After configuration and mesh gates, complete wave propagation/domain checks, matched C01, W01 H0.5m lambda20m, W02 lambda30m, U18m/s, submergence2m, depth24m, plus W01 3lambda sensitivity. Use second-order time with tested dt; compare complete settled cycles."
+    },
+    {
+      "stage": 4,
+      "name": "Additional wave combinations",
+      "action": "After accepted C01/W01/W02 and requested W01 domain sensitivity, execute the prioritized wave_extension_plan.json batch. Change one wave parameter at a time; retain fixedfoil/U18/submergence2/depth24. Reuse a calm reference only for identical geometry and numerical settings; rerun baseline if resolution changes."
+    }
+  ],
+  "conservation_check": {
+    "controller": "run_conservation_probes.py",
+    "pid": 32328,
+    "state": "conservation_probe_state.json",
+    "sequence": "Completed after temporal tests. No pending conservation controller remains.",
+    "reason": "Endpoint flux alone cannot distinguish physical mass accumulation from conservation error. Record both on each step. No force-settling or mesh-agreement threshold changed.",
+    "status": "Completed and reviewed; both accumulation-plus-flux probes passed."
+  },
+  "user_scope_override": {
+    "date": "2026-10-29T21:38:26.796341+01:00",
+    "depth": "User explicitly withdrew the earlier16m instruction. Preserve current24m water depth and existing vertical bounds.",
+    "extension": "User explicitly authorized independently chosen wave combinations AFTER completion of the originally requested cases and checks. This overrides the earlier attachment instruction not to extend waves yet.",
+    "evidence": "vertical_domain_preservation.json"
+  },
+  "vertical_domain": {
+    "updated_at": "2026-10-29T21:35:43.929943+01:00",
+    "source": "Actual M08/M09 CGNS coordinates and original M04 saved setup",
+    "mesh_bounds_m": {
+      "M08": {
+        "X": [
+          -11.9,
+          30.940000000000005
+        ],
+        "Y": [
+          0.01,
+          0.03
+        ],
+        "Z": [
+          -22.0,
+          8.0
+        ]
+      },
+      "M09": {
+        "X": [
+          -11.9,
+          30.940000000000005
+        ],
+        "Y": [
+          0.01,
+          0.03
+        ],
+        "Z": [
+          -22.0,
+          8.0
+        ]
+      }
+    },
+    "waterline_z_m": 2.0,
+    "bottom_z_m": -22.0,
+    "top_z_m": 8.0,
+    "water_depth_m": 24.0,
+    "air_height_m": 6.0
+  },
+  "additional_wave_plan": "wave_extension_plan.json",
+  "wave_model": "FifthOrderVofWave",
+  "wave_model_authorization": "User explicitly confirmed fifth-order waves; keep second-order time integration as a separate numerical setting.",
+  "current_configuration_screen": {
+    "decision": "calm_solver_configuration_decision.json",
+    "controller": "run_configured_mesh_screen.py",
+    "state": "configured_mesh_state.json",
+    "results": "configured_mesh_results.json",
+    "namespace": "configured_mesh_20261029",
+    "started_controller_pid": 15952,
+    "settings": {
+      "order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner": 10
+    },
+    "scope": "Calm mesh screen only; selected-mesh time and wave propagation checks remain"
+  },
+  "presentation_views": {
+    "operational": "../dashboard.html",
+    "research_review": "../professor_dashboard.html",
+    "latest_QA": "m10_native_lineage_ui_review.json",
+    "print_pages": 19,
+    "viewports": [
+      1920,
+      1360,
+      390
+    ]
+  },
+  "matched_endpoint": {
+    "status": "completed_pending_selection_review",
+    "state": "matched_endpoint_state.json",
+    "results": "matched_endpoint_results.json",
+    "pairs": [
+      {
+        "candidate": "M09",
+        "reference": "M07",
+        "difference_pct": {
+          "CD": 0.46669816039398243,
+          "CL_total": -0.16425229705644426,
+          "pressure_drag_N": 1.5551734538461741,
+          "viscous_drag_N": 0.0516249097751733
+        },
+        "both_force_coefficients_within_1pct": true
+      },
+      {
+        "candidate": "M09",
+        "reference": "M08",
+        "difference_pct": {
+          "CD": -0.02557357387804068,
+          "CL_total": 0.016736017018529083,
+          "pressure_drag_N": -0.09547267692357199,
+          "viscous_drag_N": 0.0015081970251846946
+        },
+        "both_force_coefficients_within_1pct": true
+      },
+      {
+        "candidate": "M08",
+        "reference": "M07",
+        "difference_pct": {
+          "CD": 0.4923976579508529,
+          "CL_total": -0.18095802890845883,
+          "pressure_drag_N": 1.6522235528243892,
+          "viscous_drag_N": 0.050115956902617456
+        },
+        "both_force_coefficients_within_1pct": true
+      }
+    ],
+    "controller_pid": 5240,
+    "controller_finished": true
+  },
+  "latest_decision": "M09 is the supported calm template: SECOND_ORDER,1ms,10inner. Both finer common-window comparisons and selected-mesh halfdt test passed. Wave propagation and newdomain checks remain.",
+  "selected_calm_mesh": {
+    "mesh": "M09",
+    "cells": 214908,
+    "decision_file": "selected_mesh_decision.json",
+    "status": "supported_calm_mesh_template",
+    "settings": {
+      "time_order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner": 10
+    },
+    "dt_difference_pct": {
+      "CD": -0.002423192674722394,
+      "CL_total": 0.0014533340171437937,
+      "pressure_drag_N": -0.006647658803277557,
+      "viscous_drag_N": -0.000788049037489545
+    },
+    "waves_admitted": false
+  },
+  "wave_failure_diagnostic": {
+    "case": "W20_H24_X4_CPUprop_dt1ms_r2",
+    "stop_s": 0.704,
+    "review": "wave_pilot_spatial_diagnostic.json",
+    "max_speed_m_s": 50.734771114938454,
+    "phase": "air",
+    "location_m": [
+      44.9,
+      1.9375
+    ],
+    "guard_unchanged": true
+  },
+  "foil_wave_mesh_preparation": {
+    "controller": "run_wave_domain_import_r1.py",
+    "controller_pid": 14348,
+    "state": "wave_foil_mesh_preparation_state.json",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M09_mesh_r1",
+    "cells": 246885,
+    "original_M09_cells_preserved": 214908,
+    "added_remote_cells": 31977,
+    "flow_steps": 0,
+    "status": "mesh_prepared_pending_boundary_and_flow_setup"
+  },
+  "current_wave_review": {
+    "updated_at": "2026-10-30T00:09:38.240978+01:00",
+    "status": "fresh_environmental_outlet_slip_bed_pilot_running",
+    "wave_admitted": false,
+    "calm_mesh": "M09,214908cells,SO1ms10inner,supported",
+    "attempts": [
+      {
+        "case": "W20_H24_X4_CPUprop_dt1ms_r2",
+        "stop_time_s": 0.704,
+        "reason": "stability_guard",
+        "max_speed_m_s": 50.734771,
+        "phase": "air",
+        "x_m": 44.9,
+        "z_m": 1.9375,
+        "source_unchanged": true
+      },
+      {
+        "case": "W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3",
+        "stop_time_s": 0.85,
+        "reason": "stability_guard",
+        "max_speed_m_s": 50.09167377,
+        "phase": "water",
+        "x_m": 44.9,
+        "z_m": 1.9125,
+        "ux_m_s": -50.088761,
+        "pressure_Pa": 59676.635,
+        "source_unchanged": true
+      }
+    ],
+    "interpretation": "Flat outlet pressure/phase did not remove localized downstream backflow. Core gauges and small mass residual alone do not establish stability. Exact backflow pressure/scalar settings being audited without time advancement.",
+    "prepared_alternative": {
+      "controller": "run_wave_forcing_outlet_r4.py",
+      "launched": false,
+      "change": "Velocity components and phase from same FifthOrder wave at both ends; 20m forcing each, FORCING only; protected core -15..25; same mesh/SO1ms10inner/50m/s guard",
+      "scope": "Fresh bounded1.2s pilot, not final reflection or force validation"
+    },
+    "foil_mesh": {
+      "case": "C01_W20L4_M09_mesh_r1",
+      "cells": 246885,
+      "status": "geometry_and_single_span_pass",
+      "flow_steps": 0,
+      "pending": [
+        "Actual boundary/profile and wave-zone setup",
+        "Wave-resolution review",
+        "Matched C01 and W01 short trials after boundary decision"
+      ]
+    },
+    "completed_controllers": [
+      38828,
+      5240,
+      28480,
+      14348,
+      15800,
+      1852
+    ],
+    "active_diagnostic": {
+      "controller": "run_wave_backflow_audit_r1.py",
+      "pid": 36776,
+      "workers": 1,
+      "gpu": false,
+      "steps": 0
+    },
+    "current_controller": {
+      "status": "propagation_GPU_running",
+      "updated_at": "2026-10-30T00:09:17.407751+01:00",
+      "controller_pid": 15556,
+      "case": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+      "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+      "workers": 1,
+      "gpu": true,
+      "scope": "Environmental outlet and slip bed no-foil pilot; not force or final propagation validation",
+      "elapsed_s": 213.00641775131226,
+      "launcher_pid": 25656,
+      "progress": {
+        "interface_CFL": 0.10885762888047314,
+        "steps": 60,
+        "time_s": 0.060000000000000046,
+        "wall_s": 40.4881534,
+        "max_speed_m_s": 18.57415958621514
+      }
+    },
+    "actual_boundary_getters": {
+      "outlet_backflow_scalars": "SPECIFIED",
+      "top_pressure": "STATIC unchanged",
+      "damping": "20m unchanged",
+      "bed_shear": "SLIP",
+      "outlet_backflow_after": "ENVIRONMENTAL",
+      "scope": "Two documented boundary corrections: environmental backflow pressure and slip-wall bed; not isolated single-factor causality",
+      "outlet_backflow_before": "STATIC",
+      "bed_type": "WallBoundary"
+    },
+    "correction_to_prior_guidance": "Installed Siemens VOF Waves Guidelines explicitly rejects bottom symmetry for wave cases. Prior kinematic reasoning was incomplete; fresh r4 uses slip wall. Spans remain symmetry.",
+    "previous_backflow_audit": "r3 outlet STATIC/BOUNDARY_NORMAL/SPECIFIED; top STATIC/EXTRAPOLATED/SPECIFIED. Zero-step controller36776 finished with unchangedsource.",
+    "free_surface_review": "C01 extended mesh ~17.5 full cells/H in remote strips; variable polygon/ray resolution in core near20cells/H. Initial pilot candidate, not wavegridaccuracy acceptance. See professor_c01_free_surface_resolution.json and ray_resolution.json.",
+    "next": "Complete1.2s guarded pilot, inspect spatialmaxima, actual/referencegauges, equal-phase inventory, BDF2flux+accumulation, then longerpropagation anddt. Never claim1.2s validatesreflection."
+  },
+  "execution_history": [
+    {
+      "archived_at": "2026-10-30T00:53:48.439667+01:00",
+      "key": "wave_preparation",
+      "value": {
+        "updated_at": "2026-10-29T22:52:16.458094+01:00",
+        "status": "propagation_CPU_running",
+        "controller": "run_wave24m_propagation_r2.py",
+        "controller_pid": 1852,
+        "state_file": "wave_propagation_state.json",
+        "shared_live_state": "wave_preparation_state.json",
+        "cpu_lock": "E:\\ntnu\\quasi2d_waves_20261029\\preparation.lock",
+        "case": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_CPUprop_dt1ms_r2",
+        "workers": 2,
+        "gpu": false,
+        "source_case": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_Q2D_r5",
+        "geometry": "Independent CGNS PASS: 53200 orthogonal cells, one span layer, six correct boundaries, volume48m3; initial height0.4997486m, gauge height30m, calm-level residual<2e-14m. Initial volume-derived mean elevation-0.0117973m remains diagnostic, not silently corrected.",
+        "scope": "1000-step no-foil pilot, SO1ms10inner; no verified propagation or force result yet.",
+        "recovery": "CPUprop_r1 stopped on first derived-plane gauge before any step; all independent volume/speed/phase reports finite at t0. r2 explicitly reinitializes the disposable t0 copy and records detailed report errors; same guards. Preserve r1.",
+        "next": "Verify physical progress and gauge reports; if failed inspect gauge_error.json and recover with a new attempt ID. On completion compare numerical/analytic amplitude/phase/mean, mass budget, direction, timestep; 1s is too short for final reflection validation.",
+        "verified_progress": "CPU pilotr2 physically advancing; t0.011s observed, independentreports/gaugesfinite, alpha[0,1]. Not validated propagation.",
+        "cost_budget_note": "Measured startupCPUcost~3.3s/step;2400s macrowallbudget maystopbefore1s. Preservepartialresults, thencontrollednewattemptcontinuationwithsufficientwalltime; do notclaimcompletecycle orweakenstabilityguards."
+      }
+    },
+    {
+      "archived_at": "2026-10-30T00:53:48.439667+01:00",
+      "key": "selected_mesh_time",
+      "value": {
+        "status": "running",
+        "controller_pid": 38828,
+        "controller": "run_selected_mesh_time_screen.py",
+        "state": "selected_mesh_time_state.json",
+        "active": "M09_SO_dt05ms_common_t2040_r1",
+        "scope": "One SO0.5ms10inner branch versus reused SO1ms10inner branch from the identical t1.640 checkpoint; compare1.840\u20132.040. Calm-only decision."
+      }
+    },
+    {
+      "archived_at": "2026-10-30T00:53:48.439667+01:00",
+      "key": "CPU_wave_pilot",
+      "value": {
+        "status": "propagation_CPU_running",
+        "controller_pid": 15800,
+        "controller": "adopt_wave24m_pilot_r2.py",
+        "launcher_pid": 36304,
+        "case": "W20_H24_X4_CPUprop_dt1ms_r2",
+        "state": "wave_propagation_state.json",
+        "recovery": "Original1852 failed on status-file replace; solver kept advancing and was adopted without restart. Check actual processes and locks."
+      }
+    },
+    {
+      "archived_at": "2026-10-30T00:53:48.439667+01:00",
+      "key": "current_wave_pilot",
+      "value": {
+        "case": "W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3",
+        "controller": "run_wave_flat_outlet_r3.py",
+        "controller_pid": 28480,
+        "state": "wave_propagation_state.json",
+        "change": "Fresh R5 initialization with outlet pressure/phase bound to existing flat wave; source unchanged; no failed-flow continuation",
+        "target_s": 1.2,
+        "gpu": true,
+        "validation_pending": true
+      }
+    },
+    {
+      "archived_at": "2026-10-30T00:53:48.439667+01:00",
+      "key": "current_wave_recovery",
+      "value": {
+        "updated_at": "2026-10-30T00:32:45.119352+01:00",
+        "status": "short_pilot_completed_targeted_inner_review_pending",
+        "pilot": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+        "source_unchanged": true,
+        "completed_time_s": 1.2,
+        "peak_mass_budget_pct_inlet": 0.01451935956931171,
+        "mass_spike_times_s": [
+          0.617,
+          0.618,
+          0.624,
+          0.625
+        ],
+        "mass_peak_time_s": 0.618,
+        "next": "Matched20inner diagnostic fromsame0.500 checkpointto0.750; do notweaken0.01%budgetreviewgate. Ifpasses, boundedlongerpropagationwithnewID, cache-safecontinuationandchoseninnercount; ifnot, inspectdt/inner/VOF consistency.",
+        "current_controller": {
+          "status": "propagation_GPU_running",
+          "updated_at": "2026-10-30T00:32:38.063601+01:00",
+          "controller_pid": 36724,
+          "case": "W20_H24_X4_GPUprop_environmentalOutlet_inner20probe_r6",
+          "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_inner20probe_r6",
+          "workers": 1,
+          "gpu": true,
+          "scope": "Environmental outlet and slip bed no-foil pilot; not force or final propagation validation",
+          "elapsed_s": 98.00730109214783,
+          "launcher_pid": 26388,
+          "progress": {}
+        },
+        "cache_recovery": "r5 innerprobe endedbeforefirststep because analyticwavecachewasNaN atload; physicalfieldreportsfinite,sourcesunchanged. r6 separatelyrecordsunavailablet0theory, requiresfiniteanalyticinventoryandgaugesafterfirstguardedstep, noflowreinitialization.",
+        "interpretation": "9.53mm equivalentwhole-domaininventorydifference vsundampedwave includesdampingzone mismatch; notcoreleveldrift orprovedmassleak. Corecyclemeanerrors-1.44to+1.18mm. IntegratedBDF2residual~0.018mm equivalentthroughfirstperiod. Addzonal(equalphase) inventory tolongertrial.",
+        "calm_wave_inputs": "paired_inputs_prepared_pending_flow_gates",
+        "input_results": "wave_foil_case_preparation_results.json",
+        "longer_prototype": "run_wave_continuation_r5.py remainsUNLAUNCHED andgated; it lacksnewanalyticcachehandling andassumes10inner. Preparefreshcorrectedlongerattemptonlyafterprobe.",
+        "wave_force_admitted": false
+      }
+    },
+    {
+      "archived_at": "2026-10-30T01:22:46.777616+01:00",
+      "key": "execution",
+      "value": "CalmM09configuration/mesh/time gatescomplete. Nofoilr4 completed1.2s; GPU36724 runs matched20innerprobe r6 for4massbudgetspikes. PairedC01/W01zero-stepinputsfinished; longpropagation/time/FSchecksremain."
+    }
+  ],
+  "current_wave_recovery": {
+    "updated_at": "2026-10-30T01:22:46.777616+01:00",
+    "status": "native_budget_equivalence_confirmed_inner40_probe_active",
+    "report_review": {
+      "updated_at": "2026-10-30T01:02:57.004263+01:00",
+      "status": "definitions_and_saved_values_verified_next_phase_flux_consistency",
+      "source_unchanged": true,
+      "steps_taken": 0,
+      "physical_reports": 8,
+      "all_physical_reports_unsmoothed": true,
+      "all_boundary_mass_reports_idealization_off": true,
+      "all_physical_report_errors_empty": true,
+      "difference_vs_original_history": {
+        "mass_kg": 0.0,
+        "water_volume_m3": 0.0,
+        "net_mass_kg_s": 0.0
+      },
+      "native_mixture_flux_function": "FaceFlux",
+      "VOF": {
+        "scheme": "HRIC",
+        "face_density_reconstruction": "FIRST_ORDER",
+        "temporal_order": "SECOND_ORDER",
+        "actual_substeps": 1
+      },
+      "interpretation": "Smoothing does not explain residual. Inspect volume-flux-based VOF phase-flux consistency before attributing global FaceFlux budget to discrete phase conservation. Do not change physics or relax gate without evidence.",
+      "note": "Reflective bare FieldFunction.getValue errors are not report evaluation failures; actual report error logs empty. Analytic wave inventory remains unavailable at zero-step checkpoint load and is excluded.",
+      "mass_gate_pct": 0.01,
+      "R8_short_mass_gate_pass": false
+    },
+    "R10": {
+      "updated_at": "2026-10-30T01:18:33.120477+01:00",
+      "case": "W20_H24_X4_GPUprop_environmentalOutlet_phaseBudget_dt1ms_r10",
+      "source_unchanged": true,
+      "settings": "ExactR4 SO1ms10inner; additional reporting only",
+      "window_s": [
+        0.502,
+        0.75
+      ],
+      "samples": 249,
+      "metrics": {
+        "native_water_error_kg_s": {
+          "max_abs": 1.2260368890000435,
+          "mean_abs": 0.09363708956154064
+        },
+        "native_air_error_kg_s": {
+          "max_abs": 0.0013184603497303391,
+          "mean_abs": 0.00013693312052495641
+        },
+        "native_sum_error_kg_s": {
+          "max_abs": 1.2247184286503132,
+          "mean_abs": 0.09351016666664218
+        },
+        "native_sum_pct_inward_mass": {
+          "max_abs": 0.014355551150379526,
+          "mean_abs": 0.0010952371425205667
+        },
+        "native_abs_sum_pct_inward_mass": {
+          "max_abs": 0.014386459846692946,
+          "mean_abs": 0.0010983279056987376
+        },
+        "bdf2_plus_faceflux_pct_inward_mass": {
+          "max_abs": 0.014355556933924065,
+          "mean_abs": 0.0010952372235620003
+        },
+        "bdf2_plus_phaseflux_pct_inward_mass": {
+          "max_abs": 0.014355556933902744,
+          "mean_abs": 0.0010952372235523405
+        },
+        "faceflux_minus_phaseflux_kg_s": {
+          "max_abs": 1.6370904631912708e-11,
+          "mean_abs": 3.835218621934035e-12
+        }
+      },
+      "native_vs_inventory_max_difference_pct": 5.783544539117447e-09,
+      "phase_vs_mixture_max_flux_difference_kg_s": 1.6370904631912708e-11,
+      "reporting_equivalence_supported": true,
+      "native_phase_mass_gate_pass": false,
+      "legacy_faceflux_mass_gate_pass": false,
+      "original_threshold_pct": 0.01,
+      "max_gauge_replay_difference_mm": 0.047904231781359385,
+      "gauge_replay_RMS_difference_mm": 0.010343348523076494,
+      "scope": "Diagnostic comparison. Native phase errors are sums of phase transport residual timesdt perSiemensGUID-187276CC-89DA-4F69-B1AE-500038C45DE8. LegacyBDF2+FaceFlux retained. Nativephasefluxanddensityreconstructionreview requiredbeforeanygateinterpretation. Nofoilforceadmission."
+    },
+    "current_wave": {
+      "status": "propagation_GPU_running",
+      "updated_at": "2026-10-30T01:22:24.889470+01:00",
+      "controller_pid": 36136,
+      "case": "W20_H24_X4_GPUprop_environmentalOutlet_inner40phaseBudget_dt1ms_r11",
+      "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_inner40phaseBudget_dt1ms_r11",
+      "workers": 1,
+      "gpu": true,
+      "scope": "Environmental outlet and slip bed no-foil pilot; not force or final propagation validation",
+      "elapsed_s": 213.9981722831726,
+      "launcher_pid": 5740,
+      "progress": {
+        "time_s": 0.5100000000000003,
+        "wall_s": 28.872925100000003,
+        "max_speed_m_s": 18.47581817927098,
+        "interface_CFL": 0.10776411993838707,
+        "steps": 10
+      }
+    },
+    "current_CPU": {
+      "status": "paired_inputs_prepared_pending_flow_gates",
+      "updated_at": "2026-10-30T01:21:19.812723+01:00",
+      "controller_pid": 39192,
+      "workers": 1,
+      "gpu": false,
+      "scope": "Paired calm/W01 input preparation, zero flow steps; source mesh preserved",
+      "completed": [
+        {
+          "case": "C01_W20L4_M10_FS020_env_setup_r1",
+          "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1",
+          "returncode": 0,
+          "source_unchanged": true,
+          "elapsed_s": 180.52543902397156,
+          "audit": {
+            "status": "prepared_zero_steps",
+            "time_s": 0.0,
+            "flow_steps": 0,
+            "cells": 317277,
+            "gpu": false,
+            "wave": false,
+            "wave_class": "FlatVofWave",
+            "wave_name": "Calm",
+            "wave_period_s": 0.0,
+            "boundaries": [
+              {
+                "name": "DOMAIN.bottom",
+                "type": "WallBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": -22.0
+              },
+              {
+                "name": "DOMAIN.inlet",
+                "type": "InletBoundary",
+                "area_m2": 0.6000000000000006,
+                "x_m": -35.0
+              },
+              {
+                "name": "DOMAIN.outlet",
+                "type": "PressureBoundary",
+                "area_m2": 0.5999999999999993,
+                "x_m": 45.0
+              },
+              {
+                "name": "DOMAIN.top",
+                "type": "PressureBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": 8.0
+              },
+              {
+                "name": "HF_012_wall",
+                "type": "WallBoundary",
+                "area_m2": 0.04840494399387508
+              },
+              {
+                "name": "Q2D_span_source",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              },
+              {
+                "name": "Q2D_span_target",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              }
+            ],
+            "gauges": [
+              {
+                "x_m": -10.0,
+                "height_m": 30.0,
+                "eta_actual_m": 0.0003650400417498645,
+                "eta_analytic_m": 0.0003650400417498645
+              },
+              {
+                "x_m": -5.0,
+                "height_m": 29.999999999999986,
+                "eta_actual_m": -0.0008184355241347419,
+                "eta_analytic_m": -0.0008184355241347419
+              },
+              {
+                "x_m": 2.5,
+                "height_m": 30.00000000000002,
+                "eta_actual_m": 0.0011526860082859969,
+                "eta_analytic_m": 0.0011526860082859969
+              },
+              {
+                "x_m": 5.0,
+                "height_m": 30.0,
+                "eta_actual_m": -0.0012253340856567263,
+                "eta_analytic_m": -0.0012253340856567263
+              },
+              {
+                "x_m": 10.0,
+                "height_m": 30.000000000000004,
+                "eta_actual_m": -0.0011073495135711653,
+                "eta_analytic_m": -0.0011073495135711653
+              },
+              {
+                "x_m": 15.0,
+                "height_m": 30.000000000000014,
+                "eta_actual_m": -0.00046207380119867025,
+                "eta_analytic_m": -0.00046207380119867025
+              },
+              {
+                "x_m": 20.0,
+                "height_m": 30.000000000000004,
+                "eta_actual_m": -0.001070779254391141,
+                "eta_analytic_m": -0.001070779254391141
+              }
+            ],
+            "initial_alpha_min": 0.0,
+            "initial_alpha_max": 1.0,
+            "initial_max_speed_m_s": 18.000000000000007,
+            "settings": {
+              "order": "SECOND_ORDER",
+              "dt_s": 0.001,
+              "inner": 10,
+              "water_depth_m": 24,
+              "waterline_z_m": 2,
+              "U_m_s": 18,
+              "submergence_m": 2,
+              "outlet_pressure": "ENVIRONMENTAL",
+              "bottom": "SLIP",
+              "top": "STATIC",
+              "forcing_m": 20,
+              "damping_m": 20
+            },
+            "bindings": {
+              "initial_pressure": "HydrostaticPressureWave0",
+              "outlet_pressure": "HydrostaticPressureWave0",
+              "forcing_wave": "Calm",
+              "initial_phase": "VolumeFractionHeavyFluidWave0",
+              "initial_velocity": "VelocityWave0",
+              "outlet_phase": "VolumeFractionHeavyFluidWave0"
+            },
+            "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+          }
+        },
+        {
+          "case": "W01_W20L4_M10_FS020_env_setup_r1",
+          "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1",
+          "returncode": 0,
+          "source_unchanged": true,
+          "elapsed_s": 180.47524094581604,
+          "audit": {
+            "status": "prepared_zero_steps",
+            "time_s": 0.0,
+            "flow_steps": 0,
+            "cells": 317277,
+            "gpu": false,
+            "wave": true,
+            "wave_class": "FifthOrderVofWave",
+            "wave_name": "NTNU_W01_H05_L20_H24 1",
+            "wave_period_s": 0.0,
+            "boundaries": [
+              {
+                "name": "DOMAIN.bottom",
+                "type": "WallBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": -22.0
+              },
+              {
+                "name": "DOMAIN.inlet",
+                "type": "InletBoundary",
+                "area_m2": 0.6000000000000006,
+                "x_m": -35.0
+              },
+              {
+                "name": "DOMAIN.outlet",
+                "type": "PressureBoundary",
+                "area_m2": 0.5999999999999993,
+                "x_m": 45.0
+              },
+              {
+                "name": "DOMAIN.top",
+                "type": "PressureBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": 8.0
+              },
+              {
+                "name": "HF_012_wall",
+                "type": "WallBoundary",
+                "area_m2": 0.04840494399387508
+              },
+              {
+                "name": "Q2D_span_source",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              },
+              {
+                "name": "Q2D_span_target",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              }
+            ],
+            "gauges": [
+              {
+                "height_m": 30.0,
+                "x_m": -10.0,
+                "eta_analytic_m": -0.24226949794026353,
+                "eta_actual_m": -0.24226949794026353
+              },
+              {
+                "height_m": 29.999999999999986,
+                "x_m": -5.0,
+                "eta_analytic_m": -0.010977162440173771,
+                "eta_actual_m": -0.010977162440173771
+              },
+              {
+                "height_m": 30.00000000000002,
+                "x_m": 2.5,
+                "eta_analytic_m": 0.17896289199804016,
+                "eta_actual_m": 0.17896289199804016
+              },
+              {
+                "height_m": 30.0,
+                "x_m": 5.0,
+                "eta_analytic_m": -0.010057214976129103,
+                "eta_actual_m": -0.010057214976129103
+              },
+              {
+                "height_m": 30.000000000000004,
+                "x_m": 10.0,
+                "eta_analytic_m": -0.23952525697016824,
+                "eta_actual_m": -0.23952525697016824
+              },
+              {
+                "height_m": 30.000000000000014,
+                "x_m": 15.0,
+                "eta_analytic_m": -0.009384942723603018,
+                "eta_actual_m": -0.009384942723603018
+              },
+              {
+                "height_m": 30.000000000000004,
+                "x_m": 20.0,
+                "eta_analytic_m": 0.2622544107807627,
+                "eta_actual_m": 0.2622544107807627
+              }
+            ],
+            "initial_alpha_min": 0.0,
+            "initial_alpha_max": 1.0,
+            "initial_max_speed_m_s": 18.474397633573062,
+            "settings": {
+              "order": "SECOND_ORDER",
+              "dt_s": 0.001,
+              "inner": 10,
+              "water_depth_m": 24,
+              "waterline_z_m": 2,
+              "U_m_s": 18,
+              "submergence_m": 2,
+              "outlet_pressure": "ENVIRONMENTAL",
+              "bottom": "SLIP",
+              "top": "STATIC",
+              "forcing_m": 20,
+              "damping_m": 20
+            },
+            "bindings": {
+              "initial_velocity": "VelocityWave1",
+              "initial_phase": "VolumeFractionHeavyFluidWave1",
+              "forcing_wave": "NTNU_W01_H05_L20_H24 1",
+              "outlet_pressure": "HydrostaticPressureWave0",
+              "initial_pressure": "HydrostaticPressureWave1",
+              "outlet_phase": "VolumeFractionHeavyFluidWave0"
+            },
+            "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+          }
+        }
+      ]
+    },
+    "M10_short": {
+      "status": "short_domain_mesh_audited_pending_extension",
+      "updated_at": "2026-10-30T01:05:58.605534+01:00",
+      "design": {
+        "id": "M10_FS020_r1",
+        "mesh_number": 10,
+        "family": "M09_derived_wave_grid",
+        "reference": "M09",
+        "linear_refinement": 1.4,
+        "outer_base_m": 0.25,
+        "first_layer_um": 1.530612244897959,
+        "layers": 48,
+        "total_prism_m": 0.01546,
+        "free_surface_m": 0.02,
+        "protected_middle_size_m": 0.14285714285714288,
+        "protected_middle_xz_m": [
+          -11.9,
+          30.94,
+          -3,
+          3.2
+        ],
+        "purpose": "Wave FS sensitivity: change only nominal free-surface control0.0285714to0.020m; preserve M09 foil/near-foil/prism/outer controls. Regenerated actual edges must be audited. Extend to matched4lambda domain after build; requires its own pairedcalm/wave, no accuracyclaim."
+      },
+      "result": {
+        "id": "M10_FS020_r1",
+        "mesh_number": 10,
+        "family": "M09_derived_wave_grid",
+        "reference": "M09",
+        "linear_refinement": 1.4,
+        "outer_base_m": 0.25,
+        "first_layer_um": 1.530612244897959,
+        "layers": 48,
+        "total_prism_m": 0.01546,
+        "free_surface_m": 0.02,
+        "protected_middle_size_m": 0.14285714285714288,
+        "protected_middle_xz_m": [
+          -11.9,
+          30.94,
+          -3,
+          3.2
+        ],
+        "purpose": "Wave FS sensitivity: change only nominal free-surface control0.0285714to0.020m; preserve M09 foil/near-foil/prism/outer controls. Regenerated actual edges must be audited. Extend to matched4lambda domain after build; requires its own pairedcalm/wave, no accuracyclaim.",
+        "cells": 282379
+      },
+      "source_unchanged": true,
+      "source_sha256": "dae55574062fcb4e2d0d1371a2c925943ae341cf43649402d329b92021fc11d2",
+      "directory": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M10_FS020_r1",
+      "flow_steps": 0,
+      "pending": [
+        "Audit actualFSsize andfoil/prismpreservation",
+        "Extend coherentlyto80m preservingrefinedboundaryspacing",
+        "STARimport/quality/boundaryaudit",
+        "Matchedcalm/W01prep andgrid/forcecomparison"
+      ]
+    },
+    "M10_extended": {
+      "status": "long_domain_mesh_ready_pending_matched_inputs",
+      "updated_at": "2026-10-30T01:13:43.942920+01:00",
+      "cells": 317277,
+      "source_unchanged": true,
+      "flow_steps": 0,
+      "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2",
+      "metrics": {
+        "cell_count": 317277,
+        "mesh_time_s": 0,
+        "NegativeVolumeCells": 0,
+        "UnclosedCells": 0,
+        "DegeneratedFeCells": 0,
+        "min_cell_quality": 0.07094186540769823,
+        "min_volume_change": 0.004255828981421002,
+        "min_face_validity": 1.0,
+        "max_skewness_angle_deg": 45.04069652540024,
+        "diagnostic_CellQuality_below_0.01": 0.0,
+        "diagnostic_VolumeChange_below_0.01": 2.0,
+        "diagnostic_SkewnessAngle_above_80.0": 0.0,
+        "centroid_y_min_m": 0.01999999999999999,
+        "centroid_y_max_m": 0.020000000000000014,
+        "centroid_y_range_m": 2.42861286636753e-17
+      },
+      "topology": {
+        "cells": 317277,
+        "cells_with_one_source_and_target_face": 317277,
+        "invalid_cells": [],
+        "single_layer_topology": true,
+        "node_y_min_m": 0.01,
+        "node_y_max_m": 0.03,
+        "source_nodes": 559195,
+        "paired_nodes": 559195,
+        "max_target_source_xz_displacement_m": 0.0,
+        "y_plane_error_m": 0.0,
+        "foil_edges": 856,
+        "foil_perimeter_m": 2.420247199693756,
+        "area_fraction_any_quad_layers": 0.9988296604199051,
+        "area_fraction_at_least_15_quad_layers": 0.987039181807564,
+        "layer_histogram": {
+          "48": 835,
+          "49": 9,
+          "3": 2,
+          "2": 2,
+          "1": 6,
+          "0": 2
+        },
+        "first_thickness_min_m": 1.5260233597707663e-06,
+        "first_thickness_max_m": 1.5307210708864613e-06,
+        "method": "CGNS connectivity: every volume cell must touch both span planes; prism coverage inferred by following consecutive quadrilateral cells normal to each foil edge, area weighted."
+      },
+      "extension": {
+        "cells": 317277,
+        "source_vertices": 559195,
+        "source_cells_unchanged": true,
+        "source_xz_coordinates_unchanged": true,
+        "span_m": 0.02,
+        "minimum_source_area_m2": 7.736736434995602e-10,
+        "minimum_reconstructed_volume_m3": 1.5473472869991203e-11,
+        "total_volume_m3": 47.997684231839266,
+        "negative_or_zero_reconstructed_volumes": 0,
+        "self_intersecting_source_cells": 0,
+        "nonmanifold_source_edges": 0,
+        "same_side_internal_faces": 0,
+        "boundary_face_counts": {
+          "Polyfaces_fluid": 874525,
+          "DOMAIN.bottom": 359,
+          "DOMAIN.inlet": 187,
+          "DOMAIN.outlet": 186,
+          "DOMAIN.top": 359,
+          "HF_012_wall": 856,
+          "Q2D_span_source": 317277,
+          "Q2D_span_target": 317277
+        },
+        "method": "Preserve all M10_FS020 source polygons; append conforming orthogonal strips at the original inlet and outlet, then rebuild exact one-cell-span connectivity",
+        "purpose": "M10-FS020-derived 4-lambda wave-domain mesh preparation; not a new accepted flow result",
+        "source_mesh": "M10_FS020_r1",
+        "source_sha256": "fa16baf7161bdb2c40eed2c35139e01aa31e8859835e14d31a33dc19ffafb414",
+        "original_cells": 282379,
+        "added_cells": 34898,
+        "original_cell_polygons_preserved": true,
+        "original_coordinates_preserved": true,
+        "extensions": [
+          {
+            "side": "inlet",
+            "old_x_m": -11.9,
+            "new_x_m": -35.0,
+            "columns": 116,
+            "max_dx_m": 0.19913793103448277,
+            "boundary_vertical_segments": 187
+          },
+          {
+            "side": "outlet",
+            "old_x_m": 30.940000000000005,
+            "new_x_m": 45.0,
+            "columns": 71,
+            "max_dx_m": 0.19802816901408443,
+            "boundary_vertical_segments": 186
+          }
+        ],
+        "expected_volume_m3": 47.99768423182085,
+        "x_bounds_m": [
+          -35.0,
+          45.0
+        ],
+        "z_bounds_m": [
+          -22.0,
+          8.0
+        ],
+        "wave_depth_m": 24,
+        "pending": [
+          "Independent STAR mesh import/quality/boundary checks",
+          "Matched calm run on this domain",
+          "Wave propagation/time/domain validation"
+        ],
+        "output_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd"
+      },
+      "pending": [
+        "Actual boundary/zone andindependentarea audit",
+        "Ownmatchedcalm/W01inputs",
+        "Wave propagation,dt andFSsensitivitybeforeforceacceptance"
+      ]
+    },
+    "mass_gate_pct": 0.01,
+    "long_prototypes_blocked": [
+      "R5",
+      "R7",
+      "R9"
+    ],
+    "wave_force_admitted": false,
+    "next": "CompleteR11native40innercomparison beforelongerpropagation; retain0.01% andphysicalguards. Existingcontrollersmustnotduplicate.",
+    "M10_paired_inputs": {
+      "status": "paired_inputs_prepared_pending_flow_gates",
+      "updated_at": "2026-10-30T01:21:19.811744+01:00",
+      "results": [
+        {
+          "case": "C01_W20L4_M10_FS020_env_setup_r1",
+          "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1",
+          "returncode": 0,
+          "source_unchanged": true,
+          "elapsed_s": 180.52543902397156,
+          "audit": {
+            "status": "prepared_zero_steps",
+            "time_s": 0.0,
+            "flow_steps": 0,
+            "cells": 317277,
+            "gpu": false,
+            "wave": false,
+            "wave_class": "FlatVofWave",
+            "wave_name": "Calm",
+            "wave_period_s": 0.0,
+            "boundaries": [
+              {
+                "name": "DOMAIN.bottom",
+                "type": "WallBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": -22.0
+              },
+              {
+                "name": "DOMAIN.inlet",
+                "type": "InletBoundary",
+                "area_m2": 0.6000000000000006,
+                "x_m": -35.0
+              },
+              {
+                "name": "DOMAIN.outlet",
+                "type": "PressureBoundary",
+                "area_m2": 0.5999999999999993,
+                "x_m": 45.0
+              },
+              {
+                "name": "DOMAIN.top",
+                "type": "PressureBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": 8.0
+              },
+              {
+                "name": "HF_012_wall",
+                "type": "WallBoundary",
+                "area_m2": 0.04840494399387508
+              },
+              {
+                "name": "Q2D_span_source",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              },
+              {
+                "name": "Q2D_span_target",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              }
+            ],
+            "gauges": [
+              {
+                "x_m": -10.0,
+                "height_m": 30.0,
+                "eta_actual_m": 0.0003650400417498645,
+                "eta_analytic_m": 0.0003650400417498645
+              },
+              {
+                "x_m": -5.0,
+                "height_m": 29.999999999999986,
+                "eta_actual_m": -0.0008184355241347419,
+                "eta_analytic_m": -0.0008184355241347419
+              },
+              {
+                "x_m": 2.5,
+                "height_m": 30.00000000000002,
+                "eta_actual_m": 0.0011526860082859969,
+                "eta_analytic_m": 0.0011526860082859969
+              },
+              {
+                "x_m": 5.0,
+                "height_m": 30.0,
+                "eta_actual_m": -0.0012253340856567263,
+                "eta_analytic_m": -0.0012253340856567263
+              },
+              {
+                "x_m": 10.0,
+                "height_m": 30.000000000000004,
+                "eta_actual_m": -0.0011073495135711653,
+                "eta_analytic_m": -0.0011073495135711653
+              },
+              {
+                "x_m": 15.0,
+                "height_m": 30.000000000000014,
+                "eta_actual_m": -0.00046207380119867025,
+                "eta_analytic_m": -0.00046207380119867025
+              },
+              {
+                "x_m": 20.0,
+                "height_m": 30.000000000000004,
+                "eta_actual_m": -0.001070779254391141,
+                "eta_analytic_m": -0.001070779254391141
+              }
+            ],
+            "initial_alpha_min": 0.0,
+            "initial_alpha_max": 1.0,
+            "initial_max_speed_m_s": 18.000000000000007,
+            "settings": {
+              "order": "SECOND_ORDER",
+              "dt_s": 0.001,
+              "inner": 10,
+              "water_depth_m": 24,
+              "waterline_z_m": 2,
+              "U_m_s": 18,
+              "submergence_m": 2,
+              "outlet_pressure": "ENVIRONMENTAL",
+              "bottom": "SLIP",
+              "top": "STATIC",
+              "forcing_m": 20,
+              "damping_m": 20
+            },
+            "bindings": {
+              "initial_pressure": "HydrostaticPressureWave0",
+              "outlet_pressure": "HydrostaticPressureWave0",
+              "forcing_wave": "Calm",
+              "initial_phase": "VolumeFractionHeavyFluidWave0",
+              "initial_velocity": "VelocityWave0",
+              "outlet_phase": "VolumeFractionHeavyFluidWave0"
+            },
+            "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+          }
+        },
+        {
+          "case": "W01_W20L4_M10_FS020_env_setup_r1",
+          "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1",
+          "returncode": 0,
+          "source_unchanged": true,
+          "elapsed_s": 180.47524094581604,
+          "audit": {
+            "status": "prepared_zero_steps",
+            "time_s": 0.0,
+            "flow_steps": 0,
+            "cells": 317277,
+            "gpu": false,
+            "wave": true,
+            "wave_class": "FifthOrderVofWave",
+            "wave_name": "NTNU_W01_H05_L20_H24 1",
+            "wave_period_s": 0.0,
+            "boundaries": [
+              {
+                "name": "DOMAIN.bottom",
+                "type": "WallBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": -22.0
+              },
+              {
+                "name": "DOMAIN.inlet",
+                "type": "InletBoundary",
+                "area_m2": 0.6000000000000006,
+                "x_m": -35.0
+              },
+              {
+                "name": "DOMAIN.outlet",
+                "type": "PressureBoundary",
+                "area_m2": 0.5999999999999993,
+                "x_m": 45.0
+              },
+              {
+                "name": "DOMAIN.top",
+                "type": "PressureBoundary",
+                "area_m2": 1.5999999999999979,
+                "z_m": 8.0
+              },
+              {
+                "name": "HF_012_wall",
+                "type": "WallBoundary",
+                "area_m2": 0.04840494399387508
+              },
+              {
+                "name": "Q2D_span_source",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              },
+              {
+                "name": "Q2D_span_target",
+                "type": "SymmetryBoundary",
+                "area_m2": 2399.8842115908765
+              }
+            ],
+            "gauges": [
+              {
+                "height_m": 30.0,
+                "x_m": -10.0,
+                "eta_analytic_m": -0.24226949794026353,
+                "eta_actual_m": -0.24226949794026353
+              },
+              {
+                "height_m": 29.999999999999986,
+                "x_m": -5.0,
+                "eta_analytic_m": -0.010977162440173771,
+                "eta_actual_m": -0.010977162440173771
+              },
+              {
+                "height_m": 30.00000000000002,
+                "x_m": 2.5,
+                "eta_analytic_m": 0.17896289199804016,
+                "eta_actual_m": 0.17896289199804016
+              },
+              {
+                "height_m": 30.0,
+                "x_m": 5.0,
+                "eta_analytic_m": -0.010057214976129103,
+                "eta_actual_m": -0.010057214976129103
+              },
+              {
+                "height_m": 30.000000000000004,
+                "x_m": 10.0,
+                "eta_analytic_m": -0.23952525697016824,
+                "eta_actual_m": -0.23952525697016824
+              },
+              {
+                "height_m": 30.000000000000014,
+                "x_m": 15.0,
+                "eta_analytic_m": -0.009384942723603018,
+                "eta_actual_m": -0.009384942723603018
+              },
+              {
+                "height_m": 30.000000000000004,
+                "x_m": 20.0,
+                "eta_analytic_m": 0.2622544107807627,
+                "eta_actual_m": 0.2622544107807627
+              }
+            ],
+            "initial_alpha_min": 0.0,
+            "initial_alpha_max": 1.0,
+            "initial_max_speed_m_s": 18.474397633573062,
+            "settings": {
+              "order": "SECOND_ORDER",
+              "dt_s": 0.001,
+              "inner": 10,
+              "water_depth_m": 24,
+              "waterline_z_m": 2,
+              "U_m_s": 18,
+              "submergence_m": 2,
+              "outlet_pressure": "ENVIRONMENTAL",
+              "bottom": "SLIP",
+              "top": "STATIC",
+              "forcing_m": 20,
+              "damping_m": 20
+            },
+            "bindings": {
+              "initial_velocity": "VelocityWave1",
+              "initial_phase": "VolumeFractionHeavyFluidWave1",
+              "forcing_wave": "NTNU_W01_H05_L20_H24 1",
+              "outlet_pressure": "HydrostaticPressureWave0",
+              "initial_pressure": "HydrostaticPressureWave1",
+              "outlet_phase": "VolumeFractionHeavyFluidWave0"
+            },
+            "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+          }
+        }
+      ],
+      "flow_admitted": false,
+      "pending": [
+        "No-foil boundary/propagation validation",
+        "Guarded foil startup",
+        "Wave-specific dt and FS-resolution checks",
+        "Matched calm settling and complete wave cycles"
+      ]
+    }
+  },
+  "selected_mesh_time": {
+    "status": "completed_passed",
+    "controller_finished": true,
+    "decision": "selected_mesh_decision.json"
+  },
+  "current_CPU_preparation": {
+    "status": "paired_inputs_prepared_pending_flow_gates",
+    "updated_at": "2026-10-30T01:21:19.812723+01:00",
+    "controller_pid": 39192,
+    "workers": 1,
+    "gpu": false,
+    "scope": "Paired calm/W01 input preparation, zero flow steps; source mesh preserved",
+    "completed": [
+      {
+        "case": "C01_W20L4_M10_FS020_env_setup_r1",
+        "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1",
+        "returncode": 0,
+        "source_unchanged": true,
+        "elapsed_s": 180.52543902397156,
+        "audit": {
+          "status": "prepared_zero_steps",
+          "time_s": 0.0,
+          "flow_steps": 0,
+          "cells": 317277,
+          "gpu": false,
+          "wave": false,
+          "wave_class": "FlatVofWave",
+          "wave_name": "Calm",
+          "wave_period_s": 0.0,
+          "boundaries": [
+            {
+              "name": "DOMAIN.bottom",
+              "type": "WallBoundary",
+              "area_m2": 1.5999999999999979,
+              "z_m": -22.0
+            },
+            {
+              "name": "DOMAIN.inlet",
+              "type": "InletBoundary",
+              "area_m2": 0.6000000000000006,
+              "x_m": -35.0
+            },
+            {
+              "name": "DOMAIN.outlet",
+              "type": "PressureBoundary",
+              "area_m2": 0.5999999999999993,
+              "x_m": 45.0
+            },
+            {
+              "name": "DOMAIN.top",
+              "type": "PressureBoundary",
+              "area_m2": 1.5999999999999979,
+              "z_m": 8.0
+            },
+            {
+              "name": "HF_012_wall",
+              "type": "WallBoundary",
+              "area_m2": 0.04840494399387508
+            },
+            {
+              "name": "Q2D_span_source",
+              "type": "SymmetryBoundary",
+              "area_m2": 2399.8842115908765
+            },
+            {
+              "name": "Q2D_span_target",
+              "type": "SymmetryBoundary",
+              "area_m2": 2399.8842115908765
+            }
+          ],
+          "gauges": [
+            {
+              "x_m": -10.0,
+              "height_m": 30.0,
+              "eta_actual_m": 0.0003650400417498645,
+              "eta_analytic_m": 0.0003650400417498645
+            },
+            {
+              "x_m": -5.0,
+              "height_m": 29.999999999999986,
+              "eta_actual_m": -0.0008184355241347419,
+              "eta_analytic_m": -0.0008184355241347419
+            },
+            {
+              "x_m": 2.5,
+              "height_m": 30.00000000000002,
+              "eta_actual_m": 0.0011526860082859969,
+              "eta_analytic_m": 0.0011526860082859969
+            },
+            {
+              "x_m": 5.0,
+              "height_m": 30.0,
+              "eta_actual_m": -0.0012253340856567263,
+              "eta_analytic_m": -0.0012253340856567263
+            },
+            {
+              "x_m": 10.0,
+              "height_m": 30.000000000000004,
+              "eta_actual_m": -0.0011073495135711653,
+              "eta_analytic_m": -0.0011073495135711653
+            },
+            {
+              "x_m": 15.0,
+              "height_m": 30.000000000000014,
+              "eta_actual_m": -0.00046207380119867025,
+              "eta_analytic_m": -0.00046207380119867025
+            },
+            {
+              "x_m": 20.0,
+              "height_m": 30.000000000000004,
+              "eta_actual_m": -0.001070779254391141,
+              "eta_analytic_m": -0.001070779254391141
+            }
+          ],
+          "initial_alpha_min": 0.0,
+          "initial_alpha_max": 1.0,
+          "initial_max_speed_m_s": 18.000000000000007,
+          "settings": {
+            "order": "SECOND_ORDER",
+            "dt_s": 0.001,
+            "inner": 10,
+            "water_depth_m": 24,
+            "waterline_z_m": 2,
+            "U_m_s": 18,
+            "submergence_m": 2,
+            "outlet_pressure": "ENVIRONMENTAL",
+            "bottom": "SLIP",
+            "top": "STATIC",
+            "forcing_m": 20,
+            "damping_m": 20
+          },
+          "bindings": {
+            "initial_pressure": "HydrostaticPressureWave0",
+            "outlet_pressure": "HydrostaticPressureWave0",
+            "forcing_wave": "Calm",
+            "initial_phase": "VolumeFractionHeavyFluidWave0",
+            "initial_velocity": "VelocityWave0",
+            "outlet_phase": "VolumeFractionHeavyFluidWave0"
+          },
+          "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+        }
+      },
+      {
+        "case": "W01_W20L4_M10_FS020_env_setup_r1",
+        "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1",
+        "returncode": 0,
+        "source_unchanged": true,
+        "elapsed_s": 180.47524094581604,
+        "audit": {
+          "status": "prepared_zero_steps",
+          "time_s": 0.0,
+          "flow_steps": 0,
+          "cells": 317277,
+          "gpu": false,
+          "wave": true,
+          "wave_class": "FifthOrderVofWave",
+          "wave_name": "NTNU_W01_H05_L20_H24 1",
+          "wave_period_s": 0.0,
+          "boundaries": [
+            {
+              "name": "DOMAIN.bottom",
+              "type": "WallBoundary",
+              "area_m2": 1.5999999999999979,
+              "z_m": -22.0
+            },
+            {
+              "name": "DOMAIN.inlet",
+              "type": "InletBoundary",
+              "area_m2": 0.6000000000000006,
+              "x_m": -35.0
+            },
+            {
+              "name": "DOMAIN.outlet",
+              "type": "PressureBoundary",
+              "area_m2": 0.5999999999999993,
+              "x_m": 45.0
+            },
+            {
+              "name": "DOMAIN.top",
+              "type": "PressureBoundary",
+              "area_m2": 1.5999999999999979,
+              "z_m": 8.0
+            },
+            {
+              "name": "HF_012_wall",
+              "type": "WallBoundary",
+              "area_m2": 0.04840494399387508
+            },
+            {
+              "name": "Q2D_span_source",
+              "type": "SymmetryBoundary",
+              "area_m2": 2399.8842115908765
+            },
+            {
+              "name": "Q2D_span_target",
+              "type": "SymmetryBoundary",
+              "area_m2": 2399.8842115908765
+            }
+          ],
+          "gauges": [
+            {
+              "height_m": 30.0,
+              "x_m": -10.0,
+              "eta_analytic_m": -0.24226949794026353,
+              "eta_actual_m": -0.24226949794026353
+            },
+            {
+              "height_m": 29.999999999999986,
+              "x_m": -5.0,
+              "eta_analytic_m": -0.010977162440173771,
+              "eta_actual_m": -0.010977162440173771
+            },
+            {
+              "height_m": 30.00000000000002,
+              "x_m": 2.5,
+              "eta_analytic_m": 0.17896289199804016,
+              "eta_actual_m": 0.17896289199804016
+            },
+            {
+              "height_m": 30.0,
+              "x_m": 5.0,
+              "eta_analytic_m": -0.010057214976129103,
+              "eta_actual_m": -0.010057214976129103
+            },
+            {
+              "height_m": 30.000000000000004,
+              "x_m": 10.0,
+              "eta_analytic_m": -0.23952525697016824,
+              "eta_actual_m": -0.23952525697016824
+            },
+            {
+              "height_m": 30.000000000000014,
+              "x_m": 15.0,
+              "eta_analytic_m": -0.009384942723603018,
+              "eta_actual_m": -0.009384942723603018
+            },
+            {
+              "height_m": 30.000000000000004,
+              "x_m": 20.0,
+              "eta_analytic_m": 0.2622544107807627,
+              "eta_actual_m": 0.2622544107807627
+            }
+          ],
+          "initial_alpha_min": 0.0,
+          "initial_alpha_max": 1.0,
+          "initial_max_speed_m_s": 18.474397633573062,
+          "settings": {
+            "order": "SECOND_ORDER",
+            "dt_s": 0.001,
+            "inner": 10,
+            "water_depth_m": 24,
+            "waterline_z_m": 2,
+            "U_m_s": 18,
+            "submergence_m": 2,
+            "outlet_pressure": "ENVIRONMENTAL",
+            "bottom": "SLIP",
+            "top": "STATIC",
+            "forcing_m": 20,
+            "damping_m": 20
+          },
+          "bindings": {
+            "initial_velocity": "VelocityWave1",
+            "initial_phase": "VolumeFractionHeavyFluidWave1",
+            "forcing_wave": "NTNU_W01_H05_L20_H24 1",
+            "outlet_pressure": "HydrostaticPressureWave0",
+            "initial_pressure": "HydrostaticPressureWave1",
+            "outlet_phase": "VolumeFractionHeavyFluidWave0"
+          },
+          "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+        }
+      }
+    ]
+  },
+  "maximum_mesh_number": 15,
+  "elapsed_from_plan_creation_s": 21661.426999,
+  "R11_partial_diagnostic": {
+    "updated_at": "2026-10-30T01:29:48.295074+01:00",
+    "status": "partial_probe_mass_criterion_already_exceeded",
+    "controller_pid": 36136,
+    "completed": false,
+    "last_time_s": 0.6680000000000005,
+    "samples": 167,
+    "native_abs_peak_pct": 0.011171238745202133,
+    "legacy_abs_peak_pct": 0.011144989242869793,
+    "threshold_pct": 0.01,
+    "scope": "Continueexisting250stepprobeforfullmatchedcomparison; do nottreatpartialhistory ascompleted, but observedexceedance alreadyblocks40innerlongertrial.",
+    "next": "ReviewdocumentedVOFboundedness/clipping/linearconvergence/pressurecoupling; professor_evidenceagentpreparing professor_wave_mass_plateau_review.json. Noautomaticguardchange orblindincrease to100inner."
+  },
+  "current_solver_controls_audit": {
+    "status": "auditing_saved_reports_CPU",
+    "updated_at": "2026-10-30T01:32:12.709690+01:00",
+    "controller_pid": 41084,
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_R4_t0p750_solver_controls_audit_r1",
+    "source": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4\\checkpoint_t0.750.sim",
+    "workers": 1,
+    "gpu": false,
+    "scope": "Zero-step report-definition diagnostic; no physics or time changes"
+  },
+  "current_wave_snapshot": {
+    "status": "propagation_pilot_complete_pending_review",
+    "updated_at": "2026-10-30T02:05:40.924948+01:00",
+    "controller_pid": 28004,
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+    "workers": 1,
+    "gpu": true,
+    "scope": "No-foil pressure AMG tolerance0.1to0.01 sensitivity; baselineVOFtol0.1 SO1ms10inner; no forceadmission",
+    "result": {
+      "returncode": 0,
+      "source_unchanged": true,
+      "completed": {
+        "time_s": 0.7500000000000006,
+        "steps": 250,
+        "status": "target_reached"
+      },
+      "elapsed_s": 393.1255147457123
+    },
+    "next": "Compare .502-.750 against R10 baseline, verify achievedpressureAMGtarget, native/BDF2, gauges,cost. Ifphaseplateaupersists, localizephysicalphaseerror instead of escalating innercounts."
+  },
+  "R11_completed_review": {
+    "updated_at": "2026-10-30T01:36:28.032480+01:00",
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_inner40phaseBudget_dt1ms_r11",
+    "source_unchanged": true,
+    "settings": "SO1ms40inner versus identicalSO1ms10inner R10; bothfromsameR4t0.500",
+    "window_s": [
+      0.502,
+      0.75
+    ],
+    "samples": 249,
+    "metrics": {
+      "native_water_error_kg_s": {
+        "max_abs": 0.9520108816859312,
+        "mean_abs": 0.0524261885123588
+      },
+      "native_air_error_kg_s": {
+        "max_abs": 0.0011514670888062195,
+        "mean_abs": 6.659459914165534e-05
+      },
+      "native_sum_error_kg_s": {
+        "max_abs": 0.9508909650524462,
+        "mean_abs": 0.052361722770798806
+      },
+      "native_sum_pct_inward_mass": {
+        "max_abs": 0.011144986616723137,
+        "mean_abs": 0.0006135400303853828
+      },
+      "native_abs_sum_pct_inward_mass": {
+        "max_abs": 0.011171238745202133,
+        "mean_abs": 0.000615075723338578
+      },
+      "bdf2_plus_faceflux_pct_inward_mass": {
+        "max_abs": 0.011144989242869793,
+        "mean_abs": 0.000613540115079659
+      },
+      "bdf2_plus_phaseflux_pct_inward_mass": {
+        "max_abs": 0.011144989242912432,
+        "mean_abs": 0.0006135401150729862
+      },
+      "faceflux_minus_phaseflux_kg_s": {
+        "max_abs": 1.4551915228366852e-11,
+        "mean_abs": 4.266224143256145e-12
+      }
+    },
+    "native_vs_inventory_max_difference_pct": 4.849334389286138e-09,
+    "phase_vs_mixture_max_flux_difference_kg_s": 1.4551915228366852e-11,
+    "native_inventory_consistent": true,
+    "short_mass_gate_pass": false,
+    "native_phase_mass_gate_pass": false,
+    "legacy_faceflux_mass_gate_pass": false,
+    "original_threshold_pct": 0.01,
+    "max_gauge_40minus10_difference_mm": 0.3461476649313511,
+    "gauge_40minus10_RMS_difference_mm": 0.0740661191049509,
+    "scope": "Diagnostic comparison. Native phase errors are sums of phase transport residual timesdt perSiemensGUID-187276CC-89DA-4F69-B1AE-500038C45DE8. LegacyBDF2+FaceFlux retained. Nativephasefluxanddensityreconstructionreview requiredbeforeanygateinterpretation. Nofoilforceadmission."
+  },
+  "solver_controls": {
+    "updated_at": "2026-10-30T01:41:59.184868+01:00",
+    "source": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_R4_t0p750_solver_controls_audit_r1",
+    "zero_steps": true,
+    "source_unchanged": true,
+    "VOF_AMG": {
+      "class": "star.common.AMGLinearSolver",
+      "getEpsilon": 0.0,
+      "getTotalNumberCycles": 2633,
+      "getTotalSolveElapsedTime": 0.0,
+      "getSelectedSmootherOption": {
+        "class": "star.common.EnumeratedOptionInput",
+        "getSelected": "GAUSS_SEIDEL"
+      },
+      "getSelectedCycleOption": {
+        "class": "star.common.EnumeratedOptionInput",
+        "getSelected": "V_CYCLE"
+      },
+      "getMaxCycles": 30,
+      "getConvergeTol": 0.1,
+      "getVerbosityEnum": "NONE",
+      "getPresentationName": "AMG Linear Solver"
+    },
+    "pressure_AMG": {
+      "class": "star.common.AMGLinearSolver",
+      "getEpsilon": 0.0,
+      "getTotalNumberCycles": 10674,
+      "getTotalSolveElapsedTime": 0.0,
+      "getSelectedSmootherOption": {
+        "class": "star.common.EnumeratedOptionInput",
+        "getSelected": "GAUSS_SEIDEL"
+      },
+      "getSelectedCycleOption": {
+        "class": "star.common.EnumeratedOptionInput",
+        "getSelected": "V_CYCLE"
+      },
+      "getMaxCycles": 30,
+      "getConvergeTol": 0.1,
+      "getVerbosityEnum": "NONE",
+      "getPresentationName": "AMG Linear Solver"
+    },
+    "velocity_AMG": {
+      "class": "star.common.AMGLinearSolver",
+      "getEpsilon": 0.0,
+      "getTotalNumberCycles": 7899,
+      "getTotalSolveElapsedTime": 0.0,
+      "getSelectedSmootherOption": {
+        "class": "star.common.EnumeratedOptionInput",
+        "getSelected": "GAUSS_SEIDEL"
+      },
+      "getSelectedCycleOption": {
+        "class": "star.common.EnumeratedOptionInput",
+        "getSelected": "FLEX_CYCLE"
+      },
+      "getMaxCycles": 30,
+      "getConvergeTol": 0.1,
+      "getVerbosityEnum": "NONE",
+      "getPresentationName": "AMG Linear Solver"
+    },
+    "VOF_URF": 0.9,
+    "pressure_URF": 0.2,
+    "velocity_URF": 0.5,
+    "scheme": "SIMPLE",
+    "nonorthogonal_correctors": 0,
+    "next": "Read R12nativeperinner/AMGcycletrace before selectingone numericallysupportedcontrolchange."
+  },
+  "next_diagnostic": "Resume only on explicit user request. Review calibrated local phase imbalance fields; no further wave-force admission.",
+  "current_wave": {
+    "status": "propagation_pilot_complete_pending_review",
+    "updated_at": "2026-10-30T02:05:40.924948+01:00",
+    "controller_pid": 28004,
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+    "workers": 1,
+    "gpu": true,
+    "scope": "No-foil pressure AMG tolerance0.1to0.01 sensitivity; baselineVOFtol0.1 SO1ms10inner; no forceadmission",
+    "result": {
+      "returncode": 0,
+      "source_unchanged": true,
+      "completed": {
+        "time_s": 0.7500000000000006,
+        "steps": 250,
+        "status": "target_reached"
+      },
+      "elapsed_s": 393.1255147457123
+    },
+    "next": "Compare .502-.750 against R10 baseline, verify achievedpressureAMGtarget, native/BDF2, gauges,cost. Ifphaseplateaupersists, localizephysicalphaseerror instead of escalating innercounts."
+  },
+  "latest_execution": "Paused by user. R14 completed02:05local; massgate still failed. No accepted foil-wave forces. Separate HF session intentionally left running.",
+  "elapsed_since_plan_hours": 6.487508224722222,
+  "campaign_status": "paused_by_user",
+  "pause": {
+    "status": "paused_by_user",
+    "updated_at": "2026-10-30T07:42:17.443855+01:00",
+    "reason": "Transport to NTNU; user requested stopping this campaign.",
+    "automation_status": "PAUSED",
+    "stop_marker": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\STOP_ALL",
+    "last_case": "W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+    "last_completed_local": "2026-10-30T02:05:40.924948+01:00",
+    "last_field": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14\\final.sim",
+    "last_time_s": 0.75,
+    "own_controller_running": false,
+    "last_source_unchanged": true,
+    "separate_HF_session": "Explicitly left running by user instruction at morning pause",
+    "next": "Resume only on explicit user request. Review calibrated local phase imbalance fields; no further wave-force admission.",
+    "R14_native_mass_peak_pct": 0.01424757587635092,
+    "mass_limit_pct": 0.01
+  },
+  "dashboard_reorganization": {
+    "updated_at": "2026-10-30T09:00:44.632742+01:00",
+    "record": "dashboard_reorganization_20261030.json",
+    "solver_restart_authorized": false
+  },
+  "user_W01_resume": {
+    "authorization": "first_foil_wave_authorization_20261030.json",
+    "scope": "First bounded exploratory foil-wave run with diagnostics",
+    "original_mass_criterion_remains_diagnostic": true
+  },
+  "current_pause": {
+    "updated_at": "2026-10-30T10:05:30.818474+01:00",
+    "status": "paused_by_user_until_after_meeting_and_power_connection",
+    "no_automatic_resume": true,
+    "case": "W01_W20L4_M10_FS020_diagnostic_r1",
+    "physical_time_s": 0.16800000000000012,
+    "computed_sim": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\final.sim",
+    "computed_sim_bytes": 499188536,
+    "server_kept_open": true,
+    "server_launcher_pid": 23564,
+    "holder_pid": 28140,
+    "local_control_server_pid": 36724,
+    "original_dashboards_frozen": true,
+    "working_directory": "F:\\ntnu\\mesh_screening_20261028\\dashboard_work_20261030",
+    "qa": "manual_panel_ui_review_20261030.json",
+    "control_tests": "manual_control_test_review.json",
+    "manual_macro": "manual_macro_build_receipt.json",
+    "limitation": "Manual presets compiled and control logic tested with a mocked launcher. No new CFD run executed after user pause. Every manual Start uses a fresh source; continuation of paused fields is separate.",
+    "separate_HF_untouched": true
+  }
+}

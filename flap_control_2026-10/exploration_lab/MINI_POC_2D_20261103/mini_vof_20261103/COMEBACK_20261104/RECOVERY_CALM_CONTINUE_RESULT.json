@@ -1,0 +1,35 @@
+{
+  "result": {
+    "status": "HOLD_PRESSURE",
+    "samples": 11,
+    "startup_s": 122.16046970000025,
+    "solver_step_median_s": 3.4077153,
+    "solver_step_mean_s": 3.4167218666666668,
+    "end_to_end_s": 208.11076409999987,
+    "dt_s": 0.0001,
+    "checkpoint_sha256_input": "ff5211fbfd893067548877ca266b27efa7029f557fdf1e5b7899c79cd1d246bd",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\RECOVERY_CALM_RAMP_CONTINUE_20261104_103936\\FINAL.sim",
+    "checkpoint_sha256": "b7ad8e5e5b4b3d8bea30d147b32ef930315061dff2c227b76e846d4a2634834a",
+    "state": {
+      "time_s": 0.0051,
+      "steps": 11,
+      "foil": true,
+      "status": "HOLD_PRESSURE",
+      "amplitude_target": 0.0,
+      "training_approved": false,
+      "reason": "PRESSURE",
+      "residual_pass": false,
+      "solver_seconds": 38.9305662
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "target_speed_reached": false,
+  "final_inlet_target_m_s": 0.2125314451170464,
+  "night_approved": false,
+  "W06": {
+    "baseline_s": 1.6229630500000667,
+    "peak_slowdown": 0.027634115884672017,
+    "stop": null
+  }
+}

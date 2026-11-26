@@ -1,0 +1,54 @@
+{
+  "updated_at": "2026-10-30T01:18:33.120477+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_phaseBudget_dt1ms_r10",
+  "source_unchanged": true,
+  "settings": "ExactR4 SO1ms10inner; additional reporting only",
+  "window_s": [
+    0.502,
+    0.75
+  ],
+  "samples": 249,
+  "metrics": {
+    "native_water_error_kg_s": {
+      "max_abs": 1.2260368890000435,
+      "mean_abs": 0.09363708956154064
+    },
+    "native_air_error_kg_s": {
+      "max_abs": 0.0013184603497303391,
+      "mean_abs": 0.00013693312052495641
+    },
+    "native_sum_error_kg_s": {
+      "max_abs": 1.2247184286503132,
+      "mean_abs": 0.09351016666664218
+    },
+    "native_sum_pct_inward_mass": {
+      "max_abs": 0.014355551150379526,
+      "mean_abs": 0.0010952371425205667
+    },
+    "native_abs_sum_pct_inward_mass": {
+      "max_abs": 0.014386459846692946,
+      "mean_abs": 0.0010983279056987376
+    },
+    "bdf2_plus_faceflux_pct_inward_mass": {
+      "max_abs": 0.014355556933924065,
+      "mean_abs": 0.0010952372235620003
+    },
+    "bdf2_plus_phaseflux_pct_inward_mass": {
+      "max_abs": 0.014355556933902744,
+      "mean_abs": 0.0010952372235523405
+    },
+    "faceflux_minus_phaseflux_kg_s": {
+      "max_abs": 1.6370904631912708e-11,
+      "mean_abs": 3.835218621934035e-12
+    }
+  },
+  "native_vs_inventory_max_difference_pct": 5.783544539117447e-09,
+  "phase_vs_mixture_max_flux_difference_kg_s": 1.6370904631912708e-11,
+  "reporting_equivalence_supported": true,
+  "native_phase_mass_gate_pass": false,
+  "legacy_faceflux_mass_gate_pass": false,
+  "original_threshold_pct": 0.01,
+  "max_gauge_replay_difference_mm": 0.047904231781359385,
+  "gauge_replay_RMS_difference_mm": 0.010343348523076494,
+  "scope": "Diagnostic comparison. Native phase errors are sums of phase transport residual timesdt perSiemensGUID-187276CC-89DA-4F69-B1AE-500038C45DE8. LegacyBDF2+FaceFlux retained. Nativephasefluxanddensityreconstructionreview requiredbeforeanygateinterpretation. Nofoilforceadmission."
+}

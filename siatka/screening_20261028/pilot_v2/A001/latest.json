@@ -1,0 +1,78 @@
+{
+  "attempt_dir": "F:\\ntnu\\mesh_screening_20261028\\pilot_v2\\A001\\attempt_cbaabfe8e84b43a2815a671b8e3c496d",
+  "baseline_sha256": "7dfb04a68e1df202d5039ce140976c0fb04929db8bdb22af41b9f925d6801787",
+  "case_fingerprint": "0a224946ded0b035e9ac25d169f8fed572df02fe96f96614d127eae261caf4de",
+  "case_id": "A001",
+  "contract_status": "verified",
+  "evidence_kind": "measured",
+  "failure_reason": "",
+  "generation_status": "completed",
+  "locked_settings_sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+  "metrics": {
+    "DegeneratedFeCells": 0,
+    "NegativeVolumeCells": 0,
+    "UnclosedCells": 0,
+    "cell_count": 25188874,
+    "diagnostic_CellQuality_below_0.01": 115.0,
+    "diagnostic_FaceValidity_below_0.95": 0.0,
+    "diagnostic_VolumeChange_below_0.01": 0.0,
+    "invalid_cells": 0,
+    "max_skewness_angle_deg": 4844.530768048811,
+    "mesh_time_s": 267.6929207,
+    "min_cell_quality": 1.0581181140657249e-05,
+    "min_cell_volume_m3": 5.434673531153277e-13,
+    "min_face_validity": 1.0,
+    "min_volume_change": 0.011000588861198568
+  },
+  "notes": [
+    "min_cell_volume_m3 field=Volume population=fluid volume cells",
+    "min_cell_quality field=CellQuality population=fluid volume cells",
+    "min_face_validity field=FaceValidity population=fluid volume cells",
+    "min_volume_change field=VolumeChange population=fluid volume cells",
+    "max_skewness_angle_deg field=SkewnessAngle population=fluid volume cells",
+    "Diagnostic CellQuality < 0.01: 115.0 cells; review trigger, not universal acceptance limit",
+    "Diagnostic VolumeChange < 0.01: 0.0 cells; review trigger, not universal acceptance limit",
+    "Diagnostic FaceValidity < 0.95: 0.0 cells; review trigger, not universal acceptance limit"
+  ],
+  "parameters_m": {
+    "foil_target_m": 0.0064
+  },
+  "precision": "double",
+  "process_elapsed_s": 418.453,
+  "quality_reasons": [
+    "prism_review",
+    "local_resolution_review"
+  ],
+  "quality_status": "incomplete",
+  "readback_after_mesh": {
+    "locked_settings_sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+    "parameters_m": {
+      "foil_target_m": 0.0064
+    }
+  },
+  "readback_before_mesh": {
+    "locked_settings_sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+    "parameters_m": {
+      "foil_target_m": 0.0064
+    }
+  },
+  "result_path": "F:\\ntnu\\mesh_screening_20261028\\pilot_v2\\A001\\attempt_cbaabfe8e84b43a2815a671b8e3c496d\\measurement.json",
+  "reviews": {
+    "local_resolution_review": {
+      "evidence": "Threshold tables are diagnostic only; hydrodynamic resolution not verified",
+      "status": "pending"
+    },
+    "prism_review": {
+      "evidence": "Saved mesh and mesher log require coverage/transition inspection",
+      "status": "pending"
+    }
+  },
+  "run_id": "8b9e144d5fa749b5b85eb719bbd72544",
+  "save_sim_path": "F:\\ntnu\\mesh_screening_20261028\\pilot_v2\\A001\\attempt_cbaabfe8e84b43a2815a671b8e3c496d\\mesh.sim",
+  "save_status": "completed",
+  "saved_model_path": "F:\\ntnu\\mesh_screening_20261028\\pilot_v2\\A001\\attempt_cbaabfe8e84b43a2815a671b8e3c496d\\mesh.sim",
+  "schema_version": 1,
+  "solver_iterations_executed": 0,
+  "solver_version": "21.02.007",
+  "stage": "pilot"
+}

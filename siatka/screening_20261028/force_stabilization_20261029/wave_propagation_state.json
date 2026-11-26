@@ -1,0 +1,21 @@
+{
+  "status": "propagation_pilot_complete_pending_review",
+  "updated_at": "2026-10-30T02:05:40.924948+01:00",
+  "controller_pid": 28004,
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+  "workers": 1,
+  "gpu": true,
+  "scope": "No-foil pressure AMG tolerance0.1to0.01 sensitivity; baselineVOFtol0.1 SO1ms10inner; no forceadmission",
+  "result": {
+    "returncode": 0,
+    "source_unchanged": true,
+    "completed": {
+      "time_s": 0.7500000000000006,
+      "steps": 250,
+      "status": "target_reached"
+    },
+    "elapsed_s": 393.1255147457123
+  },
+  "next": "Compare .502-.750 against R10 baseline, verify achievedpressureAMGtarget, native/BDF2, gauges,cost. Ifphaseplateaupersists, localizephysicalphaseerror instead of escalating innercounts."
+}

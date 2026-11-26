@@ -1,0 +1,190 @@
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:23: warning: [deprecation] setAngleFactor(double) in star.vof.SegregatedVofModel has been deprecated
+  pc.getModelManager().getModel(SegregatedVolumeFluxBasedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SegregatedVofModel.class).setAngleFactor(.15);
+                                                                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:59: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:59: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:59: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:59: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                                                                                                                                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:67: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                 ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:67: warning: [deprecation] setUrf(double) in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:69: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);if(b("fresh")){useSeededInitialFlow();s.getSolution().initializeSolution();}double nativePeriod=wave.getWavePeriod().getSIValue();if(Double.isFinite(nativePeriod)&&nativePeriod>.40&&nativePeriod<.52){T=nativePeriod;W=2*Math.PI/T;}write("STOKES_READBACK.json",Map.of("wave_type","FifthOrderVofWave","native_period_s",nativePeriod,"period_planning_s",T,"height_m",wave.getWaveHeight().getSIValue(),"depth_m",wave.getWaterDepth().getSIValue(),"wavelength_m",wave.getVofWaveSpecification().getWaveLength().getSIValue(),"advancing_direction","+X","current_m_s",18,"global_initialization",b("fresh")&&oldAmp>0));
+                                         ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:69: warning: [deprecation] getWavePeriod() in star.vof.FifthOrderVofWave has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);if(b("fresh")){useSeededInitialFlow();s.getSolution().initializeSolution();}double nativePeriod=wave.getWavePeriod().getSIValue();if(Double.isFinite(nativePeriod)&&nativePeriod>.40&&nativePeriod<.52){T=nativePeriod;W=2*Math.PI/T;}write("STOKES_READBACK.json",Map.of("wave_type","FifthOrderVofWave","native_period_s",nativePeriod,"period_planning_s",T,"height_m",wave.getWaveHeight().getSIValue(),"depth_m",wave.getWaterDepth().getSIValue(),"wavelength_m",wave.getVofWaveSpecification().getWaveLength().getSIValue(),"advancing_direction","+X","current_m_s",18,"global_initialization",b("fresh")&&oldAmp>0));
+                                                                                                                                                                ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:70: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  Map<String,Object>a=new LinkedHashMap<>();a.put("stage",cfg.getProperty("stage"));a.put("cells",nc);a.put("start_time",start);a.put("dt",dt);a.put("inner",inner);a.put("initialization_called",b("fresh"));a.put("reset_on_loaded_fields",false);a.put("old_pressure_urf",oldUrf);a.put("pressure_urf",ps.getUrf());a.put("old_pressure_tol",oldTol);a.put("pressure_tol",ps.getAMGLinearSolver().getConvergeTol());a.put("amplitude_from",oldAmp);a.put("amplitude_target",amp);a.put("amplitude_ramp_s",ramp);a.put("initial_field",oldAmp==0?"flat water and air":"native Stokes V");a.put("inlet_ramp",ramp>0?"S5, zero endpoint first/second derivative":"Existing globally initialized wave; no velocity/amplitude jump");a.put("forcing_length_m",d("forcing_length",4));a.put("damping_length_m",d("damping_length",8));a.put("outlet_and_top","native flat-wave pressure and volume fraction");a.put("vorticity_limiter",pc.getModelManager().getModel(SstKwTurbModel.class).getKwTurbRealizabilityOption().getSelectedElement().toString());a.put("all_yplus",pc.getModelManager().hasModel(KwAllYplusWallTreatment.class)!=null);a.put("sst",pc.getModelManager().hasModel(SstKwTurbModel.class)!=null);a.put("reference_C01_CL",.3156595);a.put("reference_C01_CD",.00700232);a.put("C01_not_modified",true);write("SETUP_READBACK.json",a);
+                                                                                                                                                                                                                                                                                                            ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:84: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  if(foil){for(ForceReportForceOption.Type type:List.of(ForceReportForceOption.Type.PRESSURE,ForceReportForceOption.Type.SHEAR)){ForceReport f=s.getReportManager().createReport(ForceReport.class);f.getForceOption().setSelected(type);f.getDirection().setComponents(1,0,0);f.setPressureOption(FluidLoadsReportPressureOption.SP_UC);f.getParts().setObjects(walls);rep.put(type==ForceReportForceOption.Type.PRESSURE?"FxPressure":"FxShear",f);}wallTable=s.getTableManager().createTable(XyzInternalTable.class);wallTable.setPresentationName("CB_Wall_Cp_yplus");wallTable.getParts().setObjects(walls);wallTable.setFieldFunctions(List.of(ff("WallYplus"),ff("Pressure"),ff("AbsolutePressure")));}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:85: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  fields=s.getTableManager().createTable(XyzInternalTable.class);fields.setPresentationName("NIGHT_FIELDS");fields.getParts().setObjects(reg);fields.setFieldFunctions(List.of(alpha,ff("AbsolutePressure"),ff("Pressure"),ff("Velocity").getComponentFunction(0),ff("Velocity").getComponentFunction(1),ff("Velocity").getComponentFunction(2),ff("TurbulentKineticEnergy"),ff("SpecificDissipationRate"),ff("TurbulentViscosityRatio"),co,ff("CellQuality"),ff("Volume")));
+                            ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:141: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  vertices=s.getTableManager().createTable(XyzInternalTable.class);
+                              ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:317: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                         ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:410: warning: [deprecation] getWavePeriod() in star.vof.FifthOrderVofWave has been deprecated
+    if(step==1){double period=wave.getWavePeriod().getSIValue();write("STOKES_AFTER_FIRST_STEP.json",Map.of("native_period_s",period,"time_s",t));if(!moving&&Double.isFinite(period)&&period>.40&&period<.52){T=period;W=2*Math.PI/T;}}
+                                  ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\MiniVofStokes.java:429: warning: [deprecation] getWavePeriod() in star.vof.FifthOrderVofWave has been deprecated
+  write("STOKES_AFTER_FINAL_STEP.json",Map.of("native_period_s",wave.getWavePeriod().getSIValue(),"height_m",wave.getWaveHeight().getSIValue(),"time_s",s.getSolution().getPhysicalTime()));fields.extract();fields.export(out.resolve("field_end.csv").toString(),",");save("FINAL");if(foil&&wallTable!=null){wallTable.extract();wallTable.export(out.resolve("wall_yplus_pressure.csv").toString(),",");}for(Monitor m:s.getMonitorManager().getObjects())if(m instanceof ResidualMonitor)m.export(out.resolve("residual_"+m.getPresentationName().replaceAll("[^A-Za-z0-9]","_")+".csv").toString());write("SOLVE_STATUS.json",Map.of("status",result,"reason",reason,"steps",done,"time_s",s.getSolution().getPhysicalTime(),"solver_seconds",solveSeconds,"residual_pass",residual,"foil",foil,"amplitude_target",amp,"training_approved",false));status("STOPPED",result);
+                                                                    ^
+
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+
+
+Importing F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/mini_vof_20261103/COMEBACK_20261104/WALL_FUNCTIONS_AUDIT/HIGH_YPLUS_CANDIDATE_V2/Q2D/mesh_3d.msh
+Loading module: CaeIOCgns
+Reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\WALL_FUNCTIONS_AUDIT\HIGH_YPLUS_CANDIDATE_V2\Q2D\mesh_3d.msh...
+Importing cells
+Cell type: mixed
+   Name: cell-1
+   Number of cells: 44442
+   Zone type: fluid
+   Zone 2 type interior, name interior
+   Zone 3 type wall, name main
+   Zone 4 type wall, name flap
+   Zone 5 type velocity-inlet, name inlet
+   Zone 6 type pressure-outlet, name outlet
+   Zone 7 type pressure-outlet, name top
+   Zone 8 type wall, name bottom
+   Zone 9 type symmetry, name span_front
+   Zone 10 type symmetry, name span_back
+   Zone 1 type fluid, name MINI_water_air
+Importing faces
+Group: interior-2
+   Number of faces: 84414
+   Topology: quadrilateral
+   Type: 2
+Importing faces
+Group: wall-3
+   Number of faces: 620
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: wall-4
+   Number of faces: 96
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: velocity-inlet-5
+   Number of faces: 109
+   Topology: quadrilateral
+   Type: 10
+Importing faces
+Group: pressure-outlet-6
+   Number of faces: 109
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: pressure-outlet-7
+   Number of faces: 320
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: wall-8
+   Number of faces: 62
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: symmetry-9
+   Number of faces: 44442
+   Topology: mixed
+   Type: 7
+Importing faces
+Group: symmetry-10
+   Number of faces: 44442
+   Topology: mixed
+   Type: 7
+
+Partitioning region MINI_water_air (44442 cells, 1 partitions)
+Partitioning complete
+Importing nodes
+Dimension: 3
+   Number of nodes: 82576
+   Zone id: 1
+Processing mesh
+Finished reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\WALL_FUNCTIONS_AUDIT\HIGH_YPLUS_CANDIDATE_V2\Q2D\mesh_3d.msh
+Reordering
+Finished importing
+Imported coordinate extents (m)
+X extents: [-12.0, 28.0]
+   Y extents: [-10.0, 4.0]
+   Z extents: [0.0, 0.02]
+
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: VofModel
+Loading module: WavesModel
+Found 7 columns while importing table F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\B_CFL_NATIVE_CELL_READBACK_20261104_095856\V2_FLOW_SEED.csv: 'X', 'Y', 'Z', 'U', 'V', 'W', 'P'
+Imported 44442 rows for all columns.
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+Initialization of star.mixturemultiphase.SegregatedVolumeFluxBasedFlowModel requires an additional pass...
+Initialization of star.segregatedflow.SegregatedFlowSolver requires an additional pass...
+Initialization of star.vof.SegregatedVofModel requires an additional pass...
+Initialization of star.vof.SegregatedVofSolver requires an additional pass...
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\START.sim... complete (35.065MB in 0.10052s).
+Reversed flow on  6 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00 
+Reversed flow on  155 faces on MINI_water_air: top
+             2   4.990554e-01   1.000000e+00   1.000000e+00   1.000000e+00   1.006233e-01   1.566964e-01   1.948061e-01 
+Reversed flow on  155 faces on MINI_water_air: top
+             3   3.480528e-01   5.987254e-01   5.986018e-01   1.000000e+00   1.012908e-02   8.546854e-02   4.901534e-02 
+Reversed flow on  155 faces on MINI_water_air: top
+             4   3.138644e-01   3.522727e-01   3.484152e-01   1.000000e+00   1.064748e-03   6.982479e-02   2.824633e-02 
+Reversed flow on  155 faces on MINI_water_air: top
+             5   3.113033e-01   2.065163e-01   2.031884e-01   9.038320e-01   3.520403e-04   6.273836e-02   1.738815e-02 
+Reversed flow on  155 faces on MINI_water_air: top
+             6   3.043191e-01   1.212293e-01   1.186137e-01   1.022420e+00   1.736804e-04   5.784150e-02   1.184969e-02 
+Reversed flow on  155 faces on MINI_water_air: top
+             7   2.879382e-01   7.122861e-02   6.949666e-02   1.083372e+00   1.170210e-04   5.372395e-02   9.450059e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+             8   2.700270e-01   4.187397e-02   4.086636e-02   8.994835e-01   2.015798e-04   4.994517e-02   8.920833e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+             9   2.546948e-01   2.474111e-02   2.419223e-02   9.944799e-01   1.113794e-04   4.628980e-02   9.542144e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            10   2.366481e-01   1.439010e-02   1.416705e-02   9.902685e-01   4.852982e-05   4.274446e-02   1.076909e-02 
+Reversed flow on  155 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            11   2.177078e-01   8.632462e-03   8.509360e-03   1.313366e+00   7.551588e-05   3.933270e-02   1.083779e-02 
+Reversed flow on  155 faces on MINI_water_air: top
+            12   2.033490e-01   5.183464e-03   5.106558e-03   1.200788e+00   7.064736e-05   3.608484e-02   8.521455e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            13   1.924079e-01   3.132606e-03   3.091686e-03   9.912136e-01   3.167712e-05   3.299620e-02   6.254163e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            14   1.819838e-01   1.931290e-03   1.918395e-03   8.780398e-01   7.358383e-05   3.002973e-02   4.486184e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            15   1.716458e-01   1.170953e-03   1.181164e-03   1.264100e+00   5.629067e-05   2.723116e-02   3.442305e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            16   1.621013e-01   7.041071e-04   7.276700e-04   1.307509e+00   2.099927e-05   2.456814e-02   3.938536e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            17   1.539558e-01   4.600750e-04   4.776124e-04   1.158167e+00   1.725878e-05   2.211205e-02   4.896569e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            18   1.473041e-01   3.239138e-04   3.344723e-04   1.267704e+00   1.424677e-04   1.986027e-02   5.111383e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+            19   1.417464e-01   2.329138e-04   2.384466e-04   1.178220e+00   1.874921e-05   1.781842e-02   5.915551e-03 
+Reversed flow on  155 faces on MINI_water_air: top
+TimeStep    1: Time  2.500000e-05
+            20   1.373733e-01   2.100182e-04   2.016530e-04   1.209271e+00   1.334554e-05   1.596895e-02   6.493599e-03 
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\I1_H010_FIXED_V2_SEEDED_COEX_20261104_100944\FINAL.sim... complete (48.184MB in 0.1074s).

@@ -1,0 +1,3074 @@
+{
+  "NTNU_CFD_Mesh_Advisor_y55_final.xlsx": {
+    "Calculator": [
+      {
+        "B2": {
+          "value": "Inflation layers and y\u207a",
+          "formula": null
+        }
+      },
+      {
+        "B3": {
+          "value": "Edit the yellow cells. Initial values are a water example, not inputs for your model.",
+          "formula": null
+        }
+      },
+      {
+        "B5": {
+          "value": "INPUTS",
+          "formula": null
+        },
+        "F5": {
+          "value": "MESH PARAMETERS",
+          "formula": null
+        }
+      },
+      {
+        "B6": {
+          "value": "Reference velocity U",
+          "formula": null
+        },
+        "C6": {
+          "value": "18",
+          "formula": null
+        },
+        "D6": {
+          "value": "m/s",
+          "formula": null
+        },
+        "F6": {
+          "value": "First layer thickness h\u2081",
+          "formula": null
+        },
+        "G6": {
+          "value": "0.00017992746280518792",
+          "formula": "IF(C26=1,IF(C17=1,G24,G25),\"\u2014\")"
+        },
+        "H6": {
+          "value": "m",
+          "formula": null
+        },
+        "I6": {
+          "value": "Full cell height, h\u2081 = 2y_p.",
+          "formula": null
+        }
+      },
+      {
+        "B7": {
+          "value": "Length L / distance x",
+          "formula": null
+        },
+        "C7": {
+          "value": "1.19",
+          "formula": null
+        },
+        "D7": {
+          "value": "m",
+          "formula": null
+        },
+        "F7": {
+          "value": "First layer thickness h\u2081",
+          "formula": null
+        },
+        "G7": {
+          "value": "0.17992746280518793",
+          "formula": "IF(ISNUMBER(G6),G6*1000,\"\u2014\")"
+        },
+        "H7": {
+          "value": "mm",
+          "formula": null
+        },
+        "I7": {
+          "value": "Check the units in your mesher.",
+          "formula": null
+        }
+      },
+      {
+        "B8": {
+          "value": "Density \u03c1",
+          "formula": null
+        },
+        "C8": {
+          "value": "1000",
+          "formula": null
+        },
+        "D8": {
+          "value": "kg/m\u00b3",
+          "formula": null
+        },
+        "F8": {
+          "value": "Growth ratio r",
+          "formula": null
+        },
+        "G8": {
+          "value": "1.2210050536429486",
+          "formula": "IF(C28=1,IF(C15=1,G28,C16),\"\u2014\")"
+        },
+        "H8": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I8": {
+          "value": "Automatic from N and target T, or manual.",
+          "formula": null
+        }
+      },
+      {
+        "B9": {
+          "value": "Dynamic viscosity \u03bc",
+          "formula": null
+        },
+        "C9": {
+          "value": "1E-3",
+          "formula": null
+        },
+        "D9": {
+          "value": "Pa\u00b7s",
+          "formula": null
+        },
+        "F9": {
+          "value": "Number of layers N",
+          "formula": null
+        },
+        "G9": {
+          "value": "15",
+          "formula": "IF(C25=1,C11,\"\u2014\")"
+        },
+        "H9": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I9": {
+          "value": "Supported range: 2\u2013200.",
+          "formula": null
+        }
+      },
+      {
+        "B10": {
+          "value": "Target y\u207a",
+          "formula": null
+        },
+        "C10": {
+          "value": "55",
+          "formula": null
+        },
+        "D10": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F10": {
+          "value": "Total thickness T",
+          "formula": null
+        },
+        "G10": {
+          "value": "0.015458475596837794",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G8)),SUM(Layers!B6:B205),\"\u2014\")"
+        },
+        "H10": {
+          "value": "m",
+          "formula": null
+        },
+        "I10": {
+          "value": "Sum of all layer heights.",
+          "formula": null
+        }
+      },
+      {
+        "B11": {
+          "value": "Number of layers N",
+          "formula": null
+        },
+        "C11": {
+          "value": "15",
+          "formula": null
+        },
+        "D11": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F11": {
+          "value": "Total thickness T",
+          "formula": null
+        },
+        "G11": {
+          "value": "15.458475596837793",
+          "formula": "IF(ISNUMBER(G10),1000*G10,\"\u2014\")"
+        },
+        "H11": {
+          "value": "mm",
+          "formula": null
+        }
+      },
+      {
+        "B12": {
+          "value": "\u03b4\u2089\u2089 thickness multiplier",
+          "formula": null
+        },
+        "C12": {
+          "value": "1",
+          "formula": null
+        },
+        "D12": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F12": {
+          "value": "Last layer thickness h_N",
+          "formula": null
+        },
+        "G12": {
+          "value": "0.002945383952828577",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G8)),G6*G8^(C11-1),\"\u2014\")"
+        },
+        "H12": {
+          "value": "m",
+          "formula": null
+        },
+        "I12": {
+          "value": "Compare with adjacent cell sizes.",
+          "formula": null
+        }
+      },
+      {
+        "B13": {
+          "value": "Target thickness mode",
+          "formula": null
+        },
+        "C13": {
+          "value": "1",
+          "formula": null
+        },
+        "D13": {
+          "value": "1 / 2",
+          "formula": null
+        },
+        "F13": {
+          "value": "Coverage T / \u03b4\u2089\u2089",
+          "formula": null
+        },
+        "G13": {
+          "value": "0.9999999999999862",
+          "formula": "IF(AND(ISNUMBER(G10),ISNUMBER(G26)),G10/G26,\"\u2014\")"
+        },
+        "H13": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I13": {
+          "value": "100% means T = estimated \u03b4\u2089\u2089.",
+          "formula": null
+        }
+      },
+      {
+        "B14": {
+          "value": "Manual target thickness T",
+          "formula": null
+        },
+        "C14": {
+          "value": "5.0000000000000001E-3",
+          "formula": null
+        },
+        "D14": {
+          "value": "m",
+          "formula": null
+        },
+        "F14": {
+          "value": "Size ratio: core / h_N",
+          "formula": null
+        },
+        "G14": {
+          "value": "1.6975715492706098",
+          "formula": "IF(AND(ISNUMBER(G12),ISNUMBER(C20),C20>0),C20/G12,\"\u2014\")"
+        },
+        "H14": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I14": {
+          "value": "Length ratio, not volume ratio.",
+          "formula": null
+        }
+      },
+      {
+        "B15": {
+          "value": "Growth ratio mode",
+          "formula": null
+        },
+        "C15": {
+          "value": "1",
+          "formula": null
+        },
+        "D15": {
+          "value": "1 / 2",
+          "formula": null
+        }
+      },
+      {
+        "B16": {
+          "value": "Manual growth ratio r",
+          "formula": null
+        },
+        "C16": {
+          "value": "1.2",
+          "formula": null
+        },
+        "D16": {
+          "value": "\u2013",
+          "formula": null
+        }
+      },
+      {
+        "B17": {
+          "value": "First layer mode",
+          "formula": null
+        },
+        "C17": {
+          "value": "1",
+          "formula": null
+        },
+        "D17": {
+          "value": "1 / 2",
+          "formula": null
+        },
+        "F17": {
+          "value": "CALCULATIONS",
+          "formula": null
+        }
+      },
+      {
+        "B18": {
+          "value": "Previous first layer height h\u2081",
+          "formula": null
+        },
+        "C18": {
+          "value": "2.0000000000000002E-5",
+          "formula": null
+        },
+        "D18": {
+          "value": "m",
+          "formula": null
+        },
+        "F18": {
+          "value": "Kinematic viscosity \u03bd",
+          "formula": null
+        },
+        "G18": {
+          "value": "0.000001",
+          "formula": "IF(C24=1,C9/C8,\"\u2014\")"
+        },
+        "H18": {
+          "value": "m\u00b2/s",
+          "formula": null
+        },
+        "I18": {
+          "value": "\u03bd = \u03bc / \u03c1",
+          "formula": null
+        }
+      },
+      {
+        "B19": {
+          "value": "Achieved y\u207a from CFD",
+          "formula": null
+        },
+        "C19": {
+          "value": "1",
+          "formula": null
+        },
+        "D19": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F19": {
+          "value": "Reynolds number Re",
+          "formula": null
+        },
+        "G19": {
+          "value": "21420000",
+          "formula": "IF(C24=1,C8*C6*C7/C9,\"\u2014\")"
+        },
+        "H19": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I19": {
+          "value": "Re = \u03c1UL / \u03bc",
+          "formula": null
+        }
+      },
+      {
+        "B20": {
+          "value": "Core cell size",
+          "formula": null
+        },
+        "C20": {
+          "value": "5.0000000000000001E-3",
+          "formula": null
+        },
+        "D20": {
+          "value": "m",
+          "formula": null
+        },
+        "F20": {
+          "value": "Skin friction coefficient C_f",
+          "formula": null
+        },
+        "G20": {
+          "value": "0.0023071479425807533",
+          "formula": "IF(ISNUMBER(G19),IF(G19>3,(2*LOG10(G19)-0.65)^(-2.3),\"\u2014\"),\"\u2014\")"
+        },
+        "H20": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I20": {
+          "value": "C_f = [2 log\u2081\u2080(Re) \u2212 0.65]^(\u22122.3)",
+          "formula": null
+        }
+      },
+      {
+        "F21": {
+          "value": "Wall shear stress \u03c4_w",
+          "formula": null
+        },
+        "G21": {
+          "value": "373.75796669808204",
+          "formula": "IF(ISNUMBER(G20),0.5*C8*C6^2*G20,\"\u2014\")"
+        },
+        "H21": {
+          "value": "Pa",
+          "formula": null
+        },
+        "I21": {
+          "value": "\u03c4_w = \u00bd\u03c1U\u00b2C_f",
+          "formula": null
+        }
+      },
+      {
+        "F22": {
+          "value": "Friction velocity u_\u03c4",
+          "formula": null
+        },
+        "G22": {
+          "value": "0.6113574786473803",
+          "formula": "IF(ISNUMBER(G21),SQRT(G21/C8),\"\u2014\")"
+        },
+        "H22": {
+          "value": "m/s",
+          "formula": null
+        },
+        "I22": {
+          "value": "u_\u03c4 = \u221a(\u03c4_w / \u03c1)",
+          "formula": null
+        }
+      },
+      {
+        "B23": {
+          "value": "INPUT VALIDITY: 1 = VALID",
+          "formula": null
+        },
+        "F23": {
+          "value": "Cell-centre wall distance y_p",
+          "formula": null
+        },
+        "G23": {
+          "value": "0.00008996373140259396",
+          "formula": "IF(ISNUMBER(G22),C10*G18/G22,\"\u2014\")"
+        },
+        "H23": {
+          "value": "m",
+          "formula": null
+        },
+        "I23": {
+          "value": "y_p = y\u207a\u03bd / u_\u03c4",
+          "formula": null
+        }
+      },
+      {
+        "B24": {
+          "value": "Flow inputs and target y\u207a",
+          "formula": null
+        },
+        "C24": {
+          "value": "1",
+          "formula": "IF(AND(COUNT(C6:C10)=5,MIN(C6:C10)>0),1,0)"
+        },
+        "F24": {
+          "value": "h\u2081 from FM101 correlation",
+          "formula": null
+        },
+        "G24": {
+          "value": "0.00017992746280518792",
+          "formula": "IF(ISNUMBER(G23),2*G23,\"\u2014\")"
+        },
+        "H24": {
+          "value": "m",
+          "formula": null
+        },
+        "I24": {
+          "value": "Estimate for turbulent flow.",
+          "formula": null
+        }
+      },
+      {
+        "B25": {
+          "value": "Layer count: 2\u2013200",
+          "formula": null
+        },
+        "C25": {
+          "value": "1",
+          "formula": "IF(ISNUMBER(C11),IF(AND(C11>=2,C11<=200,C11=INT(C11)),1,0),0)"
+        },
+        "F25": {
+          "value": "h\u2081 corrected using CFD results",
+          "formula": null
+        },
+        "G25": {
+          "value": "0.0011",
+          "formula": "IF(AND(COUNT(C10,C18:C19)=3,MIN(C10,C18:C19)>0),C18*C10/C19,\"\u2014\")"
+        },
+        "H25": {
+          "value": "m",
+          "formula": null
+        },
+        "I25": {
+          "value": "h\u2081,new = h\u2081,old \u00b7 y\u207atarget / y\u207aCFD",
+          "formula": null
+        }
+      },
+      {
+        "B26": {
+          "value": "First layer selection",
+          "formula": null
+        },
+        "C26": {
+          "value": "1",
+          "formula": "IF(C17=1,C24,IF(C17=2,IF(AND(COUNT(C10,C18:C19)=3,MIN(C10,C18:C19)>0),1,0),0))"
+        },
+        "F26": {
+          "value": "Boundary layer thickness \u03b4\u2089\u2089",
+          "formula": null
+        },
+        "G26": {
+          "value": "0.015458475596838007",
+          "formula": "IF(ISNUMBER(G19),0.38*C7/G19^0.2,\"\u2014\")"
+        },
+        "H26": {
+          "value": "m",
+          "formula": null
+        },
+        "I26": {
+          "value": "\u03b4\u2089\u2089 = 0.38L / Re^(1/5)",
+          "formula": null
+        }
+      },
+      {
+        "B27": {
+          "value": "Target thickness",
+          "formula": null
+        },
+        "C27": {
+          "value": "1",
+          "formula": "IF(C13=1,IF(AND(C24=1,ISNUMBER(C12),C12>0),1,0),IF(C13=2,IF(AND(ISNUMBER(C14),C14>0),1,0),0))"
+        },
+        "F27": {
+          "value": "Target total layer thickness T",
+          "formula": null
+        },
+        "G27": {
+          "value": "0.015458475596838007",
+          "formula": "IF(C27=1,IF(C13=1,C12*G26,C14),\"\u2014\")"
+        },
+        "H27": {
+          "value": "m",
+          "formula": null
+        },
+        "I27": {
+          "value": "Mode 1: multiplier \u00d7 \u03b4\u2089\u2089. Mode 2: manual T.",
+          "formula": null
+        }
+      },
+      {
+        "B28": {
+          "value": "Growth ratio selection",
+          "formula": null
+        },
+        "C28": {
+          "value": "1",
+          "formula": "IF(C15=1,IF(AND(C25=1,C26=1,C27=1),1,0),IF(C15=2,IF(AND(ISNUMBER(C16),C16>=1,C16<=3,C25=1,C26=1),1,0),0))"
+        },
+        "F28": {
+          "value": "r calculated for target T",
+          "formula": null
+        },
+        "G28": {
+          "value": "1.2210050536429486",
+          "formula": "IF(AND(C25=1,ISNUMBER(G6),ISNUMBER(G27)),IF(G27<=C11*G6,1,Layers!J65),\"\u2014\")"
+        },
+        "H28": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I28": {
+          "value": "Geometric-sum bisection, no macros.",
+          "formula": null
+        }
+      },
+      {
+        "F29": {
+          "value": "Estimated y\u207a for active h\u2081",
+          "formula": null
+        },
+        "G29": {
+          "value": "55",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G22)),G6/2*G22/G18,\"\u2014\")"
+        },
+        "H29": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I29": {
+          "value": "May differ from target in correction mode.",
+          "formula": null
+        }
+      },
+      {
+        "B31": {
+          "value": "HOW TO USE THE MODES",
+          "formula": null
+        }
+      },
+      {
+        "B32": {
+          "value": "C13: 1 = target from \u03b4\u2089\u2089, 2 = custom thickness T. C15: 1 = calculate r, 2 = enter r and calculate thickness.",
+          "formula": null
+        }
+      },
+      {
+        "B33": {
+          "value": "C17: 1 = estimate h\u2081 from target y\u207a and correlation, 2 = correct h\u2081 using y\u207a achieved in CFD.",
+          "formula": null
+        }
+      },
+      {
+        "B35": {
+          "value": "Correlations assume a smooth flat plate, turbulent flow and zero pressure gradient.",
+          "formula": "IF(C24=0,\"Enter positive U, L, \u03c1, \u03bc and target y\u207a.\",IF(OR(G19<500000,G19>=1000000000),\"Re is outside the indicative range 5\u00b710^5\u201310^9: turbulent correlations may be unsuitable.\",\"Correlations assume a smooth flat plate, turbulent flow and zero pressure gradient.\"))"
+        }
+      },
+      {
+        "B36": {
+          "value": "For fixed h\u2081 and N, a larger r gives a larger total thickness T. A smaller r gives a thinner stack.",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G27),C25=1),IF(G27<C11*G6,\"Target T < N\u00b7h\u2081: an exact match requires r < 1. Automatic mode uses r = 1, so T exceeds the target.\",\"For fixed h\u2081 and N, a larger r gives a larger total thickness T. A smaller r gives a thinner stack.\"),\"Check h\u2081, N and target thickness inputs.\")"
+        }
+      },
+      {
+        "B37": {
+          "value": "After meshing, check the actual layers, mesh quality and transition to the core mesh.",
+          "formula": "IF(ISNUMBER(G8),IF(G8>1.3,\"r > 1.30: consider more layers. The 1.30 threshold is a review guideline, not a validity criterion.\",\"After meshing, check the actual layers, mesh quality and transition to the core mesh.\"),\"No r result: check the selected modes and input validity.\")"
+        }
+      },
+      {
+        "B38": {
+          "value": "The layer stack reaches target T.",
+          "formula": "IF(AND(ISNUMBER(G10),ISNUMBER(G27)),IF(G10<G27*(1-0.00000001),\"The layer stack is thinner than target T. Increase N or r, or change the required target.\",\"The layer stack reaches target T.\"),\"No total thickness result.\")"
+        }
+      },
+      {
+        "B40": {
+          "value": "ASSUMPTIONS AND SOURCES",
+          "formula": null
+        }
+      },
+      {
+        "B41": {
+          "value": "L is the streamwise location along the surface or a chosen reference length. For a foil, it may be the chord.",
+          "formula": null
+        }
+      },
+      {
+        "B42": {
+          "value": "For a curved foil with a pressure gradient, \u03b4\u2089\u2089 and h\u2081 are initial estimates. Check y\u207a after running CFD.",
+          "formula": null
+        }
+      },
+      {
+        "B43": {
+          "value": "Choose target y\u207a to suit the turbulence model and wall treatment. The default y\u207a = 1 is an example.",
+          "formula": null
+        }
+      },
+      {
+        "B44": {
+          "value": "In correction mode, use y\u207a and h\u2081 from the same wall region. The correction assumes approximately unchanged u_\u03c4.",
+          "formula": null
+        }
+      },
+      {
+        "B45": {
+          "value": "Geometric progression: h_i = h\u2081\u00b7r^(i\u22121), T = h\u2081\u00b7(r^N\u22121)/(r\u22121). For r = 1: T = N\u00b7h\u2081.",
+          "formula": null
+        }
+      },
+      {
+        "B46": {
+          "value": "Automatic r solves T = target using 60 bisection steps. No Solver add-in or Excel iterative calculation is needed.",
+          "formula": null
+        }
+      },
+      {
+        "B47": {
+          "value": "FM101 calls r the maximum growth ratio. Here r matches T to the target; for fixed N it is the target coverage threshold.",
+          "formula": null
+        }
+      },
+      {
+        "B48": {
+          "value": "Method: Fluid Mechanics 101, Calculators & Tools, section 2, pp. 4\u20137. Accessed: 28 October 2026.",
+          "formula": null
+        }
+      },
+      {
+        "B49": {
+          "value": "https://www.fluidmechanics101.com/pdf/calculators.pdf",
+          "formula": null
+        }
+      },
+      {
+        "B50": {
+          "value": "Related video: [CFD] Inflation Layers / Prism Layers in CFD.",
+          "formula": null
+        }
+      },
+      {
+        "B51": {
+          "value": "https://www.youtube.com/watch?v=1gSHN99I7L4",
+          "formula": null
+        }
+      },
+      {
+        "B52": {
+          "value": "Based on the equations in the author documentation. This is not an official Fluid Mechanics 101 tool.",
+          "formula": null
+        }
+      },
+      {
+        "B53": {
+          "value": "Laminar correlations and transition modelling are not implemented. Turbulent flow is assumed.",
+          "formula": null
+        }
+      }
+    ],
+    "Mesh Advisor": [
+      {
+        "A1": {
+          "value": "CFD MESH ADVISOR  |  HYDROFOIL",
+          "formula": null
+        }
+      },
+      {
+        "A2": {
+          "value": "Initial STAR-CCM+ targets for SST k-omega + VOF. Yellow = editable assumptions; final values require mesh inspection.",
+          "formula": null
+        }
+      },
+      {
+        "B4": {
+          "value": "GEOMETRY / CONTROL INPUTS",
+          "formula": null
+        },
+        "F4": {
+          "value": "STAR-CCM+ INITIAL TARGETS",
+          "formula": null
+        }
+      },
+      {
+        "B6": {
+          "value": "Chord c",
+          "formula": null
+        },
+        "C6": {
+          "value": "1.19",
+          "formula": "Calculator!C7"
+        },
+        "D6": {
+          "value": "m",
+          "formula": null
+        },
+        "E6": {
+          "value": "linked to Calculator C7",
+          "formula": null
+        },
+        "F6": {
+          "value": "Foil surface target",
+          "formula": null
+        },
+        "G6": {
+          "value": "0.011899999999999999",
+          "formula": "IFERROR(C6/C11,\"\")"
+        },
+        "H6": {
+          "value": "m",
+          "formula": null
+        },
+        "I6": {
+          "value": "not global surface size",
+          "formula": null
+        }
+      },
+      {
+        "B7": {
+          "value": "Foil span b",
+          "formula": null
+        },
+        "C7": {
+          "value": "11.9",
+          "formula": null
+        },
+        "D7": {
+          "value": "m",
+          "formula": null
+        },
+        "E7": {
+          "value": "example: wide foil; confirm actual span",
+          "formula": null
+        },
+        "F7": {
+          "value": "Leading-edge target",
+          "formula": null
+        },
+        "G7": {
+          "value": "0.0029749999999999998",
+          "formula": "IFERROR(G6*C12,\"\")"
+        },
+        "H7": {
+          "value": "m",
+          "formula": null
+        },
+        "I7": {
+          "value": "geometry / curvature control",
+          "formula": null
+        }
+      },
+      {
+        "B8": {
+          "value": "Foil thickness ratio t/c",
+          "formula": null
+        },
+        "C8": {
+          "value": "0.12",
+          "formula": null
+        },
+        "D8": {
+          "value": "-",
+          "formula": null
+        },
+        "E8": {
+          "value": "NACA 66_1-012 nominal geometry",
+          "formula": null
+        },
+        "F8": {
+          "value": "Trailing-edge target",
+          "formula": null
+        },
+        "G8": {
+          "value": "0.004164999999999999",
+          "formula": "IFERROR(IF(C17>0,MIN(G6*C13,C17/2),G6*C13),\"\")"
+        },
+        "H8": {
+          "value": "m",
+          "formula": null
+        },
+        "I8": {
+          "value": "handle finite TE if present",
+          "formula": null
+        }
+      },
+      {
+        "B9": {
+          "value": "Free stream U",
+          "formula": null
+        },
+        "C9": {
+          "value": "18",
+          "formula": "Calculator!C6"
+        },
+        "D9": {
+          "value": "m/s",
+          "formula": null
+        },
+        "E9": {
+          "value": "linked to Calculator C6",
+          "formula": null
+        },
+        "F9": {
+          "value": "Wake target",
+          "formula": null
+        },
+        "G9": {
+          "value": "0.023799999999999998",
+          "formula": "IFERROR(G6*C14,\"\")"
+        },
+        "H9": {
+          "value": "m",
+          "formula": null
+        },
+        "I9": {
+          "value": "wake only",
+          "formula": null
+        }
+      },
+      {
+        "B10": {
+          "value": "Target wall y+",
+          "formula": null
+        },
+        "C10": {
+          "value": "55",
+          "formula": "Calculator!C10"
+        },
+        "D10": {
+          "value": "-",
+          "formula": null
+        },
+        "E10": {
+          "value": "Reference from God\u00f8: y+~55 (confirm wall treatment). y+1 separate trial.",
+          "formula": null
+        },
+        "F10": {
+          "value": "Base Size absolute",
+          "formula": null
+        },
+        "G10": {
+          "value": "0.119",
+          "formula": "IFERROR(C6*C15,\"\")"
+        },
+        "H10": {
+          "value": "m",
+          "formula": null
+        },
+        "I10": {
+          "value": "bulk setting",
+          "formula": null
+        }
+      },
+      {
+        "B11": {
+          "value": "Surface cells along chord",
+          "formula": null
+        },
+        "C11": {
+          "value": "100",
+          "formula": null
+        },
+        "D11": {
+          "value": "cells",
+          "formula": null
+        },
+        "E11": {
+          "value": "nominal count, LE/TE locally refined",
+          "formula": null
+        },
+        "F11": {
+          "value": "VOF vertical target",
+          "formula": null
+        },
+        "G11": {
+          "value": "0.01",
+          "formula": "'VOF Design'!G7"
+        },
+        "H11": {
+          "value": "m",
+          "formula": null
+        },
+        "I11": {
+          "value": "local interface band only",
+          "formula": null
+        }
+      },
+      {
+        "B12": {
+          "value": "LE size factor",
+          "formula": null
+        },
+        "C12": {
+          "value": "0.25",
+          "formula": null
+        },
+        "D12": {
+          "value": "-",
+          "formula": null
+        },
+        "E12": {
+          "value": "relative to foil surface target",
+          "formula": null
+        },
+        "F12": {
+          "value": "Prism first cell",
+          "formula": null
+        },
+        "G12": {
+          "value": "0.00017992746280518792",
+          "formula": "C22"
+        },
+        "H12": {
+          "value": "m",
+          "formula": null
+        },
+        "I12": {
+          "value": "STAR first-height convention",
+          "formula": null
+        }
+      },
+      {
+        "B13": {
+          "value": "TE size factor",
+          "formula": null
+        },
+        "C13": {
+          "value": "0.35",
+          "formula": null
+        },
+        "D13": {
+          "value": "-",
+          "formula": null
+        },
+        "E13": {
+          "value": "relative to foil surface target",
+          "formula": null
+        },
+        "F13": {
+          "value": "Total prism thickness",
+          "formula": null
+        },
+        "G13": {
+          "value": "0.015458475596837794",
+          "formula": "C23"
+        },
+        "H13": {
+          "value": "m",
+          "formula": null
+        },
+        "I13": {
+          "value": "absolute control",
+          "formula": null
+        }
+      },
+      {
+        "B14": {
+          "value": "Wake/foil size factor",
+          "formula": null
+        },
+        "C14": {
+          "value": "2",
+          "formula": null
+        },
+        "D14": {
+          "value": "-",
+          "formula": null
+        },
+        "E14": {
+          "value": "local volumetric refinement",
+          "formula": null
+        },
+        "F14": {
+          "value": "Prism N",
+          "formula": null
+        },
+        "G14": {
+          "value": "15",
+          "formula": "C21"
+        },
+        "H14": {
+          "value": "layers",
+          "formula": null
+        },
+        "I14": {
+          "value": "held fixed in sweep",
+          "formula": null
+        }
+      },
+      {
+        "B15": {
+          "value": "Base size/chord factor",
+          "formula": null
+        },
+        "C15": {
+          "value": "0.1",
+          "formula": null
+        },
+        "D15": {
+          "value": "-",
+          "formula": null
+        },
+        "E15": {
+          "value": "bulk STAR base size",
+          "formula": null
+        },
+        "F15": {
+          "value": "Ideal growth ratio",
+          "formula": null
+        },
+        "G15": {
+          "value": "1.2210050536429486",
+          "formula": "C24"
+        },
+        "H15": {
+          "value": "-",
+          "formula": null
+        },
+        "I15": {
+          "value": "distribution assumption",
+          "formula": null
+        }
+      },
+      {
+        "B16": {
+          "value": "Use local volume refinements",
+          "formula": null
+        },
+        "C16": {
+          "value": "YES",
+          "formula": null
+        },
+        "D16": {
+          "value": "-",
+          "formula": null
+        },
+        "E16": {
+          "value": "do not apply VOF size globally",
+          "formula": null
+        },
+        "F16": {
+          "value": "Outermost ideal prism",
+          "formula": null
+        },
+        "G16": {
+          "value": "0.002945383952828577",
+          "formula": "Calculator!G12"
+        },
+        "H16": {
+          "value": "m",
+          "formula": null
+        },
+        "I16": {
+          "value": "compare to adjacent local cells",
+          "formula": null
+        }
+      },
+      {
+        "B17": {
+          "value": "Real TE thickness",
+          "formula": null
+        },
+        "C17": {
+          "value": "0",
+          "formula": null
+        },
+        "D17": {
+          "value": "m",
+          "formula": null
+        },
+        "E17": {
+          "value": "0 means not provided",
+          "formula": null
+        },
+        "F17": {
+          "value": "Foil / outer prism ratio",
+          "formula": null
+        },
+        "G17": {
+          "value": "4.0402202872640505",
+          "formula": "IFERROR(G6/G16,\"\")"
+        },
+        "H17": {
+          "value": "-",
+          "formula": null
+        },
+        "I17": {
+          "value": "length ratio only",
+          "formula": null
+        }
+      },
+      {
+        "F18": {
+          "value": "Surface-cell count proxy",
+          "formula": null
+        },
+        "G18": {
+          "value": "200000.00000000003",
+          "formula": "IFERROR(2*C6*C7/G6^2,\"\")"
+        },
+        "H18": {
+          "value": "cells",
+          "formula": null
+        },
+        "I18": {
+          "value": "area/h\u00b2 estimate, not actual",
+          "formula": null
+        }
+      },
+      {
+        "B19": {
+          "value": "Maximum practical cells",
+          "formula": null
+        },
+        "C19": {
+          "value": "12000000",
+          "formula": null
+        },
+        "D19": {
+          "value": "cells",
+          "formula": null
+        },
+        "E19": {
+          "value": "user-defined, not a hardware benchmark",
+          "formula": null
+        },
+        "F19": {
+          "value": "Prism-cell count proxy",
+          "formula": null
+        },
+        "G19": {
+          "value": "3000000.0000000005",
+          "formula": "IFERROR(G18*C21,\"\")"
+        },
+        "H19": {
+          "value": "cells",
+          "formula": null
+        },
+        "I19": {
+          "value": "excludes bulk/VOF",
+          "formula": null
+        }
+      },
+      {
+        "B20": {
+          "value": "Prior core-size input",
+          "formula": null
+        },
+        "C20": {
+          "value": "0.005",
+          "formula": "Calculator!C20"
+        },
+        "D20": {
+          "value": "m",
+          "formula": null
+        },
+        "E20": {
+          "value": "legacy calculator only",
+          "formula": null
+        },
+        "F20": {
+          "value": "Memory screening note",
+          "formula": null
+        },
+        "G20": {
+          "value": "TOTAL CELLS UNKNOWN",
+          "formula": "IFERROR(IF(G19>C19,\"PRISM PROXY EXCEEDS BUDGET\",IF(G19>C19/2,\"PRISM PROXY HIGH\",\"TOTAL CELLS UNKNOWN\")),\"\")"
+        },
+        "H20": {
+          "value": "-",
+          "formula": null
+        },
+        "I20": {
+          "value": "actual count unknown",
+          "formula": null
+        }
+      },
+      {
+        "B21": {
+          "value": "Prism count N",
+          "formula": null
+        },
+        "C21": {
+          "value": "15",
+          "formula": "Calculator!C11"
+        },
+        "D21": {
+          "value": "layers",
+          "formula": null
+        },
+        "E21": {
+          "value": "Baseline N=15. Hold constant across the 50 meshes; compare y+1 separately.",
+          "formula": null
+        },
+        "G21": {
+          "value": null,
+          "formula": "\"\""
+        }
+      },
+      {
+        "B22": {
+          "value": "First prism cell",
+          "formula": null
+        },
+        "C22": {
+          "value": "0.00017992746280518792",
+          "formula": "Calculator!G6"
+        },
+        "D22": {
+          "value": "m",
+          "formula": null
+        },
+        "E22": {
+          "value": "full height: not wall-centre distance",
+          "formula": null
+        },
+        "F22": {
+          "value": "Reynolds number",
+          "formula": null
+        },
+        "G22": {
+          "value": "21420000",
+          "formula": "Calculator!G19"
+        },
+        "H22": {
+          "value": "-",
+          "formula": null
+        },
+        "I22": {
+          "value": "from Calculator",
+          "formula": null
+        }
+      },
+      {
+        "B23": {
+          "value": "Prism total thickness",
+          "formula": null
+        },
+        "C23": {
+          "value": "0.015458475596837794",
+          "formula": "Calculator!G10"
+        },
+        "D23": {
+          "value": "m",
+          "formula": null
+        },
+        "E23": {
+          "value": "target, not guaranteed actual",
+          "formula": null
+        },
+        "F23": {
+          "value": "Flat-plate delta99",
+          "formula": null
+        },
+        "G23": {
+          "value": "0.015458475596838007",
+          "formula": "Calculator!G26"
+        },
+        "H23": {
+          "value": "m",
+          "formula": null
+        },
+        "I23": {
+          "value": "rough starting estimate",
+          "formula": null
+        }
+      },
+      {
+        "B24": {
+          "value": "Ideal growth ratio",
+          "formula": null
+        },
+        "C24": {
+          "value": "1.2210050536429486",
+          "formula": "Calculator!G8"
+        },
+        "D24": {
+          "value": "-",
+          "formula": null
+        },
+        "E24": {
+          "value": "STAR may collapse/redistribute layers",
+          "formula": null
+        },
+        "F24": {
+          "value": "Stack thickness / delta99",
+          "formula": null
+        },
+        "G24": {
+          "value": "0.9999999999999862",
+          "formula": "IFERROR(G13/G23,\"\")"
+        },
+        "H24": {
+          "value": "-",
+          "formula": null
+        },
+        "I24": {
+          "value": "boundary-layer coverage proxy",
+          "formula": null
+        }
+      },
+      {
+        "F25": {
+          "value": "Cells per chord",
+          "formula": null
+        },
+        "G25": {
+          "value": "100",
+          "formula": "IFERROR(C6/G6,\"\")"
+        },
+        "H25": {
+          "value": "cells",
+          "formula": null
+        },
+        "I25": {
+          "value": "nominal",
+          "formula": null
+        }
+      },
+      {
+        "F26": {
+          "value": "Growth diagnostic",
+          "formula": null
+        },
+        "G26": {
+          "value": "CHECK ACTUAL LAYERS",
+          "formula": "IFERROR(IF(G15>1.3,\"HIGH GROWTH\",IF(G15<1.07,\"LOW GROWTH\",\"CHECK ACTUAL LAYERS\")),\"\")"
+        },
+        "H26": {
+          "value": "-",
+          "formula": null
+        },
+        "I26": {
+          "value": "not automatic pass/fail",
+          "formula": null
+        }
+      },
+      {
+        "F27": {
+          "value": "Wall treatment diagnostic",
+          "formula": null
+        },
+        "G27": {
+          "value": "HIGH y+ REFERENCE: CHECK HIGH / ALL y+ WALL TREATMENT",
+          "formula": "IF(C10>=30,\"HIGH y+ REFERENCE: CHECK HIGH / ALL y+ WALL TREATMENT\",IF(C10<=2,\"LOW y+ TRIAL: CHECK PRISM QUALITY\",\"BUFFER REGION: VERIFY WALL TREATMENT\"))"
+        },
+        "H27": {
+          "value": "-",
+          "formula": null
+        },
+        "I27": {
+          "value": "No wall-treatment selection can be inferred from y+ alone. Check the STAR physics continuum.",
+          "formula": null
+        }
+      },
+      {
+        "F28": {
+          "value": "Base size / foil size",
+          "formula": null
+        },
+        "G28": {
+          "value": "10",
+          "formula": "IFERROR(G10/G6,\"\")"
+        },
+        "H28": {
+          "value": "-",
+          "formula": null
+        },
+        "I28": {
+          "value": "ratio, not quality metric",
+          "formula": null
+        }
+      },
+      {
+        "B30": {
+          "value": "Local LE/TE targets are recommendations, not 50-case sweep variables. Use separate surface controls rather than trying to resolve the whole domain at the LE size.",
+          "formula": null
+        }
+      },
+      {
+        "B31": {
+          "value": "STAR may specify sizes as percentages of Base Size. Use absolute controls or carefully parameterized expressions; do not paste these numbers into percent fields.",
+          "formula": null
+        }
+      },
+      {
+        "B32": {
+          "value": "Cell count proxies are crude. A fully 3D VOF band across an 11.9 m span may dominate memory and disk requirements.",
+          "formula": null
+        }
+      },
+      {
+        "B33": {
+          "value": "For accuracy, shortlist meshes and perform 3+ level grid and time-step sensitivity on CL/CD and wave elevation.",
+          "formula": null
+        }
+      }
+    ],
+    "VOF Design": [
+      {
+        "A1": {
+          "value": "VOF & TIME-STEP DESIGN",
+          "formula": null
+        }
+      },
+      {
+        "A2": {
+          "value": "Flat free surface: H=0. Local CFL estimates depend on velocity component and local cell orientation; verify using STAR reports.",
+          "formula": null
+        }
+      },
+      {
+        "B4": {
+          "value": "VOF INPUTS",
+          "formula": null
+        },
+        "F4": {
+          "value": "RESULTS",
+          "formula": null
+        }
+      },
+      {
+        "B6": {
+          "value": "Wavelength lambda",
+          "formula": null
+        },
+        "C6": {
+          "value": "2.5",
+          "formula": null
+        },
+        "D6": {
+          "value": "m",
+          "formula": null
+        },
+        "F6": {
+          "value": "Delta x: wavelength / N",
+          "formula": null
+        },
+        "G6": {
+          "value": "0.025",
+          "formula": "IFERROR(C6/C9,\"\")"
+        },
+        "H6": {
+          "value": "m",
+          "formula": null
+        },
+        "I6": {
+          "value": "use only in the wave refinement volume",
+          "formula": null
+        }
+      },
+      {
+        "B7": {
+          "value": "Wave height H (0=flat)",
+          "formula": null
+        },
+        "C7": {
+          "value": "0",
+          "formula": null
+        },
+        "D7": {
+          "value": "m",
+          "formula": null
+        },
+        "F7": {
+          "value": "Delta z: height / N",
+          "formula": null
+        },
+        "G7": {
+          "value": "0.01",
+          "formula": "IFERROR(IF(C7>0,C7/C10,C11),\"\")"
+        },
+        "H7": {
+          "value": "m",
+          "formula": null
+        },
+        "I7": {
+          "value": "H=0 uses flat vertical target",
+          "formula": null
+        }
+      },
+      {
+        "B8": {
+          "value": "Water depth d",
+          "formula": null
+        },
+        "C8": {
+          "value": "10",
+          "formula": null
+        },
+        "D8": {
+          "value": "m",
+          "formula": null
+        },
+        "F8": {
+          "value": "Total VOF band thickness",
+          "formula": null
+        },
+        "G8": {
+          "value": "0.5",
+          "formula": "C12+C13"
+        },
+        "H8": {
+          "value": "m",
+          "formula": null
+        },
+        "I8": {
+          "value": "above + below SWL",
+          "formula": null
+        }
+      },
+      {
+        "B9": {
+          "value": "Cells / wavelength",
+          "formula": null
+        },
+        "C9": {
+          "value": "100",
+          "formula": null
+        },
+        "D9": {
+          "value": "cells",
+          "formula": null
+        },
+        "F9": {
+          "value": "Wavenumber k",
+          "formula": null
+        },
+        "G9": {
+          "value": "2.5132741228718345",
+          "formula": "IFERROR(2*PI()/C6,\"\")"
+        },
+        "H9": {
+          "value": "1/m",
+          "formula": null
+        },
+        "I9": {
+          "value": "linear wave theory",
+          "formula": null
+        }
+      },
+      {
+        "B10": {
+          "value": "Cells / wave height",
+          "formula": null
+        },
+        "C10": {
+          "value": "12",
+          "formula": null
+        },
+        "D10": {
+          "value": "cells",
+          "formula": null
+        },
+        "F10": {
+          "value": "Angular frequency omega",
+          "formula": null
+        },
+        "G10": {
+          "value": "4.965402213856668",
+          "formula": "IFERROR(SQRT(C16*G9*TANH(G9*C8)),\"\")"
+        },
+        "H10": {
+          "value": "rad/s",
+          "formula": null
+        },
+        "I10": {
+          "value": "finite-depth dispersion",
+          "formula": null
+        }
+      },
+      {
+        "B11": {
+          "value": "Flat interface vertical h",
+          "formula": null
+        },
+        "C11": {
+          "value": "0.01",
+          "formula": null
+        },
+        "D11": {
+          "value": "m",
+          "formula": null
+        },
+        "F11": {
+          "value": "Wave period",
+          "formula": null
+        },
+        "G11": {
+          "value": "1.2653930208605169",
+          "formula": "IFERROR(2*PI()/G10,\"\")"
+        },
+        "H11": {
+          "value": "s",
+          "formula": null
+        },
+        "I11": {
+          "value": "if lambda > 0",
+          "formula": null
+        }
+      },
+      {
+        "B12": {
+          "value": "VOF band above SWL",
+          "formula": null
+        },
+        "C12": {
+          "value": "0.2",
+          "formula": null
+        },
+        "D12": {
+          "value": "m",
+          "formula": null
+        },
+        "F12": {
+          "value": "dt: horizontal CFL",
+          "formula": null
+        },
+        "G12": {
+          "value": "0.0006944444444444445",
+          "formula": "IFERROR(C17*G6/MAX(ABS(C14),0.000001),\"\")"
+        },
+        "H12": {
+          "value": "s",
+          "formula": null
+        },
+        "I12": {
+          "value": "u_x / delta_x",
+          "formula": null
+        }
+      },
+      {
+        "B13": {
+          "value": "VOF band below SWL",
+          "formula": null
+        },
+        "C13": {
+          "value": "0.3",
+          "formula": null
+        },
+        "D13": {
+          "value": "m",
+          "formula": null
+        },
+        "F13": {
+          "value": "dt: vertical CFL",
+          "formula": null
+        },
+        "G13": {
+          "value": "0.01",
+          "formula": "IFERROR(C17*G7/MAX(ABS(C15),0.000001),\"\")"
+        },
+        "H13": {
+          "value": "s",
+          "formula": null
+        },
+        "I13": {
+          "value": "u_z / delta_z",
+          "formula": null
+        }
+      },
+      {
+        "B14": {
+          "value": "Local horizontal |u|",
+          "formula": null
+        },
+        "C14": {
+          "value": "18",
+          "formula": "'Mesh Advisor'!C9"
+        },
+        "D14": {
+          "value": "m/s",
+          "formula": null
+        },
+        "F14": {
+          "value": "dt: time samples / T",
+          "formula": null
+        },
+        "G14": {
+          "value": "0.008435953472403446",
+          "formula": "IFERROR(G11/C18,\"\")"
+        },
+        "H14": {
+          "value": "s",
+          "formula": null
+        },
+        "I14": {
+          "value": "not a stability bound",
+          "formula": null
+        }
+      },
+      {
+        "B15": {
+          "value": "Local vertical |w|",
+          "formula": null
+        },
+        "C15": {
+          "value": "0.5",
+          "formula": null
+        },
+        "D15": {
+          "value": "m/s",
+          "formula": null
+        },
+        "F15": {
+          "value": "Recommended initial dt",
+          "formula": null
+        },
+        "G15": {
+          "value": "0.0006944444444444445",
+          "formula": "IFERROR(MIN(G12:G14),\"\")"
+        },
+        "H15": {
+          "value": "s",
+          "formula": null
+        },
+        "I15": {
+          "value": "minimum of directional estimates",
+          "formula": null
+        }
+      },
+      {
+        "B16": {
+          "value": "Gravity g",
+          "formula": null
+        },
+        "C16": {
+          "value": "9.81",
+          "formula": null
+        },
+        "D16": {
+          "value": "m/s\u00b2",
+          "formula": null
+        },
+        "F16": {
+          "value": "Existing horizontal CFL",
+          "formula": null
+        },
+        "G16": {
+          "value": "0.07200000000000001",
+          "formula": "IFERROR(ABS(C14)*C19/G6,\"\")"
+        },
+        "H16": {
+          "value": "-",
+          "formula": null
+        },
+        "I16": {
+          "value": "from current time step",
+          "formula": null
+        }
+      },
+      {
+        "B17": {
+          "value": "CFL target",
+          "formula": null
+        },
+        "C17": {
+          "value": "0.5",
+          "formula": null
+        },
+        "D17": {
+          "value": "-",
+          "formula": null
+        },
+        "F17": {
+          "value": "Existing vertical CFL",
+          "formula": null
+        },
+        "G17": {
+          "value": "0.005",
+          "formula": "IFERROR(ABS(C15)*C19/G7,\"\")"
+        },
+        "H17": {
+          "value": "-",
+          "formula": null
+        },
+        "I17": {
+          "value": "from current time step",
+          "formula": null
+        }
+      },
+      {
+        "B18": {
+          "value": "Time samples per wave",
+          "formula": null
+        },
+        "C18": {
+          "value": "150",
+          "formula": null
+        },
+        "D18": {
+          "value": "steps",
+          "formula": null
+        },
+        "F18": {
+          "value": "Existing local CFL sum",
+          "formula": null
+        },
+        "G18": {
+          "value": "0.07700000000000001",
+          "formula": "IFERROR(G16+G17,\"\")"
+        },
+        "H18": {
+          "value": "-",
+          "formula": null
+        },
+        "I18": {
+          "value": "simple orthogonal estimate",
+          "formula": null
+        }
+      },
+      {
+        "B19": {
+          "value": "Current STAR time step",
+          "formula": null
+        },
+        "C19": {
+          "value": "0.0001",
+          "formula": "CFL!C6"
+        },
+        "D19": {
+          "value": "s",
+          "formula": null
+        },
+        "F19": {
+          "value": "Steps per period",
+          "formula": null
+        },
+        "G19": {
+          "value": "12653.930208605168",
+          "formula": "IFERROR(G11/C19,\"\")"
+        },
+        "H19": {
+          "value": "steps",
+          "formula": null
+        },
+        "I19": {
+          "value": "from current dt",
+          "formula": null
+        }
+      },
+      {
+        "F20": {
+          "value": "Time-step diagnostic",
+          "formula": null
+        },
+        "G20": {
+          "value": "VERIFY STAR Co",
+          "formula": "IFERROR(IF(G18>C17,\"REDUCE DT / REVIEW\",\"VERIFY STAR Co\"),\"\")"
+        },
+        "H20": {
+          "value": "-",
+          "formula": null
+        },
+        "I20": {
+          "value": "verify in actual STAR VOF solver",
+          "formula": null
+        }
+      },
+      {
+        "B23": {
+          "value": "Do not use freestream velocity divided by first prism height for normal CFL. Resolve VOF convection with flow-direction velocities and interface cell spacing.",
+          "formula": null
+        }
+      },
+      {
+        "B24": {
+          "value": "For wave-added resistance: spatial, temporal and wave-far-field convergence required. Implicit STAR solvers do not have a universal CFL < 1 requirement.",
+          "formula": null
+        }
+      }
+    ],
+    "Mesh Results": [
+      {
+        "A1": {
+          "value": "MESH RESULTS | STAR OUTPUT RECEIVED HERE",
+          "formula": null
+        }
+      },
+      {
+        "A2": {
+          "value": "Measured columns B:I are intentionally blank. Macro outputs CSV with actual cell count and quality metrics only if report names are configured.",
+          "formula": null
+        }
+      },
+      {
+        "B3": {
+          "value": "VC >=",
+          "formula": null
+        },
+        "C3": {
+          "value": "0.01",
+          "formula": null
+        },
+        "E3": {
+          "value": "Cell quality >=",
+          "formula": null
+        },
+        "F3": {
+          "value": "0.00001",
+          "formula": null
+        },
+        "H3": {
+          "value": "Skew <= [deg]",
+          "formula": null
+        },
+        "I3": {
+          "value": "85",
+          "formula": null
+        },
+        "K3": {
+          "value": "Cell budget",
+          "formula": null
+        },
+        "L3": {
+          "value": "12000000",
+          "formula": "'Mesh Advisor'!C19"
+        }
+      },
+      {
+        "A5": {
+          "value": "Case",
+          "formula": null
+        },
+        "B5": {
+          "value": "Status",
+          "formula": null
+        },
+        "C5": {
+          "value": "Cells",
+          "formula": null
+        },
+        "D5": {
+          "value": "Min Volume Change",
+          "formula": null
+        },
+        "E5": {
+          "value": "Min Cell Quality",
+          "formula": null
+        },
+        "F5": {
+          "value": "Max Skew [deg]",
+          "formula": null
+        },
+        "G5": {
+          "value": "Prism coverage %",
+          "formula": null
+        },
+        "H5": {
+          "value": "Meshing time [s]",
+          "formula": null
+        },
+        "I5": {
+          "value": "Disk MB",
+          "formula": null
+        },
+        "J5": {
+          "value": "QC gate",
+          "formula": null
+        },
+        "K5": {
+          "value": "Cells / baseline",
+          "formula": null
+        },
+        "L5": {
+          "value": "Pilot candidate",
+          "formula": null
+        },
+        "M5": {
+          "value": "Notes",
+          "formula": null
+        }
+      },
+      {
+        "A6": {
+          "value": "M001",
+          "formula": "'Sweep 50'!A6"
+        },
+        "J6": {
+          "value": "NO DATA",
+          "formula": "IF(C6=\"\",\"NO DATA\",IF(OR(D6=\"\",E6=\"\",F6=\"\"),\"INCOMPLETE\",IF(OR(D6<$C$3,E6<$F$3,F6>$I$3),\"REVIEW / FAIL\",\"PASS INITIAL QC\")))"
+        },
+        "K6": {
+          "value": null,
+          "formula": "IFERROR(IF(OR(C6=\"\",$C$6=\"\"),\"\",C6/$C$6),\"\")"
+        },
+        "L6": {
+          "value": null,
+          "formula": "IF(J6=\"PASS INITIAL QC\",IF(C6<=$L$3,\"PILOT CFD\",\"OVER BUDGET\"),\"\")"
+        }
+      },
+      {
+        "A7": {
+          "value": "M002",
+          "formula": "'Sweep 50'!A7"
+        },
+        "J7": {
+          "value": "NO DATA",
+          "formula": "IF(C7=\"\",\"NO DATA\",IF(OR(D7=\"\",E7=\"\",F7=\"\"),\"INCOMPLETE\",IF(OR(D7<$C$3,E7<$F$3,F7>$I$3),\"REVIEW / FAIL\",\"PASS INITIAL QC\")))"
+        },
+        "K7": {
+          "value": null,
+          "formula": "IFERROR(IF(OR(C7=\"\",$C$6=\"\"),\"\",C7/$C$6),\"\")"
+        },
+        "L7": {
+          "value": null,
+          "formula": "IF(J7=\"PASS INITIAL QC\",IF(C7<=$L$3,\"PILOT CFD\",\"OVER BUDGET\"),\"\")"
+        }
+      }
+    ],
+    "STAR Setup": [
+      {
+        "A1": {
+          "value": "STAR-CCM+ | RUN 50 MESHES SAFELY",
+          "formula": null
+        }
+      },
+      {
+        "A2": {
+          "value": "The macro is a template for your already configured .sim. Global parameters must be linked to the real controls before running.",
+          "formula": null
+        }
+      },
+      {
+        "B4": {
+          "value": "REQUIRED GLOBAL PARAMETERS",
+          "formula": null
+        },
+        "F4": {
+          "value": "EXACT STAR CONTROL",
+          "formula": null
+        }
+      },
+      {
+        "B6": {
+          "value": "Mesh_Base",
+          "formula": null
+        },
+        "C6": {
+          "value": "m",
+          "formula": null
+        },
+        "F6": {
+          "value": "Global Base Size",
+          "formula": null
+        }
+      },
+      {
+        "B7": {
+          "value": "Mesh_Foil",
+          "formula": null
+        },
+        "C7": {
+          "value": "m",
+          "formula": null
+        },
+        "F7": {
+          "value": "Foil surface target (absolute)",
+          "formula": null
+        }
+      },
+      {
+        "B8": {
+          "value": "Mesh_Wake",
+          "formula": null
+        },
+        "C8": {
+          "value": "m",
+          "formula": null
+        },
+        "F8": {
+          "value": "Wake local volume size (absolute)",
+          "formula": null
+        }
+      },
+      {
+        "B9": {
+          "value": "Mesh_VOF",
+          "formula": null
+        },
+        "C9": {
+          "value": "m",
+          "formula": null
+        },
+        "F9": {
+          "value": "VOF interface band target (absolute)",
+          "formula": null
+        }
+      },
+      {
+        "B10": {
+          "value": "Mesh_LE",
+          "formula": null
+        },
+        "C10": {
+          "value": "m",
+          "formula": null
+        },
+        "F10": {
+          "value": "Leading-edge local surface size (absolute length)",
+          "formula": null
+        }
+      },
+      {
+        "B12": {
+          "value": "SAFE WORKFLOW",
+          "formula": null
+        }
+      },
+      {
+        "B14": {
+          "value": "Save a COPY of current .sim as baseline_mesh_only.sim. Stop the ongoing CFD solve before editing its mesh.",
+          "formula": null
+        }
+      },
+      {
+        "B15": {
+          "value": "Create the 5 scalar global parameters above with Length dimension and units m.",
+          "formula": null
+        }
+      },
+      {
+        "B16": {
+          "value": "Link them to the actual mesh controls, using absolute settings or well-defined expressions if STAR shows % of Base Size.",
+          "formula": null
+        }
+      },
+      {
+        "B17": {
+          "value": "Keep FIRST prism cell, prism TOTAL thickness, prism N and growth ratio fixed across all 50 grids: target God\u00f8 y+55.",
+          "formula": null
+        }
+      },
+      {
+        "B18": {
+          "value": "Create 4 Reports over the fluid volume: Batch_CellCount, Batch_MinVolumeChange, Batch_MinCellQuality and Batch_MaxSkewness.",
+          "formula": null
+        }
+      },
+      {
+        "B19": {
+          "value": "Put MeshSweep50.java and mesh_sweep_50.csv in the working folder beside the copied .sim.",
+          "formula": null
+        }
+      },
+      {
+        "B20": {
+          "value": "Smoke test first 3 cases (the Java file has CASE_LIMIT=3). Verify cell count changes and reports are nonempty.",
+          "formula": null
+        }
+      },
+      {
+        "B21": {
+          "value": "Only after that, set CASE_LIMIT=50 in Java and relaunch on the copied .sim. Macro DOES NOT run the CFD solver.",
+          "formula": null
+        }
+      },
+      {
+        "B22": {
+          "value": "Macro appends metric rows to mesh_results.csv and does not save 50 huge .sim files by default.",
+          "formula": null
+        }
+      },
+      {
+        "B23": {
+          "value": "Paste CSV data into Mesh Results after processing and shortlist 3+ meshes for controlled CFD convergence.",
+          "formula": null
+        }
+      },
+      {
+        "B25": {
+          "value": "GUARDRAILS",
+          "formula": null
+        }
+      },
+      {
+        "B27": {
+          "value": "50 generated meshes may take longer and consume more RAM than one CFD run. Start with 3 cases, inspect timings, and avoid high-cost VOF grids.",
+          "formula": null
+        }
+      },
+      {
+        "B28": {
+          "value": "Missing reports produce blank numbers, not a PASS. The macro cannot identify prism coverage automatically without a case-specific report.",
+          "formula": null
+        }
+      },
+      {
+        "B29": {
+          "value": "The macro overwrites the ACTIVE mesh state in the working .sim, never run it on your only model copy or while the solver is working.",
+          "formula": null
+        }
+      },
+      {
+        "B30": {
+          "value": "Exact STAR-CCM+ menu paths and Java API can vary by version. Use Tools > Macro > Record in your installation to confirm parameter wiring.",
+          "formula": null
+        }
+      },
+      {
+        "B32": {
+          "value": "EXPORT: If you change any input or factor, export the Macro CSV tab alone as UTF-8 CSV and name it mesh_sweep_50.csv. The standalone CSV supplied here matches the shipped defaults.",
+          "formula": null
+        }
+      },
+      {
+        "B34": {
+          "value": "BASELINE: target y+55, N=15, first h1\u22480.18 mm and T\u224815.46 mm (using calculator assumptions). This is not proof of achieved y+. Check wall treatment and actual y+ map.",
+          "formula": null
+        }
+      }
+    ]
+  },
+  "Inflation_layers_yplus_CFL.xlsx": {
+    "Calculator": [
+      {
+        "B2": {
+          "value": "Inflation layers and y\u207a",
+          "formula": null
+        }
+      },
+      {
+        "B3": {
+          "value": "Edit the yellow cells. Initial values are a water example, not inputs for your model.",
+          "formula": null
+        }
+      },
+      {
+        "B5": {
+          "value": "INPUTS",
+          "formula": null
+        },
+        "F5": {
+          "value": "MESH PARAMETERS",
+          "formula": null
+        }
+      },
+      {
+        "B6": {
+          "value": "Reference velocity U",
+          "formula": null
+        },
+        "C6": {
+          "value": "18",
+          "formula": null
+        },
+        "D6": {
+          "value": "m/s",
+          "formula": null
+        },
+        "F6": {
+          "value": "First layer thickness h\u2081",
+          "formula": null
+        },
+        "G6": {
+          "value": "1.7992746280518786E-4",
+          "formula": "IF(C26=1,IF(C17=1,G24,G25),\"\u2014\")"
+        },
+        "H6": {
+          "value": "m",
+          "formula": null
+        },
+        "I6": {
+          "value": "Full cell height, h\u2081 = 2y_p.",
+          "formula": null
+        }
+      },
+      {
+        "B7": {
+          "value": "Length L / distance x",
+          "formula": null
+        },
+        "C7": {
+          "value": "1.19",
+          "formula": null
+        },
+        "D7": {
+          "value": "m",
+          "formula": null
+        },
+        "F7": {
+          "value": "First layer thickness h\u2081",
+          "formula": null
+        },
+        "G7": {
+          "value": "0.17992746280518787",
+          "formula": "IF(ISNUMBER(G6),G6*1000,\"\u2014\")"
+        },
+        "H7": {
+          "value": "mm",
+          "formula": null
+        },
+        "I7": {
+          "value": "Check the units in your mesher.",
+          "formula": null
+        }
+      },
+      {
+        "B8": {
+          "value": "Density \u03c1",
+          "formula": null
+        },
+        "C8": {
+          "value": "1000",
+          "formula": null
+        },
+        "D8": {
+          "value": "kg/m\u00b3",
+          "formula": null
+        },
+        "F8": {
+          "value": "Growth ratio r",
+          "formula": null
+        },
+        "G8": {
+          "value": "1.2210050536429504",
+          "formula": "IF(C28=1,IF(C15=1,G28,C16),\"\u2014\")"
+        },
+        "H8": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I8": {
+          "value": "Automatic from N and target T, or manual.",
+          "formula": null
+        }
+      },
+      {
+        "B9": {
+          "value": "Dynamic viscosity \u03bc",
+          "formula": null
+        },
+        "C9": {
+          "value": "1E-3",
+          "formula": null
+        },
+        "D9": {
+          "value": "Pa\u00b7s",
+          "formula": null
+        },
+        "F9": {
+          "value": "Number of layers N",
+          "formula": null
+        },
+        "G9": {
+          "value": "15",
+          "formula": "IF(C25=1,C11,\"\u2014\")"
+        },
+        "H9": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I9": {
+          "value": "Supported range: 2\u2013200.",
+          "formula": null
+        }
+      },
+      {
+        "B10": {
+          "value": "Target y\u207a",
+          "formula": null
+        },
+        "C10": {
+          "value": "55",
+          "formula": null
+        },
+        "D10": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F10": {
+          "value": "Total thickness T",
+          "formula": null
+        },
+        "G10": {
+          "value": "1.5458475596838023E-2",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G8)),SUM(Layers!B6:B205),\"\u2014\")"
+        },
+        "H10": {
+          "value": "m",
+          "formula": null
+        },
+        "I10": {
+          "value": "Sum of all layer heights.",
+          "formula": null
+        }
+      },
+      {
+        "B11": {
+          "value": "Number of layers N",
+          "formula": null
+        },
+        "C11": {
+          "value": "15",
+          "formula": null
+        },
+        "D11": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F11": {
+          "value": "Total thickness T",
+          "formula": null
+        },
+        "G11": {
+          "value": "15.458475596838023",
+          "formula": "IF(ISNUMBER(G10),1000*G10,\"\u2014\")"
+        },
+        "H11": {
+          "value": "mm",
+          "formula": null
+        }
+      },
+      {
+        "B12": {
+          "value": "\u03b4\u2089\u2089 thickness multiplier",
+          "formula": null
+        },
+        "C12": {
+          "value": "1",
+          "formula": null
+        },
+        "D12": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F12": {
+          "value": "Last layer thickness h_N",
+          "formula": null
+        },
+        "G12": {
+          "value": "2.9453839528286374E-3",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G8)),G6*G8^(C11-1),\"\u2014\")"
+        },
+        "H12": {
+          "value": "m",
+          "formula": null
+        },
+        "I12": {
+          "value": "Compare with adjacent cell sizes.",
+          "formula": null
+        }
+      },
+      {
+        "B13": {
+          "value": "Target thickness mode",
+          "formula": null
+        },
+        "C13": {
+          "value": "1",
+          "formula": null
+        },
+        "D13": {
+          "value": "1 / 2",
+          "formula": null
+        },
+        "F13": {
+          "value": "Coverage T / \u03b4\u2089\u2089",
+          "formula": null
+        },
+        "G13": {
+          "value": "1.0000000000000007",
+          "formula": "IF(AND(ISNUMBER(G10),ISNUMBER(G26)),G10/G26,\"\u2014\")"
+        },
+        "H13": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I13": {
+          "value": "100% means T = estimated \u03b4\u2089\u2089.",
+          "formula": null
+        }
+      },
+      {
+        "B14": {
+          "value": "Manual target thickness T",
+          "formula": null
+        },
+        "C14": {
+          "value": "5.0000000000000001E-3",
+          "formula": null
+        },
+        "D14": {
+          "value": "m",
+          "formula": null
+        },
+        "F14": {
+          "value": "Size ratio: core / h_N",
+          "formula": null
+        },
+        "G14": {
+          "value": "1.697571549270575",
+          "formula": "IF(AND(ISNUMBER(G12),ISNUMBER(C20),C20>0),C20/G12,\"\u2014\")"
+        },
+        "H14": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I14": {
+          "value": "Length ratio, not volume ratio.",
+          "formula": null
+        }
+      },
+      {
+        "B15": {
+          "value": "Growth ratio mode",
+          "formula": null
+        },
+        "C15": {
+          "value": "1",
+          "formula": null
+        },
+        "D15": {
+          "value": "1 / 2",
+          "formula": null
+        }
+      },
+      {
+        "B16": {
+          "value": "Manual growth ratio r",
+          "formula": null
+        },
+        "C16": {
+          "value": "1.2",
+          "formula": null
+        },
+        "D16": {
+          "value": "\u2013",
+          "formula": null
+        }
+      },
+      {
+        "B17": {
+          "value": "First layer mode",
+          "formula": null
+        },
+        "C17": {
+          "value": "1",
+          "formula": null
+        },
+        "D17": {
+          "value": "1 / 2",
+          "formula": null
+        },
+        "F17": {
+          "value": "CALCULATIONS",
+          "formula": null
+        }
+      },
+      {
+        "B18": {
+          "value": "Previous first layer height h\u2081",
+          "formula": null
+        },
+        "C18": {
+          "value": "2.0000000000000002E-5",
+          "formula": null
+        },
+        "D18": {
+          "value": "m",
+          "formula": null
+        },
+        "F18": {
+          "value": "Kinematic viscosity \u03bd",
+          "formula": null
+        },
+        "G18": {
+          "value": "9.9999999999999995E-7",
+          "formula": "IF(C24=1,C9/C8,\"\u2014\")"
+        },
+        "H18": {
+          "value": "m\u00b2/s",
+          "formula": null
+        },
+        "I18": {
+          "value": "\u03bd = \u03bc / \u03c1",
+          "formula": null
+        }
+      },
+      {
+        "B19": {
+          "value": "Achieved y\u207a from CFD",
+          "formula": null
+        },
+        "C19": {
+          "value": "1",
+          "formula": null
+        },
+        "D19": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "F19": {
+          "value": "Reynolds number Re",
+          "formula": null
+        },
+        "G19": {
+          "value": "21420000",
+          "formula": "IF(C24=1,C8*C6*C7/C9,\"\u2014\")"
+        },
+        "H19": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I19": {
+          "value": "Re = \u03c1UL / \u03bc",
+          "formula": null
+        }
+      },
+      {
+        "B20": {
+          "value": "Core cell size",
+          "formula": null
+        },
+        "C20": {
+          "value": "5.0000000000000001E-3",
+          "formula": null
+        },
+        "D20": {
+          "value": "m",
+          "formula": null
+        },
+        "F20": {
+          "value": "Skin friction coefficient C_f",
+          "formula": null
+        },
+        "G20": {
+          "value": "2.3071479425807555E-3",
+          "formula": "IF(ISNUMBER(G19),IF(G19>3,(2*LOG10(G19)-0.65)^(-2.3),\"\u2014\"),\"\u2014\")"
+        },
+        "H20": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I20": {
+          "value": "C_f = [2 log\u2081\u2080(Re) \u2212 0.65]^(\u22122.3)",
+          "formula": null
+        }
+      },
+      {
+        "F21": {
+          "value": "Wall shear stress \u03c4_w",
+          "formula": null
+        },
+        "G21": {
+          "value": "373.75796669808238",
+          "formula": "IF(ISNUMBER(G20),0.5*C8*C6^2*G20,\"\u2014\")"
+        },
+        "H21": {
+          "value": "Pa",
+          "formula": null
+        },
+        "I21": {
+          "value": "\u03c4_w = \u00bd\u03c1U\u00b2C_f",
+          "formula": null
+        }
+      },
+      {
+        "F22": {
+          "value": "Friction velocity u_\u03c4",
+          "formula": null
+        },
+        "G22": {
+          "value": "0.61135747864738055",
+          "formula": "IF(ISNUMBER(G21),SQRT(G21/C8),\"\u2014\")"
+        },
+        "H22": {
+          "value": "m/s",
+          "formula": null
+        },
+        "I22": {
+          "value": "u_\u03c4 = \u221a(\u03c4_w / \u03c1)",
+          "formula": null
+        }
+      },
+      {
+        "B23": {
+          "value": "INPUT VALIDITY: 1 = VALID",
+          "formula": null
+        },
+        "F23": {
+          "value": "Cell-centre wall distance y_p",
+          "formula": null
+        },
+        "G23": {
+          "value": "8.9963731402593932E-5",
+          "formula": "IF(ISNUMBER(G22),C10*G18/G22,\"\u2014\")"
+        },
+        "H23": {
+          "value": "m",
+          "formula": null
+        },
+        "I23": {
+          "value": "y_p = y\u207a\u03bd / u_\u03c4",
+          "formula": null
+        }
+      },
+      {
+        "B24": {
+          "value": "Flow inputs and target y\u207a",
+          "formula": null
+        },
+        "C24": {
+          "value": "1",
+          "formula": "IF(AND(COUNT(C6:C10)=5,MIN(C6:C10)>0),1,0)"
+        },
+        "F24": {
+          "value": "h\u2081 from FM101 correlation",
+          "formula": null
+        },
+        "G24": {
+          "value": "1.7992746280518786E-4",
+          "formula": "IF(ISNUMBER(G23),2*G23,\"\u2014\")"
+        },
+        "H24": {
+          "value": "m",
+          "formula": null
+        },
+        "I24": {
+          "value": "Estimate for turbulent flow.",
+          "formula": null
+        }
+      },
+      {
+        "B25": {
+          "value": "Layer count: 2\u2013200",
+          "formula": null
+        },
+        "C25": {
+          "value": "1",
+          "formula": "IF(ISNUMBER(C11),IF(AND(C11>=2,C11<=200,C11=INT(C11)),1,0),0)"
+        },
+        "F25": {
+          "value": "h\u2081 corrected using CFD results",
+          "formula": null
+        },
+        "G25": {
+          "value": "1.1000000000000001E-3",
+          "formula": "IF(AND(COUNT(C10,C18:C19)=3,MIN(C10,C18:C19)>0),C18*C10/C19,\"\u2014\")"
+        },
+        "H25": {
+          "value": "m",
+          "formula": null
+        },
+        "I25": {
+          "value": "h\u2081,new = h\u2081,old \u00b7 y\u207atarget / y\u207aCFD",
+          "formula": null
+        }
+      },
+      {
+        "B26": {
+          "value": "First layer selection",
+          "formula": null
+        },
+        "C26": {
+          "value": "1",
+          "formula": "IF(C17=1,C24,IF(C17=2,IF(AND(COUNT(C10,C18:C19)=3,MIN(C10,C18:C19)>0),1,0),0))"
+        },
+        "F26": {
+          "value": "Boundary layer thickness \u03b4\u2089\u2089",
+          "formula": null
+        },
+        "G26": {
+          "value": "1.5458475596838012E-2",
+          "formula": "IF(ISNUMBER(G19),0.38*C7/G19^0.2,\"\u2014\")"
+        },
+        "H26": {
+          "value": "m",
+          "formula": null
+        },
+        "I26": {
+          "value": "\u03b4\u2089\u2089 = 0.38L / Re^(1/5)",
+          "formula": null
+        }
+      },
+      {
+        "B27": {
+          "value": "Target thickness",
+          "formula": null
+        },
+        "C27": {
+          "value": "1",
+          "formula": "IF(C13=1,IF(AND(C24=1,ISNUMBER(C12),C12>0),1,0),IF(C13=2,IF(AND(ISNUMBER(C14),C14>0),1,0),0))"
+        },
+        "F27": {
+          "value": "Target total layer thickness T",
+          "formula": null
+        },
+        "G27": {
+          "value": "1.5458475596838012E-2",
+          "formula": "IF(C27=1,IF(C13=1,C12*G26,C14),\"\u2014\")"
+        },
+        "H27": {
+          "value": "m",
+          "formula": null
+        },
+        "I27": {
+          "value": "Mode 1: multiplier \u00d7 \u03b4\u2089\u2089. Mode 2: manual T.",
+          "formula": null
+        }
+      },
+      {
+        "B28": {
+          "value": "Growth ratio selection",
+          "formula": null
+        },
+        "C28": {
+          "value": "1",
+          "formula": "IF(C15=1,IF(AND(C25=1,C26=1,C27=1),1,0),IF(C15=2,IF(AND(ISNUMBER(C16),C16>=1,C16<=3,C25=1,C26=1),1,0),0))"
+        },
+        "F28": {
+          "value": "r calculated for target T",
+          "formula": null
+        },
+        "G28": {
+          "value": "1.2210050536429504",
+          "formula": "IF(AND(C25=1,ISNUMBER(G6),ISNUMBER(G27)),IF(G27<=C11*G6,1,Layers!J65),\"\u2014\")"
+        },
+        "H28": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I28": {
+          "value": "Geometric-sum bisection, no macros.",
+          "formula": null
+        }
+      },
+      {
+        "F29": {
+          "value": "Estimated y\u207a for active h\u2081",
+          "formula": null
+        },
+        "G29": {
+          "value": "55",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G22)),G6/2*G22/G18,\"\u2014\")"
+        },
+        "H29": {
+          "value": "\u2013",
+          "formula": null
+        },
+        "I29": {
+          "value": "May differ from target in correction mode.",
+          "formula": null
+        }
+      },
+      {
+        "B31": {
+          "value": "HOW TO USE THE MODES",
+          "formula": null
+        }
+      },
+      {
+        "B32": {
+          "value": "C13: 1 = target from \u03b4\u2089\u2089, 2 = custom thickness T. C15: 1 = calculate r, 2 = enter r and calculate thickness.",
+          "formula": null
+        }
+      },
+      {
+        "B33": {
+          "value": "C17: 1 = estimate h\u2081 from target y\u207a and correlation, 2 = correct h\u2081 using y\u207a achieved in CFD.",
+          "formula": null
+        }
+      },
+      {
+        "B35": {
+          "value": "Correlations assume a smooth flat plate, turbulent flow and zero pressure gradient.",
+          "formula": "IF(C24=0,\"Enter positive U, L, \u03c1, \u03bc and target y\u207a.\",IF(OR(G19<500000,G19>=1000000000),\"Re is outside the indicative range 5\u00b710^5\u201310^9: turbulent correlations may be unsuitable.\",\"Correlations assume a smooth flat plate, turbulent flow and zero pressure gradient.\"))"
+        }
+      },
+      {
+        "B36": {
+          "value": "For fixed h\u2081 and N, a larger r gives a larger total thickness T. A smaller r gives a thinner stack.",
+          "formula": "IF(AND(ISNUMBER(G6),ISNUMBER(G27),C25=1),IF(G27<C11*G6,\"Target T < N\u00b7h\u2081: an exact match requires r < 1. Automatic mode uses r = 1, so T exceeds the target.\",\"For fixed h\u2081 and N, a larger r gives a larger total thickness T. A smaller r gives a thinner stack.\"),\"Check h\u2081, N and target thickness inputs.\")"
+        }
+      },
+      {
+        "B37": {
+          "value": "After meshing, check the actual layers, mesh quality and transition to the core mesh.",
+          "formula": "IF(ISNUMBER(G8),IF(G8>1.3,\"r > 1.30: consider more layers. The 1.30 threshold is a review guideline, not a validity criterion.\",\"After meshing, check the actual layers, mesh quality and transition to the core mesh.\"),\"No r result: check the selected modes and input validity.\")"
+        }
+      },
+      {
+        "B38": {
+          "value": "The layer stack reaches target T.",
+          "formula": "IF(AND(ISNUMBER(G10),ISNUMBER(G27)),IF(G10<G27*(1-0.00000001),\"The layer stack is thinner than target T. Increase N or r, or change the required target.\",\"The layer stack reaches target T.\"),\"No total thickness result.\")"
+        }
+      },
+      {
+        "B40": {
+          "value": "ASSUMPTIONS AND SOURCES",
+          "formula": null
+        }
+      },
+      {
+        "B41": {
+          "value": "L is the streamwise location along the surface or a chosen reference length. For a foil, it may be the chord.",
+          "formula": null
+        }
+      },
+      {
+        "B42": {
+          "value": "For a curved foil with a pressure gradient, \u03b4\u2089\u2089 and h\u2081 are initial estimates. Check y\u207a after running CFD.",
+          "formula": null
+        }
+      },
+      {
+        "B43": {
+          "value": "Choose target y\u207a to suit the turbulence model and wall treatment. The default y\u207a = 1 is an example.",
+          "formula": null
+        }
+      },
+      {
+        "B44": {
+          "value": "In correction mode, use y\u207a and h\u2081 from the same wall region. The correction assumes approximately unchanged u_\u03c4.",
+          "formula": null
+        }
+      },
+      {
+        "B45": {
+          "value": "Geometric progression: h_i = h\u2081\u00b7r^(i\u22121), T = h\u2081\u00b7(r^N\u22121)/(r\u22121). For r = 1: T = N\u00b7h\u2081.",
+          "formula": null
+        }
+      },
+      {
+        "B46": {
+          "value": "Automatic r solves T = target using 60 bisection steps. No Solver add-in or Excel iterative calculation is needed.",
+          "formula": null
+        }
+      },
+      {
+        "B47": {
+          "value": "FM101 calls r the maximum growth ratio. Here r matches T to the target; for fixed N it is the target coverage threshold.",
+          "formula": null
+        }
+      },
+      {
+        "B48": {
+          "value": "Method: Fluid Mechanics 101, Calculators & Tools, section 2, pp. 4\u20137. Accessed: 28 October 2026.",
+          "formula": null
+        }
+      },
+      {
+        "B49": {
+          "value": "https://www.fluidmechanics101.com/pdf/calculators.pdf",
+          "formula": null
+        }
+      },
+      {
+        "B50": {
+          "value": "Related video: [CFD] Inflation Layers / Prism Layers in CFD.",
+          "formula": null
+        }
+      },
+      {
+        "B51": {
+          "value": "https://www.youtube.com/watch?v=1gSHN99I7L4",
+          "formula": null
+        }
+      },
+      {
+        "B52": {
+          "value": "Based on the equations in the author documentation. This is not an official Fluid Mechanics 101 tool.",
+          "formula": null
+        }
+      },
+      {
+        "B53": {
+          "value": "Laminar correlations and transition modelling are not implemented. Turbulent flow is assumed.",
+          "formula": null
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "source_x_over_c_range": [
+    -0.0002999632737067584,
+    0.9994111226401282
+  ],
+  "pressure_Fx_N_snapshot_total": 8.147484260926147,
+  "status": "design_study_not_meshed",
+  "candidate": "M10 subject to M09/temporal review",
+  "reference": "M08 accepted t=1.600s",
+  "regions": [
+    {
+      "region": "Leading region",
+      "x_over_c": [
+        0,
+        0.05
+      ],
+      "surface_segments": 57,
+      "median_edge_mm": 2.8548898215132685,
+      "Cp_min": -0.17047307336271258,
+      "Cp_max": 1.003679558306087,
+      "pressure_Fx_N_snapshot": 63.79052297617312,
+      "edge_length_share_pct": 5.798156200427254,
+      "wall_length_with_under_40_layers_pct": 0.0
+    },
+    {
+      "region": "Middle chord",
+      "x_over_c": [
+        0.05,
+        0.85
+      ],
+      "surface_segments": 671,
+      "median_edge_mm": 2.857020762217096,
+      "Cp_min": -0.5316718436372566,
+      "Cp_max": 0.16182074121947376,
+      "pressure_Fx_N_snapshot": -19.366571729018055,
+      "edge_length_share_pct": 79.21289746590371,
+      "wall_length_with_under_40_layers_pct": 0.0
+    },
+    {
+      "region": "Trailing region",
+      "x_over_c": [
+        0.85,
+        1
+      ],
+      "surface_segments": 128,
+      "median_edge_mm": 2.8549447447721654,
+      "Cp_min": -0.06670518266670376,
+      "Cp_max": 0.26656711609793105,
+      "pressure_Fx_N_snapshot": -36.27646698622897,
+      "edge_length_share_pct": 14.988946333669038,
+      "wall_length_with_under_40_layers_pct": 8.646917470991358
+    }
+  ],
+  "proposed_middle_chord_x_over_c": [
+    0.05,
+    0.85
+  ],
+  "middle_surface_target_mm": 4.0,
+  "LE_TE_surface_target_mm": 2.0408163265,
+  "first_layer_um": 1.5306122449,
+  "prism_layers": 48,
+  "total_prism_mm": 15.46,
+  "coarsening_scope": "Tangential surface and adjacent volume targets only; protect LE/TE and preserve wall-normal layers. Keep M09 remote-region design separate until its evidence passes.",
+  "implementation_gate": "Current global foil surface control must be locally overridden by supported edge/surface or volume controls. Verify actual surface-edge lengths and region transitions after generation; blocks alone do not prove surface refinement.",
+  "acceptance": "No automatic admission. Audit source geometry, layer continuity, closure/volume, y+, local pressure and viscous drag, CFL, step cost and both settled coefficient differences against comparable evidence.",
+  "limitation": "Cp and pressure-force localization are one accepted field snapshot, not window means. Local viscous-wall traction is not exported, so savings and accuracy cannot be concluded from this study.",
+  "updated_at": "2026-10-29T20:49:20.576858+01:00",
+  "ideal_surface_segments_with_curvature_floor": 731,
+  "ideal_prism_cell_reduction_estimate": 6000.952837624558,
+  "ideal_total_cell_reduction_from_prisms_only_pct": 2.353416358205475,
+  "estimation_limit": "Indicative tangential edge-length scaling; small curvature-limited segments retained. Actual local controls, transitions and mesh counts must be measured.",
+  "design_reason": "Narrow LE x/c<0.05 and TE x/c>0.85 controls are the initial design. Refining a broad 0\u20130.15 plus 0.75\u20131 end region while coarsening the middle nearly cancels the surface-edge saving; it is not an efficient first test."
+}

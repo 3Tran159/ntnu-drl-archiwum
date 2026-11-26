@@ -1,0 +1,49 @@
+Starting local server: starccm+.bat -server -power -cpubind off -np 2 -podkey REDACTED -licpath 1999@flex.cd-adapco.com  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxxdWFzaTJkXzAxMl8yMDI2MTAyOVxNMDRccmVwYWlyX29yaWVudGVkX2V4dHJ1c2lvblxpbXBvcnRlZF9wcm9iZS5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-1
+Process rank 0 THINKPAD-LUCJAN 27948
+Total number of processes : 2
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 14:09:53 2026
+
+Server::start -host THINKPAD-LUCJAN:47831
+Loading: F:\ntnu\mesh_screening_20261028\quasi2d_012_20261029\M04\repair_oriented_extrusion\imported_probe.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Loading module: StarSweptMesher
+Loading module: CaeIOCgns
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=2 
+Playing macro: F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\FinalizeM04.java
+F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\FinalizeM04.java:17: error: cannot find symbol
+String inlet=fresh.getBoundaryManager().getBoundary("DOMAIN.inlet").getValues().get(VelocityProfile.class).getMethod(FunctionVectorProfileMethod.class).getFieldFunction().getPresentationName();
+                                                                                    ^
+  symbol:   class VelocityProfile
+  location: class macro.FinalizeM04
+
+error: F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\FinalizeM04.java:17: error: cannot find symbol
+String inlet=fresh.getBoundaryManager().getBoundary("DOMAIN.inlet").getValues().get(VelocityProfile.class).getMethod(FunctionVectorProfileMethod.class).getFieldFunction().getPresentationName();
+                                                                                    ^
+  symbol:   class VelocityProfile
+  location: class macro.FinalizeM04
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

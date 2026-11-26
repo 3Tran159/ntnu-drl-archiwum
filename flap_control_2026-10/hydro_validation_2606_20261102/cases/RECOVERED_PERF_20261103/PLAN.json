@@ -1,0 +1,356 @@
+{
+  "at": "2026-11-03T14:20:53.004844+01:00",
+  "experiment_id": "RECOVERED_PERF_20261103",
+  "host": "THINKPAD-LUCJAN",
+  "source_checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\production_source.sim",
+  "production_checkpoint": {
+    "path": "F:/ntnu/flap_control/hydro_validation_2606_20261102/cases/RECOVERED_FIXED_PLUS2_SWEEP_20261103/run_20261103_124935/paused_checkpoint.sim",
+    "bytes": 1527289724,
+    "sha256": "ebcf774b8961a6788115f2bef1c6a686deaf2557d03341b5ec1a51836042f90c",
+    "time_s": 1.2120000000000009,
+    "iteration": 25410,
+    "stage": 0,
+    "stage_start_s": 0.65,
+    "U_m_s": 17.146360274848334,
+    "angle_deg": 0.0,
+    "native_save_returned": true
+  },
+  "input_sha256": "ebcf774b8961a6788115f2bef1c6a686deaf2557d03341b5ec1a51836042f90c",
+  "initial_reports": {
+    "CL_hydro": 0.2940873750789219,
+    "CD": 0.010275884816327805,
+    "Mh_Nm": -11.21149610775655,
+    "Fx_N": 35.95092578147461,
+    "Fz_N": 1051.5529021911725,
+    "p_absolute_min_Pa": 30321.07721733699
+  },
+  "topology": [
+    {
+      "id": 256,
+      "group": 0,
+      "logical_cpu": 0,
+      "core_index": 0,
+      "efficiency_class": 1
+    },
+    {
+      "id": 257,
+      "group": 0,
+      "logical_cpu": 1,
+      "core_index": 1,
+      "efficiency_class": 1
+    },
+    {
+      "id": 258,
+      "group": 0,
+      "logical_cpu": 2,
+      "core_index": 2,
+      "efficiency_class": 0
+    },
+    {
+      "id": 259,
+      "group": 0,
+      "logical_cpu": 3,
+      "core_index": 3,
+      "efficiency_class": 0
+    },
+    {
+      "id": 260,
+      "group": 0,
+      "logical_cpu": 4,
+      "core_index": 4,
+      "efficiency_class": 0
+    },
+    {
+      "id": 261,
+      "group": 0,
+      "logical_cpu": 5,
+      "core_index": 5,
+      "efficiency_class": 0
+    },
+    {
+      "id": 262,
+      "group": 0,
+      "logical_cpu": 6,
+      "core_index": 6,
+      "efficiency_class": 0
+    },
+    {
+      "id": 263,
+      "group": 0,
+      "logical_cpu": 7,
+      "core_index": 7,
+      "efficiency_class": 0
+    },
+    {
+      "id": 264,
+      "group": 0,
+      "logical_cpu": 8,
+      "core_index": 8,
+      "efficiency_class": 0
+    },
+    {
+      "id": 265,
+      "group": 0,
+      "logical_cpu": 9,
+      "core_index": 9,
+      "efficiency_class": 0
+    },
+    {
+      "id": 266,
+      "group": 0,
+      "logical_cpu": 10,
+      "core_index": 10,
+      "efficiency_class": 1
+    },
+    {
+      "id": 267,
+      "group": 0,
+      "logical_cpu": 11,
+      "core_index": 11,
+      "efficiency_class": 1
+    },
+    {
+      "id": 268,
+      "group": 0,
+      "logical_cpu": 12,
+      "core_index": 12,
+      "efficiency_class": 1
+    },
+    {
+      "id": 269,
+      "group": 0,
+      "logical_cpu": 13,
+      "core_index": 13,
+      "efficiency_class": 1
+    },
+    {
+      "id": 270,
+      "group": 0,
+      "logical_cpu": 14,
+      "core_index": 14,
+      "efficiency_class": 0
+    },
+    {
+      "id": 271,
+      "group": 0,
+      "logical_cpu": 15,
+      "core_index": 15,
+      "efficiency_class": 0
+    },
+    {
+      "id": 272,
+      "group": 0,
+      "logical_cpu": 16,
+      "core_index": 16,
+      "efficiency_class": 0
+    },
+    {
+      "id": 273,
+      "group": 0,
+      "logical_cpu": 17,
+      "core_index": 17,
+      "efficiency_class": 0
+    },
+    {
+      "id": 274,
+      "group": 0,
+      "logical_cpu": 18,
+      "core_index": 18,
+      "efficiency_class": 0
+    },
+    {
+      "id": 275,
+      "group": 0,
+      "logical_cpu": 19,
+      "core_index": 19,
+      "efficiency_class": 0
+    },
+    {
+      "id": 276,
+      "group": 0,
+      "logical_cpu": 20,
+      "core_index": 20,
+      "efficiency_class": 0
+    },
+    {
+      "id": 277,
+      "group": 0,
+      "logical_cpu": 21,
+      "core_index": 21,
+      "efficiency_class": 0
+    },
+    {
+      "id": 278,
+      "group": 0,
+      "logical_cpu": 22,
+      "core_index": 22,
+      "efficiency_class": 1
+    },
+    {
+      "id": 279,
+      "group": 0,
+      "logical_cpu": 23,
+      "core_index": 23,
+      "efficiency_class": 1
+    }
+  ],
+  "CPU_profiles": {
+    "8": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "12": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      15,
+      16,
+      17
+    ],
+    "16": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "18": [
+      10,
+      11,
+      12,
+      13,
+      22,
+      23,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      15,
+      16,
+      17
+    ],
+    "20": [
+      10,
+      11,
+      12,
+      13,
+      22,
+      23,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "affinity_masks": {
+    "8": 1020,
+    "12": 246780,
+    "16": 4178940,
+    "18": 12845052,
+    "20": 13631484
+  },
+  "reserved_P_cores": [
+    0,
+    1
+  ],
+  "W04": {
+    "local": true,
+    "solver_pid": 5588,
+    "client_pid": 3336,
+    "mpi_ranks": 1,
+    "affinity_mask": 12598275,
+    "affinity_cpus": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      22,
+      23
+    ],
+    "history": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W04_20261103_113831_5d98c0\\history.csv",
+    "baseline_last60_median_step_s": 1.635681249999834,
+    "affinity_will_not_change": true
+  },
+  "window_physical_s": 0.024,
+  "warmup_physical_s": 0.006,
+  "dt_candidates": [
+    0.002,
+    0.003,
+    0.004
+  ],
+  "inner_iterations": 50,
+  "pressure_threshold_Pa": 12339.214766776897,
+  "mass_threshold": 0.0001,
+  "residual_ratio_threshold": 0.01,
+  "reference_residual_omega": 0.02152224952396808,
+  "reference_is_diagnostic_not_validated": true,
+  "MPI_equivalence_relative_tolerance": 0.001,
+  "timestep_force_relative_tolerance": 0.005,
+  "timestep_pressure_relative_tolerance": 0.01,
+  "CFL_over_dt_relative_tolerance": 0.02,
+  "W04_sustained_slowdown_fraction": 0.15,
+  "W04_slowdown_windows_required": 2,
+  "maximum_CPU": 20,
+  "GPU": false,
+  "legacy_global_queue_limit": 16,
+  "scope_limit_override_only": true,
+  "minimum_improvement_fraction": 0.03,
+  "full_campaign_resume_authorized": true,
+  "production_resumes_from": "F:/ntnu/flap_control/hydro_validation_2606_20261102/cases/RECOVERED_FIXED_PLUS2_SWEEP_20261103/run_20261103_124935/paused_checkpoint.sim",
+  "window_note": "Shortened before any CFD benchmark step to limit overhead;12/8/6steps with3/2/2 warmupsteps",
+  "resource_revision": {
+    "at": "2026-11-03T14:45:59.832501+01:00",
+    "reason": "6P+2E MPI8 raised W04 median from1.636 to1.985s; after own solver ended, W04 returned to1.721s. Preserve W04 affinity; own8/12/16MPI now use E cores with zero affinity overlap.18/20 deferred because no18/20 nonoverlapping CPU slots exist while W04 has unchangedPmask.",
+    "eligible_cpu_counts": [
+      8,
+      12,
+      16
+    ],
+    "excluded_cpu_counts": [
+      18,
+      20
+    ],
+    "threshold_unchanged": true,
+    "W04_unchanged": true
+  }
+}

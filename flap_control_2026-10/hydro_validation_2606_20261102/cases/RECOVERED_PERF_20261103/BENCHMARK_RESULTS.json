@@ -1,0 +1,191 @@
+[
+  {
+    "job": "RECOVERED_PERF_20261103_MPI8_DT2_LAUNCH3",
+    "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_143431",
+    "MPI": 8,
+    "dt_s": 0.002,
+    "inner": 50,
+    "steps": 5,
+    "measured_steps": 2,
+    "solver_mean_s": 21.773491,
+    "mean_step_s": 25.3565,
+    "median_step_s": 25.3565,
+    "max_step_s": 25.545,
+    "seconds_per_physical_second": 12678.25,
+    "solver_seconds_per_physical_second": 10886.745499999999,
+    "communication_delta_mean_s": 3.638345625029615,
+    "communication_delta_nonnegative": true,
+    "native_cpu_mean_s": 173.84800000000007,
+    "benchmark_complete": false,
+    "physical_pass": true,
+    "residual_pass": false,
+    "max_omega_ratio": 0.023447057004823076,
+    "last_omega_ratio": 0.023447057004823076,
+    "max_mass_relative": 2.3588332166854998e-08,
+    "pabs_min_Pa": 30333.38477563538,
+    "pmin_location": {
+      "zone": "near",
+      "x_m": 0.7173270344254031,
+      "y_m": 0.02,
+      "z_m": 0.0953565438012048
+    },
+    "cfl_max": 1313.9036480204984,
+    "cfl_volume_mean": 0.2007501260295952,
+    "matched_times": 0,
+    "differences": {},
+    "MPI_equivalent": true,
+    "resource_pass": false,
+    "diagnostic_CPU_eligible": false,
+    "timestep_accepted": false,
+    "W04_median_step_s": 1.9879598000006808,
+    "W04_slowdown_fraction": 0.21537114887199604,
+    "W04_peak_rolling40_slowdown_fraction_during_solving": 0.2162347645670708,
+    "W04_affinity_preserved": true,
+    "own_affinity_verified": true,
+    "hardware": {
+      "P": {
+        "mean_utilization_percent": 73.95,
+        "mean_frequency_MHz": 2761.675,
+        "limit_flags": [
+          0
+        ]
+      },
+      "E": {
+        "mean_utilization_percent": 17.35,
+        "mean_frequency_MHz": 3442.3375,
+        "limit_flags": [
+          0
+        ]
+      }
+    },
+    "peak_RAM_owned_GiB": 4.5096893310546875,
+    "validation_data_eligible": false,
+    "verdict": "INCOMPLETE_RESOURCE_HOLD"
+  },
+  {
+    "job": "RECOVERED_PERF_20261103_MPI8_DT2_EONLY",
+    "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_144631",
+    "MPI": 8,
+    "dt_s": 0.002,
+    "inner": 50,
+    "steps": 5,
+    "measured_steps": 2,
+    "solver_mean_s": 24.31344985,
+    "mean_step_s": 27.561,
+    "median_step_s": 27.561,
+    "max_step_s": 27.866,
+    "seconds_per_physical_second": 13780.5,
+    "solver_seconds_per_physical_second": 12156.724925,
+    "communication_delta_mean_s": 2.6924241501060333,
+    "communication_delta_nonnegative": true,
+    "native_cpu_mean_s": 194.29800000000006,
+    "benchmark_complete": false,
+    "physical_pass": true,
+    "residual_pass": false,
+    "max_omega_ratio": 0.023447057004823076,
+    "last_omega_ratio": 0.023447057004823076,
+    "max_mass_relative": 2.3588332166854998e-08,
+    "pabs_min_Pa": 30333.38477563538,
+    "pmin_location": {
+      "zone": "near",
+      "x_m": 0.7173270344254031,
+      "y_m": 0.02,
+      "z_m": 0.0953565438012048
+    },
+    "cfl_max": 1313.9036480204984,
+    "cfl_volume_mean": 0.2007501260295952,
+    "matched_times": 0,
+    "differences": {},
+    "MPI_equivalent": true,
+    "resource_pass": false,
+    "diagnostic_CPU_eligible": false,
+    "timestep_accepted": false,
+    "W04_median_step_s": 1.9756722499996613,
+    "W04_slowdown_fraction": 0.2078589578500467,
+    "W04_peak_rolling40_slowdown_fraction_during_solving": 0.2078589578500467,
+    "W04_affinity_preserved": true,
+    "own_affinity_verified": true,
+    "hardware": {
+      "P": {
+        "mean_utilization_percent": 36.325,
+        "mean_frequency_MHz": 3502.625,
+        "limit_flags": [
+          0
+        ]
+      },
+      "E": {
+        "mean_utilization_percent": 56.2375,
+        "mean_frequency_MHz": 3148.55,
+        "limit_flags": [
+          0
+        ]
+      }
+    },
+    "peak_RAM_owned_GiB": 4.28662109375,
+    "validation_data_eligible": false,
+    "verdict": "INCOMPLETE_RESOURCE_HOLD"
+  },
+  {
+    "job": "RECOVERED_PERF_20261103_MPI8_DT2_EONLY_FRESH_BASELINE",
+    "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_145256",
+    "MPI": 8,
+    "dt_s": 0.002,
+    "inner": 50,
+    "steps": 12,
+    "measured_steps": 9,
+    "solver_mean_s": 24.48754718888889,
+    "mean_step_s": 27.782555555555557,
+    "median_step_s": 27.892,
+    "max_step_s": 28.955,
+    "seconds_per_physical_second": 13891.27777777778,
+    "solver_seconds_per_physical_second": 12243.773594444445,
+    "communication_delta_mean_s": 2.7558050249528807,
+    "communication_delta_nonnegative": true,
+    "native_cpu_mean_s": 195.68277777777777,
+    "benchmark_complete": true,
+    "physical_pass": true,
+    "residual_pass": false,
+    "max_omega_ratio": 0.02674496673034412,
+    "last_omega_ratio": 0.02674496673034412,
+    "max_mass_relative": 2.3768873379140092e-08,
+    "pabs_min_Pa": 30333.38477563538,
+    "pmin_location": {
+      "zone": "near",
+      "x_m": 0.7173270344254031,
+      "y_m": 0.02,
+      "z_m": 0.0953565438012048
+    },
+    "cfl_max": 1313.9036480204984,
+    "cfl_volume_mean": 0.20070702233307217,
+    "matched_times": 0,
+    "differences": {},
+    "MPI_equivalent": true,
+    "resource_pass": false,
+    "diagnostic_CPU_eligible": false,
+    "timestep_accepted": false,
+    "W04_median_step_s": 1.9162898499998846,
+    "W04_slowdown_fraction": 0.12851367166264938,
+    "W04_peak_rolling40_slowdown_fraction_during_solving": 0.1992843031213083,
+    "W04_affinity_preserved": true,
+    "own_affinity_verified": true,
+    "hardware": {
+      "P": {
+        "mean_utilization_percent": 34.13425925925926,
+        "mean_frequency_MHz": 3250.449074074074,
+        "limit_flags": [
+          0
+        ]
+      },
+      "E": {
+        "mean_utilization_percent": 48.976851851851855,
+        "mean_frequency_MHz": 2578.125,
+        "limit_flags": [
+          0
+        ]
+      }
+    },
+    "peak_RAM_owned_GiB": 4.526622772216797,
+    "validation_data_eligible": false,
+    "verdict": "FAIL_RESOURCE"
+  }
+]

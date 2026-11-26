@@ -1,0 +1,56 @@
+LATEST AUDIT / PRESENTATION UPDATE - 2026-10-30T01:32:59.167247+01:00
+CPU1 run_wave_solver_controls_audit_r1.py --run controller41084 ownsW/preparation.lock; rootGPUlock remainsR11controller36136. Newdisposablecase W20_H24_X4_R4_t0p750_solver_controls_audit_r1 readsactualVOF/pressure/velocity AMG tolerances,maxcycles,epsilon,cyclecounts,URFs,nonorthogonalcorrectors,scheme frompreservedR4t.750. ZEROsteps,nochanges. State wave_solver_controls_audit_state.json. Read model_solver_source_settings.json aftercompletion; no duplicateaudits. Agentprofessor_evidence primaryreview professor_wave_mass_plateau_review.json pending; SIMPLEC/PISOC notmultiphasecuresperdocs. Moreinneraloneplateaus; nextcontrolledchange mustfollowactualsolvergettersandprimaryguidance.
+BothdashboardsfinalQA passed1920/1360/390; professorprint19 intentionalpages. m10_native_lineage_ui_review.json anddashboard_qa.json verify noJSerrors/overflow/clipping; measuredM10geometry,317277cellextensionandpairedinputsready,R10equivalenceandactiveR11shown. No scientificclaimchanged.
+
+LATEST PARTIAL R11 REVIEW - 2026-10-30T01:29:48.295074+01:00
+At0.6680000000000005s, nativeabsphasepeak=0.011171238745202133%, legacy=0.011144989242869793% >0.01%. R11controller36136 still runs to0.750forfullmatchedcomparison. Do notlaunch40innerlongertrial. Moreiterationsshowlittlebenefit versus20; no blind100inner. Scientificagent professor_evidence is reviewing installedVOFboundedness/clipping,phase-linear tolerance andpressurecoupling; read professor_wave_mass_plateau_review.json whenready. No physicschangeauthorizedbythisnote beyondexistingcontrolledtaskscope.
+
+LATEST VERIFIED UPDATE - 2026-10-30T01:22:46.777616+01:00
+R11physicalprogress confirmed at0.501s with40inner andfiniteindependentreports; controller36136 active. M10pairedCPU39192finishedbothzero-stepinputs,sourceunchanged. Readcurrentstatebeforeacting.
+
+CURRENT HANDOVER - 2026-10-30T01:20:43.483365+01:00
+Read actual files/processes/locks before every launch. Preserve every source and attempt; no duplicate or restarted completed controllers. Prior handover history: handover_history_20261030_012043.txt
+
+PRIORITIES AND SCOPE
+1. Numerical configuration, 2. supported lightest mesh, 3. original calm/wave cases, 4. bounded extras.
+Maximum mesh M15. Current vertical domain is fixed z=-22..8m, waterline2m: water depth24m andair6m. U18m/s,foilsubmergence2m,geometry/angle retained. Every wave uses FifthOrderVofWave. Historical16m instructions are superseded.
+Own GPU campaign sequential under root queue.lock. Modest CPU preparation may coexist after resource checks. New large files onE. Do not touch separateHF_012_C003_regular_waves. Never expose licensing/service credentials.
+
+CALM TEMPLATE SUPPORTED
+M09,214908cells,SO1ms10inner. selected_mesh_decision.json and matched_endpoint_results.json hold accepted evidence. M09 vsM07: CD+0.466698%,CL-0.164252%; vsM08:-0.025574%,+0.016736%,common1.840-2.040s. Selected halfdt changesCD-0.00242319%,CL+0.00145333%. Practical mesh/time support, notformalGCI. HistoricalFO,first-settledSO,matchedSO remain separate.
+Force settling adjacent nonoverlapping0.2s means bothchange<0.5%,stopfirstpass; newsettingshistory>=0.4s. Meshagreement bothwithin1% againsttwo component-wise finercomparablemeshes. P95y+~.800,>99.88%area<1,localizedTEmax~253.6; distinguishp95/max. Calm10innerdoesnotestablishwave10inner.
+No finalwave-force admission.
+
+WAVE NUMERICS
+R4 ENVIRONMENTALoutlet+SLIPbed completed1.2s SO1ms10inner; finite shortpilot,sourceunchanged. OldSTATICoutletCPU r2/GPU r3 guardfailures preserved; nevercontinuefailedfields. R4maxspeed24.373m/s,gaugesRMS3.61-4.34mm. FourBDF2budgetspikes max0.01451936%inlet exceed unchanged0.01%reviewgate.
+R6 20inner peak0.0113353% fails. R8 halfdt10inner peak0.0166372% across ALLhalfsteps fails. Smallgaugechanges do notclearbalancegate. Completedcontrollers15556,36724,29860 mustnotrestart. R5/R7/R9 longerprototypes UNLAUNCHED/BLOCKED.
+
+Zero-step reportaudit33140 FINISHED. wave_report_definition_review.json proves unsmoothedphysicalreports,idealizationoff,independentvaluesexactlyequaloriginalhistory. InstalledSiemens theory retainsBDF2 VOF accumulation; waveforcingmomentumonly,no phasesource. FaceDensityRecon FIRST_ORDER isinternal-faceoption,notproof ofbudgetcause.
+R10reporter-only replay35120 FINISHED250steps to0.750. Nativephaseerrors agreewithBDF2+FaceFlux to5.78e-9percentagepoints; phaseboundaryfluxsum agreeswithmixture to1.64e-11kg/s. Nativeabsolutephasepeak0.01438646%,legacy0.01435556%,bothfail. R4replaygaugemaxdifference0.0479mm. This supports actualphase iterationresidual, NOTareportingartifact. No needtoredefinebudget orrelaxgate.
+Primary evidence professor_vof_temporal_budget_review.json,professor_phase_flux_budget_review.json,wave_phase_budget_probe_r10_review.json. NativeMassConservationError iskg/step; dividebydt. MassFlowRatephase kg/s positiveoutflow; noarea multiplication. MassFluxphase usesoppositesign andareaunits,donotmix.
+
+CURRENT GPU
+run_wave_inner40_phase_probe_r11.py controller36136 ownsrootqueue.lock +wave_inner40_phase_probe_r11.lock.
+Case E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_inner40phaseBudget_dt1ms_r11.
+SameR4checkpoint_t0.500.sim,ONLYinner10to40,SO1ms/BCunchanged,250steps to0.750,1GPU. Keepnativephase andlegacyreports. Cache-safecheckpointlogic,no reinitialization,finiteanalyticrefsmandatoryafterfirststep;50m/s/phase/time/resourceguards unchanged.
+After target/sourcepreserved, run analyze_wave_inner40_phase_probe_r11.py; compare40vs10(R10) and20(R6). Do not assume40passes. A passedshortprobe onlysupports a boundedlongertrialwithfreshID,choseninnercount,zonalactual/analytic/flat inventories andcheckpoints; longerwave/reflection/FS/dtchecks remain. R7/R9cannotbe reusedblindly.
+
+M10 WAVE GRID
+M10_FS020_r1 shortdomain build33444 FINISHED282379cells (+31.395%vsM09),zeroFlowSteps,sourceunchanged. professor_m10_wavegrid_review.json:856foiledges/prisms preservedtonumericalprecision; nominalFS28.5714->20mm refinesBOTHx/zincore; actualmediandx30.689->21.812mm,dz31.508->19.966mm,dzp9539.264->27.420mm. PriorM10LE/TEidea unbuilt.
+run_wave_fs_extension_r2.py36760 FINISHED317277cells on80m domain,all282379sourcepolygons/coordinatespreserved,geometry/single-span/qualitypass. Result wave_fs_extension_result.json. Case E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2.
+Remotehorizontalspacing<=.2m retained,verticalrows~.020m inherited: anisotropicremote strips,not20mmisotropicremotegrid.
+R1extension40708failedbeforemesh/STAR onwrongfilename,folder/resultpreserved; r2usedverifiedmesh.CGNS. Do notrerun either.
+
+M10 INPUT PREPARATION FINISHED
+run_foil_wave_m10_setup_r1.py --run controller39192 FINISHED both copies at01:21:19; CPUlockreleased. Previouslockpurpose 'Paired M10 foil calm/W01 zero-step CPU1 preparation'.
+BothC01_W20L4_M10_FS020_env_setup_r1 andW01_W20L4_M10_FS020_env_setup_r1 are prepared,317277cells,zeroFlowSteps,sourceunchanged. Source unchanged,explicitmatchedENVIRONMENTALoutlet,SLIPbed,STATICtop,20minletforcing/outletdamping,allotherwaveflagsNO. W01FifthOrderH.5,L20,H24,firstfrontfalse. InputSO1ms10inneronly; actualwavechoicepending. Inspect wave_fs_case_preparation_state/results.json andactualprocess; do notduplicate.
+OriginalM09longdomain246885cellpairedinputs also remainpreserved. TheseareINPUTS,notvalidatedforcecases.
+
+WAVE ACCEPTANCE / NEXT
+No-foilR5geometry53200cells,dx.2,dz.025FS,20mmspan,4lambda80m. WaveT~.84726732s,forcing-35..-15,core-15..25,damping25..45.1.2s<coretraversal1.695s: notreflectionvalidation.
+R4whole-domain+9.53mmequivalentinventory versusundampedwave includesdampingzonemismatch,notcoreleveldrift/provedmassleak. Needzonalactual/undamped/flat references andequalphasecyclecomparison. Corefirstcyclemeanerrors-1.44..+1.18mm; startupincluded.
+After configuration/propagation/FS/dtgates: matchedC01,W01H.5L20,W02H.5L30,requestedW01 3lambda/4lambda sensitivity.8-10encounterperiods,whole settledcycleaverages,checkpoints. Horizontal4lambda domains,newgeometry/settings requirematchedcalm. ThenboundedW03.25/20,W04.75/20,W05.25/30,W06.75/30,W07.5/10,W08.5/40. LowerHgridchanges needmatchedH.5baseline.
+
+PRESENTATION
+English main dashboard.html andprofessor_dashboard.html inparentfolder shareJSONthroughupdate_status.py. Keepcurrentcases/reviews visible; noacceptanceclaims untilgatespass. SeparatehistoricalFO,firstsettledSO,matchedSO,originalM04 vscontinuations. Show actualmeshchanges,pressure/viscousFx,costs,simlinks,acceptedfields+provenance,experimenttree. LatestcompleteQA wave_completed_audit_ui_review.json:1360/390,18pageprint. Read currentagentQA fornewM10/R11 panels. Test1920/1360/390andprintafterUIedits. Privatemonitorstaysprivate.
+Keepthishandover/plans/automationcurrent. Userauthorizedindependentdecisions; nooptionalquestions. Stayquietunlessmeaningfulcompletion/supportedresult/failure requiringuseraction.

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_resume_mini_only.py", line 136, in <module>
+    main("--preflight" in sys.argv)
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_resume_mini_only.py", line 125, in main
+    finish_fixed_and_run_active(source, t, history)
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_phase_map_analysis.py", line 64, in finish_fixed_and_run_active
+    raise RuntimeError("Expected native 0.10 m Stokes V at full amplitude")
+RuntimeError: Expected native 0.10 m Stokes V at full amplitude

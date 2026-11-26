@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "F:\ntnu\geometry_012_20261029\inspect_original_nx.py", line 22, in <module>
+    result["bodies"].append({"tag":int(b.Tag),"solid":b.IsSolidBody,"name":b.Name,"bbox":list(uf.Modl.AskBoundingBox(b.Tag)),"faces":len(b.GetFaces())})
+                                                                                              ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NXOpen.UF.Modl' object has no attribute 'AskBoundingBox'

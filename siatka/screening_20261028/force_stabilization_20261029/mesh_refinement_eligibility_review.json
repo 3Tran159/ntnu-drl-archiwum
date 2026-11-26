@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-10-29T23:09:24.537938+01:00",
+  "source": "Independent delegated read-only review of mesh definitions, topology and accepted histories",
+  "candidate": "M09",
+  "confirmations": [
+    "M08",
+    "M07"
+  ],
+  "eligibility": "Component-wise refinement is defensible for the practical campaign criterion, conditional on both common-window coefficients within1%. Not formal uniform-refinement GCI.",
+  "basis": [
+    "M08 refines remote base0.25 to0.142857m while protected middle, foil, free-surface and prisms remain equal toM09.",
+    "M07 additionally refines outer/surface/free-surface, retaining first-layer height,48layers and15.46mm total prism thickness.",
+    "M09/M08 actualfoil topology matches:856edges, layerhistogram, firstthickness andarea. Allthree have independently audited single-span topology."
+  ],
+  "unmatched_result": "M09/M07CD+1.0148458% fails; do notroundinto1%pass. Commonendpoint followup warranted.",
+  "caveats": [
+    "Pressure and viscous components must remain explicit even if totalcoefficientcriteria pass.",
+    "y+maxTEoutlier\u2248254(M09/M08) or220(M07),despitearea-p95\u22480.8;localizedresolutionlimitation.",
+    "CFL/API-substepreports alone do notestablish waveinterfaceaccuracy.",
+    "Wave horizontal domain and free-surface resolution are separate checks."
+  ],
+  "efficient_dt_check": "Reuse M09 matched1ms branch fromt1.640 to2.040. Onlynew0.5ms10innerSO branch fromsamecheckpointto2.040,800steps, finalwindow1.840\u20132.040;0.25% diagnosticscreen wellbelow1%meshtolerance.",
+  "evidence": [
+    "configured_mesh_results.json",
+    "configured_mesh_diagnostic_audit.json",
+    "configured_wall_yplus_audit.json",
+    "M09_build_result.json",
+    "../quasi2d_012_20261029/M09/topology_audit.json",
+    "../quasi2d_012_20261029/M08/topology_audit.json",
+    "../quasi2d_012_20261029/M07/topology_audit.json"
+  ]
+}

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\cfd_control.py", line 53, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\cfd_control.py", line 52, in main
+    q.main();return 0
+    ^^^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 373, in main
+    publish(st,cfg,metrics,rs)
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 193, in publish
+    atomic(H/'NIGHT_DASHBOARD.json',view)
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 19, in atomic
+    tmp=p.with_suffix(p.suffix+'.tmp');tmp.write_text(json.dumps(data,indent=2,ensure_ascii=False),encoding='utf8');os.replace(tmp,p)
+                                                                                                                    ^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\NIGHT_DASHBOARD.json.tmp' -> 'F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\NIGHT_DASHBOARD.json'

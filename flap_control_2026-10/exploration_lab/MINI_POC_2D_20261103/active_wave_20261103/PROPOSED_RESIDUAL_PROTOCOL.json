@@ -1,0 +1,14 @@
+{
+  "name": "L1_SEALED_EXPLORATION_NATIVE_NORMALIZED_V2",
+  "requires_native_audit": true,
+  "native_residual_limit": 0.01,
+  "requires_native_normalized_true": true,
+  "legacy_last_over_first_retained_as_diagnostic": true,
+  "justification": "Original gate divides already normalized residual by a small pre-pressure-correction first sample, making acceptance depend on initial velocity seed. Use the verified native normalization reference, not a second reference to that unrepresentative seed. Only activate after native flag and initial transient peak are confirmed. This is an explicit protocol revision, not retroactive PASS of old runs.",
+  "force_drift_limit": 0.005,
+  "force_range_limit": 0.01,
+  "mass_limit": 0.0001,
+  "pABS_limit_Pa": 12339.214766776897,
+  "mesh_and_turbulence_guards_unchanged": true,
+  "scope": "Exploration sealed baseline, not mesh validation or training acceptance"
+}

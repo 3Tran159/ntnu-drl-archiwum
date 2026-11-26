@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-30T12:44:38.716804+01:00",
+  "case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "current_time_s": 0.5810000000000004,
+  "period_s": 0.8472673206891129,
+  "phase_speed_m_s": 23.60530084381548,
+  "observed_near_inlet_crest": {
+    "gauge_x_m": -34,
+    "time_s": 0.25000000000000017,
+    "elevation_m": 0.2608496084734817,
+    "analytic_same_time_m": 0.2593512990484541
+  },
+  "timing": {
+    "available": true,
+    "median_s_per_step": 1.106137799999999,
+    "mean_s_per_step": 1.1214249259999998,
+    "p20_s_per_step": 1.0812055399999962,
+    "p80_s_per_step": 1.1766315199999553,
+    "samples": 50,
+    "raw_samples": 50,
+    "excluded_timing_outliers": 0,
+    "window_s": [
+      0.5310000000000004,
+      0.5810000000000004
+    ],
+    "source": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3\\history.csv",
+    "dt_s": 0.001
+  },
+  "estimated_targets": {
+    "crest_travel_from_minus34": {
+      "simulation_time_s": 1.6903544451714922,
+      "remaining_simulation_s": 1.1093544451714918,
+      "remaining_wall_minutes": 20.45164809003689,
+      "wall_range_minutes": [
+        19.990669532383983,
+        21.755023450680657
+      ]
+    },
+    "phase_travel_from_inlet_only": {
+      "simulation_time_s": 1.4827178112059476,
+      "remaining_simulation_s": 0.9017178112059472,
+      "remaining_wall_minutes": 16.62373593180268,
+      "wall_range_minutes": [
+        16.249038216542345,
+        17.683159980171443
+      ]
+    },
+    "phase_travel_from_generation_zone_end": {
+      "simulation_time_s": 0.6354504905168347,
+      "remaining_simulation_s": 0.05445049051683426,
+      "remaining_wall_minutes": 1.0038290964868644,
+      "wall_range_minutes": [
+        0.9812028667086409,
+        1.067802723692764
+      ]
+    }
+  },
+  "arrival_measured_at_foil": false,
+  "caveat": "Phase travel estimates only. Distributed inlet forcing overx[-35,-15] can create earlier disturbances. First coherent near-inlet crest trackedby single gauge thenextrapolated, not yet measured atfoil. No cycle-analysis origin assigned."
+}

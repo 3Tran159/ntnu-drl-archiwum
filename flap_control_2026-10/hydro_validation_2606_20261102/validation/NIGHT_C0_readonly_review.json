@@ -1,0 +1,102 @@
+{
+  "at": "2026-11-02T22:02:42.451457+01:00",
+  "source_result": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_init_20261102_202530\\steady_init_20261102_203046\\urans_from_steady_20261102_203650\\stabilize_20261102_203650",
+  "checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_init_20261102_202530\\steady_init_20261102_203046\\urans_from_steady_20261102_203650\\stabilize_20261102_203650\\checkpoint.sim",
+  "time_s": 0.3004,
+  "dt_s": 0.002,
+  "windows": {
+    "CL_hydro": [
+      {
+        "end_step": 100,
+        "mean": 0.375336600913,
+        "relative_mean_change": 8.465129316640193e-05,
+        "relative_range": 0.00010690043257811997
+      },
+      {
+        "end_step": 125,
+        "mean": 0.37535029107644,
+        "relative_mean_change": 3.647303269910591e-05,
+        "relative_range": 0.0001265323888887801
+      },
+      {
+        "end_step": 150,
+        "mean": 0.37536624743796,
+        "relative_mean_change": 4.2508780767779375e-05,
+        "relative_range": 0.00010643706053147577
+      }
+    ],
+    "CD": [
+      {
+        "end_step": 100,
+        "mean": 0.0064792082418996,
+        "relative_mean_change": 0.000253352976646846,
+        "relative_range": 0.0008117011621868053
+      },
+      {
+        "end_step": 125,
+        "mean": 0.006478627735073199,
+        "relative_mean_change": 8.960336202966386e-05,
+        "relative_range": 0.0006453436716799604
+      },
+      {
+        "end_step": 150,
+        "mean": 0.006478086621444801,
+        "relative_mean_change": 8.352985380078312e-05,
+        "relative_range": 0.0008622216475941958
+      }
+    ],
+    "Mh_Nm": [
+      {
+        "end_step": 100,
+        "mean": -11.366354595388,
+        "relative_mean_change": 7.172240854862068e-05,
+        "relative_range": 0.00019434101597516352
+      },
+      {
+        "end_step": 125,
+        "mean": -11.366279984964,
+        "relative_mean_change": 6.564190227385936e-06,
+        "relative_range": 0.00016509717361195154
+      },
+      {
+        "end_step": 150,
+        "mean": -11.36638913658,
+        "relative_mean_change": 9.603015934815519e-06,
+        "relative_range": 0.00012517284802613315
+      }
+    ]
+  },
+  "mass_max_last_75": 3.283328831390396e-05,
+  "pabs_min_all_Pa": 19985.1447245,
+  "CL_mean": 0.37536624743796,
+  "CD_mean": 0.006478086621444801,
+  "Mh_mean_Nm": -11.36638913658,
+  "own_boundary_deviation": [
+    {
+      "region": "Background",
+      "samples": 547,
+      "max_penetration_native_polygon_m": 7.087005029161548e-05,
+      "median_m": 7.401415937272941e-06,
+      "worst_xyz": {
+        "X (m)": 0.0043132604305811,
+        "Y (m)": 0.02,
+        "Z (m)": -0.006626291152468
+      },
+      "interpretation": "Own-wall discretization versus original polygon, not cross-body Overset intrusion; mesh boundary must be considered."
+    },
+    {
+      "region": "FlapOverset",
+      "samples": 7,
+      "max_penetration_native_polygon_m": 3.299500296680786e-06,
+      "median_m": 2.0709303264334577e-06,
+      "worst_xyz": {
+        "X (m)": 1.0259994120331333,
+        "Y (m)": 0.02,
+        "Z (m)": 0.0377949104306609
+      },
+      "interpretation": "Own-wall discretization versus original polygon, not cross-body Overset intrusion; mesh boundary must be considered."
+    }
+  ],
+  "full_overset_audit_pending": true,
+  "training_approved": false
+}

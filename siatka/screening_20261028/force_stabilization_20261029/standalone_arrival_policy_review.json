@@ -1,0 +1,90 @@
+{
+  "updated_at": "2026-10-30T13:20:02.625531+01:00",
+  "status": "proposed_conservative_operational_arrival_exclusion_not_accuracy_admission",
+  "scope": "New autonomous recipe: first obtain a matched settled C01 checkpoint, then activate constant full-height inlet/upstream-forcing FifthOrder waves with no ramp and no global wave initialization. This review performs no solver action.",
+  "evidence_read": {
+    "macro": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/W01aInletWaveR1.java",
+    "repeatability_helper": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_cycle_repeatability.py",
+    "historical_fullheight_attempt": "E:/ntnu/quasi2d_waves_20261029/W01a_W20L4_M10_inlet_fullheight_restart_r3",
+    "historical_status": "stopped_by_marker at1.605999999999934s; activation0, native period0.8472673206891129s, no ramp. This was not the new matched-settled-calm recipe.",
+    "historical_gauges": "gauges.csv has1600rows to1.5999999999999346s at10stations includingx2.5; nox\u22121 station. At1.6s x2.5 actual0.1117019931m versus analytic0.01228103035m. These instantaneous values do not establish arrival/height/phase convergence.",
+    "interpretation": "Do not reuse an absolute-time0 force-cycle count to admit the newly activated wave. No complete qualifying three-cycle near-foil sequence can be demonstrated by this1.6s historical history."
+  },
+  "prerequisites": {
+    "source": "Matched settled C01 checkpoint of exactly the wave mesh/domain/BC/numerical settings; preserve source SHA and actual time. This is separate from post-wave repeatability.",
+    "activation": "Record actual absolute CFD activation time, full targetH, wavelength, inletplane, forcingzone, gaugecoordinates and no-ramp/no-reinitialize lineage.",
+    "period": "Use native evaluated full-height wave period only after at least3consecutive finite runtime records with H at target and relative period variation\u22641e\u22126. Freeze that period for cycle bins. Do not infer period from flat calm gauges, and do not use cached0/NaN at load.",
+    "gauges": "Precreate actual/reference full-depth planes x=-1m and+2.5m. Verify planes do not intersect foil and area equals30m\u00d70.02m. Both must be outside forcing/damping. Use same-station analytic references; retain raw absolute CFD times.",
+    "direction": "Arrival policy assumes verified+x propagation/current and actual geometry. It does not substitute for head-wave direction/phase/reflection validation."
+  },
+  "policy": {
+    "sampling": "Require finite paired actual/analytic samples at both stations, actual sample spacing\u2264min(0.02s,T/64), no gap>1.5\u00d7the configured sample interval, and full coverage of each cycle endpoint. Interpolate256points for comparison, while reporting real source sample counts; interpolation does not create resolution.",
+    "cycle_bins": "After period freeze, define complete candidate cycles [activation+kT,activation+(k+1)T]. Reject incomplete first/last cycles. Do not rephase a cycle to improve a comparison.",
+    "conservative_time_floor": "Let c_safe=min(abs(U),lambda/T), only for the verified positive-current positive-wave-direction case. Exclude candidate cycles whose start<activation+(x_downstream_gauge\u2212x_inlet)/c_safe+T. This is a deliberate conservative time exclusion, not a model or proof of wave-envelope arrival.",
+    "W01_example": {
+      "inlet_x_m": -35,
+      "downstream_gauge_x_m": 2.5,
+      "U_m_s": 18,
+      "wavelength_m": 20,
+      "T_s": 0.8472673206891129,
+      "c_safe_m_s": 18,
+      "minimum_candidate_start_after_activation_s": 2.9306006540224465
+    },
+    "per_cycle_features": "At each station and each complete cycle, compute mean eta, fundamental coefficients a=2/N \u03a3(eta\u2212mean)cos(2\u03c0j/N), b=2/N \u03a3(eta\u2212mean)sin(2\u03c0j/N), A1=hypot(a,b), phase=atan2(b,a), and residual waveform after subtracting mean. Compute the analytic A1 on the same samples/plane.",
+    "signal_gate": "At BOTH stations, require finite positive analytic A1 and actual A1\u2265max(0.5\u00d7analytic A1,0.10\u00d7H_target). Require the fundamental fit to explain\u226570% of de-meaned actual variance. This establishes non-flat coherent wave signal only; half-reference amplitude is not wave-height acceptance.",
+    "period_gate": "Independently fit a sinusoidal frequency over the concatenated3candidate cycles; require fittedT within5% of frozen nativeT. A small fixed grid over0.85..1.15nativefrequency, refined around its optimum, is adequate; report boundary optima as failure. No phase alignment is permitted in waveform comparisons.",
+    "three_cycle_gate": "Require3consecutive complete cycles satisfying all signal/period conditions at BOTH stations, then compare all3pair combinations at each station with the formulas below.",
+    "amplitude_pair": "100*abs(Ai\u2212Aj)/max((Ai+Aj)/2,0.10*H_target)\u22645%.",
+    "mean_pair": "abs(mean_i\u2212mean_j)\u22640.02*H_target.",
+    "waveform_pair": "100*RMS((eta_i\u2212mean_i)\u2212(eta_j\u2212mean_j))/max((Ai+Aj)/2,0.10*H_target)\u226410%. Samples share fixed phase bins; do not phase-shift them.",
+    "phase_pair": "abs(wrap_to_180(phase_i\u2212phase_j))\u22645degrees.",
+    "accept_arrival": "On first pass, freeze analysis_origin_s at END of the THIRD qualifying cycle. Preserve excluded interval and qualifying cycle IDs/metrics. Do not count these startup-confirmation cycles as the4force-repeatability cycles.",
+    "force_screen": "Only subsequent complete cycles can enter the existing last4force-cycle all-pair screen: mean0.5%,amplitude2%,waveformRMS3%,phase2degrees with existing floors and no phase alignment. Four consecutive complete qualifying force cycles suffice;10is indicative, not a minimum.",
+    "ongoing": "Continue gauge checks. If wave signal/period/stability subsequently fails, withhold current repeatability admission and flag for review; do not silently slide origin forward or erase failures.",
+    "hard_cap": "Regardless of pending arrival, reach diagnostic review/stop at activation+20*T if the combined startup+force screen has not passed. Do not let a missing analysis_origin create an infinite loop. Report cycles since activation and since confirmed arrival separately.",
+    "meaning": "Arrival exclusion is operational and intentionally conservative. It is not amplitude accuracy, mesh/time independence, reflection validation, settled-cycle force accuracy or automatic final admission."
+  },
+  "fail_closed": [
+    "Missing/nonfinite gauges, native period, activation metadata, or target-height record.",
+    "Gauge plane intersects foil, incorrect area, forcing/damping overlap, or source identity mismatch.",
+    "Insufficient temporal sampling or an uncovered cycle interval.",
+    "Flat near-foil forces while gauges remain calm/prearrival.",
+    "20cycles reached without established arrival/force-repeatability.",
+    "Any existing physical/resource/time/source guard or unchanged0.01%inlet mass review condition requires its existing handling; no criterion is weakened here."
+  ],
+  "overhead": {
+    "solver": "Precreate and reuse the two actual and two analytic surface reports. Do not create reports, planes, scenes or full-field exports on each sample. Retain existing per-step physical/budget guards.",
+    "gauge_cadence": "ForSO1ms,10-step gauge sampling is adequate forW01L20 and longer waves. ForL10 reduce to at most floor((T/64)/dt), typically\u22487steps; choose5steps for a simple safe cadence. Use actual runtimeT. Do not retain all10oldgaugeplanes at the same high cadence if only2are needed for arrival; retain additional validation gauges at a separate justified cadence.",
+    "controller": "Read gauge/force history for dashboard freshness every20\u201330wallseconds or incrementally; recompute cycle features only when a NEW complete cycle exists. Cache completed-cycle features and never repeatedly parse full histories for each dashboard widget.",
+    "figures": "Update field images only on saved exports/checkpoints. Gauge arrival gating must not trigger expensive mesh/scene extraction.",
+    "cost_evidence": "Record solver/report/output wall timings separately before attributing low GPU utilization to gauge reports; utilization alone is not a bottleneck diagnosis."
+  },
+  "open_limits": [
+    "Thresholds are explicit engineering heuristics for startup exclusion; no claim that these particular percentages are a Siemens validation standard.",
+    "Strong physical wave/foil scattering can make the two-station gate conservative and require human scientific review; do not auto-relax it.",
+    "The time floor uses mean-current-based conservative delay only after direction verification. For a different current/wave direction, the policy needs a different documented floor.",
+    "A near-foil pair cannot establish far-field reflection independence. Original reflection/domain/grid/time gates remain separate."
+  ],
+  "implementation": {
+    "module": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\local_wave_arrival.py",
+    "tests": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\test_local_wave_arrival.py",
+    "stdlib_only": true,
+    "solver_actions": false,
+    "tests_run": 17,
+    "tests_passed": 17,
+    "test_wall_seconds": 0.559,
+    "module_sha256": "e248d3b7886e0c026ef8426d3e996baeca90e7f98dbd40398aaf0357fd8fef1d",
+    "tests_sha256": "bf088e61221ad07816296aef6d894af147291e6c2b0aa2acbac33c58a33617f2",
+    "historical_R3_readonly_check": {
+      "established": false,
+      "reason": "Required near-foil station missing"
+    },
+    "caller_responsibilities": [
+      "Verify supplied period is native full-height and frozen",
+      "Persist earliest established origin in manifest",
+      "Enforce20T activation cap and all physical/mass guards",
+      "Only call force evaluator with persisted origin",
+      "This module only establishes arrival; ongoing wave validation remains separate"
+    ]
+  }
+}

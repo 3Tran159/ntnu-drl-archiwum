@@ -1,0 +1,42 @@
+{
+  "status": "PASS_FIXED_STABILIZATION",
+  "samples": 0,
+  "startup_s": 121.83264869999766,
+  "solver_step_median_s": null,
+  "solver_step_mean_s": null,
+  "end_to_end_s": 272.3390244000002,
+  "dt_s": 0.00025,
+  "checkpoint_sha256_input": "24991964f0ef75aba06b862b505e0c15897ff6cfe61cda0ff58c503c0e2ebeeb",
+  "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\MATCHED_FIXED_SHARP_SEALED_TWO_P_EXTEND_20261104_161048\\FINAL.sim",
+  "checkpoint_sha256": "f509fe6f7d70b61b9d53177ce7d4cd1cb2cc1b2fc11b23fcc57fae136a06e527",
+  "state": {
+    "time_s": 1.0499999999999343,
+    "status": "PASS_FIXED_STABILIZATION",
+    "steps": 0,
+    "U_m_s": 18.0
+  },
+  "transport_ok": true,
+  "training_approved": false,
+  "fixed": {
+    "CD_mean": 0.005624098869416663,
+    "step": 4200,
+    "time_s": 1.0499999999999343,
+    "CL_drift_fraction": 0.0010719242456698015,
+    "CD_drift_fraction": 0.0029601619555404556,
+    "CL_range_fraction": 0.0013745837631610105,
+    "CD_range_fraction": 0.00800548973889846,
+    "status": "PASS_FIXED_STABILIZATION",
+    "CL_mean": 0.34583545134065197,
+    "window_s": 0.05
+  },
+  "W06": {
+    "baseline_s": 1.777749,
+    "peak": 0.1592530779091601,
+    "stop": null,
+    "slowdown_gate_enabled": false
+  },
+  "cpu_indices": [
+    12,
+    22
+  ]
+}

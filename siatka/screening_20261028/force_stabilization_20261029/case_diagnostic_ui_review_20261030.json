@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "scope": "Errors and diagnostics shared panel, read-only UI integration. No CFD, lock or controller actions.",
+  "sources_changed": [
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/case_diagnostic_panel.py",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/build_manual_dashboard_copy.py"
+  ],
+  "published_views": [
+    "F:/ntnu/mesh_screening_20261028/dashboard.html",
+    "F:/ntnu/mesh_screening_20261028/professor_dashboard.html"
+  ],
+  "evidence": {
+    "failed_case": "C01_W20L4_M10_calm_settle_r2",
+    "saved_time_s": 2.777,
+    "speed_m_s": 50.162137451766554,
+    "guard_m_s": 50,
+    "phase": "air",
+    "x_m": 23.658680752114,
+    "z_m": 2.018934666535,
+    "mass_peak_pct_inlet": 0.025137315794628603,
+    "mass_criterion_pct": 0.01,
+    "mass_not_stop_trigger": true,
+    "diagnostic_not_accepted_calm": true,
+    "probe_case": "LOCAL_C01_dt05ms_probe_r3",
+    "probe_status_at_capture": "Prepared - not launched",
+    "probe_live_state_dynamic": true,
+    "probe_result_requires_case_match": true
+  },
+  "qa": {
+    "widths_px": [
+      1920,
+      1360,
+      390
+    ],
+    "surfaces": 2,
+    "js_errors": 0,
+    "page_overflow": 0,
+    "text_containment_violations": 0,
+    "expected_evidence_all_six": true,
+    "non_get_requests": 0,
+    "action_clicks": 0,
+    "mocked_state_tests_passed": 5,
+    "print": [
+      {
+        "surface": "operational",
+        "page": 6,
+        "total_pdf_pages": 47
+      },
+      {
+        "surface": "professor",
+        "page": 5,
+        "total_pdf_pages": 26
+      }
+    ],
+    "both_cards_fit_one_print_page": true,
+    "visually_inspected": [
+      "operational_1360_diagnostics.png",
+      "operational_390_probe.png",
+      "professor_print_diagnostics_page_5.png"
+    ]
+  },
+  "artifacts": {
+    "directory": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/case_diagnostic_ui_qa_20261030",
+    "browser": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/case_diagnostic_ui_qa_20261030/browser_review.json",
+    "print_and_state_tests": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/case_diagnostic_ui_qa_20261030/print_and_state_tests.json"
+  },
+  "limits": "Reports remain case-matched and diagnostic-only. Actual runtime state can advance after screenshots. Result details are shown only from a matching future probe-review record; no success or acceptance is inferred from reaching the endpoint."
+}

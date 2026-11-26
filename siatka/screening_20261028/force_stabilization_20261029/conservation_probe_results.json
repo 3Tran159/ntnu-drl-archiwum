@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "id": "Cmass_SO1ms_inner20_r1",
+      "steps": 40,
+      "start_s": 2.241999999999864,
+      "end_s": 2.2819999999998597,
+      "mass_change_kg": 0.29413648262561765,
+      "net_outward_flux_integral_trapezoid_kg": -0.2941305415644475,
+      "trapezoid_budget_residual_kg": 5.941061170133821e-06,
+      "backward_euler_budget_pct_of_inlet": {
+        "median_signed_pct": -3.249648285730897e-05,
+        "max_abs_pct": 0.0004332571184470067
+      },
+      "BDF2_budget_pct_of_inlet": {
+        "median_signed_pct": -8.225823888673029e-07,
+        "max_abs_pct": 1.977960566957892e-06
+      },
+      "interpretation": "Diagnostic residuals include accumulation. Confirm actual VOF/mixture time formulation; no automatic configuration or mesh acceptance."
+    },
+    {
+      "id": "Cmass_SO1ms_inner10_r1",
+      "steps": 40,
+      "start_s": 2.241999999999864,
+      "end_s": 2.2819999999998597,
+      "mass_change_kg": 0.29414798016659915,
+      "net_outward_flux_integral_trapezoid_kg": -0.29414838855268766,
+      "trapezoid_budget_residual_kg": -4.083860885017998e-07,
+      "backward_euler_budget_pct_of_inlet": {
+        "median_signed_pct": -3.430524128139572e-05,
+        "max_abs_pct": 0.00043648482614413564
+      },
+      "BDF2_budget_pct_of_inlet": {
+        "median_signed_pct": -3.3719697089348185e-06,
+        "max_abs_pct": 5.69408453984949e-06
+      },
+      "interpretation": "Diagnostic residuals include accumulation. Confirm actual VOF/mixture time formulation; no automatic configuration or mesh acceptance."
+    }
+  ],
+  "updated_at": "2026-10-29T21:49:51.710428+01:00"
+}

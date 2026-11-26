@@ -1,0 +1,45 @@
+{
+  "checked": "2026-11-02",
+  "purpose": "Methodological references; no experimental validation claim and no new benchmark campaign yet",
+  "references": [
+    {
+      "author": "Wilson",
+      "year": 1982,
+      "url": "https://foils.org/wp-content/uploads/2017/12/Experimental-Performance-of-a-Flapped-Hydrofoil-In-Calm-Water-at-Low-Froude-Numbers-71243.pdf",
+      "verified": "Original report DTNSRDC-82/002, 102 PDF pages",
+      "applicability": "NACA 64 A010, rectangular wing AR=6, 25%-chord plain flap. Chord Froude 1.22–4.23 and h/c 0.25–4.0. Useful for increments and depth-dependent flap effectiveness; requires a separate finite-span geometry to compare absolute coefficients."
+    },
+    {
+      "author": "Pernod et al.",
+      "year": 2023,
+      "url": "https://sam.ensam.eu/handle/10985/23321",
+      "doi": "10.5957/jst/2023.8.2.24",
+      "verified": "Author institutional repository abstract",
+      "applicability": "NACA0012 at 5 degrees, Re=159000, Fr=0.571, URANS/VOF. Supports explicit depth sensitivity and a singlephase/VOF bridge. Its h/c observations do not establish a universal clearance limit for this foil at Re=2.142e7."
+    },
+    {
+      "author": "Mohammed Arab et al.",
+      "year": 2022,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S014111872200219X",
+      "doi": "10.1016/j.apor.2022.103285",
+      "verified": "Publisher abstract and methods excerpts; institutional manuscript search excerpt",
+      "applicability": "NACA0012 flap experiments at Re=1e6 and 6.67 m/s. Useful pressure-based inception criterion and flap-dependent operating envelope. Not a direct absolute-coefficient benchmark for the native NACA66-012 modified. Repository metadata and manuscript excerpts differ on cavitation-bucket trend; no blanket claim that deflection increases safety."
+    },
+    {
+      "author": "Conolly",
+      "year": 1963,
+      "url": "https://citeseerx.ist.psu.edu/document?doi=d2f34ce50c62934c64ca9774014268278c8a8d19&repid=rep1&type=pdf",
+      "verified": "Report title/year found; full-text retrieval failed",
+      "report": "GDC-63-032 / AD409551",
+      "applicability": "Potential future unsteady subcavitating benchmark. No formula or quantitative acceptance criterion adopted without reading the original assumptions."
+    },
+    {
+      "author": "Portal-Porras et al.",
+      "year": 2023,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0029801823021595",
+      "doi": "10.1016/j.oceaneng.2023.115775",
+      "verified": "Publisher abstract and open manuscript",
+      "applicability": "Rotating flap on NACA0012; CFD then ANN and RL. Methodological prior work, not hydrodynamic/cavitation validation. DRL and surrogate construction remain out of scope."
+    }
+  ]
+}

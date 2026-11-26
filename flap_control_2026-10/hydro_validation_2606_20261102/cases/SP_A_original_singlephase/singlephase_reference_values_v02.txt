@@ -1,0 +1,27 @@
+region_physics=HYDRO water SST singlephase
+star.flow.ReferencePressure 101325.0 101325.0 
+star.flow.MinimumAllowableAbsolutePressure 1000.0 1000.0 
+star.flow.MaximumAllowableAbsolutePressure 1.0E8 1.0E8 
+star.flow.ReferenceAltitude [0.0, 0.0, 2.0]  [0.0, 0.0, 2.0]
+star.flow.Gravity [0.0, 0.0, -9.8100004196167]  [0.0, 0.0, -9.8100004196167]
+star.walldistance.MinimumAllowableWallDistance 1.0E-6 1.0E-6 
+star.metrics.ThreeDimensionalModel
+star.common.ImplicitUnsteadyModel
+star.material.SingleComponentLiquidModel
+star.segregatedflow.SegregatedFlowModel
+star.metrics.GradientsModel
+star.flow.ConstantDensityModel
+star.turbulence.TurbulentModel
+star.turbulence.RansTurbulenceModel
+star.kwturb.KOmegaTurbulence
+star.kwturb.SstKwTurbModel
+star.walldistance.WallDistanceModel
+star.kwturb.KwAllYplusWallTreatment
+star.flow.GravityModel
+star.metrics.CellQualityRemediationModel
+Pressure min=-67001.10498376872 max=236800.86456859487
+StaticPressure min=-48316.58805444283 max=471918.71147129306
+AbsolutePressure min=53008.41194555717 max=573243.7114712931
+Density min=1.2 max=1000.0
+HYDRO_HydrostaticGauge min=-58578.58354107881 max=235157.90598093224
+pabs_identity_error=58508.289240829516

@@ -1,0 +1,131 @@
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:44: warning: [deprecation] getWavePeriod() in star.vof.FifthOrderVofWave has been deprecated
+ double nativePeriod(){return wave==null?0:wave.getWavePeriod().getSIValue();}
+                                               ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:68: warning: [deprecation] setAngleFactor(double) in star.vof.SegregatedVofModel has been deprecated
+  pc.getModelManager().getModel(SegregatedVolumeFluxBasedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SegregatedVofModel.class).setAngleFactor(.15);
+                                                                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:167: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                                                        ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:167: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                  ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:168: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                                                        ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:168: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                  ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:179: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                 ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:179: warning: [deprecation] setUrf(double) in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:181: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);if(b("fresh")){useSeededInitialFlow();s.getSolution().initializeSolution();}double nativePeriod=nativePeriod();if(Double.isFinite(nativePeriod)&&nativePeriod>.40&&nativePeriod<.52){T=nativePeriod;W=2*Math.PI/T;}write("STOKES_READBACK.json",Map.of("wave_type",wave==null?"FlatVofWave":"FifthOrderVofWave","native_period_s",nativePeriod,"period_planning_s",wave==null?0:T,"height_m",waveHeight(),"depth_m",sy+10,"wavelength_m",wave==null?0:wave.getVofWaveSpecification().getWaveLength().getSIValue(),"advancing_direction","+X","current_m_s",18,"global_initialization",b("fresh")&&oldAmp>0));
+                                         ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:182: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  Map<String,Object>a=new LinkedHashMap<>();a.put("stage",cfg.getProperty("stage"));a.put("clean_unforced_calm",b("clean_calm"));a.put("cells",nc);a.put("start_time",start);a.put("dt",dt);a.put("inner",inner);a.put("initialization_called",b("fresh"));a.put("calm_speed_ramp_s",d("calm_speed_ramp_s",0));a.put("explicit_ambient_k_omega",b("calm_explicit_ambient"));a.put("initial_calm_current_m_s",d("calm_speed_ramp_s",0)>0?.05:18);a.put("reset_on_loaded_fields",false);a.put("old_pressure_urf",oldUrf);a.put("pressure_urf",ps.getUrf());a.put("old_pressure_tol",oldTol);a.put("pressure_tol",ps.getAMGLinearSolver().getConvergeTol());a.put("amplitude_from",oldAmp);a.put("amplitude_target",amp);a.put("amplitude_ramp_s",ramp);a.put("initial_field",oldAmp==0?"flat water and air":"native Stokes V");a.put("inlet_ramp",ramp>0?"S5, zero endpoint first/second derivative":"Existing globally initialized wave; no velocity/amplitude jump");a.put("forcing_length_m",d("forcing_length",4));a.put("damping_length_m",d("damping_length",8));a.put("outlet_and_top","native flat-wave pressure and volume fraction");a.put("vorticity_limiter",pc.getModelManager().getModel(SstKwTurbModel.class).getKwTurbRealizabilityOption().getSelectedElement().toString());a.put("all_yplus",pc.getModelManager().hasModel(KwAllYplusWallTreatment.class)!=null);a.put("sst",pc.getModelManager().hasModel(SstKwTurbModel.class)!=null);a.put("reference_C01_CL",.3156595);a.put("reference_C01_CD",.00700232);a.put("C01_not_modified",true);write("SETUP_READBACK.json",a);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:196: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  if(foil){for(ForceReportForceOption.Type type:List.of(ForceReportForceOption.Type.PRESSURE,ForceReportForceOption.Type.SHEAR)){ForceReport f=s.getReportManager().createReport(ForceReport.class);f.getForceOption().setSelected(type);f.getDirection().setComponents(1,0,0);f.setPressureOption(FluidLoadsReportPressureOption.SP_UC);f.getParts().setObjects(walls);rep.put(type==ForceReportForceOption.Type.PRESSURE?"FxPressure":"FxShear",f);}wallTable=s.getTableManager().createTable(XyzInternalTable.class);wallTable.setPresentationName("CB_Wall_Cp_yplus");wallTable.getParts().setObjects(walls);wallTable.setFieldFunctions(List.of(ff("WallYplus"),ff("Pressure"),ff("AbsolutePressure")));}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:197: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  fields=s.getTableManager().createTable(XyzInternalTable.class);fields.setPresentationName("NIGHT_FIELDS");fields.getParts().setObjects(reg);fields.setFieldFunctions(List.of(alpha,ff("AbsolutePressure"),ff("Pressure"),ff("Velocity").getComponentFunction(0),ff("Velocity").getComponentFunction(1),ff("Velocity").getComponentFunction(2),ff("TurbulentKineticEnergy"),ff("SpecificDissipationRate"),ff("TurbulentViscosityRatio"),co,ff("CellQuality"),ff("Volume")));
+                            ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:255: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  vertices=s.getTableManager().createTable(XyzInternalTable.class);
+                              ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:332: warning: [deprecation] setUrf(double) in star.segregatedflow.VelocitySolver has been deprecated
+  flow.getVelocitySolver().setUrf(.3);
+                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:333: warning: [deprecation] setUrf(double) in star.segregatedflow.PressureSolver has been deprecated
+  flow.getPressureSolver().setUrf(.05);
+                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:374: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    table=s.getTableManager().createTable(XyzInternalTable.class);
+                             ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\MiniVofStokes.java:533: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                         ^
+
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+
+
+Importing F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/mini_vof_20261103/COMEBACK_20261104/WALL_FUNCTIONS_AUDIT/ACTIVE_GAP25_PRISM_20261104/mesh_2d.msh
+Loading module: CaeIOCgns
+Reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\WALL_FUNCTIONS_AUDIT\ACTIVE_GAP25_PRISM_20261104\mesh_2d.msh...
+Importing cells
+Cell type: mixed
+   Name: cell-1
+   Number of cells: 9638
+   Zone type: fluid
+   Zone 2 type interior, name interior
+   Zone 3 type wall, name main
+   Zone 4 type wall, name flap
+   Zone 5 type velocity-inlet, name inlet
+   Zone 6 type pressure-outlet, name outlet
+   Zone 7 type symmetry, name farfield
+   Zone 1 type fluid, name MINI_water
+Importing faces
+Group: interior-2
+   Number of faces: 15329
+   Topology: linear
+   Type: 2
+Importing faces
+Group: wall-3
+   Number of faces: 556
+   Topology: linear
+   Type: 3
+Importing faces
+Group: wall-4
+   Number of faces: 370
+   Topology: linear
+   Type: 3
+Importing faces
+Group: velocity-inlet-5
+   Number of faces: 24
+   Topology: linear
+   Type: 10
+Importing faces
+Group: pressure-outlet-6
+   Number of faces: 24
+   Topology: linear
+   Type: 5
+Importing faces
+Group: symmetry-7
+   Number of faces: 72
+   Topology: linear
+   Type: 7
+
+Partitioning region MINI_water (9638 cells, 1 partitions)
+Partitioning complete
+Importing nodes
+Dimension: 2
+   Number of nodes: 6736
+   Zone id: 1
+Processing mesh
+Finished reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\WALL_FUNCTIONS_AUDIT\ACTIVE_GAP25_PRISM_20261104\mesh_2d.msh
+Reordering
+Finished importing
+Imported coordinate extents (m)
+X extents: [-5.95, 11.9]
+   Y extents: [-5.95, 5.95]
+   Z extents: [0.0, 0.0]
+
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00 
+             2   4.575192e-01   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00 
+             3   4.301979e-01   7.831115e-01   7.535331e-01   9.072289e-01   1.000000e+00 
+             4   3.959301e-01   6.703552e-01   6.542915e-01   5.420317e-01   7.594610e-01 
+             5   3.945164e-01   6.036219e-01   6.126801e-01   2.648070e-01   5.840949e-01 
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_BASELINE_20261104_123101\FINAL.sim... complete (2.9197MB in 0.051245s).

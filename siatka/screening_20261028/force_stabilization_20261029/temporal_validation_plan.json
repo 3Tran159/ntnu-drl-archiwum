@@ -1,0 +1,61 @@
+{
+  "created_from": "M04 accepted checkpoint, identical source for all branches",
+  "priority": "Only after M08 has settled and GPU campaign lock is released",
+  "jobs": [
+    {
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r2\\final.sim",
+      "start": 1.64199999999993,
+      "cells": 138468,
+      "initialize": false,
+      "inner": 20,
+      "target": 2.24199999999993,
+      "wall_budget_s": 7200,
+      "purpose": "Matched 0.6 s continuation; compare last0.2s after0.4s adjustment",
+      "id": "T01_M04_FO_dt1ms_r1",
+      "dt": 0.001,
+      "order": "FIRST_ORDER"
+    },
+    {
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r2\\final.sim",
+      "start": 1.64199999999993,
+      "cells": 138468,
+      "initialize": false,
+      "inner": 20,
+      "target": 2.24199999999993,
+      "wall_budget_s": 7200,
+      "purpose": "Matched 0.6 s continuation; compare last0.2s after0.4s adjustment",
+      "id": "T02_M04_SO_dt1ms_r1",
+      "dt": 0.001,
+      "order": "SECOND_ORDER"
+    },
+    {
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r2\\final.sim",
+      "start": 1.64199999999993,
+      "cells": 138468,
+      "initialize": false,
+      "inner": 20,
+      "target": 2.24199999999993,
+      "wall_budget_s": 7200,
+      "purpose": "Matched 0.6 s continuation; compare last0.2s after0.4s adjustment",
+      "id": "T03_M04_SO_dt05ms_r1",
+      "dt": 0.0005,
+      "order": "SECOND_ORDER"
+    },
+    {
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r2\\final.sim",
+      "start": 1.64199999999993,
+      "cells": 138468,
+      "initialize": false,
+      "inner": 10,
+      "target": 2.24199999999993,
+      "wall_budget_s": 7200,
+      "purpose": "Matched iteration-count efficiency screen versusT02: same M04 source,second-order,dt1ms,timeinterval; only inner limit20to10 changes.",
+      "id": "T04_M04_SO_dt1ms_inner10_r1",
+      "dt": 0.001,
+      "order": "SECOND_ORDER"
+    }
+  ],
+  "comparison": "FO1ms versus SO1ms isolates temporal order; SO1ms versus SO0.5ms screens time-step sensitivity. Same physical interval, fields and inner-iteration limit. All guards retained. Check actual inner convergence and adjacent-window drift before interpreting differences. This three-case screen alone is not full temporal convergence or a substitute for final-mesh validation.",
+  "acceptance": "No automatic mesh/time validation from these tests. Report CL,CD,pressure/viscous Fx,changes,drift,CFL/substeps and cost; if drift exceeds0.5%, extend matched branches before drawing accuracy conclusions.",
+  "performance_comparison": "T04 versusT02 isolates10versus20inneriterations. Compare CL/CD,pressure/viscous Fx,adjacentdrift,residualsandmass conservation,actualwalltime. No automatic production adoption; retain finalmeshwavechecks."
+}

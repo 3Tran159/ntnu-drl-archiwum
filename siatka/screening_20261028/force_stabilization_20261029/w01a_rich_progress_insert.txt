@@ -1,0 +1,31 @@
+def _calm_stage_progress(state,folder,t,points,active):
+ startup=_read(folder/'startup_acceptance.json')
+ startup_done=startup.get('status')=='guarded_startup_completed'
+ startup_steps=min(40,max(0,int(round((t or 0)/.0005)))) if not startup_done else 40
+ first_assessment=max(.42,(points[0][0]+.4) if points else .42)
+ cap=_n(state.get('manual_request',{}).get('target_s')) or 6.
+ check=_read(folder/'calm_settling.json')
+ stages=['Calm startup','Calm settling','Inlet wave ramp','Repeating cycles']
+ current=1 if startup_done else 0
+ s='<style>.wcp-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:18px 0}.wcp-stage{padding:10px;border:1px solid #ccd9e1;background:#f3f7f9;font-size:13px}.wcp-stage.current{border-color:#0072b2;background:#e7f3fa;font-weight:bold}.wcp-stage.future{color:#71828b}.wcp-stage small{display:block;font-weight:normal;font-size:11px}.wcp-stage-meters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.wcp-stage-meter{border:1px solid #dbe4ea;padding:14px;min-width:0}.wcp-stage-meter h3{margin:0 0 10px}.wcp-planned{opacity:.64;border:1px dashed #a7bac5;padding:14px;margin-top:15px}.wcp-planned .wcp-progress>span{background:#a7bac5}.wcp-calm-criteria{display:flex;flex-wrap:wrap;gap:12px}.wcp-calm-criteria>span{padding:10px;background:#f3f7f9;flex:1;min-width:120px}@media(max-width:700px){.wcp-stages{grid-template-columns:repeat(2,minmax(0,1fr))}.wcp-stage-meters{grid-template-columns:1fr}}@media print{.wcp-stages,.wcp-stage-meters,.wcp-planned{break-inside:avoid}}</style>'
+ s+='<div class="wcp-stages" aria-label="Calculation stages">'
+ for i,label in enumerate(stages):
+  stage='current' if i==current else 'future' if i>current else 'done'
+  small='Active' if i==current and active else 'Current stage' if i==current else 'Complete' if i<current else 'Planned'
+  s+='<div class="wcp-stage '+stage+'">'+str(i+1)+'. '+label+'<small>'+small+'</small></div>'
+ s+='</div><div class="wcp-stage-meters">'
+ fill=min(100,100*startup_steps/40)
+ s+='<div class="wcp-stage-meter"><h3>Guarded calm startup</h3><div class="wcp-progress"><span style="width:'+str(fill)+'%"></span></div><div class="wcp-progress-labels"><span>'+str(startup_steps)+' / 40 half-millisecond steps</span><span>0.020 s</span></div><p class="wcp-meta">'+('Completed checkpoint recorded.' if startup_done else 'Startup ETA unavailable: the saved startup record does not contain measured per-step wall timing.')+'</p></div>'
+ fill=min(100,100*max(0,(t or 0)-.02)/.4)
+ s+='<div class="wcp-stage-meter"><h3>Calm force settling</h3><div class="wcp-progress"><span style="width:'+str(fill)+'%"></span></div><div class="wcp-progress-labels"><span>'+_f(max(0,(t or 0)-.02))+' s of new-setting history</span><span>First check ≥ 0.400 s</span></div><p class="wcp-meta">Earliest assessment around t = '+_f(first_assessment)+' s; actual settling time is unknown.</p></div></div>'
+ changes=check.get('changes_pct',{})
+ s+='<div class="wcp-calm-criteria"><span><b>Mean CD change</b><br>'+(_f(changes.get('CD'),3)+'%' if changes.get('CD') is not None else 'Pending two full windows')+'</span><span><b>Mean CL change</b><br>'+(_f(changes.get('CL_total'),3)+'%' if changes.get('CL_total') is not None else 'Pending two full windows')+'</span><span><b>Stop at first passing check</b><br>Both adjacent 0.2 s mean changes &lt; 0.5%</span></div>'
+ cost=_recent_cost(str(folder),.001) if startup_done else {'available':False}
+ if active and cost.get('available'):
+  per=cost['median_s_per_step'];to_first=max(0,first_assessment-(t or 0))/.001*per;to_cap=max(0,cap-(t or 0))/.001*per
+  s+='<div class="wcp-eta wcp-calm-eta"><b>'+('First settling check: about '+_duration(to_first)+' remaining' if (t or 0)<first_assessment else 'Settling checks available; stop depends on both force means')+'</b><p>About '+_duration(to_cap)+' to the '+_f(cap,1)+' s diagnostic cap at the recent rate. This is a cap, not a predicted settling time.</p><p class="wcp-meta">Measured median '+_f(per,3)+' s/step over '+str(cost['samples'])+' recent regular steps; pauses, saves and load can change this estimate.</p></div>'
+ elif active:
+  s+='<div class="wcp-eta wcp-calm-eta"><b>Calm-stage ETA: collecting measured step timings</b><p>First assessment requires 0.4 s of main calm history; '+_f(cap,1)+' s is the diagnostic cap. The settling time is not known.</p></div>'
+ s+='<div class="wcp-planned"><h3>Planned wave stage · awaiting activation</h3><div class="wcp-progress"><span style="width:0%"></span><i></i></div><div class="wcp-progress-labels"><span>Wave onset not defined</span><span>10 T · indicative</span><span>20 T · review cap</span></div><p class="wcp-meta">Inlet wave ramp and phase clock have not started. Wave progress, cycle overlays and wave ETA remain inactive; the 10-period marker is a plan, not a minimum.</p></div>'
+ return s
+

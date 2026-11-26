@@ -1,0 +1,37 @@
+Compiled from "Boundary.java"
+public class star.common.Boundary extends star.common.PartGroupableModelPart implements star.common.ProvidesIcon,star.common.VolumeSelectable {
+  public static final java.lang.String PART_SURFACES_TAG;
+  public static final java.lang.String PART_SURFACES_DISPLAY_NAME;
+  public static final java.lang.String PART_CURVES_DISPLAY_NAME;
+  public static final java.lang.String PER_SURFACE_LABEL;
+  public static final java.lang.String PER_CURVE_LABEL;
+  public star.common.Boundary(star.base.neo.ClientServerObjectKey);
+  public star.common.BoundaryManager getManager();
+  public star.common.Region getRegion();
+  public star.common.Boundary getBoundary();
+  public boolean canRename();
+  public star.common.BoundaryType getBoundaryType();
+  public void setBoundaryType(star.common.BoundaryType);
+  public <T extends star.common.BoundaryType> void setBoundaryType(java.lang.Class<T>);
+  public <T extends star.common.BoundaryType> void setConditionType(java.lang.Class<T>);
+  public java.util.Vector<star.common.BoundaryInterface> getDependentInterfaces();
+  public java.lang.String getDependentInterfacesAsString();
+  public java.lang.String getIconSymbol();
+  public star.common.BoundaryPartSurfaceGroup getPartSurfaceGroup();
+  public star.common.GeometryPartEntityGroup getGeometryPartEntityGroup();
+  public star.common.DynamicQuerySelectorInput getGeometryPartEntityGroupInput();
+  public void setGeometryPartEntityGroupInput(star.common.DynamicQuerySelectorInput);
+  public star.common.DynamicQuerySelectorInput getPartSurfaceGroupInput();
+  public int getIndex();
+  public boolean getAllowPerPartValues();
+  public boolean isOwnedByOther();
+  public boolean isInternallyManaged();
+  public boolean isShellEdge();
+  public star.common.Boundary$Topology getTopology();
+  public star.common.Boundary$Topology getToplogyEnum();
+  public star.base.neo.NamedObject getVolumeObject();
+  public java.lang.String getQualifiedName();
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+  public void setIconProvider(star.common.ProvidesIcon);
+  static {};
+}

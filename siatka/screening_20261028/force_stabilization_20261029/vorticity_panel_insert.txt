@@ -1,0 +1,11 @@
+def _vorticity_view(state):
+ record=_read(ROOT/'wave_vorticity_current.json')
+ t=_n(record.get('field_time_s'))
+ if record.get('case')!=state.get('case') or t is None:return ''
+ path=Path(record.get('image_path',''))
+ if not path.is_file() or not record.get('provenance_path'):return ''
+ try:encoded=base64.b64encode(path.read_bytes()).decode()
+ except OSError:return ''
+ caption=record.get('caption','Native saved vorticity')
+ return '<style>@media print{.wave-cycle-panel details.wcp-vorticity{display:block!important;break-before:page}.wave-cycle-panel .wcp-vorticity>figure{display:block!important;break-inside:avoid}.wave-cycle-panel .wcp-vorticity img{max-height:155mm;object-fit:contain}}</style><details class="wcp-vorticity" open><summary>Vorticity · native saved field · t = '+_f(t)+' s</summary><figure class="wcp-side-view"><div class="wcp-side-scroll" tabindex="0" role="region" aria-label="Scrollable native signed vorticity"><img src="data:image/png;base64,'+encoded+'" alt="'+_e(caption)+'"></div><figcaption>'+_e(caption)+' '+_link(record['provenance_path'],'Vorticity provenance')+'.</figcaption></figure></details>'
+

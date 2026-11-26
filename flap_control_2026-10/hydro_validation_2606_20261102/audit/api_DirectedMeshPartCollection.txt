@@ -1,0 +1,38 @@
+Compiled from "DirectedMeshPartCollection.java"
+public class star.sweptmesher.DirectedMeshPartCollection extends star.base.neo.NamedObject implements star.common.SimulationProvider,star.common.ProvidesIcon {
+  public static final java.lang.String IS_SINGLE_PART;
+  public static final java.lang.String IS_DIRTY;
+  public static final java.lang.String IS_SRC_MESH_DIRTY;
+  public static final java.lang.String IS_TARGET_SMOOTH;
+  public static final java.lang.String ENHANCE_CELL_QUALITY;
+  public star.sweptmesher.DirectedMeshPartCollection(star.base.neo.ClientServerObjectKey);
+  public star.sweptmesher.DirectedMeshOperation getDirectedMeshOperation();
+  public star.sweptmesher.DirectedMeshPartCollectionManager getManager();
+  public star.sweptmesher.ui.DirectedMeshDisplayController getDisplayController();
+  public star.common.Simulation getSimulation();
+  public star.common.GeometryPartGroup getParts();
+  public boolean hasPart(star.common.GeometryPart);
+  public boolean isSinglePart();
+  public boolean isReadyToMesh();
+  public boolean isDirty();
+  public boolean isSrcMeshDirty();
+  public boolean isTargetMeshSmooth();
+  public boolean isVolumeMeshHidden();
+  public boolean isSurfaceHidden();
+  public void setHideVolumeMesh(boolean);
+  public void setHideSurfaceMesh(boolean);
+  public boolean hasVolumeMesh();
+  public boolean doesPartSurfaceBelongToPartCollection(star.common.PartSurface);
+  public star.sweptmesher.DirectedSourceSurfaceMeshBase hasSourceMesh();
+  public star.sweptmesher.DirectedMeshDistribution hasVolumeDistribution();
+  public star.sweptmesher.RotationalSweepCoarsening hasMeshCoarsening();
+  public star.coremodule.objectselector.ObjectSelectorInput getPartsInput();
+  public java.util.Collection<star.sweptmesher.DirectedSourceSurfaceMeshBase> getSourceMeshNode();
+  public boolean getTargetSmoothOption();
+  public void setTargetSmoothOption(boolean);
+  public boolean getEnhanceCellQualityOption();
+  public void setEnhanceCellQualityOption(boolean);
+  public star.sweptmesher.DMHighlightSurfaces getHighlightSurfaces();
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+  protected java.lang.String getIconResourcePath();
+}

@@ -1,0 +1,2607 @@
+{
+  "jobs": {
+    "c0_native_comparison_221832": {
+      "pid": 7192,
+      "variant": "SP_C",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_221832",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectHydroComparison_SP_C_20261102_221832.log",
+      "macro_sha256": "e0038554b8ab0dba45ce172a07f97c1d241f3665744755bb8a6d81f098f43109",
+      "at": "2026-11-02T22:18:32.021682+01:00",
+      "id": "c0_native_comparison_221832",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_C_20261102_221832",
+      "initial_time_s": 0.3024,
+      "state": "failed",
+      "ended_at": "2026-11-02T22:21:13.759582+01:00",
+      "macro_status": null,
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectHydroComparison_SP_C_20261102_221832.log"
+    },
+    "c0_native_comparison_v2": {
+      "pid": 4524,
+      "variant": "SP_C",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_222216",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectHydroComparison_SP_C_20261102_222216.log",
+      "macro_sha256": "8a9903f147796072c01ff6d20b2ce48a4211595df78b2902b9fe2d5247468dfc",
+      "at": "2026-11-02T22:22:16.599769+01:00",
+      "id": "c0_native_comparison_v2",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_C_20261102_222216",
+      "initial_time_s": 0.3024,
+      "state": "failed",
+      "ended_at": "2026-11-02T22:24:43.207169+01:00",
+      "macro_status": null,
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectHydroComparison_SP_C_20261102_222216.log"
+    },
+    "b0_native_comparison": {
+      "pid": 11996,
+      "variant": "SP_B",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_222617",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectHydroComparison_SP_B_20261102_222617.log",
+      "macro_sha256": "3208b202cb7659d1eb443126e334554c9c7a2c189d0982d82329c76ef2626ab9",
+      "at": "2026-11-02T22:26:17.045988+01:00",
+      "id": "b0_native_comparison",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_B_20261102_222617",
+      "initial_time_s": 0.3,
+      "state": "failed",
+      "ended_at": "2026-11-02T22:28:51.952472+01:00",
+      "macro_status": null,
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectHydroComparison_SP_B_20261102_222617.log"
+    },
+    "b0_native_comparison_v2": {
+      "pid": 17720,
+      "variant": "SP_B",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_222923",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectHydroComparison_SP_B_20261102_222923.log",
+      "macro_sha256": "6d506e81fdc84d2e1e4d8662284158789adc4ba8135ff2816d1d86fb380aa2ca",
+      "at": "2026-11-02T22:29:23.877614+01:00",
+      "id": "b0_native_comparison_v2",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_B_20261102_222923",
+      "initial_time_s": 0.3,
+      "state": "completed",
+      "ended_at": "2026-11-02T22:31:58.863860+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "simulation_saved": false,
+        "physical_time_preserved": true,
+        "training_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectHydroComparison_SP_B_20261102_222923.log"
+    },
+    "c0_native_comparison_v3": {
+      "pid": 17492,
+      "variant": "SP_C",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_223230",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectHydroComparison_SP_C_20261102_223230.log",
+      "macro_sha256": "6d506e81fdc84d2e1e4d8662284158789adc4ba8135ff2816d1d86fb380aa2ca",
+      "at": "2026-11-02T22:32:30.876428+01:00",
+      "id": "c0_native_comparison_v3",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_C_20261102_223230",
+      "initial_time_s": 0.3024,
+      "state": "completed",
+      "ended_at": "2026-11-02T22:35:05.743525+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "simulation_saved": false,
+        "physical_time_preserved": true,
+        "training_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectHydroComparison_SP_C_20261102_223230.log"
+    },
+    "c0_inner40_sensitivity": {
+      "pid": 10252,
+      "variant": "SP_C",
+      "macro": "C0InnerIterationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_223940",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0InnerIterationTest_SP_C_20261102_223940.log",
+      "macro_sha256": "2b531c095b149653f5369ff42ac506f4f799683621ed59867055f917a21788c0",
+      "at": "2026-11-02T22:39:40.931897+01:00",
+      "id": "c0_inner40_sensitivity",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940",
+      "initial_time_s": 0.3024,
+      "state": "failed",
+      "ended_at": "2026-11-02T23:08:51.683096+01:00",
+      "macro_status": {
+        "status": "paused_by_marker",
+        "steps": 108,
+        "start_time_s": 0.3024000000000002,
+        "saved_time_s": 0.5184000000000004,
+        "pressure_violations": 0,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\singlephase_initial_verified.sim",
+          "bytes": 571569544,
+          "sha256": "8eb14833dd53849a43acd255c7549d8e27044b1ee6f6ebff1cf91519fc1b11a1"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_25.sim",
+          "bytes": 623842649,
+          "sha256": "a02c95ceaf7754ecaf343b50d6e7d8345078b41daa0effab1d8b69303246e0d9"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_50.sim",
+          "bytes": 623963681,
+          "sha256": "2e66b88034151de1de3b2be0c782a0c1fe92ee3421a4d6aa7f4616daea6d5222"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_75.sim",
+          "bytes": 624084721,
+          "sha256": "6350ab10bc9362f69ff43db557e188d96c74d8e3ca751be258a60651241ba7c1"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_100.sim",
+          "bytes": 624205775,
+          "sha256": "1ccadfb9faf310d7352dd97894b3528db1f71001d84e120c2f3b7b08a067410c"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+          "bytes": 650472777,
+          "sha256": "c0f2dbd97b39f82fac4b7a8f2a517ad9cf81db0133ea7f7d1e423d7c214ac0f9"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0InnerIterationTest_SP_C_20261102_223940.log"
+    },
+    "c0_distance_interpolation": {
+      "pid": 4756,
+      "variant": "SP_C",
+      "macro": "C0DistanceInterpolationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_230957",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0DistanceInterpolationTest_SP_C_20261102_230957.log",
+      "macro_sha256": "e01cca57f9abb59176134f6c9f010aa89d0ac9bffd808bd344963968f7d28f48",
+      "at": "2026-11-02T23:09:57.499908+01:00",
+      "id": "c0_distance_interpolation",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_230957",
+      "initial_time_s": 0.5184000000000004,
+      "state": "failed",
+      "ended_at": "2026-11-02T23:12:32.386553+01:00",
+      "macro_status": {
+        "status": "error",
+        "steps": 0,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_230957\\error_checkpoint.sim",
+          "bytes": 650472772,
+          "sha256": "f4755ada19f2e0046cfa442d92625200258f2b5bb7453a9d7b352485cf2f20b4"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0DistanceInterpolationTest_SP_C_20261102_230957.log"
+    },
+    "c0_distance_interpolation_readback": {
+      "pid": 22124,
+      "variant": "SP_C",
+      "macro": "C0DistanceInterpolationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_231609",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0DistanceInterpolationTest_SP_C_20261102_231609.log",
+      "macro_sha256": "1c472eadd9aebffd54a9a097b394e6080e1e9268fbb4b5baa154ac60f2ea97c9",
+      "at": "2026-11-02T23:16:09.902206+01:00",
+      "id": "c0_distance_interpolation_readback",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_231609",
+      "initial_time_s": 0.5184,
+      "state": "failed",
+      "ended_at": "2026-11-02T23:18:45.157673+01:00",
+      "macro_status": {
+        "status": "error",
+        "steps": 0,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_231609\\error_checkpoint.sim",
+          "bytes": 650499542,
+          "sha256": "57238b50d7470221e7b7af435406d8024e28f94a2d97cf1da0c143a872055cda"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0DistanceInterpolationTest_SP_C_20261102_231609.log"
+    },
+    "c0_distance_interpolation_metadata_fixed": {
+      "pid": 3204,
+      "variant": "SP_C",
+      "macro": "C0DistanceInterpolationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_232050",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0DistanceInterpolationTest_SP_C_20261102_232050.log",
+      "macro_sha256": "863d67a169d8ff39d72671d6d32b6e6f6fc8097e604a1a2525d0f3c1613522bd",
+      "at": "2026-11-02T23:20:50.082596+01:00",
+      "id": "c0_distance_interpolation_metadata_fixed",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050",
+      "initial_time_s": 0.5184,
+      "state": "failed",
+      "ended_at": "2026-11-02T23:41:14.915269+01:00",
+      "macro_status": {
+        "status": "paused_by_marker",
+        "steps": 73,
+        "start_time_s": 0.5184000000000004,
+        "saved_time_s": 0.6644000000000005,
+        "pressure_violations": 0,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\singlephase_initial_verified.sim",
+          "bytes": 650499542,
+          "sha256": "29c153ae66e39688b4132312e0c6a26360c8306589dc0a1ab005ca26baafa5f9"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint_step_25.sim",
+          "bytes": 702809626,
+          "sha256": "c56d9c3552c99de565740a2a9f1203ab90cd3acd7da515bd386a623585063097"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint_step_50.sim",
+          "bytes": 702931057,
+          "sha256": "92b27dd81f18f7c368ab4f1efb626496f04b7996c9e99bebe287e957002bf4ad"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint.sim",
+          "bytes": 729271037,
+          "sha256": "e3594c9b927545954e305d5b062672dec93f3a418df2a1ebe99885b6c2c5f375"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0DistanceInterpolationTest_SP_C_20261102_232050.log"
+    },
+    "c0_distance_native_setup": {
+      "pid": 27832,
+      "variant": "SP_C",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_234320",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectHydroComparison_SP_C_20261102_234320.log",
+      "macro_sha256": "f8936e384bb6cefa1bf0338e9277bfb5679f656fb799d992b53a70576834389b",
+      "at": "2026-11-02T23:43:20.834147+01:00",
+      "id": "c0_distance_native_setup",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_C_20261102_234320",
+      "initial_time_s": 0.6644,
+      "state": "completed",
+      "ended_at": "2026-11-02T23:45:55.478337+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "simulation_saved": false,
+        "physical_time_preserved": true,
+        "training_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectHydroComparison_SP_C_20261102_234320.log"
+    },
+    "b0_native_setup": {
+      "pid": 29152,
+      "variant": "SP_B",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261102_234628",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectHydroComparison_SP_B_20261102_234628.log",
+      "macro_sha256": "f8936e384bb6cefa1bf0338e9277bfb5679f656fb799d992b53a70576834389b",
+      "at": "2026-11-02T23:46:28.802586+01:00",
+      "id": "b0_native_setup",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_B_20261102_234628",
+      "initial_time_s": 0.3,
+      "state": "completed",
+      "ended_at": "2026-11-02T23:49:03.762580+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "simulation_saved": false,
+        "physical_time_preserved": true,
+        "training_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectHydroComparison_SP_B_20261102_234628.log"
+    },
+    "c0_distance_fresh_initialization": {
+      "pid": 6452,
+      "variant": "SP_C",
+      "macro": "FreshC0DistanceInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_000031",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FreshC0DistanceInit_SP_C_20261103_000031.log",
+      "macro_sha256": "65c3a4d4043b5d971ddaaced136b39b268f842c06e1e5da0b47c2ea515fbf308",
+      "at": "2026-11-03T00:00:31.883321+01:00",
+      "id": "c0_distance_fresh_initialization",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_fresh_20261103_000031",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:04:11.443952+01:00",
+      "macro_status": null,
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_fresh_20261103_000031\\initialization_error.sim",
+          "bytes": 431129629,
+          "sha256": "95b9f3095c57c0990ed26160284c98d38e060b63214fb6559b8865e2575582db"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FreshC0DistanceInit_SP_C_20261103_000031.log"
+    },
+    "c0_fresh_no_continuity_init": {
+      "pid": 30192,
+      "variant": "SP_C",
+      "macro": "FreshC0NoContinuityInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_000523",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FreshC0NoContinuityInit_SP_C_20261103_000523.log",
+      "macro_sha256": "aee87f8d95da0b49819fa292ebfc63fd3c48ac774638a67794c9438d27bb7231",
+      "at": "2026-11-03T00:05:23.922553+01:00",
+      "id": "c0_fresh_no_continuity_init",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noci_20261103_000523",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:08:30.289453+01:00",
+      "macro_status": {
+        "status": "initialization_error",
+        "iterations": 50,
+        "saved_time_s": 0.0,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noci_20261103_000523\\initialization_error.sim",
+          "bytes": 431131149,
+          "sha256": "eb7f24c19926793522f92c0cb27d1537c1c9fcc2efd54a6d56a1a2eb4be71ffb"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FreshC0NoContinuityInit_SP_C_20261103_000523.log"
+    },
+    "c0_fresh_no_flux_init": {
+      "pid": 29716,
+      "variant": "SP_C",
+      "macro": "FreshC0NoFluxInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_001005",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FreshC0NoFluxInit_SP_C_20261103_001005.log",
+      "macro_sha256": "a697affbd84e227fec63604d8830f059ce280def5c2dd38f14bd89cffdd3a01f",
+      "at": "2026-11-03T00:10:05.984299+01:00",
+      "id": "c0_fresh_no_flux_init",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noflux_20261103_001005",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:12:40.831155+01:00",
+      "macro_status": {
+        "status": "initialization_error",
+        "iterations": 10,
+        "saved_time_s": 0.0,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noflux_20261103_001005\\initialization_error.sim",
+          "bytes": 431125072,
+          "sha256": "79e2dafadf6924b1c7447579cbf3b534266b6896670885868a18ddc594fe817b"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FreshC0NoFluxInit_SP_C_20261103_001005.log"
+    },
+    "c0_overlap1mm_mesh": {
+      "pid": 25596,
+      "variant": "SP_C",
+      "macro": "PrepareC0OverlapRefinement.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_001516",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0OverlapRefinement_SP_C_20261103_001516.log",
+      "macro_sha256": "55f27236b852d7524a559a41a2933d45ea17befcd435717a7e635b87f72ccba6",
+      "at": "2026-11-03T00:15:16.240274+01:00",
+      "id": "c0_overlap1mm_mesh",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap1mm_20261103_001516",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:18:52.464641+01:00",
+      "macro_status": null,
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap1mm_20261103_001516\\SP_C_repair_error_20261103_001516.sim",
+          "bytes": 202815938,
+          "sha256": "17efa0187726bc27cfd6370e15d92fa70a5d5270b017e732c04259c991fe77ec"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0OverlapRefinement_SP_C_20261103_001516.log"
+    },
+    "c0_overlap_mesh_finalize": {
+      "pid": 6404,
+      "variant": "SP_C",
+      "macro": "FinalizeC0MeshAudit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap1mm_20261103_001516\\SP_C_repair_error_20261103_001516.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_002030",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FinalizeC0MeshAudit_SP_C_20261103_002030.log",
+      "macro_sha256": "b3eca56e08d7ed878100a7e1d1aca908d0c7d6efec4de1b36ff56cc58d143f24",
+      "at": "2026-11-03T00:20:30.711084+01:00",
+      "id": "c0_overlap_mesh_finalize",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_audit_20261103_002030",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:23:05.609651+01:00",
+      "macro_status": {
+        "status": "mesh_audit_error",
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_audit_20261103_002030\\audit_error.sim",
+          "bytes": 533565472,
+          "sha256": "6a6123f644081f60f046e29f506995e6be3bfaba8902ae01fe2452782e6662de"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FinalizeC0MeshAudit_SP_C_20261103_002030.log"
+    },
+    "c0_overlap_distance_mesh_audit": {
+      "pid": 31412,
+      "variant": "SP_C",
+      "macro": "FinalizeC0DistanceMeshAudit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_audit_20261103_002030\\audit_error.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_002542",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FinalizeC0DistanceMeshAudit_SP_C_20261103_002542.log",
+      "macro_sha256": "30b07c70009b7b15bcf705a3aba4b86659103ab8f44cdf1e9ee768a3083a8cfb",
+      "at": "2026-11-03T00:25:42.309953+01:00",
+      "id": "c0_overlap_distance_mesh_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_distance_audit_20261103_002542",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:28:17.424664+01:00",
+      "macro_status": {
+        "status": "mesh_audit_error",
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_distance_audit_20261103_002542\\audit_error.sim",
+          "bytes": 586298305,
+          "sha256": "22663794debe829b6e5887869da6643a25417fd4fbe2639ba56ff4947ac183f5"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FinalizeC0DistanceMeshAudit_SP_C_20261103_002542.log"
+    },
+    "c0_overlap_local_patch": {
+      "pid": 9408,
+      "variant": "SP_C",
+      "macro": "PrepareC0OverlapPatch.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_003057",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0OverlapPatch_SP_C_20261103_003057.log",
+      "macro_sha256": "8ac5eeba891670992af3f43c5f27b660f5353aabf4eae585dc5a4938330e9fd1",
+      "at": "2026-11-03T00:30:57.865043+01:00",
+      "id": "c0_overlap_local_patch",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_patch05mm_20261103_003057",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:35:06.587898+01:00",
+      "macro_status": null,
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_patch05mm_20261103_003057\\SP_C_repair_error_20261103_003057.sim",
+          "bytes": 492478315,
+          "sha256": "231475c9f3cabd333939f4d51dcdefe56aa05b47ab8c5ac99a14fc34277b93a6"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0OverlapPatch_SP_C_20261103_003057.log"
+    },
+    "c0_overlap_inner_band": {
+      "pid": 31052,
+      "variant": "SP_C",
+      "macro": "PrepareC0OverlapBand.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_003837",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0OverlapBand_SP_C_20261103_003837.log",
+      "macro_sha256": "73defd0d04f79c639bb29c309bf93b034adc51af3fe107289893190191e9266b",
+      "at": "2026-11-03T00:38:37.093220+01:00",
+      "id": "c0_overlap_inner_band",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T00:44:17.664111+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "solver_steps": 0,
+        "physical_time_s": 0,
+        "cells": 579468,
+        "field_storage_initialized": true,
+        "background_identity_pending": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+          "bytes": 675194726,
+          "sha256": "35b44cb5cd54d35cf7e7b849140524b9f2be5d4ffc8b583da44495db5ba88865"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0OverlapBand_SP_C_20261103_003837.log"
+    },
+    "c0_refined_initialization": {
+      "pid": 23432,
+      "variant": "SP_C",
+      "macro": "FreshC0RefinedInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_004626",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FreshC0RefinedInit_SP_C_20261103_004626.log",
+      "macro_sha256": "5f0931ee4ba1e72df37f165b090831b1ed960ba271eb5ee9575fff69466af3e0",
+      "at": "2026-11-03T00:46:26.329492+01:00",
+      "id": "c0_refined_initialization",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_refined_init_20261103_004626",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T00:51:06.745656+01:00",
+      "macro_status": {
+        "status": "initialization_error",
+        "iterations": 40,
+        "saved_time_s": 0.0,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_refined_init_20261103_004626\\initialization_error.sim",
+          "bytes": 763404207,
+          "sha256": "89b914c3ea5346856515a52ea1222105ca76aea5a6db8d1b1d91af36054f6526"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FreshC0RefinedInit_SP_C_20261103_004626.log"
+    },
+    "c0_relaxed_initialization": {
+      "pid": 31000,
+      "variant": "SP_C",
+      "macro": "FreshC0RelaxedInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_005648",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FreshC0RelaxedInit_SP_C_20261103_005648.log",
+      "macro_sha256": "9c3327b162aef48646d65fc98538a657cf8bb17ee6615bf201db2709ea48968e",
+      "at": "2026-11-03T00:56:48.471309+01:00",
+      "id": "c0_relaxed_initialization",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T01:05:40.745437+01:00",
+      "macro_status": {
+        "status": "paused_by_marker",
+        "iterations": 430,
+        "saved_time_s": 0.0,
+        "steady_initialization_only": true,
+        "force_windows_stable": false,
+        "omega_floor_cells": 834.0,
+        "k_floor_cells": 5.0,
+        "max_turbulent_viscosity_ratio": 100000.0,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_iter_250.sim",
+          "bytes": 805202374,
+          "sha256": "d428150ff7e1a3981e4603e87bfe898451d9f33f6e06948e10383aeb0ff75c14"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_checkpoint.sim",
+          "bytes": 847104592,
+          "sha256": "945353bf97a01ea6b57148c99c073db548cdbf24c9aa33ccd5130ecaf684c09a"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FreshC0RelaxedInit_SP_C_20261103_005648.log"
+    },
+    "c0_first_order_continuation": {
+      "pid": 15092,
+      "variant": "SP_C",
+      "macro": "ContinueC0FirstOrder.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_010758",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\ContinueC0FirstOrder_SP_C_20261103_010758.log",
+      "macro_sha256": "adbe3c3306d5c97b418d54fec3005220feda9b82162fff4f155b11808516fdd3",
+      "at": "2026-11-03T01:07:58.066486+01:00",
+      "id": "c0_first_order_continuation",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T01:20:34.854609+01:00",
+      "macro_status": {
+        "status": "paused_by_marker",
+        "iterations": 830,
+        "saved_time_s": 0.0,
+        "steady_initialization_only": true,
+        "force_windows_stable": false,
+        "omega_floor_cells": 0.0,
+        "k_floor_cells": 0.0,
+        "max_turbulent_viscosity_ratio": 390.03130980475635,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_250.sim",
+          "bytes": 972474619,
+          "sha256": "40b77468543d00194176dc67cbfa80cb408fc6cf3e48bb99f7fe204f88d518c4"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_500.sim",
+          "bytes": 1014272489,
+          "sha256": "f30d3f9c54f1054b74653953ef30355271f772ef2e382eb3e09901701db4ade4"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_750.sim",
+          "bytes": 1056070477,
+          "sha256": "6a0e72849e7aca58979bb9c4d9ec8b4fd9652613b2b298408c311f7cbd56c6df"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_checkpoint.sim",
+          "bytes": 1097958567,
+          "sha256": "615bb3b3ab0bd0f64d7d05b26da17d64cc65940b9272a64009cb591477a952b7"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\ContinueC0FirstOrder_SP_C_20261103_010758.log"
+    },
+    "c0_flux_continuation": {
+      "pid": 14204,
+      "variant": "SP_C",
+      "macro": "ContinueC0Flux.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_012140",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\ContinueC0Flux_SP_C_20261103_012140.log",
+      "macro_sha256": "7e0c7dbb4785ed0e5564cfda4f605ea36edf22bb65f5731216ef717a2befebcc",
+      "at": "2026-11-03T01:21:40.798984+01:00",
+      "id": "c0_flux_continuation",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T01:31:36.070000+01:00",
+      "macro_status": {
+        "status": "paused_by_marker",
+        "iterations": 590,
+        "saved_time_s": 0.0,
+        "steady_initialization_only": true,
+        "force_windows_stable": false,
+        "omega_floor_cells": 0.0,
+        "k_floor_cells": 0.0,
+        "max_turbulent_viscosity_ratio": 464.07385317398484,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_iter_250.sim",
+          "bytes": 1223330079,
+          "sha256": "77ff1ff3fd5e8e7008faabd926bdcf35d990fc4c8f68c8ddaf1f7f2081e05991"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_iter_500.sim",
+          "bytes": 1265128669,
+          "sha256": "8d3ac1977f7fab13a6cbbff35da91c82572c9dbe33d5bec0d40437c11c3c565b"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+          "bytes": 1307018414,
+          "sha256": "932e6c274be656cdfab3c5d19c78c5f5d6f1fda8d3226b9633e950c3b637ee18"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\ContinueC0Flux_SP_C_20261103_012140.log"
+    },
+    "c0_momentum2_continuation": {
+      "pid": 28908,
+      "variant": "SP_C",
+      "macro": "ContinueC0MomentumSecond.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_013313",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\ContinueC0MomentumSecond_SP_C_20261103_013313.log",
+      "macro_sha256": "fa4037497489c47d62f7f307a6627bb851b0db7633f3107a1325d76b42db5d3a",
+      "at": "2026-11-03T01:33:13.300141+01:00",
+      "id": "c0_momentum2_continuation",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_momentum_second_20261103_013313",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T01:37:22.125596+01:00",
+      "macro_status": {
+        "status": "initialization_error",
+        "iterations": 90,
+        "saved_time_s": 0.0,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_momentum_second_20261103_013313\\initialization_error.sim",
+          "bytes": 1390606122,
+          "sha256": "3e0cc792bed0252e291682e1c28453c84b8e96dc8ad6e10b4fd2842fc7d426cf"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\ContinueC0MomentumSecond_SP_C_20261103_013313.log"
+    },
+    "c0_wall_layers36_audit": {
+      "pid": 8468,
+      "variant": "SP_C",
+      "macro": "PrepareC0WallLayers36.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_014813",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0WallLayers36_SP_C_20261103_014813.log",
+      "macro_sha256": "2da64da277007de502933f9e09dae0a68d7d5cbfe3ed8ccdc0c4ae81ff62e990",
+      "at": "2026-11-03T01:48:13.247729+01:00",
+      "id": "c0_wall_layers36_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_20261103_014813",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T01:51:19.540004+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "cells": 579468,
+        "source_native_iteration": 1850,
+        "saved_time_s": 0,
+        "solver_steps": 0,
+        "protected_layers": 36,
+        "mesh_regenerated": false,
+        "geometric_active_cell_audit_pending": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_20261103_014813\\layer_candidate.sim",
+          "bytes": 1390353136,
+          "sha256": "506b85082bc3e70c5061c27de3f7caaca21215f0f4609a690a34b90bbf97db52"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0WallLayers36_SP_C_20261103_014813.log"
+    },
+    "c0_wall_layers36_recut": {
+      "pid": 13568,
+      "variant": "SP_C",
+      "macro": "PrepareC0WallLayersRecut.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_015428",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0WallLayersRecut_SP_C_20261103_015428.log",
+      "macro_sha256": "2ab46ab5db9059db69b93f453865bda1f0bc673e36d0b7f4a0fd24031d6a6db7",
+      "at": "2026-11-03T01:54:28.251894+01:00",
+      "id": "c0_wall_layers36_recut",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_recut_20261103_015428",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T01:57:34.653250+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "cells": 579468,
+        "source_native_iteration": 1850,
+        "saved_time_s": 0,
+        "solver_steps": 0,
+        "protected_layers": 36,
+        "mesh_regenerated": false,
+        "geometric_active_cell_audit_pending": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_recut_20261103_015428\\layer_candidate.sim",
+          "bytes": 1390353139,
+          "sha256": "33ebd0d222fbb75a79ffb40deee71ab42ba76e3e6393b5bee6fc3d5840f8f1b4"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0WallLayersRecut_SP_C_20261103_015428.log"
+    },
+    "c0_wall_layers36_frozen": {
+      "pid": 11052,
+      "variant": "SP_C",
+      "macro": "PrepareC0WallLayersFrozen.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_015909",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0WallLayersFrozen_SP_C_20261103_015909.log",
+      "macro_sha256": "abafd51284e469409f35c3a7b0aaf82656ed8f45dc405ad9fe7f7f568c90882b",
+      "at": "2026-11-03T01:59:09.723729+01:00",
+      "id": "c0_wall_layers36_frozen",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_frozen_20261103_015909",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T02:02:16.243493+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "cells": 579468,
+        "source_native_iteration": 1850,
+        "native_iteration": 1851,
+        "frozen_iterator_steps": 1,
+        "saved_time_s": 0,
+        "solver_steps": 0,
+        "protected_layers": 36,
+        "mesh_regenerated": false,
+        "geometric_active_cell_audit_pending": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_frozen_20261103_015909\\layer_candidate.sim",
+          "bytes": 1390353168,
+          "sha256": "73dcfc89efcfd630f108cb867664e260a6c604006d1e552b89f0ed2497bf6bb1"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0WallLayersFrozen_SP_C_20261103_015909.log"
+    },
+    "c0_wall_layers36_cold": {
+      "pid": 16824,
+      "variant": "SP_C",
+      "macro": "PrepareC0WallLayersCold.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_021037",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0WallLayersCold_SP_C_20261103_021037.log",
+      "macro_sha256": "0dfd32529c834a4064c1b3a61b9cd343d687278c8053e97b4bbbc43444b91922",
+      "at": "2026-11-03T02:10:37.127969+01:00",
+      "id": "c0_wall_layers36_cold",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_cold_20261103_021037",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T02:13:43.307979+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "cells": 579468,
+        "source_native_iteration": 0,
+        "field_storage_initial_only": true,
+        "saved_time_s": 0,
+        "solver_steps": 0,
+        "protected_layers": 36,
+        "mesh_regenerated": false,
+        "geometric_active_cell_audit_pending": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_cold_20261103_021037\\mesh_only_candidate.sim",
+          "bytes": 758532012,
+          "sha256": "c33958507636b9ba0ee40b149d1b2463a34be7c9c539d3e3d7492956043bb547"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0WallLayersCold_SP_C_20261103_021037.log"
+    },
+    "c0_wall_layers36_zero_storage": {
+      "pid": 3008,
+      "variant": "SP_C",
+      "macro": "PrepareC0WallLayersZeroStorage.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_021548",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0WallLayersZeroStorage_SP_C_20261103_021548.log",
+      "macro_sha256": "70e3179d69b6ad868bb9d9242179b1925f5de324e7021f0384b37703694b3dd6",
+      "at": "2026-11-03T02:15:48.720389+01:00",
+      "id": "c0_wall_layers36_zero_storage",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_zero_storage_20261103_021548",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T02:18:23.398347+01:00",
+      "macro_status": {
+        "status": "mesh_preparation_error",
+        "solver_steps": 0,
+        "saved_time_s": 0,
+        "scientific_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_zero_storage_20261103_021548\\layer_audit_error.sim",
+          "bytes": 520766038,
+          "sha256": "f80624ba9f078d2af01dd4d4f50f68ed751f24b548f0274615d1dcf0211f42ab"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0WallLayersZeroStorage_SP_C_20261103_021548.log"
+    },
+    "c0_wall_layers36_failure_inspection": {
+      "pid": 12324,
+      "variant": "SP_C",
+      "macro": "InspectC0LayerFailure.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_zero_storage_20261103_021548\\layer_audit_error.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_022130",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectC0LayerFailure_SP_C_20261103_022130.log",
+      "macro_sha256": "f3c5fdcdd7e02cecddf553a64de5e5e083c456b7f8191881216e5974ebba779a",
+      "at": "2026-11-03T02:21:30.831393+01:00",
+      "id": "c0_wall_layers36_failure_inspection",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_error_audit_20261103_022130",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T02:24:05.677888+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "simulation_saved": false,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectC0LayerFailure_SP_C_20261103_022130.log"
+    },
+    "c0_forewall36_audit": {
+      "pid": 28812,
+      "variant": "SP_C",
+      "macro": "PrepareC0ForewallLayers.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_022619",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0ForewallLayers_SP_C_20261103_022619.log",
+      "macro_sha256": "b6229e3380d6844744737c3ef5795ad4e29bf0436561521c4278cd21962883dd",
+      "at": "2026-11-03T02:26:19.095951+01:00",
+      "id": "c0_forewall36_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_20261103_022619",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T02:29:25.239352+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "cells": 579468,
+        "source_native_iteration": 0,
+        "field_storage_initial_only": true,
+        "zero_iteration_storage_rebuilt": true,
+        "saved_time_s": 0,
+        "solver_steps": 0,
+        "protected_layers": 36,
+        "protection_x_limit_m": 0.8,
+        "native_wall_partition_only": true,
+        "mesh_regenerated": false,
+        "geometric_active_cell_audit_pending": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_20261103_022619\\mesh_only_candidate.sim",
+          "bytes": 760726866,
+          "sha256": "b6a59ac0a2030381a85164bcef05f0affd0ca43c92b7b1b648d7230814200edc"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0ForewallLayers_SP_C_20261103_022619.log"
+    },
+    "c0_forewall36_coverage_audit": {
+      "pid": 10888,
+      "variant": "SP_C",
+      "macro": "PrepareC0ForewallCoverage.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_023202",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0ForewallCoverage_SP_C_20261103_023202.log",
+      "macro_sha256": "e9c2f564d1ad9346a4261a5e425c7c24194df3e57de7cfe2cc414f6fba09a26d",
+      "at": "2026-11-03T02:32:02.485846+01:00",
+      "id": "c0_forewall36_coverage_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_coverage_20261103_023202",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T02:35:08.641136+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "cells": 579468,
+        "source_native_iteration": 0,
+        "field_storage_initial_only": true,
+        "zero_iteration_storage_rebuilt": true,
+        "saved_time_s": 0,
+        "solver_steps": 0,
+        "protected_layers": 36,
+        "protection_x_limit_m": 0.8,
+        "native_wall_partition_only": true,
+        "other_main_wall_layers": 1,
+        "mesh_regenerated": false,
+        "geometric_active_cell_audit_pending": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_coverage_20261103_023202\\mesh_only_candidate.sim",
+          "bytes": 760743633,
+          "sha256": "5ced7fc0520a3a0e78dc5d248678ce626ea524d0b38355560bd17ab5549403d1"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0ForewallCoverage_SP_C_20261103_023202.log"
+    },
+    "c0_tight_cage_v1_mesh_audit": {
+      "pid": 27716,
+      "variant": "SP_C",
+      "macro": "PrepareC0TightCage.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_024700",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0TightCage_SP_C_20261103_024700.log",
+      "macro_sha256": "f0696ba0ad2003449361f785f3e13c9a224e434d53629fbde7d118c29219dd69",
+      "at": "2026-11-03T02:47:00.986137+01:00",
+      "id": "c0_tight_cage_v1_mesh_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v1_20261103_024700",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T02:49:36.103468+01:00",
+      "macro_status": null,
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v1_20261103_024700\\SP_C_repair_error_20261103_024700.sim",
+          "bytes": 114081640,
+          "sha256": "c8c4ac9079f5aa9c4000d8e8060bc410378fb7f6316e333f425b5d235953f172"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0TightCage_SP_C_20261103_024700.log"
+    },
+    "c0_tight_cage_v2_mesh_audit": {
+      "pid": 29936,
+      "variant": "SP_C",
+      "macro": "PrepareC0TightCagePatches.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_025110",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0TightCagePatches_SP_C_20261103_025110.log",
+      "macro_sha256": "56012cdaa88ea01c2a5b068ab96e5d472dee86ac821789116e8cd32eec987808",
+      "at": "2026-11-03T02:51:10.858806+01:00",
+      "id": "c0_tight_cage_v2_mesh_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T02:54:16.758332+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "solver_steps": 0,
+        "physical_time_s": 0,
+        "cells": 333939,
+        "field_storage_initialized": true,
+        "background_identity_pending": true,
+        "tight_cage_v1": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+          "bytes": 388118938,
+          "sha256": "0db9b6252019fff169432f902f37ecdb9d4e071724b396e3c0d55cda51819643"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0TightCagePatches_SP_C_20261103_025110.log"
+    },
+    "c0_tight_firstorder_initialization": {
+      "pid": 21600,
+      "variant": "SP_C",
+      "macro": "FreshC0TightInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_025551",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FreshC0TightInit_SP_C_20261103_025551.log",
+      "macro_sha256": "1651f39a2ed26659964b644623882b3dddb8efc2b65607e53ae4b144f96ab19d",
+      "at": "2026-11-03T02:55:51.621222+01:00",
+      "id": "c0_tight_firstorder_initialization",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_firstorder_20261103_025551",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T02:58:57.635315+01:00",
+      "macro_status": {
+        "status": "initialization_error",
+        "iterations": 10,
+        "saved_time_s": 0.0,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_firstorder_20261103_025551\\initialization_error.sim",
+          "bytes": 439010462,
+          "sha256": "8ba1c38cfbbbbf4ac3197a8ec94c30be767261e2892cc1b6a4907640474c2d04"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FreshC0TightInit_SP_C_20261103_025551.log"
+    },
+    "c0_tight_continuity_initialization": {
+      "pid": 10940,
+      "variant": "SP_C",
+      "macro": "FreshC0TightContinuityInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_030355",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\FreshC0TightContinuityInit_SP_C_20261103_030355.log",
+      "macro_sha256": "dad291a8c5095de9bc61cc6d1323fe7bcbf62da1f5037b1dca77560529e6cb37",
+      "at": "2026-11-03T03:03:55.360037+01:00",
+      "id": "c0_tight_continuity_initialization",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_continuity_20261103_030355",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T03:07:32.890699+01:00",
+      "macro_status": {
+        "status": "initialization_error",
+        "iterations": 10,
+        "saved_time_s": 0.0,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_continuity_20261103_030355\\initialization_error.sim",
+          "bytes": 427345041,
+          "sha256": "eac1010fa73a709a0e79cdde04e4fdc44894b648e622c94c015f20da29d9cd66"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\FreshC0TightContinuityInit_SP_C_20261103_030355.log"
+    },
+    "c0_tight_mapped_field_audit": {
+      "pid": 14500,
+      "variant": "SP_C",
+      "macro": "PrepareC0TightMappedFields.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_031141",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\PrepareC0TightMappedFields_SP_C_20261103_031141.log",
+      "macro_sha256": "853749ead171077a7a18f21e2dcfc4fe667adf3ce0fd7684ca9de45babac8399",
+      "at": "2026-11-03T03:11:41.493140+01:00",
+      "id": "c0_tight_mapped_field_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_mapped_20261103_031141",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T03:14:47.849958+01:00",
+      "macro_status": {
+        "status": "mesh_connectivity_prepared",
+        "cells": 333939,
+        "solver_steps": 0,
+        "saved_time_s": 0,
+        "native_iteration": 0,
+        "mapped_source_iteration": 1850,
+        "mapping_audit_only": true,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_mapped_20261103_031141\\warm_mapped_candidate.sim",
+          "bytes": 427330398,
+          "sha256": "eeeddba25233ba2bcd80ef10d7a8419f0d24a75ffefea3d3bb9f033db6e86d2d"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\PrepareC0TightMappedFields_SP_C_20261103_031141.log"
+    },
+    "c0_tight_warm_continuation": {
+      "pid": 2068,
+      "variant": "SP_C",
+      "macro": "ContinueC0TightWarm.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_mapped_20261103_031141\\warm_mapped_candidate.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_031654",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\ContinueC0TightWarm_SP_C_20261103_031654.log",
+      "macro_sha256": "0309e04a7400647f3b58983cca7a6ac40e2583764a6debe659f411a5cc4eab18",
+      "at": "2026-11-03T03:16:54.042490+01:00",
+      "id": "c0_tight_warm_continuation",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T03:26:17.830461+01:00",
+      "macro_status": {
+        "status": "steady_diagnostic_ready",
+        "iterations": 1050,
+        "saved_time_s": 0.0,
+        "steady_initialization_only": true,
+        "force_windows_stable": true,
+        "omega_floor_cells": 0.0,
+        "k_floor_cells": 0.0,
+        "max_turbulent_viscosity_ratio": 1065.9274146258776,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_250.sim",
+          "bytes": 502488110,
+          "sha256": "25d7946ef8883a0a89abdca47cd4e582ef5ea56e00670ccef19f555323e594b0"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_500.sim",
+          "bytes": 526607764,
+          "sha256": "886a9bc7467360b5eef79ad649e44e6e8a43be624f293c7acb8484492911edfd"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_750.sim",
+          "bytes": 550727414,
+          "sha256": "4a1a4cc21c9c62b329a064f37d503fa71d7765201d9e1e90cb325f13a031c6c4"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_1000.sim",
+          "bytes": 574847139,
+          "sha256": "00c17591c7e4537629b1a3922f12b03b779dff62bd9bd4ea0fb09193ad7aa0ac"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_checkpoint.sim",
+          "bytes": 599052165,
+          "sha256": "d8fd31ab9fb0685c212743a466c8abca2bfb115f2f630b1912d6826e471aef48"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\ContinueC0TightWarm_SP_C_20261103_031654.log"
+    },
+    "c0_tight_momentum2_continuation": {
+      "pid": 21308,
+      "variant": "SP_C",
+      "macro": "ContinueC0TightMomentumSecond.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_033327",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\ContinueC0TightMomentumSecond_SP_C_20261103_033327.log",
+      "macro_sha256": "b37a013269a2bcaa2cce76213f3c3d69623b76472f0c124d092ed5d25012c27c",
+      "at": "2026-11-03T03:33:27.934740+01:00",
+      "id": "c0_tight_momentum2_continuation",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T03:39:43.502194+01:00",
+      "macro_status": {
+        "status": "steady_diagnostic_ready",
+        "iterations": 540,
+        "saved_time_s": 0.0,
+        "steady_initialization_only": true,
+        "force_windows_stable": true,
+        "omega_floor_cells": 0.0,
+        "k_floor_cells": 0.0,
+        "max_turbulent_viscosity_ratio": 1225.5305777613642,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_iter_250.sim",
+          "bytes": 671389030,
+          "sha256": "9564c36454abaee79239e40669f3bb080e62b219d0ad27f1797f7babe759f525"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_iter_500.sim",
+          "bytes": 695509487,
+          "sha256": "5bd3df716d485b8384b37619b373fae9b2d1ca9615d035231a090ff6cd273a83"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_checkpoint.sim",
+          "bytes": 719713433,
+          "sha256": "49508e4d15a1485a8a785390a0413ad2de4d1cf1d1e9728d551da253e54ca47a"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\ContinueC0TightMomentumSecond_SP_C_20261103_033327.log"
+    },
+    "c0_tight_turbulence2_continuation": {
+      "pid": 5600,
+      "variant": "SP_C",
+      "macro": "ContinueC0TightTurbulenceSecond.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_034119",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\ContinueC0TightTurbulenceSecond_SP_C_20261103_034119.log",
+      "macro_sha256": "c3cfac639d9d6dc6fd40af5ca47a0c91c0a82613ec42ad36d8987caf9f7b841e",
+      "at": "2026-11-03T03:41:19.515095+01:00",
+      "id": "c0_tight_turbulence2_continuation",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T03:48:07.432360+01:00",
+      "macro_status": {
+        "status": "steady_diagnostic_ready",
+        "iterations": 720,
+        "saved_time_s": 0.0,
+        "steady_initialization_only": true,
+        "force_windows_stable": true,
+        "omega_floor_cells": 0.0,
+        "k_floor_cells": 0.0,
+        "max_turbulent_viscosity_ratio": 1455.6811059176516,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_iter_250.sim",
+          "bytes": 792051334,
+          "sha256": "efd04c77b1dde8001cbdb568f391303a7a89d6f5043c5391b8207331c2fdb343"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_iter_500.sim",
+          "bytes": 816171976,
+          "sha256": "8773e4ce37eed11d86ed905802ac39c0aa17f5e37cb3b194e1f467071575e5eb"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim",
+          "bytes": 840404092,
+          "sha256": "3575fad827e54ce942afada6d6c58a1c5cb5cd580e1da0f6065ff05f43b7fe6b"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\ContinueC0TightTurbulenceSecond_SP_C_20261103_034119.log"
+    },
+    "b0_matching_numerics_audit": {
+      "pid": 29324,
+      "variant": "SP_B",
+      "macro": "InspectBMatchingNumerics.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_034849",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectBMatchingNumerics_SP_B_20261103_034849.log",
+      "macro_sha256": "fc699a046d9308a20bd64aa177574bb54bfe249e515287c3da44c7cf463d68e8",
+      "at": "2026-11-03T03:48:49.834061+01:00",
+      "id": "b0_matching_numerics_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\matching_B_20261103_034849",
+      "initial_time_s": 0.3,
+      "state": "completed",
+      "ended_at": "2026-11-03T03:51:24.451320+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "simulation_saved": false,
+        "physical_time_preserved": true,
+        "training_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectBMatchingNumerics_SP_B_20261103_034849.log"
+    },
+    "c0_tight_urans_matching": {
+      "pid": 12380,
+      "variant": "SP_C",
+      "macro": "C0TightURANS.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_035229",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0TightURANS_SP_C_20261103_035229.log",
+      "macro_sha256": "b46c08788a0be50c9bbb0e7ccbc7aebb68186a1cd2c76639b3e1846885aa2b2d",
+      "at": "2026-11-03T03:52:29.038618+01:00",
+      "id": "c0_tight_urans_matching",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_20261103_035229",
+      "initial_time_s": 0,
+      "state": "failed",
+      "ended_at": "2026-11-03T03:55:04.275780+01:00",
+      "macro_status": {
+        "status": "urans_error",
+        "steps": 0,
+        "saved_time_s": 0.0,
+        "scientific_approved": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_20261103_035229\\error_checkpoint.sim",
+          "bytes": 864489915,
+          "sha256": "a14193bf28dd6b22bf38c80741942a7b8752f9d7cd3260c98fe8996824aa35de"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0TightURANS_SP_C_20261103_035229.log"
+    },
+    "c0_tight_urans_transition_v2": {
+      "pid": 31468,
+      "variant": "SP_C",
+      "macro": "C0TightURANSV2.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_035710",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0TightURANSV2_SP_C_20261103_035710.log",
+      "macro_sha256": "ee6b47dc1db90a7c2ca1292dc5377fe030120a25c9bfea149bd2be4e62acc176",
+      "at": "2026-11-03T03:57:10.598958+01:00",
+      "id": "c0_tight_urans_transition_v2",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710",
+      "initial_time_s": 0,
+      "state": "completed",
+      "ended_at": "2026-11-03T04:13:27.327769+01:00",
+      "macro_status": {
+        "status": "urans_diagnostic_ready",
+        "steps": 150,
+        "saved_time_s": 0.3000000000000002,
+        "dt_s": 0.002,
+        "native_iteration": 4560,
+        "force_windows_stable": true,
+        "solution_reset": false,
+        "mesh_regenerated": false,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\URANS_ready.sim",
+          "bytes": 864519914,
+          "sha256": "be07da8e582a5c3b649a8aae05f3fcf083ae2acbdcf0cba51d7dd493a7ec3ab2"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint_step_50.sim",
+          "bytes": 1090806392,
+          "sha256": "14d695c57e51f97c3298b6643155068e8b7babc180ac828fa7e56057c8834e67"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint_step_100.sim",
+          "bytes": 1139069360,
+          "sha256": "e34670711d8532318393e0eda11dea43bc8451ec49f77051a9b8426ec2c43f7d"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint_step_150.sim",
+          "bytes": 1187332258,
+          "sha256": "214d6e32d271fb35134509f56d8cab4888c4e5e555ef52aeb89fee491f8ac2d5"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint.sim",
+          "bytes": 1211413778,
+          "sha256": "d4b0c8eca2ff355739b2c1cfda79def31b56e48434c475976c157bce2bbfba55"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0TightURANSV2_SP_C_20261103_035710.log"
+    },
+    "c0_urans_continue_inner40": {
+      "pid": 30512,
+      "variant": "SP_C",
+      "macro": "C0URANSContinueInner40.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_041433",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0URANSContinueInner40_SP_C_20261103_041433.log",
+      "macro_sha256": "620026fa6ad016968d99fef371021d02462271bdc7a0dd08171a1e0055d753df",
+      "at": "2026-11-03T04:14:33.638901+01:00",
+      "id": "c0_urans_continue_inner40",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433",
+      "initial_time_s": 0.3,
+      "state": "completed",
+      "ended_at": "2026-11-03T04:34:36.513103+01:00",
+      "macro_status": {
+        "status": "urans_diagnostic_ready",
+        "steps": 75,
+        "saved_time_s": 0.45000000000000034,
+        "dt_s": 0.002,
+        "native_iteration": 7560,
+        "force_windows_stable": true,
+        "solution_reset": false,
+        "mesh_regenerated": false,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\continuation_ready.sim",
+          "bytes": 1235521835,
+          "sha256": "6a91870c3cff1a0b50b60a6f3de5570f055c13f889ecc89e27476ae115262ab0"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint_step_50.sim",
+          "bytes": 1308005726,
+          "sha256": "6a231e6ca3e47d11c61581ad737abccede5ab42f6b3bfe56ba6c12e24ecbfb8a"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+          "bytes": 1356288278,
+          "sha256": "8b6162b9baa27a5e04c38048dbab3c801cdd99266200a320231390d1f3f8feed"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0URANSContinueInner40_SP_C_20261103_041433.log"
+    },
+    "c0_urans_pressure_urf01": {
+      "pid": 22932,
+      "variant": "SP_C",
+      "macro": "C0URANSPressureUrf01.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_043547",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0URANSPressureUrf01_SP_C_20261103_043547.log",
+      "macro_sha256": "e4bbd56c2478de7cf9e1796aa750fb82c7a708d5380a5e55817c20f5b90b6348",
+      "at": "2026-11-03T04:35:47.098245+01:00",
+      "id": "c0_urans_pressure_urf01",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547",
+      "initial_time_s": 0.45,
+      "state": "completed",
+      "ended_at": "2026-11-03T04:55:45.200147+01:00",
+      "macro_status": {
+        "status": "urans_diagnostic_ready",
+        "steps": 75,
+        "saved_time_s": 0.6000000000000004,
+        "dt_s": 0.002,
+        "native_iteration": 10560,
+        "force_windows_stable": true,
+        "solution_reset": false,
+        "mesh_regenerated": false,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\continuation_ready.sim",
+          "bytes": 1380396214,
+          "sha256": "ca44b8c32bd71e6cf8f316f75e0b4987bfea55efd4464619a63f8a20ec24d0af"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint_step_50.sim",
+          "bytes": 1452880266,
+          "sha256": "98c1766158674f6fda92b34580b098e425da65f1839a0881d63ff1d718489f85"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint.sim",
+          "bytes": 1501163461,
+          "sha256": "e457f6e1bdaa7c59708416c0534f7c62188adebaa0f58dfacf5681877392d0ec"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0URANSPressureUrf01_SP_C_20261103_043547.log"
+    },
+    "c0_pressure_outlet_readonly_audit": {
+      "pid": 14020,
+      "variant": "SP_C",
+      "macro": "InspectPressureOutlets.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_045619",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectPressureOutlets_SP_C_20261103_045619.log",
+      "macro_sha256": "d07c1d5db6931420a45bacfa77510a489797a39c3eea229b64169e53e3f70352",
+      "at": "2026-11-03T04:56:19.039695+01:00",
+      "id": "c0_pressure_outlet_readonly_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\pressure_outlets_SP_C_20261103_045619",
+      "initial_time_s": 0.45,
+      "state": "completed",
+      "ended_at": "2026-11-03T04:58:53.728621+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "sim_saved": false,
+        "source_time_s": 0.45000000000000034,
+        "source_native_iteration": 7560,
+        "scientific_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectPressureOutlets_SP_C_20261103_045619.log"
+    },
+    "b0_pressure_outlet_readonly_audit": {
+      "pid": 21304,
+      "variant": "SP_B",
+      "macro": "InspectPressureOutlets.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "cpu_processes": 1,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_045925",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\InspectPressureOutlets_SP_B_20261103_045925.log",
+      "macro_sha256": "d07c1d5db6931420a45bacfa77510a489797a39c3eea229b64169e53e3f70352",
+      "at": "2026-11-03T04:59:25.630760+01:00",
+      "id": "b0_pressure_outlet_readonly_audit",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\pressure_outlets_SP_B_20261103_045925",
+      "initial_time_s": 0.3,
+      "state": "completed",
+      "ended_at": "2026-11-03T05:02:00.324956+01:00",
+      "macro_status": {
+        "status": "inspection_complete",
+        "solver_steps": 0,
+        "sim_saved": false,
+        "source_time_s": 0.3000000000000002,
+        "source_native_iteration": 2250,
+        "scientific_approved": false
+      },
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\InspectPressureOutlets_SP_B_20261103_045925.log"
+    },
+    "c0_top_backflow_extrapolated": {
+      "pid": 27692,
+      "variant": "SP_C",
+      "macro": "C0URANSTopDirection.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_050724",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\C0URANSTopDirection_SP_C_20261103_050724.log",
+      "macro_sha256": "289138890268752d9637d5a900ea6680f40b7e8265a9da92f15d356f010c8620",
+      "at": "2026-11-03T05:07:24.554361+01:00",
+      "id": "c0_top_backflow_extrapolated",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+      "initial_time_s": 0.45,
+      "state": "completed",
+      "ended_at": "2026-11-03T05:34:10.076479+01:00",
+      "macro_status": {
+        "status": "urans_diagnostic_ready",
+        "steps": 100,
+        "saved_time_s": 0.6500000000000005,
+        "dt_s": 0.002,
+        "native_iteration": 11560,
+        "force_windows_stable": true,
+        "solution_reset": false,
+        "mesh_regenerated": false,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\continuation_ready.sim",
+          "bytes": 1380396221,
+          "sha256": "1d5680e049b1430c5e36a34ec0614b592471aac51ae97c2c3ee0eac60db5fb42"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint_step_50.sim",
+          "bytes": 1452901008,
+          "sha256": "7fcf8a2d1719dce65391f96adf5164a0877664c70aa905821707b883efe8580c"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint_step_100.sim",
+          "bytes": 1501304175,
+          "sha256": "e5dd2582c29e1ece83dceda63410effec5462fbcc5c325f4cd818e1a859ef2a9"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint.sim",
+          "bytes": 1525385629,
+          "sha256": "c8b2396f2d087112d06045b06a6c62e93c4003eafde969aa8c8d0ca8120afc10"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\C0URANSTopDirection_SP_C_20261103_050724.log"
+    },
+    "b0_matched_top_backflow": {
+      "pid": 3148,
+      "variant": "SP_B",
+      "macro": "B0URANSTopDirection.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_053542",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\B0URANSTopDirection_SP_B_20261103_053542.log",
+      "macro_sha256": "7a920c12970b99369f19f8428b8bbb7e332ca0969ca9305c4ab746075cafed20",
+      "at": "2026-11-03T05:35:42.728323+01:00",
+      "id": "b0_matched_top_backflow",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542",
+      "initial_time_s": 0.3,
+      "state": "completed",
+      "ended_at": "2026-11-03T07:31:27.063465+01:00",
+      "macro_status": {
+        "status": "urans_diagnostic_ready",
+        "steps": 100,
+        "saved_time_s": 0.5000000000000003,
+        "dt_s": 0.002,
+        "native_iteration": 6250,
+        "force_windows_stable": true,
+        "solution_reset": false,
+        "mesh_regenerated": false,
+        "scientific_approved": false,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542\\continuation_ready.sim",
+          "bytes": 273501769,
+          "sha256": "5c96f711bf02c533b34b95c8248129381c3b2723e54a7e075a4e635c404ae896"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542\\checkpoint_step_50.sim",
+          "bytes": 273760832,
+          "sha256": "92a0ad66bb88abc46796958f2753eb32a1c25285bc4b6c033653066e9bfd696d"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542\\checkpoint_step_100.sim",
+          "bytes": 273999474,
+          "sha256": "bea3923768b428681b9fc16a323233b86ecc266b156e02b6cbf39a7c680fc01f"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542\\checkpoint.sim",
+          "bytes": 273999716,
+          "sha256": "929e577dec199f8311ba46516ca388cb76b5417a2038cae1b309064fc5b1cfed"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\B0URANSTopDirection_SP_B_20261103_053542.log"
+    },
+    "kinematic_poc333939_20261103": {
+      "pid": 12520,
+      "variant": "SP_C",
+      "macro": "KinematicPoc333939.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\relocation_reopen_20261103_082325\\C0_recovered_t065.sim",
+      "cpu_processes": 8,
+      "gpu_compute": false,
+      "mpi": "ms",
+      "license_mode": "approved_task_profile_in_child_environment",
+      "run_id": "20261103_083855",
+      "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\KinematicPoc333939_SP_C_20261103_083855.log",
+      "macro_sha256": "96c6aaf7628ff191a86e5b7ad9639512893d5ad7e53b529d2e0c290fdddd5ab3",
+      "at": "2026-11-03T08:38:55.033053+01:00",
+      "id": "kinematic_poc333939_20261103",
+      "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855",
+      "initial_time_s": 0.65,
+      "state": "completed",
+      "ended_at": "2026-11-03T08:49:21.047489+01:00",
+      "macro_status": {
+        "status": "kinematic_poc_passed",
+        "steps": 100,
+        "saved_time_s": 0.8500000000000006,
+        "hydrodynamics_solved": false,
+        "flow_frozen": true,
+        "min_volume_m3": 2.126329711684968e-12,
+        "min_quality": 0.05510420273780264,
+        "max_angle_error_deg": 2.4868995751603507e-14,
+        "max_center_error_m": 2.220446049250313e-15,
+        "all_full_overset_audits_passed": true,
+        "training_approved": false
+      },
+      "checkpoints": [
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\kinematic_ready.sim",
+          "bytes": 1525453164,
+          "sha256": "ab00add2be91071c9660cb9a09730bcefe93f68b999edbdacd097b142423ce0e"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_25.sim",
+          "bytes": 1528133231,
+          "sha256": "e0a45ae84f52996158bac918f2b5d2306aa4432eb468ea4e062059a1e91bcdab"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_50.sim",
+          "bytes": 1528143273,
+          "sha256": "5babe9894ed69e114fc7edf660802d40aa9855317d6b8714612ac454f457abad"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_75.sim",
+          "bytes": 1528152504,
+          "sha256": "08de7e92c62ea644d11453e675306292f67c808c818b50b1c05dbb31d2ed4319"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_100.sim",
+          "bytes": 1528160548,
+          "sha256": "c0e811ed397a00b04fc456447821f92c51c330c91e67f8863084745dc05143ea"
+        },
+        {
+          "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\motion_verified.sim",
+          "bytes": 1528160790,
+          "sha256": "821f2a5702f69ed7cefc218eb0c75a2ba5f2ff1330b3d410380c3db7944959dd"
+        }
+      ],
+      "redacted_log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\KinematicPoc333939_SP_C_20261103_083855.log"
+    }
+  },
+  "active": null,
+  "controller_started_at": "2026-11-03T08:38:52.885843+01:00",
+  "controller_pid": 5016,
+  "next_job": null,
+  "owned_processes": {},
+  "queue_state": "HOLD_SCIENTIFIC_REVIEW",
+  "last_metrics": {
+    "physical_time_s": 0.85,
+    "timestep": 425,
+    "iteration": 11660,
+    "log_updated_at": "2026-11-03T08:48:51.505126+01:00",
+    "seconds_without_log_write": 30,
+    "saving_or_exporting": true,
+    "native_exit_code": 0,
+    "flap_angle_deg": 2.54207057919e-14,
+    "flap_angular_velocity_deg_s": 157.079632679,
+    "angle_error_deg": -1.84632424262e-14,
+    "center_error_m": 2.22044604925e-15,
+    "min_volume_m3": 9.12875011943e-12,
+    "min_cell_quality": 0.0610481862402,
+    "min_face_validity": 1.0,
+    "time_s": 0.85,
+    "overset_error_cells": 0.0,
+    "difficult_interpolation_cells": 0.0,
+    "history_rows": 100,
+    "last_output_sim": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\motion_verified.sim",
+    "checkpoint_integrity": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\motion_verified.sim",
+      "bytes": 1528160790,
+      "sha256": "821f2a5702f69ed7cefc218eb0c75a2ba5f2ff1330b3d410380c3db7944959dd",
+      "saved_time_s": 0.65,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T08:48:50.219924+01:00",
+      "native_reopen_verified": false
+    },
+    "owned_active_pids": [],
+    "macro_status": {
+      "status": "kinematic_poc_passed",
+      "steps": 100,
+      "saved_time_s": 0.8500000000000006,
+      "hydrodynamics_solved": false,
+      "flow_frozen": true,
+      "min_volume_m3": 2.126329711684968e-12,
+      "min_quality": 0.05510420273780264,
+      "max_angle_error_deg": 2.4868995751603507e-14,
+      "max_center_error_m": 2.220446049250313e-15,
+      "all_full_overset_audits_passed": true,
+      "training_approved": false
+    },
+    "operation": "RUNNING"
+  },
+  "failure_hold": "c0_tight_urans_matching",
+  "checkpoint_integrity": {
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_25.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_25.sim",
+      "bytes": 623842649,
+      "sha256": "a02c95ceaf7754ecaf343b50d6e7d8345078b41daa0effab1d8b69303246e0d9",
+      "saved_time_s": 0.3524,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T22:52:33.532027+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_50.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_50.sim",
+      "bytes": 623963681,
+      "sha256": "2e66b88034151de1de3b2be0c782a0c1fe92ee3421a4d6aa7f4616daea6d5222",
+      "saved_time_s": 0.4024,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T22:54:08.805853+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_75.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_75.sim",
+      "bytes": 624084721,
+      "sha256": "6350ab10bc9362f69ff43db557e188d96c74d8e3ca751be258a60651241ba7c1",
+      "saved_time_s": 0.4524,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:00:27.297077+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_100.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint_step_100.sim",
+      "bytes": 624205775,
+      "sha256": "1ccadfb9faf310d7352dd97894b3528db1f71001d84e120c2f3b7b08a067410c",
+      "saved_time_s": 0.5024,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:06:45.946453+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+      "bytes": 650472777,
+      "sha256": "c0f2dbd97b39f82fac4b7a8f2a517ad9cf81db0133ea7f7d1e423d7c214ac0f9",
+      "saved_time_s": 0.5184,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:08:51.683096+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_230957\\error_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_230957\\error_checkpoint.sim",
+      "bytes": 650472772,
+      "sha256": "f4755ada19f2e0046cfa442d92625200258f2b5bb7453a9d7b352485cf2f20b4",
+      "saved_time_s": 0.5184000000000004,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:12:32.386553+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_231609\\error_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_231609\\error_checkpoint.sim",
+      "bytes": 650499542,
+      "sha256": "57238b50d7470221e7b7af435406d8024e28f94a2d97cf1da0c143a872055cda",
+      "saved_time_s": 0.5184,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:18:45.156663+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\singlephase_initial_verified.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\singlephase_initial_verified.sim",
+      "bytes": 650499542,
+      "sha256": "29c153ae66e39688b4132312e0c6a26360c8306589dc0a1ab005ca26baafa5f9",
+      "saved_time_s": 0.5184,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:23:24.780184+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint_step_25.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint_step_25.sim",
+      "bytes": 702809626,
+      "sha256": "c56d9c3552c99de565740a2a9f1203ab90cd3acd7da515bd386a623585063097",
+      "saved_time_s": 0.5684,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:29:10.509427+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint_step_50.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint_step_50.sim",
+      "bytes": 702931057,
+      "sha256": "92b27dd81f18f7c368ab4f1efb626496f04b7996c9e99bebe287e957002bf4ad",
+      "saved_time_s": 0.6184,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:35:28.743674+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint.sim",
+      "bytes": 729271037,
+      "sha256": "e3594c9b927545954e305d5b062672dec93f3a418df2a1ebe99885b6c2c5f375",
+      "saved_time_s": 0.6644,
+      "native_save_complete": true,
+      "hash_at": "2026-11-02T23:41:14.914269+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_fresh_20261103_000031\\initialization_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_fresh_20261103_000031\\initialization_error.sim",
+      "bytes": 431129629,
+      "sha256": "95b9f3095c57c0990ed26160284c98d38e060b63214fb6559b8865e2575582db",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:04:11.443952+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noci_20261103_000523\\initialization_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noci_20261103_000523\\initialization_error.sim",
+      "bytes": 431131149,
+      "sha256": "eb7f24c19926793522f92c0cb27d1537c1c9fcc2efd54a6d56a1a2eb4be71ffb",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:08:30.289453+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noflux_20261103_001005\\initialization_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_fresh_noflux_20261103_001005\\initialization_error.sim",
+      "bytes": 431125072,
+      "sha256": "79e2dafadf6924b1c7447579cbf3b534266b6896670885868a18ddc594fe817b",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:12:40.831155+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap1mm_20261103_001516\\SP_C_repair_error_20261103_001516.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap1mm_20261103_001516\\SP_C_repair_error_20261103_001516.sim",
+      "bytes": 202815938,
+      "sha256": "17efa0187726bc27cfd6370e15d92fa70a5d5270b017e732c04259c991fe77ec",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:18:52.464641+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_audit_20261103_002030\\audit_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_audit_20261103_002030\\audit_error.sim",
+      "bytes": 533565472,
+      "sha256": "6a6123f644081f60f046e29f506995e6be3bfaba8902ae01fe2452782e6662de",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:23:05.608639+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_distance_audit_20261103_002542\\audit_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_distance_audit_20261103_002542\\audit_error.sim",
+      "bytes": 586298305,
+      "sha256": "22663794debe829b6e5887869da6643a25417fd4fbe2639ba56ff4947ac183f5",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:28:17.424664+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_patch05mm_20261103_003057\\SP_C_repair_error_20261103_003057.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_patch05mm_20261103_003057\\SP_C_repair_error_20261103_003057.sim",
+      "bytes": 492478315,
+      "sha256": "231475c9f3cabd333939f4d51dcdefe56aa05b47ab8c5ac99a14fc34277b93a6",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:35:06.586938+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "bytes": 675194726,
+      "sha256": "35b44cb5cd54d35cf7e7b849140524b9f2be5d4ffc8b583da44495db5ba88865",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:44:17.662914+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_refined_init_20261103_004626\\initialization_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_refined_init_20261103_004626\\initialization_error.sim",
+      "bytes": 763404207,
+      "sha256": "89b914c3ea5346856515a52ea1222105ca76aea5a6db8d1b1d91af36054f6526",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T00:51:06.744654+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_iter_250.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_iter_250.sim",
+      "bytes": 805202374,
+      "sha256": "d428150ff7e1a3981e4603e87bfe898451d9f33f6e06948e10383aeb0ff75c14",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:03:35.599117+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_checkpoint.sim",
+      "bytes": 847104592,
+      "sha256": "945353bf97a01ea6b57148c99c073db548cdbf24c9aa33ccd5130ecaf684c09a",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:05:40.744436+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_250.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_250.sim",
+      "bytes": 972474619,
+      "sha256": "40b77468543d00194176dc67cbfa80cb408fc6cf3e48bb99f7fe204f88d518c4",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:13:41.975246+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_500.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_500.sim",
+      "bytes": 1014272489,
+      "sha256": "f30d3f9c54f1054b74653953ef30355271f772ef2e382eb3e09901701db4ade4",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:16:22.536396+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_750.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_iter_750.sim",
+      "bytes": 1056070477,
+      "sha256": "6a0e72849e7aca58979bb9c4d9ec8b4fd9652613b2b298408c311f7cbd56c6df",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:19:32.000924+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_checkpoint.sim",
+      "bytes": 1097958567,
+      "sha256": "615bb3b3ab0bd0f64d7d05b26da17d64cc65940b9272a64009cb591477a952b7",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:20:34.854609+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_iter_250.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_iter_250.sim",
+      "bytes": 1223330079,
+      "sha256": "77ff1ff3fd5e8e7008faabd926bdcf35d990fc4c8f68c8ddaf1f7f2081e05991",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:27:24.567674+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_iter_500.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_iter_500.sim",
+      "bytes": 1265128669,
+      "sha256": "8d3ac1977f7fab13a6cbbff35da91c82572c9dbe33d5bec0d40437c11c3c565b",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:30:02.288157+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "bytes": 1307018414,
+      "sha256": "932e6c274be656cdfab3c5d19c78c5f5d6f1fda8d3226b9633e950c3b637ee18",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:31:36.069000+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_momentum_second_20261103_013313\\initialization_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_momentum_second_20261103_013313\\initialization_error.sim",
+      "bytes": 1390606122,
+      "sha256": "3e0cc792bed0252e291682e1c28453c84b8e96dc8ad6e10b4fd2842fc7d426cf",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:37:22.125596+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_20261103_014813\\layer_candidate.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_20261103_014813\\layer_candidate.sim",
+      "bytes": 1390353136,
+      "sha256": "506b85082bc3e70c5061c27de3f7caaca21215f0f4609a690a34b90bbf97db52",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:51:19.540004+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_recut_20261103_015428\\layer_candidate.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_recut_20261103_015428\\layer_candidate.sim",
+      "bytes": 1390353139,
+      "sha256": "33ebd0d222fbb75a79ffb40deee71ab42ba76e3e6393b5bee6fc3d5840f8f1b4",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T01:57:34.652246+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_frozen_20261103_015909\\layer_candidate.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_frozen_20261103_015909\\layer_candidate.sim",
+      "bytes": 1390353168,
+      "sha256": "73dcfc89efcfd630f108cb867664e260a6c604006d1e552b89f0ed2497bf6bb1",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:02:16.243493+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_cold_20261103_021037\\mesh_only_candidate.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_cold_20261103_021037\\mesh_only_candidate.sim",
+      "bytes": 758532012,
+      "sha256": "c33958507636b9ba0ee40b149d1b2463a34be7c9c539d3e3d7492956043bb547",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:13:43.307979+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_zero_storage_20261103_021548\\layer_audit_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_zero_storage_20261103_021548\\layer_audit_error.sim",
+      "bytes": 520766038,
+      "sha256": "f80624ba9f078d2af01dd4d4f50f68ed751f24b548f0274615d1dcf0211f42ab",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:18:23.398347+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_20261103_022619\\mesh_only_candidate.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_20261103_022619\\mesh_only_candidate.sim",
+      "bytes": 760726866,
+      "sha256": "b6a59ac0a2030381a85164bcef05f0affd0ca43c92b7b1b648d7230814200edc",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:29:25.238353+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_coverage_20261103_023202\\mesh_only_candidate.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_forewall36_coverage_20261103_023202\\mesh_only_candidate.sim",
+      "bytes": 760743633,
+      "sha256": "5ced7fc0520a3a0e78dc5d248678ce626ea524d0b38355560bd17ab5549403d1",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:35:08.641136+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v1_20261103_024700\\SP_C_repair_error_20261103_024700.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v1_20261103_024700\\SP_C_repair_error_20261103_024700.sim",
+      "bytes": 114081640,
+      "sha256": "c8c4ac9079f5aa9c4000d8e8060bc410378fb7f6316e333f425b5d235953f172",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:49:36.103468+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+      "bytes": 388118938,
+      "sha256": "0db9b6252019fff169432f902f37ecdb9d4e071724b396e3c0d55cda51819643",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:54:16.758332+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_firstorder_20261103_025551\\initialization_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_firstorder_20261103_025551\\initialization_error.sim",
+      "bytes": 439010462,
+      "sha256": "8ba1c38cfbbbbf4ac3197a8ec94c30be767261e2892cc1b6a4907640474c2d04",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T02:58:26.684661+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_continuity_20261103_030355\\initialization_error.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_continuity_20261103_030355\\initialization_error.sim",
+      "bytes": 427345041,
+      "sha256": "eac1010fa73a709a0e79cdde04e4fdc44894b648e622c94c015f20da29d9cd66",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:07:32.890699+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_mapped_20261103_031141\\warm_mapped_candidate.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_mapped_20261103_031141\\warm_mapped_candidate.sim",
+      "bytes": 427330398,
+      "sha256": "eeeddba25233ba2bcd80ef10d7a8419f0d24a75ffefea3d3bb9f033db6e86d2d",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:14:16.903276+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_250.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_250.sim",
+      "bytes": 502488110,
+      "sha256": "25d7946ef8883a0a89abdca47cd4e582ef5ea56e00670ccef19f555323e594b0",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:21:03.886194+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_500.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_500.sim",
+      "bytes": 526607764,
+      "sha256": "886a9bc7467360b5eef79ad649e44e6e8a43be624f293c7acb8484492911edfd",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:22:38.400466+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_750.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_iter_750.sim",
+      "bytes": 550727414,
+      "sha256": "4a1a4cc21c9c62b329a064f37d503fa71d7765201d9e1e90cb325f13a031c6c4",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:24:12.945128+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_checkpoint.sim",
+      "bytes": 599052165,
+      "sha256": "d8fd31ab9fb0685c212743a466c8abca2bfb115f2f630b1912d6826e471aef48",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:25:46.835886+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_iter_250.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_iter_250.sim",
+      "bytes": 671389030,
+      "sha256": "9564c36454abaee79239e40669f3bb080e62b219d0ad27f1797f7babe759f525",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:37:38.577352+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_checkpoint.sim",
+      "bytes": 719713433,
+      "sha256": "49508e4d15a1485a8a785390a0413ad2de4d1cf1d1e9728d551da253e54ca47a",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:39:12.613764+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_iter_250.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_iter_250.sim",
+      "bytes": 792051334,
+      "sha256": "efd04c77b1dde8001cbdb568f391303a7a89d6f5043c5391b8207331c2fdb343",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:45:29.595633+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_iter_500.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_iter_500.sim",
+      "bytes": 816171976,
+      "sha256": "8773e4ce37eed11d86ed905802ac39c0aa17f5e37cb3b194e1f467071575e5eb",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:47:04.620087+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim",
+      "bytes": 840404092,
+      "sha256": "3575fad827e54ce942afada6d6c58a1c5cb5cd580e1da0f6065ff05f43b7fe6b",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:48:07.432360+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_20261103_035229\\error_checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_20261103_035229\\error_checkpoint.sim",
+      "bytes": 864489915,
+      "sha256": "a14193bf28dd6b22bf38c80741942a7b8752f9d7cd3260c98fe8996824aa35de",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:55:04.274779+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\URANS_ready.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\URANS_ready.sim",
+      "bytes": 864519914,
+      "sha256": "be07da8e582a5c3b649a8aae05f3fcf083ae2acbdcf0cba51d7dd493a7ec3ab2",
+      "saved_time_s": 0,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T03:59:46.776569+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint_step_50.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint_step_50.sim",
+      "bytes": 1090806392,
+      "sha256": "14d695c57e51f97c3298b6643155068e8b7babc180ac828fa7e56057c8834e67",
+      "saved_time_s": 0.1,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:03:59.385095+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint_step_100.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint_step_100.sim",
+      "bytes": 1139069360,
+      "sha256": "e34670711d8532318393e0eda11dea43bc8451ec49f77051a9b8426ec2c43f7d",
+      "saved_time_s": 0.2,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:08:43.940858+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint.sim",
+      "bytes": 1211413778,
+      "sha256": "d4b0c8eca2ff355739b2c1cfda79def31b56e48434c475976c157bce2bbfba55",
+      "saved_time_s": 0.3,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:13:27.326767+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\continuation_ready.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\continuation_ready.sim",
+      "bytes": 1235521835,
+      "sha256": "6a91870c3cff1a0b50b60a6f3de5570f055c13f889ecc89e27476ae115262ab0",
+      "saved_time_s": 0.3,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:17:09.793254+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint_step_50.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint_step_50.sim",
+      "bytes": 1308005726,
+      "sha256": "6a231e6ca3e47d11c61581ad737abccede5ab42f6b3bfe56ba6c12e24ecbfb8a",
+      "saved_time_s": 0.4,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:28:49.363221+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+      "bytes": 1356288278,
+      "sha256": "8b6162b9baa27a5e04c38048dbab3c801cdd99266200a320231390d1f3f8feed",
+      "saved_time_s": 0.45,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:34:36.512105+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\continuation_ready.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\continuation_ready.sim",
+      "bytes": 1380396214,
+      "sha256": "ca44b8c32bd71e6cf8f316f75e0b4987bfea55efd4464619a63f8a20ec24d0af",
+      "saved_time_s": 0.45,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:38:23.148880+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint_step_50.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint_step_50.sim",
+      "bytes": 1452880266,
+      "sha256": "98c1766158674f6fda92b34580b098e425da65f1839a0881d63ff1d718489f85",
+      "saved_time_s": 0.55,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:49:58.810297+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint.sim",
+      "bytes": 1501163461,
+      "sha256": "e457f6e1bdaa7c59708416c0534f7c62188adebaa0f58dfacf5681877392d0ec",
+      "saved_time_s": 0.6,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:55:45.199146+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\continuation_ready.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\continuation_ready.sim",
+      "bytes": 1380396221,
+      "sha256": "1d5680e049b1430c5e36a34ec0614b592471aac51ae97c2c3ee0eac60db5fb42",
+      "saved_time_s": 0.45,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T05:10:00.795161+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint_step_50.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint_step_50.sim",
+      "bytes": 1452901008,
+      "sha256": "7fcf8a2d1719dce65391f96adf5164a0877664c70aa905821707b883efe8580c",
+      "saved_time_s": 0.55,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T05:22:05.882529+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint.sim",
+      "bytes": 1525385629,
+      "sha256": "c8b2396f2d087112d06045b06a6c62e93c4003eafde969aa8c8d0ca8120afc10",
+      "saved_time_s": 0.65,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T05:34:10.075972+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542\\checkpoint.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542\\checkpoint.sim",
+      "bytes": 273999716,
+      "sha256": "929e577dec199f8311ba46516ca388cb76b5417a2038cae1b309064fc5b1cfed",
+      "saved_time_s": 0.5,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T07:31:27.061946+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\kinematic_ready.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\kinematic_ready.sim",
+      "bytes": 1525453164,
+      "sha256": "ab00add2be91071c9660cb9a09730bcefe93f68b999edbdacd097b142423ce0e",
+      "saved_time_s": 0.65,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T08:41:32.138044+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_25.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_25.sim",
+      "bytes": 1528133231,
+      "sha256": "e0a45ae84f52996158bac918f2b5d2306aa4432eb468ea4e062059a1e91bcdab",
+      "saved_time_s": 0.7,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T08:43:38.228423+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_50.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_50.sim",
+      "bytes": 1528143273,
+      "sha256": "5babe9894ed69e114fc7edf660802d40aa9855317d6b8714612ac454f457abad",
+      "saved_time_s": 0.75,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T08:45:11.840504+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_75.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\checkpoint_step_75.sim",
+      "bytes": 1528152504,
+      "sha256": "08de7e92c62ea644d11453e675306292f67c808c818b50b1c05dbb31d2ed4319",
+      "saved_time_s": 0.8,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T08:47:16.445693+01:00",
+      "native_reopen_verified": false
+    },
+    "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\motion_verified.sim": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\motion_verified.sim",
+      "bytes": 1528160790,
+      "sha256": "821f2a5702f69ed7cefc218eb0c75a2ba5f2ff1330b3d410380c3db7944959dd",
+      "saved_time_s": 0.65,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T08:48:50.219924+01:00",
+      "native_reopen_verified": false
+    }
+  },
+  "paused_at": "2026-11-03T07:46:59.006942+01:00",
+  "relocation_archive": "F:\\ntnu\\flap_control\\checkpoints\\RELOCATION_20261103_073441"
+}

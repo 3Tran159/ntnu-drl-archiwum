@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-10-30T12:10:44.975642+01:00",
+  "case": "W01a_W20L4_M10_calm_start_r1",
+  "source_case": "W01a_W20L4_M10_calm_start_r1",
+  "field_time_s": 0.020000000000000014,
+  "source_file": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_inlet_ramp_api_audit_r1\\physical_fields.csv",
+  "source_sha256": "e5e1d95cf2ba7f417e6c12c96b902fe7c4c098444f9c05d844441fe0a36646c7",
+  "source_checkpoint": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\checkpoint_startup_t0.020.sim",
+  "source_checkpoint_sha256": "489990d40da561cee752209e8dd8aa2675733a7e3651d4b246d535fd20556179",
+  "audit_result": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_inlet_ramp_api_audit_r1\\controller_result.json",
+  "zero_flow_steps": true,
+  "physical_fields_unchanged": true,
+  "native_function": {
+    "lookup": "instanceof star.flow.VorticityVectorFunction in getVectorFieldFunctions",
+    "found": true,
+    "function_name": "VorticityVector",
+    "presentation_name": "Vorticity",
+    "class": "star.flow.VorticityVectorFunction",
+    "component_index": 1,
+    "component_meaning": "omega_y = du/dz - dw/dx for x-z flow",
+    "omega_y_min_per_s": -1171303.5694805288,
+    "omega_y_max_per_s": 608323.848601239
+  },
+  "source_cells": 317277,
+  "source_range_per_s": [
+    -1171303.5694805288,
+    608323.848601239
+  ],
+  "geometry_file": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+  "geometry_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+  "foil_edges": 856,
+  "views": [
+    {
+      "name": "Foil and near wake",
+      "x": [
+        -2.0,
+        6.0
+      ],
+      "z": [
+        -1.0,
+        1.5
+      ],
+      "range": 1000.0,
+      "saved_cells_in_view": 116924,
+      "saved_cell_clipping_pct": 26.56511922274298,
+      "display_min_per_s": -1000.0,
+      "display_max_per_s": 1000.0
+    },
+    {
+      "name": "Wake focus",
+      "x": [
+        1.2050000000000003,
+        6.0
+      ],
+      "z": [
+        -0.6,
+        0.6
+      ],
+      "range": 200.0,
+      "saved_cells_in_view": 34079,
+      "saved_cell_clipping_pct": 0.0029343584025352857,
+      "display_min_per_s": -200.0,
+      "display_max_per_s": 200.0
+    }
+  ],
+  "method": "Delaunay interpolation of native saved Vorticity[j] (/s). Exact closed polygon-path intersection masks every Delaunay triangle touching/intersecting the foil; raster points inside the solid also masked. No velocity-gradient reconstruction.",
+  "masked_triangles": 2117,
+  "triangle_count": 248074,
+  "limitations": [
+    "Saved calm checkpoint; not current solver time.",
+    "Clipping fraction is by saved cell centres in each displayed rectangle, not physical area.",
+    "White masked near-wall gaps do not mean zero vorticity.",
+    "No wave/force accuracy acceptance."
+  ],
+  "solver_actions": 0
+}

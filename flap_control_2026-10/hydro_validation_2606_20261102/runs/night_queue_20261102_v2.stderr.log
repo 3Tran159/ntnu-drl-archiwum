@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 161, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 122, in main
+    cfg=read(CFG);validate(cfg);plist=processes();rs=resources()
+                  ^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 31, in validate
+    assert j['macro'] in ALLOWED
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError

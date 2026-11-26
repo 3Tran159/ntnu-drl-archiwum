@@ -1,0 +1,54 @@
+{
+  "operation": "HOLD",
+  "status": "HOLD",
+  "reason": "Native H010 wave or single-phase gate failed",
+  "wave": {
+    "status": "HOLD_RESIDUAL_WINDOW",
+    "samples": 40,
+    "startup_s": 120.75529060000008,
+    "solver_step_median_s": 2.6202149,
+    "solver_step_mean_s": 2.720560197142857,
+    "end_to_end_s": 292.80337359999976,
+    "dt_s": 0.001,
+    "checkpoint_sha256_input": null,
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\A_STOKES_H010_QUAL40_20261104_093829\\FINAL.sim",
+    "checkpoint_sha256": "f559dbd1f9f5124ca3a7fd2eb1d22e2ed8a6a06a436dbafa0052197d87a86b93",
+    "state": {
+      "steps": 40,
+      "time_s": 0.04000000000000003,
+      "solver_seconds": 110.68671429999998,
+      "residual_pass": false,
+      "reason": "",
+      "training_approved": false,
+      "amplitude_target": 0.05,
+      "status": "HOLD_RESIDUAL_WINDOW",
+      "foil": false
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "motion": {
+    "status": "PASS_DIAGNOSTIC_SMOKE",
+    "samples": 100,
+    "startup_s": 118.73483769999984,
+    "solver_step_median_s": 0.6664286,
+    "solver_step_mean_s": 0.8015563410526316,
+    "end_to_end_s": 275.1400458999997,
+    "dt_s": 2.5e-05,
+    "checkpoint_sha256_input": "8433d57823ea06cb602675b82dea179241c59ed0b354ddac7e9c040e6a24c309",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\B_SEEDED_URANS_DT25US_20261104_093338\\FINAL.sim",
+    "checkpoint_sha256": "5fa5ff1128f4d7b8f8d92bf9bb34b85eb6dcd61b793bed414cfe7e8213eff605",
+    "state": {
+      "steps": 100,
+      "VOF": false,
+      "time_s": 0.0024999999999999988,
+      "normalized_max_final25": 0.00034975912313416513,
+      "U_m_s": 18.0,
+      "status": "PASS_DIAGNOSTIC_SMOKE",
+      "training_approved": false
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "night_authorized": false
+}

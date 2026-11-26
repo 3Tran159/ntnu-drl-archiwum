@@ -1,0 +1,608 @@
+Starting local server: starserver.bat -new -power -podkey K78jNQHAbKB2rMxqOvW0ow -licpath 1999@flex.cd-adapco.com -cpubind off -np 2 -mpi ms 
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-1
+Process rank 0 THINKPAD-LUCJAN 22792
+Total number of processes : 2
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 19:20:16 2026
+
+Server::start -host THINKPAD-LUCJAN:47829
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:97: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("HYDRO mesh cell audit");table.getParts().setObjects(regions);table.setRepresentation(fv);table.setExtractVertexData(false);table.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("FaceValidity"),s.getFieldFunctionManager().getFunction("CellQuality"),s.getFieldFunctionManager().getFunction("PrismLayerNumber"),s.getFieldFunctionManager().getFunction("PrismCellThickness")));table.extract();table.export(out.resolve("mesh_cells.csv").toString());
+                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:106: warning: [deprecation] setComponents(double,double,double) in star.common.Coordinate has been deprecated
+SurfaceExtruderDirection dir=se.getSurfaceExtruderControls().get(SurfaceExtruderDirection.class);dir.setDirectionMode(SurfaceExtruderDirection.DirectionMode.SPECIFIED);dir.getUserSpecifiedDirection().getDirection().setComponents(0,-.02,0);se.execute();
+                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:110: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+List<Boundary> oldWalls=new ArrayList<>(old.getBoundaryManager().getBoundaries());fixed.removeAll(oldWalls);flap.removeAll(oldWalls);regions.remove(old);s.getRegionManager().removeRegions(List.of(old));fresh.setPresentationName(name);
+                                                                                                                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:126: warning: [deprecation] setUseAlternateHoleCutting(boolean) in star.common.IndirectRegionInterface has been deprecated
+if(over){IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                               ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:126: warning: [deprecation] setEnabledZeroDonorCheck(boolean) in star.common.IndirectRegionInterface has been deprecated
+if(over){IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:126: warning: [deprecation] setCloseProximity(boolean) in star.common.IndirectRegionInterface has been deprecated
+if(over){IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:126: warning: [deprecation] setPrismLayerShrinkage(boolean) in star.common.IndirectRegionInterface has been deprecated
+if(over){IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:126: warning: [deprecation] setTreatErrorAsWarning(boolean) in star.common.IndirectRegionInterface has been deprecated
+if(over){IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:128: warning: [deprecation] getAxisOrigin() in star.motion.RotatingMotion has been deprecated
+RotatingMotion rot=s.get(MotionManager.class).createMotion(RotatingMotion.class,"Flap prescribed rigid rotation");rot.getAxisOrigin().setComponents(xh,.02,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);((RotationAngle)rot.getRotationSpecification()).getRotationAngle().setDefinition("<0 deg>");ov.getValues().get(MotionSpecification.class).setMotion(rot);}
+                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191807\BuildExtrudedHydroMesh.java:128: warning: [deprecation] getAxisDirection() in star.motion.RotatingMotion has been deprecated
+RotatingMotion rot=s.get(MotionManager.class).createMotion(RotatingMotion.class,"Flap prescribed rigid rotation");rot.getAxisOrigin().setComponents(xh,.02,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);((RotationAngle)rot.getRotationSpecification()).getRotationAngle().setDefinition("<0 deg>");ov.getValues().get(MotionSpecification.class).setMotion(rot);}
+                                                                                                                                                                  ^
+
+HYDRO_STAGE Importing native split geometry
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Creating one part per imported file.
+Reading surface from .stl file: Hydro_Main.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.03, Wall Time: 0.03, Memory: 147.66 MB
+Imported surface statistics:
+  # Faces:         2428
+  # Vertices:      1216
+  # Special Edges: 0
+
+Creating one part per imported file.
+Reading surface from .stl file: Hydro_Flap.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.02, Wall Time: 0.01, Memory: 148.12 MB
+Imported surface statistics:
+  # Faces:         808
+  # Vertices:      406
+  # Special Edges: 0
+
+Started Parasolid modeler version 38.1.151
+Mesh Operation Hydro_Background complete. CPU Time: 0.41, Wall Time: 0.37, Memory: 161.91 MB
+ Only 1 part was assigned to a region
+8 part surfaces were assigned to 8 boundaries
+No Interfaces were created
+Mesh Operation Hydro_Overset complete. CPU Time: 0.12, Wall Time: 0.09, Memory: 161.96 MB
+ Only 1 part was assigned to a region
+8 part surfaces were assigned to 8 boundaries
+No Interfaces were created
+Loading module: MotionModel
+Loading module: MaterialModel
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\SP_C_configured_20261102_191807.sim... complete (1.3271MB in 0.07668s).
+Loading module: StarSweptMesher
+HYDRO_STAGE Generating directed source mesh Background directed mesh
+ Checking mesh-CAD association...done.  No problems found.
+Creating the 2.5d surface slice before remeshing...
+   Done.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 0.02, Wall Time: 0.00, Memory: 228.30 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Running in serial
+ Project to CAD geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001        1013      83.0
+   < 0.01         1155      94.7
+   < 0.1          1217      99.8
+   < 0.2          1217      99.8
+   < 0.3          1217      99.8
+   < 0.4          1217      99.8
+   < 0.5          1218      99.8
+   < 0.6          1218      99.8
+   < 0.7          1218      99.8
+   < 0.8          1218      99.8
+   < 0.9          1219      99.9
+   < 1.0          1220     100.0
+ Worst Tri quality is 5.138e-07
+
+ initial number of faces: 4880
+
+ Phase 1: Apply Global Limits
+      current number of faces: 20000
+
+   Tri Quality     Faces    Percent
+     < 0.001           1       0.0
+     < 0.01           26       0.1
+     < 0.1           271       1.0
+     < 0.2           399       1.5
+     < 0.3           597       2.3
+     < 0.4           760       2.9
+     < 0.5          1013       3.9
+     < 0.6          1594       6.2
+     < 0.7          2658      10.3
+     < 0.8          5046      19.5
+     < 0.9         12932      50.1
+     < 1.0         25828     100.0
+   Worst Tri quality is 0.0006458
+
+
+ Phase 2: Improve Grading
+      current number of faces: 40000
+      current number of faces: 80000
+      current number of faces: 150000
+      current number of faces: 200000
+      current number of faces: 300000
+      current number of faces: 400000
+      current number of faces: 500000
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.1             0       0.0
+     < 0.2             0       0.0
+     < 0.3             0       0.0
+     < 0.4             5       0.0
+     < 0.5           208       0.0
+     < 0.6          2767       0.6
+     < 0.7          8509       1.7
+     < 0.8         33854       6.8
+     < 0.9        199344      40.1
+     < 1.0        497409     100.0
+   Worst Tri quality is 0.3844
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.1             0       0.0
+   < 0.2             0       0.0
+   < 0.3             0       0.0
+   < 0.4             0       0.0
+   < 0.5             0       0.0
+   < 0.6             0       0.0
+   < 0.7            91       0.0
+   < 0.8         10347       1.9
+   < 0.9        139375      26.1
+   < 1.0        533199     100.0
+ Worst Tri quality is 0.63
+
+ final number of faces: 533199
+                   |   Default Mesher | 
+           Patches |                8 | 
+         Triangles |           533199 | 
+ Aligned mesh not created for any patches.
+
+ Elapsed time: 21.54 secs total, 8.82 secs potentially parallelizable (40.94% of total)
+----------------------------------------
+Surface Remesher Completed: CPU Time: 21.09, Wall Time: 21.54, Memory: 298.14 MB
+----------------------------------------
+
+Executing the 2d mesher...
+
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 1070248, area: 4803, reference location: (-35 0.01 -21.7115)
+Total => Surfaces: 1, Faces: 1070248, Area: 4803
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+ |Angle Range|Prism Growing Edges|High Dihedral Edges|
+ |   0 -  18 |               2320|                  0|
+ |  18 -  36 |                  0|                  0|
+ |  36 -  54 |                  0|                  0|
+ |  54 -  72 |                  0|                  0|
+ |  72 -  90 |                  0|                  0|
+ |  90 - 108 |                  0|                  0|
+ | 108 - 126 |                  0|                  0|
+ | 126 - 144 |                  0|                  0|
+ | 144 - 162 |                  0|                  0|
+ | 162 - 180 |                  0|                  0|
+Total => prism growing edges: 2320, high dihedral edges: 0
+
+No prism growing facetype edges found with a dihedral angle greater than 46 degrees.
+done Surface diagnostics.CPU Time: 0.45, Wall Time: 0.44, Memory: 454.43 MB
+
+Surface is valid for volume meshing.CPU Time: 3.42, Wall Time: 3.45, Memory: 421.22 MB
+
+  done,  CPU Time: 4.17, Wall Time: 4.22, Memory: 421.22 MB
+User set distribution function to be  GEOMETRIC PROGRESSION
+----------------------------------------
+Executing Prism Layer Subsurface
+----------------------------------------
+Global Input surface contains 1070248 faces, and 535124 vertices 
+Local Property is activated
+   done, CPU Time: 0.31, Wall Time: 0.31, Memory: 700.09 MB
+ Building preprocessor done 
+Computing vertex normals
+ Exchanged the remote active status done
+Computing the normals done
+   done, CPU Time: 0.05, Wall Time: 0.05, Memory: 708.42 MB
+Computing Vertex normals done
+Computing surface proximity
+   done, CPU Time: 0.61, Wall Time: 0.60, Memory: 752.41 MB
+Constraining boundary vertices
+   done, CPU Time: 0.02, Wall Time: 0.01, Memory: 712.19 MB
+
+Iteration 1:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 2322 of 2322 active vertices)
+Checking 2322 face-based validity metrics
+   found 0 invalid faces
+Checking vertex intersections for all vertices
+
+Using edge recovery to fix prism layer boundaries...
+Recovering edges... Edges recover info:  0   0
+ Grow affected faces......
+Remeshing surface near recovered edges...
+Surface remeshed.  4070 faces added to surface.
+CPU Time: 0.47, Wall Time: 0.47, Memory: 736.46 MB
+ Finished two levels of remeshing 
+Edge recovery was successful.
+CPU Time: 1.06, Wall Time: 1.06, Memory: 736.58 MB
+
+Checking true subsurface intersections for all vertices
+ no intersections 
+   found 0 intersecting vertices
+Checking subsurface orientation!!
+
+Iterations successful
+
+Combining interface maps
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 736.69 MB
+Marking zero layer regions
+   found 572 collapsed faces
+   found 2 edges bounding collapsed regions
+   found 4 vertices bounding collapsed regions
+Global Subsurface contains 1049278 faces, and 524639 vertices 
+----------------------------------------
+Prism Layer Subsurface Completed: CPU Time: 5.72, Wall Time: 5.78, Memory: 686.10 MB
+----------------------------------------
+ Generating dual core mesh...
+ Created 267212 dual faces, and 532467 dual verts.
+Created 263350 cells
+   finished generating poly core mesh CPU Time: 3.17, Wall Time: 3.32, Memory: 790.27 MB
+There are 1069279 faces have subsurface thickness. 
+ The default subsurface thickness is 0.01546
+Set default subsurface thickness 0.01546
+----------------------------------------
+Executing Prism Layer Extrusion
+----------------------------------------
+Marking vertices, edges and faces to extrude
+Subsurface thickness is set by subsurface.
+ find projections withOUT VertMapper (all core mesh)!
+   found (tet) 574 zero layer subsurface vertices
+Marking zero extrusion entities (vertices/edges/faces)
+   done, CPU Time: 0.05, Wall Time: 0.04, Memory: 673.31 MB
+Modifying number of layers for cells adjacent to retracted regions
+   modified number of layers for 2 faces
+Creating extrusion layer mesh
+   default number of layers = 48
+   default initial wall thickness = 1.53061224489795906255121520773e-06
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 680.87 MB
+ Layer Reduction Percentage set to 50
+Default chopping percentage 50
+There is no Local Layer Reduction 
+Correct number of layer for:  Global Layer Reduction, setting(s).
+   stitching vertical edges at variable layer interface
+   stitching vertical faces at variable layer interface
+Extrusion mesh contains:
+   41460 cells
+   166781 faces
+   210124 edges
+   84804 vertices
+----------------------------------------
+Prism Layer Extrusion Completed: CPU Time: 1.19, Wall Time: 1.18, Memory: 661.93 MB
+----------------------------------------
+
+2d mesh generation completed.  CPU Time: 18.92, Wall Time: 19.24, Memory: 522.01 MB
+
+HYDRO_STAGE Sweeping one span layer Background directed mesh
+----------------------------------------
+Executing Mesh Operation Background directed mesh
+----------------------------------------
+Sweeping part Hydro_Background_fluid...
+Warning: sweeping algorithms fail to generate valid volume mesh.
+Number of Cells in - Hydro_Background_fluid : 304810
+----------------------------------------
+Total Number of Cells in Hydro_Background_fluid : 304810
+----------------------------------------
+Meshing Completed: CPU Time: 387.48, Wall Time: 394.98, Memory: 573.76 MB
+----------------------------------------
+Converting mesh into finite volume representation in Region Background
+   Converted mesh for Background CPU Time: 430.97, Wall Time: 1.51, Memory: 563.08 MB
+Mesh conversion completed, CPU Time: 431.53, Wall Time: 2.13, Memory: 530.87 MB
+Converting mesh into finite volume representation completed: CPU Time: 431.53, Wall Time: 2.14, Memory: 530.89 MB
+	Cells: 304810	Faces: 871084	Vertices: 1136410
+Mesh Operation Background directed mesh complete. CPU Time: 389.56, Wall Time: 397.17, Memory: 372.44 MB
+HYDRO_STAGE Generating directed source mesh Overset directed mesh
+ Checking mesh-CAD association...done.  No problems found.
+Creating the 2.5d surface slice before remeshing...
+   Done.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 429.50, Wall Time: 0.00, Memory: 377.30 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Running in serial
+ Project to CAD geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001          71      17.2
+   < 0.01          385      93.4
+   < 0.1           408      99.0
+   < 0.2           408      99.0
+   < 0.3           408      99.0
+   < 0.4           408      99.0
+   < 0.5           408      99.0
+   < 0.6           411      99.8
+   < 0.7           411      99.8
+   < 0.8           411      99.8
+   < 0.9           411      99.8
+   < 1.0           412     100.0
+ Worst Tri quality is 3.248e-05
+
+ initial number of faces: 1648
+
+ Phase 1: Apply Global Limits
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.1            14       0.3
+     < 0.2            59       1.2
+     < 0.3           181       3.6
+     < 0.4           221       4.4
+     < 0.5           303       6.0
+     < 0.6           481       9.6
+     < 0.7           778      15.5
+     < 0.8          1316      26.2
+     < 0.9          2670      53.1
+     < 1.0          5024     100.0
+   Worst Tri quality is 0.04196
+
+
+ Phase 2: Improve Grading
+      current number of faces: 20000
+      current number of faces: 40000
+      current number of faces: 80000
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.1             0       0.0
+     < 0.2             0       0.0
+     < 0.3             0       0.0
+     < 0.4             0       0.0
+     < 0.5            81       0.1
+     < 0.6           706       0.8
+     < 0.7          2100       2.3
+     < 0.8          8005       8.9
+     < 0.9         38796      43.0
+     < 1.0         90242     100.0
+   Worst Tri quality is 0.4197
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.1             0       0.0
+   < 0.2             0       0.0
+   < 0.3             0       0.0
+   < 0.4             0       0.0
+   < 0.5             0       0.0
+   < 0.6             0       0.0
+   < 0.7            33       0.0
+   < 0.8          2294       2.4
+   < 0.9         26153      27.7
+   < 1.0         94445     100.0
+ Worst Tri quality is 0.6044
+
+ final number of faces: 94445
+                   |   Default Mesher | 
+           Patches |                8 | 
+         Triangles |            94445 | 
+ Aligned mesh not created for any patches.
+
+ Elapsed time: 4.03 secs total, 1.62 secs potentially parallelizable (40.17% of total)
+----------------------------------------
+Surface Remesher Completed: CPU Time: 433.36, Wall Time: 4.03, Memory: 419.71 MB
+----------------------------------------
+
+Executing the 2d mesher...
+
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 190956, area: 0.908361, reference location: (0.740989 0.01 -0.258718)
+Total => Surfaces: 1, Faces: 190956, Area: 0.908361
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+ |Angle Range|Prism Growing Edges|High Dihedral Edges|
+ |   0 -  18 |               1451|                  0|
+ |  18 -  36 |                  0|                  0|
+ |  36 -  54 |                  0|                  0|
+ |  54 -  72 |                  0|                  0|
+ |  72 -  90 |                  0|                  0|
+ |  90 - 108 |                  0|                  0|
+ | 108 - 126 |                  0|                  0|
+ | 126 - 144 |                  0|                  0|
+ | 144 - 162 |                  0|                  0|
+ | 162 - 180 |                  1|                  1|
+Total => prism growing edges: 1452, high dihedral edges: 1
+
+Worst 1 prism growing facetype edges with dihedral angles greater than 46 degrees:
+ dihedral angle: 177.503638, located at: (1.1900000000000002 0.0116212755978847 -0.0000000000000000)
+done Surface diagnostics.CPU Time: 429.56, Wall Time: 0.06, Memory: 429.05 MB
+
+Surface is valid for volume meshing.CPU Time: 430.04, Wall Time: 0.54, Memory: 426.86 MB
+
+  done,  CPU Time: 430.15, Wall Time: 0.67, Memory: 426.86 MB
+User set distribution function to be  GEOMETRIC PROGRESSION
+----------------------------------------
+Executing Prism Layer Subsurface
+----------------------------------------
+Global Input surface contains 190956 faces, and 95478 vertices 
+Local Property is activated
+   done, CPU Time: 429.56, Wall Time: 0.06, Memory: 469.07 MB
+ Building preprocessor done 
+Computing vertex normals
+ Exchanged the remote active status done
+Computing the normals done
+   done, CPU Time: 429.53, Wall Time: 0.03, Memory: 470.83 MB
+Computing Vertex normals done
+Computing surface proximity
+   done, CPU Time: 429.64, Wall Time: 0.15, Memory: 477.68 MB
+Constraining boundary vertices
+   done, CPU Time: 429.51, Wall Time: 0.01, Memory: 473.31 MB
+
+Iteration 1:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 1454 of 1454 active vertices)
+Checking 1454 face-based validity metrics
+   found 0 invalid faces
+Checking vertex intersections for all vertices
+
+Using edge recovery to fix prism layer boundaries...
+Recovering edges... Edges recover info:  0   0
+ Grow affected faces......
+Remeshing surface near recovered edges...
+Surface remeshed.  752 faces added to surface.
+CPU Time: 429.68, Wall Time: 0.21, Memory: 481.28 MB
+ Finished two levels of remeshing 
+Edge recovery was successful.
+CPU Time: 429.98, Wall Time: 0.50, Memory: 481.28 MB
+
+Checking true subsurface intersections for all vertices
+ no intersections 
+   found 0 intersecting vertices
+Checking subsurface orientation!!
+
+Iterations successful
+
+Combining interface maps
+   done, CPU Time: 429.50, Wall Time: 0.00, Memory: 481.28 MB
+Marking zero layer regions
+   found 630 collapsed faces
+   found 3 edges bounding collapsed regions
+   found 6 vertices bounding collapsed regions
+Global Subsurface contains 150432 faces, and 75216 vertices 
+----------------------------------------
+Prism Layer Subsurface Completed: CPU Time: 430.87, Wall Time: 1.39, Memory: 481.28 MB
+----------------------------------------
+ Generating dual core mesh...
+ Created 39880 dual faces, and 78712 dual verts.
+Created 37800 cells
+   finished generating poly core mesh CPU Time: 429.98, Wall Time: 0.48, Memory: 470.71 MB
+There are 190575 faces have subsurface thickness. 
+ The default subsurface thickness is 0.015460
+Set default subsurface thickness 0.01546
+----------------------------------------
+Executing Prism Layer Extrusion
+----------------------------------------
+Marking vertices, edges and faces to extrude
+Subsurface thickness is set by subsurface.
+ find projections withOUT VertMapper (all core mesh)!
+   found (tet) 634 zero layer subsurface vertices
+Marking zero extrusion entities (vertices/edges/faces)
+   done, CPU Time: 429.51, Wall Time: 0.01, Memory: 469.58 MB
+Modifying number of layers for cells adjacent to retracted regions
+   modified number of layers for 4 faces
+Creating extrusion layer mesh
+   default number of layers = 48
+   default initial wall thickness = 1.53061224489795906255121520773e-06
+   done, CPU Time: 429.50, Wall Time: 0.00, Memory: 472.19 MB
+ Layer Reduction Percentage set to 50
+Default chopping percentage 50.000000
+There is no Local Layer Reduction 
+Correct number of layer for:  Global Layer Reduction, setting(s).
+   stitching vertical edges at variable layer interface
+   stitching vertical faces at variable layer interface
+Extrusion mesh contains:
+   18922 cells
+   76262 faces
+   96333 edges
+   38994 vertices
+----------------------------------------
+Prism Layer Extrusion Completed: CPU Time: 429.68, Wall Time: 0.20, Memory: 466.16 MB
+----------------------------------------
+
+2d mesh generation completed.  CPU Time: 433.00, Wall Time: 3.57, Memory: 464.39 MB
+
+HYDRO_STAGE Sweeping one span layer Overset directed mesh
+----------------------------------------
+Executing Mesh Operation Overset directed mesh
+----------------------------------------
+Sweeping part Hydro_Overset_fluid...
+Number of Cells in - Hydro_Overset_fluid : 56722
+----------------------------------------
+Total Number of Cells in Hydro_Overset_fluid : 56722
+----------------------------------------
+Meshing Completed: CPU Time: 451.50, Wall Time: 22.40, Memory: 477.27 MB
+----------------------------------------
+Converting mesh into finite volume representation in Region FlapOverset
+   Converted mesh for FlapOverset CPU Time: 429.68, Wall Time: 0.18, Memory: 487.61 MB
+Mesh conversion completed, CPU Time: 429.78, Wall Time: 0.28, Memory: 480.30 MB
+Converting mesh into finite volume representation completed: CPU Time: 429.78, Wall Time: 0.28, Memory: 480.30 MB
+	Cells: 361532	Faces: 1021447	Vertices: 1325772
+Mesh Operation Overset directed mesh complete. CPU Time: 451.78, Wall Time: 22.69, Memory: 478.05 MB
+Loading module: StarExtruder
+Mesh Operation Background exact surface extrusion complete. CPU Time: 429.53, Wall Time: 0.03, Memory: 480.36 MB
+ Only 1 part was assigned to a region
+8 part surfaces were assigned to 8 boundaries
+Only 1 interface was created
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\SP_C_build_error_20261102_191807.sim... complete (121.91MB in 0.31755s).
+java.lang.RuntimeException: java.lang.IllegalStateException: Unidentified boundary Background exact quasi2D fluid.Hydro_Background_fluid.Hydro_Domain.span_source [Background exact quasi2D fluid/Hydro_Background_fluid]
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

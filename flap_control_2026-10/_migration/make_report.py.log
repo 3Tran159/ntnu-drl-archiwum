@@ -1,0 +1,88 @@
+{
+  "at": "2026-11-02T15:43:53.591350+01:00",
+  "version": "STAR-CCM+ 2606.0002, 21.04.009-R8",
+  "cells": 44763,
+  "geometry": {
+    "chord_projection_m": 1.1902668,
+    "hinge_x_m": 0.95183764,
+    "hinge_z_m": 0.021292732432526423,
+    "hinge_axis": [
+      0,
+      1,
+      0
+    ],
+    "hinge_fraction": 0.8,
+    "gap_m": 0.017854002,
+    "nose_radius_m": 0.035128391426550665,
+    "span_m": 0.02,
+    "solid_span_m": 0.04,
+    "profile_points": 283,
+    "main_points": 230,
+    "flap_points": 101,
+    "amplitude_deg": 5,
+    "period_s": 0.2,
+    "geometry_scope": "Native NACA 66-012 modified contour; rounded flap nose and matching hinge recess; 1.5% chord radial clearance; not hydrodynamically validated"
+  },
+  "geometry_clearance": {
+    "radius_m": 0.035128391426550665,
+    "radial_clearance_m": 0.017854002,
+    "tested_deg": [
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "minimum_separation_m": 0.01779037048518802,
+    "native_profile": true,
+    "shape_valid": true
+  },
+  "motion": {
+    "passed": true,
+    "steps": 100,
+    "frames": 21,
+    "max_angle_error_deg": 3.19744231092e-14,
+    "min_volume_m3": 3.00568048564e-08,
+    "min_quality": 0.150092225722,
+    "min_face_validity": 1.0
+  },
+  "transient": {
+    "passed": true,
+    "steps": 30,
+    "duration_s": 0.06,
+    "U_m_s": 1,
+    "cpu_processes": 4,
+    "gpu_compute": false,
+    "hydrodynamic_validation": false
+  },
+  "forces": {
+    "Fx_N": {
+      "min": -1.34962322453,
+      "max": 173.303958927,
+      "last": -1.32842561581
+    },
+    "Fz_N": {
+      "min": -19.4331925122,
+      "max": 250.358790604,
+      "last": -19.4331925122
+    },
+    "Mh_Nm": {
+      "min": -22.871304994,
+      "max": 1.44043907982,
+      "last": 1.44043907982
+    }
+  },
+  "case": "F:\\ntnu\\flap_control\\flap_poc_2606_20261102\\FlapPOC_2606_working.sim",
+  "case_sha256": "3c32632e41c8e14f04dfde542abf7195e03a354c7c8886abf6566d087499ab29",
+  "source_C01_sha256": "9af4857b948e0494088b5421f8ede100e66344fc2631cc00030406640d7cc295",
+  "source_C01_unchanged": true,
+  "reference_copy_unchanged": true,
+  "old_campaign_queues_modified": false,
+  "legacy_W07_lambda92p5_launched": false
+}

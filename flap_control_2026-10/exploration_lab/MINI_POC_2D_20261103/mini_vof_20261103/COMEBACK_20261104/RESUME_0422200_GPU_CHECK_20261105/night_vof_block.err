@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\recover_night_vof_block.py", line 67, in <module>
+    recover()
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\recover_night_vof_block.py", line 63, in recover
+    night.run_wave_chain(fixed_result=result)
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\night_seed_dataset.py", line 247, in run_wave_chain
+    result = do_run(FIXED_CASE+"_STARTUP", cp, t, history, steps=budget,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\night_seed_dataset.py", line 43, in do_run
+    result = job(label, checkpoint, t, source_af_history=history.as_posix(), af_branch_history=False,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 35, in job
+    return run_day.new_job(stage, {**settings, **options},
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_day.py", line 186, in new_job
+    raise RuntimeError(f"Direct STAR batch failed or left an owned process: exit {client.returncode}")
+RuntimeError: Direct STAR batch failed or left an owned process: exit 1

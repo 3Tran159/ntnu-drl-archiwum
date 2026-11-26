@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-10-29T07:56:38.482370+00:00",
+  "status": "Corrected 012 geometry verified; 1,165,391-cell diagnostic mesh saved; CFD convergence not established",
+  "geometry": {
+    "full_span_m": 11.0,
+    "nominal_root_chord_m": 1.19,
+    "nominal_tip_chord_m": 0.3927,
+    "constant_chord_halfwidth_m": 2.75,
+    "S_ref_full_projected_m2": 10.900868608830482,
+    "S_ref_half_projected_m2": 5.450434304415241,
+    "mean_geometric_chord_m": 0.9909880553482256,
+    "nominal_incidence_deg": 0,
+    "incidence_basis": "original chord datum and measured section orientation; do not infer incidence from minimum-x nose point",
+    "measured_max_vertical_root_thickness_c": 0.11997851163835005,
+    "measured_max_root_camber_c": 0.02500292522096979,
+    "profile_identity": "HF_012_v3; checked against the project's reconstructed 012 DAT, not independent published-profile validation",
+    "note": "Original geometry for the old A/B/D cases; old force normalization remains unchanged.",
+    "source": "F:\\ntnu\\geometry_012_20261029\\geometry_verified.json"
+  },
+  "C0": {
+    "speed_m_s": 18.0,
+    "water_density_kg_m3": 1000,
+    "water_dynamic_viscosity_Pas": 0.001,
+    "air_velocity_m_s": [
+      18,
+      0,
+      0
+    ],
+    "water_current_m_s": [
+      18,
+      0,
+      0
+    ],
+    "free_surface_z_m": 2,
+    "nominal_chord_plane_z_m": 0,
+    "chord_plane_immersion_m": 2,
+    "minimum_foil_clearance_m": 1.8990828141,
+    "water_depth_m": 24,
+    "motion": "Stationary",
+    "symmetry_plane": "y=0",
+    "wave_height_m": 0,
+    "force_convention": {
+      "drag": "Fx_half, +X",
+      "vertical": "Fz_half, +Z",
+      "included": "pressure + shear",
+      "pressure_option": "SP_UC = No Correction; hydrostatic contribution included",
+      "normalization": "half force with half projected area"
+    },
+    "status": "Definition for corrected geometry; no new solver run performed"
+  },
+  "W1_proposed_not_executed": {
+    "same_as": "C0 except incident waves and calibrated wave boundary/damping treatment",
+    "height_m": 0.5,
+    "intrinsic_period_s": 3.0,
+    "wavelength_m": 14.051789925583439,
+    "propagation_direction": [
+      1,
+      0,
+      0
+    ],
+    "encounter_period_s": 0.6194601174024725,
+    "purpose": "first engineering pilot, not a published validation point",
+    "prerequisites": [
+      "stable and affordable calm-water baseline",
+      "incident-wave calibration",
+      "time-window and numerical sensitivity checks"
+    ]
+  },
+  "mesh_strategy": {
+    "target_cells": 1000000,
+    "status": "C003_012 generated for solver diagnostics; production suitability unconfirmed",
+    "physical_scale": "retain current scale",
+    "production_accuracy": "not established",
+    "selected_case": "C003_012",
+    "actual_cells": 1165391,
+    "mesh_sim": "F:\\ntnu\\mesh_screening_20261028\\coarse012_C003\\HF_012_C003_mesh.sim",
+    "full_15_prism_area_fraction": 0.9455965107291407,
+    "solver_iterations": 0
+  },
+  "source_integrity": {
+    "baseline_clean_sha256": "7dfb04a68e1df202d5039ce140976c0fb04929db8bdb22af41b9f925d6801787",
+    "audit_copy_sha256": "7dfb04a68e1df202d5039ce140976c0fb04929db8bdb22af41b9f925d6801787",
+    "audit_solver_steps": 0,
+    "scope": "Historical 010 audit copy; corrected baseline hash recorded separately",
+    "corrected_012_baseline_sha256": "90eda181702dc9357b85237bdc7473b3882db78574a8a2820bdb4ca907f1a0f8"
+  },
+  "geometry_acceptance": {
+    "status": "GEOMETRY_VERIFIED_FOR_MESHING",
+    "updated_at": "2026-10-29T08:50:53.772233+00:00",
+    "new_cad": "F:\\ntnu\\geometry_012_20261029\\HF_012_v3.x_t",
+    "new_baseline": "F:\\ntnu\\geometry_012_20261029\\HF_012_baseline_unmeshed.sim",
+    "reference_area_full_m2": 10.900868608830482,
+    "reference_area_half_m2": 5.450434304415241,
+    "note": "Old night cases remain 010; keep their original force normalization. CFD and mesh suitability not yet validated."
+  },
+  "historical_geometry_010": {
+    "full_span_m": 11.0,
+    "nominal_root_chord_m": 1.19,
+    "nominal_tip_chord_m": 0.3927,
+    "constant_chord_halfwidth_m": 2.75,
+    "S_ref_full_projected_m2": 10.900019994303813,
+    "S_ref_half_projected_m2": 5.4500099971519065,
+    "mean_geometric_chord_m": 0.990910908573074,
+    "nominal_incidence_deg": 0,
+    "incidence_basis": "original chord datum and measured section orientation; do not infer incidence from minimum-x nose point",
+    "measured_max_vertical_root_thickness_c": 0.09958230725388494,
+    "measured_max_root_camber_c": 0.025085066312486113,
+    "profile_identity": "unconfirmed; measured thickness about 10%, inconsistent with prior 12% label",
+    "note": "Original geometry for the old A/B/D cases; old force normalization remains unchanged."
+  },
+  "updated_at": "2026-10-29T09:09:28.218225+00:00"
+}

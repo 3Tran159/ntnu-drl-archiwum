@@ -1,0 +1,16 @@
+Compiled from "PhysicsContinuum.java"
+public class star.common.PhysicsContinuum extends star.common.Continuum {
+  public static final java.lang.String PROP_ISACTIVE;
+  public static final java.lang.String PROP_IS_MOTION_ACTIVE;
+  public star.common.PhysicsContinuum(star.base.neo.ClientServerObjectKey);
+  public star.common.PhysicsContinuum getPhysicsContinuum();
+  public star.common.InitialConditionManager getInitialConditions();
+  public star.common.ReferenceValueManager getReferenceValues();
+  public boolean isChimeraGridEnabled();
+  public boolean isOversetEnabled();
+  public void setIsActive(boolean);
+  public boolean getIsActive();
+  public void setIsMotionActive(boolean);
+  public boolean getIsMotionActive();
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+}

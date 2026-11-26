@@ -1,0 +1,77 @@
+Starting local server: starserver.bat -power -podkey K78jNQHAbKB2rMxqOvW0ow -licpath 1999@flex.cd-adapco.com -cpubind off -np 2 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcbW90aW9uXzIwMjYxMTAyXzE5NDExOVxtb3Rpb25fdmVyaWZpZWQuc2lt
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-1
+Process rank 0 THINKPAD-LUCJAN 19612
+Total number of processes : 2
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 20:01:49 2026
+
+Server::start -host THINKPAD-LUCJAN:47829
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\motion_20261102_194119\motion_verified.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:64: warning: [deprecation] star.common.MonitorTriggerOption in star.common has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:64: warning: [deprecation] getTriggerOption() in star.base.report.Monitor has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:64: warning: [deprecation] ITERATION in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                                                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:64: warning: [deprecation] setUpdateMode(int) in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_195938\InitializeHydroControl.java:64: warning: [deprecation] setUpdateFrequency(int) in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                                                                                ^
+
+Currently enabled models: PhysicsContinuumModel, BoundaryInterfaceModel, star.common.DirectRegionInterfaceModel, star.common.IndirectRegionInterfaceModel, star.common.MixingPlaneInterfaceModel, star.metrics.ThreeDimensionalModel, star.common.PartitioningModel, star.motion.UniqueMotionModel, star.motion.StationaryModel, star.motion.MotionCoordinateHelperModel, star.material.SingleComponentLiquidModel, star.material.VoidFractionAndSolidityModel, star.material.VolumePorosityModel, star.segregatedflow.SegregatedFlowModel, star.metrics.GradientsModel, star.physics.FsiFluidModelEnabler, star.flow.ConstantDensityModel, star.turbulence.TurbulentModel, star.energy.ViscousSubModel, star.flow.EffectiveViscosityModel, star.turbulence.RansTurbulenceModel, star.kwturb.KOmegaTurbulence, star.kwturb.SstKwTurbModel, star.walldistance.WallDistanceModel, star.kwturb.KwAllYplusWallTreatment, star.flow.GravityModel, star.metrics.CellQualityRemediationModel, star.overset.OversetMeshModel, star.overset.OversetFlowModel, star.overset.OversetConservationModel, star.overset.OversetPrismLayerShrinkageModel, star.motion.RigidMotionModel
+The model star.common.SteadyModel is incompatible with the currently enabled models in HYDRO water SST singlephase:
+ is incompatible with enabled hidden model star.motion.RigidMotionModel.
+Command: EnableModel
+   error: Server Error
+Loading/configuring connectivity (old|new partitions: 1|2)
+  Background (index 3): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 4): 56722 cells, 150363 faces, 189362 verts.
+Configuring finished
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\motion_20261102_194119\steady_init_20261102_195938\initialization_error.sim... complete (474.83MB in 1.867s).
+java.lang.RuntimeException: The model star.common.SteadyModel is incompatible with the currently enabled models in HYDRO water SST singlephase:
+ is incompatible with enabled hidden model star.motion.RigidMotionModel.
+Command: EnableModel
+   error: Server Error
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

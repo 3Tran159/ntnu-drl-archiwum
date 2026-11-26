@@ -1,0 +1,24 @@
+test_actual_java_ramp_and_force_gate (test_speed_workflow.SpeedWorkflowTests.test_actual_java_ramp_and_force_gate) ... ok
+test_actual_queue_accepts_complete_sweep_and_preserves_old_ramp_failure (test_speed_workflow.SpeedWorkflowTests.test_actual_queue_accepts_complete_sweep_and_preserves_old_ramp_failure) ... ok
+test_actual_queue_holds_failed_sweep (test_speed_workflow.SpeedWorkflowTests.test_actual_queue_holds_failed_sweep) ... ok
+test_existing_active_job_adopted (test_speed_workflow.SpeedWorkflowTests.test_existing_active_job_adopted) ... ok
+test_failed_or_completed_run_not_requeued (test_speed_workflow.SpeedWorkflowTests.test_failed_or_completed_run_not_requeued) ... ok
+test_missing_native_smoke_blocks_full_run (test_speed_workflow.SpeedWorkflowTests.test_missing_native_smoke_blocks_full_run) ... ok
+test_new_authorization_cannot_release_ramp_or_continue_after_speed_failure (test_speed_workflow.SpeedWorkflowTests.test_new_authorization_cannot_release_ramp_or_continue_after_speed_failure) ... ok
+test_other_campaign_is_not_adopted (test_speed_workflow.SpeedWorkflowTests.test_other_campaign_is_not_adopted) ... ok
+test_adopt_after_receipt_before_state (test_queue_safety.SafetyTests.test_adopt_after_receipt_before_state) ... ok
+test_checkpoint_and_automatic_report (test_queue_safety.SafetyTests.test_checkpoint_and_automatic_report) ... ok
+test_external_input_rejected (test_queue_safety.SafetyTests.test_external_input_rejected) ... ok
+test_incomplete_save_blocks_following_jobs (test_queue_safety.SafetyTests.test_incomplete_save_blocks_following_jobs) ... ok
+test_integrity_and_cpu_limit (test_queue_safety.SafetyTests.test_integrity_and_cpu_limit) ... ok
+test_progress_watchdog (test_queue_safety.SafetyTests.test_progress_watchdog) ... ok
+test_save_protected_and_timeout (test_queue_safety.SafetyTests.test_save_protected_and_timeout) ... ok
+test_uncertain_launch_not_repeated (test_queue_safety.SafetyTests.test_uncertain_launch_not_repeated) ... ok
+test_law_bounds (test_ramp_authorization.RampGateTests.test_law_bounds) ... ok
+test_old_failure_not_released (test_ramp_authorization.RampGateTests.test_old_failure_not_released) ... ok
+test_scoped_authorization_preserves_old_failure (test_ramp_authorization.RampGateTests.test_scoped_authorization_preserves_old_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.522s
+
+OK

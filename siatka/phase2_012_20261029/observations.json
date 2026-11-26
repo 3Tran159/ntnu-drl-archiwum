@@ -1,0 +1,16 @@
+{
+  "H0_0ms": [
+    "Zakończono 10 kroków po 0,0001 s: łącznie tylko 0,001 s czasu fizycznego, 184,1 s czasu wykonania.",
+    "Fz = 4 614,54 N; odchylenie od nominalnego wyporu −0,162%. Fx ≈ −0,000152 N.",
+    "Maksymalna prędkość wzrosła od około 5×10⁻¹¹ do 1,41×10⁻⁴ m/s. Końcowa wartość jest mała (0,14 mm/s), ale trend wzrostowy wymaga sprawdzenia w dłuższym teście.",
+    "Bilans sił hydrostatycznych wygląda poprawnie w tym krótkim oknie. Nie jest to potwierdzenie długotrwałej stabilności ani kalibracja y+ dla przepływu."
+  ],
+  "F18_18ms": [
+    "Zakończono 15 kroków po 0,00001 s: 0,00015 s czasu fizycznego i około 301 s wykonania. Zakończenie nastąpiło przez limit czasu, bez błędu solvera.",
+    "Na końcu: Fx = 21 532,91 N, Fz = 123 290,58 N; CD = 0,0243869, CL całkowite = 0,139632. To wartości rozruchowe, nie ustalone współczynniki.",
+    "Średnie y+ po polu = 80,57; zakres 4,56–199,49. Nie dobieramy jeszcze nowej pierwszej warstwy na podstawie tak krótkiego rozruchu.",
+    "Maksymalny CFL osiągnął 8,07, potem spadł do 4,61. Największa prędkość osiągnęła 100,68 m/s, na końcu wyniosła 71,82 m/s. To lokalne sygnały do kontroli; nie stwierdzono trwałej rozbieżności w tym krótkim oknie.",
+    "Zmierzono około 20,0 s na krok przy 24 procesach CPU. Przy dt=1e-5 s ekstrapolacja tego tempa do jednego c/U daje około 36,8 h. To koszt rozruchowy, nie prognoza czasu do zbieżności; trzeba jeszcze poprawić tempo osiągania użytecznego czasu fizycznego.",
+    "Lokalizacja w końcowym polu: 8 komórek z prędkością >36 m/s skupia się przy krawędzi natarcia około x=0,095–0,096 m, y=4,06 m, z=−0,003 m, w pryzmach 1–6. CFL >2 występuje w 6 komórkach tego obszaru i 2 przy końcówce płata (y≈5,50 m). To lokalny obszar do kontroli; nie ustala miejsca wcześniejszego piku ani nie dowodzi jeszcze przyczyny."
+  ]
+}

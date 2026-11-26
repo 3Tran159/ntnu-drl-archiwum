@@ -1,0 +1,43 @@
+{
+  "status": "PASS_CORE_UI_CAPTION_PENDING",
+  "created_at": "2026-10-30T13:24:47.592436+01:00",
+  "case": "C01_W20L4_M10_calm_settle_r2",
+  "surfaces": [
+    "operational",
+    "professor"
+  ],
+  "widths": [
+    1920,
+    1360,
+    390
+  ],
+  "checks": {
+    "routing": "C01 continuation from saved computed .587s, H0, no reinitialization. No wave arrival countdown or period-based ETA.",
+    "plots": "CD,CL_total,CD_window_pct,CL_window_pct only. No per-step traces. Rolling means use adjacent nonoverlapping .2s intervals and require .4s current history.",
+    "numerical": "All12 captured rolling endpoints independently recomputed from raw current-case history agree within1e-10 percentage points.",
+    "interaction": "Four Follow axes synchronized; manual pan persisted afterreload. Mobile latestedge visible.",
+    "threshold": "Both \u00b1.5% reference guides visible in mobile/static/interactive and print.",
+    "layout": "Six combinations have no JS errors, page overflow, nonfinite plot paths or catalog text-bound violations. Desktop/mobile screenshots visually inspected.",
+    "mobile_capture": "Initial rapid-scroll rolling screenshots were blank capture artifacts and are superseded by *_390_rolling_stable.png after browser-only refresh pause/render wait.",
+    "print": "Operational pages3/5 and professor3/5 visually inspected: source/gate table, rolling plots/formula/thresholds and11catalog rows readable, no collisions or cut rows.",
+    "field": "Actual case-matched C01 fieldt.837; source identity is correct, fieldtimestamp explicit.",
+    "catalog": "C01 active; W01a awaits saved settled C01 copy, fullH from activation, no height ramp.",
+    "actions": "No solver/service/lock actions or source-data modifications; only read-only QA and browser presentation controls."
+  },
+  "open_findings": [
+    "Correct C01 actual field is displayed, but its manifest caption/lineage retains old W01a/fresh-start wording. Root notified for source correction."
+  ],
+  "parity": {
+    "dashboard.html": "fd9416da9f468a88d97991deece01d3ca5456862efc090cdcb80d5e3c2371a63",
+    "professor_dashboard.html": "f85bd84eb9a2eeaf916ad12c50dab7614267506a6e94c84c42a9c0c14ab63f96"
+  },
+  "artifacts": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\c01_calm_dashboard_qa_20261030",
+  "screenshots": [
+    "operational_1360_overview.png",
+    "operational_1360_rolling.png",
+    "operational_390_rolling_stable.png",
+    "professor_390_rolling_stable.png",
+    "operational_print_page_5.png",
+    "professor_print_page_5.png"
+  ]
+}

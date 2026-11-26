@@ -1,0 +1,267 @@
+{
+  "updated_at": "2026-10-29T21:47:15.036315+01:00",
+  "cases": [
+    {
+      "id": "T02_M04_SO_dt1ms_r1",
+      "window": [
+        2.0419999999999296,
+        2.24199999999993
+      ],
+      "steps": 200,
+      "all_history_finite": true,
+      "monitors": {
+        "Fx_half_Monitor": {
+          "end": {
+            "median": 27.964230014934266,
+            "p95": 27.98799394067179,
+            "max": 27.990831676581312,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.0004798167755164772,
+            "p95": 0.0005944388771706757,
+            "max": 0.0009579054443528003,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Fz_half_Monitor": {
+          "end": {
+            "median": 1230.0371843374883,
+            "p95": 1230.4817964509589,
+            "max": 1230.5169220699102,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.00013744587035602993,
+            "p95": 0.00021340882404729476,
+            "max": 0.00026274592628209816,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Continuity": {
+          "end": {
+            "median": 0.0005792362820319768,
+            "p95": 0.04262504554839332,
+            "max": 0.17561290490548254,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "X-momentum": {
+          "end": {
+            "median": 3.546290502095624e-06,
+            "p95": 0.0004869986043216735,
+            "max": 0.001598779570001308,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Y-momentum": {
+          "end": {
+            "median": 0.21148127468574868,
+            "p95": 0.25445974946830696,
+            "max": 0.27509233222088425,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Z-momentum": {
+          "end": {
+            "median": 5.148065034102378e-06,
+            "p95": 0.00019689340977224097,
+            "max": 0.0005209246295772914,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Tke": {
+          "end": {
+            "median": 1.0452149340906745e-09,
+            "p95": 7.154805767728382e-09,
+            "max": 2.652524346185187e-08,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Sdr": {
+          "end": {
+            "median": 1.130511007763167e-09,
+            "p95": 6.740464307927924e-08,
+            "max": 4.507841741045485e-07,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "water": {
+          "end": {
+            "median": 1.0824423432868674e-06,
+            "p95": 0.0021788886311612144,
+            "max": 0.009040021948035833,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "fields_all_finite": true,
+      "cells": 138468,
+      "vof_substeps": [
+        1
+      ]
+    },
+    {
+      "id": "T04_M04_SO_dt1ms_inner10_r1",
+      "window": [
+        2.0419999999999296,
+        2.24199999999993
+      ],
+      "steps": 200,
+      "all_history_finite": true,
+      "monitors": {
+        "Fx_half_Monitor": {
+          "end": {
+            "median": 27.9649752463201,
+            "p95": 27.988752298654177,
+            "max": 27.991631414461292,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.00045080342549239994,
+            "p95": 0.000610547664910649,
+            "max": 0.0008835584616830488,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Fz_half_Monitor": {
+          "end": {
+            "median": 1230.018971073898,
+            "p95": 1230.4668705101853,
+            "max": 1230.5018548220953,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.00016558963000017155,
+            "p95": 0.0002646341990093418,
+            "max": 0.0004379539942798611,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Continuity": {
+          "end": {
+            "median": 0.005111578502413281,
+            "p95": 0.059466808875387286,
+            "max": 0.1880526061241908,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "X-momentum": {
+          "end": {
+            "median": 2.2101551613040073e-05,
+            "p95": 0.00024913549678573955,
+            "max": 0.0021216633637931247,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Y-momentum": {
+          "end": {
+            "median": 0.21003221146400003,
+            "p95": 0.2588466950431947,
+            "max": 0.2743868841173859,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Z-momentum": {
+          "end": {
+            "median": 2.0316339655845123e-05,
+            "p95": 9.937370507969641e-05,
+            "max": 0.00047398567261864823,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Tke": {
+          "end": {
+            "median": 2.675773454669648e-09,
+            "p95": 6.592157338704832e-09,
+            "max": 4.3216491774826786e-08,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Sdr": {
+          "end": {
+            "median": 2.9507175682578187e-09,
+            "p95": 7.796918795636585e-08,
+            "max": 9.025156173175009e-07,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "water": {
+          "end": {
+            "median": 1.0536740595958317e-05,
+            "p95": 0.0015654247263405924,
+            "max": 0.011305355316478643,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "fields_all_finite": true,
+      "cells": 138468,
+      "vof_substeps": [
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Source zero-iteration uniform-field mesh only; explicitly clear initial storage and reset zero-time mesh position before initialization to force native reassembly; no solved flow checkpoint reset; zero solver steps; geometry and mesh coordinates unchanged. Numerical hole-cutting diagnostic only.
+before Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin dynamic=0
+before Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc dynamic=0
+before Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin 2 dynamic=0
+Changed only forewall Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin to ALWAYS_ACTIVE, NumberActiveLayers=36; aft main wall and hinge arc ALWAYS_ACTIVE1layer; flap boundaries retained. All physical wall vertices must remain in active-wall export.
+after Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin dynamic=2
+after Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc dynamic=2
+after Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin 2 dynamic=2

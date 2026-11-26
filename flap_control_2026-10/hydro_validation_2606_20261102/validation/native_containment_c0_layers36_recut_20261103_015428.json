@@ -1,0 +1,104 @@
+{
+  "at": "2026-11-03T01:57:33.069865+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_recut_20261103_015428",
+  "method": "Native boundary vertices projected to corresponding input-contour arclength for ordering. Validity/area/contour deviations verified before active-volume-cell containment. Centers test only; not complete polyhedron intersection audit.",
+  "native_contours": {
+    "main": {
+      "unique_vertices": 1163,
+      "unchanged": true,
+      "valid": true,
+      "area_m2": 0.10619607028281128,
+      "input_area_ratio": 0.9999649913650878,
+      "hausdorff_deviation_m": 7.170300568315298e-05,
+      "y_bounds_m": [
+        0.0099999999999999,
+        0.03
+      ]
+    },
+    "flap": {
+      "unique_vertices": 730,
+      "unchanged": true,
+      "valid": true,
+      "area_m2": 0.009330520104622337,
+      "input_area_ratio": 1.0000458430469485,
+      "hausdorff_deviation_m": 1.4084050296624739e-05,
+      "y_bounds_m": [
+        0.0099999999999999,
+        0.03
+      ]
+    }
+  },
+  "regions": {
+    "Background": {
+      "source": {
+        "main": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        },
+        "flap": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        }
+      },
+      "after": {
+        "main": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        },
+        "flap": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        }
+      }
+    },
+    "FlapOverset": {
+      "source": {
+        "main": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        },
+        "flap": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        }
+      },
+      "after": {
+        "main": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        },
+        "flap": {
+          "centers_inside": 0,
+          "max_penetration_m": 0,
+          "above_1nm": 0,
+          "above_1um": 0,
+          "worst": []
+        }
+      }
+    }
+  },
+  "scientific_approved": false,
+  "active_centers_outside_native_solids": true,
+  "qualification_caution": "Even a pass establishes center containment only. Native zero donor/error/difficult-stencil audit and unchanged full mesh also required before recovery solve."
+}

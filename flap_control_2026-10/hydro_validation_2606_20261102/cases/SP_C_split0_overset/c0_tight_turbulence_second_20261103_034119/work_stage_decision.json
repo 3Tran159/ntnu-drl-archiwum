@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-03T03:48:33.460444+01:00",
+  "kind": "work_tight_stage_review",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119",
+  "next": "Read actual B numerical settings without solving or saving B, then prepare matched0degree URANS from the retained SECOND_ORDER fields. No nonzero angles; residual convergence and original bias remain unapproved.",
+  "checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim",
+    "sha256": "3575fad827e54ce942afada6d6c58a1c5cb5cd580e1da0f6065ff05f43b7fe6b",
+    "bytes": 840404092,
+    "native_iteration": 2310,
+    "physical_time_s": 0,
+    "CL": 0.319132763345,
+    "CD": 0.0074579457186,
+    "Mh_Nm": -12.3599041086,
+    "pabs_min_Pa": 31019.3232059,
+    "native_reopen_verified": false,
+    "scientific_approved": false,
+    "note": "Healthy numerical diagnostic with force-window criterion passed. Residuals and far-top-boundary drift are unresolved; not a converged hydrodynamic result."
+  },
+  "field_review": {
+    "iteration": 2310,
+    "additional_iterations": 720.0,
+    "meanflow_p0_max_near_Pa": 164430.29729392636,
+    "meanflow_p0_p99_near_Pa": 162392.6914478199,
+    "zero_omega_and_k_floor": true,
+    "mesh_errors": 0,
+    "mesh_difficult_stencils": 0,
+    "interpretation": "No old upstream interface spikes in this phase. Far-field velocity evolution and native residuals require further review; no scientific approval."
+  },
+  "residual_convergence_approved": false,
+  "scientific_approved": false
+}

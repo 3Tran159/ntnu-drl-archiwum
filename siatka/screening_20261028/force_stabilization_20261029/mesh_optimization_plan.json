@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-10-29T20:30:06.228796+01:00",
+  "status": "M09_mesh_ready_pending_temporal_review",
+  "latest_evidence": "mesh_optimization_evidence.json",
+  "next_candidate": "M09_candidate_design.json",
+  "basis": "Actual M08 CGNS cell polygons plus accepted M06/M07 velocity exports. Previous M07 census preserved separately.",
+  "reference_mesh": "M08",
+  "reference_cells": 254989,
+  "remote_cells": 62073,
+  "remote_share_pct": 24.3434,
+  "priorities": [
+    {
+      "priority": 1,
+      "action": "After accepted M08 agrees with denser M07, test outer base 0.25 m with middle z=-3..3.2 m protected at 0.142857 m and all finer controls retained. Estimate 213185 cells; this is not an actual mesh count or acceptance result."
+    },
+    {
+      "priority": 2,
+      "action": "Complete queued T04 10-inner versus T02 20-inner second-order time branches, compare final matched windows, drift, residuals and conservation. Keep this separate from mesh-size validation."
+    },
+    {
+      "priority": 3,
+      "action": "Develop directional free-surface cells for wave tanks: starting dx=0.20 m, dz=0.025 m, then verify propagation, CFL and dt. Current scalar directed-polygon volume control cannot establish directional refinement."
+    },
+    {
+      "priority": 4,
+      "action": "Investigate mapped accepted-field initialization on a preserved copy after continuum and replacement compatibility audit."
+    }
+  ],
+  "sequence": "M09 tests remote-region coarsening. Then evaluate local LE/TE refinement with a coarser middle chord in a targeted M10 candidate; use M11\u2013M15 only if further evidence is needed. Complete matched temporal checks and stop adding meshes once supported.",
+  "controls": "Change one resolution family at a time; preserve exact source foil and single-cell span. No domain shrink. Audit zero invalid cells, positive volume/closure, wall y+, transition, force components, CFL and actual computing time.",
+  "acceptance": "Both mean CL and CD within1% of comparable denser evidence; both adjacent0.2s mean changes below0.5%; no automatic validation from low cell count. Final-mesh time-step verification required.",
+  "mapped_restart": {
+    "status": "documented_capability_not_demonstrated_for_current_pipeline",
+    "source": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\doc\\en\\online\\STARCCMP\\GUID-1786BD70-103D-4C6D-8601-23733B3CFBD1.html",
+    "finding": "STAR 2602 supports solution interpolation on remeshing or mesh replacement. Higher-order stencil is recommended for transient analysis. Conservative correction is available only for supported model combinations.",
+    "limitation": "Our workflow rebuilds/imports an exact one-cell-span CGNS region. Automatic interpolation is not yet established for that replacement. VOF and SST compatibility and conservation correction must be checked in the actual continuum; do not assume support.",
+    "experiment": "On a new attempt copied from an accepted checkpoint, retain region identity and replace the mesh using supported mesh-replacement/mapping. Verify phase bounds and total water volume, finite pressure/velocity/turbulence, surface continuity and force transients. Re-settle independently. A matched cold-start check is required before treating mapping as a validated time saver.",
+    "action": "Do not change the running M08 or initialize M09 from a mapped field before this audit."
+  },
+  "unchanged_wall_design": "h1=1.530612 um; 48 layers; total=15.46 mm for the proposed outer-region test. Do not reduce prisms to fix speed before viscous-drag agreement.",
+  "M09_actual_cells": 214908,
+  "LE_TE_design_study": "leading_trailing_refinement_review.json"
+}

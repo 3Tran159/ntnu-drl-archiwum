@@ -1,0 +1,116 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chat rescue handover</title><style>body{font:16px/1.6 system-ui;color:#18394d;max-width:1050px;margin:30px auto;padding:18px}h1{font-size:28px}h2{font-size:21px;margin-top:28px}a{color:#056b99}code,textarea{overflow-wrap:anywhere}code{font-size:13px;white-space:normal}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #ccd8df;text-align:left;padding:12px;vertical-align:top}textarea{box-sizing:border-box;width:100%;height:55vh;font:13px/1.5 monospace}button{padding:10px 16px;background:#17648a;color:white;border:0;cursor:pointer}.note{padding:14px;background:#edf5f8;border-left:4px solid #17648a}.warn{background:#fff3e8;border-color:#a94725}@media(max-width:600px){body{font-size:14px}th,td{padding:7px}h1{font-size:23px}}@media print{button,textarea{display:none}body{margin:0;font-size:10pt}.note{break-inside:avoid}}</style></head><body><p><a href="dashboard.html#manual-control-panel">Local controls</a> · <a href="standalone_control_guide.html">Guide</a></p><h1>Continue with Chat</h1><p>Copy this handover into the next chat. The next agent must read current disk files and process state before any action. No credentials are included.</p><p><button id="copy">Copy handover</button> <span id="copied"></span></p><textarea id="handover" readonly>Continue the NTNU quasi-2D campaign from current DISK STATE, not this snapshot.
+The operator can paste a prepared M11/later .sim path in the local dashboard. Inspecting or selecting a mesh does not run flow. Imported source files are copied immutably into a new E: attempt and never overwritten. The selected mesh is a mechanically checked candidate, not a convergence-approved mesh.
+WORK RESERVE: the user reported about10% remaining and requested7% kept for emergency fixes. After this handover stop autonomous development in this chat; use the local control panel manually. An agent must not claim exact remaining usage because it is not visible here.
+CURRENT USER HOLD: our C01 and waves are paused pending the other agent&#x27;s mesh convergence/optimization review. Do not launch or release this hold without an explicit later user instruction. Leave the separate mesh-study and HF sessions untouched.
+The independent M10-M12 mesh study also has dedicated Pause &amp; save / Resume saved calculation buttons. mesh_study_control.py manages only that study, uses its STOP marker and waits for verified final.sim/export/process exit. Resume creates a new attempt and keeps prior histories; never restart gpu_calm_study_live.py directly. See mesh_control_receipt.json for isolated test scope; no live pause/resume was performed during installation.
+Read RESUME_AT_HOME.txt, campaign_hold.json, local_control_model.py, current jobs and actual process/lock state first. Never duplicate/restart a completed controller.
+Open http://127.0.0.1:8771/ or double-click Open_NTNU_Control.cmd in F:/ntnu/mesh_screening_20261028. Starting this service never launches CFD.
+Workflow: paste mesh .sim path -&gt; zero-flow inspect -&gt; select imported candidate -&gt; configure wave/domain -&gt; save queue (no launch) -&gt; explicit release hold and Start. If requested, Check recipe performs only CPU1 zero-step new-wave and saved-wave API checks. New domain or mesh gets its own fresh flat-water C01; do not use old imported fields as a settled baseline.
+CL means (vertical force - buoyancy)/(0.5*rho_ref*U_ref^2*A_ref). Use the audited per-case force_reference.json derived from native rho/gravity and actual closed foil geometry. Keep raw Fz/CL_total immutable. No guessed global correction for an imported mesh; unavailable evidence must block corrected-lift acceptance. Historical raw-CL decisions remain explicitly historical. C01 settling: adjacent complete0.2s means CD and corrected CL each change&lt;0.5%; retain source/finite/phase/speed guards. Wave: FifthOrder, full inlet height from activation with no ramp, no global wave reinitialization; preserve original wave clock on resume. Near-foil wave establishment precedes four-cycle repeatability review. Ten periods is an expectation, not a minimum;20 periods from activation is a review cap.
+Geometry: z=-22..8m, waterline2m, depth24m+air6m, U18m/s, foil geometry/location unchanged, one20mm span. H.25/.5/.75; lambda10/20/30/40; planned originalW01a.5/20,W02.5/30,3lambda/4lambda then boundedextras. Selected file&#x27;s supported dt0.0001..0.001s is retained; no silent1ms reset. Ten inner, SO; startup uses40steps at min(dt,.5ms)/50inner then restoresdt/10.
+Physical speed guard50m/s and bounded phase remain. Phase mass0.01% review flag remains visible; user allowed exploratory mass deviation, not physical guard failure. No force-accuracy claim from repeatability alone.
+Stop/save pauses the queue; wait for a completed saved checkpoint. Continue saved run creates a new attempt from a verified normal-stop/wall-limit final save and retains original wave clock/history. Guard-failed or interrupted-startup fields cannot be resumed this way.
+Frequent checkpoints default0.05s (configurable.05-1s), all saved attempts preserved; disk/RAM guards apply. Never continue the failed C01r2 final at2.777s. Its airspeed50.162m/s is diagnostic, not a settled baseline.
+Standalone controls: local_control_model.py, local_control_worker.py, local_mesh_inputs.py, local_domain_preparation.py, local_recipe_validation.py, LocalCalmWave.java, PrepareLocalMeshCalm.java, manual_control_server.py. Compile/controller tests and actual zero-flow STAR API checks have separate receipts. Read local_control_zero_step_review.json and check_recipe_final_review.json for current macro identity and tested scope; an API pass does not validate C01/wave flow or a new mesh. Do not forge readiness or mark a selected mesh converged.
+Dashboard: technical status and controls, Mesh assessment / Waves, then archive and combined results. A completed or stopped run leaves the live area and enters a collapsed archive; no old case values remain in the idle live template. Resuming uses only verified matching history; a new wave starts a separate record. Mesh view includes actual mesh and pressure/streamline previews with source/time provenance. Report: local_campaign_results.html supports saved-case selection, buoyancy-corrected CL/CD histories, cycle overlap/convergence, diagnostics and source paths. Live case remains in dashboard.html. Both reports explicitly distinguish failed, paused, exploratory and repeatable results.
+Update handover and reports on meaningful state changes; never expose licensing/service credentials.
+
+Snapshot (verify live files before action):
+{
+  &quot;updated_at&quot;: &quot;2026-11-02T16:27:02.388940+01:00&quot;,
+  &quot;campaign_hold&quot;: {
+    &quot;active&quot;: true,
+    &quot;status&quot;: &quot;paused_by_user_pending_mesh_study&quot;,
+    &quot;reason&quot;: &quot;Waiting for the other agent&#x27;s mesh convergence and optimization results before any C01 or wave launch.&quot;,
+    &quot;updated_at&quot;: &quot;2026-10-30T14:24:26.098931+01:00&quot;,
+    &quot;probe_launched&quot;: false,
+    &quot;scope&quot;: &quot;This quasi-2D campaign only; other mesh study and HF session remain untouched.&quot;,
+    &quot;resume_requires&quot;: &quot;User instruction after mesh convergence and optimization review&quot;,
+    &quot;checkpoint_policy_on_future_resume_s&quot;: 0.05
+  },
+  &quot;current_case&quot;: &quot;C01_W20L4_M10_calm_settle_r2&quot;,
+  &quot;computation_active&quot;: false,
+  &quot;physical_progress&quot;: {
+    &quot;time_s&quot;: 2.776999999999805,
+    &quot;steps&quot;: 2190,
+    &quot;status&quot;: &quot;stability_guard&quot;
+  },
+  &quot;selected_mesh&quot;: null,
+  &quot;latest_checkpoint&quot;: {
+    &quot;file&quot;: &quot;E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\checkpoint_t2.587.sim&quot;,
+    &quot;time_s&quot;: 2.586999999999826,
+    &quot;completed_save&quot;: true
+  },
+  &quot;readiness&quot;: {
+    &quot;ready&quot;: false,
+    &quot;recipe_ready&quot;: true,
+    &quot;compile_ok&quot;: true,
+    &quot;tests_ok&quot;: true,
+    &quot;api_ok&quot;: true,
+    &quot;can_validate_recipe&quot;: true,
+    &quot;checks&quot;: [
+      {
+        &quot;name&quot;: &quot;Mesh input&quot;,
+        &quot;ok&quot;: false,
+        &quot;message&quot;: &quot;Paste a prepared mesh .sim path, inspect it and select the imported copy&quot;
+      },
+      {
+        &quot;name&quot;: &quot;Macro compiled&quot;,
+        &quot;ok&quot;: true,
+        &quot;message&quot;: &quot;Java compilation&quot;
+      },
+      {
+        &quot;name&quot;: &quot;Controller tests&quot;,
+        &quot;ok&quot;: true,
+        &quot;message&quot;: &quot;Tests bound to the current source files&quot;
+      },
+      {
+        &quot;name&quot;: &quot;Zero-step recipe check&quot;,
+        &quot;ok&quot;: true,
+        &quot;message&quot;: &quot;Use Check recipe after compilation/tests; it performs no flow steps&quot;
+      },
+      {
+        &quot;name&quot;: &quot;Campaign hold released&quot;,
+        &quot;ok&quot;: false,
+        &quot;message&quot;: &quot;Waiting for the other agent&#x27;s mesh convergence and optimization results before any C01 or wave launch.&quot;
+      }
+    ],
+    &quot;message&quot;: &quot;No automatic start. Complete the checks listed below&quot;
+  },
+  &quot;queue&quot;: [
+    {
+      &quot;id&quot;: &quot;20261030_140138_22230605&quot;,
+      &quot;status&quot;: &quot;needs_review&quot;,
+      &quot;spec&quot;: {
+        &quot;name&quot;: &quot;W01a&quot;,
+        &quot;height_m&quot;: 0.5,
+        &quot;wavelength_m&quot;: 20.0,
+        &quot;xmin_m&quot;: -35.0,
+        &quot;xmax_m&quot;: 45.0,
+        &quot;zone_m&quot;: 20.0,
+        &quot;upstream_m&quot;: 35.0,
+        &quot;downstream_m&quot;: 43.81,
+        &quot;length_m&quot;: 80.0,
+        &quot;wall_minutes&quot;: 180.0,
+        &quot;action&quot;: &quot;run&quot;,
+        &quot;mesh&quot;: &quot;M10_FS020&quot;,
+        &quot;z_m&quot;: [
+          -22,
+          8
+        ],
+        &quot;waterline_m&quot;: 2,
+        &quot;depth_m&quot;: 24,
+        &quot;span_m&quot;: 0.02,
+        &quot;U_m_s&quot;: 18,
+        &quot;dt_s&quot;: 0.001,
+        &quot;inner&quot;: 10,
+        &quot;order&quot;: &quot;SECOND_ORDER&quot;,
+        &quot;pressure_AMG_tolerance&quot;: 0.01
+      },
+      &quot;message&quot;: &quot;C01 stopped without a verified reusable checkpoint&quot;,
+      &quot;resume_manifest&quot;: null
+    }
+  ],
+  &quot;current_diagnostics&quot;: {},
+  &quot;previous_guard_review&quot;: &quot;F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\c01_calm_r2_guard_review.json&quot;
+}</textarea><p>Local text file: <code>F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\CHAT_CONTINUE_LATEST.txt</code></p><p>Generated 2026-11-02T16:27:02.388940+01:00</p><script>document.getElementById("copy").onclick=async()=>{const t=document.getElementById("handover");try{await navigator.clipboard.writeText(t.value);document.getElementById("copied").textContent="Copied"}catch(e){t.focus();t.select();document.getElementById("copied").textContent="Selected — press Ctrl+C"}};</script></body></html>

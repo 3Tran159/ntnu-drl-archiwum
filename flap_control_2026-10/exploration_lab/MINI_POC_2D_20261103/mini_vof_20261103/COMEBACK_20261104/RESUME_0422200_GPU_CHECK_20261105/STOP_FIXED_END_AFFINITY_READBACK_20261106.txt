@@ -1,0 +1,1 @@
+Command '['powershell', '-NoProfile', '-Command', '\nGet-Process -Id 17844,25836 -ErrorAction SilentlyContinue | ForEach-Object {\n    [pscustomobject]@{pid=$_.Id; mask=$_.ProcessorAffinity.ToInt64(); priority=$_.PriorityClass.ToString()}\n} | ConvertTo-Json -Compress\n']' returned non-zero exit status 1.

@@ -1,0 +1,45 @@
+from pathlib import Path
+import json,html,shutil
+import night_queue as q
+H=Path(__file__).resolve().parents[1];R=H.parent;E='BOUNDED_FIXED_PLUS2_SWEEP_20261103'
+approval=q.read(H/'audit/BOUNDED_SWEEP_APPROVAL_20261103.json')
+folder=H/'reports'/E;folder.mkdir(exist_ok=True)
+description='''<h1>Autonomiczny przebieg: C0 → +2° → prędkości10–18m/s</h1>
+<p>Odrębna autoryzacja użytkownika z03.11.2026. Start z istniejącego C0 SPEED DOWN:t0,690s,U17,93152m/s,δ0°. Pola, siatka i czas zachowane. 8CPU,bez GPU,dt0,002s. Liczba iteracji wewnętrznych zwiększona40→50 za zgodą użytkownika.</p>
+<table><tr><th>Etap</th><th>Działanie</th><th>Warunek przejścia</th></tr>
+<tr><td>0</td><td>Ta sama funkcja quintic18→10, koniec t1,05s</td><td>Każdy krok przechodzi zabezpieczenia; residual niezaliczony oznacza wyłącznie próbkę diagnostyczną</td></tr>
+<tr><td>1</td><td>Nieruchoma klapka0°,U10</td><td>Stabilne siły,moment,residuals i wszystkie zabezpieczenia</td></tr>
+<tr><td>2</td><td>Płynne0→+2° przez0,2s,U10</td><td>Rzeczywisty ruch, zgodność pozycji i pełna kontrola Overset</td></tr>
+<tr><td>3</td><td>Ustalenie nieruchomej klapki+2°,U10</td><td>Pierwszy poprawny punkt i zachowany checkpoint</td></tr>
+<tr><td>4–7</td><td>12,14,16,18m/s; płynna zmianaU przez0,2s, potem ustalenie</td><td>W każdym punkcie osobna akceptacja numeryczna przed kolejnym U</td></tr></table>
+<p>Etapy stanowią jedną maszynę stanów wewnątrz zadania STAR obsługiwanego przez istniejący kontroler. Nie ma ponownych rozruchów solvera ani zatwierdzeń Work pomiędzy etapami. Po końcu zapis i STOP; po naruszeniu bezpieczeństwa zapis i HOLD.</p>
+<h2>Residuals</h2><p>Poprzednie okno12321–12360 było prawidłowe. Sdr ratio0,0100002253548 nadal jest niezaliczone przy progu0,01. Nowy przebieg używa natywnych próbek X/Y monitora i dokładnie50 kolejnych iteracji:before+1…after; zapisuje pełną historię i pierwszy/ostatni residual. Y-momentum pozostaje wyłączony z kryterium redukcji zgodnie z dotychczasową kontrolą quasi2D; jego wartości i współczynnik normalizacji nadal są raportowane. Nie zmieniono progu0,01.</p>
+<h2>Punkty pomiarowe</h2><p>Minimum200kroków ustalania przy stałymU iδ. Dwa kolejne okna kontroli co25kroków: dryf średnich CL/CD/Mh&lt;0,5%,rozstęp ostatnich25&lt;1%; każdy z ostatnich25kroków musi zaliczyć kryterium residuals. Limit750kroków ustalania na punkt; brak spełnienia oznacza HOLD,bez fałszywego PASS. Wiersze historii pozostają diagnostyczne; zatwierdzone średnie i minima znajdują się wyłącznie w static_results.csv/static_pressures.csv. To akceptacja numeryczna POC,nie pełna walidacja siatkowa lub dane DRL.</p>
+<h2>Bezwzględne zabezpieczenia</h2><p>pABS&gt;12339,2147668Pa; względny bilans masy&lt;1e-4 względem aktualnego strumienia wlotowego; k/ω-floor0; μt/μ&lt;99999; Overset errors0,trudna interpolacja0; dodatnie objętości i jakość; face validity≥0,5; Umax≤180m/s. Pełny audyt wszystkich333939komórek przekroju quasi2D w każdym kroku. SST i konfiguracja Overset bez zmian.</p>
+<h2>Dysk i wznowienie</h2><p>Nowe kopie okresowe co100kroków: pozostają dwie ostatnie po zweryfikowanym nowym zapisie SHA-256. Pierwszy zaakceptowany+2°/10m/s i wynik końcowy są zachowane osobno. Nie usuwa się żadnych wcześniejszych checkpointów. Próg7GiB przed następnym krokiem zapewnia miejsce na zapis; istniejące progi kontrolera8GiB RAM/15GiB dysku przy starcie i4/5GiB podczas pracy pozostają. Wymagany STOP zapisuje fazę i czas; jawne START po ręcznej pauzie może przygotować kontynuację z tego stanu, zachowując wcześniejsze punkty i ponownie zbierając okno ustalania. FAIL nie jest automatycznie wznawiany.</p>
+<h2>Sterowanie</h2><p>START/RESUME po ręcznej pauzie: <code>F:\\ntnu\\flap_control\\START_BOUNDED_FLAP_SWEEP.cmd</code><br>STOP: <code>F:\\ntnu\\flap_control\\STOP_CFD.cmd</code><br>STATUS: <code>F:\\ntnu\\flap_control\\STATUS_CFD.cmd</code></p>
+<p>Kontroler i makro pracują lokalnie bez Work. Komputer musi pozostać włączony i nieuśpiony; licencja dostępna. Nie utworzono autostartu Windows ani drugiego kontrolera. Nie wykonano symulacji+5°,fal aniDRL. W04 i stareFAIL pozostają nietknięte.</p>
+<h2>Dowody</h2><p>Kompilacja oraz15testów polityki etapów, autoryzacji, ograniczeń i checkpointów:PASS. Testy logiki nie są dowodem przejścia wszystkich etapów CFD. Aktualny wynik należy odczytać zBOUNDED_SWEEP_STATUS.json i historii.</p>'''
+(folder/'WORKFLOW.html').write_text('<html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:17px system-ui;line-height:1.5;max-width:1000px;margin:30px auto;padding:20px}td,th{padding:8px;border-bottom:1px solid #bbb}code{overflow-wrap:anywhere}</style>'+description,encoding='utf8')
+for name in ['HOME_RESUME_INSTRUCTIONS.md','CFD_LOCAL_CONTROL.md']:
+ p=R/name;backup=H/'audit'/('before_bounded_'+name)
+ if not backup.exists():shutil.copy2(p,backup)
+ txt=p.read_text(encoding='utf8');lead='''# Aktualizacja03.11.2026 — ograniczona kampania etapowa
+
+Nowa, odrębna autoryzacja: BOUNDED_FIXED_PLUS2_SWEEP_20261103. Start z C0 SPEED DOWN t0,690s; 8CPU,bez GPU,dt0,002s,50iteracji wewnętrznych. Dalej: ta sama redukcjaU→10; ustalenie0°; płynne+2°; ustalenie; sweep10/12/14/16/18. Etapy są automatyczne, z niezmienionymi progami bezpieczeństwa. StareFAIL nie zostały odblokowane.
+
+- START / RESUME ręcznej pauzy: `F:\\ntnu\\flap_control\\START_BOUNDED_FLAP_SWEEP.cmd`
+- STOP: `F:\\ntnu\\flap_control\\STOP_CFD.cmd`
+- STATUS: `F:\\ntnu\\flap_control\\STATUS_CFD.cmd`
+- Bieżący stan: `F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\BOUNDED_SWEEP_STATUS.json`
+- Dashboard: `F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\NIGHT_DASHBOARD.html`
+- Pełne zasady: `hydro_validation_2606_20261102\\reports\\BOUNDED_FIXED_PLUS2_SWEEP_20261103\\WORKFLOW.html`
+
+START nie powtarza ukończonych lub nieudanych zadań. Po naruszeniu bezpieczeństwa pozostaje HOLD. Przed przeniesieniem komputera użyj STOP i sprawdź zapis oraz procesy; W04 jest niezależny. Starsze opisy poniżej dotyczą archiwalnych etapów, a nie zgody na ich ponowne uruchomienie.
+
+---
+
+'''
+ p.write_text(lead+txt,encoding='utf8')
+q.atomic(folder/'APPROVAL.json',approval)
+print(str(folder/'WORKFLOW.html'))

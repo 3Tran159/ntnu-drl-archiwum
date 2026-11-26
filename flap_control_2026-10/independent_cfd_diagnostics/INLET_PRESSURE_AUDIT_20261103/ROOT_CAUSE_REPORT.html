@@ -1,0 +1,196 @@
+<html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Audyt spadku ciśnienia C0</title><style>body{font:17px system-ui;max-width:1150px;margin:30px auto;padding:16px;color:#172736}img{max-width:100%}table{border-collapse:collapse;font-size:14px}td,th{padding:7px;border-bottom:1px solid #ddd}pre{white-space:pre-wrap;overflow-wrap:anywhere}.scroll{overflow:auto}</style>
+<h1>C0: przyczyna spadku ciśnienia przy hamowaniu</h1>
+<p><b>Przyczyna:</b> narzucone szybkie hamowanie wody wymaga gradientu ciśnienia. Przy zadanym ciśnieniu piezometrycznym na top/outlet powstaje rozległe podciśnienie przed płatem. To odpowiedź bezwładnościowa tej domeny i jej warunków brzegowych; nie dowód kawitacji przy płacie.</p>
+<p>Przyrosty Pressure od t=0,650 s w 12 464 komórkach przed płatem skalują się współczynnikiem 1,791268; stosunek |dU/dt| wynosi 1,789649 (różnica 0,09%). R²=0,9999999866; błąd RMS dopasowania 5,58 Pa. Hamowanie wzrosło z 4,86 do 8,697696 m/s², mimo zmiany U o zaledwie 0,108 m/s.</p>
+<h2>Lokalizacja i wiarygodność minimum</h2><p>Background, centroid (−34,9668721; 0,020; 1,6569813) m. Do wlotu 0,0331279 m, do top 6,3430187 m, bottom 23,6569813 m, outlet 79,9668721 m; do obu granic rozpiętości po 0,01 m. Numer wiersza danych CSV 21719, nie globalny identyfikator komórki STAR. Status aktywny 0, błąd Overset 0, jakość 0,918209; objętość 3,49463e−4 m³. Minimum nie jest komórką interpolowaną ani nieaktywną.</p>
+<p>54 komórki poniżej progu; łączna objętość 0,0599121 m³, środki x∈[−34,9669;−34,3660], z∈[−1,8174;4,5402] m. 21 z 30 najbliższych komórek także poniżej progu: rozległy obszar, nie pojedynczy pik.</p>
+<h2>Ciśnienie i warunki brzegowe</h2><p>ρ=1000 kg/m³, g=9,8100004196 m/s², p_ref=101325 Pa, z_ref=2 m. W całym eksporcie zachodzi pABS=Pressure+101325+ρg(2−z), z błędem ≤1,75e−10 Pa. W komórce minimum: hydrostatyczne pABS=104690,0135 Pa, Pressure=−97514,5312 Pa, razem 7175,4823 Pa. Nie stwierdzono podwójnego doliczenia hydrostatyki ani błędu referencji.</p>
+<p>Inlet: składowe (U,0,0), intensywność turbulencji 0,001, stosunek lepkości 10. Top: Pressure Outlet, zerowe ciśnienie piezometryczne, kierunek backflow EXTRAPOLATED. Outlet: to samo ciśnienie, kierunek BOUNDARY_NORMAL. Bottom: slip; span: symmetry. Domena z definicji geometrii [−35,45]×[0,01,0,03]×[−22,8] m. Native readback t=0,650 oraz kod następujących makr dokumentują niezmienione referencje i typy granic. Nowy test zapisuje ponowny odczyt natywny.</p>
+<p>Próg 12 339,2148 Pa zostaje bez zmian, globalnie i lokalnie. 7,175 kPa jest powyżej ciśnienia pary, lecz nie zachowuje wymaganego zapasu 10 kPa. Nie wykluczono wlotu z kontroli.</p>
+<img src="hydrostatic_decomposition.png"><img src="pressure_mechanism.png"><img src="inlet_maps.png">
+<h2>Historia 0,690–0,706 s</h2><p>Bilans masy pozostaje bardzo dobry. Residuale liczone z dokładnie 50 iteracji każdego kroku: ostatni ω=0,0124542, czyli FAIL przy progu 0,01. Wartość 0,00850196 dotyczy t=0,696 s. Przyczyną zatrzymania była globalna presja; residual nie jest przemianowany na PASS.</p><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>time_s</th>
+      <th>U_m_s</th>
+      <th>dU_dt_m_s2</th>
+      <th>p_absolute_min_Pa</th>
+      <th>mass_imbalance_relative</th>
+      <th>CL_hydro</th>
+      <th>CD</th>
+      <th>Mh_Nm</th>
+      <th>Sdr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.692</td>
+      <td>17.921363</td>
+      <td>-5.2987804</td>
+      <td>22754.627</td>
+      <td>3.9651812e-08</td>
+      <td>0.32022962</td>
+      <td>0.0071585702</td>
+      <td>-11.751974</td>
+      <td>0.007464359</td>
+    </tr>
+    <tr>
+      <td>0.694</td>
+      <td>17.910316</td>
+      <td>-5.750646</td>
+      <td>22141.517</td>
+      <td>3.5633683e-08</td>
+      <td>0.31976135</td>
+      <td>0.0071627817</td>
+      <td>-11.725099</td>
+      <td>0.0078263158</td>
+    </tr>
+    <tr>
+      <td>0.696</td>
+      <td>17.898353</td>
+      <td>-6.2148904</td>
+      <td>21504.47</td>
+      <td>3.4598968e-08</td>
+      <td>0.31927302</td>
+      <td>0.007168864</td>
+      <td>-11.696925</td>
+      <td>0.0085019649</td>
+    </tr>
+    <tr>
+      <td>0.698</td>
+      <td>17.885449</td>
+      <td>-6.690816</td>
+      <td>20853.525</td>
+      <td>3.0162059e-08</td>
+      <td>0.31876944</td>
+      <td>0.0071768265</td>
+      <td>-11.667684</td>
+      <td>0.0092754444</td>
+    </tr>
+    <tr>
+      <td>0.7</td>
+      <td>17.871582</td>
+      <td>-7.1777344</td>
+      <td>20189.068</td>
+      <td>2.4874095e-08</td>
+      <td>0.31825037</td>
+      <td>0.0071867721</td>
+      <td>-11.637383</td>
+      <td>0.009980503</td>
+    </tr>
+    <tr>
+      <td>0.702</td>
+      <td>17.856731</td>
+      <td>-7.674966</td>
+      <td>17968.013</td>
+      <td>2.0706799e-08</td>
+      <td>0.31771581</td>
+      <td>0.0071988198</td>
+      <td>-11.606025</td>
+      <td>0.010823388</td>
+    </tr>
+    <tr>
+      <td>0.704</td>
+      <td>17.840876</td>
+      <td>-8.1818404</td>
+      <td>12979.781</td>
+      <td>1.5203849e-08</td>
+      <td>0.31716535</td>
+      <td>0.0072129947</td>
+      <td>-11.573609</td>
+      <td>0.011629222</td>
+    </tr>
+    <tr>
+      <td>0.706</td>
+      <td>17.823998</td>
+      <td>-8.697696</td>
+      <td>7175.4823</td>
+      <td>1.0091722e-09</td>
+      <td>0.31659936</td>
+      <td>0.0072294844</td>
+      <td>-11.540167</td>
+      <td>0.012454209</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2>Jedyna poprawka i test</h2><p>Spowolnienie parametru czasu dotychczasowej funkcji S5. Od t=0,690 s płynne przejście szybkości fazy z 2,5/s do 0,25/s przez 0,020 s; U, dU/dt i d²U/dt² pozostają ciągłe. Pozostała część redukcji kończyłaby się przy t=4,200 s. Jeden test 50 kroków (do t=0,790 s): U osiąga 17,796725 m/s, czyli mniej niż przy poprzednim zatrzymaniu. Maksymalne początkowe hamowanie 5,439 m/s² zamiast narastania do 37,5 m/s². Predykcja na podstawie starych pól daje minimum ok.22,56 kPa; jest wyłącznie predykcją, a nie kryterium zaliczenia.</p>
+<h2>Wynik jedynego testu: PASS diagnostyczny</h2><p>50 kroków, t=0,690→0,790 s, iteracje12360→14860, U=17,93152→17,796725 m/s, δ=0°. Najniższe pABS podczas całego testu: <b>22,443 kPa</b>; przy wlocie <b>34,567 kPa</b>. Końcowe minimum globalne 29,264 kPa; inlet42,604 kPa, klapka47,720 kPa, szczelina52,060 kPa. W starej komórce minimum jest teraz94,211 kPa.</p>
+<p>Przy dokładnie tej samej U=17,8239976 m/s: poprzednio7,175 kPa, po poprawce29,268 kPa. Przyspieszenie jest dziesięciokrotnie mniejsze. To kontrolowana interwencja potwierdzająca mechanizm ciśnienia bezwładnościowego.</p>
+<p>Wszystkie50 okien residuali spełniają pierwotny próg0,01 dla kontrolowanych równań. Maksimum ω w ostatnich25 krokach:0,00390206. Y-momentum zachowuje wcześniejsze jawne wyłączenie dla quasi2D ze względu na normalizację4,9145e−16; nie jest prezentowane jako spełniające ten sam próg. Maksymalny względny niezbilansowany strumień masy1,74214e−7. Overset:333939komórek,255350aktywnych,77108nieaktywnych,1481acceptorów,0błędów i0trudnych interpolacji. MinV=9,12875e−12m³, minQ=0,0610482; brak zmiany pozycji klapki.</p>
+<p><b>Siły pozostają przejściowe.</b> Odczyt początkowy zgadza się dokładnie z checkpointem. Na końcu CL=0.322481038, CD=0.007813843, Mh=-11.867039Nm. CD wzrósł o9.19% podczas zmiany przepływu; to nie jest zaakceptowany punkt statyczny. Średnia składowa U w pierwszej warstwie przy wlocie17,796778m/s, w obszarze przed płatem17,925291m/s: pole nie jest jeszcze ustalone. Pełna interpretacja sił wymaga etapów stabilizacji i kontroli siatki/czasu. Dotychczasowe bramki sił pozostają bez zmian.</p>
+<img src="recovery_result.png"><p>Checkpoint: <code>F:/ntnu/flap_control/hydro_validation_2606_20261102/cases/INLET_PRESSURE_RECOVERY_20261103/run_20261103_120108/checkpoint.sim</code><br>Rozmiar:1525998405B<br>SHA-256:<code>78b729a0413047f01a271bc28e7575be9e9456518102ff25a816870f75ccbbc5</code><br>Zapis natywny kompletny; STAR-info odczytał Step395, Time0,79, Iter14860, Np8. Sprawdzono nagłówek i integralność; nie wykonano dodatkowego pełnego otwarcia nowego rozwiązania w solverze.</p>
+<h2>GO / HOLD</h2><p><b>GO: poprawka tempa hamowania do dalszej diagnostyki.</b> Kontynuacja przygotowana w istniejącym kontrolerze, skompilowana;15 izolowanych testów zabezpieczeń PASS. Nie rozpoczęto pełnej kampanii. Nowy identyfikator RECOVERED_FIXED_PLUS2_SWEEP_20261103; poprzednie FAIL pozostają zablokowane. W04 nietknięty.</p>
+<p><b>HOLD uruchomienia:</b> F: ma 13.54GiB wolnego przy wymaganych15GiB; trzeba odzyskać co najmniej1.46GiB. Sprawdzony launcher odmawia startu przy tym stanie. Nic nie usunięto i progu nie obniżono. Po zapewnieniu miejsca: <code>F:\ntnu\flap_control\START_RECOVERED_FLAP_SWEEP.cmd</code>. Kolejność: kontynuacja hamowania do10 (t=4,2), stabilizacja0°, płynna klapka+2° przy10, stabilizacja, następnie12/14/16/18 tylko po bramkach. Brak autostartu po restarcie systemu.</p>
+<p><a href="RECOVERY_RESULT.json">Wynik testu JSON</a> · <a href="FORCE_TRANSIENT_REVIEW.json">Ocena sił</a> · <a href="FINAL_STATUS.json">Stan końcowy</a></p><details><summary>Dowody i ograniczenia</summary><pre>{
+  &quot;root_cause&quot;: &quot;Fast imposed inlet deceleration produces a domain-scale inertial pressure depression under fixed piezometric pressure at top/outlet; global minimum occurs where this depression combines with the hydrostatic head.&quot;,
+  &quot;confidence&quot;: &quot;Strong field evidence; corrective test provides causal intervention. Does not constitute grid/time validation.&quot;,
+  &quot;reporting_identity_max_error_Pa&quot;: 1.7462298274040222e-10,
+  &quot;spatial_fit&quot;: {
+    &quot;upstream&quot;: {
+      &quot;cells&quot;: 12464,
+      &quot;fit_slope&quot;: 1.791267602655216,
+      &quot;intercept_Pa&quot;: -12.334473689964629,
+      &quot;R2&quot;: 0.9999999865552589,
+      &quot;rms_error_Pa&quot;: 5.579476521648665,
+      &quot;predicted_acceleration_ratio&quot;: 1.7896493827160522,
+      &quot;mean_u_change&quot;: -0.0523850360644071
+    },
+    &quot;inlet5m&quot;: {
+      &quot;cells&quot;: 2636,
+      &quot;fit_slope&quot;: 1.7910490574128386,
+      &quot;intercept_Pa&quot;: -26.989193442288567,
+      &quot;R2&quot;: 0.9999999846221009,
+      &quot;rms_error_Pa&quot;: 6.092444429749155,
+      &quot;predicted_acceleration_ratio&quot;: 1.7896493827160522,
+      &quot;mean_u_change&quot;: -0.0911351437247772
+    },
+    &quot;near_foil&quot;: {
+      &quot;cells&quot;: 109698,
+      &quot;fit_slope&quot;: 1.8457752049533487,
+      &quot;intercept_Pa&quot;: 401.21698732165174,
+      &quot;R2&quot;: 0.9947190431146096,
+      &quot;rms_error_Pa&quot;: 150.19456912523836,
+      &quot;predicted_acceleration_ratio&quot;: 1.7896493827160522,
+      &quot;mean_u_change&quot;: -0.007975253445386975
+    }
+  },
+  &quot;boundary_distances&quot;: {
+    &quot;inlet_m&quot;: 0.0331278772649668,
+    &quot;outlet_m&quot;: 79.96687212273503,
+    &quot;top_m&quot;: 6.343018693353709,
+    &quot;bottom_m&quot;: 23.65698130664629,
+    &quot;span_low_m&quot;: 0.0099999999999999,
+    &quot;span_high_m&quot;: 0.010000000000000099
+  },
+  &quot;pressure_threshold_Pa&quot;: 12339.214766776897,
+  &quot;isolated_cell&quot;: false,
+  &quot;low_cells&quot;: 54,
+  &quot;low_volume_m3&quot;: 0.05991214625647269,
+  &quot;min_cell_status&quot;: &quot;active=0; normal cell type=0; error=0; not an acceptor&quot;,
+  &quot;min_cell_quality&quot;: 0.9182090181121052,
+  &quot;last_Sdr_ratio&quot;: 0.012454208586954212,
+  &quot;residual_threshold&quot;: 0.01,
+  &quot;residual_window_exact_50&quot;: true,
+  &quot;physical_cavitation_claim&quot;: false,
+  &quot;explanation&quot;: &quot;7.175 kPa remains above vapor pressure 2.339 kPa, but violates the required extra 10 kPa margin. Single-phase SST does not model vapor formation.&quot;,
+  &quot;minimum_fix&quot;: &quot;Only C2 reparameterization of the existing quintic U(t), preserving U and its first two derivatives at t=.690; phase-rate2.5 to0.25/s over.020s, then0.25/s; initial transient max deceleration5.439m/s2, later maximum3.75m/s2.&quot;,
+  &quot;not_changed&quot;: [
+    &quot;inlet/outlet/top/bottom types&quot;,
+    &quot;pressure reference/altitude&quot;,
+    &quot;geometry/gap/mesh&quot;,
+    &quot;Overset&quot;,
+    &quot;SST/URF/discretization&quot;,
+    &quot;dt0.002&quot;,
+    &quot;inner50&quot;,
+    &quot;global and local pressure guards&quot;
+  ],
+  &quot;remaining_uncertainty&quot;: [
+    &quot;Persistent STAR global cell ID was not exported; centroid and region identify the cell unambiguously in the unchanged mesh.&quot;,
+    &quot;Exact temporal residual convergence remains separately checked; final failed-step Sdr did not pass.&quot;,
+    &quot;Three saved field snapshots cannot independently prove absence of every reflection; spatial smoothness and acceleration scaling support inertial response, with no evidence of an isolated reflected wave or runaway instability.&quot;,
+    &quot;Quantitative outer-boundary/grid/time uncertainty and physical interpretation of the artificial water domain remain open.&quot;
+  ],
+  &quot;test_status&quot;: &quot;RUNNING_OR_PENDING_NATIVE_RESULT&quot;,
+  &quot;campaign&quot;: &quot;HOLD until test review&quot;
+}</pre></details>
+<p><a href="FIELD_AUDIT.json">Analiza pól</a> · <a href="RECOVERY_PREFLIGHT.json">Kontrola przygotowania</a> · <a href="time_history_audited_with_residuals.csv">Historia z residualami</a></p></html>

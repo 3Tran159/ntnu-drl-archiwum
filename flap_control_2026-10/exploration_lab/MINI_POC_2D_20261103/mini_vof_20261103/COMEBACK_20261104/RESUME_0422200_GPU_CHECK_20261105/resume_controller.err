@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 156, in <module>
+    raise RuntimeError("Stabilized state is not fixed at zero degrees")
+^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 121, in launch
+    try:
+        
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 35, in job
+    return run_day.new_job(stage, {**settings, **options},
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_day.py", line 196, in new_job
+    native=json.loads(native_path.read_text(encoding="utf8"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_172750\\SOLVE_STATUS.json'

@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-03 00:30:47 UTC",
+  "source": "Work",
+  "target_job": "c0_flux_continuation",
+  "reason": "Bounded conservative first-order initialization has passed pressure/mass/turbulence/connectivity checks through more than500 additional iterations; forces still drift and are unapproved. Save current fields and perform separately controlled restoration of second-order momentum while retaining first-order SST.",
+  "action": "Graceful stop at next10-iteration boundary; preserve checkpoint and all fields"
+}

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\bounded_sweep_control.py", line 53, in <module>
+    try:raise SystemExit(main() or 0)
+                         ^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\bounded_sweep_control.py", line 51, in main
+    sys.argv=[sys.argv[0],'start'];return existing()
+                                          ^^^^^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\cfd_control.py", line 52, in main
+    q.main();return 0
+    ^^^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 389, in main
+    publish(st,cfg,metrics,rs)
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_queue.py", line 307, in publish
+    publish(H,view,base,st,review)
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\bounded_sweep_dashboard.py", line 22, in publish
+    if data.get('result',{}).get('status')=='bounded_sweep_hold':base['solver_state']='HOLD';data['scoped_campaign_state']='HOLD'
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'

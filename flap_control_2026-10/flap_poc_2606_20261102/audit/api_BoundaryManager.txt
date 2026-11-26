@@ -1,0 +1,30 @@
+Compiled from "BoundaryManager.java"
+public class star.common.BoundaryManager extends star.base.neo.GroupableObjectManager<star.common.Boundary> {
+  public star.common.BoundaryManager(star.base.neo.ClientServerObjectKey);
+  public void disconnect();
+  public star.common.Region getRegion();
+  public star.common.Simulation getSimulation();
+  public star.common.Boundary getDefaultBoundary();
+  public star.base.neo.NeoObservable getMeshChangedObservable();
+  public star.common.Boundary getBoundary(java.lang.String);
+  public java.util.Collection<star.common.Boundary> getBoundaries();
+  public star.common.DynamicQueryGroup<star.common.Boundary> getPartSurfacesPropertyGroup();
+  public java.util.List<star.common.Boundary> getPartSurfacesPropertyGroupInput();
+  public void setPartSurfacesPropertyGroupInput(java.util.List<star.common.Boundary>);
+  public int getChildrenCount();
+  public void removeBoundaries(java.util.Vector<star.common.Boundary>);
+  public star.common.Boundary createEmptyBoundary(java.lang.String);
+  public star.common.Boundary createEmptyBoundary(java.lang.String, star.base.neo.ClientServerObjectGroup);
+  public star.common.Boundary createEmptyBoundary();
+  public star.common.Boundary createEmptyBoundary(star.base.neo.ClientServerObjectGroup);
+  public star.common.Boundary createEmptyShellEdgeBoundary(java.lang.String);
+  public star.common.Boundary createEmptyShellEdgeBoundary(java.lang.String, star.base.neo.ClientServerObjectGroup);
+  public star.common.Boundary createEmptyShellEdgeBoundary();
+  public star.common.Boundary createEmptyShellEdgeBoundary(star.base.neo.ClientServerObjectGroup);
+  public star.common.Boundary createEmptyVirtualBodyBoundary(java.lang.String);
+  public star.common.Boundary createEmptyVirtualBodyBoundary(java.lang.String, star.base.neo.ClientServerObjectGroup);
+  public star.common.Boundary createEmptyVirtualBodyBoundary();
+  public star.common.Boundary createEmptyVirtualBodyBoundary(star.base.neo.ClientServerObjectGroup);
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+  public java.lang.Class<? extends star.base.neo.ClientServerObject> getManagedType();
+}

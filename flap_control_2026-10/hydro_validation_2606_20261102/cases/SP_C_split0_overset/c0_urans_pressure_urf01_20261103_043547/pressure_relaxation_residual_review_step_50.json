@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-03T04:50:43.253689+01:00",
+  "scientific_approved": false,
+  "notes": "Last25 complete timestep windows. Same geometry,physics,mesh,dt and40inner. PressureURF is the only numerical change, but physical time also advances; this is a controlled continuation, not a same-time branch comparison.",
+  "cases": {
+    "C: pressure URF 0.2": {
+      "Continuity": {
+        "steps": 25,
+        "normalization_factor": 0.003963208746565847,
+        "median_last_reported_residual": 0.967028858213358,
+        "median_first_reported_residual": 1.8095840504009648,
+        "median_last_over_first": 0.5194534015695036,
+        "p90_last_over_first": 0.793155689603274,
+        "median_last5_over_first": 0.48794602933109826
+      },
+      "X-momentum": {
+        "steps": 25,
+        "normalization_factor": 0.02149720992236967,
+        "median_last_reported_residual": 5.624719821444683,
+        "median_first_reported_residual": 58.929367734191295,
+        "median_last_over_first": 0.09580463951856111,
+        "p90_last_over_first": 0.1183467850006529,
+        "median_last5_over_first": 0.08772455339488897
+      },
+      "Z-momentum": {
+        "steps": 25,
+        "normalization_factor": 0.01087764939339029,
+        "median_last_reported_residual": 4.8814014837958695,
+        "median_first_reported_residual": 40.4663980563012,
+        "median_last_over_first": 0.11949594174286425,
+        "p90_last_over_first": 0.1778244545983488,
+        "median_last5_over_first": 0.12300967120133424
+      },
+      "Tke": {
+        "steps": 25,
+        "normalization_factor": 0.003064984585937406,
+        "median_last_reported_residual": 0.0136623078976889,
+        "median_first_reported_residual": 0.1706829108934206,
+        "median_last_over_first": 0.08122882724320264,
+        "p90_last_over_first": 0.11836315028968993,
+        "median_last5_over_first": 0.09289351211914268
+      },
+      "Sdr": {
+        "steps": 25,
+        "normalization_factor": 894340.9321518223,
+        "median_last_reported_residual": 5.7516097802698906e-06,
+        "median_first_reported_residual": 3.122996669659958e-05,
+        "median_last_over_first": 0.18438421686243656,
+        "p90_last_over_first": 0.23731887773443341,
+        "median_last5_over_first": 0.19028213490017043
+      }
+    },
+    "C: pressure URF 0.1": {
+      "Continuity": {
+        "steps": 25,
+        "normalization_factor": 0.003963208746565847,
+        "median_last_reported_residual": 1.0388824146315412,
+        "median_first_reported_residual": 1.6303004541299355,
+        "median_last_over_first": 0.5406472396016121,
+        "p90_last_over_first": 0.9504677214843379,
+        "median_last5_over_first": 0.5444821315556745
+      },
+      "X-momentum": {
+        "steps": 25,
+        "normalization_factor": 0.02149720992236967,
+        "median_last_reported_residual": 6.259221430743511,
+        "median_first_reported_residual": 64.28221513574601,
+        "median_last_over_first": 0.09942438265997282,
+        "p90_last_over_first": 0.1241192312768412,
+        "median_last5_over_first": 0.08032639735372644
+      },
+      "Z-momentum": {
+        "steps": 25,
+        "normalization_factor": 0.01087764939339029,
+        "median_last_reported_residual": 6.086618210232342,
+        "median_first_reported_residual": 45.65223109945901,
+        "median_last_over_first": 0.13040194933313332,
+        "p90_last_over_first": 0.1861079810442996,
+        "median_last5_over_first": 0.11685112681750831
+      },
+      "Tke": {
+        "steps": 25,
+        "normalization_factor": 0.003064984585937406,
+        "median_last_reported_residual": 0.0182761677179222,
+        "median_first_reported_residual": 0.1531241513402983,
+        "median_last_over_first": 0.11396376677631247,
+        "p90_last_over_first": 0.18453609332145718,
+        "median_last5_over_first": 0.11071223323415473
+      },
+      "Sdr": {
+        "steps": 25,
+        "normalization_factor": 894340.9321518223,
+        "median_last_reported_residual": 6.235202801489118e-06,
+        "median_first_reported_residual": 2.8691967391382736e-05,
+        "median_last_over_first": 0.21873453611191898,
+        "p90_last_over_first": 0.2852931729096632,
+        "median_last5_over_first": 0.20102512676332868
+      }
+    }
+  },
+  "same_native_normalization_factors": true,
+  "median_last_residual_ratios_urf01_over_urf02": {
+    "Continuity": 1.0743034251851975,
+    "X-momentum": 1.1128059049056527,
+    "Z-momentum": 1.2468997337009193,
+    "Tke": 1.3377072054578552,
+    "Sdr": 1.0840795950514805
+  }
+}

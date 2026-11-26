@@ -1,0 +1,69 @@
+python.exe : test_baseline_hash_guard (test_meshflow.ControllerTests.test_baseline_hash_guard) ... ok
+At line:1 char:49
++ ... _20261028'; & 'E:\Program Files\Siemens\21.02.007-R8\STAR-CCM+21.02.0 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_baseline_h...h_guard) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_campaign_lock_prevents_second_launcher 
+(test_meshflow.ControllerTests.test_campaign_lock_prevents_second_launcher) ... ok
+A001 completed acceptable
+test_changed_case_refuses_resume (test_meshflow.ControllerTests.test_changed_case_refuses_resume) ... ok
+test_coarsening_pilot_has_three_distinct_points 
+(test_meshflow.ControllerTests.test_coarsening_pilot_has_three_distinct_points) ... ok
+A001 completed acceptable
+A002 completed acceptable
+A003 completed acceptable
+test_completed_pilot_requires_explicit_proceed_decision 
+(test_meshflow.ControllerTests.test_completed_pilot_requires_explicit_proceed_decision) ... ok
+A001 completed acceptable
+test_control_readback_change_rejected (test_meshflow.ControllerTests.test_control_readback_change_rejected) ... ok
+A001 failed not_eligible
+A002 failed not_eligible
+test_crash_stops_after_failure_limit (test_meshflow.ControllerTests.test_crash_stops_after_failure_limit) ... ok
+test_duplicate_case_rejected (test_meshflow.ControllerTests.test_duplicate_case_rejected) ... ok
+test_empty_summary_has_no_invented_rows (test_meshflow.ControllerTests.test_empty_summary_has_no_invented_rows) ... ok
+test_exact_version_required (test_meshflow.ControllerTests.test_exact_version_required) ... ok
+A001 completed acceptable
+test_failed_generation_never_passes (test_meshflow.ControllerTests.test_failed_generation_never_passes) ... ok
+test_large_batch_blocked (test_meshflow.ControllerTests.test_large_batch_blocked) ... ok
+test_lhs_reproducible_strata (test_meshflow.ControllerTests.test_lhs_reproducible_strata) ... ok
+A001 completed acceptable
+test_license_key_not_persisted (test_meshflow.ControllerTests.test_license_key_not_persisted) ... ok
+A001 completed acceptable
+test_measured_evidence_required (test_meshflow.ControllerTests.test_measured_evidence_required) ... ok
+A001 completed acceptable
+test_missing_prism_review_never_passes (test_meshflow.ControllerTests.test_missing_prism_review_never_passes) ... ok
+A001 completed acceptable
+test_missing_volume_metric_never_passes (test_meshflow.ControllerTests.test_missing_volume_metric_never_passes) ... ok
+test_nan_case_rejected (test_meshflow.ControllerTests.test_nan_case_rejected) ... ok
+A001 completed acceptable
+test_nonpositive_volume_rejected (test_meshflow.ControllerTests.test_nonpositive_volume_rejected) ... ok
+A001 completed acceptable
+test_pareto_and_missing_objective (test_meshflow.ControllerTests.test_pareto_and_missing_objective) ... ok
+test_path_traversal_rejected (test_meshflow.ControllerTests.test_path_traversal_rejected) ... ok
+A001 completed acceptable
+test_prism_lock_change_rejected (test_meshflow.ControllerTests.test_prism_lock_change_rejected) ... ok
+A001 failed not_eligible
+A002 failed not_eligible
+A001 failed not_eligible
+test_retry_preserves_attempts (test_meshflow.ControllerTests.test_retry_preserves_attempts) ... ok
+test_stop_file_prevents_launch (test_meshflow.ControllerTests.test_stop_file_prevents_launch) ... ok
+A001 failed not_eligible
+test_success_exit_without_result_is_failure 
+(test_meshflow.ControllerTests.test_success_exit_without_result_is_failure) ... ok
+A001 completed acceptable
+A002 completed acceptable
+A003 completed acceptable
+test_three_independent_processes_and_resume 
+(test_meshflow.ControllerTests.test_three_independent_processes_and_resume) ... ok
+A001 timeout not_eligible
+test_timeout_recorded (test_meshflow.ControllerTests.test_timeout_recorded) ... ok
+test_uninspected_model_blocked (test_meshflow.ControllerTests.test_uninspected_model_blocked) ... ok
+A001 failed not_eligible
+test_wrong_export_version_quarantined (test_meshflow.ControllerTests.test_wrong_export_version_quarantined) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 2.356s
+
+OK

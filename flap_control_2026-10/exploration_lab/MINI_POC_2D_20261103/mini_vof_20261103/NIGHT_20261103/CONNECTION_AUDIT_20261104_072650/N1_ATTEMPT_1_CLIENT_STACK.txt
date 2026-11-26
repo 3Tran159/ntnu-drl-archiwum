@@ -1,0 +1,64 @@
+          1410   2.560931e-02   1.620035e-04   6.262027e-04   1.276071e-05   4.262907e-05   9.708042e-07   6.180234e-05 
+Reversed flow on  159 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+          1411   2.483051e-02   2.335248e-04   6.655194e-04   2.931593e-05   4.247220e-05   4.730749e-07   6.176207e-05 
+Reversed flow on  159 faces on MINI_water_air: top
+          1412   2.409920e-02   1.140859e-04   5.510451e-04   6.469646e-06   4.242160e-05   3.477648e-07   6.173458e-05 
+Reversed flow on  159 faces on MINI_water_air: top
+INFO [star.base.neo.ClientNotifyHandler]: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:316)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:279)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:322)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:186)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:183)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:166)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:187)
+	at star.base.neo.NeoProperty.readNextChar(NeoProperty.java:935)
+	at star.base.neo.NeoProperty.input(NeoProperty.java:714)
+[catch] at star.base.neo.ClientNotifyHandler.run(ClientNotifyHandler.java:476)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+INFO [star.base.neo.NeoErrorManager]: Starting quiet reporting for Server connection failed, quiet was false
+Exception with Details [star.base.neo.NeoScript]: Macro run-time error: 
+java.lang.NullPointerException: Cannot invoke "star.base.neo.NeoProperty.getDouble(String)" because the return value of "star.base.neo.ClientServerObject.getProperties()" is null
+	at star.base.neo.ClientServerObject.getDouble(ClientServerObject.java:278)
+	at star.common.Solution.getPhysicalTime(Solution.java:28)
+	at macro.MiniVofNight.execute(MiniVofNight.java:66)
+Caused: java.lang.RuntimeException
+	at macro.MiniVofNight.execute(MiniVofNight.java:76)
+	at star.base.neo.NeoScript.play(NeoScript.java:113)
+[catch] at star.common.StarScript.play(StarScript.java:124)
+	at star.common.StarRootBatch.playMacro(StarRootBatch.java:452)
+	at star.common.StarBatch.runCommands(StarBatch.java:45)
+	at star.common.StarRootBatch.lambda$new$0(StarRootBatch.java:77)
+	at star.common.StarRootBatch.run(StarRootBatch.java:254)
+	at star.base.neo.NeoBatch.start(NeoBatch.java:131)
+	at star.common.StarBatch.main(StarBatch.java:202)
+	at star.coremodule.StarCoreModuleInstaller.runBatch(StarCoreModuleInstaller.java:498)
+	at star.coremodule.StarCoreModuleInstaller.restored(StarCoreModuleInstaller.java:416)
+	at org.netbeans.core.startup.NbInstaller.loadCode(NbInstaller.java:455)
+	at org.netbeans.core.startup.NbInstaller.loadImpl(NbInstaller.java:378)
+	at org.netbeans.core.startup.NbInstaller.access$000(NbInstaller.java:77)
+	at org.netbeans.core.startup.NbInstaller$1.run(NbInstaller.java:330)
+	at org.openide.filesystems.FileUtil$2.run(FileUtil.java:420)
+	at org.openide.filesystems.EventControl.runAtomicAction(EventControl.java:102)
+	at org.openide.filesystems.FileSystem.runAtomicAction(FileSystem.java:494)
+	at org.openide.filesystems.FileUtil.runAtomicAction(FileUtil.java:404)
+	at org.openide.filesystems.FileUtil.runAtomicAction(FileUtil.java:424)
+	at org.netbeans.core.startup.NbInstaller.load(NbInstaller.java:327)
+	at org.netbeans.ModuleManager.doEnable(ModuleManager.java:1501)
+	at org.netbeans.ModuleManager.enable(ModuleManager.java:1344)
+	at org.netbeans.ModuleManager.enable(ModuleManager.java:1267)
+	at org.netbeans.core.startup.ModuleList.installNew(ModuleList.java:316)
+	at org.netbeans.core.startup.ModuleList.trigger(ModuleList.java:252)
+	at org.netbeans.core.startup.ModuleSystem.restore(ModuleSystem.java:297)
+	at org.netbeans.core.startup.Main.getModuleSystem(Main.java:173)
+	at org.netbeans.core.startup.Main.getModuleSystem(Main.java:142)
+	at org.netbeans.core.startup.Main.start(Main.java:303)
+	at org.netbeans.core.startup.TopThreadGroup.run(TopThreadGroup.java:97)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+INFO [star.base.neo.NeoErrorManager]: Stopping quiet reporting for Server connection failed

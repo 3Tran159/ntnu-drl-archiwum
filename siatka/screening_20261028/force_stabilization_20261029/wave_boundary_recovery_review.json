@@ -1,0 +1,96 @@
+{
+  "updated_at": "2026-10-30T00:09:38.240978+01:00",
+  "status": "fresh_environmental_outlet_slip_bed_pilot_running",
+  "wave_admitted": false,
+  "calm_mesh": "M09,214908cells,SO1ms10inner,supported",
+  "attempts": [
+    {
+      "case": "W20_H24_X4_CPUprop_dt1ms_r2",
+      "stop_time_s": 0.704,
+      "reason": "stability_guard",
+      "max_speed_m_s": 50.734771,
+      "phase": "air",
+      "x_m": 44.9,
+      "z_m": 1.9375,
+      "source_unchanged": true
+    },
+    {
+      "case": "W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3",
+      "stop_time_s": 0.85,
+      "reason": "stability_guard",
+      "max_speed_m_s": 50.09167377,
+      "phase": "water",
+      "x_m": 44.9,
+      "z_m": 1.9125,
+      "ux_m_s": -50.088761,
+      "pressure_Pa": 59676.635,
+      "source_unchanged": true
+    }
+  ],
+  "interpretation": "Flat outlet pressure/phase did not remove localized downstream backflow. Core gauges and small mass residual alone do not establish stability. Exact backflow pressure/scalar settings being audited without time advancement.",
+  "prepared_alternative": {
+    "controller": "run_wave_forcing_outlet_r4.py",
+    "launched": false,
+    "change": "Velocity components and phase from same FifthOrder wave at both ends; 20m forcing each, FORCING only; protected core -15..25; same mesh/SO1ms10inner/50m/s guard",
+    "scope": "Fresh bounded1.2s pilot, not final reflection or force validation"
+  },
+  "foil_mesh": {
+    "case": "C01_W20L4_M09_mesh_r1",
+    "cells": 246885,
+    "status": "geometry_and_single_span_pass",
+    "flow_steps": 0,
+    "pending": [
+      "Actual boundary/profile and wave-zone setup",
+      "Wave-resolution review",
+      "Matched C01 and W01 short trials after boundary decision"
+    ]
+  },
+  "completed_controllers": [
+    38828,
+    5240,
+    28480,
+    14348,
+    15800,
+    1852
+  ],
+  "active_diagnostic": {
+    "controller": "run_wave_backflow_audit_r1.py",
+    "pid": 36776,
+    "workers": 1,
+    "gpu": false,
+    "steps": 0
+  },
+  "current_controller": {
+    "status": "propagation_GPU_running",
+    "updated_at": "2026-10-30T00:09:17.407751+01:00",
+    "controller_pid": 15556,
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+    "workers": 1,
+    "gpu": true,
+    "scope": "Environmental outlet and slip bed no-foil pilot; not force or final propagation validation",
+    "elapsed_s": 213.00641775131226,
+    "launcher_pid": 25656,
+    "progress": {
+      "interface_CFL": 0.10885762888047314,
+      "steps": 60,
+      "time_s": 0.060000000000000046,
+      "wall_s": 40.4881534,
+      "max_speed_m_s": 18.57415958621514
+    }
+  },
+  "actual_boundary_getters": {
+    "outlet_backflow_scalars": "SPECIFIED",
+    "top_pressure": "STATIC unchanged",
+    "damping": "20m unchanged",
+    "bed_shear": "SLIP",
+    "outlet_backflow_after": "ENVIRONMENTAL",
+    "scope": "Two documented boundary corrections: environmental backflow pressure and slip-wall bed; not isolated single-factor causality",
+    "outlet_backflow_before": "STATIC",
+    "bed_type": "WallBoundary"
+  },
+  "correction_to_prior_guidance": "Installed Siemens VOF Waves Guidelines explicitly rejects bottom symmetry for wave cases. Prior kinematic reasoning was incomplete; fresh r4 uses slip wall. Spans remain symmetry.",
+  "previous_backflow_audit": "r3 outlet STATIC/BOUNDARY_NORMAL/SPECIFIED; top STATIC/EXTRAPOLATED/SPECIFIED. Zero-step controller36776 finished with unchangedsource.",
+  "free_surface_review": "C01 extended mesh ~17.5 full cells/H in remote strips; variable polygon/ray resolution in core near20cells/H. Initial pilot candidate, not wavegridaccuracy acceptance. See professor_c01_free_surface_resolution.json and ray_resolution.json.",
+  "next": "Complete1.2s guarded pilot, inspect spatialmaxima, actual/referencegauges, equal-phase inventory, BDF2flux+accumulation, then longerpropagation anddt. Never claim1.2s validatesreflection."
+}

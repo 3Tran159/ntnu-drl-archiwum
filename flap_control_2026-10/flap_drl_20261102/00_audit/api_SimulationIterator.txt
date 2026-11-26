@@ -1,0 +1,45 @@
+Compiled from "SimulationIterator.java"
+public class star.common.SimulationIterator extends star.common.SimulationObject {
+  public star.common.SimulationIterator(star.base.neo.ClientServerObjectKey);
+  public void disconnect();
+  public void setNumberOfSteps(int);
+  public int getNumberOfSteps();
+  public int getCurrentIteration();
+  public int getCurrentTimeLevel();
+  public double getCpuTime();
+  public double getElapsedTime();
+  public star.common.AutoSave getAutoSave();
+  public star.common.AutoExport getAutoExport();
+  public void setVerbosity(int);
+  public int getVerbosity();
+  public star.common.RunnableSolver getRunnableSolver();
+  public boolean isIterating();
+  public boolean isBusy();
+  public void run();
+  public void run(star.common.RunnableSolver);
+  public void run(star.common.AdjointRunnableSolver);
+  public void run(int);
+  public void run(boolean);
+  public void run(int, boolean);
+  public void step(int);
+  public void step(star.common.RunnableSolver, int);
+  public void step(star.common.AdjointRunnableSolver, int);
+  public void step(int, boolean);
+  public void step(star.common.RunnableSolver, int, boolean);
+  public void step(star.common.AdjointRunnableSolver, int, boolean);
+  public void iterate(int, boolean);
+  public void iterate(star.common.RunnableSolver, int, boolean);
+  public void iterate(star.common.AdjointRunnableSolver, int, boolean);
+  public void runAdjoint(star.common.AdjointRunnableSolver, java.util.Collection<star.common.AdjointCostFunction>, int, boolean);
+  public void stepAdjoint(star.common.AdjointRunnableSolver, java.util.Collection<star.common.AdjointCostFunction>, int, boolean);
+  public void stop();
+  public star.common.SimulationIterator getSelf();
+  public boolean inlineJournalSymbol();
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+  public star.base.neo.NeoObservable getIterationObservable();
+  public void stepAndWait(int);
+  public void runAutomation();
+  public void stopAutomation();
+  public void runAndWait();
+  static {};
+}

@@ -1,0 +1,42 @@
+Compiled from "AutoMeshOperation.java"
+public class star.meshing.AutoMeshOperation extends star.meshing.MeshOperation implements star.meshing.AutoMeshBase {
+  public static final java.lang.String LOCAL_SURFACE_MESHING;
+  public static final java.lang.String ENABLE_LOCAL_SURFACE_MESHING;
+  public star.meshing.AutoMeshOperation(star.base.neo.ClientServerObjectKey);
+  public star.meshing.MesherMessageManager getMessageManager();
+  public star.meshing.AutoMeshMessages getAutoMeshMessages();
+  public star.meshing.AutoMesherManager getMeshers();
+  public java.util.Collection<star.meshing.MesherBase> getMeshersCollection();
+  public boolean hasPrismMesher();
+  public boolean hasGSMesher();
+  public star.meshing.AutoMeshDefaultValuesManager getDefaultValues();
+  public <T extends star.base.neo.ClientServerObject> T getReparentedControl(java.lang.Class<T>);
+  public star.meshing.CustomMeshControlManager getCustomMeshControls();
+  public star.meshing.LocalMeshingExtentManager getLocalMeshingExtents();
+  public boolean is2dOperation();
+  public boolean isShellOperation();
+  public star.meshing.MeshOperation getParentOperation();
+  public boolean isEmpty();
+  public java.util.Collection<java.lang.Object> getChildren();
+  public boolean getMeshPartByPart();
+  public void setMeshPartByPart(boolean);
+  public boolean getMeshInParallel();
+  public void setMeshInParallel(boolean);
+  public star.meshing.MesherParallelModeOption getMesherParallelModeOption();
+  public star.common.EnumeratedOptionInput getMesherParallelModeOptionInput();
+  public void setMesherParallelModeOptionInput(star.common.EnumeratedOptionInput);
+  public star.meshing.FeaturePreservationOption getFeaturePreservationOption();
+  public boolean getLocalSurfaceMeshing();
+  public void setLocalSurfaceMeshing(boolean);
+  public boolean getEnableLocalSurfaceMeshing();
+  public void setEnableLocalSurfaceMeshing(boolean);
+  public star.common.EnumeratedOptionInput getFeaturePreservation();
+  public void setFeaturePreservation(star.common.EnumeratedOptionInput);
+  public boolean getVerboseOutput();
+  public void setVerboseOutput(boolean);
+  public boolean isExecuteEnabled(boolean);
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+  public void executeSurfaceMeshers();
+  public int getProcTarget();
+  public void setProcTarget(int);
+}

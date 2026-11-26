@@ -1,0 +1,82 @@
+{
+  "root_section_max_vertical_thickness": {
+    "x_over_c": 0.465,
+    "thickness_over_c": 0.09958230725388494,
+    "camber_over_c": 0.025000877285958026,
+    "z_lower": -0.029500428845771483,
+    "z_upper": 0.08900251678635158
+  },
+  "root_section_max_camber": {
+    "x_over_c": 0.47900000000000004,
+    "thickness_over_c": 0.09945527589928137,
+    "camber_over_c": 0.025085066312486113,
+    "z_lower": -0.029324660248213934,
+    "z_upper": 0.08902711807193088
+  },
+  "section_at_nominal_LE_x0": [
+    7.122882091687972e-06,
+    0.0035486206709388368
+  ],
+  "section_at_nominal_TE_x1_19": [
+    0.0,
+    0.0
+  ],
+  "closest_section_point_to_nominal_LE": [
+    -2.4152016369999996e-05,
+    7.592986396e-05
+  ],
+  "closest_section_point_to_nominal_TE": [
+    1.19,
+    0.0
+  ],
+  "edge_multiplicity_counts": {
+    "2": 2877
+  },
+  "S_ref_full_projected_m2": 10.900019994303813,
+  "S_ref_half_projected_m2": 5.4500099971519065,
+  "mean_geometric_chord_m": 0.990910908573074,
+  "area_ref_comparison": {
+    "previous_nominal_full_m2": 9.823,
+    "recipe_full_m2": 10.897425,
+    "coefficient_change_from_previous_percent": -9.880899254007304,
+    "coarse_to_fine_projected_area_change_percent": 0.00013159468013057563
+  },
+  "night_common_time_coefficients": [
+    {
+      "case": "D001",
+      "time_s": 0.0002,
+      "Fx_half_N": 20058.778984737408,
+      "Fz_half_N": 127984.95709167476,
+      "mean_yplus": 86.20355490924149,
+      "C_D": 0.022719155272611036,
+      "C_L": 0.1449594770916354
+    },
+    {
+      "case": "D002",
+      "time_s": 0.0002,
+      "Fx_half_N": 20872.522510772906,
+      "Fz_half_N": 128868.3344852041,
+      "mean_yplus": 86.19272419576613,
+      "C_D": 0.023640824808635615,
+      "C_L": 0.14596001596706637
+    },
+    {
+      "case": "D003",
+      "time_s": 0.0002,
+      "Fx_half_N": 20169.618314205127,
+      "Fz_half_N": 128831.944832058,
+      "mean_yplus": 86.19893610193999,
+      "C_D": 0.02284469511421382,
+      "C_L": 0.14591879998972437
+    },
+    {
+      "case": "D004",
+      "time_s": 0.0002,
+      "Fx_half_N": 21148.47644089484,
+      "Fz_half_N": 127882.90647441086,
+      "mean_yplus": 86.19124044708097,
+      "C_D": 0.02395337823929547,
+      "C_L": 0.14484389160056196
+    }
+  ]
+}

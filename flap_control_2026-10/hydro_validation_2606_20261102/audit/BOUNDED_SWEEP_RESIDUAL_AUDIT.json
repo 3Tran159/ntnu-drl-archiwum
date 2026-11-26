@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-03T11:35:52.480267+01:00",
+  "previous_window_correct": true,
+  "monitors": {
+    "Continuity": {
+      "first_iteration": 12321,
+      "last_iteration": 12360,
+      "count": 40,
+      "ratio": 0.0005255011877773345
+    },
+    "Sdr": {
+      "first_iteration": 12321,
+      "last_iteration": 12360,
+      "count": 40,
+      "ratio": 0.010000225354803632
+    },
+    "Tke": {
+      "first_iteration": 12321,
+      "last_iteration": 12360,
+      "count": 40,
+      "ratio": 0.0002445763506697674
+    },
+    "X-momentum": {
+      "first_iteration": 12321,
+      "last_iteration": 12360,
+      "count": 40,
+      "ratio": 0.00010375207527363779
+    },
+    "Y-momentum": {
+      "first_iteration": 12321,
+      "last_iteration": 12360,
+      "count": 40,
+      "ratio": 0.10655162648954261
+    },
+    "Z-momentum": {
+      "first_iteration": 12321,
+      "last_iteration": 12360,
+      "count": 40,
+      "ratio": 0.00024352253082187086
+    }
+  },
+  "previous_Sdr_test_remains_not_passed": true,
+  "new_inner_iterations": 50,
+  "new_window_method": "Native monitor X/Y samples; exactly iteration_before+1 through iteration_after, require50 contiguous samples",
+  "new_threshold": 0.01
+}

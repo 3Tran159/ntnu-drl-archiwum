@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-03T12:27:10.524501+01:00",
+  "checkpoint": {
+    "path": "F:/ntnu/flap_control/hydro_validation_2606_20261102/cases/INLET_PRESSURE_RECOVERY_20261103/run_20261103_120108/checkpoint.sim",
+    "bytes": 1525998405,
+    "sha256": "78b729a0413047f01a271bc28e7575be9e9456518102ff25a816870f75ccbbc5",
+    "time_s": 0.7900000000000006,
+    "iteration": 14860,
+    "stage": 0,
+    "stage_start_s": 0.65,
+    "U_m_s": 17.796725172035938,
+    "angle_deg": 0.0,
+    "native_save_returned": true
+  },
+  "source_native_readback": true,
+  "output_native_info_success": true,
+  "output_native_info": "STAR2606.0002 Np8 Step395 Time0.79 Iter14860",
+  "output_full_solution_reopen_performed": false,
+  "failed_checkpoint_native_info_success": true,
+  "failed_checkpoint_native_info": "Step353 Time0.71(rounded) Iter12760; exact stored export time0.706",
+  "owned_STAR_roots": [],
+  "owned_children_remaining": [],
+  "controller_running": false,
+  "accept_new_jobs": false,
+  "pending_job": "RECOVERED_FIXED_PLUS2_SWEEP_20261103_RUN",
+  "launcher": "F:\\ntnu\\flap_control\\START_RECOVERED_FLAP_SWEEP.cmd",
+  "launcher_preflight": "HOLD: Insufficient resource reserve",
+  "resources": {
+    "ram_available_GiB": 38.31,
+    "disk_free_GiB": 13.54
+  },
+  "minimum_launch_disk_GiB": 15,
+  "guard_tests": "15 isolated tests passed; no CFD launched by tests",
+  "old_failures_preserved": true,
+  "W04_untouched": true
+}

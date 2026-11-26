@@ -1,0 +1,122 @@
+{
+  "updated_at": "2026-10-29T06:20:59.940031+00:00",
+  "purpose": "startup stability/resource screening, not converged forces",
+  "expected_cases": 4,
+  "cases_with_progress": 4,
+  "common_physical_time_s": 0.0002,
+  "all_cases_have_progress": true,
+  "runs": [
+    {
+      "case": "D001",
+      "status": "completed",
+      "completed_outer_calls": 20,
+      "minimum_free_ram_gib": 15.477466583251953,
+      "output": "E:\\ntnu_cfd_night_20261028\\D001",
+      "last": {
+        "wall_seconds": 7402.5699970000005,
+        "iteration": 400.0,
+        "physical_time_s": 0.0002,
+        "Fx_half_N": 20058.778984737408,
+        "Fz_half_N": 127984.95709167476,
+        "max_velocity_m_s": 47.84742593938678,
+        "max_convective_CFL": 14.267768223091162,
+        "foil_mean_yplus": 86.20355490924149
+      },
+      "mean_wall_seconds_per_outer_call": 370.12849985,
+      "at_common_time": {
+        "wall_seconds": 7402.5699970000005,
+        "iteration": 400.0,
+        "physical_time_s": 0.0002,
+        "Fx_half_N": 20058.778984737408,
+        "Fz_half_N": 127984.95709167476,
+        "max_velocity_m_s": 47.84742593938678,
+        "max_convective_CFL": 14.267768223091162,
+        "foil_mean_yplus": 86.20355490924149
+      }
+    },
+    {
+      "case": "D002",
+      "status": "completed",
+      "completed_outer_calls": 21,
+      "minimum_free_ram_gib": 17.543537139892578,
+      "output": "E:\\ntnu_cfd_night_20261028\\D002",
+      "last": {
+        "wall_seconds": 7260.414484000001,
+        "iteration": 420.0,
+        "physical_time_s": 0.00021,
+        "Fx_half_N": 21151.382908481028,
+        "Fz_half_N": 128925.61379784645,
+        "max_velocity_m_s": 47.692240527453286,
+        "max_convective_CFL": 14.20288929572812,
+        "foil_mean_yplus": 87.12674696004777
+      },
+      "mean_wall_seconds_per_outer_call": 345.7340230476191,
+      "at_common_time": {
+        "wall_seconds": 6930.060239900001,
+        "iteration": 400.0,
+        "physical_time_s": 0.0002,
+        "Fx_half_N": 20872.522510772906,
+        "Fz_half_N": 128868.3344852041,
+        "max_velocity_m_s": 47.84014791694192,
+        "max_convective_CFL": 14.266083943388757,
+        "foil_mean_yplus": 86.19272419576613
+      }
+    },
+    {
+      "case": "D003",
+      "status": "completed",
+      "completed_outer_calls": 21,
+      "minimum_free_ram_gib": 16.228103637695312,
+      "output": "E:\\ntnu_cfd_night_20261028\\D003",
+      "last": {
+        "wall_seconds": 7467.656699300001,
+        "iteration": 420.0,
+        "physical_time_s": 0.00021,
+        "Fx_half_N": 20452.9402569931,
+        "Fz_half_N": 128771.93557979683,
+        "max_velocity_m_s": 47.79704637590848,
+        "max_convective_CFL": 31.825166155042037,
+        "foil_mean_yplus": 87.1330412594386
+      },
+      "mean_wall_seconds_per_outer_call": 355.6026999666667,
+      "at_common_time": {
+        "wall_seconds": 7129.512233500001,
+        "iteration": 400.0,
+        "physical_time_s": 0.0002,
+        "Fx_half_N": 20169.618314205127,
+        "Fz_half_N": 128831.944832058,
+        "max_velocity_m_s": 47.93674858815412,
+        "max_convective_CFL": 31.867074415001547,
+        "foil_mean_yplus": 86.19893610193999
+      }
+    },
+    {
+      "case": "D004",
+      "status": "completed",
+      "completed_outer_calls": 22,
+      "minimum_free_ram_gib": 18.371490478515625,
+      "output": "E:\\ntnu_cfd_night_20261028\\D004",
+      "last": {
+        "wall_seconds": 7224.999310900001,
+        "iteration": 440.0,
+        "physical_time_s": 0.00022,
+        "Fx_half_N": 21544.326862743248,
+        "Fz_half_N": 128572.25532888487,
+        "max_velocity_m_s": 47.65669485666771,
+        "max_convective_CFL": 39.07357906283873,
+        "foil_mean_yplus": 87.9466718927626
+      },
+      "mean_wall_seconds_per_outer_call": 328.40905958636364,
+      "at_common_time": {
+        "wall_seconds": 6587.983527900001,
+        "iteration": 400.0,
+        "physical_time_s": 0.0002,
+        "Fx_half_N": 21148.47644089484,
+        "Fz_half_N": 127882.90647441086,
+        "max_velocity_m_s": 47.93176793333045,
+        "max_convective_CFL": 38.98633043955089,
+        "foil_mean_yplus": 86.19124044708097
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+def _inlet_saved_views(state):
+ """Show current export or explicitly named pre-activation source evidence."""
+ current=_side_view(state)+_vorticity_view(state)
+ if current:return current
+ identity=_read(Path(state.get('directory',''))/'source_identity.json')
+ source=Path(identity.get('source',''));time_source=_n(identity.get('source_time_s'))
+ if source.parent.parent!=Path('E:/ntnu/quasi2d_waves_20261029') or identity.get('source_sha256')!=identity.get('input_sha256') or identity.get('source_is_guard_failed') is not False:return ''
+ parent={'case':source.parent.name};record=_read(ROOT/'wave_side_view_current.json')
+ s=''
+ if record.get('case')==parent['case'] and _n(record.get('field_time_s'))==time_source:
+  view=_side_view(parent).replace('Foil and wave · latest exported field','Saved pre-wave source field')
+  s+='<div class="wcp-source-preview"><p class="wcp-empty"><b>Source preview before inlet-wave activation.</b> This saved field is the computed restart input at t = '+_f(time_source)+' s. A current transported-front image will replace it after a production export; analytic target waves are not drawn as the numerical front.</p>'+view+'</div>'
+ native=_read(ROOT/'wave_vorticity_current.json')
+ if native.get('case')==parent['case'] and _n(native.get('field_time_s')) is not None and _n(native.get('field_time_s'))<=time_source:
+  s+=_vorticity_view(parent).replace('Vorticity · native saved field','Earlier startup vorticity · native saved field')
+ return s
+

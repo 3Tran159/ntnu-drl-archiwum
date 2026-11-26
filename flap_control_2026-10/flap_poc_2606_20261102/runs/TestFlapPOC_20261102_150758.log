@@ -1,0 +1,72 @@
+Starting local server: starserver.bat -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -cpubind off -np 4 -xencoded-session QzpcVXNlcnNcVGhpbmtQYWRcRG9jdW1lbnRzXENoYXRHUFRcbnRudSBzY2llbmNlXGZsYXBfcG9jXzI2MDZfMjAyNjExMDJcRmxhcFBPQ18yNjA2X21lc2hfcmVhZHkuc2lt
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-3
+Process rank 0 THINKPAD-LUCJAN 7492
+Total number of processes : 4
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 15:09:57 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\FlapPOC_2606_mesh_ready.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Loading module: ConservativeMapping
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=4 
+Started Parasolid modeler version 38.1.151
+Playing macro: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:30: warning: [deprecation] setFrozen(boolean) in star.segregatedflow.SegregatedFlowSolver has been deprecated
+   s.getSolution().initializeSolution();flow.setFrozen(true);
+                                            ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:36: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+   Scene scene=s.getSceneManager().createScene("Flap POC mesh motion");scene.initializeAndWait();
+                                                                            ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:40: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+   scene.getCurrentView().setInput(new DoubleVector(new double[]{.67,0,zh}),new DoubleVector(new double[]{.67,-3,zh}),new DoubleVector(new double[]{0,0,1}),.65,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);
+                         ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:56: warning: [deprecation] setFrozen(boolean) in star.segregatedflow.SegregatedFlowSolver has been deprecated
+   flow.setFrozen(false);s.saveState(out.resolve("FlapPOC_2606_motion_passed.sim").toString());
+       ^
+
+Loading/configuring connectivity (old|new partitions: 4|4)
+  Background (index 0): 33553 cells, 83485 faces, 51672 verts.
+  FlapOverset (index 1): 11210 cells, 27654 faces, 17379 verts.
+Configuring finished
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Re-partitioning
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+             1                                                         
+             2                                                         
+             3                                                         
+             4                                                         
+             5                                                         
+             6                                                         
+             7                                                         
+TimeStep    1: Time  2.000000e-03
+             8                                                         
+Saving: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\FlapPOC_2606_test_error.sim... complete (24.885MB in 0.13214s).
+java.lang.RuntimeException: java.lang.IllegalStateException: Motion/mesh check failed at 0.002
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

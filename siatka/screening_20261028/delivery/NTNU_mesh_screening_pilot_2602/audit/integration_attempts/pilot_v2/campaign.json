@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "target_version": "21.02.007",
+  "release": "2602",
+  "precision": "double",
+  "version_evidence": "Installed build, saved-model header, successful macro compilation and preparation log",
+  "baseline_verified": true,
+  "baseline": {
+    "path": "F:/ntnu/mesh_screening_20261028/inspection/baseline_clean.sim",
+    "sha256": "7dfb04a68e1df202d5039ce140976c0fb04929db8bdb22af41b9f925d6801787"
+  },
+  "inventory": {
+    "path": "F:/ntnu/mesh_screening_20261028/inspection/model_inventory_portable.json",
+    "sha256": "c7ec83c3963d3d34b518d4f0a804f2cd5314f707be775fc9d8910479235ee8d8"
+  },
+  "locked_settings_sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+  "adapter": {
+    "path": "F:/ntnu/mesh_screening_20261028/MeshCase.java",
+    "sha256": "f51dbbc65ed4d57a90fa26d0a798221d57d833bc46c476424837c0ab781b8f36"
+  },
+  "api_validation": {
+    "path": "F:/ntnu/mesh_screening_20261028/inspection/api_validation.json",
+    "sha256": "281acf68ac4fc24b785aaa0be1f1f2c8f007d7fb21132872497535e196f1f69d"
+  },
+  "launch_validation": {
+    "path": "F:/ntnu/mesh_screening_20261028/inspection/launch_validation.json",
+    "sha256": "ec9ef7ad6f16f2b99586c43a946048761b8397762922df123dc187a2a307b7f2"
+  },
+  "mesh_only_verified": true,
+  "command": [
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/star/lib/win64/clang20.1vc14.2-r8/lib/starccm+.exe",
+    "-config",
+    "bs",
+    "-batch",
+    "{adapter}",
+    "{baseline}"
+  ],
+  "case_timeout_s": 1800,
+  "campaign_budget_s": 5400,
+  "min_free_disk_bytes": 16106127360,
+  "max_cells": 35000000,
+  "max_consecutive_failures": 2,
+  "pilot_parameter": "foil_target_m",
+  "pilot_review": null,
+  "parameters": [
+    {
+      "name": "foil_target_m",
+      "unit": "m",
+      "baseline": 0.0064,
+      "lower": 0.0064,
+      "upper": 0.0128,
+      "independent_verified": true,
+      "binding": "Automated Mesh / HF_surface / Target Surface Size, relative percentage = target_m / fixed 0.8192 m * 100",
+      "bounds_basis": "Baseline 0.0064 m to one dyadic coarsening level 0.0128 m; no finer meshes until resource cost and prism behavior verified. Midpoint in log length. HF_fine volume controls and curvature can mask target changes."
+    }
+  ],
+  "quality_rules_verified": true,
+  "quality_rules": [
+    {
+      "name": "invalid_cells",
+      "max": 0,
+      "unit": "count",
+      "scope": "all fluid cells",
+      "definition": "Sum of NegativeVolumeCells, UnclosedCells and DegeneratedFeCells returned by generateMeshReport; may double-count defective cells. Zero requires all checks zero. Missing result prevents acceptance."
+    }
+  ],
+  "objectives": [
+    {
+      "name": "cell_count",
+      "direction": "min"
+    },
+    {
+      "name": "mesh_time_s",
+      "direction": "min"
+    },
+    {
+      "name": "min_cell_quality",
+      "direction": "max"
+    }
+  ],
+  "notes": "Pilot only: fixed prism wall-thickness mode, 15 layers, 0.0001799 m first layer, 0.01546 m total; no prism overrides active. Frozen exposed settings checked before/after; immutable clean-copy hash preserves geometry provenance. Acceptance additionally requires explicit prism and local-resolution reviews. No larger DoE before measured pilot review. Existing 25.19M-cell mesh measured; all new results initially absent."
+}

@@ -1,0 +1,121 @@
+{
+  "updated_at": "2026-10-29T20:22:43.276150+01:00",
+  "M08": {
+    "id": "M08",
+    "cells": 254989,
+    "family": "low_yplus",
+    "CD": 0.007511566547681655,
+    "CL_total": 0.3130286438806646,
+    "CL_dynamic": 0.30713638609667576,
+    "time_s": 1.5999999999999346,
+    "window_start_s": 1.3999999999999346,
+    "Fx_pressure_N": 8.207497798040137,
+    "Fx_viscous_N": 20.754098183201254,
+    "Fx_total_N": 28.961595981241388,
+    "force_balance_error_N": -3.552713678800501e-15,
+    "yplus": {
+      "snapshot_time_s": 1.5999999999999346,
+      "status": "Settled",
+      "min": 0.10584371480568558,
+      "area_mean": 0.9393405028621644,
+      "max": 253.60708336933433,
+      "max_at_x_over_c": 0.9994040283560716,
+      "max_at_z_m": 8.030834374837127e-05,
+      "max_at_continuous_layers": 1.0,
+      "area_fraction_pct": {
+        "<1": 99.88296604199051,
+        "1\u20135": 0.0,
+        "5\u201330": 0.0,
+        "30\u2013100": 0.0,
+        "100\u2013300": 0.11703395800948509,
+        ">300": 0.0
+      },
+      "area_weighted_p50": 0.6622091657167736,
+      "area_weighted_p95": 0.7997419778194469,
+      "area_weighted_p99": 0.8414055437811762,
+      "first_full_layer_um_for_yplus1_frozen_shear": {
+        "p05": 1.914753212822244,
+        "p50": 2.3036523411777043,
+        "p95": 3.460832740941919
+      },
+      "latest_time_s": 1.5999999999999346,
+      "latest": {
+        "time": 1.5999999999999346,
+        "mean": 0.9393405028621643,
+        "min": 0.10584371480568558,
+        "max": 253.60708336933433
+      },
+      "weighted_mean_crosscheck_abs": 1.1102230246251565e-16
+    },
+    "wall_s_per_step_median": 1.491367599999876,
+    "wall_s_per_step_mean": 1.5450849934999997,
+    "solver_wall_s_per_physical_s": 1545.0849935001697,
+    "timing_intervals": 200,
+    "timing_window_start_s": 1.3999999999999566,
+    "timing_window_end_s": 1.5999999999999346,
+    "observed_inner_iterations_per_step": 20.0
+  },
+  "M07": {
+    "id": "M07",
+    "cells": 481635,
+    "family": "low_yplus",
+    "CD": 0.0074735656426907745,
+    "CL_total": 0.3136295312452199,
+    "CL_dynamic": 0.3077372734612311,
+    "time_s": 1.6399999999999302,
+    "window_start_s": 1.4399999999999302,
+    "Fx_pressure_N": 8.071747472327603,
+    "Fx_viscous_N": 20.74333221963095,
+    "Fx_total_N": 28.815079691958548,
+    "force_balance_error_N": -7.105427357601002e-15,
+    "yplus": {
+      "snapshot_time_s": 1.6399999999999302,
+      "status": "Settled",
+      "min": 0.12345463011244058,
+      "area_mean": 0.8203838103288567,
+      "max": 220.1146908877711,
+      "max_at_x_over_c": 0.99957377717756,
+      "max_at_z_m": 5.5496263676829806e-05,
+      "max_at_continuous_layers": 1.0,
+      "area_fraction_pct": {
+        "<1": 99.9208518147724,
+        "1\u20135": 0.0,
+        "5\u201330": 0.0,
+        "30\u2013100": 0.0,
+        "100\u2013300": 0.07914818522759587,
+        ">300": 0.0
+      },
+      "area_weighted_p50": 0.6624952694376942,
+      "area_weighted_p95": 0.8000586389739985,
+      "area_weighted_p99": 0.8353292207270014,
+      "first_full_layer_um_for_yplus1_frozen_shear": {
+        "p05": 1.913166926814109,
+        "p50": 2.304340090262312,
+        "p95": 3.4718311698647004
+      },
+      "latest_time_s": 1.6399999999999302,
+      "latest": {
+        "time": 1.6399999999999302,
+        "mean": 0.8203838103288568,
+        "min": 0.12345463011244058,
+        "max": 220.1146908877711
+      },
+      "weighted_mean_crosscheck_abs": 1.1102230246251565e-16
+    },
+    "wall_s_per_step_median": 2.4609719500001574,
+    "wall_s_per_step_mean": 2.4651398094999992,
+    "solver_wall_s_per_physical_s": 2465.1398095002705,
+    "timing_intervals": 200,
+    "timing_window_start_s": 1.4399999999999522,
+    "timing_window_end_s": 1.6399999999999302,
+    "observed_inner_iterations_per_step": 20.0
+  },
+  "difference_pct_M08_vs_M07": {
+    "CD": 0.5084708800015153,
+    "CL_total": -0.1915914493668979,
+    "Fx_pressure_N": 1.6817959949555825,
+    "Fx_viscous_N": 0.0519008395387654
+  },
+  "both_force_coefficients_within_1pct": true,
+  "candidate_status": "M08 agrees with one finer comparable mesh. M09 optimization may proceed; final selection and time accuracy still pending."
+}

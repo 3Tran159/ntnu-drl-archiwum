@@ -1,0 +1,227 @@
+{
+  "updated_at": "2026-10-30T00:24:05.875577+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+  "completed": {
+    "status": "target_reached",
+    "steps": 1200,
+    "time_s": 1.1999999999999786
+  },
+  "period_s": 0.8472673206891129,
+  "number_of_periods": 1.4163180506289037,
+  "independent_histories_finite": true,
+  "phase_bounds": [
+    0.0,
+    1.0
+  ],
+  "maximum_history_speed_m_s": 24.373339238789793,
+  "maximum_interface_CFL": 0.19526618653748257,
+  "BDF2_budget_max_abs_pct_inlet": 0.01451935956931171,
+  "BDF2_budget_after_0p2_max_abs_pct_inlet": 0.01451935956931171,
+  "gauges": [
+    {
+      "x_m": -10.0,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 3.6134247193927638,
+      "max_error_mm": 10.053644483612345,
+      "mean_error_mm": -0.4350566304744475,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.508333431285763,
+        "sampled_H_reference_m": 0.49985728348150715,
+        "mean_actual_m": 0.0011825336957474867,
+        "mean_reference_m": -1.7183542051432832e-06,
+        "fundamental_amplitude_difference_pct": 0.5255825758017529,
+        "fundamental_phase_difference_deg": -0.368694936191338,
+        "phase_shift_ms": -0.8677310298291067
+      }
+    },
+    {
+      "x_m": -5.0,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 4.263697460314128,
+      "max_error_mm": 11.096353532831671,
+      "mean_error_mm": -0.1318351503091038,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.5099291130746018,
+        "sampled_H_reference_m": 0.4999072524059862,
+        "mean_actual_m": 0.00040705595987881405,
+        "mean_reference_m": -1.9649374583254052e-07,
+        "fundamental_amplitude_difference_pct": 1.1481365719783643,
+        "fundamental_phase_difference_deg": -0.3940699886457128,
+        "phase_shift_ms": -0.9274517317884505
+      }
+    },
+    {
+      "x_m": 0.0,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 3.9137105281668627,
+      "max_error_mm": 12.161753329447578,
+      "mean_error_mm": 0.43552465466249163,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.5064724837669132,
+        "sampled_H_reference_m": 0.4998277409131191,
+        "mean_actual_m": -0.0013459741814529397,
+        "mean_reference_m": 1.968541013214042e-06,
+        "fundamental_amplitude_difference_pct": 0.47974618561501536,
+        "fundamental_phase_difference_deg": -0.4320248891921371,
+        "phase_shift_ms": -1.016779362046758
+      }
+    },
+    {
+      "x_m": 2.5,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 3.9769315599967787,
+      "max_error_mm": 12.078732506779488,
+      "mean_error_mm": 0.06657960509720516,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.5061560858716838,
+        "sampled_H_reference_m": 0.4998630554564727,
+        "mean_actual_m": -0.0011536759532004442,
+        "mean_reference_m": -1.5528242371942834e-06,
+        "fundamental_amplitude_difference_pct": 0.7265964489264309,
+        "fundamental_phase_difference_deg": -0.4745339505441157,
+        "phase_shift_ms": -1.116825302370925
+      }
+    },
+    {
+      "x_m": 5.0,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 4.305061598574789,
+      "max_error_mm": 12.68275097575966,
+      "mean_error_mm": 0.04366479213878038,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.5085470663868534,
+        "sampled_H_reference_m": 0.49987314547226447,
+        "mean_actual_m": -0.0004783797881568216,
+        "mean_reference_m": 4.4668055383063854e-07,
+        "fundamental_amplitude_difference_pct": 1.0403599258225649,
+        "fundamental_phase_difference_deg": -0.37815890492713894,
+        "phase_shift_ms": -0.8900046727009612
+      }
+    },
+    {
+      "x_m": 10.0,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 3.770762869382335,
+      "max_error_mm": 10.675205853406311,
+      "mean_error_mm": -0.4965472828141166,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.5080903958263221,
+        "sampled_H_reference_m": 0.49985728348150715,
+        "mean_actual_m": 0.001182522940103265,
+        "mean_reference_m": -1.718354205141966e-06,
+        "fundamental_amplitude_difference_pct": 0.486750042226336,
+        "fundamental_phase_difference_deg": -0.3879468583985763,
+        "phase_shift_ms": -0.9130408202364455
+      }
+    },
+    {
+      "x_m": 15.0,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 4.343983357362967,
+      "max_error_mm": 11.31348223380968,
+      "mean_error_mm": -0.1715762020617353,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.5099954426113875,
+        "sampled_H_reference_m": 0.4999072524059862,
+        "mean_actual_m": 0.00034672322980539694,
+        "mean_reference_m": -1.964937457476382e-07,
+        "fundamental_amplitude_difference_pct": 1.1682188220761835,
+        "fundamental_phase_difference_deg": -0.4136610403831697,
+        "phase_shift_ms": -0.973559670441442
+      }
+    },
+    {
+      "x_m": 20.0,
+      "end_time_s": 1.1999999999999786,
+      "RMS_error_mm": 3.9508667295401105,
+      "max_error_mm": 12.19056938289853,
+      "mean_error_mm": 0.367122590619526,
+      "first_cycle_startup_included": {
+        "window_s": [
+          0,
+          0.8472673206891129
+        ],
+        "sampled_H_actual_m": 0.5069821859553265,
+        "sampled_H_reference_m": 0.4998277409131191,
+        "mean_actual_m": -0.001439151696190712,
+        "mean_reference_m": 1.968541013214042e-06,
+        "fundamental_amplitude_difference_pct": 0.5321301978868265,
+        "fundamental_phase_difference_deg": -0.4097667492843498,
+        "phase_shift_ms": -0.964394377148996
+      }
+    }
+  ],
+  "equal_phase_inventory": {
+    "0": {
+      "time_s": 0.0,
+      "actual_water_m3": 38.38112431934008,
+      "analytic_water_m3": 38.38112431934008,
+      "inventory_difference_m3": 0.0,
+      "equivalent_domain_mean_difference_mm": 0.0
+    },
+    "1": {
+      "time_s": 0.8472673206891129,
+      "actual_water_m3": 38.39637900065687,
+      "analytic_water_m3": 38.38112442014141,
+      "inventory_difference_m3": 0.015254580515460248,
+      "equivalent_domain_mean_difference_mm": 9.534112822162655
+    }
+  },
+  "final_boundary_flux": {
+    "DOMAIN.bottom": {
+      "time_s": 1.1999999999999786,
+      "outward_mass_kg_s": 0.0
+    },
+    "DOMAIN.inlet": {
+      "time_s": 1.1999999999999786,
+      "outward_mass_kg_s": -8700.126728728943
+    },
+    "DOMAIN.outlet": {
+      "time_s": 1.1999999999999786,
+      "outward_mass_kg_s": 8706.778318814144
+    },
+    "DOMAIN.span_source": {
+      "time_s": 1.1999999999999786,
+      "outward_mass_kg_s": 0.0
+    },
+    "DOMAIN.span_target": {
+      "time_s": 1.1999999999999786,
+      "outward_mass_kg_s": 0.0
+    },
+    "DOMAIN.top": {
+      "time_s": 1.1999999999999786,
+      "outward_mass_kg_s": 0.16692561296594915
+    }
+  },
+  "spatial_diagnostic": "wave_pilot_r4_spatial_diagnostic.json",
+  "status": "diagnostic_review_required",
+  "limitation": "First cycle includes startup;1.2s cannot validate long-domain propagation/reflections. Stable guard completion alone is insufficient for wave acceptance."
+}

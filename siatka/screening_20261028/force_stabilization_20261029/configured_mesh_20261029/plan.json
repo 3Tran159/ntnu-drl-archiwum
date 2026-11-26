@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-10-29T21:50:21.424000+01:00",
+  "namespace": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029",
+  "configuration": {
+    "order": "SECOND_ORDER",
+    "dt_s": 0.001,
+    "inner_iterations": 10,
+    "scope": "Calm mesh screening; selected-mesh time-step and wave propagation checks remain required"
+  },
+  "jobs": [
+    {
+      "id": "M09_startup_dt05ms_inner50_r1",
+      "mesh": "M09",
+      "source": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M09\\mesh.sim",
+      "start": 0.0,
+      "cells": 214908,
+      "initialize": true,
+      "dt": 0.0005,
+      "inner": 50,
+      "order": "FIRST_ORDER",
+      "target": 0.02,
+      "wall_budget_s": 1800,
+      "purpose": "Guarded startup checkpoint only; excluded from mesh comparison"
+    },
+    {
+      "id": "M09_SO1ms_inner10_r1",
+      "mesh": "M09",
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\final.sim",
+      "start": 0.02,
+      "cells": 214908,
+      "initialize": false,
+      "dt": 0.001,
+      "inner": 10,
+      "order": "SECOND_ORDER",
+      "target": 10.0,
+      "wall_budget_s": 14400,
+      "prior_history": "",
+      "purpose": "First passing adjacent 0.2s means below0.5%, using only new-setting history and at least0.4s continuation"
+    },
+    {
+      "id": "M08_SO1ms_inner10_r1",
+      "mesh": "M08",
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M08_until_settled_r3\\final.sim",
+      "start": 1.6,
+      "cells": 254989,
+      "initialize": false,
+      "dt": 0.001,
+      "inner": 10,
+      "order": "SECOND_ORDER",
+      "target": 10.0,
+      "wall_budget_s": 14400,
+      "prior_history": "",
+      "purpose": "First passing adjacent 0.2s means below0.5%, using only new-setting history and at least0.4s continuation"
+    },
+    {
+      "id": "M07_SO1ms_inner10_r1",
+      "mesh": "M07",
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M07_until_settled_r1\\final.sim",
+      "start": 1.64,
+      "cells": 481635,
+      "initialize": false,
+      "dt": 0.001,
+      "inner": 10,
+      "order": "SECOND_ORDER",
+      "target": 10.0,
+      "wall_budget_s": 14400,
+      "prior_history": "",
+      "purpose": "First passing adjacent 0.2s means below0.5%, using only new-setting history and at least0.4s continuation"
+    }
+  ],
+  "preserve_historical_results": true,
+  "macro_sha256": "6d18c3d9708afd1d05ba4c2729eef2c4487ec7ac0334f4b579fcdbc5635ecef9",
+  "max_mesh_id": "M15",
+  "launch": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\run_configured_mesh_screen.py --run",
+  "waves_admitted": false
+}

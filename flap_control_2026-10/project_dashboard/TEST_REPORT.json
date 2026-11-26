@@ -1,0 +1,254 @@
+{
+  "at": "2026-11-03T11:38:21+0100",
+  "overall_pass": true,
+  "passes": 49,
+  "total": 49,
+  "tests": [
+    {
+      "test": "Campaign root exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Source policy read-only",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Status never blindly RUNNING",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Status source provenance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "B0 100 rows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "C0 100 rows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "K0 100 recorded kinematic steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "K0 frozen flow explicit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "K0 actual measured deflection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "K0 zero overset errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "K0 zero fake CL/CD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "W02 wave actual CL history",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "W02 VOF foil probe",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "W03 explicitly smoke test",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Native B0 residuals",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Native C0 residuals",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "B0 CL mean matches independent CSV",
+      "pass": true,
+      "detail": "error=0.0"
+    },
+    {
+      "test": "B0 CD mean matches independent CSV",
+      "pass": true,
+      "detail": "error=0.0"
+    },
+    {
+      "test": "B0 Mh mean matches independent CSV",
+      "pass": true,
+      "detail": "error=0.0"
+    },
+    {
+      "test": "B0 measurement provenance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "C0 CL mean matches independent CSV",
+      "pass": true,
+      "detail": "error=0.0"
+    },
+    {
+      "test": "C0 CD mean matches independent CSV",
+      "pass": true,
+      "detail": "error=0.0"
+    },
+    {
+      "test": "C0 Mh mean matches independent CSV",
+      "pass": true,
+      "detail": "error=0.0"
+    },
+    {
+      "test": "C0 measurement provenance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Scientific gate not overclaimed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Real STAR images available",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Exact mesh provenance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Wave validation sources",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "W01 qualitative only, no quantitative overclaim",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Kinematic state source acknowledged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "No checkpoint binary read",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Stale status detection",
+      "pass": true,
+      "detail": "state=STALE"
+    },
+    {
+      "test": "Missing status detected OFFLINE",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /styles.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /app.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/health",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/snapshot",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/series?id=B0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/series?id=C0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/series?id=K0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/series?id=W02",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/series?id=W03",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/history",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Whitelisted actual image",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Reject unknown experiment",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Reject path traversal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "No external script dependencies",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Source files untouched during test",
+      "pass": true,
+      "detail": "no size or timestamp modifications"
+    }
+  ],
+  "note": "Time-based comparison may be affected by external Work updates; dashboard performs no source writes."
+}

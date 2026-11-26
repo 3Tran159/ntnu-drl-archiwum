@@ -1,0 +1,525 @@
+{
+  "at": "2026-11-03T01:01:45.229067+01:00",
+  "method": "True active volume-cell coordinates vs closest 2D physical foil segments; identical extruded span. Close-wall meshing chordal errors can affect smallest distances. Not full native wall-distance validation.",
+  "cases": {
+    "B": {
+      "Background": {
+        "active_near": 54693,
+        "screen_count": 36595,
+        "ratio_quantiles": {
+          "0.0": 0.8864508509850418,
+          "0.01": 0.9694924569735713,
+          "0.5": 0.9999999934848558,
+          "0.99": 1.0100901170296899,
+          "1.0": 2.1461646436438184
+        },
+        "ratio_gt2": 2,
+        "ratio_lt_half": 0,
+        "max_absolute_error_mm": 0.8171787078591705,
+        "worst_high_ratio": [
+          {
+            "X (m)": 1.1906131976446137,
+            "Z (m)": 0.0003637471793162,
+            "Wall Distance (m)": 0.0015301467028073,
+            "geom_main_m": 0.2493289739068951,
+            "geom_flap_m": 0.0007129679949481295,
+            "native_to_geometric_ratio": 2.1461646436438184,
+            "Specific Dissipation Rate (/s)": 6119.086909533958
+          },
+          {
+            "X (m)": 0.9418717480830576,
+            "Z (m)": -0.0149339349466974,
+            "Wall Distance (m)": 0.000262259954628,
+            "geom_main_m": 0.00012684614691038494,
+            "geom_flap_m": 0.0025050609833868103,
+            "native_to_geometric_ratio": 2.0675437213972536,
+            "Specific Dissipation Rate (/s)": 17333.81659402782
+          },
+          {
+            "X (m)": 0.9446481231199416,
+            "Z (m)": 0.0581283088947632,
+            "Wall Distance (m)": 0.0002584106148089,
+            "geom_main_m": 0.00013309928384151184,
+            "geom_flap_m": 0.002471827040787229,
+            "native_to_geometric_ratio": 1.9414876425376024,
+            "Specific Dissipation Rate (/s)": 15697.912065664954
+          },
+          {
+            "X (m)": 1.192543243282033,
+            "Z (m)": -0.0019580391038581,
+            "Wall Distance (m)": 0.0035860404620495,
+            "geom_main_m": 0.25112513482229026,
+            "geom_flap_m": 0.0032096734294697594,
+            "native_to_geometric_ratio": 1.1172602262660463,
+            "Specific Dissipation Rate (/s)": 4031.169663639964
+          },
+          {
+            "X (m)": 0.9449242572016868,
+            "Z (m)": 0.0584336949426089,
+            "Wall Distance (m)": 0.0005511352128517,
+            "geom_main_m": 0.0005103553320252171,
+            "geom_flap_m": 0.002720951903403021,
+            "native_to_geometric_ratio": 1.0799048785571774,
+            "Specific Dissipation Rate (/s)": 14151.864948506878
+          }
+        ],
+        "omega_floor_count": 0,
+        "floor_distance_ratio_quantiles": {},
+        "closer_other_foil_component": {
+          "count": 10350,
+          "ratio_quantiles": {
+            "0.0": 0.8919166632218648,
+            "0.01": 0.9768573291415913,
+            "0.5": 0.9999999882515359,
+            "0.99": 1.0073044675373626,
+            "1.0": 2.1461646436438184
+          }
+        }
+      }
+    },
+    "C40": {
+      "Background": {
+        "active_near": 12493,
+        "screen_count": 6235,
+        "ratio_quantiles": {
+          "0.0": 0.9840854860046266,
+          "0.01": 0.9960428439894713,
+          "0.5": 1.0000003774609414,
+          "0.99": 1.0216716907969006,
+          "1.0": 1.4746978216727662
+        },
+        "ratio_gt2": 0,
+        "ratio_lt_half": 0,
+        "max_absolute_error_mm": 0.07766893042222137,
+        "worst_high_ratio": [
+          {
+            "X (m)": 0.9446024353389058,
+            "Z (m)": 0.0579904387815166,
+            "Wall Distance (m)": 0.0002412865559435,
+            "geom_main_m": 0.00016361762552127864,
+            "geom_flap_m": 0.0023463953987977754,
+            "native_to_geometric_ratio": 1.4746978216727662,
+            "Specific Dissipation Rate (/s)": 25783.85075696856
+          },
+          {
+            "X (m)": 0.740099811409017,
+            "Z (m)": 0.0934197005543433,
+            "Wall Distance (m)": 0.000108885087816,
+            "geom_main_m": 0.00010404330714009474,
+            "geom_flap_m": 0.1887433251113882,
+            "native_to_geometric_ratio": 1.046536205057244,
+            "Specific Dissipation Rate (/s)": 65342.12067144442
+          },
+          {
+            "X (m)": 0.7628169830714951,
+            "Z (m)": 0.0909058883797338,
+            "Wall Distance (m)": 0.0001088850840299,
+            "geom_main_m": 0.00010461627017878618,
+            "geom_flap_m": 0.16648863838674507,
+            "native_to_geometric_ratio": 1.0408044928749471,
+            "Specific Dissipation Rate (/s)": 63037.10417922952
+          },
+          {
+            "X (m)": 0.7401017795087323,
+            "Z (m)": 0.0934393732096413,
+            "Wall Distance (m)": 0.0001286559625424,
+            "geom_main_m": 0.0001238140437282919,
+            "geom_flap_m": 0.18874783535472586,
+            "native_to_geometric_ratio": 1.039106378148295,
+            "Specific Dissipation Rate (/s)": 54433.84799630213
+          },
+          {
+            "X (m)": 0.7712929333666354,
+            "Z (m)": 0.0898485853602615,
+            "Wall Distance (m)": 0.0001088850859351,
+            "geom_main_m": 0.00010490201931697843,
+            "geom_flap_m": 0.1581777027831057,
+            "native_to_geometric_ratio": 1.0379693989120085,
+            "Specific Dissipation Rate (/s)": 62478.585352556365
+          }
+        ],
+        "omega_floor_count": 301,
+        "floor_distance_ratio_quantiles": {
+          "0.0": 0.9968808561891348,
+          "0.5": 0.9999999850697942,
+          "1.0": 1.0013373071787344
+        },
+        "closer_other_foil_component": {
+          "count": 0,
+          "ratio_quantiles": {}
+        }
+      },
+      "FlapOverset": {
+        "active_near": 36393,
+        "screen_count": 27461,
+        "ratio_quantiles": {
+          "0.0": 0.8739453344452022,
+          "0.01": 0.9722146380436235,
+          "0.5": 0.9999999660763226,
+          "0.99": 1.004886763760183,
+          "1.0": 2.0814129729669357
+        },
+        "ratio_gt2": 1,
+        "ratio_lt_half": 0,
+        "max_absolute_error_mm": 0.6977182964513731,
+        "worst_high_ratio": [
+          {
+            "X (m)": 1.1905822783480076,
+            "Z (m)": -0.0002778917130309,
+            "Wall Distance (m)": 0.0013429096469279,
+            "geom_main_m": 0.24925966625227458,
+            "geom_flap_m": 0.0006451913504765269,
+            "native_to_geometric_ratio": 2.0814129729669357,
+            "Specific Dissipation Rate (/s)": 7423.573192304528
+          },
+          {
+            "X (m)": 0.9419373049447328,
+            "Z (m)": -0.0147767647356692,
+            "Wall Distance (m)": 0.0002578414181933,
+            "geom_main_m": 0.00021949330091384117,
+            "geom_flap_m": 0.0023358510392215075,
+            "native_to_geometric_ratio": 1.1747120168123573,
+            "Specific Dissipation Rate (/s)": 1164.5098046820394
+          },
+          {
+            "X (m)": 1.1907980816862251,
+            "Z (m)": -0.0022142215978769,
+            "Wall Distance (m)": 0.002703948860254,
+            "geom_main_m": 0.24936914915634897,
+            "geom_flap_m": 0.002353659206935571,
+            "native_to_geometric_ratio": 1.1488276859649962,
+            "Specific Dissipation Rate (/s)": 4221.975084412902
+          },
+          {
+            "X (m)": 0.9447761756684474,
+            "Z (m)": 0.058342762574192,
+            "Wall Distance (m)": 0.0003815059171434,
+            "geom_main_m": 0.0003376405451371392,
+            "geom_flap_m": 0.002658660620279614,
+            "native_to_geometric_ratio": 1.1299173711156165,
+            "Specific Dissipation Rate (/s)": 60244.08498927638
+          },
+          {
+            "X (m)": 1.1905059801691344,
+            "Z (m)": 0.0011776764662794,
+            "Wall Distance (m)": 0.001435891559919,
+            "geom_main_m": 0.2492731099654992,
+            "geom_flap_m": 0.0012817713488706608,
+            "native_to_geometric_ratio": 1.1202400187710007,
+            "Specific Dissipation Rate (/s)": 7889.708679834895
+          }
+        ],
+        "omega_floor_count": 786,
+        "floor_distance_ratio_quantiles": {
+          "0.0": 0.9098186252416505,
+          "0.5": 0.9999971024188885,
+          "1.0": 1.0369866531109573
+        },
+        "closer_other_foil_component": {
+          "count": 768,
+          "ratio_quantiles": {
+            "0.0": 0.9978769091374543,
+            "0.01": 0.9997373901279071,
+            "0.5": 0.9999992809608227,
+            "0.99": 1.0007350124991952,
+            "1.0": 1.1747120168123573
+          }
+        }
+      }
+    },
+    "C_distance": {
+      "Background": {
+        "active_near": 12493,
+        "screen_count": 6235,
+        "ratio_quantiles": {
+          "0.0": 0.9840854860046266,
+          "0.01": 0.9960428439894713,
+          "0.5": 1.0000003774609414,
+          "0.99": 1.0216716907969006,
+          "1.0": 1.4746978216727662
+        },
+        "ratio_gt2": 0,
+        "ratio_lt_half": 0,
+        "max_absolute_error_mm": 0.07766893042222137,
+        "worst_high_ratio": [
+          {
+            "X (m)": 0.9446024353389058,
+            "Z (m)": 0.0579904387815166,
+            "Wall Distance (m)": 0.0002412865559435,
+            "geom_main_m": 0.00016361762552127864,
+            "geom_flap_m": 0.0023463953987977754,
+            "native_to_geometric_ratio": 1.4746978216727662,
+            "Specific Dissipation Rate (/s)": 24211.20950275771
+          },
+          {
+            "X (m)": 0.740099811409017,
+            "Z (m)": 0.0934197005543433,
+            "Wall Distance (m)": 0.000108885087816,
+            "geom_main_m": 0.00010404330714009474,
+            "geom_flap_m": 0.1887433251113882,
+            "native_to_geometric_ratio": 1.046536205057244,
+            "Specific Dissipation Rate (/s)": 65396.31973745788
+          },
+          {
+            "X (m)": 0.7628169830714951,
+            "Z (m)": 0.0909058883797338,
+            "Wall Distance (m)": 0.0001088850840299,
+            "geom_main_m": 0.00010461627017878618,
+            "geom_flap_m": 0.16648863838674507,
+            "native_to_geometric_ratio": 1.0408044928749471,
+            "Specific Dissipation Rate (/s)": 63257.43881482036
+          },
+          {
+            "X (m)": 0.7401017795087323,
+            "Z (m)": 0.0934393732096413,
+            "Wall Distance (m)": 0.0001286559625424,
+            "geom_main_m": 0.0001238140437282919,
+            "geom_flap_m": 0.18874783535472586,
+            "native_to_geometric_ratio": 1.039106378148295,
+            "Specific Dissipation Rate (/s)": 54475.792597793516
+          },
+          {
+            "X (m)": 0.7712929333666354,
+            "Z (m)": 0.0898485853602615,
+            "Wall Distance (m)": 0.0001088850859351,
+            "geom_main_m": 0.00010490201931697843,
+            "geom_flap_m": 0.1581777027831057,
+            "native_to_geometric_ratio": 1.0379693989120085,
+            "Specific Dissipation Rate (/s)": 62847.354199615205
+          }
+        ],
+        "omega_floor_count": 403,
+        "floor_distance_ratio_quantiles": {
+          "0.0": 0.9945422610530921,
+          "0.5": 0.9999999855994096,
+          "1.0": 1.001528196220915
+        },
+        "closer_other_foil_component": {
+          "count": 0,
+          "ratio_quantiles": {}
+        }
+      },
+      "FlapOverset": {
+        "active_near": 36393,
+        "screen_count": 27461,
+        "ratio_quantiles": {
+          "0.0": 0.8739453344452022,
+          "0.01": 0.9722146380436235,
+          "0.5": 0.9999999660763226,
+          "0.99": 1.004886763760183,
+          "1.0": 2.0814129729669357
+        },
+        "ratio_gt2": 1,
+        "ratio_lt_half": 0,
+        "max_absolute_error_mm": 0.6977182964513731,
+        "worst_high_ratio": [
+          {
+            "X (m)": 1.1905822783480076,
+            "Z (m)": -0.0002778917130309,
+            "Wall Distance (m)": 0.0013429096469279,
+            "geom_main_m": 0.24925966625227458,
+            "geom_flap_m": 0.0006451913504765269,
+            "native_to_geometric_ratio": 2.0814129729669357,
+            "Specific Dissipation Rate (/s)": 7502.183536291659
+          },
+          {
+            "X (m)": 0.9419373049447328,
+            "Z (m)": -0.0147767647356692,
+            "Wall Distance (m)": 0.0002578414181933,
+            "geom_main_m": 0.00021949330091384117,
+            "geom_flap_m": 0.0023358510392215075,
+            "native_to_geometric_ratio": 1.1747120168123573,
+            "Specific Dissipation Rate (/s)": 1113.5698119794963
+          },
+          {
+            "X (m)": 1.1907980816862251,
+            "Z (m)": -0.0022142215978769,
+            "Wall Distance (m)": 0.002703948860254,
+            "geom_main_m": 0.24936914915634897,
+            "geom_flap_m": 0.002353659206935571,
+            "native_to_geometric_ratio": 1.1488276859649962,
+            "Specific Dissipation Rate (/s)": 4248.351960719081
+          },
+          {
+            "X (m)": 0.9447761756684474,
+            "Z (m)": 0.058342762574192,
+            "Wall Distance (m)": 0.0003815059171434,
+            "geom_main_m": 0.0003376405451371392,
+            "geom_flap_m": 0.002658660620279614,
+            "native_to_geometric_ratio": 1.1299173711156165,
+            "Specific Dissipation Rate (/s)": 53866.58774334723
+          },
+          {
+            "X (m)": 1.1905059801691344,
+            "Z (m)": 0.0011776764662794,
+            "Wall Distance (m)": 0.001435891559919,
+            "geom_main_m": 0.2492731099654992,
+            "geom_flap_m": 0.0012817713488706608,
+            "native_to_geometric_ratio": 1.1202400187710007,
+            "Specific Dissipation Rate (/s)": 7954.109316381024
+          }
+        ],
+        "omega_floor_count": 964,
+        "floor_distance_ratio_quantiles": {
+          "0.0": 0.9098186252416505,
+          "0.5": 0.9999971024188885,
+          "1.0": 1.0369866531109573
+        },
+        "closer_other_foil_component": {
+          "count": 768,
+          "ratio_quantiles": {
+            "0.0": 0.9978769091374543,
+            "0.01": 0.9997373901279071,
+            "0.5": 0.9999992809608227,
+            "0.99": 1.0007350124991952,
+            "1.0": 1.1747120168123573
+          }
+        }
+      }
+    },
+    "C_refined_failure": {
+      "Background": {
+        "active_near": 10215,
+        "screen_count": 3962,
+        "ratio_quantiles": {
+          "0.0": 0.9840854860046266,
+          "0.01": 0.9939604826105597,
+          "0.5": 1.0000000291385398,
+          "0.99": 1.024481918805982,
+          "1.0": 1.9347320605235303
+        },
+        "ratio_gt2": 0,
+        "ratio_lt_half": 0,
+        "max_absolute_error_mm": 0.12506163290255354,
+        "worst_high_ratio": [
+          {
+            "X (m)": 0.941885262672129,
+            "Z (m)": -0.0148913414642042,
+            "Wall Distance (m)": 0.0002588557308952,
+            "geom_main_m": 0.00013379409799264645,
+            "geom_flap_m": 0.0024603888237218164,
+            "native_to_geometric_ratio": 1.9347320605235303,
+            "Specific Dissipation Rate (/s)": 41973.219921854
+          },
+          {
+            "X (m)": 0.7400998114090171,
+            "Z (m)": 0.0934197005543433,
+            "Wall Distance (m)": 0.0001088850878161,
+            "geom_main_m": 0.00010404330714010542,
+            "geom_flap_m": 0.18874332511138808,
+            "native_to_geometric_ratio": 1.0465362050580977,
+            "Specific Dissipation Rate (/s)": 76075.49569214611
+          },
+          {
+            "X (m)": 0.7628169830714951,
+            "Z (m)": 0.0909058883797338,
+            "Wall Distance (m)": 0.0001088850840299,
+            "geom_main_m": 0.00010461627017878618,
+            "geom_flap_m": 0.16648863838674507,
+            "native_to_geometric_ratio": 1.0408044928749471,
+            "Specific Dissipation Rate (/s)": 60611.931220605045
+          },
+          {
+            "X (m)": 0.7401017795087323,
+            "Z (m)": 0.0934393732096413,
+            "Wall Distance (m)": 0.0001286559625425,
+            "geom_main_m": 0.0001238140437282919,
+            "geom_flap_m": 0.18874783535472586,
+            "native_to_geometric_ratio": 1.0391063781491026,
+            "Specific Dissipation Rate (/s)": 56926.36503451191
+          },
+          {
+            "X (m)": 0.7712929333666356,
+            "Z (m)": 0.0898485853602615,
+            "Wall Distance (m)": 0.0001088850859351,
+            "geom_main_m": 0.00010490201931700736,
+            "geom_flap_m": 0.15817770278310547,
+            "native_to_geometric_ratio": 1.0379693989117222,
+            "Specific Dissipation Rate (/s)": 111268.77683087636
+          }
+        ],
+        "omega_floor_count": 0,
+        "floor_distance_ratio_quantiles": {},
+        "closer_other_foil_component": {
+          "count": 0,
+          "ratio_quantiles": {}
+        }
+      },
+      "FlapOverset": {
+        "active_near": 159469,
+        "screen_count": 83474,
+        "ratio_quantiles": {
+          "0.0": 0.8736425764077941,
+          "0.01": 0.9922446608926629,
+          "0.5": 1.000000390889101,
+          "0.99": 1.0022882433434324,
+          "1.0": 1.9638951351303178
+        },
+        "ratio_gt2": 0,
+        "ratio_lt_half": 0,
+        "max_absolute_error_mm": 0.6575298505025392,
+        "worst_high_ratio": [
+          {
+            "X (m)": 1.190639398225612,
+            "Z (m)": -0.0002377203497187,
+            "Wall Distance (m)": 0.0013396889636032,
+            "geom_main_m": 0.24931904606479743,
+            "geom_flap_m": 0.0006821591131006608,
+            "native_to_geometric_ratio": 1.9638951351303178,
+            "Specific Dissipation Rate (/s)": 2286.87743610907
+          },
+          {
+            "X (m)": 0.9446906378089318,
+            "Z (m)": 0.0581835871280324,
+            "Wall Distance (m)": 0.0002340040045218,
+            "geom_main_m": 0.00018397577211922,
+            "geom_flap_m": 0.0025178312817378773,
+            "native_to_geometric_ratio": 1.2719283731020883,
+            "Specific Dissipation Rate (/s)": 2894730.31124378
+          },
+          {
+            "X (m)": 0.9419296560263598,
+            "Z (m)": -0.0151263864000335,
+            "Wall Distance (m)": 0.0003420343215275,
+            "geom_main_m": 0.00029314852312946544,
+            "geom_flap_m": 0.002674035453055318,
+            "native_to_geometric_ratio": 1.166761196256973,
+            "Specific Dissipation Rate (/s)": 103478.46336874118
+          },
+          {
+            "X (m)": 0.9446276937593162,
+            "Z (m)": 0.0578803066415275,
+            "Wall Distance (m)": 0.0003061007824066,
+            "geom_main_m": 0.0002727977513575884,
+            "geom_flap_m": 0.0022334199069602594,
+            "native_to_geometric_ratio": 1.1220795658442118,
+            "Specific Dissipation Rate (/s)": 311594.23484708526
+          },
+          {
+            "X (m)": 1.1909633930055177,
+            "Z (m)": -0.002308618662421,
+            "Wall Distance (m)": 0.00280550097573,
+            "geom_main_m": 0.24952946808045012,
+            "geom_flap_m": 0.002501568750116418,
+            "native_to_geometric_ratio": 1.1214966510912154,
+            "Specific Dissipation Rate (/s)": 1338.586102437821
+          }
+        ],
+        "omega_floor_count": 0,
+        "floor_distance_ratio_quantiles": {},
+        "closer_other_foil_component": {
+          "count": 17100,
+          "ratio_quantiles": {
+            "0.0": 0.9994813693885811,
+            "0.01": 0.9999537061518302,
+            "0.5": 1.0000265322795427,
+            "0.99": 1.002587259263712,
+            "1.0": 1.2719283731020883
+          }
+        }
+      }
+    }
+  },
+  "component_test_note": "Background test selects closer flap than main; in B both components share the same region. FlapOverset test selects main much closer than flap, directly checking cross-region wall-distance handling.",
+  "work_conclusion": "No support for global omission of the main foil from Overset wall distance. In C40,768 active OV cells with main distance<0.1*flap distance have median native/geometric distance ratio0.99999928 and99th percentile1.000735. Clipped omega cells mostly also have correct distance. Small chordal/mesh differences remain near corners; this is a screen, not complete validation."
+}

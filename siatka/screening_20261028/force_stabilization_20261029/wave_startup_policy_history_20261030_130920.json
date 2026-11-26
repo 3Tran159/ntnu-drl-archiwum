@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-10-30T12:30:18.924221+01:00",
+  "status": "conditional_pending_fresh_fullheight_W01a_validation",
+  "user_instruction": "Clear old W01a live trial and restart from t0 with the first inlet wave at full prescribed height. No height ramp.",
+  "candidate": "W01a",
+  "initial_stage": "Fresh t0 calm-field input; wave active from first numerical step",
+  "wave_stage": "inlet_generated_FifthOrder_constant_full_height_from_activation",
+  "do_not_initialize_full_domain_with_wave": true,
+  "apply_to_all_later_waves_only_after_candidate_passes": true,
+  "acceptance": "Physical/source/resource guards pass and complete arrived-wave cycles repeat; calm settling alone does not validate wave startup.",
+  "wave_clock": "Define actual activation and measured arrival; exclude pre-arrival and ramp cycles from repeatability",
+  "halfdt_r3": "prepared_only_not_launched_latest_user_prioritizes_new_inlet_startup",
+  "formal_force_accuracy_admitted": false,
+  "require_calm_force_settling": false,
+  "reason": "Latest explicit user override: flow expected to settle during wave travel; start inlet wave without waiting for force stabilization.",
+  "immediate_wave_authorization": "w01a_immediate_wave_authorization.json",
+  "candidate_case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "height_ramp_required": false,
+  "height_ramp_duration_s": 0,
+  "latest_user_authorization": "w01a_fresh_fullheight_authorization.json"
+}

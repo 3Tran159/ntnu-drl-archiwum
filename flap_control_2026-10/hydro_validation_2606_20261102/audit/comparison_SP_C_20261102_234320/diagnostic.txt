@@ -1,0 +1,29 @@
+source=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_distance_20261102_232050\checkpoint.sim
+time=0.6644000000000005
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.span_source|Symmetry Plane
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Domain.span_source|Symmetry Plane
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin|Wall
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc|Wall
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top|Pressure Outlet
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.inlet|Velocity Inlet
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.outlet|Pressure Outlet
+boundary=Background|Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.bottom|Wall
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.span_source|Symmetry Plane
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Cage.span_source|Symmetry Plane
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin|Wall
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc|Wall
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.top|Overset Mesh
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.inlet|Overset Mesh
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.outlet|Overset Mesh
+boundary=FlapOverset|FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.bottom|Overset Mesh
+main_pressure_force=[38.32215730016354, 0.0, 1303.417723422061]
+main_shear_force=[19.991033571184833, 8.29224813340853E-16, 0.581447536250987]
+main_total_force=[58.31319087134837, 8.29224813340853E-16, 1303.999170958312]
+flap_pressure_force=[-37.63570361883257, 0.0, 171.76119134131685]
+flap_shear_force=[3.9243481620555127, 6.198247497267644E-15, -0.26697821386582565]
+flap_total_force=[-33.711355456777056, 6.198247497267644E-15, 171.49421312745102]
+interface=Flap overset connectivity 1 regions=FlapOverset,Background
+zero_gap=false close_proximity=true prism_shrink=true alternate_hole=true zero_donor_check=true errors_as_warning=false verified_hole=false modified_donor=true interpolation=0
+native_interpolation_MAXIMUM=0.0
+native_interpolation_EUCLIDEAN=0.0
+native_interpolation_THRESHOLD=0.0

@@ -1,0 +1,741 @@
+{
+  "status": "review_complete",
+  "geometry_reviews": [
+    {
+      "label": "M09",
+      "path": "E:\\ntnu\\mesh_builds_20261029\\M09\\mesh.CGNS",
+      "returncode": 0,
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "9079ce01c95d6ca45c6c723d04f25c32060c5c846b4d701017dc592b84281fb0",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      }
+    },
+    {
+      "label": "M10",
+      "path": "E:\\ntnu\\mesh_builds_20261029\\M10_FS020_r1\\mesh.CGNS",
+      "returncode": 0,
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "fa16baf7161bdb2c40eed2c35139e01aa31e8859835e14d31a33dc19ffafb414",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      }
+    },
+    {
+      "label": "M09_L20X4",
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M09_mesh_r1\\mesh.CGNS",
+      "returncode": 0,
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "79907a5b54df760a87e44c6c84f913608bf92bbd829f924b1746a0f034ef0943",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      }
+    },
+    {
+      "label": "M10_L20X4",
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+      "returncode": 0,
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      }
+    }
+  ],
+  "at": "2026-10-30T15:25:10.894645+01:00",
+  "legacy_case_references": [
+    {
+      "available": true,
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2",
+      "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+      "mesh_cgns": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reference_force_N": 3855.6,
+      "displaced_volume_m3": 0.0023157681740598964,
+      "rho_water_kg_m3": 1000,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      },
+      "bindings": [
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+          "sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+          "role": "CGNS measured foil geometry"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\source_identity.json",
+          "sha256": "47742d4eed34868c46fdb8c654b1a15b06271d772edf608bbfab5c156c6b28c1",
+          "role": "mesh source receipt"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\source_identity.json",
+          "sha256": "fd81680d0122837f79d670a484fd59add3ffec52015f1f0a0dcaedfe2df0c1ea",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.sim",
+          "sha256": "7fe3951f996b684d4a089f19589384f09c949d94544e36fd409101f20523704d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\PrepareFoilWaveM10R1.java",
+          "sha256": "0afb89551b8ebc4244a1c7f231d9786be8437717ab22ba6ce909e15ea192f0bf",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\source_identity.json",
+          "sha256": "87888384d6602ad1872c8cec9cd108b1649178cc10364d245251ce875269b3f4",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+          "sha256": "8cab371c1f4bd000283877b4e28811c978814cc30a57c9fb7701cce85fc235ce",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\W01aCalmStartR1.java",
+          "sha256": "502b1920af3d0f8bb8452c446a720fe0dda0739dd6ad66b979292df7554b3d60",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\source_identity.json",
+          "sha256": "a23aa990d0dbd407578f387c019bebb463e147ae32fd3add57aa6e43c1ee885c",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\final.sim",
+          "sha256": "bb2f9004ba8993ed6a7c8401be27b15be56d54d04c7743b15013a8925d9a131d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\C01CalmSettleR2.java",
+          "sha256": "19b65e824487c990d908f6f96af6bbc638b9870c8ddc9592a8c16fe67369cfab",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\setup.json",
+          "sha256": "c5e6044967c291722c50f27046ea152b54ba412c46a2e57abcbc4bdeb9954b01",
+          "role": "case setup"
+        },
+        {
+          "path": "F:\\ntnu\\mesh_screening_20261028\\probe\\locked_before.json",
+          "sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+          "role": "upstream native locked gravity/water density/pressure-reference audit"
+        }
+      ],
+      "evidence_level": "Audited preserved source lineage and inherited native physics; not a new per-case gravity getter",
+      "physics_basis": "Native upstream locked quantities. Preserved mesh/source chain and case macros do not change gravity or water density. M09 setup additionally reads native Calm rho. New manual meshes require new native getters.",
+      "scope": "Nominal fully submerged foil buoyancy reference. Does not assert a passing flow guard or accuracy; no removal of time-varying wave loading.",
+      "normalization_crosscheck_max_error_N": 4.547473508864641e-13,
+      "reason": "Audited source-specific legacy correction"
+    },
+    {
+      "available": true,
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1",
+      "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+      "mesh_cgns": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reference_force_N": 3855.6,
+      "displaced_volume_m3": 0.0023157681740598964,
+      "rho_water_kg_m3": 1000,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      },
+      "bindings": [
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+          "sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+          "role": "CGNS measured foil geometry"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\source_identity.json",
+          "sha256": "47742d4eed34868c46fdb8c654b1a15b06271d772edf608bbfab5c156c6b28c1",
+          "role": "mesh source receipt"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\source_identity.json",
+          "sha256": "fd81680d0122837f79d670a484fd59add3ffec52015f1f0a0dcaedfe2df0c1ea",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.sim",
+          "sha256": "7fe3951f996b684d4a089f19589384f09c949d94544e36fd409101f20523704d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\PrepareFoilWaveM10R1.java",
+          "sha256": "0afb89551b8ebc4244a1c7f231d9786be8437717ab22ba6ce909e15ea192f0bf",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\source_identity.json",
+          "sha256": "87888384d6602ad1872c8cec9cd108b1649178cc10364d245251ce875269b3f4",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+          "sha256": "8cab371c1f4bd000283877b4e28811c978814cc30a57c9fb7701cce85fc235ce",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\W01aCalmStartR1.java",
+          "sha256": "502b1920af3d0f8bb8452c446a720fe0dda0739dd6ad66b979292df7554b3d60",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\setup.json",
+          "sha256": "83d584327d0993f88fed1b0b66c55e1e7f62f009597344468c66ce125c00df4b",
+          "role": "case setup"
+        },
+        {
+          "path": "F:\\ntnu\\mesh_screening_20261028\\probe\\locked_before.json",
+          "sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+          "role": "upstream native locked gravity/water density/pressure-reference audit"
+        }
+      ],
+      "evidence_level": "Audited preserved source lineage and inherited native physics; not a new per-case gravity getter",
+      "physics_basis": "Native upstream locked quantities. Preserved mesh/source chain and case macros do not change gravity or water density. M09 setup additionally reads native Calm rho. New manual meshes require new native getters.",
+      "scope": "Nominal fully submerged foil buoyancy reference. Does not assert a passing flow guard or accuracy; no removal of time-varying wave loading.",
+      "normalization_crosscheck_max_error_N": 4.547473508864641e-13,
+      "reason": "Audited source-specific legacy correction"
+    },
+    {
+      "available": true,
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3",
+      "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+      "mesh_cgns": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reference_force_N": 3855.6,
+      "displaced_volume_m3": 0.0023157681740598964,
+      "rho_water_kg_m3": 1000,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      },
+      "bindings": [
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+          "sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+          "role": "CGNS measured foil geometry"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\source_identity.json",
+          "sha256": "47742d4eed34868c46fdb8c654b1a15b06271d772edf608bbfab5c156c6b28c1",
+          "role": "mesh source receipt"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\source_identity.json",
+          "sha256": "fd81680d0122837f79d670a484fd59add3ffec52015f1f0a0dcaedfe2df0c1ea",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.sim",
+          "sha256": "7fe3951f996b684d4a089f19589384f09c949d94544e36fd409101f20523704d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\PrepareFoilWaveM10R1.java",
+          "sha256": "0afb89551b8ebc4244a1c7f231d9786be8437717ab22ba6ce909e15ea192f0bf",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3\\source_identity.json",
+          "sha256": "e03f54183aa58ae2072101b6f11c8ae6f9830f240b619e2e3fcef74ec0dc48e3",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+          "sha256": "8cab371c1f4bd000283877b4e28811c978814cc30a57c9fb7701cce85fc235ce",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3\\W01aFullHeightRestartR3.java",
+          "sha256": "b30163df64caf9c1b68368f5b4fb34562bec72154e8c2ca3e02377f78d601280",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3\\setup.json",
+          "sha256": "ef8fbd4c7bb5658051e22fda785da8603ad980c9bce6360024017e8ff9dd0748",
+          "role": "case setup"
+        },
+        {
+          "path": "F:\\ntnu\\mesh_screening_20261028\\probe\\locked_before.json",
+          "sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+          "role": "upstream native locked gravity/water density/pressure-reference audit"
+        }
+      ],
+      "evidence_level": "Audited preserved source lineage and inherited native physics; not a new per-case gravity getter",
+      "physics_basis": "Native upstream locked quantities. Preserved mesh/source chain and case macros do not change gravity or water density. M09 setup additionally reads native Calm rho. New manual meshes require new native getters.",
+      "scope": "Nominal fully submerged foil buoyancy reference. Does not assert a passing flow guard or accuracy; no removal of time-varying wave loading.",
+      "normalization_crosscheck_max_error_N": 4.547473508864641e-13,
+      "reason": "Audited source-specific legacy correction"
+    },
+    {
+      "available": true,
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_wave_r1",
+      "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+      "mesh_cgns": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reference_force_N": 3855.6,
+      "displaced_volume_m3": 0.0023157681740598964,
+      "rho_water_kg_m3": 1000,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      },
+      "bindings": [
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+          "sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+          "role": "CGNS measured foil geometry"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\source_identity.json",
+          "sha256": "47742d4eed34868c46fdb8c654b1a15b06271d772edf608bbfab5c156c6b28c1",
+          "role": "mesh source receipt"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\source_identity.json",
+          "sha256": "fd81680d0122837f79d670a484fd59add3ffec52015f1f0a0dcaedfe2df0c1ea",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.sim",
+          "sha256": "7fe3951f996b684d4a089f19589384f09c949d94544e36fd409101f20523704d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\PrepareFoilWaveM10R1.java",
+          "sha256": "0afb89551b8ebc4244a1c7f231d9786be8437717ab22ba6ce909e15ea192f0bf",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\source_identity.json",
+          "sha256": "87888384d6602ad1872c8cec9cd108b1649178cc10364d245251ce875269b3f4",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+          "sha256": "8cab371c1f4bd000283877b4e28811c978814cc30a57c9fb7701cce85fc235ce",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\W01aCalmStartR1.java",
+          "sha256": "502b1920af3d0f8bb8452c446a720fe0dda0739dd6ad66b979292df7554b3d60",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_wave_r1\\source_identity.json",
+          "sha256": "f40aad6a2b86997ad2d10b0d91e78f1537999f1718249fbb194e85a190379431",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\final.sim",
+          "sha256": "bb2f9004ba8993ed6a7c8401be27b15be56d54d04c7743b15013a8925d9a131d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_wave_r1\\W01aInletWaveR1.java",
+          "sha256": "3b10d1ccd19e5cc130cceb1e175ed7261aeb97cfa3a772de4a3280a9b52915ef",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_wave_r1\\setup.json",
+          "sha256": "656789b0d96e868446394d73672695979bc0ebf8f230f63d9736c065b1c0b995",
+          "role": "case setup"
+        },
+        {
+          "path": "F:\\ntnu\\mesh_screening_20261028\\probe\\locked_before.json",
+          "sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+          "role": "upstream native locked gravity/water density/pressure-reference audit"
+        }
+      ],
+      "evidence_level": "Audited preserved source lineage and inherited native physics; not a new per-case gravity getter",
+      "physics_basis": "Native upstream locked quantities. Preserved mesh/source chain and case macros do not change gravity or water density. M09 setup additionally reads native Calm rho. New manual meshes require new native getters.",
+      "scope": "Nominal fully submerged foil buoyancy reference. Does not assert a passing flow guard or accuracy; no removal of time-varying wave loading.",
+      "normalization_crosscheck_max_error_N": 4.547473508864641e-13,
+      "reason": "Audited source-specific legacy correction"
+    },
+    {
+      "available": true,
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2",
+      "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+      "mesh_cgns": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reference_force_N": 3855.6,
+      "displaced_volume_m3": 0.0023157681740598964,
+      "rho_water_kg_m3": 1000,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      },
+      "bindings": [
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+          "sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+          "role": "CGNS measured foil geometry"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\source_identity.json",
+          "sha256": "47742d4eed34868c46fdb8c654b1a15b06271d772edf608bbfab5c156c6b28c1",
+          "role": "mesh source receipt"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\source_identity.json",
+          "sha256": "6db8f19a2856ea04e8e494805471a2acb9e0a621a8d32f743f2aef8c0a21c045",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.sim",
+          "sha256": "7fe3951f996b684d4a089f19589384f09c949d94544e36fd409101f20523704d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\PrepareFoilWaveM10R1.java",
+          "sha256": "0afb89551b8ebc4244a1c7f231d9786be8437717ab22ba6ce909e15ea192f0bf",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\source_identity.json",
+          "sha256": "419a6fd38b0eca74f04ccf5797ac437f5fa2c7384820a39260f7b5d34aa65c20",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+          "sha256": "7888c3691a221fd882883ac9ad0d9d31f6901aa821ac92461594afa8d167e49e",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\FoilWaveDiagnosticR1.java",
+          "sha256": "a5052474d4094a069876ae19659a818a575c455fb0d79428331fa01956b43549",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2\\source_identity.json",
+          "sha256": "4f01763a9004a1a77e9700b12e9a1750fdff4d9446b4327e80e4e8b6fbe9dab1",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\final.sim",
+          "sha256": "9d46a5bc3bd2c31baaaf33e5e8bfd53ae70298f1c6c5480363f1f2ad68e4d5e3",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2\\W01ResumeCyclesR2.java",
+          "sha256": "ecb716f2ba20279c65d670575066f64a72e23f1c21643ce9251af8f7d2240334",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2\\setup.json",
+          "sha256": "b71d72b2929ae7d6d1654a9fd4546dd4f87aa154c0f9e9892dde0d6982d0caac",
+          "role": "case setup"
+        },
+        {
+          "path": "F:\\ntnu\\mesh_screening_20261028\\probe\\locked_before.json",
+          "sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+          "role": "upstream native locked gravity/water density/pressure-reference audit"
+        }
+      ],
+      "evidence_level": "Audited preserved source lineage and inherited native physics; not a new per-case gravity getter",
+      "physics_basis": "Native upstream locked quantities. Preserved mesh/source chain and case macros do not change gravity or water density. M09 setup additionally reads native Calm rho. New manual meshes require new native getters.",
+      "scope": "Nominal fully submerged foil buoyancy reference. Does not assert a passing flow guard or accuracy; no removal of time-varying wave loading.",
+      "normalization_crosscheck_max_error_N": 4.547473508864641e-13,
+      "reason": "Audited source-specific legacy correction"
+    },
+    {
+      "available": true,
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1",
+      "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+      "mesh_cgns": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reference_force_N": 3855.6,
+      "displaced_volume_m3": 0.0023157681740598964,
+      "rho_water_kg_m3": 1000,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "geometry": {
+        "verified": true,
+        "mesh_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+        "foil_section_area_m2": 0.11578840870299484,
+        "span_m": 0.019999999999999997,
+        "displaced_volume_m3": 0.0023157681740598964,
+        "foil_edges": 856,
+        "foil_z_m": [
+          -0.04214490729867749,
+          0.10091477404404608
+        ],
+        "method": "Closed CGNS HF_012_wall polygon shoelace area times verified constant extrusion span"
+      },
+      "bindings": [
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+          "sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+          "role": "CGNS measured foil geometry"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\source_identity.json",
+          "sha256": "47742d4eed34868c46fdb8c654b1a15b06271d772edf608bbfab5c156c6b28c1",
+          "role": "mesh source receipt"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\source_identity.json",
+          "sha256": "6db8f19a2856ea04e8e494805471a2acb9e0a621a8d32f743f2aef8c0a21c045",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.sim",
+          "sha256": "7fe3951f996b684d4a089f19589384f09c949d94544e36fd409101f20523704d",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\PrepareFoilWaveM10R1.java",
+          "sha256": "0afb89551b8ebc4244a1c7f231d9786be8437717ab22ba6ce909e15ea192f0bf",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\source_identity.json",
+          "sha256": "419a6fd38b0eca74f04ccf5797ac437f5fa2c7384820a39260f7b5d34aa65c20",
+          "role": "source identity"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+          "sha256": "7888c3691a221fd882883ac9ad0d9d31f6901aa821ac92461594afa8d167e49e",
+          "role": "preserved source simulation"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\FoilWaveDiagnosticR1.java",
+          "sha256": "a5052474d4094a069876ae19659a818a575c455fb0d79428331fa01956b43549",
+          "role": "case macro; no gravity/density changes found"
+        },
+        {
+          "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\setup.json",
+          "sha256": "cfef5214e3c0e0bf8f6413ba45a0a3acf5daf865d1fb1789f6e8931e297cf083",
+          "role": "case setup"
+        },
+        {
+          "path": "F:\\ntnu\\mesh_screening_20261028\\probe\\locked_before.json",
+          "sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+          "role": "upstream native locked gravity/water density/pressure-reference audit"
+        }
+      ],
+      "evidence_level": "Audited preserved source lineage and inherited native physics; not a new per-case gravity getter",
+      "physics_basis": "Native upstream locked quantities. Preserved mesh/source chain and case macros do not change gravity or water density. M09 setup additionally reads native Calm rho. New manual meshes require new native getters.",
+      "scope": "Nominal fully submerged foil buoyancy reference. Does not assert a passing flow guard or accuracy; no removal of time-varying wave loading.",
+      "normalization_crosscheck_max_error_N": 4.547473508864641e-13,
+      "reason": "Audited source-specific legacy correction"
+    }
+  ],
+  "excluded_legacy_cases": [
+    {
+      "case": "E:\\ntnu\\mesh_stabilization_20261029\\M09_SO1ms_inner10_r1",
+      "reason": "source sim hash mismatch"
+    },
+    {
+      "case": "E:\\ntnu\\mesh_stabilization_20261029\\M09_SO_common_t2040_r1",
+      "reason": "source sim hash mismatch"
+    },
+    {
+      "case": "E:\\ntnu\\mesh_stabilization_20261029\\M09_SO_dt05ms_common_t2040_r1",
+      "reason": "source sim hash mismatch"
+    },
+    {
+      "case": "E:\\ntnu\\mesh_stabilization_20261029\\M09_startup_dt05ms_inner50_r1",
+      "reason": "source sim hash mismatch"
+    }
+  ],
+  "physics_evidence": {
+    "path": "F:\\ntnu\\mesh_screening_20261028\\probe\\locked_before.json",
+    "sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+    "native_gravity_key": "continua/water+air/Reference Values/Gravity|Input",
+    "native_gravity": "[0.0, 0.0, -9.81] m/s^2",
+    "native_water_density_key": "continua/water+air/Models/Multiphase/Phases/water/Models/Liquid/H2O/Material Properties/Density/Constant|Quantity",
+    "native_water_density": "1000.0 kg/m^3",
+    "native_pressure_reference_density": "0.0 kg/m^3",
+    "scope": "Upstream inherited profile; new preparations record contemporaneous native force_physics getters."
+  },
+  "measured_M09_M10": {
+    "displaced_volume_m3": 0.0023157681740598964,
+    "buoyancy_N": 22.717685787527586,
+    "cl_offset": 0.005892127240255106,
+    "normalization_N": 3855.6
+  },
+  "old_nominal": {
+    "CAD_volume_m3": 0.0023158194813401897,
+    "buoyancy_N": 22.718189111947265,
+    "note": "Archived nominal solid-section reference differs slightly from each actual discretized CGNS; not reused globally."
+  },
+  "hydrostatic_crosscheck": {
+    "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3\\initial_force_fingerprint.json",
+    "Fz_N": 22.718320506914363,
+    "difference_pct": 0.0027939438581592313,
+    "interpretation": "Independent zero-time hydrostatic force agrees closely but is not used to redefine displaced volume."
+  },
+  "tests": {
+    "unit_count": 27,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.313,
+    "file_only_CGNS_audits": 4,
+    "STAR_launched": false,
+    "raw_histories_modified": false
+  },
+  "source_hashes": {
+    "force_reference.py": "bc20e83433d32e77ffc5904a49f863e0b905013951c857e2c5d8a0d1ff5dd3fe",
+    "test_force_reference.py": "e57367f564a98cad3f7d228cad507efbf3502a00f9b4c3383631998a80769ea0",
+    "PrepareLocalMeshCalm.java": "92291364cfb8577a780a00f153fc8fef021406b782a42ebfb0170626665c103b"
+  },
+  "limits": [
+    "Native getter additions are compile-tested only; no STAR launched during this task.",
+    "Legacy gravity is inherited with preserved source lineage, not freshly queried in every old case.",
+    "New manual meshes without source-bound native physics and measured CGNS return unavailable.",
+    "Correction is constant nominal fully-submerged buoyancy; it does not remove wave-dependent pressures or establish force accuracy."
+  ],
+  "adapter_actual_saved_case_checks": [
+    {
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3",
+      "available": true,
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reason": "Legacy source-specific geometry and physics review"
+    },
+    {
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2",
+      "available": true,
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reason": "Legacy source-specific geometry and physics review"
+    },
+    {
+      "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2",
+      "available": true,
+      "cl_offset": 0.005892127240255106,
+      "buoyancy_N": 22.717685787527586,
+      "reason": "Legacy source-specific geometry and physics review"
+    },
+    {
+      "case": "E:\\ntnu\\mesh_stabilization_20261029\\M09_SO_common_t2040_r1",
+      "available": false,
+      "reason": "No source-bound buoyancy evidence for this case; retain rawCL_total and do not guess a correction"
+    }
+  ],
+  "M09_source_identity_discrepancy": {
+    "source": "E:/ntnu/mesh_builds_20261029/M09/mesh.sim",
+    "expected_sha256": "4e13c6af5ffbd65dab3fd5c969d7c7e7a1784ea7f8ee601f323cd25c9586dc91",
+    "actual_sha256": "d0c5830529a6164a5829d78b27ab0b06adf16d7b636cae8a2f4e216a6a4dac44",
+    "effect": "Historical M09 automatic correction unavailable until preserved matching source identity is recovered or independent case-bound physics/mesh audit supplied",
+    "source_mutated_by_this_review": false
+  }
+}

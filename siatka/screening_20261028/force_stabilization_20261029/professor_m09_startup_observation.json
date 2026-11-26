@@ -1,0 +1,143 @@
+{
+  "elapsed_since_launch_s": 206.18716430664062,
+  "free_RAM_GiB": 39.68552017211914,
+  "safe_log_tail": [
+    "Playing macro: F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\ContinueUntilSettled.java",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\ContinueUntilSettled.java:32: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated",
+    "      s.getSimulationIterator().getAutoSave().setEnabled(false);",
+    "                                             ^",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\ContinueUntilSettled.java:58: warning: [deprecation] clearSolutionWithoutMeshReset() in star.common.Solution has been deprecated",
+    "        s.getSolution().clearSolutionWithoutMeshReset();s.getSolution().initializeSolution();",
+    "                       ^",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\ContinueUntilSettled.java:117: warning: [deprecation] getSubStepCount() in star.mixturemultiphase.VolumeFractionTransportSolver has been deprecated",
+    "          int vofSteps=s.getSolverManager().getSolver(star.vof.SegregatedVofSolver.class).getSubStepCount();",
+    "                                                                                         ^",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\ContinueUntilSettled.java:142: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated",
+    "      XyzInternalTable vectors=s.getTableManager().createTable(XyzInternalTable.class);vectors.getParts().setObjects(fluid);vectors.setRepresentation(fv);vectors.setExtractVertexData(false);",
+    "                                                  ^",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\ContinueUntilSettled.java:185: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated",
+    "    XyzInternalTable wall=s.getTableManager().createTable(XyzInternalTable.class);wall.getParts().setObjects(foil);wall.setRepresentation(fv);wall.setExtractVertexData(false);",
+    "                                             ^",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_startup_dt05ms_inner50_r1\\ContinueUntilSettled.java:187: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated",
+    "    XyzInternalTable cells=s.getTableManager().createTable(XyzInternalTable.class);cells.getParts().setObjects(fluid);cells.setRepresentation(fv);cells.setExtractVertexData(false);",
+    "                                              ^",
+    "",
+    "Loading/configuring connectivity (old|new partitions: 2|1)",
+    "  fluid (index 1): 214908 cells, 602534 faces, 778336 verts.",
+    "Configuring finished",
+    "Initialization of star.flow.EffectiveViscosityModel requires an additional pass...",
+    "Initialization of star.flow.EffectiveViscositySolver requires an additional pass..."
+  ],
+  "error_flag": false,
+  "license_failure_flag": false,
+  "owned_processes": [
+    {
+      "PID": 34380,
+      "ParentPID": 15952,
+      "Name": "starccm+.exe",
+      "CPU_s": 27.5,
+      "RAM_GiB": 0.42986297607421875,
+      "Threads": 63,
+      "Created": "/Date(1793307150213)/"
+    },
+    {
+      "PID": 1824,
+      "ParentPID": 34380,
+      "Name": "conhost.exe",
+      "CPU_s": 0.015625,
+      "RAM_GiB": 0.0070953369140625,
+      "Threads": 2,
+      "Created": "/Date(1793307150226)/"
+    },
+    {
+      "PID": 39224,
+      "ParentPID": 34380,
+      "Name": "cmd.exe",
+      "CPU_s": 0.015625,
+      "RAM_GiB": 0.00905609130859375,
+      "Threads": 1,
+      "Created": "/Date(1793307158027)/"
+    },
+    {
+      "PID": 38124,
+      "ParentPID": 39224,
+      "Name": "conhost.exe",
+      "CPU_s": 0.046875,
+      "RAM_GiB": 0.007129669189453125,
+      "Threads": 2,
+      "Created": "/Date(1793307158049)/"
+    },
+    {
+      "PID": 32532,
+      "ParentPID": 39224,
+      "Name": "starccm+.exe",
+      "CPU_s": 0.078125,
+      "RAM_GiB": 0.00852203369140625,
+      "Threads": 1,
+      "Created": "/Date(1793307158116)/"
+    },
+    {
+      "PID": 2856,
+      "ParentPID": 32532,
+      "Name": "cmd.exe",
+      "CPU_s": 0.078125,
+      "RAM_GiB": 0.009197235107421875,
+      "Threads": 1,
+      "Created": "/Date(1793307170986)/"
+    },
+    {
+      "PID": 21412,
+      "ParentPID": 2856,
+      "Name": "python.exe",
+      "CPU_s": 0.390625,
+      "RAM_GiB": 0.0266571044921875,
+      "Threads": 1,
+      "Created": "/Date(1793307171156)/"
+    },
+    {
+      "PID": 36124,
+      "ParentPID": 21412,
+      "Name": "mpiexec.exe",
+      "CPU_s": 0,
+      "RAM_GiB": 0.006504058837890625,
+      "Threads": 5,
+      "Created": "/Date(1793307268450)/"
+    },
+    {
+      "PID": 23872,
+      "ParentPID": 36124,
+      "Name": "smpd.exe",
+      "CPU_s": 0.015625,
+      "RAM_GiB": 0.008129119873046875,
+      "Threads": 3,
+      "Created": "/Date(1793307268460)/"
+    },
+    {
+      "PID": 38164,
+      "ParentPID": 23872,
+      "Name": "starccm+.exe",
+      "CPU_s": 0.078125,
+      "RAM_GiB": 0.00830841064453125,
+      "Threads": 1,
+      "Created": "/Date(1793307268479)/"
+    },
+    {
+      "PID": 15696,
+      "ParentPID": 38164,
+      "Name": "conhost.exe",
+      "CPU_s": 0.015625,
+      "RAM_GiB": 0.007205963134765625,
+      "Threads": 2,
+      "Created": "/Date(1793307268485)/"
+    },
+    {
+      "PID": 38280,
+      "ParentPID": 38164,
+      "Name": "star-ccm+.exe",
+      "CPU_s": 44.515625,
+      "RAM_GiB": 0.8096084594726562,
+      "Threads": 18,
+      "Created": "/Date(1793307280250)/"
+    }
+  ]
+}

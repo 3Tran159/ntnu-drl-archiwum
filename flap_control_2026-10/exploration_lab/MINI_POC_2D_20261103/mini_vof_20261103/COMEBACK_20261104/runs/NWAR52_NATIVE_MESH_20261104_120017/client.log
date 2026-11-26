@@ -1,0 +1,99 @@
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\NWAR52_NATIVE_MESH_20261104_120017\VerifyComeback.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\NWAR52_NATIVE_MESH_20261104_120017\VerifyComeback.java:53: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);
+                                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\NWAR52_NATIVE_MESH_20261104_120017\VerifyComeback.java:124: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);
+                                            ^
+
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+
+
+Importing F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/MINI_NWAR_50K_20261104/MESH_CANDIDATE_02/Q2D/mesh_3d.msh
+Loading module: CaeIOCgns
+Reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\MINI_NWAR_50K_20261104\MESH_CANDIDATE_02\Q2D\mesh_3d.msh...
+Importing cells
+Cell type: mixed
+   Name: cell-1
+   Number of cells: 52352
+   Zone type: fluid
+   Zone 2 type interior, name interior
+   Zone 3 type wall, name HF_012_main
+   Zone 4 type wall, name HF_012_flap
+   Zone 5 type velocity-inlet, name DOMAIN.inlet
+   Zone 6 type pressure-outlet, name DOMAIN.outlet
+   Zone 7 type pressure-outlet, name DOMAIN.top
+   Zone 8 type wall, name DOMAIN.bottom
+   Zone 9 type symmetry, name Q2D_span_target
+   Zone 10 type symmetry, name Q2D_span_source
+   Zone 1 type fluid, name fluid
+Importing faces
+Group: interior-2
+   Number of faces: 98800
+   Topology: quadrilateral
+   Type: 2
+Importing faces
+Group: wall-3
+   Number of faces: 537
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: wall-4
+   Number of faces: 78
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: velocity-inlet-5
+   Number of faces: 104
+   Topology: quadrilateral
+   Type: 10
+Importing faces
+Group: pressure-outlet-6
+   Number of faces: 104
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: pressure-outlet-7
+   Number of faces: 500
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: wall-8
+   Number of faces: 95
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: symmetry-9
+   Number of faces: 52352
+   Topology: mixed
+   Type: 7
+Importing faces
+Group: symmetry-10
+   Number of faces: 52352
+   Topology: mixed
+   Type: 7
+
+Partitioning region fluid (52352 cells, 1 partitions)
+Partitioning complete
+Importing nodes
+Dimension: 3
+   Number of nodes: 95732
+   Zone id: 1
+Processing mesh
+Finished reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\MINI_NWAR_50K_20261104\MESH_CANDIDATE_02\Q2D\mesh_3d.msh
+Reordering
+Finished importing
+Imported coordinate extents (m)
+X extents: [-35.0, 45.0]
+   Y extents: [0.01, 0.03]
+   Z extents: [-22.0, 8.0]
+
+Minimum 1 Report: Unable to generate report - Field function is not set.
+Command: ExecuteReport
+   error: Server Error
+java.lang.RuntimeException: Minimum 1 Report: Unable to generate report - Field function is not set.
+Command: ExecuteReport
+   error: Server Error
+

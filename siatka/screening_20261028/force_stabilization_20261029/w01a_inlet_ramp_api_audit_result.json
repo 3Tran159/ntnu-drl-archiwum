@@ -1,0 +1,295 @@
+{
+  "status": "zero_step_audit_complete",
+  "physical_fields_fingerprint_unchanged": true,
+  "physical_deltas": {
+    "time_s": 0.0,
+    "cells": 0.0,
+    "mass_kg": 0.0,
+    "water_volume_m3": 0.0,
+    "max_speed_m_s": 0.0,
+    "alpha_min": 0.0,
+    "alpha_max": 0.0,
+    "Fx_N": 0.0,
+    "Fz_N": 0.0,
+    "pressure_drag_N": 0.0,
+    "viscous_drag_N": 0.0
+  },
+  "time_s": 0.020000000000000014,
+  "cells": 317277,
+  "flow_steps": 0,
+  "initialized_or_cleared": false,
+  "gpu_count": 0,
+  "ramp_expression_tests_pass": false,
+  "ramp_tests": [
+    {
+      "tau": 0.0,
+      "fixed_physical_time_s": 0.020000000000000014,
+      "test_origin_s": 0.020000000000000014,
+      "expected_height_m": 1e-06,
+      "expression": {
+        "height_m": 1e-06,
+        "period_s": 0.0,
+        "definition": "<0.000001 m>+<0.499999 m>*0.5*(1.0-cos(3.141592653589793*min(1.0,max(0.0,($Time-<0.020000000000000014 s>)/<1.6945346413782258 s>))))",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "constant": {
+        "height_m": 1e-06,
+        "period_s": 0.0,
+        "definition": "1.0E-6",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "max_gauge_difference_m": null,
+      "max_mean_velocity_difference_m_s": null,
+      "pass": false
+    },
+    {
+      "tau": 0.5,
+      "fixed_physical_time_s": 0.020000000000000014,
+      "test_origin_s": -0.8272673206891129,
+      "expected_height_m": 0.25000049999999996,
+      "expression": {
+        "height_m": 0.25000049999999996,
+        "period_s": 0.0,
+        "definition": "<0.000001 m>+<0.499999 m>*0.5*(1.0-cos(3.141592653589793*min(1.0,max(0.0,($Time-<-0.8272673206891129 s>)/<1.6945346413782258 s>))))",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "constant": {
+        "height_m": 0.25000049999999996,
+        "period_s": 0.0,
+        "definition": "0.25000049999999996",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "max_gauge_difference_m": null,
+      "max_mean_velocity_difference_m_s": null,
+      "pass": false
+    },
+    {
+      "tau": 1.0,
+      "fixed_physical_time_s": 0.020000000000000014,
+      "test_origin_s": -1.6745346413782258,
+      "expected_height_m": 0.5,
+      "expression": {
+        "height_m": 0.5,
+        "period_s": 0.0,
+        "definition": "<0.000001 m>+<0.499999 m>*0.5*(1.0-cos(3.141592653589793*min(1.0,max(0.0,($Time-<-1.6745346413782258 s>)/<1.6945346413782258 s>))))",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "constant": {
+        "height_m": 0.5,
+        "period_s": 0.0,
+        "definition": "0.5",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "max_gauge_difference_m": null,
+      "max_mean_velocity_difference_m_s": null,
+      "pass": false
+    }
+  ],
+  "setter_cache_tests": [
+    {
+      "requested_height_m": 1e-06,
+      "sample": {
+        "height_m": 1e-06,
+        "period_s": 0.0,
+        "definition": "1.0E-6",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "evaluated": true
+    },
+    {
+      "requested_height_m": 0.2500005,
+      "sample": {
+        "height_m": 0.2500005,
+        "period_s": 0.0,
+        "definition": "0.2500005",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "evaluated": true
+    },
+    {
+      "requested_height_m": 0.5,
+      "sample": {
+        "height_m": 0.5,
+        "period_s": 0.0,
+        "definition": "0.5",
+        "first_front": false,
+        "analytic_gauge_eta_m": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_mean_velocity_m_s": [
+          null,
+          null,
+          null
+        ],
+        "analytic_inlet_max_speed_m_s": null
+      },
+      "evaluated": true
+    }
+  ],
+  "analytic_gauge_x_m": [
+    -34.99,
+    -25.0,
+    -15.0,
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "native_vorticity": {
+    "lookup": "instanceof star.flow.VorticityVectorFunction in getVectorFieldFunctions",
+    "found": true,
+    "function_name": "VorticityVector",
+    "presentation_name": "Vorticity",
+    "class": "star.flow.VorticityVectorFunction",
+    "component_index": 1,
+    "component_meaning": "omega_y = du/dz - dw/dx for x-z flow",
+    "omega_y_min_per_s": -1171303.5694805288,
+    "omega_y_max_per_s": 608323.848601239
+  },
+  "note": "Actual physical fields are the computed calm checkpoint. Analytical FifthOrder reference tests do not propagate a wave and do not validate transient refresh between CFD steps. Tiny minimum H=1e-6 m avoids testing the H=0 singular limit. inspection.sim is diagnostic only, not production admission.",
+  "controller_finished_at": "2026-10-30T12:03:36.662695+01:00",
+  "returncode": 0,
+  "source_unchanged": true,
+  "source": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\checkpoint_startup_t0.020.sim",
+  "source_sha256": "489990d40da561cee752209e8dd8aa2675733a7e3651d4b246d535fd20556179",
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_inlet_ramp_api_audit_r1",
+  "physical_field_csv_sha256_before": "e5e1d95cf2ba7f417e6c12c96b902fe7c4c098444f9c05d844441fe0a36646c7",
+  "physical_field_csv_sha256_after": "e5e1d95cf2ba7f417e6c12c96b902fe7c4c098444f9c05d844441fe0a36646c7",
+  "physical_field_csv_bitwise_equal": true
+}

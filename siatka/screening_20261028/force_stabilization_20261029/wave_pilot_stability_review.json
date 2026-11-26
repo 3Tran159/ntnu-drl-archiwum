@@ -1,0 +1,27 @@
+{
+  "updated_at": "2026-10-29T23:31:37.187272+01:00",
+  "case": "W20_H24_X4_CPUprop_dt1ms_r2",
+  "status": "needs_spatial_diagnosis",
+  "completed": {
+    "status": "stability_guard",
+    "steps": 704,
+    "time_s": 0.7040000000000005
+  },
+  "last_progress": {
+    "time_s": 0.7000000000000005,
+    "wall_s": 2053.5972153000002,
+    "max_speed_m_s": 45.62543976652713,
+    "interface_CFL": 0.10812099435887311,
+    "steps": 700
+  },
+  "extension_admitted": false,
+  "source_preserved": true,
+  "audit_controller_pid": 28100,
+  "audit_state": "wave_checkpoint_audit_state.json",
+  "checks": [
+    "Locate velocity and CFL maxima independently, including local phase and adjacent cells",
+    "Check distance to inlet/outlet/top and forcing/damping transitions",
+    "Inspect actual top/outlet backflow phase and velocity/pressure profile bindings",
+    "Keep guard50m/s unchanged; gauge agreement and low interface CFL do not establish global stability"
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "updated_at": "2026-10-29T21:38:26.796341+01:00",
+  "authorization": "Latest explicit user request authorizes independent extra wave combinations only after originally requested waves are completed.",
+  "status": "planned_not_started",
+  "prerequisites": [
+    "Supported calculation configuration and final mesh",
+    "Accepted matched C01 and W01/W02",
+    "W01 3lambda versus4lambda sensitivity reviewed"
+  ],
+  "shared_controls": {
+    "water_depth_m": 24,
+    "vertical_bounds_z_m": [
+      -22,
+      8
+    ],
+    "waterline_z_m": 2,
+    "foil_submergence_m": 2,
+    "U_m_s": 18,
+    "fixed_foil_geometry_and_angle": true,
+    "direction": "Head waves; verify signs and encounter response",
+    "time_order": "SECOND_ORDER with tested timestep",
+    "averaging": "Complete settled encounter cycles after startup; target8\u201310total periods, adapt to observed periodicity",
+    "wave_model": "FifthOrderVofWave"
+  },
+  "cases": [
+    {
+      "id": "W03",
+      "priority": 1,
+      "height_m": 0.25,
+      "lambda_m": 20,
+      "purpose": "Lower wave height at fixed wavelength",
+      "baseline": "W01",
+      "depth_m": 24,
+      "submergence_m": 2,
+      "current_m_s": 18,
+      "bottom_z_m": -22,
+      "top_z_m": 8,
+      "waterline_z_m": 2,
+      "head_waves": true,
+      "domain_lambda": 4,
+      "xmin_m": -35.0,
+      "xmax_m": 45.0,
+      "initial_forcing_zone": [
+        -35.0,
+        -15.0
+      ],
+      "initial_damping_zone": [
+        25.0,
+        45.0
+      ],
+      "linear_reference_encounter_period_s": 0.8478873476270993,
+      "starting_surface_dx_m": 0.2,
+      "starting_surface_dz_m": 0.0125,
+      "status": "planned_after_primary_wave_validation",
+      "wave_model": "FifthOrderVofWave"
+    },
+    {
+      "id": "W04",
+      "priority": 2,
+      "height_m": 0.75,
+      "lambda_m": 20,
+      "purpose": "Higher wave height at fixed wavelength",
+      "baseline": "W01",
+      "depth_m": 24,
+      "submergence_m": 2,
+      "current_m_s": 18,
+      "bottom_z_m": -22,
+      "top_z_m": 8,
+      "waterline_z_m": 2,
+      "head_waves": true,
+      "domain_lambda": 4,
+      "xmin_m": -35.0,
+      "xmax_m": 45.0,
+      "initial_forcing_zone": [
+        -35.0,
+        -15.0
+      ],
+      "initial_damping_zone": [
+        25.0,
+        45.0
+      ],
+      "linear_reference_encounter_period_s": 0.8478873476270993,
+      "starting_surface_dx_m": 0.2,
+      "starting_surface_dz_m": 0.025,
+      "status": "planned_after_primary_wave_validation",
+      "wave_model": "FifthOrderVofWave"
+    },
+    {
+      "id": "W05",
+      "priority": 3,
+      "height_m": 0.25,
+      "lambda_m": 30,
+      "purpose": "Lower wave height at fixed wavelength",
+      "baseline": "W02",
+      "depth_m": 24,
+      "submergence_m": 2,
+      "current_m_s": 18,
+      "bottom_z_m": -22,
+      "top_z_m": 8,
+      "waterline_z_m": 2,
+      "head_waves": true,
+      "domain_lambda": 4,
+      "xmin_m": -52.5,
+      "xmax_m": 67.5,
+      "initial_forcing_zone": [
+        -52.5,
+        -22.5
+      ],
+      "initial_damping_zone": [
+        37.5,
+        67.5
+      ],
+      "linear_reference_encounter_period_s": 1.2075530192963326,
+      "starting_surface_dx_m": 0.2,
+      "starting_surface_dz_m": 0.0125,
+      "status": "planned_after_primary_wave_validation",
+      "wave_model": "FifthOrderVofWave"
+    },
+    {
+      "id": "W06",
+      "priority": 4,
+      "height_m": 0.75,
+      "lambda_m": 30,
+      "purpose": "Higher wave height at fixed wavelength",
+      "baseline": "W02",
+      "depth_m": 24,
+      "submergence_m": 2,
+      "current_m_s": 18,
+      "bottom_z_m": -22,
+      "top_z_m": 8,
+      "waterline_z_m": 2,
+      "head_waves": true,
+      "domain_lambda": 4,
+      "xmin_m": -52.5,
+      "xmax_m": 67.5,
+      "initial_forcing_zone": [
+        -52.5,
+        -22.5
+      ],
+      "initial_damping_zone": [
+        37.5,
+        67.5
+      ],
+      "linear_reference_encounter_period_s": 1.2075530192963326,
+      "starting_surface_dx_m": 0.2,
+      "starting_surface_dz_m": 0.025,
+      "status": "planned_after_primary_wave_validation",
+      "wave_model": "FifthOrderVofWave"
+    },
+    {
+      "id": "W07",
+      "priority": 5,
+      "height_m": 0.5,
+      "lambda_m": 10,
+      "purpose": "Shorter wavelength at fixed wave height",
+      "baseline": "W01/W02",
+      "depth_m": 24,
+      "submergence_m": 2,
+      "current_m_s": 18,
+      "bottom_z_m": -22,
+      "top_z_m": 8,
+      "waterline_z_m": 2,
+      "head_waves": true,
+      "domain_lambda": 4,
+      "xmin_m": -17.5,
+      "xmax_m": 22.5,
+      "initial_forcing_zone": [
+        -17.5,
+        -7.5
+      ],
+      "initial_damping_zone": [
+        12.5,
+        22.5
+      ],
+      "linear_reference_encounter_period_s": 0.45555302324319913,
+      "starting_surface_dx_m": 0.1,
+      "starting_surface_dz_m": 0.025,
+      "status": "planned_after_primary_wave_validation",
+      "wave_model": "FifthOrderVofWave"
+    },
+    {
+      "id": "W08",
+      "priority": 6,
+      "height_m": 0.5,
+      "lambda_m": 40,
+      "purpose": "Longer wavelength at fixed wave height",
+      "baseline": "W01/W02",
+      "depth_m": 24,
+      "submergence_m": 2,
+      "current_m_s": 18,
+      "bottom_z_m": -22,
+      "top_z_m": 8,
+      "waterline_z_m": 2,
+      "head_waves": true,
+      "domain_lambda": 4,
+      "xmin_m": -70.0,
+      "xmax_m": 90.0,
+      "initial_forcing_zone": [
+        -70.0,
+        -30.0
+      ],
+      "initial_damping_zone": [
+        50.0,
+        90.0
+      ],
+      "linear_reference_encounter_period_s": 1.5444919496377039,
+      "starting_surface_dx_m": 0.2,
+      "starting_surface_dz_m": 0.025,
+      "status": "planned_after_primary_wave_validation",
+      "wave_model": "FifthOrderVofWave"
+    }
+  ],
+  "comparability_rules": [
+    "Use common spatial/time settings within each height sweep. H0.25m starting dz0.0125m requires a matched H0.5m baseline at that resolution if propagation/force checks require refinement; do not attribute a simultaneous grid change to wave height.",
+    "W07 lambda10m starts with dx0.1m, not0.2m, for100cells/wavelength. Verify propagation and sensitivity before force interpretation.",
+    "Create matching calm references for new horizontal domains; reuse only if geometry, mesh and solver settings match.",
+    "Keep forcing/damping outside the foil and protected near wake, and preserve source states.",
+    "Compare meanCD/CL,RMS,pressure/viscousFx,phase-resolvedCp,gauges,CFL and actual cost. Interpret negative added resistance only after numerical checks."
+  ],
+  "completion": "Complete or explicitly diagnose this bounded six-case extension batch, then summarize. Further combinations require a supported scientific reason and recorded scope; do not create an endless queue.",
+  "time_budget": "No promise that all extra cases finish in one night; preserve checkpoints and continue in priority order."
+}

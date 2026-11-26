@@ -1,0 +1,184 @@
+ 
+ void singlePhaseRun() throws Exception {
+  boolean seeded=b("seeded_single_phase");
+  if((!b("fresh")&&!seeded)||!foil||!moving||kinematics||s.getNumberOfGpgpus()!=0)
+   throw new IllegalStateException("Single-phase diagnostic contract");
+  double speed=d("u_diagnostic_m_s",10),u0=d("u_initial_m_s",speed),rampTime=d("u_ramp_s",0),refSpan=seeded?1:.02;
+  if(!seeded){
+  s.getImportManager().importMeshFiles(cfg.getProperty("mesh"));
+  reg=s.getRegionManager().getRegions().iterator().next();
+  long nc=((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount();
+  if(nc!=44442)throw new IllegalStateException("Unexpected diagnostic mesh");
+  pc=s.getContinuumManager().createContinuum(PhysicsContinuum.class);
+  pc.setPresentationName("Quasi-2D single-phase URANS motion diagnostic");
+  pc.enable(ThreeDimensionalModel.class);
+  pc.enable(ImplicitUnsteadyModel.class);
+  pc.enable(SingleComponentLiquidModel.class);
+  pc.enable(SegregatedFlowModel.class);
+  pc.enable(ConstantDensityModel.class);
+  pc.enable(TurbulentModel.class);
+  pc.enable(RansTurbulenceModel.class);
+  pc.enable(KOmegaTurbulence.class);
+  pc.enable(SstKwTurbModel.class);
+  pc.enable(KwAllYplusWallTreatment.class);
+  Material water=pc.getModelManager().getModel(SingleComponentLiquidModel.class).getMaterial();
+  water.getMaterialProperties().getMaterialProperty(ConstantDensityProperty.class).setConstant(1000);
+  water.getMaterialProperties().getMaterialProperty(DynamicViscosityProperty.class).setConstant(.001);
+  pc.getReferenceValues().get(ReferencePressure.class).setValue(120736.226);
+
+  UserFieldFunction inletVelocity=null;
+  if(rampTime>0){
+   inletVelocity=s.getFieldFunctionManager().createFieldFunction();
+   inletVelocity.setFunctionName("CB_SinglePhaseInletRamp");
+   inletVelocity.getTypeOption().setSelected(FieldFunctionTypeOption.Type.VECTOR);
+   Dimensions units=new Dimensions();units.setLength(1);units.setTime(-1);inletVelocity.setDimensions(units);
+   inletVelocity.setDefinition("[<"+u0+" m/s>+<"+(speed-u0)+" m/s>*"+smooth("$Time/<"+rampTime+" s>")+",<0 m/s>,<0 m/s>]");
+  }
+  pc.getInitialConditions().get(VelocityProfile.class).getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponents(u0,0,0);
+  if(b("target_ambient_turbulence")){
+   double targetK=1.5*Math.pow(.001*speed,2),targetOmega=1000*targetK/(10*.001);
+   pc.getInitialConditions().get(KwTurbSpecOption.class).setSelected(KwTurbSpecOption.Type.K_OMEGA);
+   scalar(pc.getInitialConditions().get(TurbulentKineticEnergyProfile.class),targetK);
+   scalar(pc.getInitialConditions().get(SpecificDissipationRateProfile.class),targetOmega);
+   write("B_AMBIENT_SST.json",Map.of("k_m2_s2",targetK,"omega_s_inv",targetOmega,"reference_U_m_s",speed,"TI",.001,"viscosity_ratio",10));
+  }else{
+  pc.getInitialConditions().get(KwTurbSpecOption.class).setSelected(KwTurbSpecOption.Type.INTENSITY_VISCOSITY_RATIO);
+  scalar(pc.getInitialConditions().get(TurbulenceIntensityProfile.class),.001);
+  scalar(pc.getInitialConditions().get(TurbulentViscosityRatioProfile.class),10);
+  }
+  reg.setPhysicsContinuum(pc);
+  for(Boundary bb:reg.getBoundaryManager().getBoundaries()){
+   String name=bb.getPresentationName();
+   if(name.contains("inlet")){
+    inlet=bb;outer.add(bb);
+    bb.setBoundaryType(InletBoundary.class);
+    bb.getConditions().get(InletVelocityOption.class).setSelected(InletVelocityOption.Type.COMPONENTS);
+    if(inletVelocity!=null)vf(bb.getValues().get(VelocityProfile.class),inletVelocity);else bb.getValues().get(VelocityProfile.class).getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponents(u0,0,0);
+    if(b("target_ambient_turbulence")){
+     double targetK=1.5*Math.pow(.001*speed,2);
+     bb.getConditions().get(KwTurbSpecOption.class).setSelected(KwTurbSpecOption.Type.K_OMEGA);
+     scalar(bb.getValues().get(TurbulentKineticEnergyProfile.class),targetK);
+     scalar(bb.getValues().get(SpecificDissipationRateProfile.class),1000*targetK/(10*.001));
+    }else{
+    bb.getConditions().get(KwTurbSpecOption.class).setSelected(KwTurbSpecOption.Type.INTENSITY_VISCOSITY_RATIO);
+    scalar(bb.getValues().get(TurbulenceIntensityProfile.class),.001);
+    scalar(bb.getValues().get(TurbulentViscosityRatioProfile.class),10);
+    }
+   }else if(name.contains("outlet")){
+    outer.add(bb);bb.setBoundaryType(PressureBoundary.class);scalar(bb.getValues().get(StaticPressureProfile.class),0);
+   }else if(name.contains("main")||name.contains("flap")){
+    bb.setBoundaryType(WallBoundary.class);walls.add(bb);if(name.contains("flap"))flaps.add(bb);
+   }else{
+    bb.setBoundaryType(SymmetryBoundary.class);
+   }
+  }
+  }else{
+   reg=s.getRegionManager().getRegions().iterator().next();
+   pc=reg.getPhysicsContinuum();
+   if(pc.getModelManager().hasModel(TwoDimensionalModel.class)==null||
+      pc.getModelManager().hasModel(KwAllYplusWallTreatment.class)==null||
+      pc.getModelManager().hasModel(SstKwTurbModel.class)==null)
+    throw new IllegalStateException("Unexpected saved 2D SST setup");
+   pc.disableModel(pc.getModelManager().getModel(SteadyModel.class));
+   pc.enable(ImplicitUnsteadyModel.class);
+   for(Boundary bb:reg.getBoundaryManager().getBoundaries()){
+    String n=bb.getPresentationName();
+    if(n.contains("inlet")){inlet=bb;outer.add(bb);}
+    else if(n.contains("outlet"))outer.add(bb);
+    else if(n.contains("main")||n.contains("flap")){walls.add(bb);if(n.contains("flap"))flaps.add(bb);}
+   }
+   write("SEEDED_READBACK.json",Map.of("cells",((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount(),
+       "initialization_called",false,"source_sim",s.getSessionPath(),"VOF",false,"span_reference_m",refSpan));
+  }
+  if(walls.size()!=2||flaps.size()!=1)throw new IllegalStateException("Foil labels incomplete");
+  pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.SECOND_ORDER);
+  pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.SECOND_ORDER);
+  ImplicitUnsteadySolver solver=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);
+  solver.getTimeStep().setValue(dt);
+  solver.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);
+  for(SolverStoppingCriterion c:s.getSolverStoppingCriterionManager().getObjects()){
+   c.setIsUsed(c instanceof InnerIterationStoppingCriterion);
+   if(c instanceof InnerIterationStoppingCriterion)((InnerIterationStoppingCriterion)c).setMaximumNumberInnerIterations(inner);
+  }
+  s.getSimulationIterator().getAutoSave().setEnabled(false);
+  if(!seeded)s.getSolution().initializeSolution();
+  start=s.getSolution().getPhysicalTime();
+  setupMotion();
+  List<Region> parts=List.of(reg);
+  min("pmin",ff("AbsolutePressure"),parts);min("pbody",ff("AbsolutePressure"),walls);
+  min("quality",ff(seeded?"LeastSquaresQuality":"CellQuality"),parts);min("volume",ff("Volume"),parts);min("face",ff("FaceValidity"),parts);
+  min("kmin",ff("TurbulentKineticEnergy"),parts);min("omin",ff("SpecificDissipationRate"),parts);
+  max("nut",ff("TurbulentViscosityRatio"),parts);max("CFL",ff("CourantNumber"),parts);
+  MassFlowReport net=s.getReportManager().createReport(MassFlowReport.class);
+  net.getParts().setObjects(outer);rep.put("net",net);
+  MassFlowReport influx=s.getReportManager().createReport(MassFlowReport.class);
+  influx.getParts().setObjects(inlet);rep.put("influx",influx);
+  VolumeIntegralReport mass=s.getReportManager().createReport(VolumeIntegralReport.class);
+  mass.setFieldFunction(ff("Density"));mass.getParts().setObjects(reg);rep.put("mass",mass);
+  for(int axis=0;axis<2;axis++){
+   ForceReport force=s.getReportManager().createReport(ForceReport.class);
+   force.getDirection().setComponents(axis==0?1:0,axis==1?1:0,0);
+   force.setPressureOption(FluidLoadsReportPressureOption.SP_UC);
+   force.getParts().setObjects(walls);rep.put(axis==0?"Fx":"Fz",force);
+  }
+  MomentReport moment=s.getReportManager().createReport(MomentReport.class);
+  moment.getDirection().setComponents(0,0,-1);moment.getOrigin().setComponents(HX,HY,seeded?0:.01);
+  moment.setPressureOption(FluidLoadsReportPressureOption.SP_UC);
+  moment.getParts().setObjects(flaps);rep.put("Mh",moment);
+  write("MOMENT_CONVENTION.json",Map.of("axis_star",List.of(0,0,-1),"origin_star_m",List.of(HX,HY,.01),
+     "moment_unit",seeded?"Nm per 1 m 2D reference span":"Nm over the 20 mm span","flap_only",true,"sign","Positive fluid torque acts towards positive trailing-edge-down deflection",
+     "power","Signed fluid power = Mh * angular speed in rad/s","force_normalization_N",.5*1000*speed*speed*1.19*refSpan));
+  save("START");
+  double previousMass=v("mass"), beforeMass=previousMass, peakFinal=0, qs=.5*1000*speed*speed*1.19*refSpan;
+  result="PASS_DIAGNOSTIC_SMOKE";
+  try(BufferedWriter h=Files.newBufferedWriter(out.resolve("single_phase.csv"));
+      BufferedWriter rr=Files.newBufferedWriter(out.resolve("residual_per_step.csv"))){
+   h.write("time_s,solver_s,delta_command_deg,delta_measured_deg,delta_dot_rad_s,CL,CD,Fx_N,Fz_N,Mh_Nm,hinge_power_fluid_W,pABSmin_Pa,pbody_min_Pa,max_CFL,mass_relative,volume_min,face_validity,quality,k_min,omega_min,mut_mu_max,inlet_target_m_s\n");
+   rr.write("time_s,monitor,normalized,inner_count,first,last,reduction\n");
+   int total=i("steps",40);for(int step=1;step<=total;step++){
+    if(Files.exists(stop)||System.currentTimeMillis()>deadline){result="HOLD_STOP_OR_DEADLINE";break;}
+    status("RUNNING","SINGLE_PHASE_MOTION");
+    Map<ResidualMonitor,Integer> before=new LinkedHashMap<>();
+    for(Monitor m:s.getMonitorManager().getObjects())if(m instanceof ResidualMonitor r)before.put(r,r.getAllYValues().length);
+    long clock=System.nanoTime();
+    s.getSimulationIterator().step(1);
+    double sec=(System.nanoTime()-clock)/1e9;solveSeconds+=sec;
+    double t=s.getSolution().getPhysicalTime();
+    done=step;
+    if(Math.abs(t-(start+step*dt))>1e-8)throw new IllegalStateException("Time step mismatch");
+    for(var entry:before.entrySet()){
+     ResidualMonitor r=entry.getKey();double[] y=r.getAllYValues();
+     int n=y.length-entry.getValue();
+     if(n<=0)throw new IllegalStateException("Missing inner iterations");
+     double first=y[y.length-n],last=y[y.length-1];
+     rr.write(t+","+r.getPresentationName()+","+r.isNormalized()+","+n+","+first+","+last+","+Math.abs(last)/Math.max(1e-300,Math.abs(first))+"\n");
+     if(step>total-25)peakFinal=Math.max(peakFinal,r.isNormalized()?Math.abs(last):Double.POSITIVE_INFINITY);
+    }
+    rr.flush();
+    double angle=t>=d("motion_start_delay_s",0)?measuredAngle(step):0,rate=Math.toRadians((angle-previousAngle)/(t-previousTime));
+    previousAngle=angle;previousTime=t;
+    double mt=v("mass"),bal=Math.abs((step>1?(3*mt-4*previousMass+beforeMass)/(2*dt):(mt-previousMass)/dt)+v("net"))/Math.abs(v("influx"));
+    beforeMass=previousMass;previousMass=mt;
+    double fx=v("Fx"),fz=v("Fz"),mh=v("Mh"),p=v("pmin"),pb=v("pbody"),cfl=v("CFL"),vol=v("volume"),face=v("face"),q=v("quality");
+    h.write(t+","+sec+","+targetAngle(t)+","+angle+","+rate+","+fz/qs+","+fx/qs+","+fx+","+fz+","+mh+","+mh*rate+","+p+","+pb+","+cfl+","+bal+","+vol+","+face+","+q+","+v("kmin")+","+v("omin")+","+v("nut")+","+(rampTime>0?u0+(speed-u0)*smoothValue(t/rampTime):speed)+"\n");
+    h.flush();
+    if(!(p>12339.214766776897&&pb>12339.214766776897&&cfl<=25&&Double.isFinite(bal)
+         &&(step<=5||bal<=1e-4)&&vol>0&&face>=.5&&q>0&&v("kmin")>1.0001e-10&&v("omin")>1.0001e-10
+         &&v("nut")<99999&&Double.isFinite(fx)&&Double.isFinite(fz)&&Double.isFinite(mh)&&Math.abs(angle-targetAngle(t))<=.08)){
+     result="HOLD_SINGLE_PHASE_SAFETY";break;
+    }
+   }
+  }
+  if(result.equals("PASS_DIAGNOSTIC_SMOKE")&&(!Double.isFinite(peakFinal)||peakFinal>.01))
+   result="HOLD_RESIDUAL_WINDOW";
+  sampleTip(0+100000);Files.copy(out.resolve("latest_vertices.csv"),out.resolve("vertices_final.csv"));
+  save("FINAL");
+  write("SOLVE_STATUS.json",Map.of("status",result,"steps",done,"time_s",s.getSolution().getPhysicalTime(),
+        "normalized_max_final25",peakFinal,"U_m_s",speed,"VOF",false,"training_approved",false));
+  status("STOPPED",result);
+ }
+
+
+
+
+

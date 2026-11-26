@@ -1,0 +1,522 @@
+{
+  "cells": 44442,
+  "min_SICN": 0.014550208139764561,
+  "nonpositive_cells": 0,
+  "min_area_m2": 7.745896173889818e-10,
+  "geometry": "original modified NACA66-012 sealed demonstrator",
+  "gap_m": 0,
+  "delta_deg": 0,
+  "hinge": [
+    0.952,
+    0.02128173276777
+  ],
+  "hinge_submergence_m": 2,
+  "foil_area_m2": 0.11578979531563005,
+  "buoyancy_N_per_m": 1135.8978920463308,
+  "true_2D": true,
+  "VOF": true,
+  "mesh_seconds": 1.2652923000005103,
+  "source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\SEALED0_A005\\geometry_and_mesh.msh",
+  "source_sha256": "9cffa9c8902d48fbb61c3996d9b1d5409ff543bf36a759bd0a8ed89d618ac133",
+  "status": "OFFLINE_MESH_MOTION_PASS",
+  "wave_test_PASS_required": true,
+  "night_approved": false,
+  "note": "Near-wall node redistribution. Geometry, connectivity and interface-corridor coordinates unchanged.",
+  "nodes": 41288,
+  "nodes_moved": 6990,
+  "wall_nodes_moved": 0,
+  "vof_corridor_nodes_moved": 0,
+  "redistribution_cutoff_m": 0.03,
+  "first_layer_design_m": [
+    2e-05,
+    0.00029
+  ],
+  "nose_retains_original": true,
+  "original_connectivity_preserved": true,
+  "first_layer_rows": 12,
+  "target_internal_growth": 1.12,
+  "kinematic_grid_check": [
+    {
+      "angle_deg": -2.0,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.9,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.8,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.7,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.6,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.5,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.4,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.2999999999999998,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.2,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.1,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -1.0,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.8999999999999999,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.7999999999999998,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.7,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.5999999999999999,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.5,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.3999999999999999,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.2999999999999998,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.19999999999999996,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": -0.09999999999999987,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.0,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.10000000000000009,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.20000000000000018,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.30000000000000027,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.40000000000000036,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.5,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.6000000000000001,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.7000000000000002,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.8000000000000003,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 0.9000000000000004,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.0,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.1,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.2000000000000002,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.3000000000000003,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.4000000000000004,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.5,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.6,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.7000000000000002,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.8000000000000003,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 1.9000000000000004,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    },
+    {
+      "angle_deg": 2.0,
+      "min_volume_m3": 1.5491792347779636e-11,
+      "min_corner_jacobian_m2": 7.727482335639163e-10,
+      "nonpositive_cells_or_corners": 0
+    }
+  ],
+  "solver_started": false,
+  "wall_geometry": {
+    "all": {
+      "faces": 716,
+      "centroid_y_um_p05_p50_p95": [
+        98.78460425550584,
+        135.0025415485793,
+        144.77032383987483
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        64.59269847592145,
+        88.2746711944682,
+        94.66157147184548
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        197.54323178312305,
+        269.9999778385758,
+        289.5484116508844
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.1199999070814095,
+        1.1199999834559407,
+        1.1200050346968844
+      ]
+    },
+    "LE": {
+      "faces": 336,
+      "centroid_y_um_p05_p50_p95": [
+        10.00180080586812,
+        85.1729196408141,
+        103.27091793380795
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.539918933102977,
+        55.69236986001652,
+        67.52618298876565
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.99999988771608,
+        170.29335894928883,
+        206.5116736088151
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.1199999016408775,
+        1.1211440919640856,
+        1.20000000000004
+      ]
+    },
+    "main suction": {
+      "faces": 150,
+      "centroid_y_um_p05_p50_p95": [
+        132.55810659607002,
+        135.00295141104144,
+        135.0054324305873
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        86.67631838411478,
+        88.27493919293447,
+        88.27656146746445
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        265.0973266436931,
+        269.9999684868108,
+        269.9999788267097
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.1199999169396495,
+        1.1199999795458493,
+        1.1199999834693797
+      ]
+    },
+    "main pressure": {
+      "faces": 121,
+      "centroid_y_um_p05_p50_p95": [
+        133.21069312242568,
+        135.00125608412745,
+        135.00342824194664
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        87.10302783994571,
+        88.27383066250101,
+        88.27525098033409
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        266.40794734823413,
+        269.9999867995919,
+        269.9999999104116
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.1199999503791034,
+        1.1199999912699914,
+        1.1199999999371197
+      ]
+    },
+    "hinge": {
+      "faces": 26,
+      "centroid_y_um_p05_p50_p95": [
+        134.99624330952503,
+        135.0031595442437,
+        135.4447778921654
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        88.27055293880245,
+        88.27507528585377,
+        88.56383810475377
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        269.99851602384376,
+        269.9999900567442,
+        270.8985001003386
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.119999952272635,
+        1.1199999867580483,
+        1.1200000704603426
+      ]
+    },
+    "flap suction": {
+      "faces": 28,
+      "centroid_y_um_p05_p50_p95": [
+        136.15961069950205,
+        143.736901393641,
+        144.99977190589846
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        89.03124879423297,
+        93.98584325517744,
+        94.81160162944185
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        272.30248097261136,
+        287.47526527575036,
+        289.9999961089714
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.1199994143312264,
+        1.1200000093994116,
+        1.1200012927148113
+      ]
+    },
+    "flap pressure": {
+      "faces": 27,
+      "centroid_y_um_p05_p50_p95": [
+        135.65623282991075,
+        143.71349243320157,
+        144.9997811796185
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        88.70210302101242,
+        93.97053674122525,
+        94.81160769328761
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        271.3087662219604,
+        287.42869712619137,
+        289.99999610533473
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.1199998901962096,
+        1.1200000002989154,
+        1.120005965391434
+      ]
+    },
+    "TE": {
+      "faces": 28,
+      "centroid_y_um_p05_p50_p95": [
+        99.99845197742631,
+        109.79259051553055,
+        130.004665208203
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        65.38640211515352,
+        71.7905360608327,
+        85.00668908423084
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        200.03845238972806,
+        219.57181962783662,
+        259.9646143900514
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.1199978000228494,
+        1.1200000742277831,
+        1.120017314994489
+      ]
+    }
+  },
+  "minimum_volume_m3": 1.5491792347779636e-11
+}

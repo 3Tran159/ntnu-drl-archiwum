@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-02T20:40:07.014347+01:00",
+  "attempts": [
+    {
+      "folder": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834",
+      "status": "steady_initialization_incomplete",
+      "additional_iterations": 1500,
+      "final_CL": 0.374903824577,
+      "final_CD": 0.00654632148785,
+      "max_relative_mass_last_300": 0.000126334311247,
+      "pressure_min_last_300_Pa": 21480.5764881,
+      "training_approved": false,
+      "interpretation": "Numerical initialization only, no accepted hydrodynamic result. Fields retained for separately gated URANS test."
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_init_20261102_202530",
+      "status": "steady_initialization_incomplete",
+      "additional_iterations": 390,
+      "final_CL": 0.374907291,
+      "final_CD": 0.00654298167565,
+      "max_relative_mass_last_300": 0.00016394865389,
+      "pressure_min_last_300_Pa": 21494.0643718,
+      "training_approved": false,
+      "interpretation": "Numerical initialization only, no accepted hydrodynamic result. Fields retained for separately gated URANS test."
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_init_20261102_202530\\steady_init_20261102_203046",
+      "status": "steady_initialization_incomplete",
+      "additional_iterations": 530,
+      "final_CL": 0.375030390761,
+      "final_CD": 0.00649136977536,
+      "max_relative_mass_last_300": 0.000153319161888,
+      "pressure_min_last_300_Pa": 21199.6588886,
+      "training_approved": false,
+      "conservation": {
+        "before": "0",
+        "after": "2",
+        "reference": "2606 User Guide GUID-5A48E78B-7FE7-4EA7-AD91-598925DD785D and GUID-ECBF5B9A-743B-458D-8FCA-861E65651EAB",
+        "mesh_changed": false
+      },
+      "interpretation": "Numerical initialization only, no accepted hydrodynamic result. Fields retained for separately gated URANS test."
+    }
+  ]
+}

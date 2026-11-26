@@ -1,0 +1,28 @@
+{
+  "status": "ready",
+  "case": "C01_W20L4_M10_calm_settle_r2",
+  "source_case": "C01_W20L4_M10_calm_settle_r2",
+  "time_s": 2.777,
+  "field_time_s": 2.777,
+  "generated_at": "2026-10-30T14:13:27.230772+01:00",
+  "title": "Wave and foil \u00b7 calculated side view",
+  "caption": "C01 calm test; wave height 0 m, no inlet wave was generated. Case stopped by physical guard at t = 2.777 s. Diagnostic field, not accepted. Latest exported calculated field at t = 2.777 s; actual foil geometry and water-fraction interface. Field time is recorded explicitly; inspect the current case status before interpreting it.",
+  "image_path": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\C01_W20L4_M10_calm_settle_r2_t2p777.png",
+  "image_png": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\C01_W20L4_M10_calm_settle_r2_t2p777.png",
+  "image_svg": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\C01_W20L4_M10_calm_settle_r2_t2p777.svg",
+  "provenance_path": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\C01_W20L4_M10_calm_settle_r2_t2p777_provenance.json",
+  "provenance_file": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\C01_W20L4_M10_calm_settle_r2_t2p777_provenance.json",
+  "live": false,
+  "source_file": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\local_balance_t2.777.csv",
+  "source_mtime_ns": 1793365326276811800,
+  "source_sha256": "ee7f34ec3f0345a172480202f687d9fa0011f656529be144fd74cb60146e1ef1",
+  "lineage": "Computed calm continuation from t = 0.587 s; no reinitialization",
+  "limitations": [
+    "Interpolated cell-centre contour, not VOF cell-face reconstruction.",
+    "Image field time can lag solver progress.",
+    "Cropped view does not show the 24 m bottom or boundary forcing/damping zones.",
+    "No propagation, reflection or force-accuracy conclusion from this image."
+  ],
+  "case_status": "physical_guard_failed",
+  "accepted": false
+}

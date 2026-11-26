@@ -1,0 +1,124 @@
+Starting local server: starserver.bat -power -cpubind off -np 8 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcU1BfQ19tZXNoX3JlYWR5LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 18216
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 00:12:14 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\SP_C_mesh_ready.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:80: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:94: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+for(Region r:regions){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(r);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(fields);tab.extract();tab.export(out.resolve(r.getPresentationName()+"_"+label+"_volume.csv").toString());s.getTableManager().removeObjects(tab);}
+                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:97: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(walls);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve(group+"_"+label+"_wall.csv").toString());s.getTableManager().removeObjects(tab);}
+                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:123: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+String before=String.valueOf(conservation.getOversetConservationOption().getSelected());
+                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:125: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+String after=String.valueOf(conservation.getOversetConservationOption().getSelected());
+                                                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:130: warning: [deprecation] getTreatErrorAsWarning() in star.common.IndirectRegionInterface has been deprecated
+if(in.getTreatErrorAsWarning()||!in.getConditions().get(OversetHoleCuttingOptions.class).getBoolean("ZeroDonorCheckOption"))throw new IllegalStateException("Strict Overset guards required");
+     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:136: warning: [deprecation] star.common.MonitorTriggerOption in star.common has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:136: warning: [deprecation] getTriggerOption() in star.base.report.Monitor has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:136: warning: [deprecation] ITERATION in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                                                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:136: warning: [deprecation] setUpdateMode(int) in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:136: warning: [deprecation] setUpdateFrequency(int) in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001005\FreshC0NoFluxInit.java:179: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+for(String group:List.of("fixed","flap")){List<Boundary> parts=group.equals("fixed")?fixed:flap;if(!parts.isEmpty()){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(parts);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve("wall_"+group+".csv").toString());}}
+                                                                                                                                                             ^
+
+Loading/configuring connectivity (old|new partitions: 2|8)
+  Background (index 3): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 4): 56722 cells, 150363 faces, 189362 verts.
+Configuring finished
+HYDRO_STAGE Temporarily stationary at existing pose for steady initialization; source unchanged
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Re-partitioning
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 410 cells in FlapOverset
+FULL_OVERSET_AUDIT time=0.0 total=361532 active=252161 inactive=106812 acceptors=2559 errors=0 difficult_interpolation=0 min_volume=9.026037388590407E-12 min_quality=0.05077428743976946 max_acceptor_size_ratio=9.320108589417428 methods={0=2559}
+
+HYDRO_STAGE Numerical steady initialization/continuation; CSV iterations are additional iterations; preserve source and mesh
+Reversed flow on  67 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+             2   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   3.947658e-02   1.000000e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  27 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             3   3.655217e-01   1.000000e+00   1.000000e+00   8.739325e-01   4.929040e-02   6.435096e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  94 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             4   3.610993e-01   1.000000e+00   1.941506e-01   1.000000e+00   5.182530e-02   6.590674e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  149 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             5   4.445850e-01   8.737619e-01   1.722667e-01   8.346230e-01   5.187071e-02   4.170239e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  176 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             6   2.830368e-01   3.692224e-01   1.697599e-01   3.915093e-01   5.047840e-02   5.570290e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  224 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             7   1.209154e-01   5.890656e-01   1.227662e-01   5.743344e-01   4.843155e-02   5.578791e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  274 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             8   4.422630e-01   4.830267e-01   3.156664e-02   4.742116e-01   4.615166e-02   5.189133e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  273 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             9   3.238914e-01   6.832372e-01   2.571299e-01   6.450702e-01   4.397629e-02   1.636313e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  243 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            10   1.949569e-01   3.096997e-01   1.939782e-01   3.007618e-01   4.140084e-02   2.028848e-01  -7.067658e+02  -3.327208e+02  -1.259586e+01  -9.217445e-02  -1.833089e-01      -1.877127e+07     -7.044609e+06           -1.876937e+07     -1.876937e+07    -7.043196e+06        9.026037e-12   5.077429e-02         1.000000e+00   5.206237e+00   2.541979e+02                 1.000000e+03 
+FULL_OVERSET_AUDIT time=0.0 total=361532 active=252161 inactive=106812 acceptors=2559 errors=0 difficult_interpolation=0 min_volume=9.026037388590407E-12 min_quality=0.05077428743976946 max_acceptor_size_ratio=9.320108589417428 methods={0=2559}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_fresh_noflux_20261103_001005\initialization_error.sim... complete (411.15MB in 0.35194s).
+java.lang.RuntimeException: java.lang.IllegalStateException: Initialization diverged
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

@@ -1,0 +1,26 @@
+{
+  "status": "verified_ready_pending_temporal_review",
+  "cells": 214908,
+  "design": {
+    "id": "M09",
+    "family": "low_yplus",
+    "reference": "M08",
+    "linear_refinement": 1.4,
+    "outer_base_m": 0.25,
+    "first_layer_um": 1.530612244897959,
+    "layers": 48,
+    "total_prism_m": 0.01546,
+    "surface_and_outer_match": "M08 surface, near-foil and free-surface controls; remote outer base changed",
+    "prism_match": "M07/M08",
+    "protected_middle_size_m": 0.14285714285714288,
+    "protected_middle_xz_m": [
+      -11.9,
+      30.94,
+      -3,
+      3.2
+    ],
+    "purpose": "Coarsen remote domain only; protect middle region and preserve M08 foil/prisms/near-foil/FS targets."
+  },
+  "updated_at": "2026-10-29T20:46:17.253696+01:00",
+  "gpu_launched": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "documented_capability_not_demonstrated_for_current_pipeline",
+  "source": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\doc\\en\\online\\STARCCMP\\GUID-1786BD70-103D-4C6D-8601-23733B3CFBD1.html",
+  "finding": "STAR 2602 supports solution interpolation on remeshing or mesh replacement. Higher-order stencil is recommended for transient analysis. Conservative correction is available only for supported model combinations.",
+  "limitation": "Our workflow rebuilds/imports an exact one-cell-span CGNS region. Automatic interpolation is not yet established for that replacement. VOF and SST compatibility and conservation correction must be checked in the actual continuum; do not assume support.",
+  "experiment": "On a new attempt copied from an accepted checkpoint, retain region identity and replace the mesh using supported mesh-replacement/mapping. Verify phase bounds and total water volume, finite pressure/velocity/turbulence, surface continuity and force transients. Re-settle independently. A matched cold-start check is required before treating mapping as a validated time saver.",
+  "action": "Do not change the running M08 or initialize M09 from a mapped field before this audit."
+}

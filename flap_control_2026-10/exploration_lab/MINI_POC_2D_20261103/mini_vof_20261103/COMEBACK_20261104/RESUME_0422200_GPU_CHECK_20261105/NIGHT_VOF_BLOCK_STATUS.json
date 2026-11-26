@@ -1,0 +1,49 @@
+{
+  "operation": "HOLD",
+  "prior_status": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\RESUME_0422200_GPU_CHECK_20261105\\NIGHT_SEED_DATASET_STATUS.json",
+  "source_sha256": "d3570bddccc8f6a26c1f64b4bf13ad5f472afcc14722221b13bc8ac27ce36ca3",
+  "source_t_s": 1.4779999999998699,
+  "calm_recovery_result": {
+    "status": "PASS_CALM_FORCE_STABILIZATION",
+    "samples": 140,
+    "startup_s": 114.3476348999975,
+    "solver_step_median_s": 2.0076367,
+    "solver_step_mean_s": 2.27015638,
+    "end_to_end_s": 569.6047999000002,
+    "dt_s": 0.0002,
+    "checkpoint_sha256_input": "d3570bddccc8f6a26c1f64b4bf13ad5f472afcc14722221b13bc8ac27ce36ca3",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261106_045259\\FINAL.sim",
+    "checkpoint_sha256": "77e8e26814572f2c2f2d398b8c4cd4b1cb05039f8555928567c8200327fc9bb2",
+    "state": {
+      "status": "PASS_CALM_FORCE_STABILIZATION",
+      "foil": true,
+      "steps": 140,
+      "time_s": 1.5059999999998668,
+      "solver_seconds": 317.1721102000001,
+      "residual_pass": true,
+      "reason": "",
+      "training_approved": false,
+      "amplitude_target": 0.0
+    },
+    "transport_ok": true,
+    "training_approved": false,
+    "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\STABILIZE_FIRST\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261106_045259",
+    "stabilization": {
+      "CL_drift_fraction": 0.0010787504266728328,
+      "stable_windows": 3,
+      "time_s": 1.5059999999998668,
+      "CD": 0.004384768180902918,
+      "CD_range_fraction": 0.004028267617250846,
+      "CD_drift_fraction": 0.004183386047773582,
+      "CL": 0.32758007077172646,
+      "CL_range_fraction": 0.001034057711742234
+    }
+  },
+  "residual_monitor_strategy": "Reuse exact sample counts; recheck every 25 steps",
+  "residual_cached_macro_sha256": "2676e454cd54e0ce710643c03a9a59b0fbdc9a0fad54fca31d076901c2de43d3",
+  "wave_origin_s": 1.5059999999998668,
+  "planned_steps": 1446,
+  "source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261106_045259\\FINAL.sim",
+  "calm_screen_winner": "DT05_I12",
+  "reason": "Direct STAR batch failed or left an owned process: exit 1"
+}

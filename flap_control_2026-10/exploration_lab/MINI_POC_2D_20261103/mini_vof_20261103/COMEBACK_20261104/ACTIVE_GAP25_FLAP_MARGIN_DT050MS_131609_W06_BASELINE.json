@@ -1,0 +1,36 @@
+{
+  "w06_run": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W06_20261104_100235_3b75bb",
+  "last_step": 6764,
+  "t_s": 10.325600000004092,
+  "median_s": 1.7270923500000208,
+  "mean_s": 1.7215369883333247,
+  "max_s": 1.8277614999988145,
+  "window": 60,
+  "w06_cpu_ram": {
+    "free_GiB": 33.494083404541016,
+    "processes": [
+      {
+        "pid": 12224,
+        "cpu_s": 3782.4375,
+        "rss_MiB": 1733.94921875,
+        "mask": 12598275,
+        "birth": 134382566983232601,
+        "avg_cpu_cores_10s": 0.28803885422581416
+      },
+      {
+        "pid": 18156,
+        "cpu_s": 10612.140625,
+        "rss_MiB": 2502.60546875,
+        "mask": 12598275,
+        "birth": 134382568007912632,
+        "avg_cpu_cores_10s": 0.9335413121575106
+      }
+    ]
+  },
+  "declared_W06_license": "Power on Demand (1 rank, GPU); W06 active",
+  "mini_cpu_logical": 4,
+  "mini_affinity_mask": 16,
+  "mini_gpu": false,
+  "threshold_review": 0.1,
+  "threshold_stop": 0.15
+}

@@ -1,0 +1,139 @@
+{
+  "updated_at": "2026-11-02T18:38:58.510783+01:00",
+  "training_approved": false,
+  "runs": [
+    {
+      "case": "SP_A_original_singlephase",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\steady_init_20261102_180011",
+      "kind": "steady_initialization",
+      "status": {
+        "status": "steady_force_windows_passed",
+        "iterations": 730,
+        "steady_initialization_only": true,
+        "converged_by_force_and_mass_windows": true,
+        "max_pressure_identity_error_Pa": 8.731149137020111e-11,
+        "CL_window_relative_tolerance": 0.005,
+        "CD_window_relative_tolerance": 0.01,
+        "mass_imbalance_tolerance": 0.0001,
+        "training_approved": false
+      }
+    },
+    {
+      "case": "SP_A_original_singlephase",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\steady_init_20261102_182100",
+      "kind": "steady_initialization",
+      "status": {
+        "status": "steady_force_windows_passed",
+        "iterations": 820,
+        "steady_initialization_only": true,
+        "converged_by_force_and_mass_windows": true,
+        "max_pressure_identity_error_Pa": 8.731149137020111e-11,
+        "CL_window_relative_tolerance": 0.005,
+        "CD_window_relative_tolerance": 0.01,
+        "mass_imbalance_tolerance": 0.0001,
+        "training_approved": false
+      }
+    },
+    {
+      "case": "SP_A_original_singlephase",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\smoke_20261102_173812",
+      "kind": "transient_smoke",
+      "status": {
+        "status": "error",
+        "steps": 0,
+        "training_approved": false
+      },
+      "metadata": {}
+    },
+    {
+      "case": "SP_A_original_singlephase",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\smoke_20261102_174750",
+      "kind": "transient_smoke",
+      "status": {
+        "status": "pressure_screen_failed",
+        "steps": 1,
+        "start_time_s": 0.0,
+        "saved_time_s": 0.0004,
+        "pressure_violations": 1,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "metadata": {
+        "variant": "SP_A",
+        "start_time_s": 0.0,
+        "dt_s": 0.0004,
+        "cells": 309441,
+        "solution_initialized_here": true,
+        "original_mesh_preserved": true,
+        "pressure_identity_max_error_Pa": 5.820766091346741e-11,
+        "static_angle_deg": 0,
+        "training_approved": false,
+        "purpose": "bounded 20-step solver and pressure-monitor smoke; not convergence validation"
+      }
+    },
+    {
+      "case": "SP_A_original_singlephase",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\steady_init_20261102_180011\\smoke_20261102_180908",
+      "kind": "transient_smoke",
+      "status": {
+        "status": "pressure_screen_failed",
+        "steps": 2,
+        "start_time_s": 0.0,
+        "saved_time_s": 0.0008,
+        "pressure_violations": 1,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "metadata": {
+        "variant": "SP_A",
+        "start_time_s": 0.0,
+        "dt_s": 0.0004,
+        "cells": 309441,
+        "solution_initialized_here": true,
+        "original_mesh_preserved": true,
+        "pressure_identity_max_error_Pa": 8.731149137020111e-11,
+        "static_angle_deg": 0,
+        "training_approved": false,
+        "purpose": "bounded 20-step solver and pressure-monitor smoke; not convergence validation"
+      }
+    },
+    {
+      "case": "SP_A_original_singlephase",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\steady_init_20261102_182100\\smoke_20261102_183017",
+      "kind": "transient_smoke",
+      "status": {
+        "status": "smoke_passed_not_converged",
+        "steps": 20,
+        "start_time_s": 0.0,
+        "saved_time_s": 0.008000000000000002,
+        "pressure_violations": 0,
+        "hydrodynamic_convergence_verified": false,
+        "training_approved": false
+      },
+      "metadata": {
+        "variant": "SP_A",
+        "start_time_s": 0.0,
+        "dt_s": 0.0004,
+        "cells": 309441,
+        "solution_initialized_here": true,
+        "original_mesh_preserved": true,
+        "pressure_identity_max_error_Pa": 8.731149137020111e-11,
+        "static_angle_deg": 0,
+        "training_approved": false,
+        "purpose": "bounded 20-step solver and pressure-monitor smoke; not convergence validation"
+      }
+    }
+  ],
+  "comparison": [
+    {
+      "case": "SP_A_original_singlephase",
+      "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\steady_init_20261102_182100\\smoke_20261102_183017",
+      "status": "smoke_passed_not_converged",
+      "cells": 309441,
+      "CL_hydro": 0.3388473492647,
+      "CD": 0.006783801228952,
+      "pmin": 28428.1579911,
+      "training_approved": false
+    }
+  ]
+}

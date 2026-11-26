@@ -1,0 +1,53 @@
+{
+  "verified_at": "2026-10-30T12:20:59.737629+01:00",
+  "status": "GPU_physical_progress_confirmed",
+  "case": "W01a_W20L4_M10_inlet_wave_r1",
+  "controller_pid": 11916,
+  "launcher_pid": 33412,
+  "latest_history": {
+    "time_s": 0.6440000000000005,
+    "step": 57.0,
+    "wall_s": 63.4941917,
+    "max_speed_m_s": 22.16080737253667,
+    "max_CFL": 44.05518578567471,
+    "interface_CFL": 2.2307457025152546,
+    "alpha_min": 0.0,
+    "alpha_max": 1.0,
+    "mass_kg": 38408.107623853146,
+    "water_volume_m3": 38.396586306330725,
+    "net_outward_mass_kg_s": 4.453707885840231,
+    "inward_mass_kg_s": 8642.268874628673,
+    "vof_substeps": 1.0,
+    "CD": 0.008352307272453579,
+    "CL_total": 0.2939317273553854,
+    "Fx_slice_N": 32.203155919672014,
+    "Fz_slice_N": 1133.283167991424,
+    "pressure_drag_N": 11.4029645507805,
+    "viscous_drag_N": 20.80019136889151
+  },
+  "wave_activation": {
+    "case": "W01a_W20L4_M10_inlet_wave_r1",
+    "activation_time_s": 0.587,
+    "ramp_duration_s": 1.6945346413782258,
+    "ramp_end_time_s": 2.281534641378226,
+    "time_s": 0.6440000000000005,
+    "height_m": 0.0013956123347307482,
+    "target_height_m": 0.5,
+    "wave_period_s": 0.8478873385044985,
+    "planning_full_height_period_s": 0.8472673206891129,
+    "stage": "inlet_wave_ramp",
+    "first_front": false,
+    "global_wave_initialization": false,
+    "force_settling_required": false,
+    "analysis_origin_s": null,
+    "cycle_screen": "Pending measured wave arrival and full-amplitude cycles; no calm/ramp samples admitted"
+  },
+  "checks": {
+    "time_advanced": true,
+    "alpha_bounded": true,
+    "speed_below_guard": true,
+    "initial_force_fingerprint_exact": true,
+    "inlet_only_generation_and_outlet_only_damping": true
+  },
+  "limitations": "Early ramp only; no full-height, propagated-wave or force-convergence claim."
+}

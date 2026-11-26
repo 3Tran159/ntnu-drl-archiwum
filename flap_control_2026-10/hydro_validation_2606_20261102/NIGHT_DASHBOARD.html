@@ -1,0 +1,181 @@
+<html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="20"><style>body{font:17px system-ui;margin:25px;background:#142332;color:white}pre{white-space:pre-wrap}a{color:#a9dcff}</style><h1>STOPPED — benchmark MPI / dt</h1><p>HOLD: final8MPI_E test completed12steps; CFD physical safetyPASS, W04 slowdown19.93%&gt;15% during solver. No more tests; production t1.212 preserved, not resumed.</p><p>Jedna kopia CFD naraz; W04 bez zmian. Maks20MPI wyłącznie w autoryzowanym zakresie.</p><p><a href="cases/RECOVERED_PERF_20261103/BENCHMARK_REPORT.html">Tabela benchmarku</a></p><pre>{
+  &quot;active&quot;: null,
+  &quot;metrics&quot;: {
+    &quot;physical_time_s&quot;: 1.2360000000000009,
+    &quot;timestep&quot;: 618,
+    &quot;iteration&quot;: 26010,
+    &quot;log_updated_at&quot;: &quot;2026-11-03T15:00:41.432258+01:00&quot;,
+    &quot;seconds_without_log_write&quot;: 6,
+    &quot;saving_or_exporting&quot;: false,
+    &quot;native_exit_code&quot;: 0,
+    &quot;U_m_s&quot;: 17.094122680825645,
+    &quot;stage&quot;: 0.0,
+    &quot;Re&quot;: 20342005.99018252,
+    &quot;qS_N&quot;: 3477.2874597027017,
+    &quot;flap_angle_deg&quot;: 0.0,
+    &quot;flap_angular_velocity_deg_s&quot;: 0.0,
+    &quot;center_error_m&quot;: 0.0,
+    &quot;min_volume_m3&quot;: 9.128750119087941e-12,
+    &quot;min_cell_quality&quot;: 0.06104818624018239,
+    &quot;min_face_validity&quot;: 1.0,
+    &quot;time_s&quot;: 1.2360000000000009,
+    &quot;CL_hydro&quot;: 0.2911296635570924,
+    &quot;CD&quot;: 0.010473632286832462,
+    &quot;Mh_Nm&quot;: -11.155150812388303,
+    &quot;p_absolute_min_Pa&quot;: 30475.263269513773,
+    &quot;mass_imbalance_relative&quot;: 2.3612661661661414e-08,
+    &quot;overset_error_cells&quot;: 0.0,
+    &quot;omega_floor_cells&quot;: 0.0,
+    &quot;k_floor_cells&quot;: 0.0,
+    &quot;max_turbulent_viscosity_ratio&quot;: 1186.5445337709025,
+    &quot;history_rows&quot;: 12,
+    &quot;last_output_sim&quot;: &quot;F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_145256\\checkpoint.sim&quot;,
+    &quot;checkpoint_integrity&quot;: {
+      &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_145256\\checkpoint.sim&quot;,
+      &quot;bytes&quot;: 1527416645,
+      &quot;sha256&quot;: &quot;c400f4421af766daf87c20feaf318d8f7ce184d922ae7c2221859d8f50f4a6f4&quot;,
+      &quot;saved_time_s&quot;: 1.2360000000000009,
+      &quot;native_save_complete&quot;: true,
+      &quot;hash_at&quot;: &quot;2026-11-03T15:00:48.502515+01:00&quot;,
+      &quot;native_reopen_verified&quot;: false
+    },
+    &quot;owned_active_pids&quot;: [],
+    &quot;macro_status&quot;: {
+      &quot;status&quot;: &quot;recovered_perf_complete&quot;,
+      &quot;steps&quot;: 12,
+      &quot;saved_time_s&quot;: 1.2360000000000009,
+      &quot;iteration&quot;: 26010,
+      &quot;stage&quot;: 0,
+      &quot;scientific_approved&quot;: false,
+      &quot;numerical_points_complete&quot;: false,
+      &quot;physical_safety_pass&quot;: true,
+      &quot;requires_scientific_review&quot;: true,
+      &quot;training_approved&quot;: false
+    },
+    &quot;operation&quot;: &quot;STOPPED&quot;
+  },
+  &quot;comparison&quot;: [
+    {
+      &quot;job&quot;: &quot;RECOVERED_PERF_20261103_MPI8_DT2_LAUNCH3&quot;,
+      &quot;output&quot;: &quot;F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_143431&quot;,
+      &quot;MPI&quot;: 8,
+      &quot;dt_s&quot;: 0.002,
+      &quot;inner&quot;: 50,
+      &quot;steps&quot;: 5,
+      &quot;measured_steps&quot;: 2,
+      &quot;solver_mean_s&quot;: 21.773491,
+      &quot;mean_step_s&quot;: 25.3565,
+      &quot;median_step_s&quot;: 25.3565,
+      &quot;max_step_s&quot;: 25.545,
+      &quot;seconds_per_physical_second&quot;: 12678.25,
+      &quot;solver_seconds_per_physical_second&quot;: 10886.745499999999,
+      &quot;communication_delta_mean_s&quot;: 3.638345625029615,
+      &quot;communication_delta_nonnegative&quot;: true,
+      &quot;native_cpu_mean_s&quot;: 173.84800000000007,
+      &quot;physical_pass&quot;: false,
+      &quot;residual_pass&quot;: false,
+      &quot;max_omega_ratio&quot;: 0.023447057004823076,
+      &quot;last_omega_ratio&quot;: 0.023447057004823076,
+      &quot;max_mass_relative&quot;: 2.3588332166854998e-08,
+      &quot;pabs_min_Pa&quot;: 30333.38477563538,
+      &quot;pmin_location&quot;: {
+        &quot;zone&quot;: &quot;near&quot;,
+        &quot;x_m&quot;: 0.7173270344254031,
+        &quot;y_m&quot;: 0.02,
+        &quot;z_m&quot;: 0.0953565438012048
+      },
+      &quot;cfl_max&quot;: 1313.9036480204984,
+      &quot;cfl_volume_mean&quot;: 0.2007501260295952,
+      &quot;matched_times&quot;: 0,
+      &quot;differences&quot;: {},
+      &quot;MPI_equivalent&quot;: true,
+      &quot;resource_pass&quot;: false,
+      &quot;diagnostic_CPU_eligible&quot;: false,
+      &quot;timestep_accepted&quot;: false,
+      &quot;W04_median_step_s&quot;: 1.9868730999996842,
+      &quot;W04_slowdown_fraction&quot;: 0.2147067773748006,
+      &quot;W04_affinity_preserved&quot;: true,
+      &quot;own_affinity_verified&quot;: true,
+      &quot;hardware&quot;: {
+        &quot;P&quot;: {
+          &quot;mean_utilization_percent&quot;: 56.34722222222222,
+          &quot;mean_frequency_MHz&quot;: 3092.0694444444443,
+          &quot;limit_flags&quot;: [
+            0
+          ]
+        },
+        &quot;E&quot;: {
+          &quot;mean_utilization_percent&quot;: 14.243055555555555,
+          &quot;mean_frequency_MHz&quot;: 3301.8680555555557,
+          &quot;limit_flags&quot;: [
+            0
+          ]
+        }
+      },
+      &quot;peak_RAM_owned_GiB&quot;: 4.677967071533203,
+      &quot;validation_data_eligible&quot;: false,
+      &quot;verdict&quot;: &quot;FAIL_PHYSICAL_OR_RESOURCE&quot;
+    },
+    {
+      &quot;job&quot;: &quot;RECOVERED_PERF_20261103_MPI8_DT2_EONLY&quot;,
+      &quot;output&quot;: &quot;F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_144631&quot;,
+      &quot;MPI&quot;: 8,
+      &quot;dt_s&quot;: 0.002,
+      &quot;inner&quot;: 50,
+      &quot;steps&quot;: 5,
+      &quot;measured_steps&quot;: 2,
+      &quot;solver_mean_s&quot;: 24.31344985,
+      &quot;mean_step_s&quot;: 27.561,
+      &quot;median_step_s&quot;: 27.561,
+      &quot;max_step_s&quot;: 27.866,
+      &quot;seconds_per_physical_second&quot;: 13780.5,
+      &quot;solver_seconds_per_physical_second&quot;: 12156.724925,
+      &quot;communication_delta_mean_s&quot;: 2.6924241501060333,
+      &quot;communication_delta_nonnegative&quot;: true,
+      &quot;native_cpu_mean_s&quot;: 194.29800000000006,
+      &quot;physical_pass&quot;: false,
+      &quot;residual_pass&quot;: false,
+      &quot;max_omega_ratio&quot;: 0.023447057004823076,
+      &quot;last_omega_ratio&quot;: 0.023447057004823076,
+      &quot;max_mass_relative&quot;: 2.3588332166854998e-08,
+      &quot;pabs_min_Pa&quot;: 30333.38477563538,
+      &quot;pmin_location&quot;: {
+        &quot;zone&quot;: &quot;near&quot;,
+        &quot;x_m&quot;: 0.7173270344254031,
+        &quot;y_m&quot;: 0.02,
+        &quot;z_m&quot;: 0.0953565438012048
+      },
+      &quot;cfl_max&quot;: 1313.9036480204984,
+      &quot;cfl_volume_mean&quot;: 0.2007501260295952,
+      &quot;matched_times&quot;: 0,
+      &quot;differences&quot;: {},
+      &quot;MPI_equivalent&quot;: true,
+      &quot;resource_pass&quot;: false,
+      &quot;diagnostic_CPU_eligible&quot;: false,
+      &quot;timestep_accepted&quot;: false,
+      &quot;W04_median_step_s&quot;: 1.9694973750001736,
+      &quot;W04_slowdown_fraction&quot;: 0.20408384885525432,
+      &quot;W04_affinity_preserved&quot;: true,
+      &quot;own_affinity_verified&quot;: true,
+      &quot;hardware&quot;: {
+        &quot;P&quot;: {
+          &quot;mean_utilization_percent&quot;: 34.7875,
+          &quot;mean_frequency_MHz&quot;: 3308.9875,
+          &quot;limit_flags&quot;: [
+            0
+          ]
+        },
+        &quot;E&quot;: {
+          &quot;mean_utilization_percent&quot;: 42.23125,
+          &quot;mean_frequency_MHz&quot;: 3141.2875,
+          &quot;limit_flags&quot;: [
+            0
+          ]
+        }
+      },
+      &quot;peak_RAM_owned_GiB&quot;: 4.4474639892578125,
+      &quot;validation_data_eligible&quot;: false,
+      &quot;verdict&quot;: &quot;FAIL_PHYSICAL_OR_RESOURCE&quot;
+    }
+  ]
+}</pre></html>

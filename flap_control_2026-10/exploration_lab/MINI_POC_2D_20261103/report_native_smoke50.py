@@ -1,0 +1,21 @@
+from pathlib import Path
+import csv,json,statistics,hashlib,datetime,math
+R=Path(__file__).resolve().parent;D=R/'mini_vof_20261103';A=D/'Q2D_NATIVE_A005_SMOKE50_FACEFIX';B=D/'Q2D_NATIVE_A005_REMAINING49'
+h=list(csv.DictReader((A/'history.csv').open()))+list(csv.DictReader((B/'history.csv').open()));assert len(h)==50,len(h);assert [int(x['step']) for x in h]==list(range(1,51));assert all(abs(float(x['time_s'])-int(x['step'])*.001)<1e-10 for x in h)
+ss=[float(x['solver_s']) for x in h[5:]];allss=[float(x['solver_s']) for x in h];T=10/(18+math.sqrt(9.81*10/(2*math.pi)));q=json.loads((B/'QUALITY_READBACK.json').read_text());res=[]
+for p in B.glob('residual_*.csv'):
+ rows=list(csv.reader(p.open()));ends=[]
+ for row in rows[1:]:
+  try:
+   it=float(row[0]);v=float(row[-1])
+   if int(round(it))%20==0 and it>0:ends.append(v)
+  except ValueError:pass
+ if ends:res.append(dict(monitor=p.stem,final25_step_ends_count=min(25,len(ends)),final25_step_ends_max=max(abs(x) for x in ends[-25:]),limit=.01,pass_window=len(ends)>=25 and max(abs(x) for x in ends[-25:])<=.01))
+r=dict(at=datetime.datetime.now().astimezone().isoformat(),case='NATIVE_Q2D_EMPTY_A005_SMOKE50',solver_state='STOPPED',operation='REVIEW',cells=41280,span_layers=1,span_m=.02,true_2D=False,quasi_2D=True,native_FirstOrderWave=True,amplitude_m=.05,lambda_m=10,U_m_s=18,dt_s=.001,MPI=1,CPU_logical=4,CPU_efficiency_class=0,GPU=False,inner_iterations=20,physical_steps=50,physical_time_s=float(h[-1]['time_s']),solver_s_step_mean_after5=statistics.mean(ss),solver_s_step_median_after5=statistics.median(ss),solver_s_step_max_after5=max(ss),solver_s_step_mean_all=statistics.mean(allss),solver_s_total=sum(allss),expected_encounter_period_s=T,estimated_solver_s_per_cycle=statistics.mean(ss)*T/.001,performance_below_5_s_step=statistics.mean(ss)<=5,quality=q,residual_window=res,full_residual_window_pass=bool(res) and all(x['pass_window'] for x in res),night_approved=False,training_approved=False,foil_present=False,forcing_damping_zones_active=False,scope='Exactly 50 physical steps, saved 1+49 with native field-equality check; no reset and no additional CFD stages')
+for key in ['pABSmin_Pa','interface_CFL','max_CFL','alpha_min','alpha_max','mass_BDF2_relative','k_min','omega_min','turbulent_viscosity_ratio_max','velocity_max']:
+ v=[float(x[key]) for x in h];r[key]={'min':min(v),'max':max(v)}
+r['physical_guard_pass']=all(float(x['pABSmin_Pa'])>12339.214766776897 and float(x['interface_CFL'])<=.5 and float(x['max_CFL'])<=25 and float(x['alpha_min'])>=-1e-5 and float(x['alpha_max'])<=1.00001 and float(x['k_min'])>1.0001e-10 and float(x['omega_min'])>1.0001e-10 and float(x['turbulent_viscosity_ratio_max'])<99999 and float(x['velocity_max'])<=180 for x in h) and all(float(x['mass_BDF2_relative'])<=1e-4 for x in h[6:]) and q['native_3D_cell_quality']>0 and q['volume']>0 and q['face_validity']>=.5
+r['W04']={'status':'Independent run ended at20:16 before physical native pilot','completion_file':r'E:\ntnu_mesh_optimization_20261030\nwar_automation_20261102\runs\W04_20261103_182412_f27930\completed.json','concurrent_performance_comparison':'NOT_MEASURABLE_NO_W04_SOLVER_DURING_TEST','W04_modified':False,'before_review':json.loads((D/'W04_RESOURCE_REVIEW.json').read_text())}
+r['limitations']=['.05s is only .11 encounter cycle; frequency, reflection and periodic response are not validated','No foil: measured cost is empty-domain cost, not a force-history benchmark','Absorption/forcing zones not active in this bounded smoke; region length specification identified for future configuration','No active W04 during physical test: do not claim0% impact','Real2.5mm-gap and moving flap remain separate pending stages']
+r['checkpoint_manifest']=[dict(path=str(p),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in B.glob('*.sim')]
+r['decision_architecture']='GO_CONDITIONAL_NATIVE_Q2D' if r['performance_below_5_s_step'] and r['physical_guard_pass'] else 'HOLD';r['decision_scientific']='SMOKE_ONLY_NOT_WAVE_VALIDATED';(D/'SMOKE50_REPORT.json').write_text(json.dumps(r,indent=2,ensure_ascii=False));(D/'SMOKE50_HISTORY.csv').write_text(','.join(h[0].keys())+'\n'+'\n'.join(','.join(row[k] for k in h[0]) for row in h)+'\n');print(json.dumps(r,indent=2,ensure_ascii=False))

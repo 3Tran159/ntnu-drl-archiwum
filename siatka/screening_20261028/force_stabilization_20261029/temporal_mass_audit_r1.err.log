@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\audit_temporal_mass_copies_r1.py", line 25, in <module>
+    if exit_status['returncode']!=0 or not result.exists():raise RuntimeError(name+': audit failed; inspect redacted log')
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: M04_start: audit failed; inspect redacted log

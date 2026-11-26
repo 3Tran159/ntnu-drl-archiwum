@@ -1,0 +1,14 @@
+{
+  "id": "M08",
+  "family": "low_yplus",
+  "reference": "M06",
+  "linear_refinement": 1.4,
+  "first_layer_um": 1.530612244897959,
+  "layers": 48,
+  "purpose": "Controlled wall-normal refinement: M06 surface and outer sizes with M07 first height and layer count. Separate the observed viscous drag change from tangential/bulk refinement.",
+  "surface_and_outer_match": "M06",
+  "prism_match": "M07",
+  "total_prism_m": 0.01546,
+  "geometry": "Preserve existing foil and domain; exact single-cell span extrusion",
+  "next_gate": "Independent validity audit, then identical dt/inner/time-settling screen. No wave admission."
+}

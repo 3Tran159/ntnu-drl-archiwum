@@ -1,0 +1,99 @@
+time=0.6644000000000005 initialized_flag=false
+solver=Partitioning class=star.common.PartitioningSolver
+solver=Segregated Flow class=star.segregatedflow.SegregatedFlowSolver frozen=false
+solver=K-Omega Turbulence class=star.kwturb.KwTurbSolver frozen=false
+solver=K-Omega Turbulent Viscosity class=star.kwturb.KwTurbViscositySolver frozen=false
+solver=Wall Distance class=star.walldistance.WallDistanceSolver
+solver=Load Balancing class=star.solvermeshing.OversetLoadBalancingSolver
+solver=Implicit Unsteady class=star.common.ImplicitUnsteadySolver
+solver=Rigid Body Motion class=star.motion.RigidMotionSolver
+inner_iterations=40 used=true
+dt=0.002 time_discretization=1
+region=Background motion=Stationary
+boundary=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.span_source type=Symmetry Plane
+  option=PrismLayerShrinkageBehaviour selected=0
+boundary=Background exact quasi2D fluid 2.Hydro_Domain.span_source type=Symmetry Plane
+  option=PrismLayerShrinkageBehaviour selected=0
+boundary=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin type=Wall
+  option=WallShearStressOption selected=0
+  option=DynamicOversetBehaviour selected=0
+  option=PrismLayerShrinkageBehaviour selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc type=Wall
+  option=WallShearStressOption selected=0
+  option=DynamicOversetBehaviour selected=0
+  option=PrismLayerShrinkageBehaviour selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top type=Pressure Outlet
+  option=PressureOutletBoundaryOption selected=0
+  option=PrismLayerShrinkageBehaviour selected=0
+  option=ReferenceFrameOption selected=0
+  option=FlowBoundaryDiffusionOption selected=1
+  option=KwTurbSpecOption selected=2
+boundary=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.inlet type=Velocity Inlet
+  option=InletVelocityOption selected=0
+  option=ReferenceFrameOption selected=0
+  option=FlowBoundaryDiffusionOption selected=1
+  option=PrismLayerShrinkageBehaviour selected=0
+  option=KwTurbSpecOption selected=2
+boundary=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.outlet type=Pressure Outlet
+  option=PressureOutletBoundaryOption selected=0
+  option=PrismLayerShrinkageBehaviour selected=0
+  option=ReferenceFrameOption selected=0
+  option=FlowBoundaryDiffusionOption selected=1
+  option=KwTurbSpecOption selected=2
+boundary=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.bottom type=Wall
+  option=WallShearStressOption selected=1
+  option=DynamicOversetBehaviour selected=0
+  option=PrismLayerShrinkageBehaviour selected=0
+region=FlapOverset motion=Flap prescribed rigid rotation
+boundary=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.span_source type=Symmetry Plane
+  option=PrismLayerShrinkageBehaviour selected=0
+boundary=FlapOverset exact quasi2D fluid.Hydro_Cage.span_source type=Symmetry Plane
+  option=PrismLayerShrinkageBehaviour selected=0
+boundary=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin type=Wall
+  option=WallShearStressOption selected=0
+  option=DynamicOversetBehaviour selected=0
+  option=PrismLayerShrinkageBehaviour selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc type=Wall
+  option=WallShearStressOption selected=0
+  option=DynamicOversetBehaviour selected=0
+  option=PrismLayerShrinkageBehaviour selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.top type=Overset Mesh
+  option=PrismLayerShrinkageBehaviour selected=0
+boundary=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.inlet type=Overset Mesh
+  option=PrismLayerShrinkageBehaviour selected=0
+boundary=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.outlet type=Overset Mesh
+  option=PrismLayerShrinkageBehaviour selected=0
+boundary=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.bottom type=Overset Mesh
+  option=PrismLayerShrinkageBehaviour selected=0
+model=star.metrics.ThreeDimensionalModel
+model=star.material.SingleComponentLiquidModel
+model=star.segregatedflow.SegregatedFlowModel
+model=star.metrics.GradientsModel
+model=star.flow.ConstantDensityModel
+model=star.turbulence.TurbulentModel
+model=star.turbulence.RansTurbulenceModel
+model=star.kwturb.KOmegaTurbulence
+model=star.kwturb.SstKwTurbModel
+model=star.walldistance.WallDistanceModel
+model=star.kwturb.KwAllYplusWallTreatment
+model=star.flow.GravityModel
+model=star.metrics.CellQualityRemediationModel
+model=star.overset.OversetConservationModel
+model=star.common.ImplicitUnsteadyModel
+rotation=Flap prescribed rigid rotation specification=Rotation Angle
+angle_definition=<0 deg>
+hinge_transformed=[0.9519999999999994, 0.02, 0.021281732767769932]
+motion_velocity_fields=[GridVelocity, GridVelocityVar]
+GridVelocityVar_max_magnitude=0.0

@@ -1,0 +1,1853 @@
+Starting local server: starserver.bat -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -cpubind off -np 4 -xencoded-session QzpcVXNlcnNcVGhpbmtQYWRcRG9jdW1lbnRzXENoYXRHUFRcbnRudSBzY2llbmNlXGZsYXBfcG9jXzI2MDZfMjAyNjExMDJcRmxhcFBPQ18yNjA2X21lc2hfcmVhZHkuc2lt
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-3
+Process rank 0 THINKPAD-LUCJAN 38964
+Total number of processes : 4
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 15:15:59 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\FlapPOC_2606_mesh_ready.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Loading module: ConservativeMapping
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=4 
+Started Parasolid modeler version 38.1.151
+Playing macro: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:29: warning: [deprecation] setFrozen(boolean) in star.segregatedflow.SegregatedFlowSolver has been deprecated
+   s.getSolution().initializeSolution();flow.setFrozen(true);
+                                            ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:35: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+   Scene scene=s.getSceneManager().createScene("Flap POC mesh motion");scene.initializeAndWait();
+                                                                            ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:39: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+   scene.getCurrentView().setInput(new DoubleVector(new double[]{.67,0,zh}),new DoubleVector(new double[]{.67,-3,zh}),new DoubleVector(new double[]{0,0,1}),.65,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);
+                         ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\TestFlapPOC.java:56: warning: [deprecation] setFrozen(boolean) in star.segregatedflow.SegregatedFlowSolver has been deprecated
+   flow.setFrozen(false);s.saveState(out.resolve("FlapPOC_2606_motion_passed.sim").toString());
+       ^
+
+Loading/configuring connectivity (old|new partitions: 4|4)
+  Background (index 0): 33553 cells, 83485 faces, 51672 verts.
+  FlapOverset (index 1): 11210 cells, 27654 faces, 17379 verts.
+Configuring finished
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Re-partitioning
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+             1                                                         
+             2                                                         
+             3                                                         
+             4                                                         
+             5                                                         
+             6                                                         
+             7                                                         
+TimeStep    1: Time  2.000000e-03
+             8                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+             9                                                         
+            10                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            11                                                         
+            12                                                         
+            13                                                         
+            14                                                         
+            15                                                         
+TimeStep    2: Time  4.000000e-03
+            16                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            17                                                         
+            18                                                         
+            19                                                         
+            20                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            21                                                         
+            22                                                         
+            23                                                         
+TimeStep    3: Time  6.000000e-03
+            24                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            25                                                         
+            26                                                         
+            27                                                         
+            28                                                         
+            29                                                         
+            30                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            31                                                         
+TimeStep    4: Time  8.000000e-03
+            32                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            33                                                         
+            34                                                         
+            35                                                         
+            36                                                         
+            37                                                         
+            38                                                         
+            39                                                         
+TimeStep    5: Time  1.000000e-02
+            40                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            41                                                         
+            42                                                         
+            43                                                         
+            44                                                         
+            45                                                         
+            46                                                         
+            47                                                         
+TimeStep    6: Time  1.200000e-02
+            48                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            49                                                         
+            50                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            51                                                         
+            52                                                         
+            53                                                         
+            54                                                         
+            55                                                         
+TimeStep    7: Time  1.400000e-02
+            56                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            57                                                         
+            58                                                         
+            59                                                         
+            60                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            61                                                         
+            62                                                         
+            63                                                         
+TimeStep    8: Time  1.600000e-02
+            64                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            65                                                         
+            66                                                         
+            67                                                         
+            68                                                         
+            69                                                         
+            70                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            71                                                         
+TimeStep    9: Time  1.800000e-02
+            72                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            73                                                         
+            74                                                         
+            75                                                         
+            76                                                         
+            77                                                         
+            78                                                         
+            79                                                         
+TimeStep   10: Time  2.000000e-02
+            80                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            81                                                         
+            82                                                         
+            83                                                         
+            84                                                         
+            85                                                         
+            86                                                         
+            87                                                         
+TimeStep   11: Time  2.200000e-02
+            88                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            89                                                         
+            90                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+            91                                                         
+            92                                                         
+            93                                                         
+            94                                                         
+            95                                                         
+TimeStep   12: Time  2.400000e-02
+            96                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+            97                                                         
+            98                                                         
+            99                                                         
+           100                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           101                                                         
+           102                                                         
+           103                                                         
+TimeStep   13: Time  2.600000e-02
+           104                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           105                                                         
+           106                                                         
+           107                                                         
+           108                                                         
+           109                                                         
+           110                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           111                                                         
+TimeStep   14: Time  2.800000e-02
+           112                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           113                                                         
+           114                                                         
+           115                                                         
+           116                                                         
+           117                                                         
+           118                                                         
+           119                                                         
+TimeStep   15: Time  3.000000e-02
+           120                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           121                                                         
+           122                                                         
+           123                                                         
+           124                                                         
+           125                                                         
+           126                                                         
+           127                                                         
+TimeStep   16: Time  3.200000e-02
+           128                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           129                                                         
+           130                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           131                                                         
+           132                                                         
+           133                                                         
+           134                                                         
+           135                                                         
+TimeStep   17: Time  3.400000e-02
+           136                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           137                                                         
+           138                                                         
+           139                                                         
+           140                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           141                                                         
+           142                                                         
+           143                                                         
+TimeStep   18: Time  3.600000e-02
+           144                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           145                                                         
+           146                                                         
+           147                                                         
+           148                                                         
+           149                                                         
+           150                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           151                                                         
+TimeStep   19: Time  3.800000e-02
+           152                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           153                                                         
+           154                                                         
+           155                                                         
+           156                                                         
+           157                                                         
+           158                                                         
+           159                                                         
+TimeStep   20: Time  4.000000e-02
+           160                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           161                                                         
+           162                                                         
+           163                                                         
+           164                                                         
+           165                                                         
+           166                                                         
+           167                                                         
+TimeStep   21: Time  4.200000e-02
+           168                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           169                                                         
+           170                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           171                                                         
+           172                                                         
+           173                                                         
+           174                                                         
+           175                                                         
+TimeStep   22: Time  4.400000e-02
+           176                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           177                                                         
+           178                                                         
+           179                                                         
+           180                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           181                                                         
+           182                                                         
+           183                                                         
+TimeStep   23: Time  4.600000e-02
+           184                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           185                                                         
+           186                                                         
+           187                                                         
+           188                                                         
+           189                                                         
+           190                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           191                                                         
+TimeStep   24: Time  4.800000e-02
+           192                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           193                                                         
+           194                                                         
+           195                                                         
+           196                                                         
+           197                                                         
+           198                                                         
+           199                                                         
+TimeStep   25: Time  5.000000e-02
+           200                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           201                                                         
+           202                                                         
+           203                                                         
+           204                                                         
+           205                                                         
+           206                                                         
+           207                                                         
+TimeStep   26: Time  5.200000e-02
+           208                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           209                                                         
+           210                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           211                                                         
+           212                                                         
+           213                                                         
+           214                                                         
+           215                                                         
+TimeStep   27: Time  5.400000e-02
+           216                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           217                                                         
+           218                                                         
+           219                                                         
+           220                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           221                                                         
+           222                                                         
+           223                                                         
+TimeStep   28: Time  5.600000e-02
+           224                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           225                                                         
+           226                                                         
+           227                                                         
+           228                                                         
+           229                                                         
+           230                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           231                                                         
+TimeStep   29: Time  5.800000e-02
+           232                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           233                                                         
+           234                                                         
+           235                                                         
+           236                                                         
+           237                                                         
+           238                                                         
+           239                                                         
+TimeStep   30: Time  6.000000e-02
+           240                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           241                                                         
+           242                                                         
+           243                                                         
+           244                                                         
+           245                                                         
+           246                                                         
+           247                                                         
+TimeStep   31: Time  6.200000e-02
+           248                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           249                                                         
+           250                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           251                                                         
+           252                                                         
+           253                                                         
+           254                                                         
+           255                                                         
+TimeStep   32: Time  6.400000e-02
+           256                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           257                                                         
+           258                                                         
+           259                                                         
+           260                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           261                                                         
+           262                                                         
+           263                                                         
+TimeStep   33: Time  6.600000e-02
+           264                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           265                                                         
+           266                                                         
+           267                                                         
+           268                                                         
+           269                                                         
+           270                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           271                                                         
+TimeStep   34: Time  6.800000e-02
+           272                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           273                                                         
+           274                                                         
+           275                                                         
+           276                                                         
+           277                                                         
+           278                                                         
+           279                                                         
+TimeStep   35: Time  7.000000e-02
+           280                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           281                                                         
+           282                                                         
+           283                                                         
+           284                                                         
+           285                                                         
+           286                                                         
+           287                                                         
+TimeStep   36: Time  7.200000e-02
+           288                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           289                                                         
+           290                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           291                                                         
+           292                                                         
+           293                                                         
+           294                                                         
+           295                                                         
+TimeStep   37: Time  7.400000e-02
+           296                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           297                                                         
+           298                                                         
+           299                                                         
+           300                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           301                                                         
+           302                                                         
+           303                                                         
+TimeStep   38: Time  7.600000e-02
+           304                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           305                                                         
+           306                                                         
+           307                                                         
+           308                                                         
+           309                                                         
+           310                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           311                                                         
+TimeStep   39: Time  7.800000e-02
+           312                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           313                                                         
+           314                                                         
+           315                                                         
+           316                                                         
+           317                                                         
+           318                                                         
+           319                                                         
+TimeStep   40: Time  8.000000e-02
+           320                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           321                                                         
+           322                                                         
+           323                                                         
+           324                                                         
+           325                                                         
+           326                                                         
+           327                                                         
+TimeStep   41: Time  8.200000e-02
+           328                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           329                                                         
+           330                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           331                                                         
+           332                                                         
+           333                                                         
+           334                                                         
+           335                                                         
+TimeStep   42: Time  8.400000e-02
+           336                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           337                                                         
+           338                                                         
+           339                                                         
+           340                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           341                                                         
+           342                                                         
+           343                                                         
+TimeStep   43: Time  8.600000e-02
+           344                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           345                                                         
+           346                                                         
+           347                                                         
+           348                                                         
+           349                                                         
+           350                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           351                                                         
+TimeStep   44: Time  8.800000e-02
+           352                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           353                                                         
+           354                                                         
+           355                                                         
+           356                                                         
+           357                                                         
+           358                                                         
+           359                                                         
+TimeStep   45: Time  9.000000e-02
+           360                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           361                                                         
+           362                                                         
+           363                                                         
+           364                                                         
+           365                                                         
+           366                                                         
+           367                                                         
+TimeStep   46: Time  9.200000e-02
+           368                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           369                                                         
+           370                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           371                                                         
+           372                                                         
+           373                                                         
+           374                                                         
+           375                                                         
+TimeStep   47: Time  9.400000e-02
+           376                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           377                                                         
+           378                                                         
+           379                                                         
+           380                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           381                                                         
+           382                                                         
+           383                                                         
+TimeStep   48: Time  9.600000e-02
+           384                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           385                                                         
+           386                                                         
+           387                                                         
+           388                                                         
+           389                                                         
+           390                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           391                                                         
+TimeStep   49: Time  9.800000e-02
+           392                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           393                                                         
+           394                                                         
+           395                                                         
+           396                                                         
+           397                                                         
+           398                                                         
+           399                                                         
+TimeStep   50: Time  1.000000e-01
+           400                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           401                                                         
+           402                                                         
+           403                                                         
+           404                                                         
+           405                                                         
+           406                                                         
+           407                                                         
+TimeStep   51: Time  1.020000e-01
+           408                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           409                                                         
+           410                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           411                                                         
+           412                                                         
+           413                                                         
+           414                                                         
+           415                                                         
+TimeStep   52: Time  1.040000e-01
+           416                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           417                                                         
+           418                                                         
+           419                                                         
+           420                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           421                                                         
+           422                                                         
+           423                                                         
+TimeStep   53: Time  1.060000e-01
+           424                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           425                                                         
+           426                                                         
+           427                                                         
+           428                                                         
+           429                                                         
+           430                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           431                                                         
+TimeStep   54: Time  1.080000e-01
+           432                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           433                                                         
+           434                                                         
+           435                                                         
+           436                                                         
+           437                                                         
+           438                                                         
+           439                                                         
+TimeStep   55: Time  1.100000e-01
+           440                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           441                                                         
+           442                                                         
+           443                                                         
+           444                                                         
+           445                                                         
+           446                                                         
+           447                                                         
+TimeStep   56: Time  1.120000e-01
+           448                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           449                                                         
+           450                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           451                                                         
+           452                                                         
+           453                                                         
+           454                                                         
+           455                                                         
+TimeStep   57: Time  1.140000e-01
+           456                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           457                                                         
+           458                                                         
+           459                                                         
+           460                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           461                                                         
+           462                                                         
+           463                                                         
+TimeStep   58: Time  1.160000e-01
+           464                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           465                                                         
+           466                                                         
+           467                                                         
+           468                                                         
+           469                                                         
+           470                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           471                                                         
+TimeStep   59: Time  1.180000e-01
+           472                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           473                                                         
+           474                                                         
+           475                                                         
+           476                                                         
+           477                                                         
+           478                                                         
+           479                                                         
+TimeStep   60: Time  1.200000e-01
+           480                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           481                                                         
+           482                                                         
+           483                                                         
+           484                                                         
+           485                                                         
+           486                                                         
+           487                                                         
+TimeStep   61: Time  1.220000e-01
+           488                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           489                                                         
+           490                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           491                                                         
+           492                                                         
+           493                                                         
+           494                                                         
+           495                                                         
+TimeStep   62: Time  1.240000e-01
+           496                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           497                                                         
+           498                                                         
+           499                                                         
+           500                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           501                                                         
+           502                                                         
+           503                                                         
+TimeStep   63: Time  1.260000e-01
+           504                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           505                                                         
+           506                                                         
+           507                                                         
+           508                                                         
+           509                                                         
+           510                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           511                                                         
+TimeStep   64: Time  1.280000e-01
+           512                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           513                                                         
+           514                                                         
+           515                                                         
+           516                                                         
+           517                                                         
+           518                                                         
+           519                                                         
+TimeStep   65: Time  1.300000e-01
+           520                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           521                                                         
+           522                                                         
+           523                                                         
+           524                                                         
+           525                                                         
+           526                                                         
+           527                                                         
+TimeStep   66: Time  1.320000e-01
+           528                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           529                                                         
+           530                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           531                                                         
+           532                                                         
+           533                                                         
+           534                                                         
+           535                                                         
+TimeStep   67: Time  1.340000e-01
+           536                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           537                                                         
+           538                                                         
+           539                                                         
+           540                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           541                                                         
+           542                                                         
+           543                                                         
+TimeStep   68: Time  1.360000e-01
+           544                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           545                                                         
+           546                                                         
+           547                                                         
+           548                                                         
+           549                                                         
+           550                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           551                                                         
+TimeStep   69: Time  1.380000e-01
+           552                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           553                                                         
+           554                                                         
+           555                                                         
+           556                                                         
+           557                                                         
+           558                                                         
+           559                                                         
+TimeStep   70: Time  1.400000e-01
+           560                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           561                                                         
+           562                                                         
+           563                                                         
+           564                                                         
+           565                                                         
+           566                                                         
+           567                                                         
+TimeStep   71: Time  1.420000e-01
+           568                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           569                                                         
+           570                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           571                                                         
+           572                                                         
+           573                                                         
+           574                                                         
+           575                                                         
+TimeStep   72: Time  1.440000e-01
+           576                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           577                                                         
+           578                                                         
+           579                                                         
+           580                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           581                                                         
+           582                                                         
+           583                                                         
+TimeStep   73: Time  1.460000e-01
+           584                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           585                                                         
+           586                                                         
+           587                                                         
+           588                                                         
+           589                                                         
+           590                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           591                                                         
+TimeStep   74: Time  1.480000e-01
+           592                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           593                                                         
+           594                                                         
+           595                                                         
+           596                                                         
+           597                                                         
+           598                                                         
+           599                                                         
+TimeStep   75: Time  1.500000e-01
+           600                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           601                                                         
+           602                                                         
+           603                                                         
+           604                                                         
+           605                                                         
+           606                                                         
+           607                                                         
+TimeStep   76: Time  1.520000e-01
+           608                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           609                                                         
+           610                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           611                                                         
+           612                                                         
+           613                                                         
+           614                                                         
+           615                                                         
+TimeStep   77: Time  1.540000e-01
+           616                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           617                                                         
+           618                                                         
+           619                                                         
+           620                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           621                                                         
+           622                                                         
+           623                                                         
+TimeStep   78: Time  1.560000e-01
+           624                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           625                                                         
+           626                                                         
+           627                                                         
+           628                                                         
+           629                                                         
+           630                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           631                                                         
+TimeStep   79: Time  1.580000e-01
+           632                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           633                                                         
+           634                                                         
+           635                                                         
+           636                                                         
+           637                                                         
+           638                                                         
+           639                                                         
+TimeStep   80: Time  1.600000e-01
+           640                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           641                                                         
+           642                                                         
+           643                                                         
+           644                                                         
+           645                                                         
+           646                                                         
+           647                                                         
+TimeStep   81: Time  1.620000e-01
+           648                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           649                                                         
+           650                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           651                                                         
+           652                                                         
+           653                                                         
+           654                                                         
+           655                                                         
+TimeStep   82: Time  1.640000e-01
+           656                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           657                                                         
+           658                                                         
+           659                                                         
+           660                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           661                                                         
+           662                                                         
+           663                                                         
+TimeStep   83: Time  1.660000e-01
+           664                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           665                                                         
+           666                                                         
+           667                                                         
+           668                                                         
+           669                                                         
+           670                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           671                                                         
+TimeStep   84: Time  1.680000e-01
+           672                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           673                                                         
+           674                                                         
+           675                                                         
+           676                                                         
+           677                                                         
+           678                                                         
+           679                                                         
+TimeStep   85: Time  1.700000e-01
+           680                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           681                                                         
+           682                                                         
+           683                                                         
+           684                                                         
+           685                                                         
+           686                                                         
+           687                                                         
+TimeStep   86: Time  1.720000e-01
+           688                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           689                                                         
+           690                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           691                                                         
+           692                                                         
+           693                                                         
+           694                                                         
+           695                                                         
+TimeStep   87: Time  1.740000e-01
+           696                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           697                                                         
+           698                                                         
+           699                                                         
+           700                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           701                                                         
+           702                                                         
+           703                                                         
+TimeStep   88: Time  1.760000e-01
+           704                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           705                                                         
+           706                                                         
+           707                                                         
+           708                                                         
+           709                                                         
+           710                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           711                                                         
+TimeStep   89: Time  1.780000e-01
+           712                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           713                                                         
+           714                                                         
+           715                                                         
+           716                                                         
+           717                                                         
+           718                                                         
+           719                                                         
+TimeStep   90: Time  1.800000e-01
+           720                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           721                                                         
+           722                                                         
+           723                                                         
+           724                                                         
+           725                                                         
+           726                                                         
+           727                                                         
+TimeStep   91: Time  1.820000e-01
+           728                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           729                                                         
+           730                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           731                                                         
+           732                                                         
+           733                                                         
+           734                                                         
+           735                                                         
+TimeStep   92: Time  1.840000e-01
+           736                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           737                                                         
+           738                                                         
+           739                                                         
+           740                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           741                                                         
+           742                                                         
+           743                                                         
+TimeStep   93: Time  1.860000e-01
+           744                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           745                                                         
+           746                                                         
+           747                                                         
+           748                                                         
+           749                                                         
+           750                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           751                                                         
+TimeStep   94: Time  1.880000e-01
+           752                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           753                                                         
+           754                                                         
+           755                                                         
+           756                                                         
+           757                                                         
+           758                                                         
+           759                                                         
+TimeStep   95: Time  1.900000e-01
+           760                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           761                                                         
+           762                                                         
+           763                                                         
+           764                                                         
+           765                                                         
+           766                                                         
+           767                                                         
+TimeStep   96: Time  1.920000e-01
+           768                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           769                                                         
+           770                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           771                                                         
+           772                                                         
+           773                                                         
+           774                                                         
+           775                                                         
+TimeStep   97: Time  1.940000e-01
+           776                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           777                                                         
+           778                                                         
+           779                                                         
+           780                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           781                                                         
+           782                                                         
+           783                                                         
+TimeStep   98: Time  1.960000e-01
+           784                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           785                                                         
+           786                                                         
+           787                                                         
+           788                                                         
+           789                                                         
+           790                                                         
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           791                                                         
+TimeStep   99: Time  1.980000e-01
+           792                                                         
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           793                                                         
+           794                                                         
+           795                                                         
+           796                                                         
+           797                                                         
+           798                                                         
+           799                                                         
+TimeStep  100: Time  2.000000e-01
+           800                                                         
+Saving: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\FlapPOC_2606_motion_passed.sim... complete (24.889MB in 0.10476s).
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           801   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00 
+           802   6.833279e-01   1.000000e+00   1.000000e+00   1.000000e+00 
+           803   5.542843e-01   8.336870e-01   6.304028e-01   8.136933e-01 
+           804   4.515043e-01   7.377568e-01   4.569313e-01   6.929296e-01 
+           805   3.683173e-01   6.282826e-01   3.184817e-01   5.753458e-01 
+           806   3.055190e-01   5.346431e-01   2.245997e-01   4.743395e-01 
+           807   2.603361e-01   4.518748e-01   1.693661e-01   3.891509e-01 
+TimeStep  101: Time  2.020000e-01
+           808   2.248416e-01   3.875773e-01   1.409604e-01   3.208547e-01 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           809   6.556109e-01   1.123082e+00   7.860487e-01   1.072854e+00 
+           810   6.599689e-01   7.063636e-01   9.675860e-01   8.166012e-01 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           811   5.243450e-01   5.984700e-01   8.993131e-01   6.877585e-01 
+           812   4.106234e-01   5.360559e-01   7.363616e-01   5.857784e-01 
+           813   3.256395e-01   4.831447e-01   5.716599e-01   4.957836e-01 
+           814   2.636938e-01   4.289147e-01   4.251490e-01   4.174223e-01 
+           815   2.184173e-01   3.753349e-01   3.139131e-01   3.484014e-01 
+TimeStep  102: Time  2.040000e-01
+           816   1.790718e-01   3.180217e-01   2.188117e-01   2.888547e-01 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           817   2.776352e-01   4.007724e-01   1.392981e+00   2.825479e-01 
+           818   2.762850e-01   2.674316e-01   4.756682e-01   2.021793e-01 
+           819   2.406452e-01   2.410158e-01   3.502852e-01   1.752678e-01 
+           820   2.042003e-01   2.225438e-01   2.992823e-01   1.517489e-01 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           821   1.712728e-01   2.033550e-01   2.514988e-01   1.310513e-01 
+           822   1.446117e-01   1.819498e-01   2.118028e-01   1.114204e-01 
+           823   1.227082e-01   1.617720e-01   1.816701e-01   9.578856e-02 
+TimeStep  103: Time  2.060000e-01
+           824   1.059380e-01   1.504883e-01   1.501694e-01   8.474745e-02 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           825   1.406939e-01   2.480754e-01   2.277077e-01   1.114697e-01 
+           826   1.338049e-01   9.512353e-02   1.446783e-01   7.687897e-02 
+           827   1.140080e-01   7.763911e-02   1.388422e-01   6.261352e-02 
+           828   9.331362e-02   6.820267e-02   1.167824e-01   5.202556e-02 
+           829   7.742578e-02   6.483507e-02   9.496988e-02   4.501245e-02 
+           830   6.514443e-02   5.856642e-02   7.907860e-02   3.794005e-02 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           831   5.585518e-02   5.649947e-02   6.605383e-02   3.326122e-02 
+TimeStep  104: Time  2.080000e-01
+           832   4.794678e-02   5.372075e-02   6.012435e-02   2.891872e-02 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           833   4.912585e-02   1.839673e-01   4.739439e-01   5.123266e-02 
+           834   6.870959e-02   1.134868e-01   1.131857e-01   2.653675e-02 
+           835   5.608418e-02   6.794829e-02   7.183318e-02   1.683003e-02 
+           836   5.785885e-02   6.753186e-02   5.825809e-02   1.413958e-02 
+           837   4.410864e-02   6.742560e-02   4.859996e-02   1.225226e-02 
+           838   4.611577e-02   6.731636e-02   3.969235e-02   1.139092e-02 
+           839   3.613194e-02   6.269230e-02   3.333338e-02   9.633606e-03 
+TimeStep  105: Time  2.100000e-01
+           840   3.804439e-02   6.323523e-02   2.669829e-02   9.018568e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           841   5.346412e-02   7.505737e-02   2.736812e-01   4.238028e-02 
+           842   5.207429e-02   2.972090e-02   1.041791e-01   1.472636e-02 
+           843   4.446980e-02   1.997209e-02   8.180473e-02   7.639553e-03 
+           844   3.913636e-02   2.465618e-02   6.362688e-02   7.008788e-03 
+           845   3.155639e-02   2.710852e-02   4.975118e-02   5.440501e-03 
+           846   2.976017e-02   3.433555e-02   3.472211e-02   6.146767e-03 
+           847   2.559162e-02   3.473506e-02   2.815993e-02   4.898380e-03 
+TimeStep  106: Time  2.120000e-01
+           848   2.473131e-02   3.482809e-02   2.245880e-02   5.202010e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           849   3.780592e-02   3.506596e-02   9.182311e-02   4.014340e-02 
+           850   3.290286e-02   1.599909e-02   4.067719e-02   1.340942e-02 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           851   2.666255e-02   1.078284e-02   3.887430e-02   6.419038e-03 
+           852   2.593935e-02   1.093641e-02   3.111678e-02   5.155941e-03 
+           853   1.911500e-02   1.016577e-02   2.299493e-02   3.827312e-03 
+           854   1.968762e-02   1.344239e-02   1.855660e-02   3.944914e-03 
+           855   1.476972e-02   1.314656e-02   1.512464e-02   2.934689e-03 
+TimeStep  107: Time  2.140000e-01
+           856   1.597409e-02   1.522562e-02   1.472959e-02   3.201724e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           857   4.298769e-02   2.565991e-02   1.063254e-01   3.869306e-02 
+           858   3.661078e-02   7.941499e-03   5.342312e-02   1.195391e-02 
+           859   2.652218e-02   4.643478e-03   3.479504e-02   5.613186e-03 
+           860   2.224039e-02   2.937287e-03   2.435242e-02   3.553990e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           861   1.621527e-02   2.436156e-03   1.765298e-02   2.916173e-03 
+           862   1.345439e-02   1.937281e-03   1.327769e-02   2.243501e-03 
+           863   1.003513e-02   1.631065e-03   1.080836e-02   1.889583e-03 
+TimeStep  108: Time  2.160000e-01
+           864   8.215585e-03   1.619746e-03   8.772886e-03   1.567557e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           865   2.418205e-02   2.336175e-02   7.259367e-02   3.857087e-02 
+           866   2.455454e-02   6.525957e-03   2.534230e-02   1.185262e-02 
+           867   2.090722e-02   4.516641e-03   1.892957e-02   5.466253e-03 
+           868   1.760774e-02   4.334092e-03   1.590335e-02   4.095400e-03 
+           869   1.371611e-02   4.958759e-03   1.263507e-02   3.829161e-03 
+           870   1.089235e-02   5.510799e-03   9.704848e-03   3.518561e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           871   8.648555e-03   5.883214e-03   7.199041e-03   3.220357e-03 
+TimeStep  109: Time  2.180000e-01
+           872   6.974329e-03   6.030504e-03   5.323063e-03   2.895510e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           873   1.768573e-02   2.267498e-02   4.143487e-02   3.825377e-02 
+           874   1.987009e-02   6.172788e-03   1.396326e-02   1.156440e-02 
+           875   2.007251e-02   1.028939e-02   1.052610e-02   5.705263e-03 
+           876   1.729114e-02   1.370841e-02   1.203480e-02   5.600385e-03 
+           877   1.436373e-02   1.628614e-02   1.181957e-02   5.565031e-03 
+           878   1.183641e-02   1.590962e-02   9.414239e-03   4.932090e-03 
+           879   9.869966e-03   1.569085e-02   7.612224e-03   4.325408e-03 
+TimeStep  110: Time  2.200000e-01
+           880   8.411001e-03   1.519085e-02   5.925980e-03   3.727661e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           881   1.925392e-02   3.651767e-02   3.416430e-02   3.871245e-02 
+           882   1.950210e-02   7.697502e-03   1.378182e-02   1.207993e-02 
+           883   1.942182e-02   3.169964e-03   1.144662e-02   4.613206e-03 
+           884   1.675128e-02   4.019769e-03   8.727645e-03   3.039434e-03 
+           885   1.369751e-02   5.014036e-03   6.270315e-03   2.641982e-03 
+           886   1.101117e-02   5.532232e-03   4.602107e-03   2.369129e-03 
+           887   8.853052e-03   5.986662e-03   3.264681e-03   2.107243e-03 
+TimeStep  111: Time  2.220000e-01
+           888   7.204799e-03   6.297659e-03   2.438358e-03   1.867707e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           889   2.297419e-02   4.289388e-02   3.933036e-02   3.864606e-02 
+           890   1.922443e-02   8.567707e-03   1.620625e-02   1.157339e-02 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           891   1.685915e-02   3.046379e-03   1.239272e-02   4.569447e-03 
+           892   1.419267e-02   4.109262e-03   9.714340e-03   3.086553e-03 
+           893   1.160679e-02   4.454273e-03   7.783797e-03   2.584898e-03 
+           894   9.425799e-03   5.712416e-03   6.979764e-03   2.418023e-03 
+           895   7.689604e-03   6.256000e-03   6.037844e-03   2.177997e-03 
+TimeStep  112: Time  2.240000e-01
+           896   6.316467e-03   6.016101e-03   4.786321e-03   1.862471e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           897   3.536359e-02   4.996551e-02   4.019894e-02   3.859370e-02 
+           898   2.766602e-02   1.607362e-02   1.164821e-02   1.355801e-02 
+           899   2.317711e-02   6.690530e-03   7.503778e-03   6.301029e-03 
+           900   1.868674e-02   5.203412e-03   6.358259e-03   4.623077e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           901   1.505563e-02   4.478641e-03   5.167710e-03   3.692537e-03 
+           902   1.209779e-02   4.593001e-03   4.464058e-03   3.241103e-03 
+           903   9.649378e-03   4.879762e-03   3.945917e-03   2.887381e-03 
+TimeStep  113: Time  2.260000e-01
+           904   7.684894e-03   5.144547e-03   3.539553e-03   2.570808e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           905   2.625492e-02   4.264331e-02   3.880373e-02   3.661520e-02 
+           906   2.183082e-02   2.021811e-02   8.218646e-03   1.337065e-02 
+           907   1.844266e-02   1.833071e-02   7.586527e-03   9.146816e-03 
+           908   1.546826e-02   1.681310e-02   6.359302e-03   7.314313e-03 
+           909   1.288544e-02   1.690429e-02   5.738610e-03   6.305833e-03 
+           910   1.085797e-02   1.700897e-02   5.162748e-03   5.397375e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           911   9.340942e-03   1.674617e-02   4.560289e-03   4.713784e-03 
+TimeStep  114: Time  2.280000e-01
+           912   8.187342e-03   1.632185e-02   4.015586e-03   4.143413e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           913   1.825635e-02   2.301588e-02   3.592908e-02   3.660517e-02 
+           914   1.659243e-02   8.080455e-03   1.568855e-02   9.893365e-03 
+           915   1.534934e-02   5.126044e-03   1.429628e-02   3.948194e-03 
+           916   1.301360e-02   4.274144e-03   1.237736e-02   2.656849e-03 
+           917   1.089551e-02   4.480458e-03   9.449805e-03   2.257618e-03 
+           918   8.855727e-03   4.168948e-03   7.539695e-03   1.899675e-03 
+           919   7.182471e-03   4.420457e-03   5.667203e-03   1.600844e-03 
+TimeStep  115: Time  2.300000e-01
+           920   5.790152e-03   4.655170e-03   4.280720e-03   1.355913e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           921   1.310388e-02   2.058145e-02   3.469867e-02   3.620979e-02 
+           922   1.616434e-02   5.198489e-03   7.655292e-03   9.462624e-03 
+           923   1.685442e-02   2.837589e-03   2.713817e-03   3.583990e-03 
+           924   1.471873e-02   2.064175e-03   2.115539e-03   2.210469e-03 
+           925   1.222390e-02   1.945005e-03   1.833215e-03   1.876761e-03 
+           926   9.781734e-03   1.696964e-03   1.581001e-03   1.579397e-03 
+           927   7.829621e-03   1.479493e-03   1.298537e-03   1.287979e-03 
+TimeStep  116: Time  2.320000e-01
+           928   6.232105e-03   1.464311e-03   1.155158e-03   1.137346e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           929   2.035213e-02   2.058970e-02   3.154988e-02   3.629465e-02 
+           930   1.205984e-02   5.076180e-03   1.001537e-02   9.816810e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           931   1.264436e-02   2.308035e-03   7.354550e-03   3.449458e-03 
+           932   1.053478e-02   1.846860e-03   6.026492e-03   2.494383e-03 
+           933   8.703457e-03   1.490820e-03   5.078222e-03   2.021607e-03 
+           934   6.965235e-03   1.447757e-03   3.885802e-03   1.765459e-03 
+           935   5.701077e-03   1.244123e-03   3.268258e-03   1.486012e-03 
+TimeStep  117: Time  2.340000e-01
+           936   4.568229e-03   1.119420e-03   2.627867e-03   1.167656e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           937   4.901036e-02   2.076748e-02   2.446628e-02   3.632358e-02 
+           938   3.606984e-02   9.680107e-03   1.787152e-02   1.233561e-02 
+           939   2.913354e-02   1.216941e-02   1.705102e-02   8.535464e-03 
+           940   2.343275e-02   1.107138e-02   1.338630e-02   6.833802e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           941   1.877203e-02   1.121233e-02   1.105499e-02   5.915828e-03 
+           942   1.506234e-02   1.129750e-02   9.228486e-03   5.272386e-03 
+           943   1.211788e-02   1.126988e-02   7.753225e-03   4.586344e-03 
+TimeStep  118: Time  2.360000e-01
+           944   9.846977e-03   1.107034e-02   6.331682e-03   3.974895e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           945   1.983461e-02   2.867579e-02   3.894465e-02   3.774480e-02 
+           946   2.156168e-02   7.534969e-03   1.809260e-02   1.149339e-02 
+           947   1.879675e-02   4.681842e-03   1.484828e-02   6.318589e-03 
+           948   1.505923e-02   3.942619e-03   1.247610e-02   4.871322e-03 
+           949   1.199478e-02   3.403578e-03   1.022863e-02   4.165453e-03 
+           950   9.442400e-03   3.253798e-03   8.654578e-03   3.782820e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           951   7.518012e-03   2.897043e-03   7.088043e-03   3.311256e-03 
+TimeStep  119: Time  2.380000e-01
+           952   5.938145e-03   2.812856e-03   5.869789e-03   3.003854e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           953   1.576642e-02   2.794069e-02   3.118770e-02   3.692977e-02 
+           954   1.617505e-02   9.511046e-03   7.680837e-03   9.449797e-03 
+           955   1.658976e-02   5.836970e-03   5.687777e-03   4.108990e-03 
+           956   1.447465e-02   5.086286e-03   4.641890e-03   2.951479e-03 
+           957   1.336223e-02   6.397399e-03   3.610742e-03   2.950178e-03 
+           958   1.088361e-02   6.166197e-03   3.038644e-03   2.581263e-03 
+           959   1.008523e-02   7.778172e-03   3.496118e-03   2.725545e-03 
+TimeStep  120: Time  2.400000e-01
+           960   8.586182e-03   6.809281e-03   2.449595e-03   2.260274e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           961   1.470872e-02   2.360060e-02   2.570075e-02   3.767477e-02 
+           962   1.193062e-02   6.698036e-03   8.915982e-03   8.564674e-03 
+           963   1.306747e-02   3.916569e-03   7.663012e-03   2.809192e-03 
+           964   1.070102e-02   3.402004e-03   6.610602e-03   1.713362e-03 
+           965   1.029645e-02   4.439399e-03   4.278619e-03   1.476113e-03 
+           966   8.147565e-03   4.347187e-03   3.513222e-03   1.323886e-03 
+           967   7.904938e-03   6.235008e-03   1.641577e-03   1.327598e-03 
+TimeStep  121: Time  2.420000e-01
+           968   6.720875e-03   5.577732e-03   1.654874e-03   1.135121e-03 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           969   1.395478e-02   2.298363e-02   1.934220e-02   3.833794e-02 
+           970   1.054608e-02   5.293621e-03   4.353310e-03   8.474514e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           971   1.013600e-02   3.072332e-03   2.594539e-03   2.649863e-03 
+           972   8.495044e-03   2.642958e-03   2.354800e-03   1.501817e-03 
+           973   7.714191e-03   3.491672e-03   1.466379e-03   1.344243e-03 
+           974   6.355601e-03   3.813512e-03   1.246619e-03   1.158517e-03 
+           975   6.009481e-03   4.922346e-03   1.984967e-03   1.132334e-03 
+TimeStep  122: Time  2.440000e-01
+           976   5.174007e-03   4.320866e-03   1.183178e-03   9.108965e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           977   1.083573e-02   2.432155e-02   2.296296e-02   3.878960e-02 
+           978   8.627399e-03   4.368014e-03   5.059382e-03   8.397128e-03 
+           979   7.972077e-03   1.959213e-03   1.719006e-03   2.483459e-03 
+           980   7.090564e-03   1.461206e-03   1.760372e-03   1.186215e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           981   5.647861e-03   1.570138e-03   1.604886e-03   9.517860e-04 
+           982   4.765773e-03   1.467765e-03   1.342387e-03   7.773772e-04 
+           983   3.976061e-03   1.925309e-03   1.395325e-03   6.941187e-04 
+TimeStep  123: Time  2.460000e-01
+           984   3.486999e-03   2.093198e-03   1.278708e-03   5.788517e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           985   1.025703e-02   2.561141e-02   2.327097e-02   3.933907e-02 
+           986   9.703305e-03   4.576627e-03   5.481874e-03   8.484711e-03 
+           987   1.039527e-02   1.904209e-03   1.829307e-03   2.525488e-03 
+           988   9.274860e-03   1.347585e-03   1.463004e-03   1.274198e-03 
+           989   7.701774e-03   1.135859e-03   1.239614e-03   1.020042e-03 
+           990   6.204518e-03   9.751433e-04   1.036181e-03   8.585406e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+           991   4.904374e-03   9.760831e-04   1.030630e-03   7.388919e-04 
+TimeStep  124: Time  2.480000e-01
+           992   3.850843e-03   1.033796e-03   1.001759e-03   6.208435e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+           993   9.580057e-03   2.645965e-02   2.062849e-02   3.993593e-02 
+           994   8.964584e-03   4.655061e-03   5.510324e-03   8.394608e-03 
+           995   9.715861e-03   1.961569e-03   2.087062e-03   2.511087e-03 
+           996   8.336681e-03   1.436704e-03   1.640728e-03   1.324208e-03 
+           997   6.751742e-03   1.228141e-03   1.385904e-03   1.052434e-03 
+           998   5.350631e-03   1.193431e-03   1.288351e-03   9.065456e-04 
+           999   4.210630e-03   1.079720e-03   1.062844e-03   7.502650e-04 
+TimeStep  125: Time  2.500000e-01
+          1000   3.331902e-03   1.125116e-03   1.018635e-03   6.406321e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+          1001   9.100126e-03   2.762063e-02   1.812719e-02   4.066588e-02 
+          1002   8.757841e-03   4.817631e-03   4.629503e-03   8.337090e-03 
+          1003   8.756067e-03   1.925998e-03   1.371679e-03   2.520623e-03 
+          1004   7.365628e-03   1.361521e-03   1.177535e-03   1.333564e-03 
+          1005   5.971380e-03   1.162392e-03   1.031215e-03   1.033043e-03 
+          1006   4.796407e-03   1.168841e-03   9.081780e-04   8.853960e-04 
+          1007   3.864939e-03   1.238498e-03   8.644197e-04   7.611989e-04 
+TimeStep  126: Time  2.520000e-01
+          1008   3.129860e-03   1.335760e-03   8.588327e-04   6.600384e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+          1009   9.252022e-03   2.895291e-02   1.776999e-02   4.136119e-02 
+          1010   8.127750e-03   5.018869e-03   4.810659e-03   8.467662e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+          1011   9.011254e-03   1.952727e-03   1.219023e-03   2.505238e-03 
+          1012   7.366345e-03   1.323769e-03   9.926486e-04   1.289737e-03 
+          1013   5.958010e-03   1.300492e-03   8.618993e-04   1.047230e-03 
+          1014   4.794360e-03   1.203295e-03   7.362850e-04   8.477772e-04 
+          1015   3.803820e-03   1.296983e-03   6.892407e-04   7.377048e-04 
+TimeStep  127: Time  2.540000e-01
+          1016   3.002478e-03   1.434795e-03   7.081163e-04   6.557865e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+          1017   9.553744e-03   3.041953e-02   1.778052e-02   4.212675e-02 
+          1018   8.537860e-03   5.502776e-03   4.429092e-03   8.718601e-03 
+          1019   8.624318e-03   1.985697e-03   1.263004e-03   2.567752e-03 
+          1020   7.539865e-03   1.319570e-03   1.030768e-03   1.323422e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+          1021   6.201682e-03   1.276516e-03   9.532408e-04   1.091675e-03 
+          1022   5.003247e-03   1.185415e-03   8.152815e-04   9.179918e-04 
+          1023   3.978318e-03   1.276880e-03   7.690742e-04   7.940870e-04 
+TimeStep  128: Time  2.560000e-01
+          1024   3.154453e-03   1.406754e-03   7.664028e-04   6.879994e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+          1025   9.741302e-03   3.170068e-02   1.800999e-02   4.283968e-02 
+          1026   8.699370e-03   6.148289e-03   5.029857e-03   8.920255e-03 
+          1027   8.781100e-03   2.031899e-03   2.437287e-03   2.675908e-03 
+          1028   7.564794e-03   1.258108e-03   1.954628e-03   1.357756e-03 
+          1029   6.161916e-03   1.052187e-03   1.595074e-03   1.042277e-03 
+          1030   4.901559e-03   1.060732e-03   1.333178e-03   8.957627e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum 
+          1031   3.897606e-03   9.827368e-04   1.082854e-03   7.404121e-04 
+TimeStep  129: Time  2.580000e-01
+          1032   3.097189e-03   1.054036e-03   9.424807e-04   6.424202e-04 
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+          1033   9.152182e-03   3.278714e-02   1.828136e-02   4.358274e-02 
+          1034   9.343086e-03   6.208915e-03   4.824907e-03   9.024272e-03 
+          1035   9.379371e-03   2.055328e-03   1.469487e-03   2.678803e-03 
+          1036   7.890844e-03   1.376207e-03   1.274359e-03   1.435034e-03 
+          1037   6.354021e-03   1.390087e-03   1.304604e-03   1.221332e-03 
+          1038   5.078562e-03   1.303163e-03   1.132180e-03   1.028989e-03 
+          1039   4.052157e-03   1.412795e-03   1.108463e-03   9.190226e-04 
+TimeStep  130: Time  2.600000e-01
+          1040   3.238752e-03   1.558453e-03   1.087485e-03   8.282472e-04 
+Saving: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\FlapPOC_2606_working.sim... complete (28.316MB in 0.10943s).
+POC_MOTION_AND_TRANSIENT_COMPLETE
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-03T05:34:30.105112+01:00",
+  "diagnostic_approved": true,
+  "scientific_approved": false,
+  "source_C_review": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\work_stage_decision.json",
+  "requires": "Serial8CPU/noGPU; preserve original B checkpoint. B top direction change and15to40inner documented; no other physics/mesh/geometry changes. No nonzero angles.",
+  "reason": "The direction-only change eliminated the repeated remote-top pressure minima and inner-iteration residual plateau. Near-foil field remains healthy and force windows stable. Tangential velocity memory is recovering but not fully settled; not a final training/validation result. Approve matched B0 follow-up with topEXTRAPOLATED and40inner to isolate Overset under the same boundary/numerics. Keep all nonzero angles blocked."
+}

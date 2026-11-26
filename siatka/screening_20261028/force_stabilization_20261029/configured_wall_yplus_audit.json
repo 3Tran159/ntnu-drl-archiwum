@@ -1,0 +1,56 @@
+{
+  "updated_at": "2026-10-29T22:59:52.644985+01:00",
+  "cases": [
+    {
+      "mesh": "M09",
+      "attempt": "M09_SO1ms_inner10_r1",
+      "time_s": 1.6399999999999302,
+      "wall_faces": 856,
+      "matched_surface_centroid_max_error_m": 2.2204699380978987e-16,
+      "wall_area_m2": 0.04840494399387505,
+      "area_weighted_yplus_p95": 0.7997557733001925,
+      "wall_area_yplus_below_1_pct": 99.8829660419905,
+      "max_yplus": 253.60416899924863,
+      "max_location_xz_m": [
+        1.1892907937437251,
+        8.030834374837542e-05
+      ],
+      "max_is_not_p95": true,
+      "method": "Exact accepted-wall samples matched to audited CGNS face centres; weights from face area vectors."
+    },
+    {
+      "mesh": "M08",
+      "attempt": "M08_SO1ms_inner10_r1",
+      "time_s": 1.9999999999998905,
+      "wall_faces": 856,
+      "matched_surface_centroid_max_error_m": 2.2204699380978987e-16,
+      "wall_area_m2": 0.04840494399387505,
+      "area_weighted_yplus_p95": 0.799866703312774,
+      "wall_area_yplus_below_1_pct": 99.88296604199051,
+      "max_yplus": 253.58610292228627,
+      "max_location_xz_m": [
+        1.1892907937437251,
+        8.030834374837542e-05
+      ],
+      "max_is_not_p95": true,
+      "method": "Exact accepted-wall samples matched to audited CGNS face centres; weights from face area vectors."
+    },
+    {
+      "mesh": "M07",
+      "attempt": "M07_SO1ms_inner10_r1",
+      "time_s": 2.0399999999998863,
+      "wall_faces": 1192,
+      "matched_surface_centroid_max_error_m": 2.2204502844110104e-16,
+      "wall_area_m2": 0.048405289310283386,
+      "area_weighted_yplus_p95": 0.8001824128587687,
+      "wall_area_yplus_below_1_pct": 99.92085181477242,
+      "max_yplus": 220.08546179775556,
+      "max_location_xz_m": [
+        1.1894927948412963,
+        5.5496263676829806e-05
+      ],
+      "max_is_not_p95": true,
+      "method": "Exact accepted-wall samples matched to audited CGNS face centres; weights from face area vectors."
+    }
+  ]
+}

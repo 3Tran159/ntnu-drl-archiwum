@@ -1,0 +1,46 @@
+Starting local server: starserver.bat -np 1 -gpgpu auto:1 -require-gpgpu-compatibility -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XFJFU0lEVUFMX01PTklUT1JfVEFJTF9QUk9CRV8yMDI2MTEwNVxDT1BZLnNpbQ==
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 18596
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppowerplus checked out from 1999@flex.cd-adapco.com
+Feature ccmppowerplus expires in 8 days
+Thu Nov  5 22:45:12 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESIDUAL_MONITOR_TAIL_PROBE_20261105\COPY.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: StarSweptMesher
+Loading module: ConservativeMapping
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESIDUAL_MONITOR_TAIL_PROBE_20261105\MonitorTailProbe.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESIDUAL_MONITOR_TAIL_PROBE_20261105\MonitorTailProbe.java:19: warning: [deprecation] getAllSamples() in star.base.report.PlotableMonitor has been deprecated
+     MonitorData full=r.getAllSamples();
+                       ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESIDUAL_MONITOR_TAIL_PROBE_20261105\MonitorTailProbe.java:23: warning: [deprecation] getPlotSamples() in star.base.report.PlotableMonitor has been deprecated
+     MonitorData tail=r.getPlotSamples();
+                       ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESIDUAL_MONITOR_TAIL_PROBE_20261105\MonitorTailProbe.java:31: warning: [deprecation] getPlotSamples() in star.base.report.PlotableMonitor has been deprecated
+     for(int i=0;i<5;i++)r.getPlotSamples();
+                          ^
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

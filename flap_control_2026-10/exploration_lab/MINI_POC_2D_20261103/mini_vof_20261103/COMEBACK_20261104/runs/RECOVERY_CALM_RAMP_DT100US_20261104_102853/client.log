@@ -1,0 +1,763 @@
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:29: warning: [deprecation] getWavePeriod() in star.vof.FifthOrderVofWave has been deprecated
+ double nativePeriod(){return wave==null?0:wave.getWavePeriod().getSIValue();}
+                                               ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:53: warning: [deprecation] setAngleFactor(double) in star.vof.SegregatedVofModel has been deprecated
+  pc.getModelManager().getModel(SegregatedVolumeFluxBasedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SegregatedVofModel.class).setAngleFactor(.15);
+                                                                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:89: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:89: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:89: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:89: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+  reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(amp==0&&oldAmp==0?calm:wave);
+                                                                                                                                                                                                                                                                                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:98: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                 ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:98: warning: [deprecation] setUrf(double) in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:100: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);if(b("fresh")){useSeededInitialFlow();s.getSolution().initializeSolution();}double nativePeriod=nativePeriod();if(Double.isFinite(nativePeriod)&&nativePeriod>.40&&nativePeriod<.52){T=nativePeriod;W=2*Math.PI/T;}write("STOKES_READBACK.json",Map.of("wave_type",wave==null?"FlatVofWave":"FifthOrderVofWave","native_period_s",nativePeriod,"period_planning_s",wave==null?0:T,"height_m",waveHeight(),"depth_m",sy+10,"wavelength_m",wave==null?0:wave.getVofWaveSpecification().getWaveLength().getSIValue(),"advancing_direction","+X","current_m_s",18,"global_initialization",b("fresh")&&oldAmp>0));
+                                         ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:101: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  Map<String,Object>a=new LinkedHashMap<>();a.put("stage",cfg.getProperty("stage"));a.put("cells",nc);a.put("start_time",start);a.put("dt",dt);a.put("inner",inner);a.put("initialization_called",b("fresh"));a.put("calm_speed_ramp_s",d("calm_speed_ramp_s",0));a.put("initial_calm_current_m_s",d("calm_speed_ramp_s",0)>0?.05:18);a.put("reset_on_loaded_fields",false);a.put("old_pressure_urf",oldUrf);a.put("pressure_urf",ps.getUrf());a.put("old_pressure_tol",oldTol);a.put("pressure_tol",ps.getAMGLinearSolver().getConvergeTol());a.put("amplitude_from",oldAmp);a.put("amplitude_target",amp);a.put("amplitude_ramp_s",ramp);a.put("initial_field",oldAmp==0?"flat water and air":"native Stokes V");a.put("inlet_ramp",ramp>0?"S5, zero endpoint first/second derivative":"Existing globally initialized wave; no velocity/amplitude jump");a.put("forcing_length_m",d("forcing_length",4));a.put("damping_length_m",d("damping_length",8));a.put("outlet_and_top","native flat-wave pressure and volume fraction");a.put("vorticity_limiter",pc.getModelManager().getModel(SstKwTurbModel.class).getKwTurbRealizabilityOption().getSelectedElement().toString());a.put("all_yplus",pc.getModelManager().hasModel(KwAllYplusWallTreatment.class)!=null);a.put("sst",pc.getModelManager().hasModel(SstKwTurbModel.class)!=null);a.put("reference_C01_CL",.3156595);a.put("reference_C01_CD",.00700232);a.put("C01_not_modified",true);write("SETUP_READBACK.json",a);
+                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:115: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  if(foil){for(ForceReportForceOption.Type type:List.of(ForceReportForceOption.Type.PRESSURE,ForceReportForceOption.Type.SHEAR)){ForceReport f=s.getReportManager().createReport(ForceReport.class);f.getForceOption().setSelected(type);f.getDirection().setComponents(1,0,0);f.setPressureOption(FluidLoadsReportPressureOption.SP_UC);f.getParts().setObjects(walls);rep.put(type==ForceReportForceOption.Type.PRESSURE?"FxPressure":"FxShear",f);}wallTable=s.getTableManager().createTable(XyzInternalTable.class);wallTable.setPresentationName("CB_Wall_Cp_yplus");wallTable.getParts().setObjects(walls);wallTable.setFieldFunctions(List.of(ff("WallYplus"),ff("Pressure"),ff("AbsolutePressure")));}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:116: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  fields=s.getTableManager().createTable(XyzInternalTable.class);fields.setPresentationName("NIGHT_FIELDS");fields.getParts().setObjects(reg);fields.setFieldFunctions(List.of(alpha,ff("AbsolutePressure"),ff("Pressure"),ff("Velocity").getComponentFunction(0),ff("Velocity").getComponentFunction(1),ff("Velocity").getComponentFunction(2),ff("TurbulentKineticEnergy"),ff("SpecificDissipationRate"),ff("TurbulentViscosityRatio"),co,ff("CellQuality"),ff("Volume")));
+                            ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:172: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  vertices=s.getTableManager().createTable(XyzInternalTable.class);
+                              ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\MiniVofStokes.java:348: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                         ^
+
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+
+
+Importing F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/mini_vof_20261103/COMEBACK_20261104/WALL_FUNCTIONS_AUDIT/RECOVERY_V2_TE_PARTIAL/Q2D/mesh_3d.msh
+Loading module: CaeIOCgns
+Reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\WALL_FUNCTIONS_AUDIT\RECOVERY_V2_TE_PARTIAL\Q2D\mesh_3d.msh...
+Importing cells
+Cell type: mixed
+   Name: cell-1
+   Number of cells: 44442
+   Zone type: fluid
+   Zone 2 type interior, name interior
+   Zone 3 type wall, name main
+   Zone 4 type wall, name flap
+   Zone 5 type velocity-inlet, name inlet
+   Zone 6 type pressure-outlet, name outlet
+   Zone 7 type pressure-outlet, name top
+   Zone 8 type wall, name bottom
+   Zone 9 type symmetry, name span_front
+   Zone 10 type symmetry, name span_back
+   Zone 1 type fluid, name MINI_water_air
+Importing faces
+Group: interior-2
+   Number of faces: 84414
+   Topology: quadrilateral
+   Type: 2
+Importing faces
+Group: wall-3
+   Number of faces: 620
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: wall-4
+   Number of faces: 96
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: velocity-inlet-5
+   Number of faces: 109
+   Topology: quadrilateral
+   Type: 10
+Importing faces
+Group: pressure-outlet-6
+   Number of faces: 109
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: pressure-outlet-7
+   Number of faces: 320
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: wall-8
+   Number of faces: 62
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: symmetry-9
+   Number of faces: 44442
+   Topology: mixed
+   Type: 7
+Importing faces
+Group: symmetry-10
+   Number of faces: 44442
+   Topology: mixed
+   Type: 7
+
+Partitioning region MINI_water_air (44442 cells, 1 partitions)
+Partitioning complete
+Importing nodes
+Dimension: 3
+   Number of nodes: 82576
+   Zone id: 1
+Processing mesh
+Finished reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\WALL_FUNCTIONS_AUDIT\RECOVERY_V2_TE_PARTIAL\Q2D\mesh_3d.msh
+Reordering
+Finished importing
+Imported coordinate extents (m)
+X extents: [-12.0, 28.0]
+   Y extents: [-10.0, 4.0]
+   Z extents: [0.0, 0.02]
+
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: VofModel
+Loading module: WavesModel
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+Initialization of star.mixturemultiphase.SegregatedVolumeFluxBasedFlowModel requires an additional pass...
+Initialization of star.segregatedflow.SegregatedFlowSolver requires an additional pass...
+Initialization of star.vof.SegregatedVofModel requires an additional pass...
+Initialization of star.vof.SegregatedVofSolver requires an additional pass...
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\START.sim... complete (32.688MB in 0.11412s).
+Reversed flow on  6 faces on MINI_water_air: top
+
+Error: AMG solver diverged.
+AMG exit reason: Diverged due to exceeding divergence tolerance.
+Relative residual: 3.471656e+04
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00 
+Reversed flow on  220 faces on MINI_water_air: top
+             2   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.182662e-01   4.722880e-01   1.000000e+00 
+Reversed flow on  220 faces on MINI_water_air: top
+             3   9.903077e-01   6.397627e-01   6.382442e-01   1.000000e+00   1.151809e-02   3.736987e-01   6.020936e-01 
+Reversed flow on  220 faces on MINI_water_air: top
+             4   8.303268e-01   3.913588e-01   3.873615e-01   7.724654e-01   3.717381e-03   2.952156e-01   3.440526e-01 
+Reversed flow on  220 faces on MINI_water_air: top
+             5   6.443696e-01   2.360438e-01   2.337621e-01   7.619053e-01   3.735863e-03   2.328352e-01   1.689379e-01 
+Reversed flow on  220 faces on MINI_water_air: top
+             6   4.859587e-01   1.395901e-01   1.416362e-01   7.524276e-01   2.402132e-03   1.833029e-01   6.442445e-02 
+Reversed flow on  220 faces on MINI_water_air: top
+             7   3.767688e-01   8.349697e-02   8.611842e-02   8.065629e-01   2.397775e-03   1.440109e-01   3.339816e-02 
+Reversed flow on  220 faces on MINI_water_air: top
+             8   3.029801e-01   4.988118e-02   5.247889e-02   8.710388e-01   1.916156e-03   1.128779e-01   2.032588e-02 
+Reversed flow on  220 faces on MINI_water_air: top
+             9   2.511183e-01   2.985523e-02   3.205739e-02   8.887444e-01   3.246543e-03   8.824260e-02   1.116682e-02 
+Reversed flow on  220 faces on MINI_water_air: top
+            10   2.184255e-01   1.806348e-02   1.964894e-02   8.228138e-01   1.679215e-03   6.878019e-02   5.178944e-03 
+Reversed flow on  220 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            11   1.964692e-01   1.105817e-02   1.211328e-02   8.143222e-01   1.374890e-03   5.343428e-02   3.240476e-03 
+Reversed flow on  220 faces on MINI_water_air: top
+            12   1.787014e-01   6.701980e-03   7.389304e-03   7.766443e-01   8.667149e-04   4.136160e-02   2.079500e-03 
+Reversed flow on  220 faces on MINI_water_air: top
+            13   1.665898e-01   4.138096e-03   4.569079e-03   1.054699e+00   5.750277e-04   3.189148e-02   1.205759e-03 
+Reversed flow on  220 faces on MINI_water_air: top
+            14   1.592025e-01   2.622989e-03   2.892098e-03   9.013716e-01   8.779221e-04   2.449152e-02   6.000750e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            15   1.562735e-01   1.630764e-03   1.802197e-03   8.389152e-01   1.953230e-04   1.873856e-02   3.382732e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            16   1.568144e-01   1.052758e-03   1.164288e-03   7.476894e-01   8.946041e-05   1.429725e-02   2.596972e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            17   1.573569e-01   6.878881e-04   7.612790e-04   7.466554e-01   5.917395e-05   1.090392e-02   1.896573e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            18   1.639389e-01   4.780525e-04   5.137040e-04   9.300320e-01   9.890868e-05   8.350761e-03   1.377861e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            19   1.664360e-01   4.023875e-04   3.654397e-04   8.766884e-01   3.995343e-04   6.471869e-03   1.165627e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+TimeStep    1: Time  1.000000e-04
+            20   1.626800e-01   3.973311e-04   3.125600e-04   7.402458e-01   6.487266e-05   5.132802e-03   1.005336e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            21   7.272207e-01   3.364482e+00   3.328957e+00   6.773492e-01   1.528807e+00   1.021825e-02   2.866111e-01 
+Reversed flow on  220 faces on MINI_water_air: top
+            22   9.069339e-01   1.875761e+00   1.852338e+00   6.566842e-01   1.458157e-01   6.161034e-03   4.429635e-02 
+Reversed flow on  220 faces on MINI_water_air: top
+            23   9.809678e-01   1.137452e+00   1.137611e+00   9.581637e-01   1.288499e-02   4.153486e-03   8.823178e-03 
+Reversed flow on  220 faces on MINI_water_air: top
+            24   8.686762e-01   6.900345e-01   6.956347e-01   8.515394e-01   3.603399e-03   3.151347e-03   1.826702e-03 
+Reversed flow on  220 faces on MINI_water_air: top
+            25   7.062777e-01   4.192179e-01   4.240184e-01   7.190985e-01   3.224292e-03   2.579212e-03   4.393029e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            26   5.576708e-01   2.543873e-01   2.579707e-01   8.172983e-01   2.017977e-03   2.187397e-03   2.450583e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            27   4.366860e-01   1.535695e-01   1.565257e-01   8.945673e-01   2.249370e-03   1.892262e-03   1.652661e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            28   3.561185e-01   9.255168e-02   9.535487e-02   8.053851e-01   1.911384e-03   1.655834e-03   7.686343e-05 
+Reversed flow on  220 faces on MINI_water_air: top
+            29   3.029320e-01   5.590164e-02   5.844300e-02   7.229874e-01   1.900637e-03   1.460872e-03   7.705983e-05 
+Reversed flow on  220 faces on MINI_water_air: top
+            30   2.627273e-01   3.383123e-02   3.586340e-02   7.707872e-01   1.953234e-03   1.298988e-03   2.323660e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            31   2.165067e-01   2.043623e-02   2.195382e-02   7.868040e-01   1.497647e-03   1.161070e-03   1.726666e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            32   1.989816e-01   1.243728e-02   1.347730e-02   8.046648e-01   1.230151e-03   1.042555e-03   2.062203e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            33   1.860675e-01   7.432319e-03   8.154893e-03   9.441093e-01   9.375324e-04   9.413904e-04   1.632527e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            34   1.737813e-01   4.510768e-03   4.993560e-03   8.390024e-01   5.550709e-04   8.546817e-04   1.657687e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            35   1.631884e-01   2.785815e-03   3.110434e-03   8.946720e-01   3.425211e-04   7.796227e-04   1.707825e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            36   1.554766e-01   1.824609e-03   2.050437e-03   7.252202e-01   2.379680e-04   7.145839e-04   1.736801e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            37   1.494643e-01   1.215342e-03   1.371465e-03   8.697907e-01   5.516383e-04   6.566502e-04   1.662166e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            38   1.454372e-01   7.548075e-04   8.563161e-04   6.675420e-01   1.135312e-04   6.018029e-04   1.540819e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+            39   1.455957e-01   5.433121e-04   6.043991e-04   8.146709e-01   6.210955e-04   5.506052e-04   1.557310e-04 
+Reversed flow on  220 faces on MINI_water_air: top
+TimeStep    2: Time  2.000000e-04
+            40   1.472658e-01   4.127712e-04   4.365583e-04   8.548148e-01   1.008016e-04   5.033949e-04   1.398869e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            41   4.448513e-01   1.155062e+00   1.124831e+00   6.771548e-01   1.545735e+00   1.138989e-02   1.420376e-01 
+Reversed flow on  219 faces on MINI_water_air: top
+            42   5.022218e-01   6.333405e-01   6.245633e-01   7.477294e-01   1.560840e-01   5.789442e-03   2.790528e-02 
+Reversed flow on  219 faces on MINI_water_air: top
+            43   5.097121e-01   3.834199e-01   3.831778e-01   8.181563e-01   1.736979e-02   3.227715e-03   5.713874e-03 
+Reversed flow on  219 faces on MINI_water_air: top
+            44   4.780679e-01   2.322064e-01   2.341063e-01   8.357608e-01   3.474576e-03   2.120134e-03   1.262020e-03 
+Reversed flow on  219 faces on MINI_water_air: top
+            45   4.005964e-01   1.403758e-01   1.423116e-01   8.677730e-01   1.884445e-03   1.609864e-03   4.028155e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            46   3.302311e-01   8.477110e-02   8.658921e-02   8.495932e-01   1.088851e-03   1.323130e-03   2.730213e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            47   2.906832e-01   5.141746e-02   5.303257e-02   8.417966e-01   1.473237e-03   1.122898e-03   2.679393e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            48   2.715116e-01   3.135838e-02   3.267860e-02   8.410352e-01   1.370658e-03   9.695296e-04   3.053815e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            49   2.578738e-01   1.922090e-02   2.026239e-02   8.125425e-01   1.310032e-03   8.467975e-04   3.412995e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            50   2.562663e-01   1.179293e-02   1.255382e-02   8.404419e-01   1.015606e-03   7.495012e-04   3.671106e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            51   2.587081e-01   7.193039e-03   7.734731e-03   7.232965e-01   7.915777e-04   6.705256e-04   3.898809e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            52   2.513419e-01   4.265192e-03   4.638076e-03   8.070102e-01   4.095105e-04   6.043300e-04   4.466303e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            53   2.358792e-01   2.794744e-03   3.046709e-03   9.543997e-01   3.950895e-04   5.476270e-04   4.734352e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            54   2.140934e-01   1.815761e-03   1.987501e-03   7.933194e-01   2.893888e-04   4.967939e-04   5.384809e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            55   1.827766e-01   1.250050e-03   1.371521e-03   8.674721e-01   1.983986e-04   4.500005e-04   6.100557e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            56   1.673868e-01   8.632783e-04   9.553651e-04   7.458891e-01   1.445737e-04   4.100811e-04   6.852178e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            57   1.513258e-01   6.007294e-04   6.728158e-04   7.154987e-01   1.140133e-04   3.754529e-04   7.592886e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            58   1.446775e-01   4.368027e-04   4.974455e-04   7.320681e-01   1.304722e-04   3.475828e-04   8.201553e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+            59   1.489400e-01   3.526568e-04   4.018082e-04   8.569794e-01   2.720570e-04   3.273844e-04   8.592418e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+TimeStep    3: Time  3.000000e-04
+            60   1.623184e-01   3.851003e-04   4.090241e-04   8.442253e-01   2.519081e-04   3.157267e-04   8.689539e-04 
+Reversed flow on  219 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            61   4.155725e-01   5.627449e-01   4.745654e-01   6.817177e-01   1.668373e+00   1.335957e-02   1.066415e-01 
+Reversed flow on  113 faces on MINI_water_air: top
+            62   4.509201e-01   1.155084e-01   8.757976e-02   8.022038e-01   1.659476e-01   6.293751e-03   2.100375e-02 
+Reversed flow on  112 faces on MINI_water_air: top
+            63   4.860922e-01   6.719801e-02   5.551984e-02   7.271610e-01   1.637150e-02   3.230653e-03   4.420481e-03 
+Reversed flow on  110 faces on MINI_water_air: top
+            64   5.262990e-01   3.956882e-02   3.326126e-02   7.236303e-01   1.769025e-03   2.159118e-03   1.885210e-03 
+Reversed flow on  109 faces on MINI_water_air: top
+            65   5.274258e-01   2.347828e-02   1.999178e-02   8.076155e-01   5.953400e-04   2.058711e-03   1.345842e-03 
+Reversed flow on  109 faces on MINI_water_air: top
+            66   5.008382e-01   1.400456e-02   1.215128e-02   7.765280e-01   4.602811e-04   2.352992e-03   1.219193e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            67   4.820415e-01   8.422502e-03   7.511262e-03   9.132403e-01   3.041997e-04   2.804132e-03   1.188071e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            68   4.690244e-01   5.063949e-03   4.590832e-03   9.253548e-01   3.364522e-04   3.323143e-03   1.202805e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            69   4.574152e-01   3.072874e-03   2.829974e-03   8.726465e-01   3.808018e-04   3.850856e-03   1.233406e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            70   4.529831e-01   1.944199e-03   1.925033e-03   8.133485e-01   3.816257e-04   4.346126e-03   1.228879e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            71   4.632989e-01   1.239831e-03   1.267472e-03   7.880537e-01   1.721323e-04   4.758734e-03   1.226256e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            72   4.874627e-01   9.474783e-04   9.600248e-04   8.713243e-01   2.973352e-04   5.075241e-03   1.215034e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            73   5.142191e-01   9.893175e-04   9.232748e-04   7.369168e-01   3.786897e-04   5.264717e-03   1.198158e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            74   5.333229e-01   1.203392e-03   1.079463e-03   7.485141e-01   4.441331e-04   5.316303e-03   1.172536e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            75   5.412443e-01   1.352261e-03   1.174785e-03   8.435358e-01   4.087047e-04   5.233487e-03   1.138766e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            76   5.352499e-01   1.411113e-03   1.125757e-03   7.758376e-01   3.251757e-04   5.040514e-03   1.069796e-03 
+Reversed flow on  108 faces on MINI_water_air: top
+            77   5.316509e-01   1.676066e-03   1.143142e-03   8.126450e-01   9.902574e-05   4.743572e-03   9.777629e-04 
+Reversed flow on  108 faces on MINI_water_air: top
+            78   5.108299e-01   1.890004e-03   1.221988e-03   8.892487e-01   2.818412e-04   4.362038e-03   8.519735e-04 
+Reversed flow on  108 faces on MINI_water_air: top
+            79   4.466055e-01   1.596493e-03   1.336393e-03   8.837914e-01   2.574111e-04   3.939938e-03   7.404703e-04 
+Reversed flow on  108 faces on MINI_water_air: top
+TimeStep    4: Time  4.000000e-04
+            80   3.868724e-01   1.414916e-03   1.289614e-03   7.864449e-01   1.056770e-04   3.497622e-03   6.657223e-04 
+Reversed flow on  81 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            81   9.142723e-01   1.048583e+00   8.831577e-01   6.843995e-01   1.994444e+00   2.232992e-02   9.222267e-02 
+Reversed flow on  71 faces on MINI_water_air: top
+            82   9.537585e-01   1.232282e-01   8.526524e-02   8.514066e-01   1.970109e-01   1.474917e-02   1.826843e-02 
+Reversed flow on  71 faces on MINI_water_air: top
+            83   9.683050e-01   6.688995e-02   5.497832e-02   8.533849e-01   1.953325e-02   1.082551e-02   3.967848e-03 
+Reversed flow on  70 faces on MINI_water_air: top
+            84   9.910142e-01   3.892248e-02   3.291470e-02   7.536537e-01   1.910034e-03   7.765925e-03   1.932112e-03 
+Reversed flow on  70 faces on MINI_water_air: top
+            85   1.029535e+00   2.325303e-02   1.978170e-02   8.011541e-01   8.070657e-04   5.190708e-03   1.419088e-03 
+Reversed flow on  70 faces on MINI_water_air: top
+            86   1.007276e+00   1.416590e-02   1.168581e-02   8.746243e-01   1.752025e-04   3.758884e-03   1.097251e-03 
+Reversed flow on  70 faces on MINI_water_air: top
+            87   9.030234e-01   8.910658e-03   7.254988e-03   8.893334e-01   1.219325e-03   3.784364e-03   9.403091e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            88   8.110596e-01   5.798485e-03   4.656984e-03   7.122407e-01   7.928075e-04   4.307044e-03   1.040360e-03 
+Reversed flow on  70 faces on MINI_water_air: top
+            89   7.441250e-01   3.895209e-03   3.165815e-03   8.201061e-01   6.089800e-04   4.790370e-03   1.000359e-03 
+Reversed flow on  70 faces on MINI_water_air: top
+            90   6.875018e-01   2.679608e-03   2.202451e-03   8.099549e-01   5.487743e-04   5.115572e-03   8.298857e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            91   6.441596e-01   1.739655e-03   1.568234e-03   7.854010e-01   5.889611e-04   5.306141e-03   7.196187e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            92   6.206551e-01   1.087318e-03   1.103190e-03   8.325645e-01   5.721352e-04   5.335508e-03   5.678773e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            93   5.635221e-01   9.644020e-04   9.895722e-04   6.685245e-01   5.156517e-04   5.203501e-03   5.195093e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            94   6.604863e-01   1.280061e-03   1.268185e-03   9.026497e-01   8.210107e-04   5.021789e-03   4.244500e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            95   7.726242e-01   2.015819e-03   1.847169e-03   8.885110e-01   1.050683e-03   4.803112e-03   4.251120e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            96   8.531906e-01   2.465459e-03   2.175010e-03   8.314005e-01   5.827007e-04   4.584286e-03   3.749316e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            97   8.710780e-01   2.756214e-03   2.315399e-03   7.871083e-01   5.446643e-04   4.364822e-03   3.210072e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            98   8.298237e-01   2.807061e-03   2.267329e-03   8.265610e-01   2.087875e-04   4.142931e-03   3.203398e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+            99   7.429295e-01   2.771443e-03   2.259716e-03   9.517560e-01   5.529992e-04   3.914537e-03   2.974573e-04 
+Reversed flow on  70 faces on MINI_water_air: top
+TimeStep    5: Time  5.000000e-04
+           100   6.413240e-01   2.503524e-03   2.184691e-03   7.044418e-01   6.405785e-04   3.703019e-03   4.068368e-04 
+Reversed flow on  56 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           101   1.649107e+00   1.675788e+00   1.415927e+00   6.527872e-01   2.671622e+00   3.094850e-02   7.967128e-02 
+Reversed flow on  50 faces on MINI_water_air: top
+           102   1.743428e+00   1.295520e-01   7.073153e-02   8.507884e-01   2.608997e-01   8.757545e-03   1.588694e-02 
+Reversed flow on  50 faces on MINI_water_air: top
+           103   1.665495e+00   5.835035e-02   4.499887e-02   9.218188e-01   2.873866e-02   4.293896e-03   3.278068e-03 
+Reversed flow on  50 faces on MINI_water_air: top
+           104   1.561384e+00   3.325047e-02   2.874287e-02   9.570055e-01   4.322133e-03   2.197598e-03   8.751863e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           105   1.366550e+00   2.026416e-02   1.861388e-02   7.220324e-01   6.460181e-04   2.083945e-03   5.765836e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           106   1.230446e+00   1.276406e-02   1.180472e-02   8.828444e-01   6.136433e-04   2.951606e-03   5.953578e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           107   1.068704e+00   8.517724e-03   7.967612e-03   9.127809e-01   9.561968e-04   4.275986e-03   5.868212e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           108   9.533420e-01   5.953308e-03   5.581317e-03   8.723512e-01   9.219338e-04   4.229384e-03   5.778339e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           109   8.812761e-01   4.578192e-03   4.075056e-03   8.541025e-01   4.882302e-04   4.503560e-03   5.785987e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           110   8.562139e-01   3.748192e-03   3.089127e-03   8.656898e-01   5.877233e-04   4.590550e-03   4.853331e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           111   7.347378e-01   3.018421e-03   2.289477e-03   8.437938e-01   6.752207e-04   4.505950e-03   4.845860e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           112   5.636477e-01   2.339287e-03   1.688331e-03   9.788676e-01   5.087462e-04   4.258129e-03   4.593247e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           113   5.152261e-01   1.790306e-03   1.254565e-03   8.798942e-01   5.329257e-04   3.842055e-03   4.082900e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           114   5.342855e-01   1.261843e-03   9.175259e-04   9.283151e-01   7.930710e-04   3.330390e-03   4.175105e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           115   5.562737e-01   1.001984e-03   8.508858e-04   8.234476e-01   6.006463e-04   2.952371e-03   4.468308e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           116   5.631587e-01   1.290913e-03   1.124074e-03   9.898545e-01   5.449672e-04   2.547818e-03   4.575626e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           117   5.499965e-01   1.486751e-03   1.374368e-03   7.918636e-01   5.251585e-04   2.136893e-03   5.108246e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           118   5.484477e-01   1.665223e-03   1.643376e-03   7.526998e-01   2.109209e-04   1.737508e-03   5.197049e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+           119   5.481401e-01   1.567686e-03   1.643371e-03   8.798161e-01   3.908201e-04   1.378734e-03   4.953019e-04 
+Reversed flow on  50 faces on MINI_water_air: top
+TimeStep    6: Time  6.000000e-04
+           120   5.659819e-01   1.567743e-03   1.722272e-03   8.320120e-01   5.876345e-04   1.162000e-03   4.794365e-04 
+Reversed flow on  39 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           121   1.531579e+00   2.445473e+00   2.062441e+00   8.123930e-01   3.790403e+00   2.296150e-02   6.842561e-02 
+Reversed flow on  34 faces on MINI_water_air: top
+           122   1.577117e+00   1.443897e-01   5.795848e-02   8.985280e-01   3.694391e-01   1.458261e-02   1.377231e-02 
+Reversed flow on  34 faces on MINI_water_air: top
+           123   1.471782e+00   4.578560e-02   3.038317e-02   8.418525e-01   3.809644e-02   1.483430e-02   3.068198e-03 
+Reversed flow on  34 faces on MINI_water_air: top
+           124   1.292697e+00   2.310835e-02   1.848301e-02   8.113250e-01   4.962516e-03   1.759013e-02   1.405461e-03 
+Reversed flow on  34 faces on MINI_water_air: top
+           125   1.176972e+00   1.414901e-02   1.229670e-02   8.039011e-01   1.634342e-03   2.117629e-02   1.588487e-03 
+Reversed flow on  34 faces on MINI_water_air: top
+           126   1.148939e+00   9.622658e-03   8.665097e-03   9.135317e-01   1.639482e-03   2.541278e-02   1.093299e-03 
+Reversed flow on  34 faces on MINI_water_air: top
+           127   1.060555e+00   7.039914e-03   6.785014e-03   8.968451e-01   1.210975e-03   3.017466e-02   7.466774e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           128   9.818366e-01   5.635156e-03   5.600078e-03   8.541452e-01   1.006555e-03   3.555599e-02   5.090506e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           129   9.175860e-01   4.465592e-03   4.514976e-03   9.526409e-01   7.994045e-04   4.128392e-02   5.471794e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           130   8.617887e-01   3.694842e-03   3.792945e-03   9.500388e-01   6.439470e-04   4.698009e-02   5.228205e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           131   8.230477e-01   3.027018e-03   3.126898e-03   8.330631e-01   4.574121e-04   5.228784e-02   4.585798e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           132   8.033479e-01   2.485258e-03   2.567410e-03   8.551189e-01   9.109203e-04   5.681541e-02   3.321111e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           133   8.312874e-01   1.970817e-03   2.036293e-03   8.484210e-01   1.951160e-04   6.001667e-02   3.398576e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           134   9.068230e-01   1.927087e-03   1.869975e-03   8.668450e-01   3.901057e-04   6.141545e-02   3.312737e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           135   1.012679e+00   2.116010e-03   1.881717e-03   8.175966e-01   7.411661e-04   6.034140e-02   2.846118e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           136   1.135947e+00   2.533450e-03   2.191207e-03   8.952954e-01   2.966688e-04   5.634594e-02   4.778062e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           137   1.280886e+00   2.578404e-03   2.119634e-03   8.867181e-01   1.835722e-03   5.004222e-02   4.534794e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           138   1.422884e+00   3.349269e-03   2.794985e-03   8.589471e-01   3.690024e-04   4.204793e-02   5.592931e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+           139   1.504213e+00   3.648205e-03   3.043817e-03   8.756959e-01   3.051331e-04   3.360700e-02   5.170481e-04 
+Reversed flow on  34 faces on MINI_water_air: top
+TimeStep    7: Time  7.000000e-04
+           140   1.445428e+00   3.757678e-03   3.551034e-03   9.123156e-01   2.329682e-04   2.574777e-02   4.809954e-04 
+Reversed flow on  21 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           141   3.070162e+00   3.357001e+00   2.819818e+00   6.845272e-01   5.405162e+00   1.217799e-01   5.904655e-02 
+Reversed flow on  15 faces on MINI_water_air: top
+           142   2.975962e+00   1.789428e-01   6.496098e-02   9.117025e-01   5.286899e-01   8.743178e-02   1.184371e-02 
+Reversed flow on  15 faces on MINI_water_air: top
+           143   2.695953e+00   3.756940e-02   2.016807e-02   1.005561e+00   5.408098e-02   6.059234e-02   2.559775e-03 
+Reversed flow on  15 faces on MINI_water_air: top
+           144   2.673330e+00   1.552270e-02   1.491620e-02   1.073820e+00   5.377714e-03   3.982993e-02   1.609685e-03 
+Reversed flow on  15 faces on MINI_water_air: top
+           145   2.513134e+00   1.189366e-02   1.118077e-02   9.631963e-01   1.370920e-03   3.361427e-02   1.416114e-03 
+Reversed flow on  15 faces on MINI_water_air: top
+           146   2.263204e+00   1.055054e-02   9.731938e-03   8.943436e-01   9.939904e-04   3.859435e-02   1.257020e-03 
+Reversed flow on  15 faces on MINI_water_air: top
+           147   1.974126e+00   9.247469e-03   8.415640e-03   9.584307e-01   7.028441e-04   4.508341e-02   1.204409e-03 
+Reversed flow on  15 faces on MINI_water_air: top
+           148   1.760072e+00   7.634334e-03   6.890059e-03   9.176045e-01   1.991148e-03   4.888770e-02   1.045864e-03 
+Reversed flow on  15 faces on MINI_water_air: top
+           149   1.585697e+00   5.603816e-03   5.255544e-03   7.824490e-01   1.161211e-03   4.984608e-02   7.930191e-04 
+Reversed flow on  15 faces on MINI_water_air: top
+           150   1.486214e+00   3.866101e-03   2.914155e-03   9.340360e-01   1.488810e-03   4.933071e-02   6.893949e-04 
+Reversed flow on  15 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           151   1.406823e+00   3.093291e-03   2.714331e-03   9.578808e-01   1.124184e-03   4.705161e-02   4.748800e-04 
+Reversed flow on  15 faces on MINI_water_air: top
+           152   1.328168e+00   2.693518e-03   2.351163e-03   9.326771e-01   5.650031e-04   4.496358e-02   6.573593e-04 
+Reversed flow on  15 faces on MINI_water_air: top
+           153   1.576883e+00   2.736183e-03   2.862799e-03   8.113317e-01   9.300504e-04   4.228113e-02   6.828060e-04 
+Reversed flow on  15 faces on MINI_water_air: top
+           154   1.854088e+00   3.684159e-03   3.740206e-03   9.372190e-01   2.310500e-03   3.956706e-02   5.755333e-04 
+Reversed flow on  14 faces on MINI_water_air: top
+           155   2.036902e+00   5.204290e-03   5.076129e-03   7.883309e-01   3.763804e-03   3.718454e-02   8.506426e-04 
+Reversed flow on  14 faces on MINI_water_air: top
+           156   2.068088e+00   6.186870e-03   5.940349e-03   8.352997e-01   9.860623e-04   3.466487e-02   7.541191e-04 
+Reversed flow on  14 faces on MINI_water_air: top
+           157   1.913048e+00   6.166374e-03   5.704733e-03   8.024863e-01   1.884383e-03   3.211507e-02   8.977888e-04 
+Reversed flow on  14 faces on MINI_water_air: top
+           158   1.675568e+00   5.649537e-03   5.039627e-03   9.346478e-01   2.012622e-03   2.965094e-02   1.057620e-03 
+Reversed flow on  14 faces on MINI_water_air: top
+           159   1.392751e+00   5.024764e-03   4.789233e-03   8.076880e-01   6.628210e-04   2.719459e-02   8.517017e-04 
+Reversed flow on  14 faces on MINI_water_air: top
+TimeStep    8: Time  8.000000e-04
+           160   1.116863e+00   4.303716e-03   3.931818e-03   9.457505e-01   4.437502e-04   2.472674e-02   8.638576e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           161   3.372997e+00   4.399726e+00   3.712313e+00   8.121715e-01   7.563314e+00   3.323199e-01   5.149085e-02 
+           162   3.667882e+00   2.360579e-01   1.087835e-01   9.555168e-01   7.481009e-01   5.268635e-02   1.079284e-02 
+           163   3.294171e+00   4.670611e-02   3.217344e-02   9.294124e-01   7.575435e-02   3.646829e-02   2.249405e-03 
+           164   2.851442e+00   1.926972e-02   1.567343e-02   8.897153e-01   7.604564e-03   2.387563e-02   9.935301e-04 
+           165   2.444320e+00   1.319032e-02   1.054107e-02   9.984014e-01   1.175107e-03   1.743310e-02   1.200646e-03 
+           166   2.122370e+00   9.806523e-03   7.550811e-03   1.122351e+00   6.504421e-04   2.108554e-02   9.238175e-04 
+           167   1.877539e+00   7.733836e-03   6.111171e-03   9.389040e-01   1.126124e-03   2.958818e-02   1.054599e-03 
+           168   1.817104e+00   6.568137e-03   5.160701e-03   9.530610e-01   8.494191e-04   3.792509e-02   1.169822e-03 
+           169   1.912312e+00   6.110806e-03   4.360362e-03   8.866807e-01   7.860181e-04   4.421055e-02   1.576664e-03 
+           170   1.805755e+00   5.932955e-03   3.806275e-03   8.570534e-01   1.983836e-04   4.898633e-02   1.265929e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           171   1.695364e+00   5.516767e-03   3.191206e-03   8.975403e-01   6.553669e-04   4.712043e-02   1.162139e-03 
+           172   1.609995e+00   4.914776e-03   2.649293e-03   9.065720e-01   1.060205e-03   4.236766e-02   1.023000e-03 
+           173   1.470878e+00   4.361733e-03   2.688521e-03   9.241507e-01   1.330456e-03   3.742093e-02   8.686236e-04 
+           174   1.328759e+00   3.558967e-03   3.464683e-03   9.548511e-01   1.847290e-03   3.215098e-02   8.726322e-04 
+           175   1.202372e+00   2.708558e-03   3.258533e-03   8.755682e-01   1.187128e-03   2.744692e-02   7.363283e-04 
+           176   1.105163e+00   2.476493e-03   2.850500e-03   1.056292e+00   7.553750e-04   2.481646e-02   8.244327e-04 
+           177   1.051496e+00   2.324202e-03   2.244968e-03   1.047143e+00   5.281766e-04   2.489928e-02   9.835968e-04 
+           178   1.060182e+00   2.121973e-03   1.593356e-03   1.105810e+00   3.768250e-04   2.876735e-02   9.573667e-04 
+           179   1.088442e+00   1.812407e-03   1.137624e-03   9.767321e-01   6.529317e-04   3.667354e-02   9.891296e-04 
+TimeStep    9: Time  9.000000e-04
+           180   1.124544e+00   2.191671e-03   1.205151e-03   8.414538e-01   8.125311e-04   4.802250e-02   1.046067e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           181   2.080331e+00   5.584192e+00   4.698867e+00   8.968026e-01   1.030939e+01   3.696614e-01   4.467891e-02 
+           182   2.289317e+00   3.126971e-01   1.687032e-01   1.071131e+00   1.028858e+00   4.005458e-01   9.772241e-03 
+           183   2.586428e+00   7.770910e-02   5.382098e-02   1.102568e+00   9.793441e-02   4.922971e-01   2.911871e-03 
+           184   2.636912e+00   3.997986e-02   3.106420e-02   8.603484e-01   7.047167e-03   5.926897e-01   1.867050e-03 
+           185   2.494879e+00   2.451110e-02   2.081255e-02   9.731729e-01   1.544158e-03   6.982874e-01   1.368156e-03 
+           186   2.294122e+00   1.573704e-02   1.446374e-02   1.088434e+00   1.735985e-03   7.987792e-01   1.191260e-03 
+           187   2.103132e+00   1.079959e-02   1.062227e-02   1.013728e+00   1.279538e-03   8.834759e-01   8.130564e-04 
+           188   1.937770e+00   8.121291e-03   8.260727e-03   8.655786e-01   1.171771e-03   9.691013e-01   8.708174e-04 
+           189   1.804248e+00   7.455649e-03   7.138662e-03   8.865222e-01   1.439988e-03   1.053182e+00   9.319947e-04 
+           190   1.651856e+00   7.317128e-03   6.903245e-03   1.028717e+00   1.497986e-03   1.130900e+00   9.154771e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           191   1.469333e+00   7.002429e-03   6.670637e-03   9.697045e-01   1.177083e-03   1.200463e+00   7.017917e-04 
+           192   1.287112e+00   6.309471e-03   6.037395e-03   9.122801e-01   9.508605e-04   1.259730e+00   5.984877e-04 
+           193   1.151933e+00   5.546887e-03   5.248056e-03   9.963058e-01   6.101560e-04   1.303325e+00   4.869496e-04 
+           194   1.109157e+00   4.811062e-03   4.521214e-03   9.880435e-01   8.181363e-04   1.317939e+00   4.986752e-04 
+           195   1.135408e+00   4.417369e-03   4.077486e-03   9.474638e-01   7.484534e-04   1.301169e+00   4.169340e-04 
+           196   1.215092e+00   4.261433e-03   3.801545e-03   9.674156e-01   3.207705e-04   1.247380e+00   6.019939e-04 
+           197   1.357617e+00   4.244524e-03   3.574474e-03   1.041101e+00   2.886478e-04   1.150758e+00   7.304937e-04 
+           198   1.559244e+00   4.468890e-03   3.506174e-03   1.000974e+00   5.092141e-04   1.014567e+00   7.427210e-04 
+           199   1.752096e+00   4.646162e-03   3.872156e-03   8.702574e-01   3.135247e-04   8.489562e-01   9.919335e-04 
+TimeStep   10: Time  1.000000e-03
+           200   1.877936e+00   4.645143e-03   4.301818e-03   1.026712e+00   1.424554e-04   6.682536e-01   1.122553e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           201   4.115191e+00   6.902682e+00   5.791949e+00   9.557260e-01   1.370103e+01   2.562243e+00   4.145619e-02 
+           202   3.647777e+00   4.092480e-01   2.427781e-01   1.132627e+00   1.363622e+00   2.207514e+00   1.014609e-02 
+           203   3.625917e+00   1.277496e-01   9.286509e-02   1.123712e+00   1.325203e-01   1.694841e+00   3.962447e-03 
+           204   3.818658e+00   7.159290e-02   5.386724e-02   1.153360e+00   1.458480e-02   1.116635e+00   2.726735e-03 
+           205   3.864619e+00   4.517574e-02   3.263416e-02   9.763499e-01   3.245407e-03   6.082189e-01   2.750169e-03 
+           206   3.564081e+00   2.985613e-02   2.198733e-02   9.902072e-01   3.618427e-03   4.416249e-01   3.001140e-03 
+           207   3.381994e+00   2.018772e-02   1.504935e-02   9.931406e-01   7.063339e-04   6.477369e-01   2.962537e-03 
+           208   3.129791e+00   1.557954e-02   1.091714e-02   8.980980e-01   9.226983e-04   8.582903e-01   2.758345e-03 
+           209   2.789290e+00   1.322403e-02   8.916451e-03   8.922373e-01   7.644176e-04   9.974929e-01   2.552277e-03 
+           210   2.397404e+00   1.150731e-02   7.755547e-03   9.489388e-01   1.492922e-03   1.077267e+00   1.732995e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           211   1.992607e+00   9.924951e-03   7.677848e-03   9.609612e-01   1.202768e-03   1.105624e+00   1.995099e-03 
+           212   1.748661e+00   6.727116e-03   5.540623e-03   1.027336e+00   1.437607e-03   1.108429e+00   1.417088e-03 
+           213   1.881718e+00   4.984009e-03   4.593279e-03   9.925194e-01   2.618473e-03   1.083724e+00   1.126419e-03 
+           214   2.204193e+00   5.698075e-03   5.519182e-03   8.658570e-01   2.715934e-03   1.045015e+00   9.558519e-04 
+           215   2.486998e+00   7.322897e-03   6.802309e-03   1.006606e+00   3.239935e-03   1.002354e+00   9.230511e-04 
+           216   2.615466e+00   9.058990e-03   8.289632e-03   8.857727e-01   2.991045e-03   9.574887e-01   1.046973e-03 
+           217   2.552260e+00   8.978980e-03   8.305302e-03   1.149634e+00   8.984007e-04   9.038168e-01   1.107585e-03 
+           218   2.316082e+00   8.280530e-03   7.596538e-03   1.057764e+00   6.785090e-04   8.478908e-01   1.200335e-03 
+           219   1.998971e+00   7.820554e-03   6.952978e-03   9.885339e-01   7.141985e-04   7.937372e-01   1.171151e-03 
+TimeStep   11: Time  1.100000e-03
+           220   1.682951e+00   6.896018e-03   6.087234e-03   8.279088e-01   6.542380e-04   7.413374e-01   1.137733e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           221   5.029058e+00   8.336112e+00   7.029085e+00   7.213296e-01   1.780470e+01   4.790093e-01   3.737482e-02 
+           222   6.256546e+00   5.160809e-01   3.429207e-01   9.091302e-01   1.765847e+00   9.107514e-02   9.347303e-03 
+           223   6.180092e+00   1.855034e-01   1.457530e-01   9.655134e-01   1.814562e-01   2.774960e-01   2.278671e-03 
+           224   5.398983e+00   1.066912e-01   8.124590e-02   9.370681e-01   1.546743e-02   4.079874e-01   1.098163e-03 
+           225   4.458894e+00   6.619903e-02   5.112625e-02   1.029648e+00   3.898351e-03   5.029151e-01   1.699777e-03 
+           226   3.441479e+00   4.152829e-02   3.156679e-02   8.960189e-01   2.416643e-03   5.778573e-01   1.555820e-03 
+           227   2.660492e+00   2.631093e-02   2.042143e-02   1.032632e+00   8.214519e-04   6.308659e-01   1.917569e-03 
+           228   2.467837e+00   1.693683e-02   1.274349e-02   9.379429e-01   3.297529e-04   6.678176e-01   2.076169e-03 
+           229   2.496604e+00   1.178027e-02   8.353599e-03   9.750425e-01   4.680026e-04   6.758063e-01   1.874067e-03 
+           230   2.600513e+00   9.484593e-03   6.416434e-03   1.014065e+00   3.946624e-04   6.471929e-01   1.935866e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           231   2.760545e+00   9.048225e-03   5.835830e-03   8.232349e-01   2.418042e-03   5.658078e-01   1.610755e-03 
+           232   2.562433e+00   9.818144e-03   6.984208e-03   8.517869e-01   4.933405e-04   4.685502e-01   2.292126e-03 
+           233   2.282277e+00   8.901210e-03   5.792276e-03   1.003797e+00   9.329406e-04   4.035193e-01   1.816974e-03 
+           234   2.020107e+00   7.115540e-03   4.495376e-03   1.026391e+00   5.431495e-04   3.299128e-01   1.473298e-03 
+           235   1.907519e+00   5.346683e-03   3.863623e-03   1.168455e+00   2.826623e-03   2.708807e-01   1.398523e-03 
+           236   1.845773e+00   4.330643e-03   3.974387e-03   8.978395e-01   8.020254e-04   2.224392e-01   8.531841e-04 
+           237   1.732281e+00   3.128982e-03   3.118575e-03   1.107000e+00   1.393564e-03   1.842292e-01   1.124097e-03 
+           238   1.550311e+00   3.789068e-03   3.826433e-03   8.869560e-01   1.264546e-03   1.500517e-01   1.126295e-03 
+           239   1.282321e+00   4.156478e-03   4.305434e-03   1.140136e+00   1.267149e-03   1.214216e-01   9.794040e-04 
+TimeStep   12: Time  1.200000e-03
+           240   1.030814e+00   3.991679e-03   3.979000e-03   1.111140e+00   8.465111e-04   1.043720e-01   1.085413e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           241   3.087767e+00   9.905851e+00   8.342806e+00   8.966023e-01   2.266605e+01   1.103401e+00   3.090571e-02 
+           242   3.107460e+00   6.174571e-01   4.450447e-01   1.224969e+00   2.244712e+00   1.030805e+00   7.958907e-03 
+           243   3.019206e+00   2.503146e-01   2.002807e-01   1.130517e+00   2.243861e-01   1.191786e+00   3.859280e-03 
+           244   2.639419e+00   1.456310e-01   1.168973e-01   9.924249e-01   2.388115e-02   1.367991e+00   2.764589e-03 
+           245   2.236004e+00   8.775240e-02   7.027430e-02   1.131387e+00   7.754079e-03   1.524134e+00   1.889403e-03 
+           246   1.875795e+00   5.263014e-02   4.142512e-02   1.030680e+00   2.670394e-03   1.667816e+00   1.529162e-03 
+           247   1.619532e+00   3.191308e-02   2.582641e-02   1.178365e+00   2.240980e-03   1.803989e+00   1.161204e-03 
+           248   1.559996e+00   1.947810e-02   1.590363e-02   9.082224e-01   1.533943e-03   1.912862e+00   1.075169e-03 
+           249   1.578405e+00   1.222222e-02   1.060226e-02   1.046822e+00   1.797750e-03   1.990478e+00   1.019049e-03 
+           250   1.626463e+00   8.471969e-03   8.298039e-03   1.085445e+00   1.608501e-03   2.033951e+00   7.572962e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           251   1.677506e+00   6.890063e-03   6.969712e-03   1.183787e+00   1.431937e-03   2.034293e+00   5.958247e-04 
+           252   1.700567e+00   6.437841e-03   6.262820e-03   1.013097e+00   8.599241e-04   1.996530e+00   5.584638e-04 
+           253   1.655394e+00   5.707895e-03   5.365883e-03   1.149228e+00   6.171066e-04   1.932941e+00   4.738675e-04 
+           254   1.586728e+00   5.211365e-03   4.730263e-03   1.214479e+00   3.094612e-04   1.846756e+00   5.511453e-04 
+           255   1.532844e+00   4.904066e-03   4.376808e-03   1.144934e+00   6.345870e-04   1.729161e+00   6.763703e-04 
+           256   1.519309e+00   4.786714e-03   4.149396e-03   1.027728e+00   1.156515e-03   1.575807e+00   7.884301e-04 
+           257   1.547410e+00   5.074845e-03   4.453648e-03   1.194314e+00   1.832344e-04   1.385082e+00   9.507088e-04 
+           258   1.589545e+00   4.733908e-03   4.333011e-03   1.025010e+00   1.400138e-04   1.155022e+00   1.113412e-03 
+           259   1.674838e+00   4.689204e-03   4.236739e-03   9.425232e-01   6.889646e-05   8.906682e-01   1.295300e-03 
+TimeStep   13: Time  1.300000e-03
+           260   1.814952e+00   4.874693e-03   4.500325e-03   1.071058e+00   2.900509e-04   6.051860e-01   1.489242e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           261   3.601445e+00   1.159454e+01   9.762132e+00   9.846271e-01   2.834882e+01   3.303729e+00   3.150870e-02 
+           262   3.688544e+00   7.300258e-01   5.580824e-01   1.151454e+00   2.823480e+00   2.694061e+00   1.097032e-02 
+           263   3.889143e+00   3.276622e-01   2.540909e-01   1.185411e+00   2.802637e-01   1.996904e+00   7.039852e-03 
+           264   4.054166e+00   1.915100e-01   1.485861e-01   1.218809e+00   2.673073e-02   1.200841e+00   4.598875e-03 
+           265   3.443672e+00   1.156962e-01   9.037821e-02   1.159758e+00   4.832832e-03   7.011733e-01   2.971289e-03 
+           266   2.853143e+00   7.060383e-02   5.681913e-02   1.153208e+00   1.053376e-03   6.447711e-01   2.299241e-03 
+           267   2.336985e+00   4.317593e-02   3.429357e-02   1.092982e+00   1.034903e-03   8.026978e-01   2.427649e-03 
+           268   1.975849e+00   2.665972e-02   2.112937e-02   1.099836e+00   5.103864e-04   9.407500e-01   2.319859e-03 
+           269   1.736784e+00   1.644629e-02   1.291059e-02   1.150422e+00   5.998317e-04   1.030154e+00   2.239129e-03 
+           270   1.598354e+00   1.042784e-02   8.334089e-03   1.076385e+00   5.031954e-04   1.094085e+00   1.877038e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           271   1.712481e+00   6.794374e-03   5.697054e-03   1.004768e+00   1.002285e-03   1.140818e+00   1.423092e-03 
+           272   1.952228e+00   5.393098e-03   4.592348e-03   1.201539e+00   1.212689e-03   1.162803e+00   1.331543e-03 
+           273   2.128568e+00   6.410593e-03   5.713020e-03   1.310065e+00   1.509415e-03   1.179901e+00   9.683143e-04 
+           274   2.172516e+00   6.843109e-03   6.208601e-03   1.225841e+00   1.023998e-03   1.190673e+00   1.016811e-03 
+           275   2.066460e+00   7.017670e-03   6.543579e-03   1.159161e+00   7.396007e-04   1.191550e+00   1.251021e-03 
+           276   1.829373e+00   6.861300e-03   6.439563e-03   1.296013e+00   3.064668e-03   1.179807e+00   9.723902e-04 
+           277   1.509442e+00   6.335641e-03   5.999551e-03   9.877497e-01   1.323626e-03   1.160728e+00   1.000225e-03 
+           278   1.194145e+00   5.764376e-03   5.418863e-03   1.129898e+00   6.965947e-04   1.129352e+00   1.068853e-03 
+           279   8.943967e-01   4.035675e-03   4.159626e-03   1.222890e+00   1.503369e-03   1.094481e+00   8.330379e-04 
+TimeStep   14: Time  1.400000e-03
+           280   7.111394e-01   2.524683e-03   2.963551e-03   1.110027e+00   5.315550e-04   1.058673e+00   7.500683e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           281   2.838223e+00   1.339544e+01   1.131853e+01   1.052041e+00   3.490579e+01   2.153178e+00   2.748687e-02 
+           282   3.787192e+00   8.403003e-01   6.950199e-01   1.388193e+00   3.472837e+00   1.594356e+00   7.548210e-03 
+           283   3.683822e+00   4.079339e-01   3.304852e-01   1.060991e+00   3.470677e-01   1.743731e+00   3.379173e-03 
+           284   3.135886e+00   2.416579e-01   1.935265e-01   1.169966e+00   3.884186e-02   1.644856e+00   1.407258e-03 
+           285   2.265572e+00   1.452618e-01   1.151750e-01   1.142670e+00   5.794537e-03   1.529346e+00   9.876883e-04 
+           286   1.422930e+00   8.716329e-02   6.961447e-02   1.270322e+00   3.994305e-03   1.397527e+00   1.261925e-03 
+           287   1.153889e+00   5.189473e-02   4.224254e-02   1.027246e+00   1.869657e-03   1.258151e+00   1.328970e-03 
+           288   1.068477e+00   3.081863e-02   2.511891e-02   1.187190e+00   1.105410e-03   1.135846e+00   1.324915e-03 
+           289   1.028739e+00   1.833904e-02   1.466849e-02   1.007479e+00   8.197232e-04   1.020648e+00   1.091804e-03 
+           290   9.709004e-01   1.097152e-02   8.790171e-03   1.100028e+00   6.785429e-04   9.093984e-01   1.020312e-03 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           291   9.123316e-01   6.595903e-03   5.454154e-03   1.191901e+00   6.270292e-04   8.060984e-01   9.239513e-04 
+           292   8.643448e-01   4.018684e-03   3.472114e-03   1.217444e+00   7.152424e-04   7.127497e-01   9.791858e-04 
+           293   7.975079e-01   2.666134e-03   2.582037e-03   1.281784e+00   7.003601e-04   6.275642e-01   9.387753e-04 
+           294   7.201550e-01   2.096093e-03   2.228639e-03   1.172034e+00   5.522121e-04   5.533804e-01   8.605883e-04 
+           295   6.377669e-01   1.838477e-03   2.027196e-03   1.351506e+00   3.727984e-04   4.907544e-01   7.671743e-04 
+           296   5.765455e-01   1.651882e-03   1.813120e-03   1.283589e+00   2.654973e-04   4.339532e-01   7.022179e-04 
+           297   5.398948e-01   1.382730e-03   1.527113e-03   1.165644e+00   4.987205e-04   3.858901e-01   6.942532e-04 
+           298   5.346593e-01   1.579878e-03   1.663046e-03   1.241332e+00   1.972644e-04   3.470695e-01   5.806977e-04 
+           299   5.504492e-01   1.328663e-03   1.421637e-03   1.155761e+00   2.732638e-04   3.118231e-01   5.314016e-04 
+TimeStep   15: Time  1.500000e-03
+           300   5.813335e-01   1.160161e-03   1.261217e-03   1.179142e+00   3.202754e-04   2.817272e-01   5.315534e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           301   2.285043e+00   1.532074e+01   1.295078e+01   1.125052e+00   4.241064e+01   6.690539e-01   2.404449e-02 
+           302   2.372111e+00   9.662699e-01   8.281799e-01   1.533857e+00   4.219113e+00   6.299201e-01   5.696534e-03 
+           303   2.176956e+00   4.974757e-01   4.031657e-01   1.254566e+00   4.218166e-01   5.891078e-01   2.255687e-03 
+           304   1.943308e+00   2.959163e-01   2.374166e-01   1.335500e+00   4.483323e-02   5.538579e-01   1.409176e-03 
+           305   2.003154e+00   1.775504e-01   1.428415e-01   1.232254e+00   4.790154e-03   5.226556e-01   1.013661e-03 
+           306   1.724598e+00   1.064876e-01   8.694619e-02   1.270160e+00   2.900062e-03   4.905663e-01   9.811794e-04 
+           307   1.518548e+00   6.354151e-02   5.145038e-02   1.093991e+00   2.975207e-03   4.588183e-01   8.460815e-04 
+           308   1.302801e+00   3.807530e-02   3.205982e-02   1.267822e+00   1.138750e-03   4.271884e-01   8.985346e-04 
+           309   1.078821e+00   2.284527e-02   1.896565e-02   1.123670e+00   8.165567e-04   3.954969e-01   9.091746e-04 
+           310   8.448325e-01   1.399873e-02   1.172872e-02   9.938023e-01   1.046025e-03   3.647547e-01   8.849207e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           311   6.450722e-01   8.741475e-03   7.399630e-03   1.074283e+00   8.730089e-04   3.344311e-01   8.181016e-04 
+           312   5.390015e-01   5.554516e-03   4.891788e-03   1.075183e+00   9.299657e-04   3.056421e-01   7.097931e-04 
+           313   5.190512e-01   3.565208e-03   3.264144e-03   1.273753e+00   4.156821e-04   2.786186e-01   5.453344e-04 
+           314   5.211464e-01   2.385249e-03   2.390468e-03   1.252714e+00   3.356687e-04   2.534110e-01   4.315099e-04 
+           315   5.297302e-01   1.792619e-03   1.934159e-03   1.213398e+00   5.606280e-04   2.303259e-01   3.948531e-04 
+           316   5.340335e-01   1.491855e-03   1.513587e-03   1.105213e+00   2.945389e-04   2.101795e-01   3.987610e-04 
+           317   5.219264e-01   1.476172e-03   1.415949e-03   1.239150e+00   5.382445e-04   1.918950e-01   3.895603e-04 
+           318   4.880621e-01   1.624145e-03   1.531036e-03   1.163053e+00   6.852076e-04   1.757032e-01   3.996636e-04 
+           319   4.361550e-01   1.617163e-03   1.476533e-03   1.117331e+00   2.850283e-04   1.613752e-01   4.019500e-04 
+TimeStep   16: Time  1.600000e-03
+           320   3.780938e-01   1.412612e-03   1.239347e-03   1.194349e+00   1.807918e-04   1.489067e-01   3.905818e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           321   1.355487e+00   1.736069e+01   1.468962e+01   1.138527e+00   5.090858e+01   2.250949e-01   2.273645e-02 
+           322   1.301379e+00   1.118973e+00   9.782845e-01   1.375981e+00   5.064093e+00   2.124691e-01   5.686223e-03 
+           323   1.228097e+00   5.935850e-01   4.815404e-01   1.129909e+00   5.088132e-01   1.978374e-01   2.079906e-03 
+           324   1.050287e+00   3.539184e-01   2.834226e-01   1.456257e+00   5.274010e-02   1.833269e-01   1.033398e-03 
+           325   8.846524e-01   2.128404e-01   1.711811e-01   1.631033e+00   9.117870e-03   1.693399e-01   7.123382e-04 
+           326   7.432986e-01   1.282656e-01   1.041834e-01   1.533979e+00   3.303744e-03   1.563790e-01   6.703839e-04 
+           327   6.661362e-01   7.637927e-02   6.191718e-02   1.347801e+00   1.830919e-03   1.443646e-01   6.024517e-04 
+           328   6.272647e-01   4.535468e-02   3.660925e-02   1.246077e+00   1.263746e-03   1.333534e-01   5.981305e-04 
+           329   5.656431e-01   2.702980e-02   2.187312e-02   1.120254e+00   1.209656e-03   1.231956e-01   6.479257e-04 
+           330   5.194022e-01   1.624544e-02   1.346780e-02   1.157732e+00   8.199032e-04   1.137020e-01   6.582579e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           331   4.961199e-01   9.783865e-03   8.297622e-03   1.030014e+00   9.391373e-04   1.049331e-01   7.135119e-04 
+           332   4.888307e-01   6.019144e-03   5.399919e-03   1.236882e+00   7.679146e-04   9.686673e-02   7.462028e-04 
+           333   4.845432e-01   3.813218e-03   3.662081e-03   1.211221e+00   7.069843e-04   8.931435e-02   7.432144e-04 
+           334   4.761324e-01   2.578706e-03   2.674607e-03   1.265650e+00   4.599405e-04   8.227729e-02   7.196583e-04 
+           335   4.606493e-01   1.888081e-03   2.053835e-03   1.280843e+00   3.584663e-04   7.582989e-02   6.860474e-04 
+           336   4.421474e-01   1.499643e-03   1.729481e-03   1.026994e+00   2.546840e-04   6.984116e-02   6.232472e-04 
+           337   4.246124e-01   1.240082e-03   1.542185e-03   1.161089e+00   2.697021e-04   6.425263e-02   5.232181e-04 
+           338   4.162873e-01   1.253419e-03   1.554000e-03   1.248321e+00   1.979756e-04   5.904162e-02   4.442571e-04 
+           339   4.102860e-01   1.151906e-03   1.405876e-03   1.116643e+00   8.967715e-05   5.422571e-02   3.815156e-04 
+TimeStep   17: Time  1.700000e-03
+           340   4.042640e-01   9.861415e-04   1.229292e-03   1.214026e+00   2.869991e-05   4.977903e-02   3.327723e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           341   1.145473e+00   1.951718e+01   1.653578e+01   1.097093e+00   6.045582e+01   6.220505e-02   2.197564e-02 
+           342   8.688920e-01   1.291083e+00   1.141577e+00   1.368495e+00   6.022040e+00   4.944451e-02   5.733122e-03 
+           343   8.284494e-01   6.980431e-01   5.681121e-01   1.630947e+00   6.058649e-01   4.417113e-02   2.109357e-03 
+           344   7.560903e-01   4.169917e-01   3.351124e-01   1.309981e+00   6.411361e-02   3.994912e-02   1.031320e-03 
+           345   7.008152e-01   2.504708e-01   2.027078e-01   1.151284e+00   8.335396e-03   3.660263e-02   6.729789e-04 
+           346   6.354549e-01   1.502088e-01   1.231781e-01   1.342939e+00   2.649754e-03   3.354037e-02   5.610045e-04 
+           347   5.878022e-01   8.992038e-02   7.423499e-02   1.487827e+00   1.388254e-03   3.061860e-02   4.705828e-04 
+           348   5.658156e-01   5.338168e-02   4.420561e-02   1.633794e+00   1.230727e-03   2.794772e-02   4.182130e-04 
+           349   5.079906e-01   3.164914e-02   2.671714e-02   1.355102e+00   6.633903e-04   2.563823e-02   3.501400e-04 
+           350   4.523599e-01   1.884872e-02   1.616698e-02   1.508645e+00   3.114522e-04   2.369448e-02   3.016019e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           351   4.086109e-01   1.124234e-02   9.759310e-03   1.535076e+00   6.542270e-04   2.202769e-02   3.095281e-04 
+           352   3.796811e-01   6.860856e-03   6.266277e-03   1.325637e+00   4.639832e-04   2.056058e-02   3.275234e-04 
+           353   3.649902e-01   4.225986e-03   4.083565e-03   1.095675e+00   3.521785e-04   1.921414e-02   3.460078e-04 
+           354   3.535375e-01   2.639860e-03   2.731544e-03   1.043344e+00   2.954432e-04   1.798705e-02   3.510092e-04 
+           355   3.416775e-01   1.699721e-03   1.913992e-03   1.317736e+00   2.506870e-04   1.681619e-02   3.493980e-04 
+           356   3.297683e-01   1.142843e-03   1.413677e-03   1.217274e+00   1.471337e-04   1.572304e-02   3.343757e-04 
+           357   3.192393e-01   8.270329e-04   1.097654e-03   1.499017e+00   1.043733e-04   1.468916e-02   3.108617e-04 
+           358   3.306562e-01   6.763169e-04   9.725603e-04   1.225732e+00   1.440953e-04   1.376174e-02   2.756040e-04 
+           359   3.469181e-01   6.043133e-04   9.542204e-04   1.705721e+00   9.861403e-05   1.292884e-02   2.450583e-04 
+TimeStep   18: Time  1.800000e-03
+           360   3.598943e-01   6.534580e-04   1.018685e-03   1.257901e+00   6.245260e-05   1.217617e-02   2.153912e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           361   1.317432e+00   2.179691e+01   1.847707e+01   1.241348e+00   7.111581e+01   4.617225e-02   2.108045e-02 
+           362   1.102696e+00   1.485579e+00   1.314531e+00   1.320851e+00   7.088556e+00   2.750442e-02   5.394694e-03 
+           363   1.030495e+00   8.102991e-01   6.608611e-01   1.715750e+00   7.124958e-01   2.164778e-02   2.035526e-03 
+           364   9.287526e-01   4.843159e-01   3.900887e-01   1.641109e+00   7.511673e-02   1.801790e-02   9.792251e-04 
+           365   8.908654e-01   2.909416e-01   2.357483e-01   1.321737e+00   9.488187e-03   1.514037e-02   6.838191e-04 
+           366   8.858570e-01   1.746206e-01   1.431827e-01   1.219836e+00   2.031385e-03   1.278953e-02   6.102070e-04 
+           367   8.837493e-01   1.045666e-01   8.633116e-02   1.589490e+00   1.733745e-03   1.114045e-02   4.979341e-04 
+           368   8.410775e-01   6.201946e-02   5.116506e-02   1.530431e+00   7.112459e-04   1.006101e-02   4.841739e-04 
+           369   7.844435e-01   3.696677e-02   3.046601e-02   1.442054e+00   8.117021e-04   9.371961e-03   4.669402e-04 
+           370   7.204467e-01   2.207127e-02   1.822469e-02   1.210693e+00   7.242011e-04   8.920839e-03   5.262990e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           371   6.603562e-01   1.320211e-02   1.115286e-02   1.205221e+00   3.550891e-04   8.716398e-03   4.827009e-04 
+           372   5.970223e-01   7.914213e-03   6.796466e-03   1.372166e+00   2.868691e-04   8.718583e-03   4.844242e-04 
+           373   5.613239e-01   4.845812e-03   4.329344e-03   1.518042e+00   3.596126e-04   8.695821e-03   3.844652e-04 
+           374   5.395695e-01   2.959130e-03   2.811102e-03   1.294908e+00   3.252491e-04   8.518483e-03   3.212417e-04 
+           375   5.138400e-01   1.870677e-03   1.992256e-03   1.520843e+00   5.096836e-04   8.417997e-03   2.184657e-04 
+           376   4.907508e-01   1.371201e-03   1.767536e-03   1.362600e+00   2.018728e-04   8.213797e-03   1.972035e-04 
+           377   4.689426e-01   1.110946e-03   1.566464e-03   1.323347e+00   3.220028e-04   7.904679e-03   1.938634e-04 
+           378   4.522492e-01   9.937533e-04   1.420244e-03   1.170386e+00   2.282162e-04   7.595012e-03   1.700576e-04 
+           379   4.392367e-01   9.301019e-04   1.388594e-03   1.508322e+00   1.923440e-04   7.245836e-03   1.763821e-04 
+TimeStep   19: Time  1.900000e-03
+           380   4.227624e-01   9.673936e-04   1.401814e-03   1.491394e+00   1.895600e-04   6.907709e-03   1.691420e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           381   1.681786e+00   2.419396e+01   2.052224e+01   1.217228e+00   8.294257e+01   3.536430e-02   1.920280e-02 
+           382   1.475326e+00   1.689845e+00   1.500060e+00   1.607797e+00   8.269761e+00   1.788119e-02   4.920590e-03 
+           383   1.448158e+00   9.303882e-01   7.607002e-01   1.559915e+00   8.293919e-01   1.181363e-02   1.915134e-03 
+           384   1.269527e+00   5.562779e-01   4.501262e-01   1.372115e+00   8.661248e-02   9.534119e-03   9.484192e-04 
+           385   1.116568e+00   3.339603e-01   2.720215e-01   1.454105e+00   1.206930e-02   8.318625e-03   6.862889e-04 
+           386   9.784044e-01   2.003240e-01   1.652407e-01   1.540686e+00   3.905496e-03   7.520920e-03   6.511276e-04 
+           387   8.664919e-01   1.195951e-01   9.927933e-02   1.491495e+00   1.708653e-03   7.208765e-03   6.238982e-04 
+           388   7.638201e-01   7.111422e-02   5.909835e-02   1.483140e+00   7.522472e-04   7.243656e-03   5.692506e-04 
+           389   6.826637e-01   4.227441e-02   3.523210e-02   1.301746e+00   8.656633e-04   7.430150e-03   5.262802e-04 
+           390   6.126816e-01   2.518085e-02   2.118718e-02   1.370519e+00   8.187397e-04   7.596025e-03   4.817513e-04 
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+           391   5.496252e-01   1.507264e-02   1.315499e-02   1.410339e+00   6.810718e-04   7.666481e-03   4.563048e-04 
+           392   4.935016e-01   9.057630e-03   8.278602e-03   1.364524e+00   2.610562e-04   7.635131e-03   4.229601e-04 
+           393   4.383365e-01   5.459637e-03   5.168593e-03   1.448334e+00   3.788722e-04   7.507661e-03   3.998144e-04 
+           394   4.000604e-01   3.345020e-03   3.444450e-03   1.563665e+00   2.263755e-04   7.301040e-03   3.867275e-04 
+           395   3.827363e-01   2.114204e-03   2.370602e-03   1.428784e+00   9.916048e-05   7.059836e-03   3.660315e-04 
+           396   3.716359e-01   1.391786e-03   1.693196e-03   1.575556e+00   3.062758e-04   6.794351e-03   3.482117e-04 
+           397   3.631496e-01   1.001705e-03   1.338386e-03   1.377476e+00   1.471139e-04   6.539045e-03   3.253507e-04 
+           398   3.538672e-01   8.232951e-04   1.130623e-03   1.516796e+00   1.151037e-04   6.298144e-03   3.022159e-04 
+           399   3.398284e-01   7.687842e-04   1.043365e-03   1.372526e+00   4.011604e-04   6.080066e-03   2.827458e-04 
+TimeStep   20: Time  2.000000e-03
+           400   3.243693e-01   7.582831e-04   1.021925e-03   1.312252e+00   5.120478e-04   5.860000e-03   2.559828e-04 
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\RECOVERY_CALM_RAMP_DT100US_20261104_102853\FINAL.sim... complete (51.313MB in 0.11586s).

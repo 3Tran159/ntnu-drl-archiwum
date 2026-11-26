@@ -1,0 +1,40 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1vdGlvbl9maXhfMjYwNl8yMDI2MTEwM1xraW5lbWF0aWNzXGlucHV0LnNpbQ==
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 11708
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 18:50:01 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\motion_fix_2606_20261103\kinematics\input.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\motion_fix_2606_20261103\kinematics\MiniMotionFix2606.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\motion_fix_2606_20261103\kinematics\MiniMotionFix2606.java:18: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+UserFieldFunction ref=field(s,"MOTION_REF","$$SavedCoord",true);XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("Motion actual vertices");table.getParts().setObjects(walls);table.setExtractVertexData(true);table.setFieldFunctions(List.of(ref));table.extract();table.export(r.resolve("vertices_000.csv").toString(),",");for(String line:Files.readAllLines(r.resolve("vertices_000.csv")).subList(1,Files.readAllLines(r.resolve("vertices_000.csv")).size())){if(line.isBlank())continue;String[] z=line.split(",");if(z.length!=6)throw new IllegalStateException("UnexpectedvertexreferenceCSVschema:"+z.length);for(int j=0;j<3;j++)if(Math.abs(Double.parseDouble(z[j])-Double.parseDouble(z[j+3]))>1e-8)throw new IllegalStateException("SavedCoordnotinitialisedorvertexdataarenotnative");}
+                                                                                                          ^
+
+Loading module: MorpherModel
+java.lang.RuntimeException: Class: class star.morpher.MorpherSpecification
+   ConditionManager: star.common.PhysicsConditionManager_1370
+   error: Condition not found in ConditionManager
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

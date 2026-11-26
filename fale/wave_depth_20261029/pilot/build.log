@@ -1,0 +1,70 @@
+Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVx3YXZlX2RlcHRoXzIwMjYxMDI5XHBpbG90XGJhc2VsaW5lX2NvcHkuc2lt
+*****************************************************************************************
+Warning: CPU contention on 8 processes could not be resolved.
+         CPU affinity will be cleared on those processes.
+
+         This is a strong indication that another server is already running and on some
+         hosts there are now more processes running than there are physical CPU cores.
+
+         Over-subscribing a host can severely affect performance.
+
+         Even when within the limits of hardware multithreading (e.g., hyper-threading),
+         using more processes than CPU cores will likely negatively impact performance.
+
+         The recommended mode of operation is to use the same number of processes as
+         physical CPU cores.
+*****************************************************************************************
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 30696
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 09:32:04 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\wave_depth_20261029\pilot\baseline_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\wave_depth_20261029\WaveTankBuild.java
+F:\ntnu\wave_depth_20261029\WaveTankBuild.java:32: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+      s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                             ^
+F:\ntnu\wave_depth_20261029\WaveTankBuild.java:49: warning: [deprecation] setWaveLength(double) in star.vof.FirstOrderVofWave has been deprecated
+      wave.setWaveLength(lambda);wave.setAmplitude(height/2.0);
+          ^
+F:\ntnu\wave_depth_20261029\WaveTankBuild.java:72: warning: [deprecation] YES in star.vof.VofWaveForcingBoundaryOption has been deprecated
+      inlet.getConditions().get(VofWaveForcingBoundaryOption.class).setSelected(VofWaveForcingBoundaryOption.YES);
+                                                                                                            ^
+F:\ntnu\wave_depth_20261029\WaveTankBuild.java:72: warning: [deprecation] setSelected(int) in star.common.EnumeratedOption has been deprecated
+      inlet.getConditions().get(VofWaveForcingBoundaryOption.class).setSelected(VofWaveForcingBoundaryOption.YES);
+                                                                   ^
+F:\ntnu\wave_depth_20261029\WaveTankBuild.java:73: warning: [deprecation] YES in star.vof.VofWaveDampingBoundaryOption has been deprecated
+      outlet.getConditions().get(VofWaveDampingBoundaryOption.class).setSelected(VofWaveDampingBoundaryOption.YES);
+                                                                                                             ^
+F:\ntnu\wave_depth_20261029\WaveTankBuild.java:73: warning: [deprecation] setSelected(int) in star.common.EnumeratedOption has been deprecated
+      outlet.getConditions().get(VofWaveDampingBoundaryOption.class).setSelected(VofWaveDampingBoundaryOption.YES);
+                                                                    ^
+
+java.lang.RuntimeException: [NTNU_WAVE] java.lang.IllegalStateException: Missing wave field: Velocity of NTNU_W20_H16_X3_PILOT 1; see wave_field_debug.txt
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

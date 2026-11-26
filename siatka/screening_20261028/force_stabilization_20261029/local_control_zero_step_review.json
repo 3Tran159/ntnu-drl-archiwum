@@ -1,0 +1,44 @@
+{
+  "status": "zero_step_API_audit_passed",
+  "updated_at": "2026-10-30T15:50:52.983058+01:00",
+  "macro_sha256": "799e2ea2f2b0e91d84703fec9b46b4322b9d4f4b45ba89abc02388363e86f0f9",
+  "checks": [
+    {
+      "mode": "new_wave_definition",
+      "audit": {
+        "height_m": 0.5,
+        "global_reinitialization": false,
+        "time_s": 0.587,
+        "cells": 317277,
+        "resume_wave": false,
+        "wavelength_m": 20.0,
+        "activation_time_s": 0.587,
+        "flow_steps": 0,
+        "mode": "wave_setup",
+        "height_ramp_s": 0
+      },
+      "source_unchanged": true
+    },
+    {
+      "mode": "saved_wave_definition",
+      "audit": {
+        "height_m": 0.5,
+        "height_ramp_s": 0,
+        "mode": "wave_setup",
+        "flow_steps": 0,
+        "activation_time_s": 0.587,
+        "wavelength_m": 20.0,
+        "resume_wave": true,
+        "cells": 317277,
+        "time_s": 0.587,
+        "global_reinitialization": false
+      },
+      "source_unchanged": true
+    }
+  ],
+  "flow_steps": 0,
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\LOCAL_RECIPE_CHECK_770086a7a84e48029e2087cf74af4110",
+  "source_unchanged": true,
+  "source_is_settled": false,
+  "scope": "STAR API definition and saved-wave binding check only. No flow, mesh convergence or accuracy acceptance."
+}

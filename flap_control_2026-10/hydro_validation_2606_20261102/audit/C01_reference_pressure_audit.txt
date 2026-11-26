@@ -1,0 +1,47 @@
+time_s=4.699199999999548
+model=star.metrics.ThreeDimensionalModel
+model=star.mapping.SolutionInterpolationModel
+model=star.material.EulerianMultiPhaseModel
+model=star.common.MultiPhaseInteractionModel
+model=star.vof.SegregatedVofModel
+model=star.mixturemultiphase.SegregatedVolumeFluxBasedFlowModel
+model=star.metrics.GradientsModel
+model=star.common.ImplicitUnsteadyModel
+model=star.vof.VofWaveModel
+model=star.vof.VofWaveZoneDistanceModel
+model=star.flow.GravityModel
+model=star.turbulence.TurbulentModel
+model=star.turbulence.RansTurbulenceModel
+model=star.kwturb.KOmegaTurbulence
+model=star.kwturb.SstKwTurbModel
+model=star.walldistance.WallDistanceModel
+model=star.kwturb.KwAllYplusWallTreatment
+model=star.metrics.CellQualityRemediationModel
+reference_pressure_Pa=101325.0
+gravity=[0.0, 0.0, -9.8100004196167]
+reference=star.flow.ReferencePressure 101325.0 101325.0 
+reference=star.flow.MinimumAllowableAbsolutePressure 1000.0 1000.0 
+reference=star.flow.MaximumAllowableAbsolutePressure 1.0E8 1.0E8 
+reference=star.flow.ReferenceAltitude [0.0, 0.0, 2.0]  [0.0, 0.0, 2.0]
+reference=star.flow.Gravity [0.0, 0.0, -9.8100004196167]  [0.0, 0.0, -9.8100004196167]
+reference=star.flow.ReferenceDensity 0.0 0.0 
+reference=star.walldistance.MinimumAllowableWallDistance 1.0E-6 1.0E-6 
+field=Pressure star.common.PrimitiveFieldFunction
+attempt=Pressure part=fluid
+min_Pressure fluid value=-67001.10498376872 xyz=[0.7172865960414909, 0.02, 0.09536023138517835]
+attempt=Pressure part=HF_012_wall
+min_Pressure HF_012_wall value=-67001.10513534445 xyz=[0.7172865347854605, 0.02, 0.09535946851677164]
+field=AbsolutePressure star.common.PrimitiveFieldFunction
+attempt=AbsolutePressure part=fluid
+min_AbsolutePressure fluid value=34323.89501623128 xyz=[0.7172865960414909, 0.02, 0.09536023138517835]
+attempt=AbsolutePressure part=HF_012_wall
+min_AbsolutePressure HF_012_wall value=34323.89486465555 xyz=[0.7172865347854605, 0.02, 0.09535946851677164]
+boundary=DOMAIN.bottom Wall
+boundary=DOMAIN.inlet Velocity Inlet
+boundary=DOMAIN.outlet Pressure Outlet
+ pressure_method=star.common.FunctionScalarProfileMethod
+boundary=DOMAIN.top Pressure Outlet
+ pressure_method=star.common.FunctionScalarProfileMethod
+boundary=HF_012_wall Wall
+boundary=Q2D_span_source Symmetry Plane
+boundary=Q2D_span_target Symmetry Plane

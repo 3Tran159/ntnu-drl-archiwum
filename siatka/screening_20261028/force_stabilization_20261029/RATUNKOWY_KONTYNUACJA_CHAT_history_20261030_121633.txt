@@ -1,0 +1,43 @@
+NTNU - PLIK RATUNKOWY / KONTYNUACJA Z INNEGO CZATU
+Aktualizuj ten plik po kazdej zmianie wlasciciela obliczen.
+
+NAJPIERW
+Przeczytaj RESUME_AT_HOME.txt w tym samym katalogu oraz wave_foil_run_state.json, queue.lock, wave_cycle_policy_current.json i wave_periodicity_current.json. Sprawdz rzeczywiste procesy. Numery PID w notatkach moga byc nieaktualne. Nie uruchamiaj drugiego solvera ani skonczonych kontrolerow.
+
+BIEZACY PRZYPADEK
+W01 H0.5 m, lambda20 m, M10 FS020, 317277 komorek, woda24 m.
+E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2
+Kontynuacja od0.168 s, bez inicjalizacji. Najnowszy zapis obliczen wskazuje latest_checkpoint.json wewnatrz tego katalogu. final.sim jest wynikiem dopiero po completed.json. source_saved_t0.168.sim to zachowany stan wejsciowy.
+Kontroler run_wave_cycle_continuation_r2.py PID37216 / serwer36856 / launcher23564 - zweryfikuj.
+Wczesny stop: watch_wave_periodicity_early.py PID22748. wave_periodicity_current.json jest aktualna ocena; starszy kontroler ma historyczne minimum10 i NIE jest zrodlem aktualnej polityki.
+4 pelne kolejne cykle musza sie powtarzac wg zapisanych kryteriow. 10 jest tylko typowym oczekiwaniem,20 limitem diagnostycznym. Nie czekaj sztucznie do10.
+Uzytkownik dopuscil poprzednio obserwowany blad bilansu dla eksploracji; raportuj go dalej. Nie zmieniaj fizycznych zabezpieczen ani nie nazywaj tych sil zweryfikowanymi koncowo.
+
+STOP I ZAPIS
+Najbezpieczniej przyciskiem Stop and save na http://127.0.0.1:8771/.
+Alternatywnie utworz pusty plik STOP w katalogu AKTUALNEGO kontrolowanego przypadku, zweryfikowanym przez wave_foil_run_state.json. Makro zatrzyma sie na granicy kroku i zapisze final.sim. Poczekaj na completed.json / computation_active:false. Nie zabijaj STAR przy zwyklym zatrzymaniu. Po zapisie obecny serwer pozostaje otwarty.
+Nie usuwaj blokad kiedy ich wlasciciel lub serwer zyje. Nie uruchamiaj ponownie jednorazowego kontrolera r2.
+
+DASHBOARDY
+F:/ntnu/mesh_screening_20261028/dashboard.html
+F:/ntnu/mesh_screening_20261028/professor_dashboard.html
+Kopie dzialajace: F:/ntnu/mesh_screening_20261028/dashboard_work_20261030
+Open_NTNU_Control.cmd otwiera lokalny panel. Serwis manual_control_server.py publikuje status niezaleznie od Work. Po ostatnim restarcie PID584 - zweryfikuj.
+build_manual_dashboard_copy.py publikuje oba oryginaly i kopie. Stary update_status/watch_dashboard_status NIE powinien ich nadpisywac.
+Wykresy CD/CL sledza biezacy czas, chyba ze uzytkownik sam przesunal zakres. Follow live przywraca sledzenie.
+Podglad boczny pochodzi z rzeczywistego zapisanego pola; jego czas moze byc starszy od biezacego czasu solvera. Manifest wave_side_view_current.json, stan renderera wave_side_view_renderer_state.json.
+
+AUTONOMICZNA KOLEJKA
+Uzytkownik zlecil stworzenie i sprawdzenie sterownika wszystkich konfiguracji oraz raportu HTML. To zadanie jest W TRAKCIE, nie jest jeszcze gotowe ani uzbrojone. Obecnie samodzielnie dziala tylko W01 oraz lokalny panel/obserwator zbieznosci.
+Przeczytaj autonomous_campaign_preparation_review.json. L30/L40 wymagaja120/160 m domen, W01 3lambda60 m; L10 40 m wymaga audytowanego przyciecia/przebudowy, nie da sie go poprawnie uzyskac samym dopisaniem pasow.
+Nie udawaj gotowosci W02/W05/W06/W07/W08, dopoki ich wejscia nie przejda audytow.
+Plan: dopasowany calm, W01.5/20, W02.5/30, W01 3lambda/4lambda, pozniej W03.25/20,W04.75/20,W05.25/30,W06.75/30,W07.5/10,W08.5/40. NizszaH i nowa siatka wymagaja dopasowanej bazyH.5/calm. MaksymalnieM15.
+
+WAZNE
+Nie ruszaj osobnej sesji HF_012_C003_regular_waves.
+Nowe duze pliki naE, wszystkie zrodla i proby zachowuj.
+Nie wypisuj licencji, tokenow i prywatnego monitora.
+Biezacy test wydajnosci przypiecia naszego procesu doCPU0/1 zapisuje wave_cpu_affinity_trial.json; sprawdz wynik i aktualna maske. Nie dotyka innych procesow ani ustawien numerycznych.
+Automatyzacja heartbeat pozostaje wstrzymana; nie wlaczaj starej kolejki na podstawie historycznej notatki.
+
+Gdy narzedzia lokalne nie dzialaja: Remote Desktop Commander, device39039a8c-b8fc-4115-9fc5-c058b4b39f04.

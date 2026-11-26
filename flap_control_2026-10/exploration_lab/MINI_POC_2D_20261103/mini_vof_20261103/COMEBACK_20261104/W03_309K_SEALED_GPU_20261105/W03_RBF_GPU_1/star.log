@@ -1,0 +1,59 @@
+Starting local server: starserver.bat -np 1 -gpgpu auto:1 -require-gpgpu-compatibility -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XFcwM18zMDlLX1NFQUxFRF9HUFVfMjAyNjExMDVcVzAzXzMwOUtfT1JJR0lOQUxfQ09QWS5zaW0=
+2026-11-05 22:01:10,975 - star.application.gpgpu_arg_parser - WARNING - GPGPUs on THINKPAD-LUCJAN are already utilized by other processes: 0: 9%
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 8408
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppowerplus checked out from 1999@flex.cd-adapco.com
+Feature ccmppowerplus expires in 8 days
+Thu Nov  5 22:01:41 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\W03_309K_ORIGINAL_COPY.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.1.151
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Loading module: StarSweptMesher
+Loading module: CaeIOCgns
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=1 
+Warning: The requested SolutionHistory file does not exist, F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\HF_foil.simh
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\SealedGpuRbfMorpherProbe.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\SealedGpuRbfMorpherProbe.java:91: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+   s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\SealedGpuRbfMorpherProbe.java:127: warning: [deprecation] IN_PLANE in star.morpher.MorpherSpecification.Type has been deprecated
+     spec.setSelected(MorpherSpecification.Type.IN_PLANE);
+                                               ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\SealedGpuRbfMorpherProbe.java:133: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+   vertices=s.getTableManager().createTable(XyzInternalTable.class);
+                               ^
+
+Loading module: MorpherModel
+java.lang.RuntimeException: Class: class star.morpher.MorpherSpecification
+   ConditionManager: star.common.PhysicsConditionManager_151928
+   error: Condition not found in ConditionManager
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

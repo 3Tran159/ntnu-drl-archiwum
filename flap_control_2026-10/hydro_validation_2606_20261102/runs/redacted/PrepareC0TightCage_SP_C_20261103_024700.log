@@ -1,0 +1,123 @@
+Starting local server: starserver.bat -power -cpubind off -np 8 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcU1BfQ19idWlsZF9lcnJvcl8yMDI2MTEwMl8xOTE4MDcuc2lt
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 31728
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 02:49:10 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\SP_C_build_error_20261102_191807.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:99: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("HYDRO mesh cell audit");table.getParts().setObjects(regions);table.setRepresentation(fv);table.setExtractVertexData(false);table.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("FaceValidity"),s.getFieldFunctionManager().getFunction("CellQuality"),s.getFieldFunctionManager().getFunction("PrismLayerNumber"),s.getFieldFunctionManager().getFunction("PrismCellThickness")));table.extract();table.export(out.resolve("mesh_cells.csv").toString());
+                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:108: warning: [deprecation] setComponents(double,double,double) in star.common.Coordinate has been deprecated
+SurfaceExtruderDirection dir=se.getSurfaceExtruderControls().get(SurfaceExtruderDirection.class);dir.setDirectionMode(SurfaceExtruderDirection.DirectionMode.SPECIFIED);dir.getUserSpecifiedDirection().getDirection().setComponents(0,-.02,0);se.execute();
+                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:112: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+List<Boundary> oldWalls=new ArrayList<>(old.getBoundaryManager().getBoundaries());fixed.removeAll(oldWalls);flap.removeAll(oldWalls);regions.remove(old);s.getRegionManager().removeRegions(List.of(old));fresh.setPresentationName(name);
+                                                                                                                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:124: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:135: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.getParts().setObjects(bs);table.setRepresentation(s.getRepresentationManager().getObject("Volume Mesh"));table.setExtractVertexData(true);table.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Pressure")));table.extract();table.export(out.resolve(name+"_"+label+"_native_wall_vertices.csv").toString());s.getTableManager().removeObjects(table);}
+                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:141: warning: [deprecation] deleteInterface(star.common.Interface) in star.common.InterfaceManager has been deprecated
+for(Interface in:new ArrayList<>(s.getInterfaceManager().getObjects()))s.getInterfaceManager().deleteInterface(in);
+                                                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:142: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+for(Region r:new ArrayList<>(s.getRegionManager().getRegions()))if(!List.of("Background","FlapOverset").contains(r.getPresentationName()))s.getRegionManager().removeRegions(List.of(r));
+                                                                                                                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:157: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+List<Boundary> oldWalls=new ArrayList<>(ov.getBoundaryManager().getBoundaries());flap.removeAll(oldWalls);fixed.removeAll(oldWalls);regions.remove(ov);s.getRegionManager().removeRegions(List.of(ov));ov=replacement;
+                                                                                                                                                                           ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:165: warning: [deprecation] setUseAlternateHoleCutting(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:165: warning: [deprecation] setEnabledZeroDonorCheck(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:165: warning: [deprecation] setCloseProximity(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:165: warning: [deprecation] setPrismLayerShrinkage(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:165: warning: [deprecation] setTreatErrorAsWarning(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:167: warning: [deprecation] getAxisOrigin() in star.motion.RotatingMotion has been deprecated
+RotatingMotion rot=s.get(MotionManager.class).createMotion(RotatingMotion.class,"Flap prescribed rigid rotation");rot.getAxisOrigin().setComponents(xh,.02,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);((RotationAngle)rot.getRotationSpecification()).getRotationAngle().setDefinition("<0 deg>");ov.getValues().get(MotionSpecification.class).setMotion(rot);}
+                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_024700\PrepareC0TightCage.java:167: warning: [deprecation] getAxisDirection() in star.motion.RotatingMotion has been deprecated
+RotatingMotion rot=s.get(MotionManager.class).createMotion(RotatingMotion.class,"Flap prescribed rigid rotation");rot.getAxisOrigin().setComponents(xh,.02,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);((RotationAngle)rot.getRotationSpecification()).getRotationAngle().setDefinition("<0 deg>");ov.getValues().get(MotionSpecification.class).setMotion(rot);}
+                                                                                                                                                                  ^
+
+Loading/configuring connectivity (old|new partitions: 2|8)
+  Background (index 0): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 1): 56722 cells, 150363 faces, 189362 verts.
+Configuring finished
+Creating one part per imported file.
+Reading surface from .stl file: Hydro_TightCage.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.02, Wall Time: 0.01, Memory: 217.47 MB
+Imported surface statistics:
+  # Faces:         528
+  # Vertices:      266
+  # Special Edges: 0
+
+Mesh Operation Hydro_TightOverset complete. CPU Time: 0.23, Wall Time: 0.23, Memory: 222.06 MB
+ Only 1 part was assigned to a region
+5 part surfaces were assigned to 5 boundaries
+No Interfaces were created
+HYDRO_STAGE Generating only replacement Overset directed source mesh in tight numerical cage
+HYDRO_STAGE Generating directed source mesh Tight Overset directed mesh
+Failed to adjust sweep corners on surface Hydro_TightCage.OversetOuter, model face id = f6
+Failed to adjust sweep corners on surface Hydro_TightCage.OversetOuter, model face id = f7
+Part Hydro_TightOverset_fluid had the following guide surfaces that prevent sweep meshing:
+Hydro_TightCage.OversetOuter ( guide suface Hydro_TightCage.OversetOuter) 
+Hydro_TightCage.OversetOuter ( guide suface Hydro_TightCage.OversetOuter) 
+Failed to set up guide surface parameters properly for source meshing in part collection Hydro_TightOverset_fluid; see output window for further details.
+Command: UpdateDirectedAutoSourceMesh
+   error: Server Error
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_tight_cage_v1_20261103_024700\SP_C_repair_error_20261103_024700.sim... complete (108.8MB in 0.21087s).
+java.lang.RuntimeException: Failed to set up guide surface parameters properly for source meshing in part collection Hydro_TightOverset_fluid; see output window for further details.
+Command: UpdateDirectedAutoSourceMesh
+   command: CommandComplete
+   error: Server Error
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

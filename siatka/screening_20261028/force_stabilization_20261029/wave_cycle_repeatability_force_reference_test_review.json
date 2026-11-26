@@ -1,0 +1,40 @@
+{
+  "updated_at": "2026-10-30T15:22:06.178233+01:00",
+  "scope": "Temporary synthetic force histories and actual correction adapter; no CFD/API launches or production-history edits",
+  "tests_run": 24,
+  "failures": [],
+  "errors": [],
+  "passed": true,
+  "source_sha256": {
+    "wave_cycle_repeatability.py": "b8b3d29b66eaafa1bc1759f9ea55f7f34acba710956885a42a5ab798a90dcbfe",
+    "force_reference.py": "bc20e83433d32e77ffc5904a49f863e0b905013951c857e2c5d8a0d1ff5dd3fe",
+    "test_wave_cycle_repeatability.py": "69923fc4ae0b56cacf6b6c68272faf2f4773d7e3540548ca337fd07fb18b7b26"
+  },
+  "sources_unchanged": true,
+  "test_names": [
+    "test_conflicting_overlap_blocks_repeatability",
+    "test_constant_offset_changes_mean_not_amplitude_or_phase",
+    "test_corrected_analysis_origin_excludes_prior_calm",
+    "test_corrected_conflicting_overlap_blocks_repeatability",
+    "test_corrected_near_zero_mean_still_has_finite_metrics",
+    "test_historical_basis_is_explicit",
+    "test_histories_and_reference_remain_immutable",
+    "test_incomplete_first_cycle_excluded",
+    "test_mean_drift_rejected",
+    "test_missing_file_not_treated_as_clean_history",
+    "test_missing_interval_in_recent_cycle_rejected",
+    "test_near_zero_finite_and_phase_not_applicable",
+    "test_no_early_stop_before_ten_periods",
+    "test_nonfinite_corrected_lift_blocks_cycle",
+    "test_nonfinite_recent_force_sample_rejected",
+    "test_nonfinite_reference_rejected",
+    "test_offset_changes_mean_normalization_and_drift_percentage",
+    "test_phase_drift_rejected_without_realigning",
+    "test_reference_force_must_be_positive_and_offset_consistent",
+    "test_stable_sine_with_harmonics",
+    "test_twenty_cycle_cap_is_review_not_failure_proof",
+    "test_unavailable_reference_rejected_before_history_read",
+    "test_unavailable_row_correction_never_falls_back_to_raw_lift",
+    "test_verified_continuation_overlap"
+  ]
+}

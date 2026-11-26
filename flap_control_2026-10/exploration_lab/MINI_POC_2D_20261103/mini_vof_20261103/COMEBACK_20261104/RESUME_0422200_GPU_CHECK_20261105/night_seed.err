@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\night_seed_dataset.py", line 166, in <module>
+    main()
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\night_seed_dataset.py", line 98, in main
+    wait_for_calm_and_motion(owner)
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_after_calm.py", line 35, in wait_for_calm_and_motion
+    raise RuntimeError("Stop marker observed. Wave launch cancelled.")
+RuntimeError: Stop marker observed. Wave launch cancelled.

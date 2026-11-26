@@ -1,0 +1,488 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcYzBfb3ZlcmxhcF9hdWRpdF8yMDI2MTEwM18wMDIwMzBcYXVkaXRfZXJyb3Iuc2lt
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 21824
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 00:27:50 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_overlap_audit_20261103_002030\audit_error.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: ConservativeMapping
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:97: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("HYDRO mesh cell audit");table.getParts().setObjects(regions);table.setRepresentation(fv);table.setExtractVertexData(false);table.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("FaceValidity"),s.getFieldFunctionManager().getFunction("CellQuality"),s.getFieldFunctionManager().getFunction("PrismLayerNumber"),s.getFieldFunctionManager().getFunction("PrismCellThickness")));table.extract();table.export(out.resolve("mesh_cells.csv").toString());
+                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:106: warning: [deprecation] setComponents(double,double,double) in star.common.Coordinate has been deprecated
+SurfaceExtruderDirection dir=se.getSurfaceExtruderControls().get(SurfaceExtruderDirection.class);dir.setDirectionMode(SurfaceExtruderDirection.DirectionMode.SPECIFIED);dir.getUserSpecifiedDirection().getDirection().setComponents(0,-.02,0);se.execute();
+                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:110: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+List<Boundary> oldWalls=new ArrayList<>(old.getBoundaryManager().getBoundaries());fixed.removeAll(oldWalls);flap.removeAll(oldWalls);regions.remove(old);s.getRegionManager().removeRegions(List.of(old));fresh.setPresentationName(name);
+                                                                                                                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_002542\FinalizeC0DistanceMeshAudit.java:122: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+
+HYDRO_STAGE Activate field storage on zero-step mesh with continuity initialization disabled; no solve or remesh
+Loading/configuring connectivity (old|new partitions: 1|1)
+  Background (index 3): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 4): 120172 cells, 340475 faces, 443158 verts.
+Configuring finished
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 410 cells in FlapOverset
+
+Boundaries of region Background:
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.span_source: 304810 faces (31 triangular, 41628 quadrilateral, 263151 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [3.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 2.3998938039e+03 m^2
+ maximum boundary skewness angle = 1.1323396892e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Domain.span_source: 304810 faces (31 triangular, 41628 quadrilateral, 263151 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 1.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 2.3998938039e+03 m^2
+ maximum boundary skewness angle = 1.1323396892e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin: 876 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.4807476464e-04, 9.4451502457e-01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-4.2144941292e-02, 1.0091205667e-01] m
+ surface area: 3.8379468388e-02 m^2
+ maximum boundary skewness angle = 5.6173046895e+00 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc: 287 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [9.1440101768e-01, 9.4451502457e-01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-1.4893594542e-02, 5.8128750330e-02] m
+ surface area: 2.0041009074e-03 m^2
+ maximum boundary skewness angle = 4.7915688337e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top: 279 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [8.0000000000e+00, 8.0000000000e+00] m
+ surface area: 1.6000000000e+00 m^2
+ maximum boundary skewness angle = 3.3672308457e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.inlet: 105 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, -3.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 6.0000000000e-01 m^2
+ maximum boundary skewness angle = 2.5673478688e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.outlet: 105 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [4.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 6.0000000000e-01 m^2
+ maximum boundary skewness angle = 1.7783007093e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.bottom: 279 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, -2.2000000000e+01] m
+ surface area: 1.6000000000e+00 m^2
+ maximum boundary skewness angle = 3.3164310137e+01 deg
+
+Region Background: 
+   41628 hexahedral cells
+      31 wedge cells
+  263151 polyhedral cells
+  304810 cells total
+       0 halo cells
+  871084 quadrilateral interior faces (0 halo faces)
+ 1136410 vertices (0 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |            304810 |             0 |        0.00 |         304810 |   871084 |    611551 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :    304810 STDDEV % :  0.00 IMBALANCE % :  0.00
+       Average number of halo cells :         0
+      Average number of total cells :    304810 STDDEV % :  0.00 IMBALANCE % :  0.00
+            Average number of faces :    871084 STDDEV % :  0.00 IMBALANCE % :  0.00
+   Average number of boundary faces :    611551 STDDEV % :  0.00 IMBALANCE % :  0.00
+   Maximum number of partition neighbours : 0
+
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ Maximum interior cell index delta: 2430, average: 9.5360603111e+02
+ Maximum cell face index delta: 6546, average: 4.0612606181e+03
+ Volume range: [1.0079977989e-11, 2.5440427348e-03] m^3
+ Minimum distance between centroids of neighbor cells = 1.6419677201e-06
+ Maximum skewness angle = 6.3675211764e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.0000000000e+00
+Maximum Face Validity: 1.0000000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              304810   100.000%
+
+Volume Change: 
+Minimum Volume Change: 7.355614e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           2    0.001%
+1e-02 <= Volume Change <  1e-01          74    0.024%
+1e-01 <= Volume Change <= 1e+00      304734   99.975%
+
+Boundaries of region FlapOverset:
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.span_source: 120172 faces (23 triangular, 18843 quadrilateral, 101306 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   3.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    4.487494e-01 m^2
+ maximum boundary skewness angle = 1.642339e+00 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Cage.span_source: 120172 faces (23 triangular, 18843 quadrilateral, 101306 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    1.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    4.487494e-01 m^2
+ maximum boundary skewness angle = 1.642339e+00 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin: 414 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   9.520000e-01,    1.190000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -1.381940e-02,    5.638286e-02] m
+ surface area:    9.665721e-03 m^2
+ maximum boundary skewness angle = 2.221818e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc: 316 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   9.169010e-01,    9.520000e-01] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -1.381940e-02,    5.638286e-02] m
+ surface area:    2.205324e-03 m^2
+ maximum boundary skewness angle = 2.714081e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.top: 92 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [   3.012817e-01,    3.012817e-01] m
+ surface area:    1.636000e-02 m^2
+ maximum boundary skewness angle = 3.059262e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.inlet: 299 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    7.320000e-01] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    1.120000e-02 m^2
+ maximum boundary skewness angle = 3.000639e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.outlet: 63 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   1.550000e+00,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    1.120000e-02 m^2
+ maximum boundary skewness angle = 3.068650e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.bottom: 92 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,   -2.587183e-01] m
+ surface area:    1.636000e-02 m^2
+ maximum boundary skewness angle = 2.580657e+01 deg
+
+Region FlapOverset: 
+   18843 hexahedral cells
+      23 wedge cells
+  101306 polyhedral cells
+  120172 cells total
+       0 halo cells
+  340475 quadrilateral interior faces (0 halo faces)
+  443158 vertices (0 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |            120172 |             0 |        0.00 |         120172 |   340475 |    241620 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :    120172 STDDEV % :  0.00 IMBALANCE % :  0.00
+       Average number of halo cells :         0
+      Average number of total cells :    120172 STDDEV % :  0.00 IMBALANCE % :  0.00
+            Average number of faces :    340475 STDDEV % :  0.00 IMBALANCE % :  0.00
+   Average number of boundary faces :    241620 STDDEV % :  0.00 IMBALANCE % :  0.00
+   Maximum number of partition neighbours : 0
+
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ Maximum interior cell index delta: 928, average:    4.649231e+02
+ Maximum cell face index delta: 2642, average:    1.951975e+03
+ Volume range: [   9.026037e-12,    2.412099e-06] m^3
+ Minimum distance between centroids of neighbor cells = 1.641909e-06
+ Maximum skewness angle = 6.584031e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              120172   100.000%
+
+Volume Change: 
+Minimum Volume Change: 3.970061e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           4    0.003%
+1e-02 <= Volume Change <  1e-01         145    0.121%
+1e-01 <= Volume Change <= 1e+00      120023   99.876%
+
+Overall: 
+  424982 cells (0 halo cells)
+ 1211559 interior faces (1211559 serial faces)
+  853171 boundary faces (853171 serial faces)
+ 1579568 vertices (1579568 serial vertices)
+       0 edges (0 serial edges)
+
+ Extents:
+  x: [  -3.500000e+01,    4.500000e+01] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.200000e+01,    8.000000e+00] m
+ Maximum interior cell index delta: 2430
+ Maximum cell face index delta: 6546
+ Volume range: [   9.026037e-12,    2.544043e-03] m^3
+ Minimum distance between centroids of neighbor cells = 1.641909e-06
+ Maximum skewness angle = 6.584031e+01 deg
+ Maximum boundary skewness angle = 4.791569e+01 deg
+
+Overall Face Validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              424982   100.000%
+
+Overall Volume Change: 
+Minimum Volume Change: 3.970061e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           6    0.001%
+1e-02 <= Volume Change <  1e-01         219    0.052%
+1e-01 <= Volume Change <= 1e+00      424757   99.947%
+
+ Overall Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |            424982 |             0 |        0.00 |         424982 |  1211559 |    853171 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :    424982 STDDEV % :  0.00 IMBALANCE % :  0.00
+       Average number of halo cells :         0
+      Average number of total cells :    424982 STDDEV % :  0.00 IMBALANCE % :  0.00
+            Average number of faces :   1211559 STDDEV % :  0.00 IMBALANCE % :  0.00
+   Average number of boundary faces :    853171 STDDEV % :  0.00 IMBALANCE % :  0.00
+
+FULL_OVERSET_AUDIT time=0.0 total=424982 active=290504 inactive=131382 acceptors=3096 errors=0 difficult_interpolation=1 min_volume=9.026037388589309E-12 min_quality=0.05800954773408175 max_acceptor_size_ratio=4.753274829450221 methods={0=3095, 4=1}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_overlap_distance_audit_20261103_002542\audit_error.sim... complete (559.14MB in 0.77375s).
+java.lang.RuntimeException: java.lang.IllegalStateException: Expected DISTANCE for every acceptor
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

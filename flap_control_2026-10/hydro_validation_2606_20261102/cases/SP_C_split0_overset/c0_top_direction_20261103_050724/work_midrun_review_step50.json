@@ -1,0 +1,274 @@
+{
+  "at": "2026-11-03T05:24:38.177676+01:00",
+  "kind": "work_top_boundary_midrun_review",
+  "checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint_step_50.sim",
+    "bytes": 1452901008,
+    "sha256": "7fcf8a2d1719dce65391f96adf5164a0877664c70aa905821707b883efe8580c",
+    "saved_time_s": 0.55,
+    "native_save_complete": true,
+    "hash_at": "2026-11-03T05:22:05.882529+01:00",
+    "native_reopen_verified": false,
+    "physical_time_s": 0.55,
+    "native_iteration": 9560,
+    "dt_s": 0.002,
+    "inner_iterations": 40,
+    "velocity_urf": 0.8,
+    "pressure_urf": 0.2,
+    "top_backflow_direction": "EXTRAPOLATED",
+    "top_backflow_pressure": "ENVIRONMENTAL",
+    "CL": 0.325496767729,
+    "CD": 0.00725111309072,
+    "Mh_Nm": -12.0388025616,
+    "pabs_min_Pa": 30111.1144414,
+    "scientific_approved": false,
+    "note": "Complete native save and stable SHA verified. Native reopen still pending. Strict guards and full333939-cell Overset audit passed; scientific Hold remains for matched baseline and field settling."
+  },
+  "full_native_audit": "time=0.5500000000000004 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.128750119087941E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629553493 methods={0=1481}\n",
+  "force_windows": [
+    {
+      "end_step": 25,
+      "time_s": 0.5,
+      "means": {
+        "CL_hydro": 0.3253403970386,
+        "CD": 0.007256892917216801,
+        "Mh_Nm": -12.037145799820001,
+        "Fx_N": 27.979676331615998,
+        "Fz_N": 1277.04939836
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0003792995985841929,
+        "CD": 0.003100076551581313,
+        "Mh_Nm": 0.0001605668845540161,
+        "Fx_N": 0.0031000765509924238,
+        "Fz_N": 0.000372567232411606
+      },
+      "mass_max": 4.57788829172e-07,
+      "pabs_min": 25344.214152
+    },
+    {
+      "end_step": 50,
+      "time_s": 0.55,
+      "means": {
+        "CL_hydro": 0.32545011146716,
+        "CD": 0.0072530284021911995,
+        "Mh_Nm": -12.038321106584,
+        "Fx_N": 27.964776307488002,
+        "Fz_N": 1277.4724133112
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0002948267019096895,
+        "CD": 0.0005381721252905521,
+        "Mh_Nm": 8.271003001035679e-05,
+        "Fx_N": 0.0005381721253379005,
+        "Fz_N": 0.0002895954121160916
+      },
+      "mass_max": 6.39443442196e-09,
+      "pabs_min": 30111.1144414,
+      "relative_mean_change": {
+        "CL_hydro": 0.0003372296510322226,
+        "CD": -0.0005325302536065557,
+        "Mh_Nm": 9.763998738110402e-05
+      },
+      "force_window_pass": true
+    }
+  ],
+  "near_field": {
+    "active_cells": 255350,
+    "omega_floor_cells": 0,
+    "k_floor_cells": 0,
+    "viscosity_ratio_cap_cells": 0,
+    "max_viscosity_ratio": 1242.5577669722868,
+    "speed_max_near_m_s": 22.335275218666826,
+    "meanflow_p0_max_near_Pa": 164382.88507866062,
+    "meanflow_p0_p99_near_Pa": 162370.16005627112,
+    "pabs_min_Pa": 30111.114441447335,
+    "max_speed_location": {
+      "region": "Background",
+      "X (m)": 0.6978899300031532,
+      "Z (m)": 0.104512051498826,
+      "Pressure (Pa)": -87631.80484813388,
+      "Specific Dissipation Rate (/s)": 310.3327441568663,
+      "speed_m_s": 22.335275218666826,
+      "p0_meanflow_Pa": 161800.45469866233
+    },
+    "max_head_location": {
+      "region": "Background",
+      "X (m)": 0.0027542063527191,
+      "Z (m)": -0.0051482873221328,
+      "Pressure (Pa)": 69191.45620240358,
+      "Wall Distance (m)": 0.0001088377136768,
+      "Turbulent Kinetic Energy (J/kg)": 0.00055057104978,
+      "Specific Dissipation Rate (/s)": 7903.404819214664,
+      "Turbulent Viscosity Ratio": 0.0608671648385525,
+      "Volume (m^3)": 7.366095356684909e-10,
+      "Cell Quality": 0.9996350493254392,
+      "speed_m_s": 13.797929473385274,
+      "p0_meanflow_Pa": 164382.88507866062
+    },
+    "head_gt1p1q_near_cells": 0,
+    "head_gt1p1q_near_volume_fraction": 0.0
+  },
+  "far_top": {
+    "at": "2026-11-03T05:22:16.961838+01:00",
+    "label": "step_50",
+    "selection": "Active Background volume cells,10<x<43,7<z<8; native far-band mean cross-checked against offline export",
+    "scientific_approved": false,
+    "baseline": {
+      "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\Background_final_volume.csv",
+      "cells": 544,
+      "volume_m3": 0.667529949640846,
+      "vx_mean": 16.87462163899505,
+      "vx_min": 8.16530277689985,
+      "vz_rms": 0.13407358307252543,
+      "uniform18_velocity_deviation_rms": 2.0131220137432844,
+      "pabs_min_Pa": 36741.234034183675,
+      "piezometric_min_Pa": -8080.637198255967,
+      "piezometric_max_Pa": 9511.04154676222,
+      "deficit_volume_mean": 1.1254494490836746,
+      "deficit_x_centroid_m": 31.656085448817752
+    },
+    "candidate": {
+      "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\Background_step_50_volume.csv",
+      "cells": 544,
+      "volume_m3": 0.667529949640846,
+      "vx_mean": 16.93592228980442,
+      "vx_min": 10.966446823430267,
+      "vz_rms": 0.144708418490967,
+      "uniform18_velocity_deviation_rms": 1.674890224390541,
+      "pabs_min_Pa": 42407.06047710049,
+      "piezometric_min_Pa": -786.1301012322577,
+      "piezometric_max_Pa": 1792.6488069725472,
+      "deficit_volume_mean": 1.0640864238788912,
+      "deficit_x_centroid_m": 32.096519043172584
+    }
+  },
+  "residual": {
+    "at": "2026-11-03T05:19:12.973390+01:00",
+    "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+    "complete_steps": 40,
+    "last_step": 40,
+    "window_steps": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "cases": {
+      "normal": {
+        "Continuity": {
+          "normalization_factor": 0.003963208746565847,
+          "steps": 25,
+          "median_last": 0.967028858213358,
+          "median_last_over_first": 0.5194534015695036,
+          "p90_last_over_first": 0.793155689603274
+        },
+        "X-momentum": {
+          "normalization_factor": 0.02149720992236967,
+          "steps": 25,
+          "median_last": 5.624719821444683,
+          "median_last_over_first": 0.09580463951856111,
+          "p90_last_over_first": 0.1183467850006529
+        },
+        "Z-momentum": {
+          "normalization_factor": 0.01087764939339029,
+          "steps": 25,
+          "median_last": 4.8814014837958695,
+          "median_last_over_first": 0.11949594174286425,
+          "p90_last_over_first": 0.1778244545983488
+        },
+        "Tke": {
+          "normalization_factor": 0.003064984585937406,
+          "steps": 25,
+          "median_last": 0.0136623078976889,
+          "median_last_over_first": 0.08122882724320264,
+          "p90_last_over_first": 0.11836315028968993
+        },
+        "Sdr": {
+          "normalization_factor": 894340.9321518223,
+          "steps": 25,
+          "median_last": 5.7516097802698906e-06,
+          "median_last_over_first": 0.18438421686243656,
+          "p90_last_over_first": 0.23731887773443341
+        }
+      },
+      "extrapolated": {
+        "Continuity": {
+          "normalization_factor": 0.003963208746565847,
+          "steps": 25,
+          "median_last": 1.34732e-05,
+          "median_last_over_first": 0.00013226642163431475,
+          "p90_last_over_first": 0.00017907816913999573
+        },
+        "X-momentum": {
+          "normalization_factor": 0.02149720992236967,
+          "steps": 25,
+          "median_last": 0.0003395326,
+          "median_last_over_first": 7.953180532497758e-06,
+          "p90_last_over_first": 9.806758289648204e-06
+        },
+        "Z-momentum": {
+          "normalization_factor": 0.01087764939339029,
+          "steps": 25,
+          "median_last": 0.000870753,
+          "median_last_over_first": 2.42926240430416e-05,
+          "p90_last_over_first": 3.3090766138898305e-05
+        },
+        "Tke": {
+          "normalization_factor": 0.003064984585937406,
+          "steps": 25,
+          "median_last": 3.126619e-07,
+          "median_last_over_first": 2.499979210943359e-06,
+          "p90_last_over_first": 2.570710807210421e-06
+        },
+        "Sdr": {
+          "normalization_factor": 894340.9321518223,
+          "steps": 25,
+          "median_last": 8.870083e-10,
+          "median_last_over_first": 3.8268861475352195e-05,
+          "p90_last_over_first": 4.328029282704524e-05
+        }
+      }
+    },
+    "scientific_approved": false,
+    "source": "Current native STAR residual lines for complete40-inner blocks; baseline native exported monitors. No secret data output.",
+    "native_csv_crosscheck": {
+      "Continuity": true,
+      "X-momentum": true,
+      "Y-momentum": true,
+      "Z-momentum": true,
+      "Tke": true,
+      "Sdr": true
+    },
+    "median_last_extrapolated_over_normal": {
+      "Continuity": 1.393257283437489e-05,
+      "X-momentum": 6.036435783085684e-05,
+      "Z-momentum": 0.00017838176246934848,
+      "Tke": 2.2884998811429916e-05,
+      "Sdr": 0.00015421913757827598
+    }
+  },
+  "conclusion": "Top direction change removes inner-iteration plateau and repeated far-top pressure minima. Native field confirms remaining tangential velocity deficit advects/recovers rather than disappearing instantly. Near-foil pressure/head fields remain healthy. Continue the existing100-step diagnostic; do not interrupt healthy solver. Prepare matched B only; no angle approval.",
+  "scientific_approved": false
+}

@@ -1,0 +1,836 @@
+Starting local server: starserver.bat -power -cpubind off -np 8 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcU1BfQ19idWlsZF9lcnJvcl8yMDI2MTEwMl8xOTE4MDcuc2lt
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 30036
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 00:17:23 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\SP_C_build_error_20261102_191807.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:97: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("HYDRO mesh cell audit");table.getParts().setObjects(regions);table.setRepresentation(fv);table.setExtractVertexData(false);table.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("FaceValidity"),s.getFieldFunctionManager().getFunction("CellQuality"),s.getFieldFunctionManager().getFunction("PrismLayerNumber"),s.getFieldFunctionManager().getFunction("PrismCellThickness")));table.extract();table.export(out.resolve("mesh_cells.csv").toString());
+                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:106: warning: [deprecation] setComponents(double,double,double) in star.common.Coordinate has been deprecated
+SurfaceExtruderDirection dir=se.getSurfaceExtruderControls().get(SurfaceExtruderDirection.class);dir.setDirectionMode(SurfaceExtruderDirection.DirectionMode.SPECIFIED);dir.getUserSpecifiedDirection().getDirection().setComponents(0,-.02,0);se.execute();
+                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:110: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+List<Boundary> oldWalls=new ArrayList<>(old.getBoundaryManager().getBoundaries());fixed.removeAll(oldWalls);flap.removeAll(oldWalls);regions.remove(old);s.getRegionManager().removeRegions(List.of(old));fresh.setPresentationName(name);
+                                                                                                                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:122: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:132: warning: [deprecation] deleteInterface(star.common.Interface) in star.common.InterfaceManager has been deprecated
+for(Interface in:new ArrayList<>(s.getInterfaceManager().getObjects()))s.getInterfaceManager().deleteInterface(in);
+                                                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:133: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+for(Region r:new ArrayList<>(s.getRegionManager().getRegions()))if(!List.of("Background","FlapOverset").contains(r.getPresentationName()))s.getRegionManager().removeRegions(List.of(r));
+                                                                                                                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:139: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+double base=sourceMesh.getDefaultValues().get(BaseSize.class).getValue();if(Math.abs(base-.009)>1e-10)throw new IllegalStateException("Unexpected source Overset base size");
+                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:145: warning: [deprecation] setUseAlternateHoleCutting(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:145: warning: [deprecation] setEnabledZeroDonorCheck(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:145: warning: [deprecation] setCloseProximity(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:145: warning: [deprecation] setPrismLayerShrinkage(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:145: warning: [deprecation] setTreatErrorAsWarning(boolean) in star.common.IndirectRegionInterface has been deprecated
+{IndirectRegionInterface in=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");in.setInterfaceType(OversetMeshInterface.class);in.setUseAlternateHoleCutting(true);in.setEnabledZeroDonorCheck(true);in.setCloseProximity(true);in.setPrismLayerShrinkage(true);in.setTreatErrorAsWarning(false);
+                                                                                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:147: warning: [deprecation] getAxisOrigin() in star.motion.RotatingMotion has been deprecated
+RotatingMotion rot=s.get(MotionManager.class).createMotion(RotatingMotion.class,"Flap prescribed rigid rotation");rot.getAxisOrigin().setComponents(xh,.02,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);((RotationAngle)rot.getRotationSpecification()).getRotationAngle().setDefinition("<0 deg>");ov.getValues().get(MotionSpecification.class).setMotion(rot);}
+                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_001516\PrepareC0OverlapRefinement.java:147: warning: [deprecation] getAxisDirection() in star.motion.RotatingMotion has been deprecated
+RotatingMotion rot=s.get(MotionManager.class).createMotion(RotatingMotion.class,"Flap prescribed rigid rotation");rot.getAxisOrigin().setComponents(xh,.02,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);((RotationAngle)rot.getRotationSpecification()).getRotationAngle().setDefinition("<0 deg>");ov.getValues().get(MotionSpecification.class).setMotion(rot);}
+                                                                                                                                                                  ^
+
+Loading/configuring connectivity (old|new partitions: 2|8)
+  Background (index 0): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 1): 56722 cells, 150363 faces, 189362 verts.
+Configuring finished
+HYDRO_STAGE Refining only Overset source mesh in fixed-main overlap: 1mm target; physical foil/cage unchanged
+ Checking mesh-CAD association...done.  No problems found.
+Creating the 2.5d surface slice before remeshing...
+   Done.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 0.00, Wall Time: 0.00, Memory: 229.04 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Running in serial
+ Project to CAD geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001          71      17.2
+   < 0.01          385      93.4
+   < 0.1           408      99.0
+   < 0.2           408      99.0
+   < 0.3           408      99.0
+   < 0.4           408      99.0
+   < 0.5           408      99.0
+   < 0.6           411      99.8
+   < 0.7           411      99.8
+   < 0.8           411      99.8
+   < 0.9           411      99.8
+   < 1.0           412     100.0
+ Worst Tri quality is 3.248e-05
+
+ initial number of faces: 1648
+
+ Phase 1: Apply Global Limits
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.1            14       0.1
+     < 0.2            60       0.6
+     < 0.3           177       1.7
+     < 0.4           213       2.0
+     < 0.5           304       2.8
+     < 0.6           541       5.1
+     < 0.7          1010       9.5
+     < 0.8          2037      19.1
+     < 0.9          4774      44.7
+     < 1.0         10687     100.0
+   Worst Tri quality is 0.04196
+
+
+ Phase 2: Improve Grading
+      current number of faces: 20000
+      current number of faces: 40000
+      current number of faces: 80000
+      current number of faces: 150000
+      current number of faces: 200000
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.1             0       0.0
+     < 0.2             0       0.0
+     < 0.3             0       0.0
+     < 0.4             0       0.0
+     < 0.5           125       0.1
+     < 0.6          1326       0.6
+     < 0.7          3669       1.8
+     < 0.8         15554       7.5
+     < 0.9         87265      42.1
+     < 1.0        207206     100.0
+   Worst Tri quality is 0.4197
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.1             0       0.0
+   < 0.2             0       0.0
+   < 0.3             0       0.0
+   < 0.4             0       0.0
+   < 0.5             0       0.0
+   < 0.6             1       0.0
+   < 0.7            72       0.0
+   < 0.8          4923       2.2
+   < 0.9         70704      32.0
+   < 1.0        221141     100.0
+ Worst Tri quality is 0.5483
+
+ final number of faces: 221141
+                   |   Default Mesher | 
+           Patches |                8 | 
+         Triangles |           221141 | 
+ Aligned mesh not created for any patches.
+
+ Elapsed time: 5.56 secs total, 2.39 secs potentially parallelizable (42.99% of total)
+----------------------------------------
+Surface Remesher Completed: CPU Time: 5.55, Wall Time: 5.56, Memory: 263.24 MB
+----------------------------------------
+
+Executing the 2d mesher...
+
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 444820, area: 0.906341, reference location: (0.732 0.01 -0.258718)
+Total => Surfaces: 1, Faces: 444820, Area: 0.906341
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+ |Angle Range|Prism Growing Edges|High Dihedral Edges|
+ | 0   - 18  |1451               |0                  |
+ | 18  - 36  |0                  |0                  |
+ | 36  - 54  |0                  |0                  |
+ | 54  - 72  |0                  |0                  |
+ | 72  - 90  |0                  |0                  |
+ | 90  - 108 |0                  |0                  |
+ | 108 - 126 |0                  |0                  |
+ | 126 - 144 |0                  |0                  |
+ | 144 - 162 |0                  |0                  |
+ | 162 - 180 |1                  |1                  |
+Total => prism growing edges: 1452, high dihedral edges: 1
+
+Worst 1 prism growing facetype edges with dihedral angles greater than 46 degrees:
+ dihedral angle: 177.502894, located at: (1.1900000000000002 0.0113197617750433 -0.0000000000000000)
+done Surface diagnostics.CPU Time: 0.09, Wall Time: 0.09, Memory: 325.11 MB
+
+Surface is valid for volume meshing.CPU Time: 0.94, Wall Time: 0.95, Memory: 311.12 MB
+
+  done,  CPU Time: 1.17, Wall Time: 1.19, Memory: 311.12 MB
+User set distribution function to be  GEOMETRIC PROGRESSION
+----------------------------------------
+Executing Prism Layer Subsurface
+----------------------------------------
+Global Input surface contains 444820 faces, and 222410 vertices 
+Local Property is activated
+   done, CPU Time: 0.08, Wall Time: 0.09, Memory: 431.15 MB
+ Building preprocessor done 
+Computing vertex normals
+ Exchanged the remote active status done
+Computing the normals done
+   done, CPU Time: 0.03, Wall Time: 0.02, Memory: 435.41 MB
+Computing Vertex normals done
+Computing surface proximity
+   done, CPU Time: 0.19, Wall Time: 0.18, Memory: 456.78 MB
+Constraining boundary vertices
+   done, CPU Time: 0.00, Wall Time: 0.01, Memory: 441.54 MB
+
+Iteration 1:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 1454 of 1454 active vertices)
+Checking 1454 face-based validity metrics
+   found 0 invalid faces
+Checking vertex intersections for all vertices
+
+Using edge recovery to fix prism layer boundaries...
+Recovering edges... Edges recover info:  0   0
+ Grow affected faces......
+Remeshing surface near recovered edges...
+Surface remeshed.  700 faces added to surface.
+CPU Time: 0.16, Wall Time: 0.16, Memory: 449.74 MB
+ Finished two levels of remeshing 
+Edge recovery was successful.
+CPU Time: 0.39, Wall Time: 0.40, Memory: 449.88 MB
+
+Checking true subsurface intersections for all vertices
+ no intersections 
+   found 0 intersecting vertices
+Checking subsurface orientation!!
+
+Iterations successful
+
+Combining interface maps
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 449.93 MB
+Marking zero layer regions
+   found 630 collapsed faces
+   found 3 edges bounding collapsed regions
+   found 6 vertices bounding collapsed regions
+Global Subsurface contains 404280 faces, and 202140 vertices 
+----------------------------------------
+Prism Layer Subsurface Completed: CPU Time: 1.83, Wall Time: 1.82, Memory: 428.30 MB
+----------------------------------------
+ Generating dual core mesh...
+ Created 103802 dual faces, and 206318 dual verts.
+Created 101250 cells
+   finished generating poly core mesh CPU Time: 0.89, Wall Time: 0.89, Memory: 449.47 MB
+There are 444425 faces have subsurface thickness. 
+ The default subsurface thickness is 0.015460
+Set default subsurface thickness 0.01546
+----------------------------------------
+Executing Prism Layer Extrusion
+----------------------------------------
+Marking vertices, edges and faces to extrude
+Subsurface thickness is set by subsurface.
+ find projections withOUT VertMapper (all core mesh)!
+   found (tet) 634 zero layer subsurface vertices
+Marking zero extrusion entities (vertices/edges/faces)
+   done, CPU Time: 0.00, Wall Time: 0.01, Memory: 411.16 MB
+Modifying number of layers for cells adjacent to retracted regions
+   modified number of layers for 4 faces
+Creating extrusion layer mesh
+   default number of layers = 48
+   default initial wall thickness = 1.53061224489795906255121520773e-06
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 422.11 MB
+ Layer Reduction Percentage set to 50
+Default chopping percentage 50.000000
+There is no Local Layer Reduction 
+Correct number of layer for:  Global Layer Reduction, setting(s).
+   stitching vertical edges at variable layer interface
+   stitching vertical faces at variable layer interface
+Extrusion mesh contains:
+   18922 cells
+   76262 faces
+   96333 edges
+   38994 vertices
+----------------------------------------
+Prism Layer Extrusion Completed: CPU Time: 0.30, Wall Time: 0.30, Memory: 405.95 MB
+----------------------------------------
+
+2d mesh generation completed.  CPU Time: 5.58, Wall Time: 5.61, Memory: 353.00 MB
+
+----------------------------------------
+Executing Mesh Operation Overset directed mesh
+----------------------------------------
+Sweeping part Hydro_Overset_fluid...
+Number of Cells in - Hydro_Overset_fluid : 120172
+----------------------------------------
+Total Number of Cells in Hydro_Overset_fluid : 120172
+----------------------------------------
+Meshing Completed: CPU Time: 40.73, Wall Time: 41.19, Memory: 382.01 MB
+----------------------------------------
+Converting mesh into finite volume representation in Region FlapOverset
+   Converted mesh for FlapOverset CPU Time: 0.23, Wall Time: 0.23, Memory: 360.83 MB
+FlapOverset: Interpolating solution onto new mesh... 
+Loading module: ConservativeMapping
+ Interpolating cell data for FlapOverset
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Flap.NativeSkin
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Flap.HingeArc
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Cage.top
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Cage.inlet
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Cage.outlet
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Cage.span_source
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Cage.span_target
+ Interpolating  boundary data for Hydro_Overset_fluid.Hydro_Cage.bottom
+  Time taken to interpolate the data  = 0.396175
+Finished Interpolation.
+Mesh conversion completed, CPU Time: 0.56, Wall Time: 0.81, Memory: 342.83 MB
+Converting mesh into finite volume representation completed: CPU Time: 0.56, Wall Time: 0.81, Memory: 342.84 MB
+	Cells: 424982	Faces: 1211559	Vertices: 1579568
+Mesh Operation Overset directed mesh complete. CPU Time: 41.30, Wall Time: 42.02, Memory: 290.96 MB
+Mesh Operation Background exact surface extrusion 2 complete. CPU Time: 0.05, Wall Time: 0.06, Memory: 294.80 MB
+ Only 1 part was assigned to a region
+8 part surfaces were assigned to 8 boundaries
+No Interfaces were created
+----------------------------------------
+Executing Mesh Operation Background one span layer
+----------------------------------------
+Meshing Parts : Background exact quasi2D fluid 2
+Volume extruder have been executed without checking intersection. If mesh is not valid or low quality try to enable the option.
+Converting mesh into finite volume representation in Region Background extruded
+Converting mesh into finite volume representation completed: CPU Time: 1.45, Wall Time: 1.48, Memory: 475.54 MB
+	Cells: 729792	Faces: 2082643	Vertices: 2715978
+----------------------------------------
+Mesh Operation Background one span layer complete. CPU Time: 7.09, Wall Time: 7.18, Memory: 305.55 MB
+----------------------------------------
+TranslateMesh
+regions: [Background extruded]
+   translation: [0.0, 0.02, 0.0]
+
+HYDRO_STAGE Background exact one-layer extrusion ready for quality audit
+Mesh Operation FlapOverset exact surface extrusion complete. CPU Time: 0.02, Wall Time: 0.01, Memory: 289.79 MB
+ Only 1 part was assigned to a region
+8 part surfaces were assigned to 8 boundaries
+No Interfaces were created
+----------------------------------------
+Executing Mesh Operation FlapOverset one span layer
+----------------------------------------
+Meshing Parts : FlapOverset exact quasi2D fluid
+Volume extruder have been executed without checking intersection. If mesh is not valid or low quality try to enable the option.
+Converting mesh into finite volume representation in Region FlapOverset extruded
+Converting mesh into finite volume representation completed: CPU Time: 0.41, Wall Time: 0.44, Memory: 358.64 MB
+	Cells: 545154	Faces: 1552034	Vertices: 2022726
+----------------------------------------
+Mesh Operation FlapOverset one span layer complete. CPU Time: 2.06, Wall Time: 2.10, Memory: 293.74 MB
+----------------------------------------
+TranslateMesh
+regions: [FlapOverset extruded]
+   translation: [0.0, 0.02, 0.0]
+
+HYDRO_STAGE FlapOverset exact one-layer extrusion ready for quality audit
+ Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.span_source: 62 faces flipped.
+ Boundary Background exact quasi2D fluid 2.Hydro_Domain.span_source: 62 faces flipped.
+ Interior: 128 faces flipped.
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Warning: resetting acceleration method for Pressure Equation due to overset mesh
+Warning: resetting acceleration method for Pressure Equation due to overset mesh
+
+Boundaries of region Background:
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.span_source: 304810 faces (31 triangular, 41628 quadrilateral, 263151 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [3.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 2.3998938039e+03 m^2
+ maximum boundary skewness angle = 1.1323396892e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Domain.span_source: 304810 faces (31 triangular, 41628 quadrilateral, 263151 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 1.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 2.3998938039e+03 m^2
+ maximum boundary skewness angle = 1.1323396892e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin: 876 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.4807476464e-04, 9.4451502457e-01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-4.2144941292e-02, 1.0091205667e-01] m
+ surface area: 3.8379468388e-02 m^2
+ maximum boundary skewness angle = 5.6173046895e+00 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc: 287 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [9.1440101768e-01, 9.4451502457e-01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-1.4893594542e-02, 5.8128750330e-02] m
+ surface area: 2.0041009074e-03 m^2
+ maximum boundary skewness angle = 4.7915688337e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top: 279 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [8.0000000000e+00, 8.0000000000e+00] m
+ surface area: 1.6000000000e+00 m^2
+ maximum boundary skewness angle = 3.3672308457e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.inlet: 105 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, -3.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 6.0000000000e-01 m^2
+ maximum boundary skewness angle = 2.5673478688e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.outlet: 105 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [4.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 6.0000000000e-01 m^2
+ maximum boundary skewness angle = 1.7783007093e+01 deg
+Boundary Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.bottom: 279 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, -2.2000000000e+01] m
+ surface area: 1.6000000000e+00 m^2
+ maximum boundary skewness angle = 3.3164310137e+01 deg
+
+Region Background: 
+   41628 hexahedral cells
+      31 wedge cells
+  263151 polyhedral cells
+  304810 cells total
+    3206 halo cells
+  871084 quadrilateral interior faces (3101 halo faces)
+ 1136410 vertices (6218 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |             38796 |           502 |        1.29 |          39298 |   116887 |     77592 |
+   |          1 |             39609 |           440 |        1.11 |          40049 |   119264 |     79218 |
+   |          2 |             38829 |           294 |        0.76 |          39123 |   116089 |     78352 |
+   |          3 |             37620 |           410 |        1.09 |          38030 |   113194 |     75314 |
+   |          4 |             37363 |           447 |        1.20 |          37810 |   109882 |     74787 |
+   |          5 |             37173 |           409 |        1.10 |          37582 |   111623 |     74633 |
+   |          6 |             37771 |           371 |        0.98 |          38142 |    95235 |     75910 |
+   |          7 |             37649 |           333 |        0.88 |          37982 |    92011 |     75745 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :     38101 STDDEV % :  2.12 IMBALANCE % :  3.96
+       Average number of halo cells :       400 STDDEV % : 15.52 IMBALANCE % : 25.27
+      Average number of total cells :     38502 STDDEV % :  2.13 IMBALANCE % :  4.02
+            Average number of faces :    109273 STDDEV % :  8.69 IMBALANCE % :  9.14
+   Average number of boundary faces :     76443 STDDEV % :  2.11 IMBALANCE % :  3.63
+   Maximum number of partition neighbours : 7
+
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ Maximum interior cell index delta: 39561, average: 1.1072018719e+04
+ Maximum cell face index delta: 119018, average: 7.6287336029e+04
+ Volume range: [1.0079977989e-11, 2.5440427348e-03] m^3
+ Minimum distance between centroids of neighbor cells = 1.6419677201e-06
+ Maximum skewness angle = 6.3675211764e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.0000000000e+00
+Maximum Face Validity: 1.0000000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              304810   100.000%
+
+Volume Change: 
+Minimum Volume Change: 7.355614e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           2    0.001%
+1e-02 <= Volume Change <  1e-01          74    0.024%
+1e-01 <= Volume Change <= 1e+00      304734   99.975%
+
+Boundaries of region FlapOverset:
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.span_source: 120172 faces (23 triangular, 18843 quadrilateral, 101306 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   3.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    4.487494e-01 m^2
+ maximum boundary skewness angle = 1.642339e+00 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Cage.span_source: 120172 faces (23 triangular, 18843 quadrilateral, 101306 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    1.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    4.487494e-01 m^2
+ maximum boundary skewness angle = 1.642339e+00 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin: 414 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   9.520000e-01,    1.190000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -1.381940e-02,    5.638286e-02] m
+ surface area:    9.665721e-03 m^2
+ maximum boundary skewness angle = 2.221818e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc: 316 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   9.169010e-01,    9.520000e-01] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -1.381940e-02,    5.638286e-02] m
+ surface area:    2.205324e-03 m^2
+ maximum boundary skewness angle = 2.714081e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.top: 92 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [   3.012817e-01,    3.012817e-01] m
+ surface area:    1.636000e-02 m^2
+ maximum boundary skewness angle = 3.059262e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.inlet: 299 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    7.320000e-01] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    1.120000e-02 m^2
+ maximum boundary skewness angle = 3.000639e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.outlet: 63 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   1.550000e+00,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ surface area:    1.120000e-02 m^2
+ maximum boundary skewness angle = 3.068650e+01 deg
+Boundary FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.bottom: 92 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,   -2.587183e-01] m
+ surface area:    1.636000e-02 m^2
+ maximum boundary skewness angle = 2.580657e+01 deg
+
+Region FlapOverset: 
+   18843 hexahedral cells
+      23 wedge cells
+  101306 polyhedral cells
+  120172 cells total
+    2475 halo cells
+  340475 quadrilateral interior faces (2393 halo faces)
+  443158 vertices (4802 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |             14696 |           420 |        2.86 |          15116 |    44491 |     29407 |
+   |          1 |             15027 |           303 |        2.02 |          15330 |    45202 |     30235 |
+   |          2 |             15152 |           284 |        1.87 |          15436 |    45344 |     30457 |
+   |          3 |             15661 |           162 |        1.03 |          15823 |    37484 |     31672 |
+   |          4 |             15348 |           315 |        2.05 |          15663 |    46231 |     30822 |
+   |          5 |             15010 |           448 |        2.98 |          15458 |    45475 |     30020 |
+   |          6 |             13991 |           274 |        1.96 |          14265 |    41414 |     28169 |
+   |          7 |             15287 |           269 |        1.76 |          15556 |    37227 |     30838 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :     15021 STDDEV % :  3.13 IMBALANCE % :  4.26
+       Average number of halo cells :       309 STDDEV % : 27.23 IMBALANCE % : 44.81
+      Average number of total cells :     15330 STDDEV % :  2.93 IMBALANCE % :  3.21
+            Average number of faces :     42858 STDDEV % :  8.05 IMBALANCE % :  7.87
+   Average number of boundary faces :     30202 STDDEV % :  3.27 IMBALANCE % :  4.87
+   Maximum number of partition neighbours : 6
+
+
+
+ Extents:
+  x: [   7.320000e-01,    1.550000e+00] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.587183e-01,    3.012817e-01] m
+ Maximum interior cell index delta: 15627, average:    4.349247e+03
+ Maximum cell face index delta: 46185, average:    2.969712e+04
+ Volume range: [   9.026037e-12,    2.412099e-06] m^3
+ Minimum distance between centroids of neighbor cells = 1.641909e-06
+ Maximum skewness angle = 6.584031e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              120172   100.000%
+
+Volume Change: 
+Minimum Volume Change: 3.970061e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           4    0.003%
+1e-02 <= Volume Change <  1e-01         145    0.121%
+1e-01 <= Volume Change <= 1e+00      120023   99.876%
+
+Overall: 
+  424982 cells (5681 halo cells)
+ 1211559 interior faces (1211559 serial faces)
+  853171 boundary faces (853171 serial faces)
+ 1579568 vertices (1579568 serial vertices)
+       0 edges (0 serial edges)
+
+ Extents:
+  x: [  -3.500000e+01,    4.500000e+01] m
+  y: [   1.000000e-02,    3.000000e-02] m
+  z: [  -2.200000e+01,    8.000000e+00] m
+ Maximum interior cell index delta: 39561
+ Maximum cell face index delta: 119018
+ Volume range: [   9.026037e-12,    2.544043e-03] m^3
+ Minimum distance between centroids of neighbor cells = 1.641909e-06
+ Maximum skewness angle = 6.584031e+01 deg
+ Maximum boundary skewness angle = 4.791569e+01 deg
+
+Overall Face Validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              424982   100.000%
+
+Overall Volume Change: 
+Minimum Volume Change: 3.970061e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           6    0.001%
+1e-02 <= Volume Change <  1e-01         219    0.052%
+1e-01 <= Volume Change <= 1e+00      424757   99.947%
+
+ Overall Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |             53492 |           922 |        1.72 |          54414 |   161378 |    106999 |
+   |          1 |             54636 |           743 |        1.36 |          55379 |   164466 |    109453 |
+   |          2 |             53981 |           578 |        1.07 |          54559 |   161433 |    108809 |
+   |          3 |             53281 |           572 |        1.07 |          53853 |   150678 |    106986 |
+   |          4 |             52711 |           762 |        1.45 |          53473 |   156113 |    105609 |
+   |          5 |             52183 |           857 |        1.64 |          53040 |   157098 |    104653 |
+   |          6 |             51762 |           645 |        1.25 |          52407 |   136649 |    104079 |
+   |          7 |             52936 |           602 |        1.14 |          53538 |   129238 |    106583 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :     53122 STDDEV % :  1.65 IMBALANCE % :  2.85
+       Average number of halo cells :       710 STDDEV % : 17.44 IMBALANCE % : 29.84
+      Average number of total cells :     53832 STDDEV % :  1.63 IMBALANCE % :  2.87
+            Average number of faces :    152131 STDDEV % :  7.81 IMBALANCE % :  8.11
+   Average number of boundary faces :    106646 STDDEV % :  1.64 IMBALANCE % :  2.63
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_overlap1mm_20261103_001516\SP_C_repair_error_20261103_001516.sim... complete (193.42MB in 0.23819s).
+java.lang.RuntimeException: java.lang.IllegalStateException: Invalid full-plane diagnostic values
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

@@ -1,0 +1,152 @@
+{
+  "updated_at": "2026-10-30T11:24:43.853999+01:00",
+  "scope": "Read-only performance review of saved runtime measurements and W01ResumeCyclesR2.java. No active simulation, process allocation, numerical control, monitor or controller was changed. Standalone review and interval-breakdown JSON only.",
+  "case": "W01_W20L4_M10_FS020_cycles_r2",
+  "evidence": [
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_runtime_performance_review.json",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/W01ResumeCyclesR2.java",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_performance_interval_breakdown.json"
+  ],
+  "conclusion": "The short sample shows low average GPU utilization while the single owned solver process uses about one CPU core. CPU-side reporting on derived parts is a documented, plausible source of serial work. This does not establish the dominant cause or promise a speedup. Optimize measured wall seconds per physical second, not GPU utilization percentage.",
+  "measured": {
+    "sample_duration_s": 21.0316761,
+    "gpu_utilization_mean_pct": 24,
+    "gpu_utilization_range_pct": [
+      1,
+      51
+    ],
+    "owned_solver_cpu_core_equivalents": 0.9546611931704538,
+    "owned_cpu_processes": 1,
+    "cells": 317277,
+    "gpu_memory_MiB": 2857,
+    "recent_200_step_mean_wall_s": 2.660006491500001,
+    "recent_200_step_median_wall_s": 2.5611004999999523,
+    "ordinary_interval_n": 166,
+    "ordinary_interval_mean_wall_s": 2.5685365572289167,
+    "ordinary_interval_median_wall_s": 2.532599849999883,
+    "ordinary_interval_range_s": [
+      1.5821093999998084,
+      3.128272299999935
+    ],
+    "checkpoint_export_interval_s": 8.797254000000066,
+    "limitations": [
+      "GPU sample is about 21 seconds, not a cycle-average profile.",
+      "Sixteen separate HF CPU processes were observed using about 0.9 cores each; their allocation and execution must remain untouched.",
+      "Clock and power variation do not by themselves prove throttling, nor does low GPU utilization prove insufficient CPU workers.",
+      "No actual enabled-monitor or scene-update inventory was obtained from the active solver; no API attachment was made."
+    ]
+  },
+  "timing_interpretation": {
+    "history_clock": "wall_s is sampled after the solve and early guard reports, before much of the remaining postprocessing. Adjacent-row differences include previous-row output work plus the following solve.",
+    "review_window_s": [
+      0.546,
+      0.746
+    ],
+    "trace_confound": "This window includes deliberate AMG LOW logging for upcoming physical times 0.605\u20130.635. Thirty intervals classified only as AMG trace average 2.81628 s; overlaps are classified as output. Do not extrapolate trace cost to the entire run.",
+    "output_correlation": "A 8.797254 s interval follows relative step 500, which performs full local CSV, outlet export, checkpoint and monitor exports. A 7.388882 s interval follows step 450, an outlet-export step. The other two outlet-export intervals are near ordinary cost, so export cadence alone does not explain every spike.",
+    "causality": "These are temporal associations from one live run, not an A/B attribution."
+  },
+  "primary_documentation": [
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-2E7937B3-B3C7-4BC2-894D-838B61B1F6B7.html",
+      "title": "GPGPU Functionality",
+      "section": "Reports",
+      "finding": "The installed version enables selected reports on GPU when monitored during solution iteration. Supported report parts are regions, boundaries and parts, excluding derived parts. Reports not GPU-enabled execute on CPU. Force, min/max, sum and integral families appear in the supported-or-low-penalty list, but that list does not override the derived-part restriction.",
+      "implication": "ThresholdPart interface-CFL and outlet-column sums, and PlaneSection gauges, warrant profiling. A report family name alone is insufficient to assume GPU execution."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-2E7937B3-B3C7-4BC2-894D-838B61B1F6B7.html",
+      "title": "GPGPU Functionality",
+      "section": "Field Functions",
+      "finding": "Primitive, derived and most user-defined field functions are GPU enabled; some user-defined functions still run on CPU and may incur a penalty.",
+      "implication": "Do not label all analytic-wave or user-defined fields CPU-only without measurement or explicit support evidence."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-4D129666-E345-4983-BA7D-6EB3ABE10BDA.html",
+      "title": "Running Simulations with GPGPU",
+      "section": "CPU process count",
+      "finding": "For fully GPU-enabled operations the guide recommends matching CPU processes to GPU cards to avoid oversubscription. If CPU operations are present it suggests considering more CPU processes, using multiples of GPU count.",
+      "implication": "One GPU plus one CPU process is not inherently misconfigured. A separate one-to-two process benchmark is defensible if reporting/profile evidence warrants it; more processes are not an automatic improvement."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-FF3504F9-5A95-4F3D-B065-789A411D9F3B.html",
+      "title": "GPGPU Computation",
+      "section": "Using MPS",
+      "finding": "The platform-specific text says MPS is not relevant for NVIDIA GPUs on Windows; no automatic MPS handling is performed and the nomps qualifier is ignored.",
+      "implication": "Do not prescribe Linux MPS setup on this Windows machine."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-6FD693FE-BDF4-4A18-8956-CE72E6CF55D0.html",
+      "title": "Controlling Graphics Performance",
+      "section": "Rendering",
+      "finding": "Rendering options govern graphics demand and have separate rendering-platform behavior.",
+      "implication": "Stored scene existence is not evidence of continuous rendering. Audit open scene and update state before attributing cost to the twelve stored views."
+    }
+  ],
+  "source_code_findings": [
+    {
+      "candidate": "Inherited enabled monitors",
+      "fact": "The continuation preserves source reports/monitors and creates new reports and monitors. The only blanket disable targets names beginning Short_ and containing Yplus.",
+      "uncertainty": "Potential duplicates are inferred from code; actual source monitor inventory and update frequencies must be recorded before disabling anything.",
+      "safe_action": "In a new checkpoint-copy benchmark inventory all monitor names, report bindings, inputs and update modes; disable only verified obsolete duplicate diagnostic monitors, retaining current force, native phase, outlet phase and guard reporting."
+    },
+    {
+      "candidate": "Derived-part reductions inside inner iterations",
+      "fact": "Two new outlet-column MassImbalance sums on an x-threshold explicitly update every inner iteration. max() also creates a monitor for the dynamic alpha-threshold interface CFL. The default frequency of that max monitor is not explicitly set.",
+      "uncertainty": "The exact per-step cost and default max-monitor cadence have not been measured.",
+      "safe_action": "First measure. If interface-CFL monitor proves repeated and unused by stopping criteria/required inner evidence, benchmark disabling only that automatic monitor while preserving the same report evaluation in every macro timestep guard. Do not change outlet/native inner histories in the first optimization."
+    },
+    {
+      "candidate": "Repeated mixture boundary report getter",
+      "fact": "Every step evaluates each mixture flux report in the net/inflow loop, then fetches the same report again for the phase-flux CSV.",
+      "uncertainty": "The second getter may return cached data, so duplicate source calls do not prove duplicate reduction cost.",
+      "safe_action": "A separate candidate may cache the first finite mixture-flux values in a local array for that same completed step and write those exact values. Validate identical output and budget; do not combine this with a monitor benchmark."
+    },
+    {
+      "candidate": "Full reporting/export workload",
+      "fact": "Analytic whole-domain inventory is evaluated each step; seven actual/reference plane gauges every ten steps; outlet cell/face exports every fifty; full local CSV and checkpoint every five hundred; native/outlet inner history is retained.",
+      "safe_action": "Preserve live scientific data and guards. Profile sections before reducing nonessential export frequency; the rare checkpoint overhead is a preservation cost, not a reason to remove checkpoints."
+    },
+    {
+      "candidate": "AMG cumulative counter file",
+      "fact": "Each step opens/appends amg_cycle_counts.csv using cumulative API counters already shown unreliable for achieved linear convergence; actual LOW logs remain the established evidence.",
+      "safe_action": "Removing or buffering this non-authoritative auxiliary output is a later independent low-risk candidate, not a claimed large speedup."
+    },
+    {
+      "candidate": "Stored scenes",
+      "fact": "Twelve native inspection scenes and two streamline parts are created; code does not prove that these are rendered every step.",
+      "safe_action": "Do not delete or blame scenes solely from their presence. If an actual open auto-refresh scene is found, benchmark its refresh cadence separately while retaining saved native views."
+    }
+  ],
+  "controlled_benchmark": {
+    "status": "Proposed only; not launched",
+    "sequencing": "Keep current run intact. At an already planned, completed and hash-verified non-guard-failed checkpoint boundary, preserve the source and create new unique baseline/candidate folders. Never launch beside the active owned GPU controller; verify queue and process release first.",
+    "first_step": "Use identical reporting-only timing instrumentation in both copies to time solve, guard reports, mass/flux reductions, gauges, output extraction and saves. Inventory monitors without mutating numerical fields. The first perturbation should be one verified redundant monitor group or one redundant getter cache, not a bundle of changes.",
+    "settings_fixed": [
+      "Mesh, domain, wave, boundary conditions and physical checkpoint state",
+      "GPU count 1 and CPU process count 1 for reporting benchmark",
+      "SO time scheme, dt, inner iterations, AMG tolerances/caps, URFs and VOF settings",
+      "50 m/s, alpha, finite field, mass/time/resource and source-identity guards",
+      "Native phase and BDF2 diagnostics with unchanged 0.01% review threshold; existing exploratory exception remains explicitly labelled",
+      "Current force/component/gauge histories, checkpoint policy and complete-cycle repeatability policy"
+    ],
+    "length": "20 warm-up steps then at least 100 matched measured steps; use a common physical window after the temporary 0.605\u20130.635 AMG trace. Preserve equivalent output/checkpoint cadence and report event-free and inclusive timing separately.",
+    "compare": [
+      "Mean and median seconds/step and seconds per physical second, including and excluding scheduled I/O events",
+      "Timed solver/report/output sections, GPU activity, clocks/power and owned CPU time",
+      "Exact timestamps/sample counts and all guard outcomes",
+      "CD, CL, pressure/viscous drag, gauge elevation, native water/air error, BDF2+flux, speed/phase bounds against baseline at matched times"
+    ],
+    "numerical_equivalence": "For a reporting-only change on the same one-process decomposition, require bitwise equality where feasible and otherwise tightly bounded roundoff differences. Any systematic trajectory or diagnostic change rejects a pure-performance claim. Do not use performance optimization to erase a previously exceeded mass criterion.",
+    "noise_control": "The separate HF job remains untouched. Record its concurrent CPU load and total memory pressure. If improvement is small versus observed run variability, regard it as inconclusive; a bounded A/B/A repeat is justified only then.",
+    "second_independent_option": "If profiling shows CPU-side work remains dominant, test one to two CPU processes on the same GPU from the same checkpoint, with all reporting/numerics fixed and a new attempt ID. Verify fields and force/gauge agreement because decomposition can alter floating-point ordering. Do not combine with reporting changes or alter the separate HF ranks.",
+    "adoption": "Adopt only after a sustained measured wall-time improvement exceeding measurement variability and unchanged scientific/guard evidence. GPU percentage alone is not an acceptance metric."
+  },
+  "no_actions_taken": [
+    "No solver launch or stop",
+    "No process priority/affinity/worker change",
+    "No active API attachment",
+    "No monitor/report/scene/controller edit",
+    "No changes to the separate HF session"
+  ]
+}

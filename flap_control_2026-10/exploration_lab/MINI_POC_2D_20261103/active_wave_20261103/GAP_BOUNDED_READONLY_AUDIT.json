@@ -1,0 +1,44 @@
+{
+  "scope": "One limited existing-data audit; no solver,no threshold change",
+  "cases": [
+    {
+      "case": "gap_delta_0",
+      "first_recorded_iteration": "3",
+      "global_pABSmin_Pa": -1799624.1811583072,
+      "min_wall_Cp": -11.837013687378215,
+      "wall_pABS_from_Cp_Pa": -1796859.9913552708,
+      "wall_location_m": [
+        0.9444208396600965,
+        0.05810881123233615,
+        0.0
+      ],
+      "native_min_least_squares_quality": 0.15517515669441467,
+      "cell_volume_positive_from_mesh_precheck": true,
+      "Overset": false,
+      "initial_velocity": "Uniform18m/s also in hinge cavity; non-compatible with stationary curved walls; hypothesis,not proven unique root cause",
+      "local_velocity_and_pressure_gradient": "Not exported in existing files; cannot prove exact velocity/stencil cause fromwallCp alone",
+      "decision": "HOLD; no gap solver restart. Negativeabsolute pressure ininitialSIMPLEiterate isnot validated cavitation prediction."
+    },
+    {
+      "case": "gap_delta_0_gentle_start",
+      "first_recorded_iteration": "1",
+      "global_pABSmin_Pa": -4322943.101565355,
+      "min_wall_Cp": -27.430119305958982,
+      "wall_pABS_from_Cp_Pa": -4322943.101565355,
+      "wall_location_m": [
+        0.9144399140796935,
+        0.02301145511047795,
+        0.0
+      ],
+      "native_min_least_squares_quality": 0.15517515669441467,
+      "cell_volume_positive_from_mesh_precheck": true,
+      "Overset": false,
+      "initial_velocity": "Uniform18m/s also in hinge cavity; non-compatible with stationary curved walls; hypothesis,not proven unique root cause",
+      "local_velocity_and_pressure_gradient": "Not exported in existing files; cannot prove exact velocity/stencil cause fromwallCp alone",
+      "decision": "HOLD; no gap solver restart. Negativeabsolute pressure ininitialSIMPLEiterate isnot validated cavitation prediction."
+    }
+  ],
+  "proven": "MinCp lies on hinge recess; healthy globalpositive mesh and noOverset; firstiterates invalid",
+  "not_proven": "Whether initial cavityvelocity,localstencil/anisotropy,or pressure-correction treatment dominates",
+  "candidate_next": "Compatible cavity/near-wall initialization,only after a targeted fielddiagnostic; no unique obvious correction proven,so no repairtest launched"
+}

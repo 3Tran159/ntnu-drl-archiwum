@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-03T14:34:26.302327+01:00",
+  "approved_by_user": true,
+  "experiment_id": "RECOVERED_PERF_20261103",
+  "previous_blocked_job": "RECOVERED_PERF_20261103_MPI8_DT2",
+  "previous_case_remains_failed": true,
+  "approved_job_ids": [
+    "RECOVERED_PERF_20261103_MPI8_DT2_LAUNCH3"
+  ],
+  "source": "Explicit SAFE CHECKPOINT + CPU/TIMESTEP BENCHMARK + AUTONOMOUS RESUME, including8/12/16/18/20MPI; current clarification W04 uses1MPI+1GPU",
+  "job": {
+    "id": "RECOVERED_PERF_20261103_MPI8_DT2_LAUNCH3",
+    "kind": "recovered_perf",
+    "experiment_id": "RECOVERED_PERF_20261103",
+    "approved": true,
+    "macro": "RecoveredPerfBench.java",
+    "macro_sha256": "8f0c48c2bb15cf7aae360e4c4e68ccca5571bb80a815e32bf5b4e83fb17f2511",
+    "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\production_source.sim",
+    "input_sha256": "ebcf774b8961a6788115f2bef1c6a686deaf2557d03341b5ec1a51836042f90c",
+    "initial_time_s": 1.2120000000000009,
+    "cpu_processes": 8,
+    "dt_s": 0.002,
+    "angle_deg": 0,
+    "affinity_mask": 12598284,
+    "runtime_properties_sha256": "cb6b901a29d7edb361230cd254b65759563e10f9303165fcc5c1a4ad2bfbc288",
+    "progress_timeout_s": 900,
+    "maximum_runtime_s": 1800,
+    "runtime_guards": {
+      "minimum_absolute_pressure_Pa": 12339.214766776897,
+      "maximum_mass_imbalance_relative": 0.0001,
+      "maximum_omega_floor_cells": 0,
+      "maximum_k_floor_cells": 0,
+      "maximum_overset_error_cells": 0,
+      "maximum_turbulent_viscosity_ratio": 99999
+    }
+  },
+  "scope": "Same protected production checkpoint; onlyMPI,own affinity anddt differ; no W04 changes; no threshold reductions"
+}

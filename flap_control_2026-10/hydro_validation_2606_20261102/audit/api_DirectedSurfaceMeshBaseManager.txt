@@ -1,0 +1,22 @@
+Compiled from "DirectedSurfaceMeshBaseManager.java"
+public class star.sweptmesher.DirectedSurfaceMeshBaseManager extends star.base.neo.ClientServerObjectManager {
+  public star.sweptmesher.PolygonMeshDisplayer _polygonMeshDisplayer;
+  public star.sweptmesher.DirectedSurfaceMeshBaseManager(star.base.neo.ClientServerObjectKey);
+  public star.common.Simulation getSimulation();
+  public star.sweptmesher.DirectedMeshOperation getOperation();
+  public void executeAll();
+  public star.base.neo.ClientServerObject getObject(java.lang.String);
+  public void remove(star.sweptmesher.DirectedSideMeshDistribution);
+  public star.sweptmesher.DirectedPatchSourceMesh createPatchSourceMesh(java.util.List<star.common.PartSurface>, star.sweptmesher.DirectedMeshPartCollection);
+  public star.sweptmesher.DirectedUseExistingSourceMesh createUseExistingSourceMesh(java.util.List<star.common.PartSurface>, star.sweptmesher.DirectedMeshPartCollection);
+  public void createUseExistingSourceMesh(java.util.Collection<star.sweptmesher.DirectedMeshPartCollection>);
+  public star.sweptmesher.DirectedUseExistingSourceMesh createUseExistingSourceMeshMultiPCS(java.util.Collection<star.sweptmesher.DirectedMeshPartCollection>);
+  public star.sweptmesher.DirectedAutoSourceMesh createAutoSourceMesh(java.util.List<java.lang.String>, java.util.Collection<star.sweptmesher.DirectedMeshPartCollection>);
+  public star.sweptmesher.DirectedCadTemplateSourceMesh createCadTemplateSourceMesh(java.util.Collection<star.common.PartSurface>, star.sweptmesher.DirectedMeshPartCollection);
+  public star.sweptmesher.DirectedMeshDistribution createDirectedMeshDistribution(java.util.List<star.sweptmesher.DirectedMeshPartCollection>);
+  public star.sweptmesher.DirectedMeshDistribution createDirectedSideMeshDistribution(java.util.Vector<star.sweptmesher.DirectedMeshPartCollection>);
+  public java.util.Vector<star.common.PartSurface> getUsedSourceSurfaces();
+  public java.util.Vector<star.common.PartSurface> getUnusedSourceSurfaces();
+  public boolean validateConfigurationForPatchMeshCreation(star.sweptmesher.DirectedMeshPartCollection, java.util.Vector<star.common.PartSurface>, java.util.Vector<star.common.PartSurface>);
+  public java.lang.Class<? extends star.base.neo.ClientServerObject> getManagedType();
+}

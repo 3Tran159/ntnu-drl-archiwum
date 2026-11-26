@@ -1,0 +1,80 @@
+USER AUTHORIZED FIRST W01 FOIL-WAVE TRIAL — 2026-10-30T09:23:58.664317+01:00
+User explicitly resumed first wave and accepted observed~0.0143% mass residual for exploration. Previous0.01% remains a reported diagnostic flag; no final force-accuracy claim.
+Inspect wave_foil_run_state.json, first_foil_wave_diagnostic_r1.lock and queue.lock before acting. Targetnewcase W01_W20L4_M10_FS020_diagnostic_r1; never duplicate/restart completed controller.
+M10 FS020317277cells, H0.5/L20/depth24. Guardedstartup0.5ms50inner40steps thenSO1ms10inner/pressureAMG.01 to1.2s. Native scenes and outlet residual/face diagnostics included. Matchedcalm/longcycles/grid/time/reflection checks remain.
+SeparateHFsession untouched. Heartbeatautomation remainspaused; onlythiscontroller authorized now. Oldpause notesbelow arehistorical.
+
+DASHBOARDS REORGANIZED; CAMPAIGN STILL PAUSED — 2026-10-30T09:00:44.632742+01:00
+User requested dashboard work, not CFD restart. STOP_ALL remains; automation remains paused. Separate HF work untouched.
+Both English views use horizontal topic bars and nested tests. Original simulation schematic restored top-right, mobile below.
+Operational computer status is always outside collapsible sections; read-only monitor refreshes20s, page refresh30s, stale samples marked. Inspect dashboard_status_monitor.lock/state before any monitor relaunch. Monitor never starts solvers.
+QA1920/1360/390 and print passed; see accordion_ui_review_20261030.json and dashboard_reorganization_20261030.json.
+Saved R14 spatial analysis now COMPLETE: professor_r14_local_balance_review.json. At .618s two interface cells .1m from outlet contribute99.9132% of net water residual; CSV sums calibrate native values. Location proved, cause not proved.
+Proposed next short calculation is reporting-only .500→.630 with unchanged R14 settings plus outlet-face and last-two-column iteration diagnostics. No solver launched and no guard/threshold changed.
+
+PAUSED BY USER - 2026-10-30T07:42:17.443855+01:00
+This campaign is stopped for transport to NTNU. Automation PAUSED and STOP_ALL present.
+Do not start any solver or controller until explicit user resume. Keep all sources/attempts.
+The separate HF_012_C003_regular_waves session is intentionally left running by the user's explicit morning reply.
+
+Last own GPU controller R14 finished successfully at 02:05:40 local, 250steps to0.750s, source unchanged.
+Final saved file: E:\ntnu\quasi2d_waves_20261029\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14\final.sim
+No subsequent own CFD runs were launched. Agent usage-limit errors were reported around02:03; do not imply calculation continued all night.
+Morning postprocessing confirms R14 pressure AMG target0.01 achieved (4-6cycles), but native phase mass peak0.014247575876% still exceeds0.01%.
+R14 map calibration passed at0.612/0.617/0.618/0.625: cell sums exactly equal native phase report/dt. Spatial interpretation remains pending.
+Calm M09 remains supported. M10 coarse/fine paired wave inputs are prepared; no accepted foil-wave force comparison completed.
+Read campaign_pause_20261030.json and OVERNIGHT_SUMMARY_20261030.txt for the pause record.
+Prior handover below is HISTORICAL; its R14-active language is superseded by this pause.
+
+CURRENT HANDOVER — 2026-10-30, R14 pressure linear-accuracy and spatial balance probe
+Read actual files, processes and locks before every launch. Preserve sources and all attempts; completed controllers must not be restarted. No optional questions.
+
+PRIORITIES AND SCOPE
+Numerical configuration → supported lightest mesh → original calm/waves → bounded extras. Maximum mesh M15. Fixed vertical domain z=-22..8 m, waterline2 m, depth24 m, air6 m. U18 m/s, submergence2 m, foil geometry/angle retained. All waves FifthOrderVofWave. Historical16m instructions are superseded. GPU sequential under root queue.lock; modest CPU preparation only after resource checks. New large files on E. Do not touch HF_012_C003_regular_waves. Never expose licensing/service credentials.
+
+CURRENT GPU — INSPECT, DO NOT DUPLICATE
+run_wave_pressure_tolerance_r14.py controller28004, launcher36564, owns root queue.lock and wave_pressure_tolerance_r14.lock.
+Case E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14.
+R4 checkpoint_t0.500 source; SO1ms10inner;250steps to0.750. ONLY numericalchange pressure AMGrelative tolerance0.1→0.01; VOF returns originalbaseline0.1 (notR13.001), maxcycles30,epsilon0,URFs,HRIC,BCsunchanged. Nativephase everyinner andLOW AMG.605–.635 retained. Physical progress verified at0.501s; actual pressuretol.01 andVOFtol.1, maxspeed18.47577m/s,interfaceCFL.10904; no macroerror. Verifycurrentfiles. Nooptionalquestions. Guard50m/s/phase/time/resourcesunchanged.
+Reporter-only cell-centred mapsat.612/.617/.618/.625: local_balance_t*.csv/json. Runtimeverified MassImbalancewater/air/mixture fields are unsmoothed cell-summed and compared againstnativephaseerror/dt. ONLY interpret mapsasnativeerrordecompositionifcalibrated_as_native_decomposition=true. No cellvolume multiplication. No temporary-storagechange. Fieldmapsincludealpha,rho,pressure,CFL,velocity. Verify actual spatialpeaklocationandcore/forcing/damping partitionbeforeattributingcause.
+Aftercompleted/sourceunchangedrun analyze_wave_pressure_tolerance_r14.py; inspect2500native samplesperphase,actualAMGtarget/cycles,native/BDF2 equivalence,allhistoryfinite,gauges,cost. Massgate.01%unchanged. If pressure targetachievedbutphaseplateaupersists,localizeerrorwithcalibratedmaps ratherthanblindlyincreaseinnercounts. No longerwave admissionbefore scientificreview.
+R12densityfieldverified rho=1.2+998.8*alpha to1.14e-13kg/m3. Native signed volume-equivalent error Rwater/1000+Rair/1.2 mayhelpdistinguishnetvolumecontinuityfromphasetransport; it doesnoteliminatelocalcoupling. Keep originalmasscriterion.
+
+R13 COMPLETED — TIGHTER VOF DID NOT REMOVE PHASE ERROR
+Controller36940 FINISHED250steps to.750,sourceunchanged,2500finite native samples eachphase. wave_vof_tolerance_r13_review.json.
+OnlyVOFtol.1→.001: actual310VOF solves nowALL2cycles, reductions2.59e-6..1.03e-5; targetachievedwithoutcap. Pressureunchanged2cycles. Nativeabsphasepeak.014624571763%,legacy.014593157196%,stillabove.01%. Peak.618; gaugechangevsR10max.0571078mm,RMS.0077728mm; native/BDF2agree6.59e-9pp. Finite,maxspeed21.4664,interfaceCFL.19598,alpha[0,1].
+MatchedinstrumentedmedianstepcostR13.78464s vsR12.77614s(.510–.650). R13 didnotcuremassplateau despite substantiallytighterphase linear solve. This rulesout thatsimpleaccuracyfix here,notallpressure/VOFcoupling. R14thereforetestsONLY pressuretolfromoriginalcheckpoint,notcombinedtightening.
+
+R12 COMPLETED — REPORTING ONLY
+Controller39344 FINISHED150steps to.650; sourceunchanged, 1500finite water andair samples. wave_linear_trace_r12_review.json and independent professor_wave_linear_trace_r12_review.json.
+Actual log:310VOF solves, ALL1cycle, relative reductions .001342295–.004043318;310pressure solves, ALL2cycles, .04017767–.08008076. Relative tolerance0.1 stops both; no30cyclecap or epsilon0 hit. VOF updates everyinner iteration. API total-cycle getters remained constant and are unusable for sequencing/cost; use LOW log.
+Native absphasepeak .014386459897% at.618; legacy .014355557232%; native/BDF2agreement6.03e-9percentagepoints. R12 gauges equal R10 to6.5e-10mm. Reporting alone has no effect. Peak inner sequence is nonmonotone: .08391,.02135,.009955,.013932,.013840,.014063,.014197,.014292,.014360,.014386%. An isolated early crossing is not convergence. R13 tolerance.001 chosen because .01 would not change observed one-cycle exits. Cause of phase plateau not proved.
+
+CALM TEMPLATE SUPPORTED
+M09,214908cells,SO1ms10inner. selected_mesh_decision.json andmatched_endpoint_results.json. Common1.840–2.040: M09/M07 CD+0.466698%,CL−0.164252%; M09/M08−0.025574%,+0.016736%. Selectedhalfdt changesCD−0.00242319%,CL+0.00145333%. Practical support, notformalGCI. Wallp95~.800,>99.88%area<1,localizedTEmax~253.6; keepdistinct. Preserve historicalFO/firstsettledSO/matchedSO cohorts. Force settling both adjacentnonoverlapping.2s meanchanges<.5%,firstpass;newsettingshistory>=.4s. Mesh bothmeanswithin1%versustwocomponent-wisefinercases. Calm10inner does not establish wave10inner. No finalwave-force admission.
+
+PRESERVED WAVE DIAGNOSTICS
+R4 environmentaloutlet+SLIPbed1.2s SO1ms10inner stable shortpilot,sourceunchanged; maxspeed24.373, gaugesRMS3.61–4.34mm. FourBDF2massspikes .617/.618/.624/.625 peak.01451936% >unchanged .01% gate.
+R6 20innerpeak.0113353%; R8 halfdt10inner across ALLhalfsteps peak.0166372%; bothfail.
+R10 reporter-only250steps .750: nativeabsphasepeak.01438646%,legacy.01435556%; native/BDF2agree5.78e-9pp; phaseflux/mixtureagree1.64e-11kg/s. Reporting mismatch excluded.
+R11 actual40inner EVERYstep proved fromlog,250steps.750: nativeabsphasepeak.0111712387%,legacy.0111449892%; gauge40vs10max.346148mm; fails. sourceunchanged. No40innerlongtrial.
+Completed15556,36724,29860,35120,36136,39344,36940,41084,33140 mustnotrestart. UnlaunchedR5/R7/R9longerprototypes remainBLOCKED. OldSTATICoutlet r2/r3 jetfailures preserved; nevercontinuefailedfields.
+
+PRIMARY PHYSICS / DIAGNOSTICS
+Reportaudit confirmsunsmoothedreports,idealizationoff,independenthistoryexact. Native MassConservationError iskg/step; dividebydt. MassFlowRatephase kg/s positiveoutflow,noarea multiplication; MassFluxphase opposite sign/areaunits. Nativephase/BDF2/FaceFluxequivalence verified. Keep .01% reviewgate, neverhideerrorsbybudgetredefinition ormasscorrection.
+Solveraudit: VOF/pressure/velocity AMGtol.1,maxcycles30,epsilon0; VOFURF.9,pressure.2,velocity.5,SIMPLE,0nonorthcorrectors. Phaseusersourcefalse. Waveforcingmomentumonly. SO VOFusesBDF2 andupdatesatinneriterations. FaceDensityReconFIRST_ORDERinternalfaceoption isnotcausalproof. Clippingnotproved; measuredCFLlow. Seeprofessor_wave_mass_plateau_review.json,wave_solver_controls_review.json andprimarySiemensreferences.
+R4 whole-domain+9.53mm-equivalentinventoryversusundampedwave includesdamping mismatch; notcoreleveldrift/provedleak. Corefirstcyclemeanerrors−1.44..+1.18mm. Needzonalactual/undamped/flat references,equalphasecycles,reflections,FSandwave-dtchecks.
+
+M10 WAVE GRID / INPUTS COMPLETE
+M10_FS020_r1 shortdomain282379cells,zero steps,sourceunchanged. Actual856foil edges/prisms preservednumerically; nominalFS28.5714→20mm refines BOTHx/zincore. ActualmedianFSdx30.689→21.812mm,dz31.508→19.966mm,p95dz39.264→27.420mm. OldLE/TE M10idea remainsunbuilt; do notconfuse.
+Longdomain C01_W20L4_M10_FS020_mesh_r2:317277cells,x−35..45,z−22..8,y.01..03,all282379originalpolygons/coordspreserved,quality/singlespanpass. Remotehorizontal<=.2m,vertical~.020m anisotropicstrips,not20mmisotropicremotegrid.
+PairedC01_W20L4_M10_FS020_env_setup_r1 andW01_W20L4_M10_FS020_env_setup_r1 finishedzero-step317277cellprepared.siminputs,sourceunchanged. ENVIRONMENTALoutlet,SLIPbed,STATICtop,20minletforcing/outletdamping,allotherflagsNO. W01FifthOrderH.5,L20,H24,firstfrontfalse. PreparedSO1ms10inner only; waveconfigpending. Controllers33444,36760,39192 finished; CPUlockreleased; neverrestart.
+OriginalM09longdomain246885cellpairedinputs remainpreserved. Theseareinputs,notacceptedwaveforces.
+
+NEXT WAVE WORK
+NofoilR5geometry53200cells,dx.2,dz.025FS,20mmspan,4lambda80m. T=.84726732s. Forcing−35..−15,core−15..25,damping25..45.1.2s<coretraversal1.695s,notreflectionvalidation.
+Aftersettings/propagation/FS/dtgates: matchedC01,W01H.5L20,W02H.5L30,requestedW01 3lambda/4lambda sensitivity.8–10encounterperiods,whole settledcycleaverages,checkpoints. Newgeometry/settings requirematchedcalm. ThenboundedW03.25/20,W04.75/20,W05.25/30,W06.75/30,W07.5/10,W08.5/40. LowerHgridchanges needmatchedH.5baseline. No unsupportedwaveforceclaims.
+
+PRESENTATION / HANDOVER
+English main dashboard.html andprofessor_dashboard.html inparentfolder shareJSON viaupdate_status.py. Show exactevidence,experimenttree,actualmeshchanges,pressure/viscousFx,costs,simlinks,acceptedfields/provenance. Preservehistoricalcohorts andoriginalM04 distinction. R12 tracepanel added andr12_trace_ui_review.json passed1920/1360/390/19pageprint. AgentaddingcompletedR13comparisonandR12/R13tracefigures; R14liveonlyfromactualstate. ReadnewestQA beforeassumingnewfigureintegrationdone. Prior QA m10_native_lineage_ui_review.json passed1920/1360/390 and19pageprint; readnewestQA. Rechecknewpopulatedpanels; private monitorstaysprivate.
+Keepplans,RESUMEandautomationcurrent. Preserveearlierhandoverarchive. Userauthorizedagents/independentdecisions. Stayquietunlessmeaningfulcompletion/result/failurerequiringuser.

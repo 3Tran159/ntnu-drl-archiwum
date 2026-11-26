@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-03T12:23:30.274721+01:00",
+  "approved_by_user": true,
+  "experiment_id": "RECOVERED_FIXED_PLUS2_SWEEP_20261103",
+  "previous_blocked_job": "BOUNDED_FIXED_PLUS2_SWEEP_20261103_RUN",
+  "previous_case_remains_failed": true,
+  "approved_job_ids": [
+    "RECOVERED_FIXED_PLUS2_SWEEP_20261103_RUN"
+  ],
+  "source": "Earlier explicit bounded-campaign authorization plus current conditional authorization to prepare safe continuation after a passed pressure-recovery verification",
+  "prepared_only": true,
+  "execution_requires_manual_start": true,
+  "recovery_review": "F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\INLET_PRESSURE_AUDIT_20261103\\RECOVERY_RESULT.json",
+  "review_sha256": "b7adf7620c00037b7608daf297a7f19b24f6ecb69d20815b7878c140225e26dc",
+  "macro_sha256": "d85d64d256ae14afa091456a516763dfd3e23c11cc04d7a320f710ad32b3234c",
+  "job": {
+    "id": "RECOVERED_FIXED_PLUS2_SWEEP_20261103_RUN",
+    "kind": "bounded_sweep",
+    "experiment_id": "RECOVERED_FIXED_PLUS2_SWEEP_20261103",
+    "approved": true,
+    "macro": "RecoveredFixedFlapSweep.java",
+    "macro_sha256": "d85d64d256ae14afa091456a516763dfd3e23c11cc04d7a320f710ad32b3234c",
+    "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\INLET_PRESSURE_RECOVERY_20261103\\run_20261103_120108\\checkpoint.sim",
+    "input_sha256": "78b729a0413047f01a271bc28e7575be9e9456518102ff25a816870f75ccbbc5",
+    "initial_time_s": 0.7900000000000006,
+    "cpu_processes": 8,
+    "angles_deg": [
+      0,
+      2
+    ],
+    "speeds_m_s": [
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "runtime_properties_sha256": "628c50a1ed0227f77fe5ae89f7f8336e18b7219e7190d5c796b7d3500e4126a4",
+    "progress_timeout_s": 900,
+    "maximum_runtime_s": 86400,
+    "runtime_guards": {
+      "minimum_absolute_pressure_Pa": 12339.214766776897,
+      "maximum_mass_imbalance_relative": 0.0001,
+      "maximum_omega_floor_cells": 0,
+      "maximum_k_floor_cells": 0,
+      "maximum_overset_error_cells": 0,
+      "maximum_turbulent_viscosity_ratio": 99999
+    }
+  }
+}

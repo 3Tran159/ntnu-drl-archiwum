@@ -1,0 +1,101 @@
+{
+  "at": "2026-11-02T21:50:10.506915+01:00",
+  "inspection": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\overset_physics_20261102_203904",
+  "source_simulation_unchanged": true,
+  "physical_solid_intrusion_check": [
+    {
+      "region": "Background",
+      "solid": "main",
+      "all_centroids_inside": 547,
+      "active_centroids_inside": 547,
+      "status_counts": {
+        "0": 547
+      }
+    },
+    {
+      "region": "Background",
+      "solid": "flap",
+      "all_centroids_inside": 0,
+      "active_centroids_inside": 0,
+      "status_counts": {}
+    },
+    {
+      "region": "FlapOverset",
+      "solid": "main",
+      "all_centroids_inside": 0,
+      "active_centroids_inside": 0,
+      "status_counts": {}
+    },
+    {
+      "region": "FlapOverset",
+      "solid": "flap",
+      "all_centroids_inside": 7,
+      "active_centroids_inside": 7,
+      "status_counts": {
+        "0": 7
+      }
+    }
+  ],
+  "interpolation": {
+    "Background": {
+      "total_cells": 212360,
+      "cell_status_counts": {
+        "0": 211504,
+        "-2": 856
+      },
+      "acceptors": 856,
+      "size_ratio_quantiles": {
+        "0.0": 0.2936046990248932,
+        "0.01": 0.3270072001900385,
+        "0.5": 0.6245581510074192,
+        "0.99": 1.2286748824881166,
+        "1.0": 1.5477349237902436
+      }
+    },
+    "FlapOverset": {
+      "total_cells": 40657,
+      "cell_status_counts": {
+        "0": 40657
+      },
+      "acceptors": 0,
+      "size_ratio_quantiles": {
+        "0.0": NaN,
+        "0.01": NaN,
+        "0.5": NaN,
+        "0.99": NaN,
+        "1.0": NaN
+      }
+    }
+  },
+  "wall_area": {
+    "Background": {
+      "Volume Mesh": {
+        "sum_m2": 0.040383569295308744,
+        "native_polygon_expected_m2": 0.04038514282674962,
+        "relative_difference": -3.896312680196079e-05
+      },
+      "Overset Mesh": {
+        "sum_m2": 0.0,
+        "native_polygon_expected_m2": 0.04038514282674962,
+        "relative_difference": -1.0
+      }
+    },
+    "FlapOverset": {
+      "Volume Mesh": {
+        "sum_m2": 0.011871045061479481,
+        "native_polygon_expected_m2": 0.011871167600058503,
+        "relative_difference": -1.032236955533783e-05
+      },
+      "Overset Mesh": {
+        "sum_m2": 0.0,
+        "native_polygon_expected_m2": 0.011871167600058503,
+        "relative_difference": -1.0
+      }
+    }
+  },
+  "no_active_cell_centroids_in_solid": false,
+  "representation_used": "Volume Mesh (active and visualization acceptor cells)",
+  "full_overset_representation_verified": false,
+  "invalid_overset_mesh_export_excluded": true,
+  "training_approved": false
+}

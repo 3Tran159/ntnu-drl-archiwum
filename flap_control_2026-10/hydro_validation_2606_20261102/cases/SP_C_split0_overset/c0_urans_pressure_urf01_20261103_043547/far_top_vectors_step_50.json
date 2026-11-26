@@ -1,0 +1,154 @@
+{
+  "at": "2026-11-03T04:50:46.597905+01:00",
+  "scientific_approved": false,
+  "selection": "Background active cells with10<x<43m and7<z<8m; cells adjacent to remote top pressure boundary, no foil or Overset region.",
+  "cases": {
+    "B without Overset": {
+      "cells": 540,
+      "volume_m3": 0.6675368524024609,
+      "vx_min": 11.00817994982199,
+      "vx_max": 18.01166928230394,
+      "vx_volume_mean": 17.057635373672007,
+      "vz_min": -0.3733090337546888,
+      "vz_max": 0.236277179470495,
+      "vz_volume_rms": 0.05720994459844313,
+      "velocity_deviation_from_uniform18_volume_rms": 1.5484588805881458,
+      "min_pressure": {
+        "X (m)": 36.978155001841166,
+        "Z (m)": 7.945026890995059,
+        "Pressure (Pa)": -13914.380330370865,
+        "Absolute Pressure (Pa)": 29089.903374335045,
+        "Velocity[i] (m/s)": 13.268138896860783,
+        "Velocity[k] (m/s)": -0.1050720773658323,
+        "Cell Quality": 0.6148484773688665
+      },
+      "largest_abs_vz": [
+        {
+          "X (m)": 24.857088905026195,
+          "Z (m)": 7.962395505389131,
+          "Pressure (Pa)": -3243.2060660873303,
+          "Absolute Pressure (Pa)": 39590.691524124566,
+          "Velocity[i] (m/s)": 12.770958679818738,
+          "Velocity[k] (m/s)": -0.3733090337546888,
+          "Cell Quality": 0.9573183313236432
+        },
+        {
+          "X (m)": 31.18280091939224,
+          "Z (m)": 7.940195072560616,
+          "Pressure (Pa)": 215.23983609187317,
+          "Absolute Pressure (Pa)": 43266.923681667184,
+          "Velocity[i] (m/s)": 15.515625175023912,
+          "Velocity[k] (m/s)": 0.236277179470495,
+          "Cell Quality": 0.6362340649190066
+        },
+        {
+          "X (m)": 31.45647652191355,
+          "Z (m)": 7.947176342620307,
+          "Pressure (Pa)": 395.1338287926288,
+          "Absolute Pressure (Pa)": 43378.33141215289,
+          "Velocity[i] (m/s)": 14.913957216555533,
+          "Velocity[k] (m/s)": 0.2211792210851599,
+          "Cell Quality": 0.6048191108953495
+        }
+      ]
+    },
+    "C pressureURF0.2": {
+      "cells": 544,
+      "volume_m3": 0.667529949640846,
+      "vx_min": 8.16530277689985,
+      "vx_max": 18.00993676259162,
+      "vx_volume_mean": 16.87462163899505,
+      "vz_min": -0.4294264889857211,
+      "vz_max": 0.7863657527316754,
+      "vz_volume_rms": 0.13407358307252543,
+      "velocity_deviation_from_uniform18_volume_rms": 2.0131220137432844,
+      "min_pressure": {
+        "X (m)": 33.31405470944292,
+        "Z (m)": 7.7597478441054015,
+        "Pressure (Pa)": -8080.637198255967,
+        "Absolute Pressure (Pa)": 36741.234034183675,
+        "Velocity[i] (m/s)": 14.81623800455187,
+        "Velocity[k] (m/s)": -0.2250455758074677,
+        "Cell Quality": 0.5731082291806378
+      },
+      "largest_abs_vz": [
+        {
+          "X (m)": 35.47810580847734,
+          "Z (m)": 7.941549586094919,
+          "Pressure (Pa)": 1100.539106683039,
+          "Absolute Pressure (Pa)": 44138.935173918464,
+          "Velocity[i] (m/s)": 13.023010959008223,
+          "Velocity[k] (m/s)": 0.7863657527316754,
+          "Cell Quality": 0.6339835461524805
+        },
+        {
+          "X (m)": 35.198446325231686,
+          "Z (m)": 7.933220466643584,
+          "Pressure (Pa)": 303.69038753277385,
+          "Absolute Pressure (Pa)": 43423.79512008082,
+          "Velocity[i] (m/s)": 14.29873658467882,
+          "Velocity[k] (m/s)": 0.7637726449398075,
+          "Cell Quality": 0.6696032590111499
+        },
+        {
+          "X (m)": 39.234708286865775,
+          "Z (m)": 7.934865590726495,
+          "Pressure (Pa)": 379.4999167537392,
+          "Absolute Pressure (Pa)": 43483.46598135813,
+          "Velocity[i] (m/s)": 14.81167454114414,
+          "Velocity[k] (m/s)": 0.694220640973281,
+          "Cell Quality": 0.6445791033788536
+        }
+      ]
+    },
+    "C pressureURF0.1": {
+      "cells": 544,
+      "volume_m3": 0.667529949640846,
+      "vx_min": 6.262390996675188,
+      "vx_max": 18.00987684445872,
+      "vx_volume_mean": 16.797361436487268,
+      "vz_min": -0.6436563417627094,
+      "vz_max": 0.9293597586730884,
+      "vz_volume_rms": 0.1680614517855287,
+      "velocity_deviation_from_uniform18_volume_rms": 2.164235252409335,
+      "min_pressure": {
+        "X (m)": 28.810778701859796,
+        "Z (m)": 7.781354290492966,
+        "Pressure (Pa)": -18518.12360496611,
+        "Absolute Pressure (Pa)": 26091.78837934506,
+        "Velocity[i] (m/s)": 15.836943749274091,
+        "Velocity[k] (m/s)": -0.1446665040443614,
+        "Cell Quality": 0.5700282373843553
+      },
+      "largest_abs_vz": [
+        {
+          "X (m)": 36.932471419569865,
+          "Z (m)": 7.92873456075495,
+          "Pressure (Pa)": 1067.898551514228,
+          "Absolute Pressure (Pa)": 44232.01002271212,
+          "Velocity[i] (m/s)": 13.523371199692615,
+          "Velocity[k] (m/s)": 0.9293597586730884,
+          "Cell Quality": 0.6889990701301844
+        },
+        {
+          "X (m)": 40.99340024514253,
+          "Z (m)": 7.939199459345708,
+          "Pressure (Pa)": 895.5214588256578,
+          "Absolute Pressure (Pa)": 43956.97227045699,
+          "Velocity[i] (m/s)": 13.945164986183462,
+          "Velocity[k] (m/s)": 0.8799456974569817,
+          "Cell Quality": 0.6579459865386768
+        },
+        {
+          "X (m)": 41.26884429802335,
+          "Z (m)": 7.93442313075976,
+          "Pressure (Pa)": 1596.4986655935204,
+          "Absolute Pressure (Pa)": 44704.80526265723,
+          "Velocity[i] (m/s)": 12.667758788660448,
+          "Velocity[k] (m/s)": 0.8334884693684572,
+          "Cell Quality": 0.6694078987653537
+        }
+      ]
+    }
+  }
+}

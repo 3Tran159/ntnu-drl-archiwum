@@ -1,0 +1,802 @@
+Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxjb2Fyc2UwMTJfQzAwMVxiYXNlbGluZV9jb3B5LnNpbQ==
+*****************************************************************************************
+Warning: CPU contention on 8 processes could not be resolved.
+         CPU affinity will be cleared on those processes.
+
+         This is a strong indication that another server is already running and on some
+         hosts there are now more processes running than there are physical CPU cores.
+
+         Over-subscribing a host can severely affect performance.
+
+         Even when within the limits of hardware multithreading (e.g., hyper-threading),
+         using more processes than CPU cores will likely negatively impact performance.
+
+         The recommended mode of operation is to use the same number of processes as
+         physical CPU cores.
+*****************************************************************************************
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 32948
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 09:49:02 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\mesh_screening_20261028\coarse012_C001\baseline_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\mesh_screening_20261028\coarse012_C001\Coarse012.java
+F:\ntnu\mesh_screening_20261028\coarse012_C001\Coarse012.java:29: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+      s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                                                                                             ^
+F:\ntnu\mesh_screening_20261028\coarse012_C001\Coarse012.java:40: warning: [deprecation] getAbsoluteSize() in star.meshing.PartsRelativeOrAbsoluteSize has been deprecated
+      edge.getCustomValues().get(PartsTargetSurfaceSize.class).getAbsoluteSize().getValue().setValue(.0064);
+                                                              ^
+F:\ntnu\mesh_screening_20261028\coarse012_C001\Coarse012.java:42: warning: [deprecation] setPercentage(double) in star.trimmer.RelativeAnisotropicSizeX has been deprecated
+      fine.getRelativeXSize().setPercentage(.0512/base*100);fine.getRelativeYSize().setPercentage(.1024/base*100);fine.getRelativeZSize().setPercentage(.0512/base*100);
+                             ^
+F:\ntnu\mesh_screening_20261028\coarse012_C001\Coarse012.java:42: warning: [deprecation] setPercentage(double) in star.trimmer.RelativeAnisotropicSizeY has been deprecated
+      fine.getRelativeXSize().setPercentage(.0512/base*100);fine.getRelativeYSize().setPercentage(.1024/base*100);fine.getRelativeZSize().setPercentage(.0512/base*100);
+                                                                                   ^
+F:\ntnu\mesh_screening_20261028\coarse012_C001\Coarse012.java:42: warning: [deprecation] setPercentage(double) in star.trimmer.RelativeAnisotropicSizeZ has been deprecated
+      fine.getRelativeXSize().setPercentage(.0512/base*100);fine.getRelativeYSize().setPercentage(.1024/base*100);fine.getRelativeZSize().setPercentage(.0512/base*100);
+                                                                                                                                         ^
+F:\ntnu\mesh_screening_20261028\coarse012_C001\Coarse012.java:124: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+        XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("NTNU_cells_"+name);
+                                                  ^
+
+Loading/configuring connectivity (old|new partitions: 8|8)
+Configuring finished
+Saving: F:\ntnu\mesh_screening_20261028\coarse012_C001\configured_unmeshed.sim... complete (4.1398MB in 0.148s).
+[NTNU] COARSE012_MESH_START
+Executing parts-based mesh operations
+----------------------------------------
+Executing Mesh Operation Automated Mesh
+----------------------------------------
+ Checking mesh-CAD association...done.  No problems found.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 0.01, Wall Time: 0.01, Memory: 227.86 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Growth rate for Triangle meshing with Default growth is 1.3
+ Project to CAD geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001        3771      57.2
+   < 0.01         5914      89.7
+   < 0.1          6349      96.3
+   < 0.2          6473      98.2
+   < 0.3          6516      98.8
+   < 0.4          6523      99.0
+   < 0.5          6531      99.1
+   < 0.6          6540      99.2
+   < 0.7          6550      99.4
+   < 0.8          6567      99.6
+   < 0.9          6587      99.9
+   < 1.0          6592     100.0
+ Worst Tri quality is 1.507e-08
+
+ initial number of faces: 6592
+
+ Phase 1: Apply Global Limits
+      current local number of faces: 20000
+      current local number of faces: 40000
+      current local number of faces: 80000
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01           12       0.0
+     < 0.1          7242       6.9
+     < 0.2         27584      26.1
+     < 0.3         48699      46.1
+     < 0.4         66159      62.6
+     < 0.5         79047      74.8
+     < 0.6         88399      83.7
+     < 0.7         94968      89.9
+     < 0.8         99725      94.4
+     < 0.9        103072      97.6
+     < 1.0        105630     100.0
+   Worst Tri quality is 0.0041
+
+
+ Phase 2: Improve Grading
+      current local number of faces: 150000
+      current local number of faces: 200000
+      current local number of faces: 300000
+      current local number of faces: 400000
+      current local number of faces: 500000
+      current local number of faces: 600000
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.1             3       0.0
+     < 0.2             8       0.0
+     < 0.3            12       0.0
+     < 0.4           595       0.1
+     < 0.5          1601       0.3
+     < 0.6          9212       1.5
+     < 0.7         30643       5.0
+     < 0.8         97199      15.7
+     < 0.9        258985      41.8
+     < 1.0        618868     100.0
+   Worst Tri quality is 0.01109
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0.1
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.1             0       0.0
+   < 0.2             2       0.0
+   < 0.3             4       0.0
+   < 0.4             4       0.0
+   < 0.5             6       0.0
+   < 0.6            17       0.0
+   < 0.7           952       0.2
+   < 0.8         27896       4.5
+   < 0.9        138913      22.3
+   < 1.0        623182     100.0
+ Worst Tri quality is 0.1083
+
+ final number of faces: 623182
+                   |   Default Mesher | 
+           Patches |               10 | 
+         Triangles |           623182 | 
+ Aligned mesh created for 5 patches
+    1% of tris created by aligned mesher
+----------------------------------------
+Surface Remesher Completed: CPU Time: 27.87, Wall Time: 27.87, Memory: 310.87 MB
+----------------------------------------
+----------------------------------------
+Executing Automatic Surface Repair
+----------------------------------------
+Fixing surface
+   Removed 0 duplicate faces.
+ 
+   Surface Fixing Iteration 1:  
+ 
+   Surface Fixing Iteration 2:  
+   done SurfaceFixer CPU Time: 0.24, Wall Time: 0.24, Memory: 327.57 MB
+----------------------------------------
+Automatic Surface Repair Completed: CPU Time: 1.23, Wall Time: 1.23, Memory: 303.61 MB
+----------------------------------------
+----------------------------------------
+Executing Geometric Parameter Sensitivity
+----------------------------------------
+Rerunning all the upstream operations with the initial parameters values
+----------------------------------------
+Geometric Parameter Sensitivity Completed: CPU Time: 1.53, Wall Time: 1.53, Memory: 347.74 MB
+----------------------------------------
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 623182, area: 7290.98, reference location: (-0.000287382 2.06446 0.00108338)
+Total => Surfaces: 1, Faces: 623182, Area: 7290.98
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+ |Angle Range|Prism Growing Edges|High Dihedral Edges|
+ |   0 -  18 |             919726|                  0|
+ |  18 -  36 |                  4|                  0|
+ |  36 -  54 |                  0|                  0|
+ |  54 -  72 |                  0|                  0|
+ |  72 -  90 |                  0|                  0|
+ |  90 - 108 |                  0|                  0|
+ | 108 - 126 |                  0|                  0|
+ | 126 - 144 |                  0|                  0|
+ | 144 - 162 |                  0|                  0|
+ | 162 - 180 |                  0|                  0|
+Total => prism growing edges: 919730, high dihedral edges: 0
+
+No prism growing facetype edges found with a dihedral angle greater than 46 degrees.
+done Surface diagnostics.CPU Time: 0.03, Wall Time: 0.03, Memory: 371.59 MB
+
+Surface is valid for volume meshing.CPU Time: 1.13, Wall Time: 1.13, Memory: 370.33 MB
+User set distribution function to be  GEOMETRIC PROGRESSION
+ Parallel Subsurfacer is Enabled
+----------------------------------------
+Executing Prism Layer Subsurface
+----------------------------------------
+Using all procs: 8
+ Remote computation done  
+Global Input surface contains 623182 faces, and 311593 vertices
+Local Property is activated
+   done, CPU Time: 0.07, Wall Time: 0.07, Memory: 395.89 MB
+ Building preprocessor done 
+Computing vertex normals
+ Exchanged the remote active status done
+Computing the normals done
+   done, CPU Time: 0.50, Wall Time: 0.51, Memory: 401.25 MB
+Computing Vertex normals done
+Computing surface proximity
+   done, CPU Time: 0.79, Wall Time: 0.79, Memory: 400.54 MB
+Constraining boundary vertices
+   done, CPU Time: 0.01, Wall Time: 0.01, Memory: 398.65 MB
+
+Iteration 1:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 42419 of 42419 active vertices)
+Checking 82296 face-based validity metrics
+   found 0 invalid faces
+Preparing for next iteration
+
+Iteration 2:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 0 of 42419 active vertices)
+Checking 0 face-based validity metrics
+   found 0 invalid faces
+Performing retraction using near-core prism-layer aspect ratio
+Set default subsurface thickness 0.01546
+Subsurface thickness is set by subsurface.
+ find projections withOUT VertMapper (all core mesh)!
+  Finished prism-layer initialization, CPU Time: 0.39, Wall Time: 0.39, Memory: 403.12 MB
+  Performed 275 retractions, CPU Time: 0.60, Wall Time: 0.60, Memory: 403.36 MB
+--------------------------------
+Estimated number of prism cells: 5591006
+--------------------------------
+  Added trimmer face pairs: 7116
+Preparing for next iteration
+
+Iteration 3:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 3500 of 42419 active vertices)
+Checking 8444 face-based validity metrics
+   found 0 invalid faces
+Checking vertex intersections for all vertices
+
+Using edge recovery to fix prism layer boundaries...
+Recovering edges... Edges recover info:  0   0
+ Grow affected faces......
+Remeshing surface near recovered edges...
+Surface remeshed.  106 faces added to surface.
+CPU Time: 0.01, Wall Time: 0.01, Memory: 406.03 MB
+Remeshing frozen patches
+CPU Time: 0.07, Wall Time: 0.07, Memory: 406.82 MB
+ Finished two levels of remeshing 
+Edge recovery was successful.
+CPU Time: 0.43, Wall Time: 0.43, Memory: 406.91 MB
+
+Checking true subsurface intersections for all vertices
+ no intersections 
+   found 0 intersecting vertices
+Checking subsurface orientation!!
+
+Iterations successful
+
+Marking zero layer regions
+   found 0 collapsed faces
+   found 0 edges bounding collapsed regions
+   found 0 vertices bounding collapsed regions
+Global Subsurface contains 623282 faces, and 311643 vertices
+compress subsurface done
+----------------------------------------
+Prism Layer Subsurface Completed: CPU Time: 4.61, Wall Time: 4.61, Memory: 390.83 MB
+----------------------------------------
+----------------------------------------
+Executing Trimmer
+----------------------------------------
+Assuming valid input surface
+Generating custom mesh
+ time in treating empty partitions: CPU Time: 0.00, Wall Time: 0.00, Memory: 382.45 MB
+   computing sizes at surface faces
+   incorporating sizes
+   Maximum partition imbalance for total cells = 1.04836 (processor 7: 440929 cells)
+   Maximum partition imbalance for cut cells = 1.08521 (processor 6: 82688 cells)
+   creating initial volume mesh to cut
+   done creating custom template mesh, CPU Time: 16.90, Wall Time: 16.90, Memory: 485.59 MB
+Custom mesh contains
+   total cell count       = 3364704
+   partition cell count   = 374620
+   partition face count   = 1203228
+   partition edge count   = 1284058
+   partition vertex count = 455451
+   done, CPU Time: 0.39, Wall Time: 0.39, Memory: 491.78 MB
+Marking surface features
+   done, CPU Time: 0.04, Wall Time: 0.04, Memory: 491.84 MB
+Interacting Vertices
+   done, CPU Time: 0.30, Wall Time: 0.30, Memory: 502.78 MB
+Determining sidedness
+   done, CPU Time: 0.87, Wall Time: 0.87, Memory: 511.38 MB
+   deleting outside cells, faces, edges, and vertices and compressing
+      new total cell count       = 2693506
+      new partition cell count   = 299321
+      new partition face count   = 981466
+      new partition edge count   = 1066442
+      new partition vertex count = 384297
+Interacting edges
+   done, CPU Time: 0.25, Wall Time: 0.25, Memory: 484.13 MB
+Interacting faces
+   done, CPU Time: 2.65, Wall Time: 2.64, Memory: 497.07 MB
+Interacting cells
+   deleting outside cells, faces, edges, and vertices and compressing
+      new total cell count       = 2461540
+      new partition cell count   = 276609
+      new partition face count   = 916740
+      new partition edge count   = 1271568
+      new partition vertex count = 631438
+   done, CPU Time: 1.74, Wall Time: 1.74, Memory: 480.45 MB
+Marking special edges/vertices in volume mesh
+   done, CPU Time: 0.01, Wall Time: 0.01, Memory: 480.45 MB
+Improving mesh quality
+   preprocessing
+   Maximum partition imbalance for total cells = 1.0866075708702683e+00 (processor 2: 334341 cells)
+   Maximum partition imbalance for cut cells = 1.0389677128246264e+00 (processor 2: 82893 cells)
+   collapsing interior sliver faces
+   merging small boundary cells
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   splitting multiply-shared faces
+   fixing degenerate cells
+   merging boundary faces
+   merging surface edges
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 7.5000000000000011e-02
+   43814 edges were collapsed in total
+   0 cells were removed
+Marking concave cells
+Executing Splitter..., Memory: 380.37 MB
+done, (Executing Splitter...), CPU Time: 0.06, Wall Time: 0.06, Memory: 506.81 MB
+Collapsing Small Internal Edges/Faces: ratio < 0.1000000000000000
+   5 edges were collapsed in total
+   0 cells were removed
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   92 edges were collapsed in total
+   0 cells were removed
+   splitting multiply-shared faces
+Marking concave cells
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+   fixing degenerate cells
+   fixing poor volume ratios
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   modifying faces to improve extrusion cell quality
+Splitting concave boundary faces
+Repartitioning parallel mesh layers...
+Improving mesh quality
+   preprocessing
+   collapsing interior sliver faces
+   merging small boundary cells
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   splitting multiply-shared faces
+   fixing degenerate cells
+   merging boundary faces
+   merging surface edges
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.0750000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+Marking concave cells
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+   splitting multiply-shared faces
+Marking concave cells
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+   fixing degenerate cells
+   fixing poor volume ratios
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   modifying faces to improve extrusion cell quality
+Splitting concave boundary faces
+Repartitioning parallel mesh junctions...
+Improving mesh quality
+   preprocessing
+   collapsing interior sliver faces
+   merging small boundary cells
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   splitting multiply-shared faces
+   fixing degenerate cells
+   merging boundary faces
+   merging surface edges
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.0750000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+Marking concave cells
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+   splitting multiply-shared faces
+Marking concave cells
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+   fixing degenerate cells
+   fixing poor volume ratios
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   modifying faces to improve extrusion cell quality
+Splitting concave boundary faces
+Repartitioning parallel mesh to visit all cells...
+Improving mesh quality
+   preprocessing
+   collapsing interior sliver faces
+   merging small boundary cells
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   splitting multiply-shared faces
+   fixing degenerate cells
+   merging boundary faces
+   merging surface edges
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.0750000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+Marking concave cells
+Splitting concave boundary faces
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+   splitting multiply-shared faces
+Marking concave cells
+ Collapsing Small Edges/Faces: ratio < 0.1000000000000000
+   0 edges were collapsed in total
+   0 cells were removed
+   fixing degenerate cells
+   fixing poor volume ratios
+   merging boundary faces
+   merging interior faces
+   merging surface edges
+   modifying faces to improve extrusion cell quality
+Splitting concave boundary faces
+Compressing mesh
+Trimmed mesh contains
+   total cell count       = 2446335
+   partition cell count   = 273695
+   partition face count   = 898547
+   partition edge count   = 974202
+   partition vertex count = 349353
+----------------------------------------
+Trimmer Completed: CPU Time: 39.54, Wall Time: 39.54, Memory: 470.52 MB
+----------------------------------------
+There are 83445 faces have subsurface thickness. 
+ The default subsurface thickness is 0.01546
+Set default subsurface thickness 0.0154600000000000
+----------------------------------------
+Executing Prism Layer Extrusion
+----------------------------------------
+ nonmanifold VertFace=2
+ nonmanifold VertEdge=2
+Marking vertices, edges and faces to extrude
+Subsurface thickness is set by subsurface.
+ find projections with VertMapper (trimmer route)!
+   found (trimmer) 274 zero layer subsurface vertices
+Marking zero extrusion entities (vertices/edges/faces)
+   done, CPU Time: 0.04, Wall Time: 0.04, Memory: 471.64 MB
+Creating extrusion layer mesh
+   default number of layers = 15
+   default initial wall thickness = 0.0001799000000000
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 470.65 MB
+ Layer Reduction Percentage set to 50.0000000000000000
+Default chopping percentage 50
+There is no Local Layer Reduction 
+Correct number of layer for:  Global Layer Reduction, setting(s).
+   stitching vertical edges at variable layer interface
+   stitching vertical faces at variable layer interface
+[Global] Extrusion mesh contains:
+[Global]     7088255 cells
+[Global]    21770778 faces
+[Global]    22267307 edges
+[Global]     7584788 vertices
+----------------------------------------
+Prism Layer Extrusion Completed: CPU Time: 3.27, Wall Time: 3.27, Memory: 623.48 MB
+----------------------------------------
+Assembling core mesh and prismatic mesh.
+Topology-based optimization, Memory: 532.64 MB
+ Starting Topology Optimization on 1114061 candidate cells ...
+ 0 new cells / 0 new Faces / 0 new Vertices
+done, (Topology-based optimization), CPU Time: 4.00, Wall Time: 4.00, Memory: 668.67 MB
+Running Optimizer in parallel: 
+ParallelOptimizer<Quality>::execute, Memory: 525.45 MB
+ executing mesh optimizer in parallel ...
+ manageHalo, Memory: 525.45 MB
+ done, (manageHalo), CPU Time: 1.07, Wall Time: 1.07, Memory: 646.71 MB
+ [Global] Skipped     291714 anisotropic cells.
+ Mesh Optimization, Memory: 546.11 MB
+  Tabu Search Optimizing, Memory: 546.11 MB
+   Computing cell volumes and centroids, Memory: 551.41 MB
+   done, (Computing cell volumes and centroids), CPU Time: 1.65, Wall Time: 1.65, Memory: 699.98 MB
+   Quality thresholds:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         0.000010           0.700000          0.011000      0.087156
+   [Global] Starting optimization on    9379250 candidate cells
+   InterfaceMap not set.
+   Boundary Vertex Optimizer is activated.
+   Start outer iteration #1
+   [Global] Minimum quality metrics before outer iteration #1:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         0.015033           0.659733          0.000724      0.085524
+   [Global] found        696 cells that are below quality threshold
+   [Global] Found      10809 cells that need optimization
+   [Global] Found       4135 vertices that need optimization
+   Start outer iteration #2
+   [Global] Minimum quality metrics before outer iteration #2:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         0.480320           0.721522          0.009941      0.147544
+   [Global] found          2 cells that are below quality threshold
+   [Global] Found         37 cells that need optimization
+   [Global] Found         14 vertices that need optimization
+   Start outer iteration #3
+   [Global] Minimum quality metrics before outer iteration #3:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+   [Global] found          0 cells that are below quality threshold
+   [Global] Found          0 cells that need optimization
+   [Global] Found          0 vertices that need optimization
+   [Global] After optimization, there are           0 cells that are below quality threshold
+   [Global] Final minimum quality metrics after optimization:
+    minFaceValidity   minCellQuality   minFacePlanarity   minVolumeChange   minSkewness
+          1.000000         1.000000           1.000000          1.000000      1.000000
+  done, (Tabu Search Optimizing), CPU Time: 10.96, Wall Time: 10.96, Memory: 702.64 MB
+ done, (Mesh Optimization), CPU Time: 11.02, Wall Time: 11.02, Memory: 663.25 MB
+done, (ParallelOptimizer<Quality>::execute), CPU Time: 12.89, Wall Time: 12.89, Memory: 654.21 MB
+Exchanging face type association, Memory: 538.55 MB
+done, (Exchanging face type association), CPU Time: 0.01, Wall Time: 0.01, Memory: 652.18 MB
+Converting mesh into finite volume representation in Region fluid (parallel)
+   Converted mesh for fluid CPU Time: 2.88, Wall Time: 2.88, Memory: 750.44 MB
+   repartitioning completed, CPU Time: 5.32, Wall Time: 5.32, Memory: 587.50 MB
+Mesh conversion completed, CPU Time: 8.26, Wall Time: 8.26, Memory: 587.95 MB
+Converting mesh into finite volume representation completed: CPU Time: 8.26, Wall Time: 8.26, Memory: 587.98 MB
+	Cells: 9534590	Faces: 28612504	Vertices: 10048926
+----------------------------------------
+Mesh Operation Automated Mesh complete. CPU Time: 108.95, Wall Time: 108.95, Memory: 583.73 MB
+----------------------------------------
+Volume Meshing Pipeline Completed: CPU Time: 108.98, Wall Time: 108.98, Memory: 588.14 MB
+	Cells: 9534590	Faces: 28612504	Vertices: 10048926
+
+Boundaries of region fluid:
+Boundary HF_012_wall: 490011 faces (33373 triangular, 441754 quadrilateral, 14884 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.7572434971e-04, 1.1900000000e+00] m
+  y: [0.0000000000e+00, 5.5000000000e+00] m
+  z: [-4.2144562882e-02, 1.0091535596e-01] m
+ surface area: 1.1096080276e+01 m^2
+ maximum boundary skewness angle = 8.4892866136e+01 deg
+Boundary DOMAIN.top: 459 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [1.3000000000e+01, 1.3000000000e+01] m
+ surface area: 1.1781000000e+03 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.symetry: 17820 faces (69 triangular, 16935 quadrilateral, 816 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [-2.2204460493e-16, 2.2204460493e-16] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 1.4992842424e+03 m^2
+ maximum boundary skewness angle = 2.7398978198e+01 deg
+Boundary DOMAIN.inlet: 2550 faces (2516 quadrilateral, 34 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, -1.1900000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 9.6250000000e+02 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.wall: 5652 faces (5496 quadrilateral, 156 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [2.7500000000e+01, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 1.4994000000e+03 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.bottm: 459 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, -2.2000000000e+01] m
+ surface area: 1.1781000000e+03 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.outlet: 3411 faces (3303 quadrilateral, 108 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [3.0940000000e+01, 3.0940000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 9.6250000000e+02 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+
+Region fluid: 
+   16658 tetrahedral cells
+ 8332089 hexahedral cells
+  569280 wedge cells
+     751 pyramid cells
+  615812 polyhedral cells
+ 9534590 cells total
+  179646 halo cells
+28612504 interior faces (657474 triangular, 27280509 quadrilateral, 785924 polygonal) (111403 halo faces)
+10048926 vertices (117187 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |           1110955 |         23432 |        2.11 |        1134387 |  3318249 |     56158 |
+   |          1 |           1243256 |         26315 |        2.12 |        1269571 |  3721537 |     64007 |
+   |          2 |           1134058 |         17206 |        1.52 |        1151264 |  3411471 |     61148 |
+   |          3 |           1204317 |         20193 |        1.68 |        1224510 |  3620082 |     64547 |
+   |          4 |           1219035 |         24640 |        2.02 |        1243675 |  3694840 |     62144 |
+   |          5 |           1143347 |         28892 |        2.53 |        1172239 |  3458233 |     69929 |
+   |          6 |           1232784 |         14833 |        1.20 |        1247617 |  3728883 |     67272 |
+   |          7 |           1246838 |         24135 |        1.94 |        1270973 |  3770612 |     75157 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :   1191823 STDDEV % :  4.24 IMBALANCE % :  4.62
+       Average number of halo cells :     22455 STDDEV % : 19.64 IMBALANCE % : 28.66
+      Average number of total cells :   1214279 STDDEV % :  4.17 IMBALANCE % :  4.67
+            Average number of faces :   3590488 STDDEV % :  4.45 IMBALANCE % :  5.02
+   Average number of boundary faces :     65045 STDDEV % :  8.33 IMBALANCE % : 15.55
+   Maximum number of partition neighbours : 7
+
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [-2.2204460493e-16, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ Maximum interior cell index delta: 42677, average: 1.2630333194e+04
+ Maximum cell face index delta: 3768708, average: 8.6883127177e+04
+ Volume range: [1.6321989435e-12, 4.3980465111e+00] m^3
+ Minimum distance between centroids of neighbor cells = 4.7051063187e-05
+ Maximum skewness angle = 8.4892866136e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.0000000000e+00
+Maximum Face Validity: 1.0000000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity             9534590   100.000%
+
+Volume Change: 
+Minimum Volume Change: 1.100213e-02
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           0    0.000%
+1e-02 <= Volume Change <  1e-01      112850    1.184%
+1e-01 <= Volume Change <= 1e+00     9421740   98.816%
+ Maximum boundary skewness angle in region = 8.489287e+01 deg
+
+Overall Face Validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity             9534590   100.000%
+
+Overall Volume Change: 
+Minimum Volume Change: 1.100213e-02
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           0    0.000%
+1e-02 <= Volume Change <  1e-01      112850    1.184%
+1e-01 <= Volume Change <= 1e+00     9421740   98.816%
+Saving: F:\ntnu\mesh_screening_20261028\coarse012_C001\HF_012_C001_mesh.sim... complete (1.1316GB in 0.822s).
+[NTNU] COARSE012_MESH_DONE cells=9534590
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

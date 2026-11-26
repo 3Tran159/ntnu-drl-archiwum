@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 169, in <module>
+    moving=True, flow_cycle=True, calm_active_pilot=True, flap_cycle_deg=5,
+
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 118, in launch
+    with seed.open("x", newline="") as f:
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 47, in benchmark
+    return benchmark_receipt(label, result, start)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 54, in benchmark_receipt
+    raise RuntimeError(f"{label} benchmark failed: {result['status']} {result['state']['reason']}")
+RuntimeError: GPU benchmark failed: HOLD_STOP_OR_DEADLINE 

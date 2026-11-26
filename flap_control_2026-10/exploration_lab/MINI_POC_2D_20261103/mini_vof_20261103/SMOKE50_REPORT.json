@@ -1,0 +1,175 @@
+{
+  "at": "2026-11-03T20:33:35.863300+01:00",
+  "case": "NATIVE_Q2D_EMPTY_A005_SMOKE50",
+  "solver_state": "STOPPED",
+  "operation": "REVIEW",
+  "cells": 41280,
+  "span_layers": 1,
+  "span_m": 0.02,
+  "true_2D": false,
+  "quasi_2D": true,
+  "native_FirstOrderWave": true,
+  "amplitude_m": 0.05,
+  "lambda_m": 10,
+  "U_m_s": 18,
+  "dt_s": 0.001,
+  "MPI": 1,
+  "CPU_logical": 4,
+  "CPU_efficiency_class": 0,
+  "GPU": false,
+  "inner_iterations": 20,
+  "physical_steps": 50,
+  "physical_time_s": 0.05000000000000004,
+  "solver_s_step_mean_after5": 2.2328781422222224,
+  "solver_s_step_median_after5": 2.034961,
+  "solver_s_step_max_after5": 5.5706162,
+  "solver_s_step_mean_all": 2.232106166,
+  "solver_s_total": 111.6053083,
+  "expected_encounter_period_s": 0.45555302324319263,
+  "estimated_solver_s_per_cycle": 1017.1943882229768,
+  "performance_below_5_s_step": true,
+  "quality": {
+    "least_squares_quality": 0.0,
+    "native_3D_cell_quality": 1.0,
+    "face_validity": 1.0,
+    "volume": 3.1249999999999337e-05,
+    "reload_max_relative_field_error": 0.0,
+    "initialize_called": false,
+    "reset_called": false,
+    "guard_metric": "Native 3D CellQuality > 0; LeastSquaresQuality retained as stencil diagnostic for one layer"
+  },
+  "residual_window": [
+    {
+      "monitor": "residual_Continuity",
+      "final25_step_ends_count": 25,
+      "final25_step_ends_max": 0.07763175996231722,
+      "limit": 0.01,
+      "pass_window": false
+    },
+    {
+      "monitor": "residual_Sdr",
+      "final25_step_ends_count": 25,
+      "final25_step_ends_max": 0.00012023770143105444,
+      "limit": 0.01,
+      "pass_window": true
+    },
+    {
+      "monitor": "residual_Tke",
+      "final25_step_ends_count": 25,
+      "final25_step_ends_max": 1.0249508661094212e-06,
+      "limit": 0.01,
+      "pass_window": true
+    },
+    {
+      "monitor": "residual_water",
+      "final25_step_ends_count": 25,
+      "final25_step_ends_max": 0.0001922059947561643,
+      "limit": 0.01,
+      "pass_window": true
+    },
+    {
+      "monitor": "residual_X_momentum",
+      "final25_step_ends_count": 25,
+      "final25_step_ends_max": 0.0007602681928534081,
+      "limit": 0.01,
+      "pass_window": true
+    },
+    {
+      "monitor": "residual_Y_momentum",
+      "final25_step_ends_count": 25,
+      "final25_step_ends_max": 0.0020170237718584363,
+      "limit": 0.01,
+      "pass_window": true
+    },
+    {
+      "monitor": "residual_Z_momentum",
+      "final25_step_ends_count": 25,
+      "final25_step_ends_max": 0.0003601107924772654,
+      "limit": 0.01,
+      "pass_window": true
+    }
+  ],
+  "full_residual_window_pass": false,
+  "night_approved": false,
+  "training_approved": false,
+  "foil_present": false,
+  "forcing_damping_zones_active": false,
+  "scope": "Exactly 50 physical steps, saved 1+49 with native field-equality check; no reset and no additional CFD stages",
+  "pABSmin_Pa": {
+    "min": 101136.3687106175,
+    "max": 101302.17074174424
+  },
+  "interface_CFL": {
+    "min": 0.1539364957750436,
+    "max": 0.15811792732269417
+  },
+  "max_CFL": {
+    "min": 0.15426837645162328,
+    "max": 0.1606258436238386
+  },
+  "alpha_min": {
+    "min": 0.0,
+    "max": 0.0
+  },
+  "alpha_max": {
+    "min": 1.0,
+    "max": 1.0
+  },
+  "mass_BDF2_relative": {
+    "min": 4.4938671817100974e-07,
+    "max": 9.877446590732826e-05
+  },
+  "k_min": {
+    "min": 0.0003939271172262708,
+    "max": 0.0004775215610736284
+  },
+  "omega_min": {
+    "min": 3.0702483327444147e-05,
+    "max": 3.2391290243821795
+  },
+  "turbulent_viscosity_ratio_max": {
+    "min": 10.418711331961754,
+    "max": 48.30413422204317
+  },
+  "velocity_max": {
+    "min": 18.12570968123664,
+    "max": 18.12736243416605
+  },
+  "physical_guard_pass": true,
+  "W04": {
+    "status": "Independent run ended at20:16 before physical native pilot",
+    "completion_file": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W04_20261103_182412_f27930\\completed.json",
+    "concurrent_performance_comparison": "NOT_MEASURABLE_NO_W04_SOLVER_DURING_TEST",
+    "W04_modified": false,
+    "before_review": {
+      "at": 1793734048.890635,
+      "history": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W04_20261103_182412_f27930\\history.csv",
+      "baseline_median_step_s": 1.7642579499997737,
+      "maximum_slowdown_fraction": 0.15,
+      "own_MPI": 1,
+      "own_affinity_mask": 16,
+      "W04_unchanged": true
+    }
+  },
+  "limitations": [
+    ".05s is only .11 encounter cycle; frequency, reflection and periodic response are not validated",
+    "No foil: measured cost is empty-domain cost, not a force-history benchmark",
+    "Absorption/forcing zones not active in this bounded smoke; region length specification identified for future configuration",
+    "No active W04 during physical test: do not claim0% impact",
+    "Real2.5mm-gap and moving flap remain separate pending stages"
+  ],
+  "checkpoint_manifest": [
+    {
+      "path": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\Q2D_NATIVE_A005_REMAINING49\\VOF_checkpoint.sim",
+      "bytes": 49351604,
+      "sha256": "ef36d8738b8c2efaa882c5da7953aef8f55477303bceb76076ceb91847cdf85c"
+    },
+    {
+      "path": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\Q2D_NATIVE_A005_REMAINING49\\VOF_prepared.sim",
+      "bytes": 41621573,
+      "sha256": "b0ce6be9dbaebcb4790df23c497865f8155672082557511eb6826246f49b3559"
+    }
+  ],
+  "decision_architecture": "GO_CONDITIONAL_NATIVE_Q2D",
+  "decision_scientific": "SMOKE_ONLY_NOT_WAVE_VALIDATED"
+}

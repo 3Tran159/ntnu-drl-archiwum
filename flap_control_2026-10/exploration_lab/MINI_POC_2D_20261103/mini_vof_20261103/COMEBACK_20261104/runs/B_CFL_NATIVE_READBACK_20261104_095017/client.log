@@ -1,0 +1,37 @@
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\B_CFL_NATIVE_READBACK_20261104_095017\input.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\B_CFL_NATIVE_READBACK_20261104_095017\VerifyComeback.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\B_CFL_NATIVE_READBACK_20261104_095017\VerifyComeback.java:35: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);
+                                            ^
+
+Function must be a vector type
+Command: CreateChild
+   Recoverability: Non-recoverable
+   ServerStack: [SymInit: Symbol-SearchPath: '.', symOptions: 530, UserName: 'ThinkPad'
+, OS-Version: 6.2.9200 () 0x100-0x1
+, 00007FFE9D6275A9 (StarPlatform): (filename not available): StarCommandTokenizer::concatenate
+]
+   error: Server Error
+   expression: requisiteFunction.getType().hasVectorStorageType()
+   file: FieldFunctionCreators.cpp
+   line: 381
+java.lang.RuntimeException: Function must be a vector type
+Command: CreateChild
+   Recoverability: Non-recoverable
+   ServerStack: [SymInit: Symbol-SearchPath: '.', symOptions: 530, UserName: 'ThinkPad'
+, OS-Version: 6.2.9200 () 0x100-0x1
+, 00007FFE9D6275A9 (StarPlatform): (filename not available): StarCommandTokenizer::concatenate
+]
+   error: Server Error
+   expression: requisiteFunction.getType().hasVectorStorageType()
+   file: FieldFunctionCreators.cpp
+   line: 381
+

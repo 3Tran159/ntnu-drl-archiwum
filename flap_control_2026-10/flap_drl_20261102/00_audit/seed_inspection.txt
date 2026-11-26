@@ -1,0 +1,412 @@
+session=C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_drl_20261102\04_cases\calm\FLAP_C00_seed.sim
+time_s=4.699199999999548
+mesh=HF_foil cells=0
+mesh=HF_foil_rans_stability cells=0
+mesh=Volume Mesh cells=309441
+continuum=water+air class=star.common.PhysicsContinuum
+models=[Three Dimensional, Solution Interpolation, Multiphase, Multiphase Interaction, Volume of Fluid (VOF), Segregated Flow, Gradients, Implicit Unsteady, VOF Waves, VOF Wave Zone Distance, Gravity, Turbulent, Reynolds-Averaged Navier-Stokes, K-Omega Turbulence, SST (Menter) K-Omega, Wall Distance, All y+ Wall Treatment, Cell Quality Remediation]
+region=fluid
+ boundary=DOMAIN.bottom type=WallBoundary surfaces=[]
+ boundary=DOMAIN.inlet type=InletBoundary surfaces=[]
+ boundary=DOMAIN.outlet type=PressureBoundary surfaces=[]
+ boundary=DOMAIN.top type=PressureBoundary surfaces=[]
+ boundary=HF_012_wall type=WallBoundary surfaces=[]
+ boundary=Q2D_span_source type=SymmetryBoundary surfaces=[]
+ boundary=Q2D_span_target type=SymmetryBoundary surfaces=[]
+geometry=DOMAIN class=star.meshing.SimpleBlockPart
+geometry=Subtract class=star.meshing.MeshOperationPart
+geometry=HF_FINE_BB class=star.meshing.SimpleBlockPart
+geometry=HF_COARSE_BB class=star.meshing.SimpleBlockPart
+geometry=Wake_Pattern class=star.meshing.SimpleBlockPart
+geometry=Wave_Pattern class=star.meshing.SimpleBlockPart
+geometry=ARCHIVE_010_INACTIVE class=star.cadmodeler.SolidModelPart
+geometry=Free_Surf_Coarse class=star.meshing.SimpleBlockPart
+geometry=HF_012_v3 class=star.meshing.CadPart
+geometry=Q2D_foil class=star.meshing.CadPart
+geometry=Q2D_domain class=star.meshing.SimpleBlockPart
+geometry=Q2D_fluid class=star.meshing.MeshOperationPart
+geometry=Q2D_near_foil class=star.meshing.SimpleBlockPart
+geometry=Q2D_free_surface class=star.meshing.SimpleBlockPart
+geometry=Q2D_protected_middle_M09 class=star.meshing.SimpleBlockPart
+report=Fx_half class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Fz_half class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Solver Iteration Elapsed Time class=star.common.IteratorElapsedTimeReport getUnits=s
+report=Maximum Velocity class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Maximum 1 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_min_cell_quality class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_min_foil_prism_layers class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_foil_prism_layers class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_min_foil_prism_total_thickness_m class=star.base.report.MinReport getParts=Parts getUnits=m
+report=NTNU_max_foil_prism_total_thickness_m class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=NTNU_foil_area_coverage_any class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=NTNU_foil_area_coverage_full_15 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=NTNU_min_first_prism_cell_thickness_m class=star.base.report.MinReport getParts=Parts getUnits=m
+report=NTNU_max_first_prism_cell_thickness_m class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=NTNU_count_PrismLayerNumber class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 1 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 2 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=NTNU_min_cell_quality 2 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change 2 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity 2 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg 2 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality 2 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange 2 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle 2 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 2 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 3 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=NTNU_min_cell_quality 3 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change 3 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity 3 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg 3 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality 3 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange 3 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle 3 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 3 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 4 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=Short_MaxVelocity class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Short_MaxCFL class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Short_MeanYplus class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Short_MaxYplus class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Short_MinYplus class=star.base.report.MinReport getParts=Parts getUnits=
+report=Element Count 1 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Element Count 2 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Element Count 3 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_min_cell_quality 4 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change 4 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity 4 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg 4 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality 4 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange 4 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle 4 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 4 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 5 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=Short_MaxVelocity 2 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Short_MaxCFL 2 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Short_MeanYplus 2 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Short_MaxYplus 2 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Short_MinYplus 2 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Element Count 4 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Element Count 5 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Element Count 6 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_min_cell_quality 5 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change 5 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity 5 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg 5 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality 5 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange 5 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle 5 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 5 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 6 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=NTNU_min_cell_quality 6 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change 6 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity 6 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg 6 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality 6 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange 6 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle 6 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 6 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 7 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=NTNU_min_cell_quality 7 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change 7 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity 7 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg 7 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality 7 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange 7 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle 7 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 7 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 8 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=NTNU_min_cell_quality 8 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_volume_change 8 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_min_face_validity 8 class=star.base.report.MinReport getParts=Parts getUnits=
+report=NTNU_max_skewness_angle_deg 8 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=NTNU_count_CellQuality 8 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_VolumeChange 8 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=NTNU_count_SkewnessAngle 8 class=star.base.report.ElementCountReport getParts=Parts getUnits=
+report=Minimum 8 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 9 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=Surface Integral 1 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Minimum 9 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 10 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=Surface Integral 2 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Minimum 10 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 11 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=Surface Integral 3 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Minimum 11 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 12 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=Surface Integral 4 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Minimum 12 class=star.base.report.MinReport getParts=Parts getUnits=m
+report=Maximum 13 class=star.base.report.MaxReport getParts=Parts getUnits=m
+report=Surface Integral 5 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 6 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 7 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 8 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 9 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 10 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 11 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 12 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 13 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 14 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 15 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 16 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 17 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 18 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 19 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 20 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 21 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 22 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 23 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 24 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 25 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 26 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 27 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 28 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Minimum 13 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 14 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Maximum 15 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Surface Integral 29 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 30 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 31 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 32 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 33 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 34 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 35 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 36 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 37 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 38 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 39 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 40 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 41 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 42 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 43 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 44 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 45 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 46 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 47 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 48 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 49 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Wave_MaxSpeed class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Wave_MaxCFL class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Wave_MaxAlpha class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Minimum 14 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Wave_InterfaceCFL class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 1 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 2 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 1 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 2 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 3 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 4 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 5 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 6 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 7 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Volume Integral 3 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Inspect_NativeWater_MassConservationError class=star.flow.MassConservationErrorReport getParts=Parts getUnits=kg
+report=Inspect_NativeAir_MassConservationError class=star.flow.MassConservationErrorReport getParts=Parts getUnits=kg
+report=Inspect_Water_MassFlowRate_DOMAIN.bottom class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Air_MassFlowRate_DOMAIN.bottom class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Water_MassFlowRate_DOMAIN.inlet class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Air_MassFlowRate_DOMAIN.inlet class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Water_MassFlowRate_DOMAIN.outlet class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Air_MassFlowRate_DOMAIN.outlet class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Water_MassFlowRate_DOMAIN.top class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Air_MassFlowRate_DOMAIN.top class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Water_MassFlowRate_HF_012_wall class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Air_MassFlowRate_HF_012_wall class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Water_MassFlowRate_Q2D_span_source class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Air_MassFlowRate_Q2D_span_source class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Water_MassFlowRate_Q2D_span_target class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_Air_MassFlowRate_Q2D_span_target class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect Drag total [N, slice] class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Inspect Lift total [N, slice] class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Inspect Drag pressure [N, slice] class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Inspect Drag viscous [N, slice] class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Inspect last outlet columns water imbalance kg/s class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect last outlet columns air imbalance kg/s class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_CellSum_MassImbalancewater class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_CellSum_MassImbalanceair class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Inspect_CellSum_MassImbalance class=star.base.report.SumReport getParts=Parts getUnits=kg/s
+report=Stab_Drag class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_Lift class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_PressureDrag class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_ViscousDrag class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_MaxVelocity class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Stab_MaxCFL class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_MeanYplus class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Minimum 15 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 16 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_InterfaceCFL class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 4 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 5 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 8 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 9 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 10 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 11 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 12 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 13 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 14 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Stab_Drag 2 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_Lift 2 class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_PressureDrag 2 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_ViscousDrag 2 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_MaxVelocity 2 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Stab_MaxCFL 2 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_MeanYplus 2 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Minimum 16 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 17 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_InterfaceCFL 2 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 6 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 7 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 15 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 16 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 17 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 18 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 19 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 20 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 21 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Stab_Drag 3 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_Lift 3 class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_PressureDrag 3 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_ViscousDrag 3 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_MaxVelocity 3 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Stab_MaxCFL 3 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_MeanYplus 3 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Minimum 17 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 18 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_InterfaceCFL 3 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 8 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 9 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 22 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 23 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 24 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 25 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 26 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 27 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 28 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Stab_Drag 4 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_Lift 4 class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_PressureDrag 4 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_ViscousDrag 4 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_MaxVelocity 4 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Stab_MaxCFL 4 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_MeanYplus 4 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Minimum 18 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 19 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_InterfaceCFL 4 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 10 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 11 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 29 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 30 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 31 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 32 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 33 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 34 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 35 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Stab_Drag 5 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_Lift 5 class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_PressureDrag 5 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_ViscousDrag 5 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_MaxVelocity 5 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Stab_MaxCFL 5 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_MeanYplus 5 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Minimum 19 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 20 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_InterfaceCFL 5 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 12 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 13 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 36 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 37 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 38 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 39 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 40 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 41 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 42 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Volume Integral 14 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 15 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Minimum 20 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 21 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Maximum 22 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Minimum 21 class=star.base.report.MinReport getParts=Parts getUnits=Pa
+report=Maximum 23 class=star.base.report.MaxReport getParts=Parts getUnits=Pa
+report=Minimum 22 class=star.base.report.MinReport getParts=Parts getUnits=J/kg
+report=Maximum 24 class=star.base.report.MaxReport getParts=Parts getUnits=J/kg
+report=Minimum 23 class=star.base.report.MinReport getParts=Parts getUnits=/s
+report=Maximum 25 class=star.base.report.MaxReport getParts=Parts getUnits=/s
+report=Volume Integral 16 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 17 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Minimum 24 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 26 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Maximum 27 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Minimum 25 class=star.base.report.MinReport getParts=Parts getUnits=Pa
+report=Maximum 28 class=star.base.report.MaxReport getParts=Parts getUnits=Pa
+report=Minimum 26 class=star.base.report.MinReport getParts=Parts getUnits=J/kg
+report=Maximum 29 class=star.base.report.MaxReport getParts=Parts getUnits=J/kg
+report=Minimum 27 class=star.base.report.MinReport getParts=Parts getUnits=/s
+report=Maximum 30 class=star.base.report.MaxReport getParts=Parts getUnits=/s
+report=Stab_Drag 6 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_Lift 6 class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_PressureDrag 6 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_ViscousDrag 6 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_MaxVelocity 6 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Stab_MaxCFL 6 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_MeanYplus 6 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Minimum 28 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 31 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_InterfaceCFL 6 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 18 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 19 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 43 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 44 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 45 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 46 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 47 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 48 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 49 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Stab_Drag 7 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_Lift 7 class=star.flow.ForceReport getDirection=[0.0, 0.0, 1.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_PressureDrag 7 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_ViscousDrag 7 class=star.flow.ForceReport getDirection=[1.0, 0.0, 0.0] getParts=Parts getForceOption=Options getUnits=N getCoordinateSystem=Laboratory
+report=Stab_MaxVelocity 7 class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Stab_MaxCFL 7 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_MeanYplus 7 class=star.base.report.AreaAverageReport getParts=Parts getUnits=
+report=Minimum 29 class=star.base.report.MinReport getParts=Parts getUnits=
+report=Maximum 32 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Stab_InterfaceCFL 7 class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Volume Integral 20 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=kg
+report=Volume Integral 21 class=star.base.report.VolumeIntegralReport getParts=Parts getUnits=m^3
+report=Mass Flow 50 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 51 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 52 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 53 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 54 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 55 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=Mass Flow 56 class=star.flow.MassFlowReport getParts=Parts getUnits=kg/s
+report=C01 actual imposed inlet speed class=star.base.report.MaxReport getParts=Parts getUnits=m/s
+report=Minimum 30 class=star.base.report.MinReport getParts=Parts getUnits=
+report=C01 alphaMax class=star.base.report.MaxReport getParts=Parts getUnits=
+report=Minimum 31 class=star.base.report.MinReport getParts=Parts getUnits=Pa
+report=C01 pressureMax class=star.base.report.MaxReport getParts=Parts getUnits=Pa
+report=Minimum 32 class=star.base.report.MinReport getParts=Parts getUnits=kg/m^3
+report=C01 densityMax class=star.base.report.MaxReport getParts=Parts getUnits=kg/m^3
+report=Surface Integral 50 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 51 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 52 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 53 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 54 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 55 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 56 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=Surface Integral 57 class=star.base.report.SurfaceIntegralReport getParts=Parts getUnits=m^2
+report=M13 interface-CFL read-only class=star.base.report.MaxReport getParts=Parts getUnits=
+motion=Stationary class=star.motion.StationaryMotion
+solver=Partitioning class=star.common.PartitioningSolver
+solver=Segregated VOF class=star.vof.SegregatedVofSolver
+solver=Segregated Flow class=star.segregatedflow.SegregatedFlowSolver
+solver=Implicit Unsteady class=star.common.ImplicitUnsteadySolver
+solver=VOF Wave Zone Distance class=star.vof.VofWaveZoneDistanceSolver
+solver=K-Omega Turbulence class=star.kwturb.KwTurbSolver
+solver=K-Omega Turbulent Viscosity class=star.kwturb.KwTurbViscositySolver
+solver=Wall Distance class=star.walldistance.WallDistanceSolver

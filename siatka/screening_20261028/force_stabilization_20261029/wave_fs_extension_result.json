@@ -1,0 +1,123 @@
+{
+  "status": "long_domain_mesh_ready_pending_matched_inputs",
+  "updated_at": "2026-10-30T01:13:43.942920+01:00",
+  "cells": 317277,
+  "source_unchanged": true,
+  "flow_steps": 0,
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2",
+  "metrics": {
+    "cell_count": 317277,
+    "mesh_time_s": 0,
+    "NegativeVolumeCells": 0,
+    "UnclosedCells": 0,
+    "DegeneratedFeCells": 0,
+    "min_cell_quality": 0.07094186540769823,
+    "min_volume_change": 0.004255828981421002,
+    "min_face_validity": 1.0,
+    "max_skewness_angle_deg": 45.04069652540024,
+    "diagnostic_CellQuality_below_0.01": 0.0,
+    "diagnostic_VolumeChange_below_0.01": 2.0,
+    "diagnostic_SkewnessAngle_above_80.0": 0.0,
+    "centroid_y_min_m": 0.01999999999999999,
+    "centroid_y_max_m": 0.020000000000000014,
+    "centroid_y_range_m": 2.42861286636753e-17
+  },
+  "topology": {
+    "cells": 317277,
+    "cells_with_one_source_and_target_face": 317277,
+    "invalid_cells": [],
+    "single_layer_topology": true,
+    "node_y_min_m": 0.01,
+    "node_y_max_m": 0.03,
+    "source_nodes": 559195,
+    "paired_nodes": 559195,
+    "max_target_source_xz_displacement_m": 0.0,
+    "y_plane_error_m": 0.0,
+    "foil_edges": 856,
+    "foil_perimeter_m": 2.420247199693756,
+    "area_fraction_any_quad_layers": 0.9988296604199051,
+    "area_fraction_at_least_15_quad_layers": 0.987039181807564,
+    "layer_histogram": {
+      "48": 835,
+      "49": 9,
+      "3": 2,
+      "2": 2,
+      "1": 6,
+      "0": 2
+    },
+    "first_thickness_min_m": 1.5260233597707663e-06,
+    "first_thickness_max_m": 1.5307210708864613e-06,
+    "method": "CGNS connectivity: every volume cell must touch both span planes; prism coverage inferred by following consecutive quadrilateral cells normal to each foil edge, area weighted."
+  },
+  "extension": {
+    "cells": 317277,
+    "source_vertices": 559195,
+    "source_cells_unchanged": true,
+    "source_xz_coordinates_unchanged": true,
+    "span_m": 0.02,
+    "minimum_source_area_m2": 7.736736434995602e-10,
+    "minimum_reconstructed_volume_m3": 1.5473472869991203e-11,
+    "total_volume_m3": 47.997684231839266,
+    "negative_or_zero_reconstructed_volumes": 0,
+    "self_intersecting_source_cells": 0,
+    "nonmanifold_source_edges": 0,
+    "same_side_internal_faces": 0,
+    "boundary_face_counts": {
+      "Polyfaces_fluid": 874525,
+      "DOMAIN.bottom": 359,
+      "DOMAIN.inlet": 187,
+      "DOMAIN.outlet": 186,
+      "DOMAIN.top": 359,
+      "HF_012_wall": 856,
+      "Q2D_span_source": 317277,
+      "Q2D_span_target": 317277
+    },
+    "method": "Preserve all M10_FS020 source polygons; append conforming orthogonal strips at the original inlet and outlet, then rebuild exact one-cell-span connectivity",
+    "purpose": "M10-FS020-derived 4-lambda wave-domain mesh preparation; not a new accepted flow result",
+    "source_mesh": "M10_FS020_r1",
+    "source_sha256": "fa16baf7161bdb2c40eed2c35139e01aa31e8859835e14d31a33dc19ffafb414",
+    "original_cells": 282379,
+    "added_cells": 34898,
+    "original_cell_polygons_preserved": true,
+    "original_coordinates_preserved": true,
+    "extensions": [
+      {
+        "side": "inlet",
+        "old_x_m": -11.9,
+        "new_x_m": -35.0,
+        "columns": 116,
+        "max_dx_m": 0.19913793103448277,
+        "boundary_vertical_segments": 187
+      },
+      {
+        "side": "outlet",
+        "old_x_m": 30.940000000000005,
+        "new_x_m": 45.0,
+        "columns": 71,
+        "max_dx_m": 0.19802816901408443,
+        "boundary_vertical_segments": 186
+      }
+    ],
+    "expected_volume_m3": 47.99768423182085,
+    "x_bounds_m": [
+      -35.0,
+      45.0
+    ],
+    "z_bounds_m": [
+      -22.0,
+      8.0
+    ],
+    "wave_depth_m": 24,
+    "pending": [
+      "Independent STAR mesh import/quality/boundary checks",
+      "Matched calm run on this domain",
+      "Wave propagation/time/domain validation"
+    ],
+    "output_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd"
+  },
+  "pending": [
+    "Actual boundary/zone andindependentarea audit",
+    "Ownmatchedcalm/W01inputs",
+    "Wave propagation,dt andFSsensitivitybeforeforceacceptance"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "status": "PAUSED_USER_CHECKPOINT_VERIFIED",
+  "physical_time_s": 1.9559999999998172,
+  "steps_completed": 300,
+  "solver": "STAR-CCM+ 2606.0002",
+  "source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\PHASE_MAP_WAVE_FIXED_20261106_090718\\FINAL.sim",
+  "source_history": "F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/mini_vof_20261103/COMEBACK_20261104/runs/PHASE_MAP_WAVE_FIXED_20261106_090718/CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_144455_AF_resume.simh",
+  "checkpoint": "H:\\NTNU_RESEARCH_ARCHIVE\\Active Flaps\\Sharp_Sealed_Native_Quasi2D_VOF_STAR2606_20261105\\02_RUN\\BACKUP_WAVE_FIXED_20261106_t1.956000\\WAVE_FIXED_PAUSED_t1.956000.sim",
+  "solution_history": "H:\\NTNU_RESEARCH_ARCHIVE\\Active Flaps\\Sharp_Sealed_Native_Quasi2D_VOF_STAR2606_20261105\\02_RUN\\BACKUP_WAVE_FIXED_20261106_t1.956000\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_144455_AF_resume.simh",
+  "dt_s": 0.0005,
+  "inner": 12,
+  "interface_cfl_limit": 0.9,
+  "ramp_origin_s": 1.506,
+  "ramp_duration_s": 0.456,
+  "wave_height_m": 0.09999776671792426,
+  "wave_target_height_m": 0.1,
+  "encounter_period_s": 0.4555125750001525,
+  "flap_deg": 0,
+  "next_case": "Resume WAVE/FIXED at saved time and original wave phase. Gate repeatable cycles before +/-1 degree.",
+  "resume_requires_explicit_instruction": true,
+  "residual_pass": true,
+  "verified_by": "SHA-256 and size on both disks",
+  "files": {
+    "WAVE_FIXED_PAUSED_t1.956000.sim": {
+      "bytes": 208515579,
+      "sha256": "18b682923f985b07d9410999b6c9bfe5c6bda58fd1d66e08ebbf7a62feb42822"
+    },
+    "CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_144455_AF_resume.simh": {
+      "bytes": 1722426002,
+      "sha256": "dcb70343f764941da1351ebc19b2af54ae6eca7f77067f6aaaad870cb04c2fd6"
+    },
+    "CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919_AF_Fixed.simh": {
+      "bytes": 14506041,
+      "sha256": "360500bdd7d6386ace0094b2f9be0e05200867795b1e717d5efba5ca7fa19277"
+    },
+    "history.csv": {
+      "bytes": 270246,
+      "sha256": "f2c4d9c3f29ab09192a2c53ec704479a5a5941c096067b279f53fb5824879a6d"
+    },
+    "gauges.csv": {
+      "bytes": 137119,
+      "sha256": "9096a78a812f0a17f7b8a0f84792b4d2a453c5436d03aef17fb50166c671b134"
+    },
+    "gauges_absorption.csv": {
+      "bytes": 59226,
+      "sha256": "c8680cc6de05e3c710928491fcb09bc96a7b59eb9ae9a06074add9cd9c5eed3a"
+    },
+    "residual_per_step.csv": {
+      "bytes": 297164,
+      "sha256": "2df5bcac781895da68d2723a1197cbc970b67ce16ba226ceea1d64a635c860e7"
+    },
+    "RESIDUAL_FINAL25.json": {
+      "bytes": 280,
+      "sha256": "723c198270bd3ac789cf0b4ceb42f125484726a45628c6702f7e1ecae2f80497"
+    },
+    "job.json": {
+      "bytes": 1399,
+      "sha256": "b978a241573cfca7cd5fca4533d3fc4b38c008ce878a9bf876f7018d189cd61e"
+    },
+    "job.properties": {
+      "bytes": 1010,
+      "sha256": "eb55b7c4c6530d57f4008fc96ab53d580b7e98468000c179a0fc5d1b2f56add5"
+    },
+    "MiniVofStokes.java": {
+      "bytes": 111360,
+      "sha256": "d9854b2da6e527f1ad0ff6d14e8cafe7a2e2d8e5127af41adb7fdc1f77d87c91"
+    },
+    "SOLVE_STATUS.json": {
+      "bytes": 205,
+      "sha256": "3d531c81918bd577f65fe4d977e18c6dc01c013ddec120c2550a2a0dfc30201a"
+    },
+    "DAY_RESULT.json": {
+      "bytes": 935,
+      "sha256": "c51c3b86d0d37cd8338494de93e9d66fce62e5cb278d89716c5f0f9b6a9dd456"
+    },
+    "AF_NATIVE_SAMPLES.json": {
+      "bytes": 714,
+      "sha256": "354867f606e1899c5140bbdacbfa0a77c03157eb77ea83df37e60d8bf946299c"
+    },
+    "STOKES_AFTER_FINAL_STEP.json": {
+      "bytes": 97,
+      "sha256": "af9a4935559f8ed54b944983383bd1b834a9c3c0a9c24e0870a8d1849b24e683"
+    },
+    "PHASE_CFL_GUARD.json": {
+      "bytes": 66,
+      "sha256": "30a0c191ce642d602b3065a9b76a6edccd5bb0caaa17467a9d6a6bd1da203163"
+    },
+    "step_wall.csv": {
+      "bytes": 8610,
+      "sha256": "bdd9847cc66e4eee78e9e816a6ecbf41ef456e62a1477219f486c902f5453134"
+    }
+  }
+}

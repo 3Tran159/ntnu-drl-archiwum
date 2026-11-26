@@ -1,0 +1,87 @@
+{
+  "at": "2026-11-03T11:23:09.651055+01:00",
+  "experiment_id": "C0_SPEED_DOWN_20261103",
+  "status": "EXECUTION_PASS_CONTINUATION_HOLD",
+  "passed": false,
+  "scope": "20-step transient speed-down startup; not10m/s equilibrium or quantitative validation",
+  "steps": 20,
+  "time_s": 0.6900000000000005,
+  "iteration": 12360,
+  "U_m_s": 17.93152,
+  "flap_deg": -0.0,
+  "minimum_pressure_Pa": 23366.703577183856,
+  "maximum_mass_relative": 1.392564895440507e-07,
+  "minimum_volume_m3": 9.128750119087941e-12,
+  "minimum_quality": 0.06104818624018239,
+  "max_overset_errors": 0.0,
+  "last_CL": 0.3206861558619269,
+  "last_CD": 0.007155867131695475,
+  "last_Mh_Nm": -11.778200215235007,
+  "final_residuals": {
+    "Continuity": {
+      "first": 0.10355865657843398,
+      "last": 5.442019703659213e-05,
+      "ratio": 0.0005255011877773345
+    },
+    "Sdr": {
+      "first": 7.233807041064209e-06,
+      "last": 7.233970058380734e-08,
+      "ratio": 0.010000225354803632
+    },
+    "Tke": {
+      "first": 0.07900563212192858,
+      "last": 1.9322909186739447e-05,
+      "ratio": 0.0002445763506697674
+    },
+    "X-momentum": {
+      "first": 57.730549040451365,
+      "last": 0.005989664269633348,
+      "ratio": 0.00010375207527363779
+    },
+    "Y-momentum": {
+      "first": 46.35503954978672,
+      "last": 4.93920486001685,
+      "ratio": 0.10655162648954261
+    },
+    "Z-momentum": {
+      "first": 103.30392060176958,
+      "last": 0.025156832188764532,
+      "ratio": 0.00024352253082187086
+    }
+  },
+  "failed_checks": [
+    "final_inner_residual_Sdr"
+  ],
+  "checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\C0_speed_down_20261103\\run_20261103_111057\\checkpoint.sim",
+    "bytes": 1525645964,
+    "sha256": "7d140c9523f1e2eeb34875013d65424845def7d474df5a8b3562693b36e43d41",
+    "saved_time_s": 0.6900000000000005,
+    "native_save_complete": true,
+    "hash_at": "2026-11-03T11:21:03.048162+01:00",
+    "native_reopen_verified": false
+  },
+  "native_metadata_readable": true,
+  "native_full_checkpoint_reopen_tested": false,
+  "source_native_readback": {
+    "time": 0.6500000000000005,
+    "iteration": 11560,
+    "actual_angle_deg": -0.0,
+    "flow_frozen": false,
+    "dt": 0.002,
+    "inner": 40,
+    "mesh": 333939,
+    "initial_CL": 0.3256530206195925,
+    "initial_CD": 0.007244510839521137,
+    "initial_Mh": -12.040420268556348
+  },
+  "source_fields_reset": false,
+  "original_candidate_preserved": true,
+  "old_failures_preserved": true,
+  "full_speed_sweep_blocked": true,
+  "scientific_approved": false,
+  "training_approved": false,
+  "native_20step_smoke_passed": true,
+  "physical_safety_checks_passed": true,
+  "continuation_approved": false
+}

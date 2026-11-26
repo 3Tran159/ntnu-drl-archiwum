@@ -1,0 +1,113 @@
+{
+  "prism_coverage_target": 0.999,
+  "target_type": "user-proposed engineering goal, not a universal CFD standard",
+  "fixed_nominal_prism": {
+    "first_thickness_m": 0.0001799,
+    "layers": 15,
+    "total_thickness_m": 0.01546,
+    "implied_growth_ratio": 1.221034939
+  },
+  "diagnostic_findings": [
+    "Reduced/terminated layers visible at trailing edge and curved leading edge in baseline sections.",
+    "Worst CellQuality location is in detected layer 15 near prism/core transition; its skewness is only 19.934 degrees and volume change is 0.13789.",
+    "Only 2 of the 115 CellQuality<0.01 cells also have skewness>80 degrees."
+  ],
+  "experiments": [
+    {
+      "case": "B001",
+      "enhanced": true,
+      "core_aspect": 1,
+      "result": "not selected for overnight: 94.24% full stacks, 3 cells above 85 degrees and 735 below CellQuality 0.01"
+    },
+    {
+      "case": "B002",
+      "enhanced": false,
+      "core_aspect": 2,
+      "result": "98.76% full stacks; mixed quality trade-off; diagnostic candidate"
+    },
+    {
+      "case": "B003",
+      "enhanced": false,
+      "core_aspect": 4,
+      "result": "Completed: 98.76495% full stacks; 470 cells below Q 0.01; 24,727,133 cells. AR 4 adds little coverage over AR 2."
+    }
+  ],
+  "dependency_note": "Enabling Enhanced Quality Prisms removes the legacy Near Core Layer Aspect Ratio and Layer Reduction Percentage controls. Those visibility changes are documented; nominal h1, count, total thickness and physics remain in the frozen signature.",
+  "gpu_decision": {
+    "card": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+    "vram_mib": 12227,
+    "free_vram_mib": 11503,
+    "software_support": "2602 includes VOF GPU support",
+    "memory_reference": "Installed Running Simulations with GPGPU: trimmed constant-density two-equation turbulence double-precision example approximately 2 GB/million cells. It is a guide, not a measurement of this case.",
+    "case_cells_approx": 25000000,
+    "decision": "Retain CPU double precision: 12 GB VRAM below the estimated demand for the 14.3\u201325.5 million cell candidates."
+  },
+  "overnight_physics": {
+    "user_confirmed": "18 m/s calm water",
+    "water_current_m_s": [
+      18,
+      0,
+      0
+    ],
+    "air_velocity_m_s": [
+      18,
+      0,
+      0
+    ],
+    "time_step_s": 1e-05,
+    "temporal_order": "first, retained",
+    "meaning": "Both phases translate in the foil frame; no incident wave. Initial stability/resource screening, not statistically settled hydrodynamic coefficients."
+  },
+  "resource_probe_A001": {
+    "result": "memory_emergency_stop",
+    "completed_solver_steps": 0,
+    "minimum_free_ram_gib": 0.593544
+  },
+  "night_candidates": [
+    {
+      "case": "D001",
+      "hf_fine_factor": 2,
+      "core_aspect_ratio": 2
+    },
+    {
+      "case": "D002",
+      "hf_fine_factor": 4,
+      "core_aspect_ratio": 2
+    },
+    {
+      "case": "D003",
+      "hf_fine_factor": 2,
+      "core_aspect_ratio": 4
+    },
+    {
+      "case": "D004",
+      "hf_fine_factor": 4,
+      "core_aspect_ratio": 4
+    }
+  ],
+  "night_plan": {
+    "order": [
+      "D001",
+      "D002",
+      "D003",
+      "D004"
+    ],
+    "processes": 24,
+    "wall_seconds_per_case": 7200,
+    "launch_gate": "D001 24-worker real probe completes at least 2 timesteps with >=12 GiB free RAM minimum",
+    "state_at_write": "Sequential queue actually launched 2026-10-28 21:41 Europe/Berlin. D001 running, D002\u2013D004 queued.",
+    "limitations": [
+      "Fixed dt 1e-5 s is expensive; overnight runs are startup/stability comparisons, not converged hydrodynamic forces.",
+      "Cases must be compared at shared physical times, not only equal wall time.",
+      "No case attains full-layer area target 99.9%."
+    ]
+  },
+  "resource_probe_D001_np24": {
+    "status": "completed",
+    "outer_calls": 2,
+    "iterations": 40,
+    "physical_time_s": 2e-05,
+    "solver_wall_seconds": 878.6821621,
+    "minimum_free_ram_gib": 15.388702392578125
+  }
+}

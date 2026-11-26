@@ -1,0 +1,36 @@
+{
+  "updated_at": "2026-10-30T09:00:44.632742+01:00",
+  "status": "completed",
+  "main": "F:\\ntnu\\mesh_screening_20261028\\dashboard.html",
+  "research": "F:\\ntnu\\mesh_screening_20261028\\professor_dashboard.html",
+  "features": [
+    "horizontal collapsible topic bars and nested tests",
+    "persistent open state and keyboard access",
+    "plain test names; attempt IDs in technical details",
+    "original schematic restored top-right on both views, below description on mobile",
+    "permanent operational computer/calculation section",
+    "read-only telemetry every20s with explicit machine and calculation-data freshness",
+    "mode-specific calm/wave/preparation metrics, GPU priority and concurrent preparation",
+    "case-matched scientific results, archived cohorts remain separate"
+  ],
+  "qa": "accordion_ui_review_20261030.json",
+  "viewport_widths": [
+    1920,
+    1360,
+    390
+  ],
+  "print_pages": {
+    "main_full_archive_landscape": 39,
+    "research_discussion": 20
+  },
+  "campaign_paused": true,
+  "solver_launched": false,
+  "separate_HF_session": "Untouched as explicitly instructed",
+  "monitor": {
+    "pid": 1972,
+    "purpose": "Read-only dashboard telemetry; never starts a solver",
+    "started_at": "2026-10-30T08:58:54.835189+01:00"
+  },
+  "local_balance_review": "professor_r14_local_balance_review.json",
+  "next_calculation_recommendation": "Reporting-only replay .500 to .630 with unchanged R14 settings, outlet face flux/alpha/pressure and last-two-column per-inner diagnostics. Requires explicit user resume; no new numerical-control change is yet supported."
+}

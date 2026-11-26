@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave_fs_extension_r1.py", line 59, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave_fs_extension_r1.py", line 19, in main
+    A.mkdir();source=S/'mesh.sim';mesh=S/'mesh_star_export.CGNS';digest=e.digest(source);md=e.digest(mesh)
+                                                                                            ~~~~~~~~^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_until_settled.py", line 23, in digest
+    with p.open('rb') as f:
+         ~~~~~~^^^^^^
+  File "C:\Python315\Lib\pathlib\__init__.py", line 970, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M10_FS020_r1\\mesh_star_export.CGNS'

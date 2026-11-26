@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_c01_to_local_w01a_r1.py", line 58, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_c01_to_local_w01a_r1.py", line 27, in main
+    if not source and live.get('case')=='C01_W20L4_M10_calm_settle_r2' and live.get('computation_active') is False:raise RuntimeError('C01 stopped without a verified reusable checkpoint')
+                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: C01 stopped without a verified reusable checkpoint

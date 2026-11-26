@@ -1,0 +1,145 @@
+package macro;
+import star.common.*;
+import star.meshing.*;
+import star.prismmesher.*;
+import star.trimmer.*;
+import star.base.neo.*;
+import star.base.report.*;
+import star.vis.*;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.Method;
+import java.nio.file.*;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.security.MessageDigest;
+import java.math.BigDecimal;
+import javax.json.Json;
+import javax.json.JsonObject;
+
+public class Coarse012 extends StarMacro {
+  private Path out; private Simulation s;
+  private final List<String> notes=new ArrayList<>();
+  public void execute() {
+    s=getActiveSimulation();
+    try {
+      out=Paths.get("F:/ntnu/mesh_screening_20261028/coarse012_C003");
+      if(!Paths.get(s.getSessionPath()).toAbsolutePath().normalize().equals(out.resolve("baseline_copy.sim")))throw new RuntimeException("Wrong coarse working copy");
+      if(s.getSimulationIterator().getCurrentIteration()!=0)throw new RuntimeException("Not a clean baseline");
+      if(!Files.exists(out.resolve("GEOMETRY_VERIFIED.json")))throw new RuntimeException("Geometry verification missing");
+      s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);s.getSimulationIterator().getAutoSave().setEnabled(false);
+      CadPart foil=(CadPart)s.getGeometryPartManager().getPart("HF_012_v3");
+      SubtractPartsOperation subtract=(SubtractPartsOperation)s.get(MeshOperationManager.class).getObject("Subtract");
+      if(!subtract.getInputGeometryObjects().getObjects().contains(foil))throw new RuntimeException("Corrected CAD not active");
+      s.getRegionManager().getRegion("fluid").getBoundaryManager().getBoundary("HF_v2 2.ColoredFace1").setPresentationName("HF_012_wall");
+      AutoMeshOperation op=(AutoMeshOperation)s.get(MeshOperationManager.class).getObject("Automated Mesh");
+      double base=1.6384;op.getDefaultValues().get(BaseSize.class).setValue(base);
+      SurfaceCustomMeshControl ctrl=(SurfaceCustomMeshControl)op.getCustomMeshControls().getObject("HF_surface");
+      ctrl.getCustomValues().get(PartsTargetSurfaceSize.class).setRelativeSize(.0512/base*100);
+      ctrl.getCustomValues().get(PartsMinimumSurfaceSize.class).setRelativeSize(.0016/base*100);
+      ctrl.getCustomValues().get(SurfaceCurvature.class).setNumPointsAroundCircle(24.0);
+      ctrl.getCustomValues().get(star.resurfacer.SurfaceGrowthRate.class).setGrowthRate(1.4);
+      CurveCustomMeshControl edge=(CurveCustomMeshControl)op.getCustomMeshControls().getObject("Curve Control");
+      edge.getCustomValues().get(PartsTargetSurfaceSize.class).getAbsoluteSize().getValue().setValue(.0128);
+      TrimmerAnisotropicSize fine=((VolumeCustomMeshControl)op.getCustomMeshControls().getObject("HF_fine")).getCustomValues().get(TrimmerAnisotropicSize.class);
+      fine.getRelativeXSize().setPercentage(.0512/base*100);fine.getRelativeYSize().setPercentage(.1024/base*100);fine.getRelativeZSize().setPercentage(.0512/base*100);
+      op.getDefaultValues().get(PrismLayerCoreLayerAspectRatio.class).setValue(2.0);
+      ((PrismAutoMesher)op.getMeshers().getObject("Prism Layer Mesher")).setEnhancedPrismLayers(false);
+      op.getDefaultValues().get(MaxTrimmerSizeToPrismThicknessRatio.class).setSizeThicknessRatio(8.0);
+      Map<String,Object> settings=new LinkedHashMap<>();
+      settings.put("surface_curvature_points_per_circle",24);settings.put("surface_growth_rate",1.4);
+      settings.put("max_core_prism_transition_ratio",8.0);
+      settings.put("purpose","Coarse solver diagnostic; not accepted NWAR production mesh");
+      settings.put("base_size_m",base);settings.put("foil_target_m",.0512);settings.put("foil_min_m",.0016);settings.put("curve_target_m",.0128);
+      settings.put("hf_fine_sizes_m",List.of(.0512,.1024,.0512));settings.put("prism_count_preserved",15);settings.put("first_layer_m_preserved",.0001799);settings.put("total_prism_m_preserved",.01546);
+      settings.put("core_aspect_ratio",2.0);settings.put("enhanced_prisms",false);settings.put("solver_iterations",0);
+      Files.writeString(out.resolve("settings.json"),json(settings));
+      s.saveState(out.resolve("configured_unmeshed.sim").toString());
+      long tick=System.nanoTime();s.println("[NTNU] COARSE012_MESH_START");
+      s.getMeshPipelineController().generateVolumeMesh();
+      FvRepresentation fv=(FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh");
+      long cells=fv.getCellCount();if(cells<=0)throw new RuntimeException("No cells");
+      Region region=s.getRegionManager().getRegion("fluid");
+      Map<String,Object> metrics=new LinkedHashMap<>();metrics.put("cell_count",cells);metrics.put("mesh_time_s",(System.nanoTime()-tick)*1e-9);
+      NeoProperty report=fv.generateMeshReport(List.of(region));Files.writeString(out.resolve("mesh_report_properties.txt"),report.toFormattedString());
+      for(String key:List.of("NegativeVolumeCells","UnclosedCells","DegeneratedFeCells"))metrics.put(key,report.get(key));
+      scalar(metrics,"min_cell_quality",new String[]{"CellQuality"},false,region,fv);
+      scalar(metrics,"min_volume_change",new String[]{"VolumeChange"},false,region,fv);
+      scalar(metrics,"min_face_validity",new String[]{"FaceValidity"},false,region,fv);
+      scalar(metrics,"max_skewness_angle_deg",new String[]{"SkewnessAngle"},true,region,fv);
+      diagnostics(metrics,"CellQuality",.01,false,region,fv);
+      diagnostics(metrics,"VolumeChange",.01,false,region,fv);
+      diagnostics(metrics,"SkewnessAngle",80,true,region,fv);
+      prismAudit(metrics,region,fv);
+      s.saveState(out.resolve("HF_012_C003_mesh.sim").toString());
+      Files.writeString(out.resolve("measurement.json"),json(Map.of("case_id","C003_012","status","mesh_generated_solver_not_run","metrics",metrics,"settings",settings,"notes",notes)));
+      s.println("[NTNU] COARSE012_MESH_DONE cells="+cells);
+    } catch(Exception e){throw new RuntimeException(e);}
+  }
+  private void scalar(Map<String,Object> metrics,String key,String[] names,boolean maximum,NamedObject reg,FvRepresentation fv){
+    try{
+      FieldFunction f=null;for(String name:names)if(s.getFieldFunctionManager().hasFunction(name)){f=s.getFieldFunctionManager().getFunction(name);break;}
+      if(f==null){notes.add("Unavailable field for "+key);return;}
+      ScalarReport report=maximum?s.getReportManager().createReport(MaxReport.class):s.getReportManager().createReport(MinReport.class);
+      report.setPresentationName("NTNU_"+key);report.setFieldFunction(f);report.getParts().setObjects(reg);report.setRepresentation(fv);
+      double value=report.monitoredValue();String errors=report.getErrorLog();
+      report.printReport(out.resolve(key+".txt").toString(),false);
+      if(!Double.isFinite(value)||!errors.isBlank()){notes.add(key+" report error: "+errors);return;}
+      // STAR 21.02 SkewnessAngle is dimensionless, with numerical values already in degrees.
+      metrics.put(key,value);notes.add(key+" field="+f.getFunctionName()+" population="+reg.getPresentationName()+" units="+report.getUnits());
+    }catch(Exception e){notes.add(key+" unavailable: "+e);}
+  }
+  private void prismAudit(Map<String,Object> metrics,Region region,FvRepresentation fv){
+    try{
+      Boundary foil=(Boundary)region.getBoundaryManager().getObject("HF_012_wall");
+      scalar(metrics,"min_foil_prism_layers",new String[]{"PrismLayerNumber"},false,foil,fv);
+      scalar(metrics,"max_foil_prism_layers",new String[]{"PrismLayerNumber"},true,foil,fv);
+      scalar(metrics,"min_foil_prism_total_thickness_m",new String[]{"PrismCellThickness"},false,foil,fv);
+      scalar(metrics,"max_foil_prism_total_thickness_m",new String[]{"PrismCellThickness"},true,foil,fv);
+      for(String mode:List.of("any","full_15")){
+        UserFieldFunction mask=s.getFieldFunctionManager().createFieldFunction();mask.setPresentationName("NTNU_coverage_"+mode);mask.setFunctionName("NTNU_coverage_"+mode);
+        mask.getTypeOption().setSelected(FieldFunctionTypeOption.Type.SCALAR);
+        mask.setDefinition("${PrismLayerNumber} >= "+(mode.equals("any")?"0.5":"14.5")+" ? 1.0 : 0.0");
+        AreaAverageReport area=s.getReportManager().createReport(AreaAverageReport.class);area.setPresentationName("NTNU_foil_area_coverage_"+mode);
+        area.setFieldFunction(mask);area.setRepresentation(fv);area.getParts().setObjects(foil);
+        double fraction=area.monitoredValue();area.printReport(out.resolve("foil_coverage_"+mode+".txt").toString(),false);
+        if(!Double.isFinite(fraction)||!area.getErrorLog().isBlank())throw new IllegalStateException(area.getErrorLog());
+        metrics.put("foil_area_fraction_"+mode+"_prism_layers",fraction);
+      }
+      FieldFunction layer=s.getFieldFunctionManager().getFunction("PrismLayerNumber");
+      ThresholdPart first=s.getPartManager().createThresholdPart();first.setPresentationName("NTNU_first_prism_layer");
+      first.getInputParts().setObjects(region);first.setFieldFunction(layer);first.setRange(new DoubleVector(new double[]{0.5,1.5}));first.setMode(ThresholdMode.BETWEEN_TAG);
+      scalar(metrics,"min_first_prism_cell_thickness_m",new String[]{"PrismCellThickness"},false,first,fv);
+      scalar(metrics,"max_first_prism_cell_thickness_m",new String[]{"PrismCellThickness"},true,first,fv);
+      diagnostics(metrics,"PrismLayerNumber",14.5,false,foil,fv);
+      notes.add("Prism layer-number and thickness fields are STAR geometry diagnostics; coverage is foil-area-weighted, not achieved y-plus.");
+    }catch(Exception e){notes.add("Prism diagnostics incomplete: "+e);}
+  }
+  private void diagnostics(Map<String,Object> metrics,String name,double cutoff,boolean above,NamedObject reg,FvRepresentation fv){
+    try{
+      if(!s.getFieldFunctionManager().hasFunction(name))return;
+      FieldFunction f=s.getFieldFunctionManager().getFunction(name);
+      ThresholdPart part=s.getPartManager().createThresholdPart();part.setPresentationName("NTNU_diagnostic_"+name);
+      part.getInputParts().setObjects(reg);part.setFieldFunction(f);part.setRange(new DoubleVector(new double[]{cutoff,cutoff}));
+      part.setMode(above?ThresholdMode.ABOVE_TAG:ThresholdMode.BELOW_TAG);
+      ElementCountReport report=s.getReportManager().createReport(ElementCountReport.class);report.setPresentationName("NTNU_count_"+name);
+      report.setRepresentation(fv);report.getParts().setObjects(part);double count=report.getReportMonitorValue();
+      if(!report.getErrorLog().isBlank()||!Double.isFinite(count))throw new IllegalStateException(report.getErrorLog());
+      metrics.put("diagnostic_"+name+(above?"_above_":"_below_")+cutoff,count);
+      if(count>0&&count<=100000){
+        XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("NTNU_cells_"+name);
+        table.getParts().setObjects(part);table.setFieldFunctions(List.of(f));table.setRepresentation(fv);table.setExtractVertexData(false);
+        table.extract();table.export(out.resolve("diagnostic_"+name+".csv").toString());
+      }
+      notes.add("Diagnostic "+name+(above?" > ":" < ")+cutoff+": "+count+" elements in "+reg.getPresentationName()+"; review trigger, not universal acceptance limit");
+    }catch(Exception e){notes.add("Local diagnostic "+name+" unavailable: "+e);}
+  }
+  private static String json(Object o) {
+    if(o==null)return "null";
+    if(o instanceof Number){double x=((Number)o).doubleValue();return Double.isFinite(x)?o.toString():"null";}
+    if(o instanceof Boolean)return o.toString();
+    if(o instanceof Map){StringJoiner j=new StringJoiner(",","{","}");for(Object x:((Map<?,?>)o).entrySet()){Map.Entry<?,?> e=(Map.Entry<?,?>)x;j.add(json(e.getKey().toString())+":"+json(e.getValue()));}return j.toString();}
+    if(o instanceof Collection){StringJoiner j=new StringJoiner(",","[","]");for(Object x:(Collection<?>)o)j.add(json(x));return j.toString();}
+    String t=o.toString().replace("\\","\\\\").replace("\"","\\\"").replace("\r","\\r").replace("\n","\\n").replace("\t","\\t");
+    return "\""+t+"\"";
+  }
+}

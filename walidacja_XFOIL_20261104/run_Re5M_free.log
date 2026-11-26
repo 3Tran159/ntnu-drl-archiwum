@@ -1,0 +1,168 @@
+
+ ===================================================
+  XFOIL Version 6.99
+  Copyright (C) 2000   Mark Drela, Harold Youngren
+
+  This software comes with ABSOLUTELY NO WARRANTY,
+    subject to the GNU General Public License.
+
+  Caveat computor
+ ===================================================
+
+ File  xfoil.def  not found
+
+   QUIT    Exit program
+
+  .OPER    Direct operating point(s)
+  .MDES    Complex mapping design routine
+  .QDES    Surface speed design routine
+  .GDES    Geometry design routine
+
+   SAVE f  Write airfoil to labeled coordinate file
+   PSAV f  Write airfoil to plain coordinate file
+   ISAV f  Write airfoil to ISES coordinate file
+   MSAV f  Write airfoil to MSES coordinate file
+   REVE    Reverse written-airfoil node ordering
+
+   LOAD f  Read buffer airfoil from coordinate file
+   NACA i  Set NACA 4,5-digit airfoil and buffer airfoil
+   INTE    Set buffer airfoil by interpolating two airfoils
+   NORM    Buffer airfoil normalization toggle
+   XYCM rr Change CM reference location, currently  0.25000 0.00000
+
+   BEND    Display structural properties of current airfoil
+
+   PCOP    Set current-airfoil panel nodes directly from buffer airfoil points
+   PANE    Set current-airfoil panel nodes ( 160 ) based on curvature
+  .PPAR    Show/change paneling
+
+  .PLOP    Plotting options
+
+   WDEF f  Write  current-settings file
+   RDEF f  Reread current-settings file
+   NAME s  Specify new airfoil name
+   NINC    Increment name version number
+
+   Z       Zoom    | (available in all menus)
+   U       Unzoom  | 
+
+ XFOIL   c>   ...............................................
+
+  G raphics-enable flag:        T
+  S ize of plot object          10.00"
+  A spect ratio of plot object   0.5500
+  P age dimensions              11.00 x  8.50"
+  M argins from page edges       0.00",  0.00"
+  F ont size (relative)          0.0150
+  W indow/screen size fraction   0.8000
+  B lowup input method:        Cursor    
+  O rientation of plot:        Landscape 
+  C olor PostScript output?     F
+
+      Option, Value   (or <Return>)    c>   ...............................................
+
+  G raphics-enable flag:        F
+  S ize of plot object          10.00"
+  A spect ratio of plot object   0.5500
+  P age dimensions              11.00 x  8.50"
+  M argins from page edges       0.00",  0.00"
+  F ont size (relative)          0.0150
+  W indow/screen size fraction   0.8000
+  B lowup input method:        Cursor    
+  O rientation of plot:        Landscape 
+  C olor PostScript output?     F
+
+      Option, Value   (or <Return>)    c>  
+ XFOIL   c>  
+ Labeled airfoil file.  Name:  NACA66-012 + NACA a=0.8(mod) cmax=0.025 RECONSTR
+
+ Number of input coordinate points: 161
+ Counterclockwise ordering
+ Max thickness =     0.119982  at x =   0.454
+ Max camber    =     0.024124  at x =   0.528
+
+  LE  x,y  =  -0.00031   0.00183  |   Chord =   1.00031
+  TE  x,y  =   1.00000   0.00000  |
+
+ Current airfoil nodes set from buffer airfoil nodes ( 161 )
+
+ XFOIL   c>  
+ Sharp trailing edge
+
+ Paneling parameters used...
+   Number of panel nodes       160
+   Panel bunching parameter    1.000
+   TE/LE panel density ratio   0.150
+   Refined-area/LE panel density ratio    0.200
+   Top    side refined area x/c limits  1.000 1.000
+   Bottom side refined area x/c limits  1.000 1.000
+
+ XFOIL   c>  
+.OPERi   c>  
+ M  =    0.0000
+ Re =   5000000
+
+.OPERv   c>  
+.OPERv   c>  
+ Polar  1 newly created for accumulation
+ Airfoil archived with polar: NACA66-012 + NACA a=0.8(mod) cmax=0.025 RECONSTR
+
+Enter  polar save filename  OR  <return> for no file   s>  
+ New polar save file available
+
+Enter  polar dump filename  OR  <return> for no file   s>  
+ Polar dump file will NOT be written
+
+ Polar accumulation enabled
+
+.OPERva   c>   Calculating unit vorticity distributions ...
+ Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Initializing BL ...
+    side            1  ...
+ MRCHUE: Inverse mode at  58     Hk =   5.008
+ MRCHUE: Inverse mode at  59     Hk =   6.967
+ MRCHUE: Inverse mode at  60     Hk =   2.500
+    side            2  ...
+
+ Side 1  free  transition at x/c =  0.6919   60
+ Side 2  free  transition at x/c =  0.6699   57
+
+   1   rms: 0.8678E-01   max: -.5885E+00   T at   60  1   RLX: 0.850
+       a =  0.000      CL =  0.3529
+      Cm = -0.0826     CD =  0.00313   =>   CDf =  0.00295    CDp =  0.00019
+
+ Side 1  free  transition at x/c =  0.7274   62
+ Side 2  free  transition at x/c =  0.6777   58
+
+   2   rms: 0.3171E-01   max: 0.6352E+00   C at   62  1
+       a =  0.000      CL =  0.3500
+      Cm = -0.0821     CD =  0.00322   =>   CDf =  0.00277    CDp =  0.00045
+
+ Side 1  free  transition at x/c =  0.7159   61
+ Side 2  free  transition at x/c =  0.6821   58
+
+   3   rms: 0.4088E-02   max: -.5324E-01   C at   61  1
+       a =  0.000      CL =  0.3497
+      Cm = -0.0820     CD =  0.00324   =>   CDf =  0.00281    CDp =  0.00044
+
+ Side 1  free  transition at x/c =  0.7157   61
+ Side 2  free  transition at x/c =  0.6807   58
+
+   4   rms: 0.4499E-04   max: 0.5396E-03   C at   61  1
+       a =  0.000      CL =  0.3497
+      Cm = -0.0820     CD =  0.00324   =>   CDf =  0.00281    CDp =  0.00043
+ plradd ia,ip,cpol            1          81  0.60118330    
+
+ Point added to stored polar  1
+ Point written to save file  polar_Re5M_free.txt                             
+ Dump file unspecified or not available
+
+.OPERva   c>  
+ Polar accumulation disabled
+
+.OPERv   c>  
+ XFOIL   c>  

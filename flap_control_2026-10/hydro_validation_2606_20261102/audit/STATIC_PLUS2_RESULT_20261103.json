@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-03T09:15:39.475569+01:00",
+  "verdict": "FAIL",
+  "reason": "Absolute pressure -36.222kPa below unchanged12.339kPa gate at first hydrodynamic step",
+  "time_s": 0.6720000000000005,
+  "hydrodynamic_steps": 1,
+  "iteration": 11610,
+  "mesh_cells": 333939,
+  "angle_deg": 2,
+  "checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\plus2_benchmark_20261103_091101\\error_checkpoint.sim",
+  "checkpoint_bytes": 1576377842,
+  "checkpoint_sha256": "2e127a98decb1881a24b58b02b7732b5e06c9b6bcf04865b53abb2413faea19e",
+  "native_metadata_verified": true,
+  "minimum_pressure": {
+    "step": 1,
+    "time_s": 0.6720000000000005,
+    "zone": "near",
+    "pabs_Pa": -36222.17101533679,
+    "x_m": 0.9535090316843406,
+    "y_m": 0.02,
+    "z_m": 0.0562847926939671
+  },
+  "residuals": {
+    "Continuity": {
+      "first": 0.3837533319692317,
+      "last": 0.0006734159293142,
+      "last_over_first": 0.0017548145467781702
+    },
+    "X-momentum": {
+      "first": 21.3924106050139,
+      "last": 0.0219048155975708,
+      "last_over_first": 0.0010239526532104242
+    },
+    "Z-momentum": {
+      "first": 25.361574489023194,
+      "last": 0.074416648935751,
+      "last_over_first": 0.0029342282738778484
+    },
+    "Tke": {
+      "first": 0.5929655934952706,
+      "last": 0.0039206321864101,
+      "last_over_first": 0.006611905023527088
+    },
+    "Sdr": {
+      "first": 0.0017410012320086,
+      "last": 1.7666011401783704e-06,
+      "last_over_first": 0.00101470412984156
+    }
+  },
+  "comparison": [
+    {
+      "quantity": "CL_hydro",
+      "C0": 0.32561948776312,
+      "plus2_failed_transient": 0.7722193182842313,
+      "delta": 0.4465998305211113,
+      "delta_percent": 137.153901195865
+    },
+    {
+      "quantity": "CD",
+      "C0": 0.0072459371243424,
+      "plus2_failed_transient": 0.0219737250256149,
+      "delta": 0.014727787901272498,
+      "delta_percent": 203.25580595772982
+    },
+    {
+      "quantity": "Fx_N",
+      "C0": 27.937435176616,
+      "plus2_failed_transient": 84.72189420876106,
+      "delta": 56.78445903214506,
+      "delta_percent": 203.25580595771513
+    },
+    {
+      "quantity": "Fz_N",
+      "C0": 1278.1254605592,
+      "plus2_failed_transient": 3000.0357671154907,
+      "delta": 1721.9103065562906,
+      "delta_percent": 134.7215402314987
+    },
+    {
+      "quantity": "Mh_Nm",
+      "C0": -12.040069616323999,
+      "plus2_failed_transient": -52.23670317181052,
+      "delta": -40.19663355548652,
+      "delta_percent": 333.85715229576147
+    }
+  ],
+  "force_response_valid": false,
+  "training_approved": false,
+  "benchmark": {
+    "status": "ABORTED_BEFORE_WARMUP",
+    "cpu_tested": 8,
+    "cpu12": "NOT_RUN_BLOCKED",
+    "cpu16": "NOT_RUN_BLOCKED",
+    "valid_timed_steps": 0,
+    "first_step_seconds": 15.2436329,
+    "fastest_configuration": null,
+    "temperature_status": "Access denied; not measured"
+  },
+  "confirmed": [
+    "Native+2pose,time0.670,retained C0 fields and40inner/dt0.002 configuration verified before stepping.",
+    "No reset,remesh or source overwrite.",
+    "Full native Overset:333939cells,zero errors/difficult interpolation;minimum volume3.456e-12m3.",
+    "k/omega floor counts0;mass9.14e-7 below1e-4;velocity maximum22.43m/s.",
+    "Pressure minimum near upper flap nose atx0.953509,z0.056285m;large force overshoot after frozen-pose warm start."
+  ],
+  "hypotheses": [
+    "Transient response to retained0degree fields and temporal history after frozen grid motion.",
+    "Inner convergence insufficient for sudden pressure adjustment.",
+    "Localized hinge discretization/pressure response requires further study; valid donors alone do not validate pressure."
+  ],
+  "next_scientific_test": "On a separate source copy,compare first-step temporal-history treatment and inner convergence without relaxing pressure guard. Not queued; no -2 approved.",
+  "queue": "HOLD_FAILED_JOB"
+}

@@ -1,0 +1,158 @@
+Starting local server: starserver.bat -new -power -cpubind off -np 1 
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 22460
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 20:22:47 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\MiniVofNativeQ2D.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\MiniVofNativeQ2D.java:23: warning: [deprecation] setAngleFactor(double) in star.vof.SegregatedVofModel has been deprecated
+pc.getModelManager().getModel(SegregatedVolumeFluxBasedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SegregatedVofModel.class).setAngleFactor(.15);
+                                                                                                                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\MiniVofNativeQ2D.java:24: warning: [deprecation] setWaveLength(double) in star.vof.FirstOrderVofWave has been deprecated
+VofWaveModel vm=pc.getModelManager().getModel(VofWaveModel.class);vm.setEnableTheoryComparison(true);FirstOrderVofWave wave=vm.getVofWaveManager().createVofWave(FirstOrderVofWave.class,"MINI_FirstOrder");wave.setHeavyFluidDensity(1000);wave.setLightFluidDensity(1.2);wave.setDeepWaterApproximation(true);wave.getSpecificationOption().setSelected(VofWaveSpecificationOption.Type.WAVE_LENGTH_SPECIFIED);wave.setWaveLength(10);wave.setAmplitude(.05);wave.getPointOnLevel().setComponents(0,sy,0);wave.getVerticalDirection().setComponents(0,1,0);wave.getAdvancingDirection().setComponents(1,0,0);wave.getCurrent().setComponents(18,0,0);wave.getWind().setComponents(18,0,0);wave.setFirstWaveFront(false);pc.getModelManager().getModel(SstKwTurbModel.class).getKwTurbRealizabilityOption().setSelected(KwTurbRealizabilityOption.Type.VORTICITY);reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.NONE);
+                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\MiniVofNativeQ2D.java:31: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                       ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\MiniVofNativeQ2D.java:37: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable field=s.getTableManager().createTable(XyzInternalTable.class);field.setPresentationName("Wave_field_check");field.getParts().setObjects(reg);field.setFieldFunctions(List.of(alpha,s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("Velocity").getComponentFunction(0),s.getFieldFunctionManager().getFunction("Velocity").getComponentFunction(1)));
+                                          ^
+
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+
+
+Importing F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\mesh_3d.msh
+Loading module: CaeIOCgns
+Reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\mesh_3d.msh...
+Importing cells
+Cell type: hexahedral
+   Name: cell-1
+   Number of cells: 41280
+   Zone type: fluid
+   Zone 2 type interior, name interior
+   Zone 3 type velocity-inlet, name inlet
+   Zone 4 type pressure-outlet, name outlet
+   Zone 5 type pressure-outlet, name top
+   Zone 6 type wall, name bottom
+   Zone 7 type symmetry, name span_front
+   Zone 8 type symmetry, name span_back
+   Zone 1 type fluid, name MINI_water_air
+Importing faces
+Group: interior-2
+   Number of faces: 82111
+   Topology: quadrilateral
+   Type: 2
+Importing faces
+Group: velocity-inlet-3
+   Number of faces: 129
+   Topology: quadrilateral
+   Type: 10
+Importing faces
+Group: pressure-outlet-4
+   Number of faces: 129
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: pressure-outlet-5
+   Number of faces: 320
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: wall-6
+   Number of faces: 320
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: symmetry-7
+   Number of faces: 41280
+   Topology: quadrilateral
+   Type: 7
+Importing faces
+Group: symmetry-8
+   Number of faces: 41280
+   Topology: quadrilateral
+   Type: 7
+
+Partitioning region MINI_water_air (41280 cells, 1 partitions)
+Partitioning complete
+Importing nodes
+Dimension: 3
+   Number of nodes: 83460
+   Zone id: 1
+Processing mesh
+Finished reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\mesh_3d.msh
+Reordering
+Finished importing
+Imported coordinate extents (m)
+X extents: [-12.0, 28.0]
+   Y extents: [-10.0, 4.0]
+   Z extents: [0.0, 0.02]
+
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: VofModel
+Loading module: WavesModel
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+Initialization of star.mixturemultiphase.SegregatedVolumeFluxBasedFlowModel requires an additional pass...
+Initialization of star.segregatedflow.SegregatedFlowSolver requires an additional pass...
+Initialization of star.vof.SegregatedVofModel requires an additional pass...
+Initialization of star.vof.SegregatedVofSolver requires an additional pass...
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\VOF_prepared.sim... complete (29.755MB in 0.25714s).
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00 
+Reversed flow on  158 faces on MINI_water_air: top
+             2   1.000000e+00   6.640831e-01   1.805866e-01   2.231751e-01   1.453545e-01   2.191411e-01   2.221653e-01 
+Reversed flow on  158 faces on MINI_water_air: top
+             3   1.000000e+00   5.224207e-01   1.547705e-01   6.841532e-02   1.919478e-02   4.802087e-02   4.936225e-02 
+Reversed flow on  158 faces on MINI_water_air: top
+             4   1.000000e+00   4.366385e-01   1.525493e-01   7.875191e-02   6.213469e-03   1.053466e-02   1.097394e-02 
+Reversed flow on  158 faces on MINI_water_air: top
+             5   1.000000e+00   3.609700e-01   1.324631e-01   1.951962e-02   1.911677e-03   2.362510e-03   2.453521e-03 
+Reversed flow on  158 faces on MINI_water_air: top
+             6   1.020509e+00   2.988174e-01   1.115712e-01   6.364119e-03   5.437029e-03   6.201885e-04   5.731230e-04 
+Reversed flow on  158 faces on MINI_water_air: top
+             7   1.005212e+00   2.426480e-01   9.201226e-02   3.238774e-03   2.184742e-04   2.377147e-04   1.857076e-04 
+Reversed flow on  158 faces on MINI_water_air: top
+             8   9.776380e-01   1.958302e-01   7.460012e-02   3.268503e-03   5.112744e-03   2.014716e-04   1.368191e-04 
+Reversed flow on  158 faces on MINI_water_air: top
+             9   9.356303e-01   1.535093e-01   5.997034e-02   4.468773e-03   4.925914e-03   1.825206e-04   1.438946e-04 
+Reversed flow on  158 faces on MINI_water_air: top
+            10   8.917173e-01   1.148578e-01   4.616406e-02   2.301801e-03   6.100662e-04   1.847309e-04   1.315888e-04 
+Reversed flow on  158 faces on MINI_water_air: top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum          water            Tke            Sdr 
+            11   8.405616e-01   9.503779e-02   3.778192e-02   3.940340e-03   1.148915e-04   1.058647e-04   6.641527e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+            12   7.879384e-01   7.891100e-02   3.114345e-02   2.229198e-03   1.326522e-04   1.337652e-04   8.717848e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+            13   7.361529e-01   6.559233e-02   2.580070e-02   9.306404e-03   1.116963e-04   1.495836e-04   9.969808e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+            14   6.871669e-01   5.457250e-02   2.148421e-02   3.282697e-03   8.902743e-05   1.577805e-04   1.035220e-04 
+Reversed flow on  158 faces on MINI_water_air: top
+            15   6.407659e-01   4.543914e-02   1.797786e-02   9.894490e-04   7.033189e-05   1.522081e-04   9.594381e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+            16   5.968226e-01   3.786169e-02   1.512727e-02   1.941045e-03   1.922302e-03   1.509820e-04   8.645848e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+            17   5.602978e-01   2.504120e-02   1.048321e-02   5.889976e-04   2.977513e-04   9.042718e-05   5.050428e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+            18   5.225434e-01   2.111317e-02   8.957003e-03   1.690596e-04   1.588313e-04   1.235710e-04   6.348757e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+            19   4.867593e-01   1.834695e-02   7.892411e-03   1.552312e-04   2.082907e-04   1.405195e-04   7.087063e-05 
+Reversed flow on  158 faces on MINI_water_air: top
+TimeStep    1: Time  1.000000e-03
+            20   4.534616e-01   1.600387e-02   7.015805e-03   2.415470e-03   2.040386e-04   1.310908e-04   6.606360e-05 
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_SMOKE50_FACEFIX\VOF_checkpoint.sim... complete (39.534MB in 0.076268s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

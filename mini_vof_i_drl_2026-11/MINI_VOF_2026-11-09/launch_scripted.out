@@ -1,0 +1,55 @@
+{
+ "case": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\INT_SCRIPTED_20261109_091159",
+ "mode": "scripted",
+ "steps": 400,
+ "cpus": [
+  6,
+  7
+ ],
+ "star": "2606.0002",
+ "launch": {
+  "returncode": 0,
+  "seconds": 1478.8,
+  "bound": [
+   [
+    "2880",
+    "conhost"
+   ],
+   [
+    "18020",
+    "cmd"
+   ],
+   [
+    "27308",
+    "starccm+"
+   ],
+   [
+    "27416",
+    "cmd"
+   ],
+   [
+    "29872",
+    "conhost"
+   ],
+   [
+    "32976",
+    "python"
+   ]
+  ],
+  "cpus": [
+   6,
+   7
+  ],
+  "np": 2,
+  "gpu": false
+ },
+ "FC_RESULT.json": {
+  "result": "DONE",
+  "wall_s": 1367.2074482,
+  "final_cmd_deg": -1.0,
+  "mode": "scripted",
+  "end_time_s": 4.1230000000004114,
+  "integrator": 0.0
+ },
+ "final_sim": true
+}

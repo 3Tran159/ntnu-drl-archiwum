@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_resume_active.py", line 106, in <module>
+    main("--preflight" in sys.argv)
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_resume_active.py", line 89, in main
+    _,end,_=campaign.integrate(ACTIVE,source,t,history,total_steps-n,moving=True,options=options)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_phase_map_campaign.py", line 104, in integrate
+    raise RuntimeError(f"{stage} {result['status']} after {result['samples']} steps")
+RuntimeError: PHASE_MAP_WAVE_ACTIVE_I1DEG HOLD_STOP_OR_DEADLINE after 163 steps

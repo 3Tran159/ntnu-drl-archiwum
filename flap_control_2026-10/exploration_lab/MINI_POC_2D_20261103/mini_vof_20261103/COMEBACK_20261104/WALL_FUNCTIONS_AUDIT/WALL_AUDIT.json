@@ -1,0 +1,668 @@
+{
+  "reynolds": 21420000.0,
+  "cf": 0.002639206143445818,
+  "friction_velocity_m_s": 0.6538741432708763,
+  "design": {
+    "30": {
+      "centroid_um": 45.880388923059286,
+      "full_layer_um": 91.76077784611857
+    },
+    "50": {
+      "centroid_um": 76.46731487176548,
+      "full_layer_um": 152.93462974353096
+    },
+    "60": {
+      "centroid_um": 91.76077784611857,
+      "full_layer_um": 183.52155569223714
+    },
+    "70": {
+      "centroid_um": 107.05424082047168,
+      "full_layer_um": 214.10848164094335
+    },
+    "100": {
+      "centroid_um": 152.93462974353096,
+      "full_layer_um": 305.8692594870619
+    }
+  },
+  "q2d_cells": 44442,
+  "q2d_mesh": {
+    "all": {
+      "faces": 716,
+      "centroid_y_um_p05_p50_p95": [
+        9.999968042872643,
+        10.00001381105758,
+        10.000066798470831
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.5387205367694925,
+        6.538750463402205,
+        6.5387851105016495
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.99999965512906,
+        19.999999995729215,
+        20.000000339533702
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.200000000000199,
+        1.2000000000007196,
+        1.2000000000046467
+      ]
+    },
+    "LE": {
+      "faces": 336,
+      "centroid_y_um_p05_p50_p95": [
+        10.000043470750166,
+        10.000152780754474,
+        10.002530346679599
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.538769857108287,
+        6.538841332093703,
+        6.540395960976065
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.999999847501908,
+        20.0000000015996,
+        20.000000143211672
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.2000000000000122,
+        1.200000000000248,
+        1.2000000000005873
+      ]
+    },
+    "main suction": {
+      "faces": 150,
+      "centroid_y_um_p05_p50_p95": [
+        10.000013663999102,
+        10.000016954931148,
+        10.000039812603312
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.538750367244472,
+        6.538752519099843,
+        6.538767465140646
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.999999632692816,
+        19.999999976471454,
+        20.00000035770456
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.2000000000003508,
+        1.200000000000819,
+        1.2000000000032678
+      ]
+    },
+    "main pressure": {
+      "faces": 121,
+      "centroid_y_um_p05_p50_p95": [
+        10.000000489795601,
+        10.000007138933347,
+        10.000021784193814
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.538741752973443,
+        6.5387461006726895,
+        6.5387556768298305
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.999999728385877,
+        20.00000003292631,
+        20.000000270667144
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.200000000000193,
+        1.2000000000005064,
+        1.2000000000010642
+      ]
+    },
+    "hinge": {
+      "faces": 26,
+      "centroid_y_um_p05_p50_p95": [
+        9.999971634568734,
+        10.000010934307017,
+        10.000023333768327
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.538722885286696,
+        6.538748582369397,
+        6.538756690056538
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.99999963375421,
+        20.00000000116587,
+        20.000000446133058
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.2000000000003233,
+        1.2000000000010154,
+        1.2000000000022286
+      ]
+    },
+    "flap suction": {
+      "faces": 28,
+      "centroid_y_um_p05_p50_p95": [
+        9.999961886119685,
+        9.99998836187046,
+        10.000039545267244
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.538716511027926,
+        6.5387338228367815,
+        6.538767290336502
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.999999423849317,
+        20.00000006132385,
+        20.000000463143227
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.2000000000009274,
+        1.2000000000047109,
+        1.200000000012042
+      ]
+    },
+    "flap pressure": {
+      "faces": 27,
+      "centroid_y_um_p05_p50_p95": [
+        9.999950435934187,
+        9.999986881119444,
+        10.000033278149022
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.538709024047693,
+        6.538732854611978,
+        6.538763192429946
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.999999447234675,
+        19.999999939420185,
+        20.000000541667077
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.2000000000005993,
+        1.2000000000014335,
+        1.200000000002452
+      ]
+    },
+    "TE": {
+      "faces": 28,
+      "centroid_y_um_p05_p50_p95": [
+        9.999731030267325,
+        9.999930481919595,
+        9.999955148590491
+      ],
+      "predicted_yplus_p05_p50_p95": [
+        6.538565560355245,
+        6.538695976633497,
+        6.538712105531796
+      ],
+      "wall_quad_area_pct": 100.0,
+      "first_quad_thickness_um_p05_p50_p95": [
+        19.999999893467624,
+        19.99999998922591,
+        20.000000095648925
+      ],
+      "quad_rows_p05_p50_p95": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "worst_measured_expansion_p05_p50_p95": [
+        1.2000000000000552,
+        1.2000000000022757,
+        1.200000000009435
+      ]
+    }
+  },
+  "kinematics_offline": [
+    {
+      "angle_deg": -2.0,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.9,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.8,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.7,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.6,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.5,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.4,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.2999999999999998,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.2,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.1,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -1.0,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.8999999999999999,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.7999999999999998,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.7,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.5999999999999999,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.5,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.3999999999999999,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.2999999999999998,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.19999999999999996,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": -0.09999999999999987,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.0,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.10000000000000009,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.20000000000000018,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.30000000000000027,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.40000000000000036,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.5,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.6000000000000001,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.7000000000000002,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.8000000000000003,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 0.9000000000000004,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.0,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.1,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.2000000000000002,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.3000000000000003,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.4000000000000004,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.5,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.6,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.7000000000000002,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.8000000000000003,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 1.9000000000000004,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    },
+    {
+      "angle_deg": 2.0,
+      "nonpositive_near_wall_corner_count": 0,
+      "min_corner_jacobian_m2": 7.727482335639163e-10
+    }
+  ],
+  "archived_wall_0deg": {
+    "all": {
+      "faces": 716,
+      "yplus_p05_p50_p95": [
+        2.8687225622040002,
+        3.8232930853120846,
+        6.9207897878565445
+      ],
+      "yplus_min": 0.7264255421415818,
+      "yplus_max": 10.802948520102746,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "LE": {
+      "faces": 336,
+      "yplus_p05_p50_p95": [
+        6.493606397350011,
+        7.293447640750488,
+        9.2527670197623
+      ],
+      "yplus_min": 0.7264255421415818,
+      "yplus_max": 10.802948520102746,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "main suction": {
+      "faces": 150,
+      "yplus_p05_p50_p95": [
+        3.6366743793160725,
+        4.1656408295892895,
+        6.549927848837853
+      ],
+      "yplus_min": 3.419147051643966,
+      "yplus_max": 7.213304510988613,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "main pressure": {
+      "faces": 121,
+      "yplus_p05_p50_p95": [
+        2.833568342082762,
+        3.549055187585685,
+        5.620420526350655
+      ],
+      "yplus_min": 2.7975808632415617,
+      "yplus_max": 6.450087913639583,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "hinge": {
+      "faces": 26,
+      "yplus_p05_p50_p95": [
+        3.375156658018403,
+        3.6683817671122636,
+        3.94808898855508
+      ],
+      "yplus_min": 3.350145648522048,
+      "yplus_max": 3.974743864406976,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "flap suction": {
+      "faces": 28,
+      "yplus_p05_p50_p95": [
+        2.6628168533469854,
+        3.0535123249123766,
+        3.490881958208386
+      ],
+      "yplus_min": 2.5626971325258574,
+      "yplus_max": 3.604689942567782,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "flap pressure": {
+      "faces": 27,
+      "yplus_p05_p50_p95": [
+        3.3951783433392855,
+        3.6075786880836644,
+        3.7667489258991047
+      ],
+      "yplus_min": 3.3735253436441703,
+      "yplus_max": 3.8041855298048253,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "TE": {
+      "faces": 28,
+      "yplus_p05_p50_p95": [
+        2.5627855126255694,
+        3.363320864534609,
+        3.739484989355959
+      ],
+      "yplus_min": 2.5107370915938394,
+      "yplus_max": 5.038255382149062,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    }
+  },
+  "archived_wall_match_error_m": 1.1105699151271772e-15,
+  "measured_q2d_wall_yplus": false,
+  "archived_wall_2deg": {
+    "all": {
+      "faces": 714,
+      "yplus_p05_p50_p95": [
+        2.798273194712221,
+        3.8597436037802146,
+        7.250326066765488
+      ],
+      "yplus_min": 0.9386256473287421,
+      "yplus_max": 9.035124519121817,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "LE": {
+      "faces": 336,
+      "yplus_p05_p50_p95": [
+        5.721068233946069,
+        7.767481719978257,
+        8.976731827271129
+      ],
+      "yplus_min": 0.9386256473287421,
+      "yplus_max": 9.035124519121817,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "main suction": {
+      "faces": 150,
+      "yplus_p05_p50_p95": [
+        3.7492587367500394,
+        4.188496186273124,
+        6.858496643181361
+      ],
+      "yplus_min": 3.5577439915780857,
+      "yplus_max": 7.675623910607847,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "main pressure": {
+      "faces": 121,
+      "yplus_p05_p50_p95": [
+        2.8375303236544593,
+        3.528527862239803,
+        5.970016863475357
+      ],
+      "yplus_min": 2.794552265358033,
+      "yplus_max": 6.739804278446301,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "hinge": {
+      "faces": 24,
+      "yplus_p05_p50_p95": [
+        2.6365317103926205,
+        3.772829250700712,
+        4.867323351484253
+      ],
+      "yplus_min": 2.4418111340047313,
+      "yplus_max": 5.037271617493695,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "flap suction": {
+      "faces": 28,
+      "yplus_p05_p50_p95": [
+        2.530978643885238,
+        2.8414945704467964,
+        3.28535780999221
+      ],
+      "yplus_min": 2.3554402749194097,
+      "yplus_max": 3.354031172720343,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "flap pressure": {
+      "faces": 27,
+      "yplus_p05_p50_p95": [
+        3.4587391676554247,
+        3.7361590118683297,
+        3.918752830078247
+      ],
+      "yplus_min": 3.426985322116598,
+      "yplus_max": 3.97673772312326,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    },
+    "TE": {
+      "faces": 28,
+      "yplus_p05_p50_p95": [
+        2.5368612264777735,
+        3.1302333789213153,
+        4.048000713213701
+      ],
+      "yplus_min": 2.485501169785762,
+      "yplus_max": 4.755849459312392,
+      "area_pct_30_100": 0.0,
+      "area_pct_50_70": 0.0
+    }
+  },
+  "archived_wall_2deg_match_error_m": 4.884982540398457e-15
+}

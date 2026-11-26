@@ -1,0 +1,47 @@
+{
+ "case": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\MAP_FF_20261109_135206",
+ "mode": "map",
+ "steps": 3644,
+ "cpus": [
+  8,
+  9
+ ],
+ "star": "2606.0002",
+ "launch": {
+  "returncode": 1,
+  "seconds": 18960.0,
+  "bound": [
+   [
+    "19552",
+    "starccm+"
+   ],
+   [
+    "33508",
+    "conhost"
+   ],
+   [
+    "37136",
+    "python"
+   ],
+   [
+    "37292",
+    "cmd"
+   ]
+  ],
+  "cpus": [
+   8,
+   9
+  ],
+  "np": 2,
+  "gpu": false
+ },
+ "FC_RESULT.json": {
+  "result": "DONE",
+  "integrator": 0.0,
+  "end_time_s": 5.7449999999995125,
+  "mode": "map",
+  "final_cmd_deg": -0.0240966134872924,
+  "wall_s": 18862.7802949
+ },
+ "final_sim": true
+}

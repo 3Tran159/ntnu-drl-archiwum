@@ -1,0 +1,375 @@
+{
+  "at": "2026-10-30T11:43:55.532Z",
+  "views": [
+    {
+      "width": 1920,
+      "checks": {
+        "noJsErrors": true,
+        "noDocumentOverflow": true,
+        "elevenDefinedRows": true,
+        "W01ActualT": true,
+        "W01Failed": true,
+        "W01aSameParameters": true,
+        "W01aFullHeight": true,
+        "W01aPeriodOwnRecord": true,
+        "allShared": true,
+        "separateOrders": true,
+        "technicalNames": true,
+        "stickyCase": true,
+        "parameterMapping": true
+      },
+      "rows": [
+        [
+          "C01",
+          "0.00",
+          "—",
+          "Matched",
+          "—",
+          "Calm reference matched to each wave domain and mesh",
+          "Separate reference required for each domain"
+        ],
+        [
+          "W01",
+          "0.50",
+          "20",
+          "80\n4 λ",
+          "0.847267",
+          "Wave initialized throughout the domain",
+          "Stopped · physical guard at 1.064 s"
+        ],
+        [
+          "W01a",
+          "0.50",
+          "20",
+          "80\n4 λ",
+          "0.847267",
+          "Fresh t = 0 calm fields; inlet H = 0.50 m from the first flow step; no height ramp or calm-force wait",
+          "Full H = 0.50 m inlet wave · no ramp · t = 0.490 s · arrival unverified"
+        ],
+        [
+          "W02",
+          "0.50",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Original longer-wave case",
+          "Input prepared · flow pending"
+        ],
+        [
+          "W03",
+          "0.25",
+          "20",
+          "80\n4 λ",
+          "Pending",
+          "Lower wave height",
+          "Planned"
+        ],
+        [
+          "W04",
+          "0.75",
+          "20",
+          "80\n4 λ",
+          "Pending",
+          "Higher wave height",
+          "Planned"
+        ],
+        [
+          "W05",
+          "0.25",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Longer wave, lower height",
+          "Planned"
+        ],
+        [
+          "W06",
+          "0.75",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Longer wave, higher height",
+          "Planned"
+        ],
+        [
+          "W07",
+          "0.50",
+          "10",
+          "40\n4 λ",
+          "Pending",
+          "Short-wave case; separate 40 m domain",
+          "Planned"
+        ],
+        [
+          "W08",
+          "0.50",
+          "40",
+          "160\n4 λ",
+          "Pending",
+          "Longest-wave case",
+          "Planned"
+        ],
+        [
+          "W01_3lambda",
+          "0.50",
+          "20",
+          "60\n3 λ",
+          "Pending",
+          "Three-wavelength domain sensitivity",
+          "Planned sensitivity"
+        ]
+      ],
+      "screenshot": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_case_catalog_preview_1920.png",
+      "errors": []
+    },
+    {
+      "width": 1360,
+      "checks": {
+        "noJsErrors": true,
+        "noDocumentOverflow": true,
+        "elevenDefinedRows": true,
+        "W01ActualT": true,
+        "W01Failed": true,
+        "W01aSameParameters": true,
+        "W01aFullHeight": true,
+        "W01aPeriodOwnRecord": true,
+        "allShared": true,
+        "separateOrders": true,
+        "technicalNames": true,
+        "stickyCase": true,
+        "parameterMapping": true
+      },
+      "rows": [
+        [
+          "C01",
+          "0.00",
+          "—",
+          "Matched",
+          "—",
+          "Calm reference matched to each wave domain and mesh",
+          "Separate reference required for each domain"
+        ],
+        [
+          "W01",
+          "0.50",
+          "20",
+          "80\n4 λ",
+          "0.847267",
+          "Wave initialized throughout the domain",
+          "Stopped · physical guard at 1.064 s"
+        ],
+        [
+          "W01a",
+          "0.50",
+          "20",
+          "80\n4 λ",
+          "0.847267",
+          "Fresh t = 0 calm fields; inlet H = 0.50 m from the first flow step; no height ramp or calm-force wait",
+          "Full H = 0.50 m inlet wave · no ramp · t = 0.490 s · arrival unverified"
+        ],
+        [
+          "W02",
+          "0.50",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Original longer-wave case",
+          "Input prepared · flow pending"
+        ],
+        [
+          "W03",
+          "0.25",
+          "20",
+          "80\n4 λ",
+          "Pending",
+          "Lower wave height",
+          "Planned"
+        ],
+        [
+          "W04",
+          "0.75",
+          "20",
+          "80\n4 λ",
+          "Pending",
+          "Higher wave height",
+          "Planned"
+        ],
+        [
+          "W05",
+          "0.25",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Longer wave, lower height",
+          "Planned"
+        ],
+        [
+          "W06",
+          "0.75",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Longer wave, higher height",
+          "Planned"
+        ],
+        [
+          "W07",
+          "0.50",
+          "10",
+          "40\n4 λ",
+          "Pending",
+          "Short-wave case; separate 40 m domain",
+          "Planned"
+        ],
+        [
+          "W08",
+          "0.50",
+          "40",
+          "160\n4 λ",
+          "Pending",
+          "Longest-wave case",
+          "Planned"
+        ],
+        [
+          "W01_3lambda",
+          "0.50",
+          "20",
+          "60\n3 λ",
+          "Pending",
+          "Three-wavelength domain sensitivity",
+          "Planned sensitivity"
+        ]
+      ],
+      "screenshot": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_case_catalog_preview_1360.png",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "checks": {
+        "noJsErrors": true,
+        "noDocumentOverflow": true,
+        "elevenDefinedRows": true,
+        "W01ActualT": true,
+        "W01Failed": true,
+        "W01aSameParameters": true,
+        "W01aFullHeight": true,
+        "W01aPeriodOwnRecord": true,
+        "allShared": true,
+        "separateOrders": true,
+        "technicalNames": true,
+        "stickyCase": true,
+        "parameterMapping": true,
+        "mobileScroll": true
+      },
+      "rows": [
+        [
+          "C01",
+          "0.00",
+          "—",
+          "Matched",
+          "—",
+          "Calm reference matched to each wave domain and mesh",
+          "Separate reference required for each domain"
+        ],
+        [
+          "W01",
+          "0.50",
+          "20",
+          "80\n4 λ",
+          "0.847267",
+          "Wave initialized throughout the domain",
+          "Stopped · physical guard at 1.064 s"
+        ],
+        [
+          "W01a",
+          "0.50",
+          "20",
+          "80\n4 λ",
+          "0.847267",
+          "Fresh t = 0 calm fields; inlet H = 0.50 m from the first flow step; no height ramp or calm-force wait",
+          "Full H = 0.50 m inlet wave · no ramp · t = 0.490 s · arrival unverified"
+        ],
+        [
+          "W02",
+          "0.50",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Original longer-wave case",
+          "Input prepared · flow pending"
+        ],
+        [
+          "W03",
+          "0.25",
+          "20",
+          "80\n4 λ",
+          "Pending",
+          "Lower wave height",
+          "Planned"
+        ],
+        [
+          "W04",
+          "0.75",
+          "20",
+          "80\n4 λ",
+          "Pending",
+          "Higher wave height",
+          "Planned"
+        ],
+        [
+          "W05",
+          "0.25",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Longer wave, lower height",
+          "Planned"
+        ],
+        [
+          "W06",
+          "0.75",
+          "30",
+          "120\n4 λ",
+          "Pending",
+          "Longer wave, higher height",
+          "Planned"
+        ],
+        [
+          "W07",
+          "0.50",
+          "10",
+          "40\n4 λ",
+          "Pending",
+          "Short-wave case; separate 40 m domain",
+          "Planned"
+        ],
+        [
+          "W08",
+          "0.50",
+          "40",
+          "160\n4 λ",
+          "Pending",
+          "Longest-wave case",
+          "Planned"
+        ],
+        [
+          "W01_3lambda",
+          "0.50",
+          "20",
+          "60\n3 λ",
+          "Pending",
+          "Three-wavelength domain sensitivity",
+          "Planned sensitivity"
+        ]
+      ],
+      "screenshot": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_case_catalog_preview_390.png",
+      "errors": []
+    }
+  ],
+  "print": {
+    "width": 794,
+    "scrollWidth": 794,
+    "tableMin": "0px"
+  },
+  "pass": true
+}

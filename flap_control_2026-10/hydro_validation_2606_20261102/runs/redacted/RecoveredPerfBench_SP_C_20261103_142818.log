@@ -1,0 +1,159 @@
+Starting local server: starserver.bat -power -cpubind off -np 8 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFJFQ09WRVJFRF9QRVJGXzIwMjYxMTAzXHByb2R1Y3Rpb25fc291cmNlLnNpbQ==
+*****************************************************************************************
+Warning: CPU contention on 8 processes could not be resolved.
+         CPU affinity will be cleared on those processes.
+
+         This is a strong indication that another server is already running and on some
+         hosts there are now more processes running than there are physical CPU cores.
+
+         Over-subscribing a host can severely affect performance.
+
+         Even when within the limits of hardware multithreading (e.g., hyper-threading),
+         using more processes than CPU cores will likely negatively impact performance.
+
+         The recommended mode of operation is to use the same number of processes as
+         physical CPU cores.
+*****************************************************************************************
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 21176
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 14:30:11 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\RECOVERED_PERF_20261103\production_source.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=8 
+Turning on communication timer.
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:80: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:97: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+for(Region r:regions){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(r);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(fields);tab.extract();tab.export(out.resolve(r.getPresentationName()+"_"+label+"_volume.csv").toString());s.getTableManager().removeObjects(tab);}
+                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:100: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(walls);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve(group+"_"+label+"_wall.csv").toString());s.getTableManager().removeObjects(tab);}
+                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:113: warning: [deprecation] star.common.EnumeratedOption in star.common has been deprecated
+ if(o instanceof EnumeratedOption)b.append(" selected="+((EnumeratedOption)o).getSelected());
+                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:113: warning: [deprecation] star.common.EnumeratedOption in star.common has been deprecated
+ if(o instanceof EnumeratedOption)b.append(" selected="+((EnumeratedOption)o).getSelected());
+                                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:113: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof EnumeratedOption)b.append(" selected="+((EnumeratedOption)o).getSelected());
+                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:114: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof BackflowSpecification){BackflowSpecification v=(BackflowSpecification)o;b.append(" direction="+v.getBackflowVelocityDirectionOption().getSelected()+" pressure="+v.getReversedFlowPressureOption().getSelected()+" scalar="+v.getReversedFlowScalarOption().getSelected());}
+                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:114: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof BackflowSpecification){BackflowSpecification v=(BackflowSpecification)o;b.append(" direction="+v.getBackflowVelocityDirectionOption().getSelected()+" pressure="+v.getReversedFlowPressureOption().getSelected()+" scalar="+v.getReversedFlowScalarOption().getSelected());}
+                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:114: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof BackflowSpecification){BackflowSpecification v=(BackflowSpecification)o;b.append(" direction="+v.getBackflowVelocityDirectionOption().getSelected()+" pressure="+v.getReversedFlowPressureOption().getSelected()+" scalar="+v.getReversedFlowScalarOption().getSelected());}
+                                                                                                                                                                                                                                                                            ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:116: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+  if(p.getMethod() instanceof ConstantScalarProfileMethod)b.append(" value="+p.getMethod(ConstantScalarProfileMethod.class).getQuantity().getValue());
+                                                                                                                                         ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:118: warning: [deprecation] getVector() in star.common.VectorPhysicalQuantity has been deprecated
+ if(o instanceof VectorProfile){VectorProfile p=(VectorProfile)o;b.append(" method="+p.getMethod().getClass().getName());if(p.getMethod() instanceof ConstantVectorProfileMethod)b.append(" value="+p.getMethod(ConstantVectorProfileMethod.class).getQuantity().getVector());}
+                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:127: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+ b.append("density="+((ConstantMaterialPropertyMethod)water.getMaterialProperties().getMaterialProperty(ConstantDensityProperty.class).getMethod()).getQuantity().getValue()+"\n");
+                                                                                                                                                                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:128: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+ b.append("viscosity="+((ConstantMaterialPropertyMethod)water.getMaterialProperties().getMaterialProperty(DynamicViscosityProperty.class).getMethod()).getQuantity().getValue()+"\n");
+                                                                                                                                                                    ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:130: warning: [deprecation] getUrf() in star.segregatedflow.VelocitySolver has been deprecated
+ b.append("velocity_urf="+flow.getVelocitySolver().getUrf()+"\npressure_urf="+flow.getPressureSolver().getUrf()+"\ndynamic_urf="+flow.getVelocitySolver().getUseDynamicLocalUrf()+"\ncontinuity_initialization="+flow.getContinuityInitialization()+"\n");
+                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:130: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+ b.append("velocity_urf="+flow.getVelocitySolver().getUrf()+"\npressure_urf="+flow.getPressureSolver().getUrf()+"\ndynamic_urf="+flow.getVelocitySolver().getUseDynamicLocalUrf()+"\ncontinuity_initialization="+flow.getContinuityInitialization()+"\n");
+                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:131: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:131: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                                                                                                                               ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:131: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:131: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                                                                                                                                                                                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:159: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+void setU(double u)throws Exception{if(!Double.isFinite(u)||u<10-1e-9||u>18+1e-9)throw new IllegalStateException("U outside authorization");currentU=u;int n=0;for(Region r:regions)for(Boundary b:r.getBoundaryManager().getBoundaries())if(b.getBoundaryType() instanceof InletBoundary){if(b.getConditions().get(InletVelocityOption.class).getSelected()!=InletVelocityOption.Type.COMPONENTS.getValue())throw new IllegalStateException("Inlet type changed");VectorProfile p=b.getValues().get(VelocityProfile.class);p.setMethod(ConstantVectorProfileMethod.class);p.getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponents(u,0,0);n++;}if(n!=1)throw new IllegalStateException("Expected one inlet");double qs=11.9*u*u;((ExpressionReport)s.getReportManager().getReport("HF_CL_hydro")).setDefinition("(${HF_Fz_NReport} - <22.666963538808645 N>)/<"+qs+" N>");((ExpressionReport)s.getReportManager().getReport("HF_CD")).setDefinition("${HF_Fx_NReport}/<"+qs+" N>");}
+                                                                                                                                                                                                                                                                                                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:163: warning: [deprecation] getAllSamples() in star.base.report.PlotableMonitor has been deprecated
+ for(Monitor m:s.getMonitorManager().getObjects())if(m instanceof ResidualMonitor){ResidualMonitor rm=(ResidualMonitor)m;MonitorData data=rm.getAllSamples();double[] x=data.getXValues(),y=data.getYValues();int first=-1,count=0;for(int i=x.length-1;i>=0&&x[i]>before;i--){if(x[i]<=after){first=i;count++;}}
+                                                                                                                                            ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:184: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ PhysicsContinuum pc=regions.get(0).getPhysicsContinuum();if(((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount()!=333939)throw new IllegalStateException("Mesh changed");if(pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()!=FlowUpwindOption.Type.SECOND_ORDER.getValue()||pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()!=UpwindOption.Type.SECOND_ORDER.getValue())throw new IllegalStateException("Second-order space required");if(pc.getModelManager().getModel(OversetConservationModel.class).getOversetConservationOption().getSelected()!=OversetConservationOption.Type.FLUX_CORRECTION.getValue())throw new IllegalStateException("Overset flux model changed");
+                                                                                                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:184: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ PhysicsContinuum pc=regions.get(0).getPhysicsContinuum();if(((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount()!=333939)throw new IllegalStateException("Mesh changed");if(pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()!=FlowUpwindOption.Type.SECOND_ORDER.getValue()||pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()!=UpwindOption.Type.SECOND_ORDER.getValue())throw new IllegalStateException("Second-order space required");if(pc.getModelManager().getModel(OversetConservationModel.class).getOversetConservationOption().getSelected()!=OversetConservationOption.Type.FLUX_CORRECTION.getValue())throw new IllegalStateException("Overset flux model changed");
+                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:184: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ PhysicsContinuum pc=regions.get(0).getPhysicsContinuum();if(((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount()!=333939)throw new IllegalStateException("Mesh changed");if(pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()!=FlowUpwindOption.Type.SECOND_ORDER.getValue()||pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()!=UpwindOption.Type.SECOND_ORDER.getValue())throw new IllegalStateException("Second-order space required");if(pc.getModelManager().getModel(OversetConservationModel.class).getOversetConservationOption().getSelected()!=OversetConservationOption.Type.FLUX_CORRECTION.getValue())throw new IllegalStateException("Overset flux model changed");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:185: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+ for(Solver so:s.getSolverManager().getObjects())if((so instanceof SegregatedFlowSolver||so.getClass().getName().toLowerCase(Locale.ROOT).contains("turb"))&&so.getFrozen())throw new IllegalStateException("Flow/turbulence frozen");ImplicitUnsteadySolver us=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);if(Math.abs(us.getTimeStep().getValue()-.002)>1e-12||us.getTimeDiscretizationOption().getSelected()!=TimeDiscretizationOption.Type.SECOND_ORDER.getValue())throw new IllegalStateException("Time settings changed");
+                                                                                                                                                                                                                                                                                                                                                         ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:185: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ for(Solver so:s.getSolverManager().getObjects())if((so instanceof SegregatedFlowSolver||so.getClass().getName().toLowerCase(Locale.ROOT).contains("turb"))&&so.getFrozen())throw new IllegalStateException("Flow/turbulence frozen");ImplicitUnsteadySolver us=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);if(Math.abs(us.getTimeStep().getValue()-.002)>1e-12||us.getTimeDiscretizationOption().getSelected()!=TimeDiscretizationOption.Type.SECOND_ORDER.getValue())throw new IllegalStateException("Time settings changed");
+                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:186: warning: [deprecation] getUrf() in star.segregatedflow.VelocitySolver has been deprecated
+ SegregatedFlowSolver fs=s.getSolverManager().getSolver(SegregatedFlowSolver.class);if(Math.abs(fs.getVelocitySolver().getUrf()-.8)>1e-12||Math.abs(fs.getPressureSolver().getUrf()-.2)>1e-12)throw new IllegalStateException("URF changed");for(SolverStoppingCriterion c:s.getSolverStoppingCriterionManager().getObjects()){c.setIsUsed(c instanceof InnerIterationStoppingCriterion);if(c instanceof InnerIterationStoppingCriterion)((InnerIterationStoppingCriterion)c).setMaximumNumberInnerIterations(50);}
+                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:186: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+ SegregatedFlowSolver fs=s.getSolverManager().getSolver(SegregatedFlowSolver.class);if(Math.abs(fs.getVelocitySolver().getUrf()-.8)>1e-12||Math.abs(fs.getPressureSolver().getUrf()-.2)>1e-12)throw new IllegalStateException("URF changed");for(SolverStoppingCriterion c:s.getSolverStoppingCriterionManager().getObjects()){c.setIsUsed(c instanceof InnerIterationStoppingCriterion);if(c instanceof InnerIterationStoppingCriterion)((InnerIterationStoppingCriterion)c).setMaximumNumberInnerIterations(50);}
+                                                                                                                                                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_142818\RecoveredPerfBench.java:187: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ for(Boundary b:s.getRegionManager().getRegion("Background").getBoundaryManager().getBoundaries())if(b.getPresentationName().endsWith(".top")&&b.getConditions().get(BackflowSpecification.class).getBackflowVelocityDirectionOption().getSelected()!=BackflowVelocityDirectionOption.Type.EXTRAPOLATED.getValue())throw new IllegalStateException("Top direction changed");
+                                                                                                                                                                                                                                      ^
+
+Loading/configuring connectivity (old|new partitions: 8|8)
+  Background (index 4): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 5): 29129 cells, 67202 faces, 78870 verts.
+Configuring finished
+FULL_OVERSET_AUDIT time=1.2120000000000009 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.128750119087941E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629553493 methods={0=1481}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\RECOVERED_PERF_20261103\run_20261103_142818\paused_checkpoint.sim... complete (1.4225GB in 1.5431s).
+FULL_OVERSET_AUDIT time=1.2120000000000009 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.128750119087941E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629553493 methods={0=1481}
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

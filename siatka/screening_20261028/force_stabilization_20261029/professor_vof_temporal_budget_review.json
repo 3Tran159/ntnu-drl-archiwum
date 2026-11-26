@@ -1,0 +1,116 @@
+{
+  "status": "primary_theory_supports_BDF2_report_definition_audit_prepared",
+  "conclusion": "Implicit-unsteady SECOND_ORDER has documented BDF2 volume-fraction accumulation in STAR-CCM+2602. A separate Segregated VOF solver and substeps=1 do not establish first-order temporal integration. There is no current evidence to replace the BDF2 mixture-mass diagnostic with backward Euler or relax the0.01percent gate.",
+  "primary_evidence": [
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-CD31C597-AB0E-4C11-9441-DA7021F16CB5.html",
+      "title": "Interface Sharpening Using Temporal Subcycling",
+      "equations": [
+        2578,
+        2584,
+        2585
+      ],
+      "finding": "The page presents the first-order single-step form and a separate second-order VOF form. Equation2584 has BDF2 coefficients3/2,-2,1/2 for alpha. For second-order substeps, only convection is updated at sub-iterations; other terms retain global-time evaluation. Reading the first-order single-step equation alone is insufficient to infer that all one-substep runs are first-order."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-66449995-ADD3-46C3-A852-0AD61778FA4C.html",
+      "title": "Segregated VOF Solver Reference",
+      "finding": "Substeps=1 is the single-step strategy. The solver reference explicitly distinguishes first-order and second-order temporal multistepping; second-order sub-iterations update convection only."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-11CD4B05-2045-4FFB-9BCA-F31DD3C59599.html",
+      "title": "Volume of Fluid Method",
+      "equations": [
+        2536,
+        2539,
+        2541,
+        2542
+      ],
+      "finding": "Mixture density is sum(rho_i*alpha_i); phase volume-fraction transport and total mixture continuity are documented. With constant phase densities and fixed volumes, the BDF2 derivative of integrated mixture density is the corresponding weighted BDF2 derivative of phase volumes. Additional configured phase/mass sources must be included if present."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-1B0F4A55-8246-4503-BF77-AED752CAC424.html",
+      "title": "VOF Wave Forcing and Wave Damping",
+      "finding": "Forcing uses momentum sources only, explicitly no phase or turbulence sources. Damping introduces vertical resistance to vertical motion. Wave forcing/damping alone is not a missing mass-source term."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-3449734A-1FCB-447C-AED0-7425B7D9FCC2.html",
+      "title": "Mass Flow",
+      "equation": 372,
+      "finding": "Boundary mass flow is sum(face density*face velocity dot face area), outward positive. Smooth Values uses interpolated nodal rather than cell values. Actual report smoothing, idealization, representation and native field function require inspection before treating the report as an exact discrete equation residual."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-56DFC39E-B937-4661-88FD-A28C94E1A8AB.html",
+      "title": "Volume Of Fluid Multiphase Model Reference",
+      "finding": "Convection/HRIC order and Face Density Reconstruction are spatial settings, distinct from temporal order. First-order internal-face density reconstruction is the documented default and is less consistent between transport equations than second-order. That is a setting to inspect, not evidence by itself that the global conservation diagnostic is invalid."
+    }
+  ],
+  "observed_saved_evidence": {
+    "implicit_unsteady_setting": "Prepared macros and setup.json report SECOND_ORDER; saved runtime getter confirmation is included in the zero-step audit.",
+    "vof_substeps": "R4 and R6 independent histories report1 at all sampled steps.",
+    "actual_model_parameters": "No saved wave JSON found that establishes face-density reconstruction, HRIC parameters, all source options or report-smoothing defaults. Do not infer these from generic defaults.",
+    "BE_vs_BDF2_diagnostic": {
+      "scope": "Diagnostic algebraic comparison only, not evidence that backward Euler matches selected solver.",
+      "window_s": [
+        0.502,
+        0.75
+      ],
+      "r4_10inner": {
+        "be": {
+          "max_abs_pct": 0.01536436131057923,
+          "mean_abs_pct": 0.0013985969932575075,
+          "samples_above_0p01": 4
+        },
+        "bdf2": {
+          "max_abs_pct": 0.01451935956931171,
+          "mean_abs_pct": 0.000909262079283182,
+          "samples_above_0p01": 4
+        }
+      },
+      "r6_20inner": {
+        "be": {
+          "max_abs_pct": 0.011082126127335796,
+          "mean_abs_pct": 0.0013888711179474726,
+          "samples_above_0p01": 3
+        },
+        "bdf2": {
+          "max_abs_pct": 0.0113353042956708,
+          "mean_abs_pct": 0.0007447643386330041,
+          "samples_above_0p01": 4
+        }
+      }
+    },
+    "diagnostic_interpretation": "Backward Euler does not resolve the gate: its maxima also exceed0.01percent. A lower isolated value under another formula cannot establish the solver's discretization; the primary scheme and consistent report definition must govern."
+  },
+  "required_runtime_settings": [
+    "ImplicitUnsteadySolver.getTimeDiscretizationOption().getSelectedElement(), time step and freeze state.",
+    "SegregatedVofSolver substep count/specification/fixed count/max count/targetCFL/cutoff/URF.",
+    "SegregatedVofModel.getVolumeFractionUpwindOption(), getFaceDensityReconOption(), HRIC/MHRIC parameters and sharpening.",
+    "Enabled phase reinitialization, phase slip, phase-change and density models; region Volume Fraction Source Option and associated source profiles.",
+    "For each existing inventory and boundary mass report: getSmooth(), getUseIdealization() if available, representation, parts, field-function name, evaluated value and error log.",
+    "Native continuity/mass-flux/conservation field-function inventory, to identify a solver-consistent independent check.",
+    "Same-time source history versus loaded-state values; retained or reconstructed GPU/CPU flux data may differ after loading and must be identified rather than silently replacing history."
+  ],
+  "numerical_caveats": [
+    "At a time-step change, constant-step BDF2 coefficients do not apply to a mixed-spacing stencil. Compare only after two equal new time increments or use appropriate variable-step coefficients.",
+    "A residual computed from completed-step density and a boundary mass report may include incomplete pressure/VOF coupling or report reconstruction effects. This is a hypothesis, not an established cause of the spikes.",
+    "No source term, scheme, smoothing setting, guard or existing history has been changed."
+  ],
+  "prepared_audit": {
+    "macro": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/AuditWaveReportDefinitionR1.java",
+    "controller": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/run_wave_report_definition_audit_r1.py",
+    "launch_status": "PREPARED_NOT_LAUNCHED",
+    "explicit_argument": "--run",
+    "source": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4/checkpoint_t0.750.sim",
+    "output": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_R4_t0p750_report_definition_audit_r1",
+    "resources": "CPU1, no GPU, waits for preparation.lock; preserves hash, exact time, every attempt and original reports.",
+    "output_files": [
+      "existing_report_definitions.json",
+      "model_solver_source_settings.json",
+      "native_balance_field_inventory.json",
+      "independent_unsmoothed_reports.json",
+      "saved_history_reference.json",
+      "audit.json"
+    ]
+  }
+}

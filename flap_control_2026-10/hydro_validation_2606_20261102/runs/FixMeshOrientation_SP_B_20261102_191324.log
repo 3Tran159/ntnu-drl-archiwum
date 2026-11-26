@@ -1,0 +1,293 @@
+Starting local server: starserver.bat -power -podkey K78jNQHAbKB2rMxqOvW0ow -licpath 1999@flex.cd-adapco.com -cpubind off -np 2 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Jfc3BsaXQwX2ZpeGVkXFNQX0JfZXh0cnVzaW9uX2Vycm9yXzIwMjYxMTAyXzE5MDkzNi5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-1
+Process rank 0 THINKPAD-LUCJAN 12516
+Total number of processes : 2
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 19:15:36 2026
+
+Server::start -host THINKPAD-LUCJAN:47829
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_extrusion_error_20261102_190936.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191324\FixMeshOrientation.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191324\FixMeshOrientation.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191324\FixMeshOrientation.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191324\FixMeshOrientation.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191324\FixMeshOrientation.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_191324\FixMeshOrientation.java:55: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("HYDRO mesh cell audit");table.getParts().setObjects(regions);table.setRepresentation(fv);table.setExtractVertexData(false);table.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("FaceValidity"),s.getFieldFunctionManager().getFunction("CellQuality"),s.getFieldFunctionManager().getFunction("PrismLayerNumber"),s.getFieldFunctionManager().getFunction("PrismCellThickness")));table.extract();table.export(out.resolve("mesh_cells.csv").toString());
+                                          ^
+
+Loading/configuring connectivity (old|new partitions: 2|2)
+  Background (index 1): 256750 cells, 707402 faces, 906624 verts.
+Configuring finished
+HYDRO_STAGE Native face orientation check=510
+ Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.span_source: 122 faces flipped.
+ Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Main.NativeSkin: 2 faces flipped.
+ Boundary Hydro_ExactQuasi2D_fluid.Hydro_Domain.span_source: 122 faces flipped.
+ Interior: 264 faces flipped.
+
+Boundaries of region Background:
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.span_source: 256750 faces (57 triangular, 60357 quadrilateral, 196336 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [3.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 2.3998844734e+03 m^2
+ maximum boundary skewness angle = 1.1983992605e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Domain.span_source: 256750 faces (57 triangular, 60357 quadrilateral, 196336 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 1.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 2.3998844734e+03 m^2
+ maximum boundary skewness angle = 1.1983992605e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Main.NativeSkin: 876 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.6254304337e-04, 9.4451502457e-01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-4.2144885720e-02, 1.0091206145e-01] m
+ surface area: 3.8379470072e-02 m^2
+ maximum boundary skewness angle = 5.6173046895e+00 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Main.HingeArc: 287 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [9.1440101768e-01, 9.4451502457e-01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-1.4893594542e-02, 5.8128750330e-02] m
+ surface area: 2.0041009074e-03 m^2
+ maximum boundary skewness angle = 4.1415557871e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Flap.NativeSkin: 414 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [9.5200000000e-01, 1.1900000000e+00] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-1.3819399431e-02, 5.6382864967e-02] m
+ surface area: 9.6657214882e-03 m^2
+ maximum boundary skewness angle = 2.1830618161e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Flap.HingeArc: 316 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [9.1690101573e-01, 9.5200000000e-01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-1.3819399431e-02, 5.6382864967e-02] m
+ surface area: 2.2053243186e-03 m^2
+ maximum boundary skewness angle = 2.4714810849e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.top: 279 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [8.0000000000e+00, 8.0000000000e+00] m
+ surface area: 1.6000000000e+00 m^2
+ maximum boundary skewness angle = 3.3672308457e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.inlet: 105 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, -3.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 6.0000000000e-01 m^2
+ maximum boundary skewness angle = 2.4109951422e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.outlet: 105 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [4.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ surface area: 6.0000000000e-01 m^2
+ maximum boundary skewness angle = 2.2710716049e+01 deg
+Boundary Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.bottom: 279 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, -2.2000000000e+01] m
+ surface area: 1.6000000000e+00 m^2
+ maximum boundary skewness angle = 3.2158224599e+01 deg
+
+Region Background: 
+   60357 hexahedral cells
+      57 wedge cells
+  196336 polyhedral cells
+  256750 cells total
+     807 halo cells
+  707402 quadrilateral interior faces (806 halo faces)
+  906624 vertices (1614 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |            122289 |           405 |        0.33 |         122694 |   366892 |    244958 |
+   |          1 |            134461 |           402 |        0.30 |         134863 |   341316 |    271203 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :    128375 STDDEV % :  4.74 IMBALANCE % :  4.74
+       Average number of halo cells :       403 STDDEV % :  0.37 IMBALANCE % :  0.37
+      Average number of total cells :    128778 STDDEV % :  4.72 IMBALANCE % :  4.72
+            Average number of faces :    354104 STDDEV % :  3.61 IMBALANCE % :  3.61
+   Average number of boundary faces :    258080 STDDEV % :  5.08 IMBALANCE % :  5.08
+   Maximum number of partition neighbours : 1
+
+
+
+ Extents:
+  x: [-3.5000000000e+01, 4.5000000000e+01] m
+  y: [1.0000000000e-02, 3.0000000000e-02] m
+  z: [-2.2000000000e+01, 8.0000000000e+00] m
+ Maximum interior cell index delta: 134092, average: 3.6807004881e+04
+ Maximum cell face index delta: 365923, average: 2.4251915759e+05
+ Volume range: [9.1215577412e-12, 2.5893788229e-03] m^3
+ Minimum distance between centroids of neighbor cells = 1.6419258358e-06
+ Maximum skewness angle = 6.5658322922e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.0000000000e+00
+Maximum Face Validity: 1.0000000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              256750   100.000%
+
+Volume Change: 
+Minimum Volume Change: 4.073102e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           6    0.002%
+1e-02 <= Volume Change <  1e-01         205    0.080%
+1e-01 <= Volume Change <= 1e+00      256539   99.918%
+ Maximum boundary skewness angle in region = 4.141556e+01 deg
+
+Overall Face Validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity              256750   100.000%
+
+Overall Volume Change: 
+Minimum Volume Change: 4.073102e-03
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           6    0.002%
+1e-02 <= Volume Change <  1e-01         205    0.080%
+1e-01 <= Volume Change <= 1e+00      256539   99.918%
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_mesh_ready.sim... complete (117.79MB in 0.3261s).
+HYDRO_STAGE EXACT_QUASI2D_MESH_READY_NO_FLOW_STEPS
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

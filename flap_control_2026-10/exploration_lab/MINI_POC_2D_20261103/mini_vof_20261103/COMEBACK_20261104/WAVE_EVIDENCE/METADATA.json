@@ -1,0 +1,67 @@
+{
+  "status": "DIAGNOSTIC",
+  "train_eligible": false,
+  "run_id": "N1_CALIBRATION_1",
+  "samples": 20,
+  "time_range_s": [
+    0.05100000000000004,
+    0.07000000000000005
+  ],
+  "mesh_id": "NATIVE_EMPTY_Q2D_41280",
+  "geometry": "empty wave tank",
+  "frame": {
+    "streamwise": "+X STAR; U=18 m/s; fixed foil frame",
+    "vertical": "+Y STAR = +Z dataset",
+    "span": "+Z STAR; hinge axis -Z STAR; positive delta trailing edge down",
+    "hinge_star_m": [
+      0.952,
+      0.02128173276777,
+      0.01
+    ],
+    "chord_m": 1.19,
+    "span_m": 0.02
+  },
+  "phase": "eta fundamental = A cos(k*x - omega_e*t + fitted_offset). Nominal phase stored separately.",
+  "velocity_probe_star_m": [
+    0.952,
+    0.02128173276777,
+    0.01
+  ],
+  "normalization": {
+    "rho_water_kg_m3": 1000,
+    "qS_N": 3855.6,
+    "CD": "Fx/qS",
+    "CL": "(Fz_total - fixed zero-angle calm buoyancy reference)/qS",
+    "calm_reference_buoyancy_N": 22.717957840926616,
+    "note": "The reference correction does not remove wave-induced pressure or angle-dependent buoyancy."
+  },
+  "signed_power": "Mh is fluid moment about the positive-deflection axis. Mh*delta_dot is signed fluid-to-flap power, not electrical draw.",
+  "derivative": "Backward difference of measured tip angle for active smoke; units rad/s.",
+  "train_split": "Split only by whole trajectory and wave condition. DIAGNOSTIC and FAILED rows are excluded.",
+  "source_sha256": {
+    "history.csv": "1393ce8c43f8ea107f317010a70418f32d4b97441aa732eed6f046258b0ea8be",
+    "gauges.csv": "d9896803ec3769f8ad2bfaaed9a85216a11dbf9a35d35817f0c3136cf003f2d1",
+    "job.json": "3a4663bc95c0a303dc0ffbc786255a285c537810bef0fb8391ef4f53185c9d67"
+  },
+  "run_configuration": {
+    "authorization": "N1_N2_N3_USER_20261103",
+    "stage": "N1_CALIBRATION_1",
+    "fresh": false,
+    "foil": false,
+    "expected_cells": 41280,
+    "expected_time": 0.05,
+    "dt": 0.001,
+    "inner": 20,
+    "amplitude": 0.05,
+    "old_amplitude": 0.05,
+    "ramp_s": 0,
+    "steps": 40,
+    "forcing_length": 4,
+    "damping_length": 8,
+    "pressure_tol": 0.01,
+    "pressure_urf": 0.5,
+    "wall_budget_s": 34626.03335094452,
+    "deadline_ms": 1793771400000,
+    "stop_path": "F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/mini_vof_20261103/NIGHT_20261103/STOP.json"
+  }
+}

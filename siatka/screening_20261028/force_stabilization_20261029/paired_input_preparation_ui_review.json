@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-29T23:23:24.625Z",
+  "scope": "C01/W01 paired-input preparation display only; no numerical data, controller or simulation changed.",
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py"
+  ],
+  "display": {
+    "paired_input_stage": "initializing_copy_CPU",
+    "active_copy": "C01_W20L4_M09_env_setup_r2",
+    "workers": 1,
+    "gpu": false,
+    "zero_step_preparation_only": true,
+    "flow_admitted": false,
+    "dynamic_completed_admission": "source_unchanged, returncode=0, audit.status=prepared_zero_steps and audit.flow_steps=0",
+    "failure_display": "Review required; flow checks pending; saved error displayed",
+    "current_wave_case": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+    "case_matched_figures_only": true,
+    "status_at_last_capture": "propagation_pilot_complete_pending_review",
+    "saved_time_at_capture_s": 1.2,
+    "steps": 1200,
+    "wave_accepted": false
+  },
+  "qa": {
+    "widths": [
+      1360,
+      390
+    ],
+    "dashboards": [
+      "main",
+      "professor"
+    ],
+    "javascript_errors": 0,
+    "duplicate_ids": 0,
+    "document_overflow": false,
+    "visual_screenshots": [
+      "paired_input_prep_main_1360.png",
+      "paired_input_prep_professor_390.png"
+    ],
+    "actual_print_pages": 18,
+    "changed_wave_page": 17,
+    "print_no_clipping_or_orphans": true,
+    "operational_preparation_panel_screen_only": true
+  },
+  "artifacts": [
+    "paired_input_preparation_dashboard_qa.json",
+    "paired_input_professor_qa.pdf",
+    "paired_input_print17.png"
+  ],
+  "previous_full_review": "wave_guard_completed_ui_review.json"
+}

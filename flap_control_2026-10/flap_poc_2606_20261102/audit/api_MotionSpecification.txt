@@ -1,0 +1,14 @@
+Compiled from "MotionSpecification.java"
+public class star.motion.MotionSpecification extends star.base.neo.ClientServerObject {
+  public star.motion.MotionSpecification(star.base.neo.ClientServerObjectKey);
+  public star.common.ConditionManager getConditionManager();
+  public star.common.Continuum getContinuum();
+  public star.common.Region getRegion();
+  public star.motion.Motion getMotion();
+  public void setMotion(star.motion.Motion);
+  public star.motion.ReferenceFrameBase getReferenceFrame();
+  public void setReferenceFrame(star.motion.ReferenceFrameBase);
+  public boolean isMotionCompatible(star.motion.Motion);
+  public boolean isReferenceFrameCompatible(star.motion.ReferenceFrameBase);
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+}

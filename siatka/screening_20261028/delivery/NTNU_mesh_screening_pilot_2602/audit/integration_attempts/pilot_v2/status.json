@@ -1,0 +1,11 @@
+{
+  "scope": "integration calibration; not authoritative final pilot",
+  "generated_meshes": 2,
+  "case": "A001",
+  "mesh_cells": 25188874,
+  "mesh_time_s": 267.6929207,
+  "issue": "SkewnessAngle field has dimensionless units but numeric degrees. Revision 2 incorrectly multiplied by 180/pi. Original raw measurement retained; final pilot will use corrected revision 3.",
+  "source_report_skewness_deg": 84.553012617,
+  "full_prism_diagnostics": "not yet included in revision 2",
+  "additional_case": "A002 was already active when the stop-after-current-case marker was created; it finished before the final revision campaign."
+}

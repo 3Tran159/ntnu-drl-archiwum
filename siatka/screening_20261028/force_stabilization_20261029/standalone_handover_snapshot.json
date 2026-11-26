@@ -1,0 +1,98 @@
+{
+  "updated_at": "2026-11-02T16:27:02.388940+01:00",
+  "campaign_hold": {
+    "active": true,
+    "status": "paused_by_user_pending_mesh_study",
+    "reason": "Waiting for the other agent's mesh convergence and optimization results before any C01 or wave launch.",
+    "updated_at": "2026-10-30T14:24:26.098931+01:00",
+    "probe_launched": false,
+    "scope": "This quasi-2D campaign only; other mesh study and HF session remain untouched.",
+    "resume_requires": "User instruction after mesh convergence and optimization review",
+    "checkpoint_policy_on_future_resume_s": 0.05
+  },
+  "current_case": "C01_W20L4_M10_calm_settle_r2",
+  "computation_active": false,
+  "physical_progress": {
+    "time_s": 2.776999999999805,
+    "steps": 2190,
+    "status": "stability_guard"
+  },
+  "selected_mesh": null,
+  "latest_checkpoint": {
+    "file": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\checkpoint_t2.587.sim",
+    "time_s": 2.586999999999826,
+    "completed_save": true
+  },
+  "readiness": {
+    "ready": false,
+    "recipe_ready": true,
+    "compile_ok": true,
+    "tests_ok": true,
+    "api_ok": true,
+    "can_validate_recipe": true,
+    "checks": [
+      {
+        "name": "Mesh input",
+        "ok": false,
+        "message": "Paste a prepared mesh .sim path, inspect it and select the imported copy"
+      },
+      {
+        "name": "Macro compiled",
+        "ok": true,
+        "message": "Java compilation"
+      },
+      {
+        "name": "Controller tests",
+        "ok": true,
+        "message": "Tests bound to the current source files"
+      },
+      {
+        "name": "Zero-step recipe check",
+        "ok": true,
+        "message": "Use Check recipe after compilation/tests; it performs no flow steps"
+      },
+      {
+        "name": "Campaign hold released",
+        "ok": false,
+        "message": "Waiting for the other agent's mesh convergence and optimization results before any C01 or wave launch."
+      }
+    ],
+    "message": "No automatic start. Complete the checks listed below"
+  },
+  "queue": [
+    {
+      "id": "20261030_140138_22230605",
+      "status": "needs_review",
+      "spec": {
+        "name": "W01a",
+        "height_m": 0.5,
+        "wavelength_m": 20.0,
+        "xmin_m": -35.0,
+        "xmax_m": 45.0,
+        "zone_m": 20.0,
+        "upstream_m": 35.0,
+        "downstream_m": 43.81,
+        "length_m": 80.0,
+        "wall_minutes": 180.0,
+        "action": "run",
+        "mesh": "M10_FS020",
+        "z_m": [
+          -22,
+          8
+        ],
+        "waterline_m": 2,
+        "depth_m": 24,
+        "span_m": 0.02,
+        "U_m_s": 18,
+        "dt_s": 0.001,
+        "inner": 10,
+        "order": "SECOND_ORDER",
+        "pressure_AMG_tolerance": 0.01
+      },
+      "message": "C01 stopped without a verified reusable checkpoint",
+      "resume_manifest": null
+    }
+  ],
+  "current_diagnostics": {},
+  "previous_guard_review": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\c01_calm_r2_guard_review.json"
+}

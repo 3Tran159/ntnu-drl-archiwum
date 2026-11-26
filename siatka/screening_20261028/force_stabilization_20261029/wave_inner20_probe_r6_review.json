@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-10-30T00:40:48.639528+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_inner20probe_r6",
+  "reference": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+  "completed": {
+    "status": "target_reached",
+    "steps": 250,
+    "time_s": 0.7500000000000006
+  },
+  "source_unchanged": true,
+  "settings_change": "10 to20inner only;SO1ms andsameBC; restartfromsameR4t0.500state",
+  "window_s": [
+    0.502,
+    0.75
+  ],
+  "history_finite": true,
+  "budget_10inner_max_abs_pct": 0.01451935956931171,
+  "budget_20inner_max_abs_pct": 0.0113353042956708,
+  "budget_10inner_mean_abs_pct": 0.0009092620792831824,
+  "budget_20inner_mean_abs_pct": 0.0007447643386330034,
+  "budget_20inner_samples_above_0p01": 4,
+  "max_speed_20inner_m_s": 21.528662733134837,
+  "phase_bounds": [
+    0.0,
+    1.0
+  ],
+  "max_gauge_difference_20minus10_mm": 0.2902115581271403,
+  "RMS_gauge_difference_mm": 0.06777893552358008,
+  "final_mass_difference_kg": 0.0048112143340404145,
+  "scope": "Short targetedinnerconvergence diagnostic; notlongwave/reflection orfoilforce validation",
+  "short_mass_gate_pass": false
+}

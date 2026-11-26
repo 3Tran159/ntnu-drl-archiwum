@@ -1,0 +1,64 @@
+{
+  "status": "PASS_BOUNDED_UI_REVIEW",
+  "created_at": "2026-10-30T12:58:57.406798+01:00",
+  "case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "scope": "First-crest live forecast, display starting at t=.2, integrated catalog wrapping; not physical wave acceptance.",
+  "surfaces": [
+    "operational",
+    "professor"
+  ],
+  "widths": [
+    1920,
+    1360,
+    390
+  ],
+  "checks": {
+    "live": "5-second poll updates actual simulated time and remaining simulation seconds. Real compute estimate uses recent current-case step costs.",
+    "states": [
+      "active",
+      "paused",
+      "saving",
+      "expired",
+      "wrong_case",
+      "guard_failed",
+      "stale"
+    ],
+    "expiry": "Predicted threshold passed does not assert measured arrival or enable cycle acceptance.",
+    "case_isolation": "Wrong case/unavailable clear target, remaining, wall, current and note.",
+    "plot_display": "All displayed series begin at .20000000000000015 s; initial spike excluded from axis scaling. Mobile Follow live reaches latest right edge.",
+    "raw_history": "All40 startup rows remain from.0005s; main CSV retains180 pre-.2s samples. No history was rewritten.",
+    "layout": "No JS errors, page overflow, nonfinite plot paths or catalog cell text-bound violations in six combinations.",
+    "visual": "Desktop/mobile countdown and catalog screenshots reviewed. Main print pages5/7 and professor2/4 reviewed; no text collision or cut table rows.",
+    "actions": "Read-only browser GET/HEAD only; no CFD, HTTP-service restart, solver or lock action."
+  },
+  "print": [
+    {
+      "surface": "operational",
+      "pages": 47,
+      "target_pages": [
+        5,
+        7
+      ]
+    },
+    {
+      "surface": "professor",
+      "pages": 25,
+      "target_pages": [
+        2,
+        4
+      ]
+    }
+  ],
+  "parity": {
+    "dashboard.html": "b1bdc0fcc6656d01dfeda94a11584fd4859b2aafceae097c3709b70bf16699c5",
+    "professor_dashboard.html": "0ccba56e7b7bf8735039f853d405bfc65a6fb3f9ee79efcbd2838dff8bd7199d"
+  },
+  "artifacts": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_arrival_ui_qa_20261030",
+  "screenshots": [
+    "operational_1360_arrival.png",
+    "operational_390_arrival.png",
+    "professor_390_catalog.png",
+    "operational_print_page_5.png",
+    "professor_print_page_4.png"
+  ]
+}

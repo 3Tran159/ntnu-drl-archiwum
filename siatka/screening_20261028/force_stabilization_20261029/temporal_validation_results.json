@@ -1,0 +1,177 @@
+{
+  "updated_at": "2026-10-29T21:40:56.654606+01:00",
+  "cases": [
+    {
+      "id": "T01_M04_FO_dt1ms_r1",
+      "dt_s": 0.001,
+      "order": "FIRST_ORDER",
+      "start_s": 1.64199999999993,
+      "end_s": 2.241999999999864,
+      "comparison_window": [
+        2.0419999999999296,
+        2.24199999999993
+      ],
+      "last_window": {
+        "CD": {
+          "mean": 0.007254613115486969,
+          "rms": 3.5659325753149655e-06
+        },
+        "CL_total": {
+          "mean": 0.31897091162517405,
+          "rms": 7.326062433946443e-05
+        },
+        "pressure_drag_N": {
+          "mean": 7.974597980510292,
+          "rms": 0.013582344051859993
+        },
+        "viscous_drag_N": {
+          "mean": 19.99628834756127,
+          "rms": 0.00016648649252764405
+        }
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.18287397529698385,
+        "CL_total": 0.08543322093199944
+      },
+      "settling_check_pass": true,
+      "median_wall_s_per_step": 2.2774570999999924,
+      "source_unchanged": true,
+      "last_interface_CFL": 1.4011854518413682
+    },
+    {
+      "id": "T02_M04_SO_dt1ms_r1",
+      "dt_s": 0.001,
+      "order": "SECOND_ORDER",
+      "start_s": 1.64199999999993,
+      "end_s": 2.241999999999864,
+      "comparison_window": [
+        2.0419999999999296,
+        2.24199999999993
+      ],
+      "last_window": {
+        "CD": {
+          "mean": 0.007253175474380762,
+          "rms": 3.575399749605998e-06
+        },
+        "CL_total": {
+          "mean": 0.31902201199136043,
+          "rms": 8.280982974841575e-05
+        },
+        "pressure_drag_N": {
+          "mean": 7.968628081902061,
+          "rms": 0.013851118513574899
+        },
+        "viscous_drag_N": {
+          "mean": 19.996715277120405,
+          "rms": 8.958395772798055e-05
+        }
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.1949891830179136,
+        "CL_total": 0.09658101648860858
+      },
+      "settling_check_pass": true,
+      "median_wall_s_per_step": 2.233769900000027,
+      "source_unchanged": true,
+      "last_interface_CFL": 1.4011868541449175
+    },
+    {
+      "id": "T03_M04_SO_dt05ms_r1",
+      "dt_s": 0.0005,
+      "order": "SECOND_ORDER",
+      "start_s": 1.64199999999993,
+      "end_s": 2.241999999999971,
+      "comparison_window": [
+        2.0419999999999296,
+        2.24199999999993
+      ],
+      "last_window": {
+        "CD": {
+          "mean": 0.0072531809303015326,
+          "rms": 3.5814021221622365e-06
+        },
+        "CL_total": {
+          "mean": 0.31902181581585365,
+          "rms": 8.291912769283493e-05
+        },
+        "pressure_drag_N": {
+          "mean": 7.968645025350466,
+          "rms": 0.013889981492446747
+        },
+        "viscous_drag_N": {
+          "mean": 19.996719369520125,
+          "rms": 0.00010335285145000751
+        }
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.19504514176360813,
+        "CL_total": 0.09659572676989246
+      },
+      "settling_check_pass": true,
+      "median_wall_s_per_step": 1.840678500000081,
+      "source_unchanged": true,
+      "last_interface_CFL": 0.7005934270260435
+    },
+    {
+      "id": "T04_M04_SO_dt1ms_inner10_r1",
+      "dt_s": 0.001,
+      "order": "SECOND_ORDER",
+      "start_s": 1.64199999999993,
+      "end_s": 2.241999999999864,
+      "comparison_window": [
+        2.0419999999999296,
+        2.24199999999993
+      ],
+      "last_window": {
+        "CD": {
+          "mean": 0.007253362115623457,
+          "rms": 3.5979945308831457e-06
+        },
+        "CL_total": {
+          "mean": 0.319017364510186,
+          "rms": 8.306468678482851e-05
+        },
+        "pressure_drag_N": {
+          "mean": 7.969349403707407,
+          "rms": 0.01389293011089943
+        },
+        "viscous_drag_N": {
+          "mean": 19.9967135692904,
+          "rms": 5.560368912791412e-05
+        }
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.19515606321520867,
+        "CL_total": 0.0966140430821695
+      },
+      "settling_check_pass": true,
+      "median_wall_s_per_step": 1.213397499999985,
+      "source_unchanged": true,
+      "last_interface_CFL": 1.4011868540323202
+    }
+  ],
+  "pairs": [
+    {
+      "reference": "T01_M04_FO_dt1ms_r1",
+      "comparison": "T02_M04_SO_dt1ms_r1",
+      "difference_pct_vs_reference": {
+        "CD": -0.01981692315387722,
+        "CL_total": 0.016020384406222502,
+        "pressure_drag_N": -0.07486143656170635,
+        "viscous_drag_N": 0.0021350440227495353
+      }
+    },
+    {
+      "reference": "T02_M04_SO_dt1ms_r1",
+      "comparison": "T03_M04_SO_dt05ms_r1",
+      "difference_pct_vs_reference": {
+        "CD": 7.522113300575821e-05,
+        "CL_total": -6.149278087712281e-05,
+        "pressure_drag_N": 0.0002126269193523342,
+        "viscous_drag_N": 2.0465359753943718e-05
+      }
+    }
+  ],
+  "all_windows_settled": true,
+  "interpretation": "Screen only; investigate/extend if drift fails0.5%; no automatic mesh or temporal acceptance."
+}

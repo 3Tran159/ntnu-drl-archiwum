@@ -1,0 +1,122 @@
+{
+  "at": "2026-11-02T22:48:55.608746+01:00",
+  "case": "C0 static flap 0 degrees",
+  "full_overset_representation_verified": true,
+  "technical_connectivity_passed": true,
+  "hydrodynamic_accuracy_approved": false,
+  "training_approved": false,
+  "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_C_20261102_223230",
+  "extraction": "XyzInternalTable on midspan PlaneSection, Overset Mesh representation",
+  "cells": 361532,
+  "active_cells": 252161,
+  "inactive_cells": 106812,
+  "acceptor_cells": 2559,
+  "error_cells": 0,
+  "difficult_interpolation_codes_4_6": 0,
+  "native_zero_donor_check": true,
+  "native_errors_as_warning": false,
+  "overset_zero_gap_interface": false,
+  "cross_body_active_intrusions": 0,
+  "minimum_volume_m3": 9.026037388948145e-12,
+  "minimum_cell_quality": 0.0507742874401194,
+  "max_native_acceptor_donor_size_ratio": 9.211892538332325,
+  "actual_interpolation_counts": {
+    "distance_weighted": 1377,
+    "linear_quasi2D": 867,
+    "ghost": 315
+  },
+  "full_region_details": {
+    "Background_full_plane": {
+      "rows": 304810,
+      "finite_status_verified": true,
+      "columns": [
+        "Overset Cell Status",
+        "Overset Cell Type",
+        "Overset Error Status",
+        "Overset Interpolation Type",
+        "Overset Interpolation Cell Size Ratio",
+        "X (m)",
+        "Y (m)",
+        "Z (m)"
+      ],
+      "Overset Cell Status": {
+        "0": 211504,
+        "1": 91670,
+        "-2": 1636
+      },
+      "Overset Cell Type": {
+        "0": 211504,
+        "-1": 91670,
+        "3": 1636
+      },
+      "Overset Error Status": {
+        "0": 304810
+      },
+      "Overset Interpolation Type": {
+        "-2": 303174,
+        "0": 1015,
+        "2": 452,
+        "7": 169
+      },
+      "acceptor_size_ratio_quantiles": {
+        "0": 0.2936046990248932,
+        "0.01": 0.34241973895666084,
+        "0.1": 0.42636311582338726,
+        "0.5": 0.6474346350076055,
+        "0.9": 1.0717899661609305,
+        "0.99": 1.23164381823261,
+        "1": 1.595282878970911
+      }
+    },
+    "FlapOverset_full_plane": {
+      "rows": 56722,
+      "finite_status_verified": true,
+      "columns": [
+        "Overset Cell Status",
+        "Overset Cell Type",
+        "Overset Error Status",
+        "Overset Interpolation Type",
+        "Overset Interpolation Cell Size Ratio",
+        "X (m)",
+        "Y (m)",
+        "Z (m)"
+      ],
+      "Overset Cell Status": {
+        "0": 40657,
+        "1": 15142,
+        "-2": 923
+      },
+      "Overset Cell Type": {
+        "0": 40657,
+        "-1": 15142,
+        "3": 923
+      },
+      "Overset Error Status": {
+        "0": 56722
+      },
+      "Overset Interpolation Type": {
+        "-2": 55799,
+        "2": 415,
+        "0": 362,
+        "7": 146
+      },
+      "acceptor_size_ratio_quantiles": {
+        "0": 0.5634158203013927,
+        "0.01": 0.6172110216658915,
+        "0.1": 0.7947284324788125,
+        "0.5": 1.21964093925386,
+        "0.9": 2.7010583160593327,
+        "0.99": 4.174325193808914,
+        "1": 9.211892538332323
+      }
+    }
+  },
+  "parallel_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\full_audit_after_first_step.txt",
+  "cautions": [
+    "FullMeshViewRepresentation.isEmpty() is a constant true stub in this installed API; not a validity test.",
+    "Direct region extraction/reporting on Overset Mesh returned invalid field data; those exports were excluded.",
+    "Native OversetInterpolationQualityReport returned zero in read-only inspection and is not used as sole accuracy evidence.",
+    "No orphan/error cells does not prove acceptable interpolation accuracy. Size mismatch and turbulence clipping remain.",
+    "B and C use different volume meshes; their force difference is not pure interpolation error."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "at": "2026-11-03T21:34:33.983917+01:00",
+  "campaign": "NTNU_MINI_NATIVE_VOF_NIGHT_20261103",
+  "status": "HOLD",
+  "N1": "NOT_PASS_CONNECTION_FAILURE_AND_INCOMPLETE_PROPAGATION",
+  "N2": "NOT_STARTED_N1_BLOCKED",
+  "N3": "NOT_STARTED_N1_N2_BLOCKED",
+  "targeted_numerical_repairs": 2,
+  "long_campaign_started": false,
+  "owned_solver_state": "STOPPED",
+  "failure_evidence": [
+    "N1_CALIBRATION_1: Connection reset by peer after20 complete physical steps and part of next inner loop",
+    "N1_CALIBRATION_2: SocketException Connection reset before first new physical step",
+    "Native server1 was reattached, diagnostic state saved and normally closed; no forced process termination",
+    "No third blind restart"
+  ],
+  "last_verified_checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\Q2D_NATIVE_A005_REMAINING49\\VOF_checkpoint.sim",
+    "time_s": 0.05,
+    "sha256": "ef36d8738b8c2efaa882c5da7953aef8f55477303bceb76076ceb91847cdf85c",
+    "unchanged": true
+  },
+  "diagnostic_recovered_checkpoint": {
+    "checkpoint": "F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/mini_vof_20261103/NIGHT_20261103/CLIENT_RECOVERY/INTERRUPTED_INNER_NOT_VALIDATED.sim",
+    "bytes": 55589365,
+    "physical_time": 0.07100000000000005,
+    "accepted": false,
+    "reason": "Client disconnect during inner iterations; diagnostic preservation only",
+    "force_termination": false,
+    "supported_close_requested": true
+  },
+  "actual_partial_data": {
+    "complete_steps": 20,
+    "physical_start_s": 0.05,
+    "last_complete_sample_s": 0.07000000000000005,
+    "solver_s_total": 48.6367946,
+    "mean_s_step": 2.48263604,
+    "interface_CFL_max": 0.15505164473692162,
+    "pABS_min_Pa": 101302.13072906628,
+    "mass_relative_max_after_first5": 6.102601900922957e-07,
+    "continuity_end_range": [
+      0.01899394043273544,
+      0.060262052121761285
+    ],
+    "continuity_limit_unchanged": 0.01,
+    "eta_Airy_rmse_m": 0.0015124948762560801,
+    "eta_record_too_short_for_period_reflections_or_periodic_validation": true,
+    "max_abs_spanwise_velocity": 2.0469871472888578e-14
+  },
+  "science": {
+    "Airy": "Only short spatial/time traces agree locally; no full-period PASS",
+    "amplitude_frequency_phase_reflections": "Insufficient completed periods for acceptance",
+    "foil_forces": "None; foil case not launched",
+    "foil_cycle_cost": "Not measured",
+    "surrogate_ready": false,
+    "next": "Diagnose local STAR client/server transport before another solver experiment. First accepted successor remains N1, not active flap."
+  },
+  "protected_campaign": {
+    "case": "W03_20261103_211415_b752ad",
+    "GPU_native_PID": 17612,
+    "modified": false,
+    "note": "Independent GPU run remains active. No concurrent solver performance claim from zero-step second calibration."
+  },
+  "training_executed": false,
+  "motion_executed": false,
+  "known_setup": {
+    "stage": "N1_CALIBRATION_1",
+    "cells": 41280,
+    "start_time": 0.05000000000000004,
+    "dt": 0.001,
+    "inner": 20,
+    "initialization_called": false,
+    "reset_on_loaded_fields": false,
+    "old_pressure_urf": 0.2,
+    "pressure_urf": 0.5,
+    "old_pressure_tol": 0.1,
+    "pressure_tol": 0.01,
+    "amplitude_from": 0.05,
+    "amplitude_target": 0.05,
+    "amplitude_ramp_s": 0.0,
+    "inlet_ramp": "Existing globally initialized wave; no velocity/amplitude jump",
+    "forcing_length_m": 4.0,
+    "damping_length_m": 8.0,
+    "outlet_and_top": "native flat-wave pressure and volume fraction",
+    "vorticity_limiter": "VORTICITY",
+    "reference_C01_CL": 0.3156595,
+    "reference_C01_CD": 0.00700232,
+    "C01_not_modified": true
+  }
+}

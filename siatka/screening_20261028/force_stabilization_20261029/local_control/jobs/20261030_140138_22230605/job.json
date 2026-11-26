@@ -1,0 +1,36 @@
+{
+  "id": "20261030_140138_22230605",
+  "status": "needs_review",
+  "created_at": "2026-10-30T14:01:38.838651+01:00",
+  "spec": {
+    "name": "W01a",
+    "height_m": 0.5,
+    "wavelength_m": 20.0,
+    "xmin_m": -35.0,
+    "xmax_m": 45.0,
+    "zone_m": 20.0,
+    "upstream_m": 35.0,
+    "downstream_m": 43.81,
+    "length_m": 80.0,
+    "wall_minutes": 180.0,
+    "action": "run",
+    "mesh": "M10_FS020",
+    "z_m": [
+      -22,
+      8
+    ],
+    "waterline_m": 2,
+    "depth_m": 24,
+    "span_m": 0.02,
+    "U_m_s": 18,
+    "dt_s": 0.001,
+    "inner": 10,
+    "order": "SECOND_ORDER",
+    "pressure_AMG_tolerance": 0.01
+  },
+  "domain_key": "6bd64a900e15df55",
+  "attempts": [],
+  "results": [],
+  "message": "C01 stopped without a verified reusable checkpoint",
+  "updated_at": "2026-10-30T14:02:18.866214+01:00"
+}

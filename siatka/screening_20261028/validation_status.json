@@ -1,0 +1,41 @@
+{
+  "controller_tests": {
+    "passed": 29,
+    "failed": 0,
+    "environments": [
+      "Linux Python 3.12",
+      "Windows bundled Python 3.11.13"
+    ],
+    "scope": "synthetic controller tests, including explicit stop/proceed review gate"
+  },
+  "configuration_preflight": "passed on workstation",
+  "star_build": "21.02.007 win64 clang20.1vc14.2-r8",
+  "baseline_inventory": "executed, 373 nodes",
+  "frozen_properties": 1169,
+  "clean_baseline_probe": "passed before final metric expansion",
+  "star_compilation": "MeshCase revision 3 and ExportPrismLocations compile successfully against installed API",
+  "campaign_directory": "F:/ntnu/mesh_screening_20261028/pilot_v3",
+  "final_pilot_status": "completed",
+  "calibration_meshes_excluded_from_final_comparison": 2,
+  "calibration_metric_issue": "Incorrect skewness conversion in revision 2; raw record retained, corrected in revision 3",
+  "dashboard_javascript": "syntax checked on final snapshot; browser layout not visually verified",
+  "original_workbooks_modified": false,
+  "original_simulation_modified": false,
+  "full_cfd_iterations_requested": 0,
+  "measured_final_meshes": 3,
+  "measured_calibration_meshes": 2,
+  "prism_location_export": "completed: 347807 rows, 30376136 bytes retained locally; portable 799-bin summary included",
+  "measured_restart_new_cases": 0,
+  "original_simulation_sha256_verified_unchanged": true,
+  "disposable_18GB_copy_removed": true,
+  "all_owned_star_servers_finished": true,
+  "dashboard_visual_qa": "Scientific figures rendered and visually reviewed; interactive dashboard browser layout not visually verified",
+  "source_identity_evidence": "audit/workstation/final_source_verification.json",
+  "final_pilot_completed_cases": [
+    "A001",
+    "A002",
+    "A003"
+  ],
+  "star_backend_process_count_at_final_check": 0,
+  "free_disk_gib_at_final_check": 46.95
+}

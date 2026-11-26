@@ -1,0 +1,146 @@
+{
+  "updated_at": "2026-10-29T22:58:43.688380+01:00",
+  "configuration": {
+    "order": "SECOND_ORDER",
+    "dt_s": 0.001,
+    "inner_iterations": 10,
+    "scope": "Calm mesh screening; selected-mesh time-step and wave propagation checks remain required"
+  },
+  "results": [
+    {
+      "id": "M09_SO1ms_inner10_r1",
+      "mesh": "M09",
+      "cells": 214908,
+      "order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner_iterations": 10,
+      "status": "force_settled_configuration_matched",
+      "source_unchanged": true,
+      "window": [
+        1.4399999999999302,
+        1.6399999999999302
+      ],
+      "means": {
+        "CD": 0.007505918314885365,
+        "CL_total": 0.31312889679379036,
+        "pressure_drag_N": 8.18549977293001,
+        "viscous_drag_N": 20.75431888194201
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.49461130333649755,
+        "CL_total": 0.24011596403729585
+      },
+      "median_wall_s_per_step": 1.0775339500000882,
+      "last_interface_CFL": 1.7247915668606661,
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "all_saved_fields_finite": true,
+      "source_sim": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_SO1ms_inner10_r1\\final.sim"
+    },
+    {
+      "id": "M08_SO1ms_inner10_r1",
+      "mesh": "M08",
+      "cells": 254989,
+      "order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner_iterations": 10,
+      "status": "force_settled_configuration_matched",
+      "source_unchanged": true,
+      "window": [
+        1.7999999999998906,
+        1.9999999999998905
+      ],
+      "means": {
+        "CD": 0.007470013811758736,
+        "CL_total": 0.31385433793917056,
+        "pressure_drag_N": 8.050504723238648,
+        "viscous_drag_N": 20.75088052937834
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.19661506604108414,
+        "CL_total": 0.09325258304120185
+      },
+      "median_wall_s_per_step": 1.2673158000000058,
+      "last_interface_CFL": 2.7251539702735164,
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "all_saved_fields_finite": true,
+      "source_sim": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M08_SO1ms_inner10_r1\\final.sim"
+    },
+    {
+      "id": "M07_SO1ms_inner10_r1",
+      "mesh": "M07",
+      "cells": 481635,
+      "order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner_iterations": 10,
+      "status": "force_settled_configuration_matched",
+      "source_unchanged": true,
+      "window": [
+        1.8399999999998864,
+        2.0399999999998863
+      ],
+      "means": {
+        "CD": 0.007430510092766686,
+        "CL_total": 0.31447585900023883,
+        "pressure_drag_N": 7.908932914415404,
+        "viscous_drag_N": 20.740141799255834
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.2448722402298429,
+        "CL_total": 0.11187928568798329
+      },
+      "median_wall_s_per_step": 1.5919802000000232,
+      "last_interface_CFL": 4.0980863045382,
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "all_saved_fields_finite": true,
+      "source_sim": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M07_SO1ms_inner10_r1\\final.sim"
+    }
+  ],
+  "pairs": [
+    {
+      "candidate": "M09",
+      "reference": "M08",
+      "formula": "100*(candidate-reference)/abs(reference)",
+      "difference_pct": {
+        "CD": 0.4806484168758901,
+        "CL_total": -0.23113943561959052,
+        "pressure_drag_N": 1.6768520028524967,
+        "viscous_drag_N": 0.016569670664345892
+      },
+      "both_force_coefficients_within_1pct": true
+    },
+    {
+      "candidate": "M09",
+      "reference": "M07",
+      "formula": "100*(candidate-reference)/abs(reference)",
+      "difference_pct": {
+        "CD": 1.0148458339634767,
+        "CL_total": -0.4283197478911898,
+        "pressure_drag_N": 3.496892204136854,
+        "viscous_drag_N": 0.06835576546869673
+      },
+      "both_force_coefficients_within_1pct": false
+    },
+    {
+      "candidate": "M08",
+      "reference": "M07",
+      "formula": "100*(candidate-reference)/abs(reference)",
+      "difference_pct": {
+        "CD": 0.5316420878090863,
+        "CL_total": -0.1976371296175721,
+        "pressure_drag_N": 1.7900241455481891,
+        "viscous_drag_N": 0.051777515440564165
+      },
+      "both_force_coefficients_within_1pct": true
+    }
+  ],
+  "interpretation": "Matched solver settings, each first settled final0.2s window; no automatic final mesh selection. Check component-wise refinement, remaining drift, wall fields and selected-mesh dt."
+}

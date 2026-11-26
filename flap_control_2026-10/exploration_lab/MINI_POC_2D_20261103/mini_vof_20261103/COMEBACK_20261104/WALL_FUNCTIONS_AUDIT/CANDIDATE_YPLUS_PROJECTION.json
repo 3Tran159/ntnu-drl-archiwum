@@ -1,0 +1,134 @@
+{
+  "method": "archived single-phase y+ times measured wall-centroid-distance ratio, fixed wall shear assumption",
+  "candidate_solver_executed": false,
+  "zones": [
+    {
+      "zone": "all",
+      "area_fraction": 1.0,
+      "measured_archived_yplus_p05_p50_p95": [
+        2.8687225622040002,
+        3.8232930853120846,
+        6.920789787856566
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        37.93031585281701,
+        51.67987307422122,
+        74.45740845437861
+      ],
+      "projected_area_fraction_30_100": 0.9790448163059771,
+      "projected_area_fraction_50_70": 0.5145427532930076
+    },
+    {
+      "zone": "LE",
+      "area_fraction": 0.058159891166639485,
+      "measured_archived_yplus_p05_p50_p95": [
+        6.493606397350011,
+        7.293447640750488,
+        9.252767019762306
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        6.493606397350011,
+        63.47350431864632,
+        71.65259296742853
+      ],
+      "projected_area_fraction_30_100": 0.659837305937783,
+      "projected_area_fraction_50_70": 0.5119537886400195
+    },
+    {
+      "zone": "main suction",
+      "area_fraction": 0.35721010978607654,
+      "measured_archived_yplus_p05_p50_p95": [
+        3.6366743793160725,
+        4.1656408295892895,
+        6.549927848837845
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        49.09619491967429,
+        56.2371450503708,
+        83.38274378360374
+      ],
+      "projected_area_fraction_30_100": 1.0,
+      "projected_area_fraction_50_70": 0.7672627297242923
+    },
+    {
+      "zone": "main pressure",
+      "area_fraction": 0.354536528393369,
+      "measured_archived_yplus_p05_p50_p95": [
+        2.833568342082762,
+        3.549055187585685,
+        5.62042052635065
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        38.25345334145514,
+        47.912729320083855,
+        72.00378054686517
+      ],
+      "projected_area_fraction_30_100": 1.0,
+      "projected_area_fraction_50_70": 0.35117605815948333
+    },
+    {
+      "zone": "hinge",
+      "area_fraction": 0.06086317228759318,
+      "measured_archived_yplus_p05_p50_p95": [
+        3.375156658018403,
+        3.668381767112263,
+        3.94808898855508
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        45.563458804318856,
+        49.52387985179214,
+        53.30017013285835
+      ],
+      "projected_area_fraction_30_100": 1.0,
+      "projected_area_fraction_50_70": 0.4803247405770212
+    },
+    {
+      "zone": "flap suction",
+      "area_fraction": 0.07075110812458836,
+      "measured_archived_yplus_p05_p50_p95": [
+        2.662816853346985,
+        3.0535123249123766,
+        3.490881958208386
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        37.89381821094105,
+        44.06907217074276,
+        48.55884845809937
+      ],
+      "projected_area_fraction_30_100": 1.0,
+      "projected_area_fraction_50_70": 0.0
+    },
+    {
+      "zone": "flap pressure",
+      "area_fraction": 0.06933883588372207,
+      "measured_archived_yplus_p05_p50_p95": [
+        3.3951783433392855,
+        3.6075786880836644,
+        3.766748925899105
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        46.75122757821122,
+        51.40896938491314,
+        53.795184023310284
+      ],
+      "projected_area_fraction_30_100": 1.0,
+      "projected_area_fraction_50_70": 0.8207456714414874
+    },
+    {
+      "zone": "TE",
+      "area_fraction": 0.029140354358011242,
+      "measured_archived_yplus_p05_p50_p95": [
+        2.56278551262557,
+        3.363320864534609,
+        3.7394849893559585
+      ],
+      "projected_yplus_fixed_wall_shear_p05_p50_p95": [
+        30.081356890911,
+        36.283991748080396,
+        43.339080342803996
+      ],
+      "projected_area_fraction_30_100": 0.9598028763129443,
+      "projected_area_fraction_50_70": 0.001550954885460326
+    }
+  ]
+}

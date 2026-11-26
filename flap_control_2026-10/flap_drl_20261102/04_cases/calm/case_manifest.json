@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "case_id": "FLAP_C00",
+  "status": "seed_only",
+  "geometry_ready": false,
+  "motion_ready": false,
+  "reports_ready": false,
+  "mesh_validated": false,
+  "calm_validated": false,
+  "wave_enabled": false,
+  "excluded_legacy_wave_length_m": 92.5,
+  "source_sha256": "9af4857b948e0494088b5421f8ede100e66344fc2631cc00030406640d7cc295",
+  "solver": "STAR-CCM+ 2602 21.02.007-R8",
+  "rho_water_kg_m3": 1000,
+  "rho_air_kg_m3": 1.2,
+  "U_ref_m_s": 18,
+  "area_ref_m2": 0.0238,
+  "span_m": 0.02,
+  "chord_inferred_m": 1.19,
+  "hinge_fraction_candidates": [
+    0.8,
+    0.75
+  ],
+  "hinge_xyz_m": null,
+  "hinge_axis": [
+    0,
+    1,
+    0
+  ],
+  "dt_initial_s": 0.0004,
+  "inner_iterations_initial": 10,
+  "backend_initial": "CPU",
+  "mesh_family_id": null,
+  "paired_calm_run_id": null,
+  "geometry_sha256": null,
+  "mesh_signature": null,
+  "force_signs": "Fx along +x; Fz along +z; Mh fluid moment about +y",
+  "buoyancy_policy": "Store total Fz and separately audited hydrostatic correction. Do not subtract old buoyancy after geometry changes.",
+  "physics_steps_run": 0
+}

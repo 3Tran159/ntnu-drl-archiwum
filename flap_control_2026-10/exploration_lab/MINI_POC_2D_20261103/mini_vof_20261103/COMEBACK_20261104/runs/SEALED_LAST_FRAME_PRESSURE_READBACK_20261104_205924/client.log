@@ -1,0 +1,23 @@
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\SEALED_LAST_FRAME_PRESSURE_READBACK_20261104_205924\input.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\SEALED_LAST_FRAME_PRESSURE_READBACK_20261104_205924\VerifyComeback.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\SEALED_LAST_FRAME_PRESSURE_READBACK_20261104_205924\VerifyComeback.java:10: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+        XyzInternalTable table = s.getTableManager().createTable(XyzInternalTable.class);
+                                                    ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\SEALED_LAST_FRAME_PRESSURE_READBACK_20261104_205924\VerifyComeback.java:37: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+                scene.initializeAndWait();
+                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\SEALED_LAST_FRAME_PRESSURE_READBACK_20261104_205924\VerifyComeback.java:44: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+                scene.getCurrentView().setInput(new DoubleVector(new double[]{1.03,.02,0}),
+                                      ^
+
+Loading/configuring connectivity (old|new partitions: 2|1)
+  MINI_water (index 0): 17462 cells, 31070 faces, 14572 verts.
+Configuring finished

@@ -1,0 +1,40 @@
+{
+  "status": "DIAGNOSTIC",
+  "samples": 20,
+  "duration_s": 0.01900000000000001,
+  "covered_period_fraction": 0.04170754891435995,
+  "eta_rmse_vs_airy_m": 0.0015124948762560801,
+  "spatial_snapshot_amplitude_m": [
+    0.04964371370510801,
+    0.04986390878665697
+  ],
+  "spatial_snapshot_abs_phase_error_deg_max": 2.6995051309009686,
+  "orbital_rmse_m_s": [
+    1.8385544599162375e-05,
+    2.3677549461697936e-05
+  ],
+  "continuity_last_range": [
+    0.01899394043273544,
+    0.060262052121761285
+  ],
+  "continuity_last_over_peak_inner_max": 0.7634165707155957,
+  "pABS_min_Pa": 101302.13072906628,
+  "interface_CFL_max": 0.15505164473692162,
+  "mass_relative_max_after_5": 6.102601900922957e-07,
+  "solver_s_per_step_mean": 2.4826360400000005,
+  "solver_s_per_step_median": 2.2264752,
+  "solver_s_per_step_max": 3.5567338,
+  "period_s": 0.45555302324319263,
+  "estimates_minutes_excluding_start_save_spinup": {
+    "1": 18.868033904000004,
+    "3": 56.56272444466668,
+    "5": 94.25741498533336
+  },
+  "cannot_assess": [
+    "encounter period from CFD",
+    "reflection",
+    "cycle repeatability",
+    "foil forces",
+    "active flap"
+  ]
+}

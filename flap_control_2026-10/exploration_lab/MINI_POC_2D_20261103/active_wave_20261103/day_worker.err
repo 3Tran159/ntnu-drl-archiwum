@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\finish_day.py", line 25, in <module>
+    probe=R/'sealed_motion_probe_20261103';probe.mkdir();shutil.copy2(R/'sealed0_fast_20261103/MINI_result.sim',probe/'input.sim');res=launch('MORPHER_2D_KINEMATICS','ProbeMiniMorpher.java',probe,probe/'input.sim')
+                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\day_chain.py", line 32, in launch
+    assert p.returncode==0,'Native stage failed; inspect log, no next stage'
+           ^^^^^^^^^^^^^^^
+AssertionError: Native stage failed; inspect log, no next stage

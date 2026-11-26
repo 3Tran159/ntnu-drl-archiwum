@@ -1,0 +1,10 @@
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\run_mini_native_q2d.py:8: SyntaxWarning: invalid escape sequence '\.'
+  ps="Get-CimInstance Win32_Process | Where-Object {$_.Name -eq 'starccm+.exe' -and $_.ExecutablePath -like '*21.02.007-R8*' -and $_.CommandLine -match 'NwarWave.java'} | ForEach-Object {$m=[regex]::Matches($_.CommandLine,'[A-Z]:[^\"\r\n]*?input\.sim');if($m.Count){$m[$m.Count-1].Value}}"
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\run_mini_native_q2d.py", line 14, in <module>
+    out=D/'Q2D_NATIVE_A005_PREPARED';M.launch('MINI_NATIVE_Q2D_EMPTY_A005','MiniVofNativeQ2D.java',out,build=True)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\day_chain.py", line 32, in launch
+    assert p.returncode==0,'Native stage failed; inspect log, no next stage'
+           ^^^^^^^^^^^^^^^
+AssertionError: Native stage failed; inspect log, no next stage

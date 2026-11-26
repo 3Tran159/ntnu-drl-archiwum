@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_phase_map_campaign.py", line 139, in <module>
+    main()
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_phase_map_campaign.py", line 127, in main
+    source,t,history=integrate("PHASE_MAP_WAVE_FIXED",source,t,history,FIXED_STEPS)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\wave_phase_map_campaign.py", line 99, in integrate
+    raise RuntimeError(f"{stage} {result['status']} after {result['samples']} steps")
+RuntimeError: PHASE_MAP_WAVE_FIXED HOLD_STOP_OR_DEADLINE after 300 steps

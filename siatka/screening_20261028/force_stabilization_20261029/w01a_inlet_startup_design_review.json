@@ -1,0 +1,330 @@
+{
+  "updated_at": "2026-10-30T12:20:30.909253+01:00",
+  "status": "three_guarded_runtime_steps_passed_startup_ready_full_ramp_validation_pending",
+  "scope": "W01a inlet/upstream-forcing wave activation from computed calm fields at actual absolute CFD time0.587s, without global initialization or clear. User explicitly waived calm settling wait.",
+  "source": {
+    "path": "E:/ntnu/quasi2d_waves_20261029/W01a_W20L4_M10_calm_start_r1/final.sim",
+    "time_s": 0.587,
+    "completed_status": "stopped_by_marker"
+  },
+  "geometry": {
+    "water_depth_m": 24,
+    "air_height_m": 6,
+    "waterline_z_m": 2,
+    "mean_current_m_s": 18,
+    "foil_submergence_m": 2,
+    "height_target_m": 0.5,
+    "wavelength_m": 20
+  },
+  "design": {
+    "wave_model": "FifthOrderVofWave",
+    "first_wave_front": false,
+    "initialization": "Do not initialize, clear, reset time, or change continuum initial-condition profiles. Preserve computed calm physical fields.",
+    "binding": "Only inlet velocity and water phase profiles and existing upstream forcing-wave target. Existing forcing zone -35..-15m generates distributed waves; core and downstream damping remain unchanged.",
+    "ramp": "Height Hmin+(Htarget-Hmin)*(1-cos(pi*clamp((Time-activation_time)/(2*Tref),0,1)))/2. Hmin=1e-6m; Tref=.8472673206891129s; nominal duration1.6945346413782258s. Mean18m/s flow is not ramped.",
+    "ramp_expression": "<0.000001 m>+<0.499999 m>*0.5*(1.0-cos(3.141592653589793*min(1.0,max(0.0,($Time-<activation_time s>)/<1.6945346413782258 s>))))",
+    "interpretation": "The time-varying height is a controlled inlet startup envelope, not an exact steady FifthOrder wavetrain during the ramp. Full-height nonlinear coefficient refresh requires runtime verification.",
+    "absolute_time": "FirstWaveFront=false avoids assuming newly created front position is independent of nonzero CFD time. It creates analytic references throughout the domain; without initialize those references do not replace computed interior fields.",
+    "physical_risk": "The phase/time/pressure consistency and wave-specific numerical stability remain guarded. No turbulence-viscosity limiter increase or causal claim from a warning is justified."
+  },
+  "primary_documentation": [
+    {
+      "file": "GUID-C066226C-9683-4B59-A23C-894632004931.html",
+      "title": "VOF Wave Type Reference",
+      "evidence": "FirstWaveFront initial front/flat-water convention; OFF supplies domainwide analytical wave at initialization. Wave period calculated when initialized. No FifthOrder activation time-origin API established."
+    },
+    {
+      "file": "GUID-E2DD8B68-AB61-4901-BEA3-A2F3923D6374.html",
+      "title": "Setting Values Using an Expression",
+      "evidence": "Constant scalar input can reference time-dependent $Time and explicit units."
+    },
+    {
+      "file": "GUID-A9FE9BC1-3557-45B1-B1BB-B110FF8BB8EE.html",
+      "title": "Expressions",
+      "evidence": "Spatially invariant time expressions are valid constant scalar inputs. This generic support alone does not establish native wave coefficient cache refresh."
+    },
+    {
+      "file": "GUID-F883A5E5-1ED0-43F8-99C0-0232D32D792A.html",
+      "title": "VOF Waves Model Reference",
+      "evidence": "EnableTheoryComparison updates inner-domain analytic fields. These are analytic comparisons, not proof of changed physical fields."
+    },
+    {
+      "file": "GUID-1B0F4A55-8246-4503-BF77-AED752CAC424.html",
+      "title": "VOF Wave Forcing and Damping",
+      "evidence": "Forcing acts through momentum; do not add phase mass source to conceal imbalance."
+    },
+    {
+      "file": "GUID-7A14C2C5-61E3-4F87-A4AA-4AC28448C1D0.html",
+      "title": "Global Parameters",
+      "evidence": "Do not use a time-dependent global parameter; apply time expression to wave-height physical quantity."
+    }
+  ],
+  "zero_step_evidence": {
+    "folder": "E:/ntnu/quasi2d_waves_20261029/W01a_inlet_ramp_api_audit_r1",
+    "flow_steps": 0,
+    "source_unchanged": true,
+    "physical_fingerprint_unchanged": true,
+    "field_csv_bitwise_equal": true,
+    "expression_getter_height_tau0_mid_full_m": [
+      1e-06,
+      0.2500005,
+      0.5
+    ],
+    "analytic_period_s": 0,
+    "analytic_gauges_and_velocity": "NaN for both expression and constant new FifthOrder objects.",
+    "conclusion": "Newly created wave caches were not initialized by quantity setters or report evaluation in a loaded solution. This is not evidence that the height expression is unsupported. Required guarded runtime step probe follows.",
+    "native_vorticity": {
+      "class": "star.flow.VorticityVectorFunction",
+      "function_name": "VorticityVector",
+      "component": 1,
+      "units": "1/s",
+      "meaning": "omega_y = du/dz - dw/dx; actual computed field, not a finite-difference substitute."
+    }
+  },
+  "runtime_probe": {
+    "folder": "E:/ntnu/quasi2d_waves_20261029/W01a_inlet_ramp_step_audit_r2",
+    "controller_pid": 36264,
+    "maximum_steps": 3,
+    "cpu_workers": 1,
+    "gpu": false,
+    "source_time_s": 0.587,
+    "dt_s": 0.001,
+    "inner_iterations": 10,
+    "requirements": "No initialization/clear. Before/after configuration force/mass/time fingerprints identical. First actual step must have finite actual fields, speed<50m/s, alpha bounded[0,1], exact time increment, finite analytic period/gauges/velocity. Failure saves and stops immediately.",
+    "limitation": "Three steps near zero ramp height establish startup readiness only, not full-height nonlinear cache correctness. Production must continue to record evaluated H, period, analytic velocity/gauges and physical/balance guards.",
+    "completed_result": {
+      "source_time_s": 0.5870000000000004,
+      "note": "Three near-zero-height runtime steps test immediate cache readiness only. They do not validate full-height nonlinear ramp refresh or wave-force accuracy.",
+      "configuration_fingerprint_unchanged": true,
+      "guarded_steps": [
+        {
+          "step": 1,
+          "time_s": 0.5880000000000004,
+          "expected_height_m": 1.429643120605464e-06,
+          "physical": {
+            "time_s": 0.5880000000000004,
+            "cells": 317277,
+            "mass_kg": 38408.32995728057,
+            "water_volume_m3": 38.396808906880025,
+            "max_speed_m_s": 22.15784542177283,
+            "alpha_min": 0.0,
+            "alpha_max": 1.0,
+            "Fx_N": 32.581394698065466,
+            "Fz_N": 1123.8149097094727,
+            "pressure_drag_N": 11.772830358901365,
+            "viscous_drag_N": 20.808564339164104
+          },
+          "expression": {
+            "height_m": 1.429643120605464e-06,
+            "period_s": 0.8478873433311412,
+            "definition": "<0.000001 m>+<0.499999 m>*0.5*(1.0-cos(3.141592653589793*min(1.0,max(0.0,($Time-<0.5870000000000004 s>)/<1.6945346413782258 s>))))",
+            "first_front": false,
+            "analytic_gauge_eta_m": [
+              -6.621314376786813e-07,
+              6.657181650382427e-07,
+              -6.691825689131292e-07,
+              0.00036524511196134313,
+              -0.0008176365333447677,
+              -0.0048882618396746125,
+              -0.0012260796033025656,
+              -0.001107046418376001
+            ],
+            "analytic_inlet_mean_velocity_m_s": [
+              17.999999874626,
+              0.0,
+              -4.643803922194053e-08
+            ],
+            "analytic_inlet_max_speed_m_s": 18.0
+          },
+          "constant": {
+            "height_m": 1.429643120605464e-06,
+            "period_s": 0.8478873433311412,
+            "definition": "1.429643120605464E-6",
+            "first_front": false,
+            "analytic_gauge_eta_m": [
+              -6.621314376786813e-07,
+              6.657181650382427e-07,
+              -6.691825689131292e-07,
+              0.00036524511196134313,
+              -0.0008176365333447677,
+              -0.0048882618396746125,
+              -0.0012260796033025656,
+              -0.001107046418376001
+            ],
+            "analytic_inlet_mean_velocity_m_s": [
+              17.999999874626,
+              0.0,
+              -4.643803922194053e-08
+            ],
+            "analytic_inlet_max_speed_m_s": 18.0
+          },
+          "max_gauge_difference_m": 0.0,
+          "max_mean_velocity_difference_m_s": 0.0,
+          "physical_guard_pass": true,
+          "analytic_finite_pass": true,
+          "native_water_error_kg_step": -1.6363441416453206e-07,
+          "native_air_error_kg_step": 2.8230091343706233e-10
+        },
+        {
+          "step": 2,
+          "time_s": 0.5890000000000004,
+          "expected_height_m": 2.718571005689409e-06,
+          "physical": {
+            "time_s": 0.5890000000000004,
+            "cells": 317277,
+            "mass_kg": 38408.32633153454,
+            "water_volume_m3": 38.39680527677845,
+            "max_speed_m_s": 22.157905450092876,
+            "alpha_min": 0.0,
+            "alpha_max": 1.0,
+            "Fx_N": 32.57256399052912,
+            "Fz_N": 1124.0214591060144,
+            "pressure_drag_N": 11.764157167530804,
+            "viscous_drag_N": 20.808406822998318
+          },
+          "expression": {
+            "height_m": 2.718571005689409e-06,
+            "period_s": 0.847887343331128,
+            "definition": "<0.000001 m>+<0.499999 m>*0.5*(1.0-cos(3.141592653589793*min(1.0,max(0.0,($Time-<0.5870000000000004 s>)/<1.6945346413782258 s>))))",
+            "first_front": false,
+            "analytic_gauge_eta_m": [
+              -1.262852261874059e-06,
+              1.269546007875988e-06,
+              -1.2760060812411211e-06,
+              0.000365422194132492,
+              -0.0008169120597045776,
+              -0.0048884962043374,
+              -0.0012267556025058468,
+              -0.0011067846612142773
+            ],
+            "analytic_inlet_mean_velocity_m_s": [
+              17.999999760943673,
+              0.0,
+              -8.653809210562004e-08
+            ],
+            "analytic_inlet_max_speed_m_s": 18.0
+          },
+          "constant": {
+            "height_m": 2.718571005689409e-06,
+            "period_s": 0.847887343331128,
+            "definition": "2.718571005689409E-6",
+            "first_front": false,
+            "analytic_gauge_eta_m": [
+              -1.262852261874059e-06,
+              1.269546007875988e-06,
+              -1.2760060812411211e-06,
+              0.000365422194132492,
+              -0.0008169120597045776,
+              -0.0048884962043374,
+              -0.0012267556025058468,
+              -0.0011067846612142773
+            ],
+            "analytic_inlet_mean_velocity_m_s": [
+              17.999999760943673,
+              0.0,
+              -8.653809210562004e-08
+            ],
+            "analytic_inlet_max_speed_m_s": 18.0
+          },
+          "max_gauge_difference_m": 0.0,
+          "max_mean_velocity_difference_m_s": 0.0,
+          "physical_guard_pass": true,
+          "analytic_finite_pass": true,
+          "native_water_error_kg_step": -5.573721365336905e-05,
+          "native_air_error_kg_step": 6.691180546353397e-08
+        },
+        {
+          "step": 3,
+          "time_s": 0.5900000000000004,
+          "expected_height_m": 4.866779224998981e-06,
+          "physical": {
+            "time_s": 0.5900000000000004,
+            "cells": 317277,
+            "mass_kg": 38408.322714497386,
+            "water_volume_m3": 38.396801655395706,
+            "max_speed_m_s": 22.157965017876187,
+            "alpha_min": 0.0,
+            "alpha_max": 1.0,
+            "Fx_N": 32.564603302045484,
+            "Fz_N": 1124.210368312804,
+            "pressure_drag_N": 11.756353547645581,
+            "viscous_drag_N": 20.8082497543999
+          },
+          "expression": {
+            "height_m": 4.866779224998981e-06,
+            "period_s": 0.8478873433310876,
+            "definition": "<0.000001 m>+<0.499999 m>*0.5*(1.0-cos(3.141592653589793*min(1.0,max(0.0,($Time-<0.5870000000000004 s>)/<1.6945346413782258 s>))))",
+            "first_front": false,
+            "analytic_gauge_eta_m": [
+              -2.2673634987313562e-06,
+              2.279119453163503e-06,
+              -2.29045467037281e-06,
+              0.00036571016213571284,
+              -0.0008157009869904641,
+              -0.004888877312495765,
+              -0.00122788564032561,
+              -0.0011063589658135697
+            ],
+            "analytic_inlet_mean_velocity_m_s": [
+              17.999999570904475,
+              0.0,
+              -1.5174807093415863e-07
+            ],
+            "analytic_inlet_max_speed_m_s": 18.0
+          },
+          "constant": {
+            "height_m": 4.866779224998981e-06,
+            "period_s": 0.8478873433310876,
+            "definition": "4.866779224998981E-6",
+            "first_front": false,
+            "analytic_gauge_eta_m": [
+              -2.2673634987313562e-06,
+              2.279119453163503e-06,
+              -2.29045467037281e-06,
+              0.00036571016213571284,
+              -0.0008157009869904641,
+              -0.004888877312495765,
+              -0.00122788564032561,
+              -0.0011063589658135697
+            ],
+            "analytic_inlet_mean_velocity_m_s": [
+              17.999999570904475,
+              0.0,
+              -1.5174807093415863e-07
+            ],
+            "analytic_inlet_max_speed_m_s": 18.0
+          },
+          "max_gauge_difference_m": 0.0,
+          "max_mean_velocity_difference_m_s": 0.0,
+          "physical_guard_pass": true,
+          "analytic_finite_pass": true,
+          "native_water_error_kg_step": -8.470863529980173e-06,
+          "native_air_error_kg_step": 1.0124300372005811e-08
+        }
+      ],
+      "initialized_or_cleared": false,
+      "status": "three_guarded_steps_completed",
+      "gpu_count": 0,
+      "time_s": 0.5900000000000004,
+      "flow_steps": 3,
+      "controller_finished_at": "2026-10-30T12:17:07.468431+01:00",
+      "returncode": 0,
+      "source_unchanged": true,
+      "source": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_calm_start_r1\\final.sim",
+      "source_sha256": "bb2f9004ba8993ed6a7c8401be27b15be56d54d04c7743b15013a8925d9a131d",
+      "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_inlet_ramp_step_audit_r2"
+    },
+    "prep_lock_released": true
+  },
+  "cycle_repeatability": {
+    "minimum": "Four consecutive complete cycles after full ramp has arrived at the foil and gauge station; no mandatory10cycleminimum.",
+    "indicative_cycles": 10,
+    "diagnostic_cap_cycles": 20,
+    "clock": "Preserve absolute CSV time; add activation/ramp completion/measured arrival metadata and a cycle origin for consistent complete-cycle bins.",
+    "arrival": "Do not use a simplistic35m/c travel delay: forcing generation is distributed from-35to-15m. Measure actual local wave arrival/full-height gauge establishment.",
+    "meaning": "Repeatable force cycles establish periodicity, not mesh/time/wave-force accuracy. Calm startup without settling is not an accepted matched calm force baseline.",
+    "over20": "A diagnostic warning to inspect setup, drift, reflections and numerical behavior; not a mathematical proof of invalidity."
+  },
+  "guards": "Retain0.01%inlet phase/boundary mass review, native error and BDF2, physical50m/s,alpha,time/resource guards. No mass correction or weakened criterion.",
+  "gauge_geometry_caution": "Full-depth water-area planes crossing the foil include solid-displacement offset. At Hnearzero x0 reference is minus4.888mm, not level drift. Use actual-reference on the same plane or a verified calm geometric offset."
+}

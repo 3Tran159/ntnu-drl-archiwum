@@ -1,0 +1,102 @@
+{
+  "updated_at": "2026-10-30T01:58:38.162608+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_vofTol001_dt1ms_r13",
+  "status": "single_control_VOF_tolerance_probe_completed",
+  "source_unchanged": true,
+  "settings": "SO1ms10inner unchanged; ONLY VOF AMGrelative tolerance .1 to .001; pressuretol .1 and allothercontrols unchanged",
+  "completed_time_s": 0.7500000000000006,
+  "expected_inner_samples": 2500,
+  "water_samples": 2500,
+  "air_samples": 2500,
+  "native_inner_endpoints_match_physical_history": true,
+  "AMG": {
+    "VOF": {
+      "solves": 310,
+      "cycles_min": 2,
+      "cycles_max": 2,
+      "ratio_min": 2.592796e-06,
+      "ratio_median": 4.903088e-06,
+      "ratio_max": 1.032438e-05,
+      "all_below_relative_tolerance": true,
+      "cycle_cap_hits": 0,
+      "nonzero_final_residuals": 310,
+      "requested_tolerance": 0.001,
+      "stopping_interpretation": "Inspect achieved ratios and cap hits; all_below_relative_tolerance must be true before attributing results to requested solve accuracy"
+    },
+    "pressure": {
+      "solves": 310,
+      "cycles_min": 2,
+      "cycles_max": 2,
+      "ratio_min": 0.04043952,
+      "ratio_median": 0.04674301,
+      "ratio_max": 0.08033294,
+      "all_below_relative_tolerance": true,
+      "cycle_cap_hits": 0,
+      "nonzero_final_residuals": 310,
+      "requested_tolerance": 0.1,
+      "stopping_interpretation": "Inspect achieved ratios and cap hits; all_below_relative_tolerance must be true before attributing results to requested solve accuracy"
+    }
+  },
+  "AMG_API_counters_constant": true,
+  "AMG_counter_limitation": "API total cycles remained unchanged; use actual LOW log solves, not this getter, for sequencing or cost",
+  "metrics": {
+    "native_abs_sum_pct_inward_mass": {
+      "max_abs": 0.014624571762862835,
+      "mean_abs": 0.00109942032208099
+    },
+    "bdf2_plus_faceflux_pct_inward_mass": {
+      "max_abs": 0.014593157196293583,
+      "mean_abs": 0.0010963343420600411
+    }
+  },
+  "peak_time_s": 0.6180000000000004,
+  "peak_inner_trace": {
+    "time_s": 0.6180000000000004,
+    "native_abs_phase_error_pct_by_inner": [
+      0.08178666158582809,
+      0.021189517836143756,
+      0.010128231827353064,
+      0.014192610482267052,
+      0.01412303896878208,
+      0.014351027005052601,
+      0.014479066394512855,
+      0.014562792430262017,
+      0.014617031624338889,
+      0.014624571762862835
+    ]
+  },
+  "native_vs_BDF2_max_difference_percentage_points": 6.587016816326716e-09,
+  "gauge_difference_vs_R10_max_mm": 0.05710778869527644,
+  "gauge_difference_vs_R10_RMS_mm": 0.007772770505694398,
+  "short_mass_gate_pass": false,
+  "original_threshold_pct": 0.01,
+  "scope": "Single-control linear-accuracy test; retains original mass criterion and native/legacy diagnostics. Longer propagation needs scientific review; no wave force admission.",
+  "independent_fields_finite": true,
+  "max_speed_m_s": 21.4664089372818,
+  "max_interface_CFL": 0.1959832382487905,
+  "alpha_min": 0.0,
+  "alpha_max": 1.0,
+  "phase_vs_mixture_max_flux_difference_kg_s": 1.6370904631912708e-11,
+  "cost_same_instrumentation": {
+    "R13": {
+      "window_s": [
+        0.51,
+        0.65
+      ],
+      "mean_s_per_step": 0.7816233780141845,
+      "median_s_per_step": 0.7846392000000009,
+      "samples": 141
+    },
+    "R12": {
+      "window_s": [
+        0.51,
+        0.65
+      ],
+      "mean_s_per_step": 0.7695928127659575,
+      "median_s_per_step": 0.7761433000000011,
+      "samples": 141
+    }
+  },
+  "native_inventory_consistent": true,
+  "actual_linear_targets_achieved": true
+}

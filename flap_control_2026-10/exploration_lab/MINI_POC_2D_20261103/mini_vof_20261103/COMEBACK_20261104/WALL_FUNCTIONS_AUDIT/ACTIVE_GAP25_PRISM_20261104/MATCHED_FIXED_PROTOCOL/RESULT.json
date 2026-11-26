@@ -1,0 +1,31 @@
+{
+  "status": "HOLD",
+  "comparison_gate": "min 0.2 s, 0.05 s windows, 3 consecutive, CL and CD drift <0.5%",
+  "stage": "SHARP_SEALED",
+  "SHARP_SEALED": {
+    "status": "HOLD_STOP_OR_DEADLINE",
+    "samples": 0,
+    "startup_s": 125.54740419999871,
+    "solver_step_median_s": null,
+    "solver_step_mean_s": null,
+    "end_to_end_s": 201.36869169999773,
+    "dt_s": 0.0003333333333333334,
+    "checkpoint_sha256_input": null,
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\MATCHED_FIXED_SHARP_SEALED_20261104_135233\\FINAL.sim",
+    "checkpoint_sha256": "38340773799230428f0961853bcffe0904a403646edcf9d39f310a389592b1a6",
+    "state": {
+      "steps": 0,
+      "status": "HOLD_STOP_OR_DEADLINE",
+      "time_s": 0,
+      "U_m_s": 18.0
+    },
+    "transport_ok": true,
+    "training_approved": false,
+    "fixed": null,
+    "W06": {
+      "peak": 0.1759025523925868,
+      "stop": "W06 seven-step median slower by 17.6%"
+    }
+  },
+  "error": "Mini STOP requested"
+}

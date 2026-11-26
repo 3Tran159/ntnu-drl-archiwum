@@ -1,0 +1,9 @@
+Compiled from "DirectedMeshPartCollectionManager.java"
+public class star.sweptmesher.DirectedMeshPartCollectionManager extends star.base.neo.ClientServerObjectManager<star.sweptmesher.DirectedMeshPartCollection> {
+  public star.sweptmesher.DirectedMeshPartCollectionManager(star.base.neo.ClientServerObjectKey);
+  public star.common.Simulation getSimulation();
+  public boolean anyCollectionHasVolumeMesh(java.util.Collection<star.sweptmesher.DirectedMeshPartCollection>);
+  public void clearVolumeMeshes(java.util.Collection<star.sweptmesher.DirectedMeshPartCollection>);
+  public void executeAll();
+  public java.lang.Class<? extends star.base.neo.ClientServerObject> getManagedType();
+}

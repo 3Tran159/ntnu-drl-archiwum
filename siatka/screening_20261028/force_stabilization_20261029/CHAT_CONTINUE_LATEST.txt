@@ -1,0 +1,116 @@
+Continue the NTNU quasi-2D campaign from current DISK STATE, not this snapshot.
+The operator can paste a prepared M11/later .sim path in the local dashboard. Inspecting or selecting a mesh does not run flow. Imported source files are copied immutably into a new E: attempt and never overwritten. The selected mesh is a mechanically checked candidate, not a convergence-approved mesh.
+WORK RESERVE: the user reported about10% remaining and requested7% kept for emergency fixes. After this handover stop autonomous development in this chat; use the local control panel manually. An agent must not claim exact remaining usage because it is not visible here.
+CURRENT USER HOLD: our C01 and waves are paused pending the other agent's mesh convergence/optimization review. Do not launch or release this hold without an explicit later user instruction. Leave the separate mesh-study and HF sessions untouched.
+The independent M10-M12 mesh study also has dedicated Pause & save / Resume saved calculation buttons. mesh_study_control.py manages only that study, uses its STOP marker and waits for verified final.sim/export/process exit. Resume creates a new attempt and keeps prior histories; never restart gpu_calm_study_live.py directly. See mesh_control_receipt.json for isolated test scope; no live pause/resume was performed during installation.
+Read RESUME_AT_HOME.txt, campaign_hold.json, local_control_model.py, current jobs and actual process/lock state first. Never duplicate/restart a completed controller.
+Open http://127.0.0.1:8771/ or double-click Open_NTNU_Control.cmd in F:/ntnu/mesh_screening_20261028. Starting this service never launches CFD.
+Workflow: paste mesh .sim path -> zero-flow inspect -> select imported candidate -> configure wave/domain -> save queue (no launch) -> explicit release hold and Start. If requested, Check recipe performs only CPU1 zero-step new-wave and saved-wave API checks. New domain or mesh gets its own fresh flat-water C01; do not use old imported fields as a settled baseline.
+CL means (vertical force - buoyancy)/(0.5*rho_ref*U_ref^2*A_ref). Use the audited per-case force_reference.json derived from native rho/gravity and actual closed foil geometry. Keep raw Fz/CL_total immutable. No guessed global correction for an imported mesh; unavailable evidence must block corrected-lift acceptance. Historical raw-CL decisions remain explicitly historical. C01 settling: adjacent complete0.2s means CD and corrected CL each change<0.5%; retain source/finite/phase/speed guards. Wave: FifthOrder, full inlet height from activation with no ramp, no global wave reinitialization; preserve original wave clock on resume. Near-foil wave establishment precedes four-cycle repeatability review. Ten periods is an expectation, not a minimum;20 periods from activation is a review cap.
+Geometry: z=-22..8m, waterline2m, depth24m+air6m, U18m/s, foil geometry/location unchanged, one20mm span. H.25/.5/.75; lambda10/20/30/40; planned originalW01a.5/20,W02.5/30,3lambda/4lambda then boundedextras. Selected file's supported dt0.0001..0.001s is retained; no silent1ms reset. Ten inner, SO; startup uses40steps at min(dt,.5ms)/50inner then restoresdt/10.
+Physical speed guard50m/s and bounded phase remain. Phase mass0.01% review flag remains visible; user allowed exploratory mass deviation, not physical guard failure. No force-accuracy claim from repeatability alone.
+Stop/save pauses the queue; wait for a completed saved checkpoint. Continue saved run creates a new attempt from a verified normal-stop/wall-limit final save and retains original wave clock/history. Guard-failed or interrupted-startup fields cannot be resumed this way.
+Frequent checkpoints default0.05s (configurable.05-1s), all saved attempts preserved; disk/RAM guards apply. Never continue the failed C01r2 final at2.777s. Its airspeed50.162m/s is diagnostic, not a settled baseline.
+Standalone controls: local_control_model.py, local_control_worker.py, local_mesh_inputs.py, local_domain_preparation.py, local_recipe_validation.py, LocalCalmWave.java, PrepareLocalMeshCalm.java, manual_control_server.py. Compile/controller tests and actual zero-flow STAR API checks have separate receipts. Read local_control_zero_step_review.json and check_recipe_final_review.json for current macro identity and tested scope; an API pass does not validate C01/wave flow or a new mesh. Do not forge readiness or mark a selected mesh converged.
+Dashboard: technical status and controls, Mesh assessment / Waves, then archive and combined results. A completed or stopped run leaves the live area and enters a collapsed archive; no old case values remain in the idle live template. Resuming uses only verified matching history; a new wave starts a separate record. Mesh view includes actual mesh and pressure/streamline previews with source/time provenance. Report: local_campaign_results.html supports saved-case selection, buoyancy-corrected CL/CD histories, cycle overlap/convergence, diagnostics and source paths. Live case remains in dashboard.html. Both reports explicitly distinguish failed, paused, exploratory and repeatable results.
+Update handover and reports on meaningful state changes; never expose licensing/service credentials.
+
+Snapshot (verify live files before action):
+{
+  "updated_at": "2026-11-02T16:27:02.388940+01:00",
+  "campaign_hold": {
+    "active": true,
+    "status": "paused_by_user_pending_mesh_study",
+    "reason": "Waiting for the other agent's mesh convergence and optimization results before any C01 or wave launch.",
+    "updated_at": "2026-10-30T14:24:26.098931+01:00",
+    "probe_launched": false,
+    "scope": "This quasi-2D campaign only; other mesh study and HF session remain untouched.",
+    "resume_requires": "User instruction after mesh convergence and optimization review",
+    "checkpoint_policy_on_future_resume_s": 0.05
+  },
+  "current_case": "C01_W20L4_M10_calm_settle_r2",
+  "computation_active": false,
+  "physical_progress": {
+    "time_s": 2.776999999999805,
+    "steps": 2190,
+    "status": "stability_guard"
+  },
+  "selected_mesh": null,
+  "latest_checkpoint": {
+    "file": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\checkpoint_t2.587.sim",
+    "time_s": 2.586999999999826,
+    "completed_save": true
+  },
+  "readiness": {
+    "ready": false,
+    "recipe_ready": true,
+    "compile_ok": true,
+    "tests_ok": true,
+    "api_ok": true,
+    "can_validate_recipe": true,
+    "checks": [
+      {
+        "name": "Mesh input",
+        "ok": false,
+        "message": "Paste a prepared mesh .sim path, inspect it and select the imported copy"
+      },
+      {
+        "name": "Macro compiled",
+        "ok": true,
+        "message": "Java compilation"
+      },
+      {
+        "name": "Controller tests",
+        "ok": true,
+        "message": "Tests bound to the current source files"
+      },
+      {
+        "name": "Zero-step recipe check",
+        "ok": true,
+        "message": "Use Check recipe after compilation/tests; it performs no flow steps"
+      },
+      {
+        "name": "Campaign hold released",
+        "ok": false,
+        "message": "Waiting for the other agent's mesh convergence and optimization results before any C01 or wave launch."
+      }
+    ],
+    "message": "No automatic start. Complete the checks listed below"
+  },
+  "queue": [
+    {
+      "id": "20261030_140138_22230605",
+      "status": "needs_review",
+      "spec": {
+        "name": "W01a",
+        "height_m": 0.5,
+        "wavelength_m": 20.0,
+        "xmin_m": -35.0,
+        "xmax_m": 45.0,
+        "zone_m": 20.0,
+        "upstream_m": 35.0,
+        "downstream_m": 43.81,
+        "length_m": 80.0,
+        "wall_minutes": 180.0,
+        "action": "run",
+        "mesh": "M10_FS020",
+        "z_m": [
+          -22,
+          8
+        ],
+        "waterline_m": 2,
+        "depth_m": 24,
+        "span_m": 0.02,
+        "U_m_s": 18,
+        "dt_s": 0.001,
+        "inner": 10,
+        "order": "SECOND_ORDER",
+        "pressure_AMG_tolerance": 0.01
+      },
+      "message": "C01 stopped without a verified reusable checkpoint",
+      "resume_manifest": null
+    }
+  ],
+  "current_diagnostics": {},
+  "previous_guard_review": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\c01_calm_r2_guard_review.json"
+}

@@ -1,0 +1,35 @@
+from pathlib import Path
+import json,datetime,hashlib
+R=Path(r'F:/ntnu/mesh_screening_20261028/force_stabilization_20261029');W=Path(r'E:/ntnu/quasi2d_waves_20261029')
+def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+entries=[]
+def add(id,domain,h,parents,stage,**kw):entries.append(dict(id=id,domain_id=domain,height_m=h,source_label={0:'CALM',.5:'H050',.25:'H025',.75:'H075'}[h],prerequisites=parents,stage=stage,**kw))
+add('C01_L20_M10','L20_X4_M10',0,[],'original')
+add('W01','L20_X4_M10',.5,['C01_L20_M10'],'original',adopt_existing=dict(directory=str(W/'W01_W20L4_M10_FS020_cycles_r2'),parent_history=str(W/'W01_W20L4_M10_FS020_diagnostic_r1/history.csv'),initial_time_s=.168,expected_cells=317277))
+add('C01_L30_M10','L30_X4_M10',0,['W01'],'original')
+add('W02','L30_X4_M10',.5,['C01_L30_M10'],'original')
+add('C01_L20_X3_M10','L20_X3_M10',0,['W02'],'original_check')
+add('W01_X3','L20_X3_M10',.5,['C01_L20_X3_M10'],'original_check')
+add('C01_L20_M09','L20_X4_M09',0,['W01_X3'],'original_check')
+add('W01_M09_FS_CHECK','L20_X4_M09',.5,['C01_L20_M09'],'original_check',notes='Matched-domain free-surface grid comparison against M10; not uniform GCI.')
+add('W03','L20_X4_M10',.25,['W01_M09_FS_CHECK','W01'],'extension',notes='Exploratory lower-height run; final force comparisons need free-surface refinement with matched H0.5/calm if grid changes.')
+add('W04','L20_X4_M10',.75,['W03'],'extension',notes='Check crest coverage of refined free-surface band and spatial fields; accuracy remains pending.')
+add('W05','L30_X4_M10',.25,['W04','W02'],'extension',notes='Exploratory lower-height run; final grid sensitivity pending.')
+add('W06','L30_X4_M10',.75,['W05'],'extension')
+add('C01_L10_M10','L10_X4_M10',0,['W06'],'extension')
+add('W07','L10_X4_M10',.5,['C01_L10_M10'],'extension',notes='40m domain requires audited remote clipping; never reuse80m as4lambda.')
+add('C01_L40_M10','L40_X4_M10',0,['W07'],'extension')
+add('W08','L40_X4_M10',.5,['C01_L40_M10'],'extension')
+plan=dict(version=1,campaign_id='NTNU_W01_W08_exploratory_20261030',updated_at=datetime.datetime.now().astimezone().isoformat(),settings=dict(dt_s=.001,inner=10,order='SECOND_ORDER',wave_min_complete_cycles=4,typical_cycles=10,max_cycles=20,calm_max_time_s=6,wall_limit_s=129600,mass_exception_exploratory=True),cases=entries,final_accuracy_admitted=False,accuracy_pending=['Wave-specific matched timestep sensitivity','Free-surface refinement incl lower heights','Propagation/reflection review','Equal-phase matched calm/wave load comparisons'],scope='All original and bounded requested wave combinations. Sequential exploratory data collection; repeated cycles are not proof of final numerical accuracy. Stop before unresolved/unprepared inputs; never silently skip to extras.')
+(R/'campaign_plan.json').write_text(json.dumps(plan,indent=2),encoding='utf8')
+reg=R/'campaign_inputs';reg.mkdir(exist_ok=True)
+for grid,cells,suffix in [('M10',317277,'M10_FS020_env_setup_r1'),('M09',246885,'M09_env_setup_r2')]:
+ cfg=dict(id='L20_X4_'+grid,xmin_m=-35,xmax_m=45,wavelength_m=20,zone_m=20,gauges_m=[-10,-5,2.5,5,10,15,20],mesh=grid,wave_depth_m=24)
+ outputs={}
+ for label,prefix,h in [('CALM','C01',0),('H050','W01',.5)]:
+  D=W/(prefix+'_W20L4_'+suffix);a=json.loads((D/'initial_audit.json').read_text())
+  if a['status']!='prepared_zero_steps' or a['flow_steps']!=0 or a['cells']!=cells:raise RuntimeError('Existing source audit mismatch')
+  outputs[label]=dict(path=str(D/'prepared.sim'),sha256=digest(D/'prepared.sim'),cells=cells,audit=str(D/'initial_audit.json'),wave_period_s=a['wave_period_s'],height_m=h)
+ d=dict(status='paired_inputs_audited_zero_steps',at=datetime.datetime.now().astimezone().isoformat(),domain=cfg,cells=cells,inputs=outputs,source_unchanged=True,flow_steps=0,provenance='Existing independently prepared sources; hashes checked when registered. No solver launched by registration.')
+ (reg/(cfg['id']+'.json')).write_text(json.dumps(d,indent=2),encoding='utf8')
+print(json.dumps({'cases':len(entries),'registered_domains':['L20_X4_M10','L20_X4_M09'],'all_ready':False},indent=2))

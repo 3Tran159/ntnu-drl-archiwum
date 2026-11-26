@@ -1,0 +1,172 @@
+{
+  "status": "GEOMETRY_VERIFIED_FOR_MESHING",
+  "time": "2026-10-29T08:46:15.828860+00:00",
+  "baseline_sha256": "90eda181702dc9357b85237bdc7473b3882db78574a8a2820bdb4ca907f1a0f8",
+  "native": {
+    "file": "native_012_fine_mm.stl",
+    "triangles": 9652,
+    "bounds_m": [
+      [
+        -0.0003760594427585602,
+        1.19
+      ],
+      [
+        -5.5,
+        5.5
+      ],
+      [
+        -0.04215124130249023,
+        0.10091718292236328
+      ]
+    ],
+    "closed_two_faces_per_edge": true,
+    "edge_multiplicity": {
+      "2": 14478
+    },
+    "volume_m3": 0.9423135698657413,
+    "wetted_area_m2": 22.19263793541705,
+    "projected_planform_m2": 10.900868806853827,
+    "stations": [
+      {
+        "y_m": -5.4,
+        "chord_m": 0.4216927272727272,
+        "max_thickness_c": 0.11998541425270207,
+        "max_camber_c": 0.024998684830640803,
+        "source_point_max_deviation_mm": 0.004189131822580558,
+        "source_points_matched": 159
+      },
+      {
+        "y_m": -4.125,
+        "chord_m": 0.79135,
+        "max_thickness_c": 0.119982806370959,
+        "max_camber_c": 0.025001561819481946,
+        "source_point_max_deviation_mm": 0.007402785291807379,
+        "source_points_matched": 159
+      },
+      {
+        "y_m": -1.375,
+        "chord_m": 1.19,
+        "max_thickness_c": 0.11998061687420025,
+        "max_camber_c": 0.02500292470593799,
+        "source_point_max_deviation_mm": 0.009266995149065111,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 0,
+        "chord_m": 1.19,
+        "max_thickness_c": 0.11997850978836896,
+        "max_camber_c": 0.02500292426858499,
+        "source_point_max_deviation_mm": 0.009246563264908754,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 1.375,
+        "chord_m": 1.19,
+        "max_thickness_c": 0.11997850978836895,
+        "max_camber_c": 0.02500160417532032,
+        "source_point_max_deviation_mm": 0.00936767133223387,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 4.125,
+        "chord_m": 0.79135,
+        "max_thickness_c": 0.11998059052262956,
+        "max_camber_c": 0.024999926812282056,
+        "source_point_max_deviation_mm": 0.006230917626501992,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 5.4,
+        "chord_m": 0.4216927272727272,
+        "max_thickness_c": 0.11998481708065051,
+        "max_camber_c": 0.025001727650312278,
+        "source_point_max_deviation_mm": 0.0044658968160159185,
+        "source_points_matched": 160
+      }
+    ]
+  },
+  "star": {
+    "file": "star_012_verified_m.stl",
+    "triangles": 11542,
+    "bounds_m": [
+      [
+        -0.0003760594317,
+        1.19
+      ],
+      [
+        -5.5,
+        5.5
+      ],
+      [
+        -0.04214519865,
+        0.1009171859
+      ]
+    ],
+    "closed_two_faces_per_edge": true,
+    "edge_multiplicity": {
+      "2": 17313
+    },
+    "volume_m3": 0.9423118597586935,
+    "wetted_area_m2": 22.192635717713852,
+    "projected_planform_m2": 10.900868608830482,
+    "stations": [
+      {
+        "y_m": -5.4,
+        "chord_m": 0.4216927272727272,
+        "max_thickness_c": 0.1199821844008431,
+        "max_camber_c": 0.025000104637432168,
+        "source_point_max_deviation_mm": 0.005516653898193086,
+        "source_points_matched": 159
+      },
+      {
+        "y_m": -4.125,
+        "chord_m": 0.79135,
+        "max_thickness_c": 0.1199821277888648,
+        "max_camber_c": 0.024999196564044576,
+        "source_point_max_deviation_mm": 0.006617973353013201,
+        "source_points_matched": 159
+      },
+      {
+        "y_m": -1.375,
+        "chord_m": 1.19,
+        "max_thickness_c": 0.11997768218140614,
+        "max_camber_c": 0.025002925665586685,
+        "source_point_max_deviation_mm": 0.009364406915351661,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 0,
+        "chord_m": 1.19,
+        "max_thickness_c": 0.11997851163835005,
+        "max_camber_c": 0.02500292522096979,
+        "source_point_max_deviation_mm": 0.009246625360331742,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 1.375,
+        "chord_m": 1.19,
+        "max_thickness_c": 0.11997851163835005,
+        "max_camber_c": 0.025001604294627285,
+        "source_point_max_deviation_mm": 0.009367750567695812,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 4.125,
+        "chord_m": 0.79135,
+        "max_thickness_c": 0.1199821277888648,
+        "max_camber_c": 0.024999196564044576,
+        "source_point_max_deviation_mm": 0.006617973353013201,
+        "source_points_matched": 160
+      },
+      {
+        "y_m": 5.4,
+        "chord_m": 0.4216927272727272,
+        "max_thickness_c": 0.11997861230565879,
+        "max_camber_c": 0.02499993287482334,
+        "source_point_max_deviation_mm": 0.005041158125617534,
+        "source_points_matched": 160
+      }
+    ]
+  },
+  "scope": "CAD section, closed tessellation, unchanged planform/pose, corrected Boolean inputs and wall mapping. No claim of hydrodynamic validation."
+}

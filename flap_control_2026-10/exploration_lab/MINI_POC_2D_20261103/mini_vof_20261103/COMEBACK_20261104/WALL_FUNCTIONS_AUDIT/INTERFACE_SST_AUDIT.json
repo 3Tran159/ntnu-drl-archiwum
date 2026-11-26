@@ -1,0 +1,275 @@
+{
+  "STOKES_H050_COEX25_20261104_085052": {
+    "field_start.csv": {
+      "groups": {
+        "air": {
+          "cells": 9736,
+          "k_min": 0.0004679846258034544,
+          "k_max": 0.0005090468115502956,
+          "omega_min": 3.24,
+          "omega_max": 19.526993246800057,
+          "mut_mu_max": 10.0,
+          "abs_vorticity_s_inv_max": 29.098962326541198,
+          "strain_s_inv_max": 36.448496506882044
+        },
+        "interface": {
+          "cells": 524,
+          "k_min": 0.0004579536847394988,
+          "k_max": 0.0005260786647779679,
+          "omega_min": 21.334983735179893,
+          "omega_max": 52.48599696031345,
+          "mut_mu_max": 10.000000000000002,
+          "abs_vorticity_s_inv_max": 29.351840990315015,
+          "strain_s_inv_max": 35.78929540612624
+        },
+        "water": {
+          "cells": 10220,
+          "k_min": 0.00045815017626596883,
+          "k_max": 0.0005257897083023285,
+          "omega_min": 45.815017626596884,
+          "omega_max": 52.57897083023285,
+          "mut_mu_max": 10.0,
+          "abs_vorticity_s_inv_max": 0.17441646941342986,
+          "strain_s_inv_max": 0.9052749157338946
+        }
+      },
+      "capped_cells": [],
+      "gradient_method": "central finite differences on existing uniform quasi-2D corridor"
+    },
+    "field_end.csv": {
+      "groups": {
+        "air": {
+          "cells": 9518,
+          "k_min": 4.172542947287918e-08,
+          "k_max": 5.87882879062494,
+          "omega_min": 1.4671382490712427e-10,
+          "omega_max": 55.11646760863543,
+          "mut_mu_max": 100000.0,
+          "abs_vorticity_s_inv_max": 53.655847673264624,
+          "strain_s_inv_max": 52.913550590952205
+        },
+        "interface": {
+          "cells": 957,
+          "k_min": 0.00041673069293732994,
+          "k_max": 0.8403358244745228,
+          "omega_min": 0.27275402214279665,
+          "omega_max": 64.3031817627022,
+          "mut_mu_max": 13290.096044493448,
+          "abs_vorticity_s_inv_max": 53.603426024979605,
+          "strain_s_inv_max": 52.50548798654645
+        },
+        "water": {
+          "cells": 10005,
+          "k_min": 0.00043324902657848277,
+          "k_max": 0.0005143601902898628,
+          "omega_min": 43.519943294267016,
+          "omega_max": 49.91612882600404,
+          "mut_mu_max": 10.739817619707397,
+          "abs_vorticity_s_inv_max": 0.7883878205678972,
+          "strain_s_inv_max": 1.409578444659372
+        }
+      },
+      "capped_cells": [
+        {
+          "xyz_m": [
+            -1.5625,
+            2.15253173276777,
+            0.01
+          ],
+          "relative_to_volume_integrated_interface_m": 0.05200311037490257,
+          "alpha_water": 6.709796346247985e-39,
+          "k": 1.9603944905076185,
+          "omega": 3.9372666312375996e-10,
+          "mu_ratio": 100000.0,
+          "vorticity_z_s_inv": -0.09077386776548124,
+          "strain_s_inv": 0.15681908887896998,
+          "velocity_gradient": [
+            [
+              0.09248201138709078,
+              0.05090411957311858
+            ],
+            [
+              -0.039869748192362664,
+              -0.06068205840550345
+            ]
+          ]
+        },
+        {
+          "xyz_m": [
+            8.437500000000002,
+            2.15253173276777,
+            0.01
+          ],
+          "relative_to_volume_integrated_interface_m": 0.052006728580009653,
+          "alpha_water": 3.6473183580577676e-42,
+          "k": 1.961847201850184,
+          "omega": 3.918966601075449e-10,
+          "mu_ratio": 100000.0,
+          "vorticity_z_s_inv": -0.08918743728875622,
+          "strain_s_inv": 0.157996000836689,
+          "velocity_gradient": [
+            [
+              0.09342832406778712,
+              0.04929722970103967
+            ],
+            [
+              -0.03989020758771655,
+              -0.06089556937542984
+            ]
+          ]
+        },
+        {
+          "xyz_m": [
+            18.4375,
+            2.15253173276777,
+            0.01
+          ],
+          "relative_to_volume_integrated_interface_m": 0.05202335740083486,
+          "alpha_water": 0.0,
+          "k": 1.9739598105198488,
+          "omega": 3.700682564064638e-10,
+          "mu_ratio": 100000.0,
+          "vorticity_z_s_inv": -0.08156447364189212,
+          "strain_s_inv": 0.16501781065678112,
+          "velocity_gradient": [
+            [
+              0.09867828213167229,
+              0.039775615153416766
+            ],
+            [
+              -0.041788858488475356,
+              -0.06225760177004602
+            ]
+          ]
+        },
+        {
+          "xyz_m": [
+            -1.5624999999999998,
+            2.1650317327677695,
+            0.01
+          ],
+          "relative_to_volume_integrated_interface_m": 0.06450311037490186,
+          "alpha_water": 0.0,
+          "k": 1.6638996539967785,
+          "omega": 1.0269603821145027e-08,
+          "mu_ratio": 100000.0,
+          "vorticity_z_s_inv": -0.051916231467135976,
+          "strain_s_inv": 0.2037397932958611,
+          "velocity_gradient": [
+            [
+              -0.10774056721645309,
+              -0.00695091165937356
+            ],
+            [
+              -0.058867143126509536,
+              0.08355186230179612
+            ]
+          ]
+        },
+        {
+          "xyz_m": [
+            8.4375,
+            2.1650317327677695,
+            0.01
+          ],
+          "relative_to_volume_integrated_interface_m": 0.06450672858000894,
+          "alpha_water": 4.9057354224319454e-42,
+          "k": 1.664699450379872,
+          "omega": 9.912292316362453e-09,
+          "mu_ratio": 100000.0,
+          "vorticity_z_s_inv": -0.05241383205383787,
+          "strain_s_inv": 0.20323183523555802,
+          "velocity_gradient": [
+            [
+              -0.10741064505931774,
+              -0.007361728935677547
+            ],
+            [
+              -0.05977556098951542,
+              0.08283015697979845
+            ]
+          ]
+        },
+        {
+          "xyz_m": [
+            18.4375,
+            2.1650317327677695,
+            0.01
+          ],
+          "relative_to_volume_integrated_interface_m": 0.06452335740083415,
+          "alpha_water": 0.0,
+          "k": 1.6734147722369226,
+          "omega": 9.372511363847613e-09,
+          "mu_ratio": 100000.0,
+          "vorticity_z_s_inv": -0.04760879351502867,
+          "strain_s_inv": 0.20138796041114806,
+          "velocity_gradient": [
+            [
+              -0.1059073635625225,
+              -0.01336109683265363
+            ],
+            [
+              -0.0609698903476823,
+              0.07937025774756634
+            ]
+          ]
+        }
+      ],
+      "gradient_method": "central finite differences on existing uniform quasi-2D corridor"
+    }
+  },
+  "SPRINT_A_RAMP40_CFL_SAFE_20261104_091104": {
+    "field_start.csv": {
+      "groups": {
+        "air": {
+          "cells": 10240,
+          "k_min": 0.0004860000000000001,
+          "k_max": 0.0004860000000000001,
+          "omega_min": 3.24,
+          "omega_max": 3.24,
+          "mut_mu_max": 10.0,
+          "abs_vorticity_s_inv_max": 0.0,
+          "strain_s_inv_max": 0.0
+        },
+        "water": {
+          "cells": 10240,
+          "k_min": 0.0004860000000000001,
+          "k_max": 0.0004860000000000001,
+          "omega_min": 48.60000000000001,
+          "omega_max": 48.60000000000001,
+          "mut_mu_max": 10.0,
+          "abs_vorticity_s_inv_max": 0.0,
+          "strain_s_inv_max": 0.0
+        }
+      },
+      "capped_cells": [],
+      "gradient_method": "central finite differences on existing uniform quasi-2D corridor"
+    },
+    "field_end.csv": {
+      "groups": {
+        "air": {
+          "cells": 10240,
+          "k_min": 0.0004759025163084842,
+          "k_max": 0.0004855107367205135,
+          "omega_min": 3.2056014171432974,
+          "omega_max": 5.639262607448178,
+          "mut_mu_max": 10.000684110149013,
+          "abs_vorticity_s_inv_max": 0.015102554868721701,
+          "strain_s_inv_max": 0.013468237048408658
+        },
+        "water": {
+          "cells": 10240,
+          "k_min": 0.000413227920837358,
+          "k_max": 0.0004787888725063666,
+          "omega_min": 41.85553993628589,
+          "omega_max": 47.93281515098408,
+          "mut_mu_max": 10.112351758930954,
+          "abs_vorticity_s_inv_max": 0.019872052438950037,
+          "strain_s_inv_max": 0.018380293949111604
+        }
+      },
+      "capped_cells": [],
+      "gradient_method": "central finite differences on existing uniform quasi-2D corridor"
+    }
+  }
+}

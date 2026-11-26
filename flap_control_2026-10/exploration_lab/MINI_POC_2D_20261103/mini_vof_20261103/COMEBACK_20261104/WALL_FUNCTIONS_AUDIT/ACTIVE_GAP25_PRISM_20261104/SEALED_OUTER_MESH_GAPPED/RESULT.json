@@ -1,0 +1,58 @@
+{
+  "status": "HOLD",
+  "stage": "DT050MS",
+  "BASELINE": {
+    "status": "GAP_BASELINE_READY",
+    "samples": 0,
+    "startup_s": 120.43089449999752,
+    "solver_step_median_s": null,
+    "solver_step_mean_s": null,
+    "end_to_end_s": 235.56103649999932,
+    "dt_s": 0.0005,
+    "checkpoint_sha256_input": null,
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\ACTIVE_GAP25_MATCHED_OUTER_BASELINE_20261104_132335\\FINAL.sim",
+    "checkpoint_sha256": "c90ef255e916708bb4eecc2098c00a70597d1dcdd3a7d9e28ffa972421887cb0",
+    "state": {
+      "status": "GAP_BASELINE_READY",
+      "steps": 0,
+      "U_m_s": 18.0,
+      "time_s": 0
+    },
+    "transport_ok": true,
+    "training_approved": false,
+    "W06": {
+      "baseline_s": 1.6885599500001263,
+      "peak_slowdown": 0.07309100870227314,
+      "stop": null
+    }
+  },
+  "DT050MS": {
+    "status": "HOLD_SINGLE_PHASE_SAFETY",
+    "samples": 1,
+    "startup_s": 122.25659569999698,
+    "solver_step_median_s": null,
+    "solver_step_mean_s": null,
+    "end_to_end_s": 154.84857740000007,
+    "dt_s": 0.0005,
+    "checkpoint_sha256_input": "c90ef255e916708bb4eecc2098c00a70597d1dcdd3a7d9e28ffa972421887cb0",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\ACTIVE_GAP25_MATCHED_OUTER_DT050MS_20261104_132748\\FINAL.sim",
+    "checkpoint_sha256": "413a6947fcb38d06e294610d3b3a7d0e9b9726ef74536ad74bba8c4499f2fd19",
+    "state": {
+      "U_m_s": 18.0,
+      "normalized_max_final25": 0.0,
+      "time_s": 0.0005,
+      "VOF": false,
+      "steps": 1,
+      "training_approved": false,
+      "status": "HOLD_SINGLE_PHASE_SAFETY"
+    },
+    "transport_ok": true,
+    "training_approved": false,
+    "W06": {
+      "baseline_s": 1.7548219999998764,
+      "peak_slowdown": 0.030013984323996157,
+      "stop": null
+    },
+    "full_cycle": false
+  }
+}

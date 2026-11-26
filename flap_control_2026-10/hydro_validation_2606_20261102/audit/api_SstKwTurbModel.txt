@@ -1,0 +1,13 @@
+Compiled from "SstKwTurbModel.java"
+public class star.kwturb.SstKwTurbModel extends star.kwturb.MenterKwTurbModel {
+  boolean _coObserverHook;
+  public static final java.lang.String A1;
+  public star.kwturb.SstKwTurbModel(star.base.neo.ClientServerObjectKey);
+  public void disconnect();
+  public star.kwturb.KwTurbConstitutiveOption getKwTurbConstitutiveOption();
+  public star.common.EnumeratedOptionInput getConstitutive();
+  public void setConstitutive(star.common.EnumeratedOptionInput);
+  public double getA1();
+  public void setA1(double);
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+}

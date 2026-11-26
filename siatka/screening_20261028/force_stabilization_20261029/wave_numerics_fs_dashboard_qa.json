@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-29T23:50:55.602Z",
+  "views": [
+    {
+      "kind": "main",
+      "width": 1360,
+      "overflow": false,
+      "duplicateIds": [],
+      "waveText": "No-foil wave propagation pilot\n\nCase\nW20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8\n\nStage\nGPU wave propagation pilot running\n\nResources\nGPU · 1 CPU worker\n\nLast saved update\n30 Oct · 00:50:39 local\n\nSaved physical time\n0.725 s\n\nNext gate: Review wave-gauge amplitude, phase, reflection and time resolution.\n\nTransient pilot in progress; wave height, phase and reflections have not yet been accepted. This is a no-foil propagation check, not a foil-force result.\n\nWave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.\n\nPrevious transient attempt: W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3 stopped at 0.850 s on the stability guard; not accepted. Saved-field maximum: 50.092 m/s in water, 0.100 m from the outlet (x = 44.900 m; z = 1.9125 m). Streamwise velocity = -50.089 m/s; pressure = 59,676.6 Pa. The attempt is preserved.\n\nPilot gauge traces · partial record",
+      "numericsText": "Wave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.",
+      "fsText": "M10_FS020_r1 · wave free-surface variant\n\nBuilding wave free-surface mesh on CPU · 2 CPU workers · no GPU\n\nNominal free-surface spacing: 28.571 → 20.000 mm. M09 foil, prism and outer controls retained.\n\nWave-grid preparation only; accepted calm M09 remains separate. Actual cell spacing and foil/prism preservation require audit, followed by matched calm/wave comparisons. The earlier LE/TE proposal remains unbuilt.\n\nSaved update: 30 Oct · 00:44:20 local.",
+      "imageCaptions": [
+        "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8 · partial gauge traces through 0.685 s · plot saved 30 Oct · 00:49:32 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated."
+      ],
+      "errors": []
+    },
+    {
+      "kind": "main",
+      "width": 390,
+      "overflow": false,
+      "duplicateIds": [],
+      "waveText": "No-foil wave propagation pilot\n\nCase\nW20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8\n\nStage\nGPU wave propagation pilot running\n\nResources\nGPU · 1 CPU worker\n\nLast saved update\n30 Oct · 00:50:39 local\n\nSaved physical time\n0.725 s\n\nNext gate: Review wave-gauge amplitude, phase, reflection and time resolution.\n\nTransient pilot in progress; wave height, phase and reflections have not yet been accepted. This is a no-foil propagation check, not a foil-force result.\n\nWave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.\n\nPrevious transient attempt: W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3 stopped at 0.850 s on the stability guard; not accepted. Saved-field maximum: 50.092 m/s in water, 0.100 m from the outlet (x = 44.900 m; z = 1.9125 m). Streamwise velocity = -50.089 m/s; pressure = 59,676.6 Pa. The attempt is preserved.\n\nPilot gauge traces · partial record",
+      "numericsText": "Wave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.",
+      "fsText": "M10_FS020_r1 · wave free-surface variant\n\nBuilding wave free-surface mesh on CPU · 2 CPU workers · no GPU\n\nNominal free-surface spacing: 28.571 → 20.000 mm. M09 foil, prism and outer controls retained.\n\nWave-grid preparation only; accepted calm M09 remains separate. Actual cell spacing and foil/prism preservation require audit, followed by matched calm/wave comparisons. The earlier LE/TE proposal remains unbuilt.\n\nSaved update: 30 Oct · 00:44:20 local.",
+      "imageCaptions": [
+        "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8 · partial gauge traces through 0.685 s · plot saved 30 Oct · 00:49:32 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated."
+      ],
+      "errors": []
+    },
+    {
+      "kind": "professor",
+      "width": 1360,
+      "overflow": false,
+      "duplicateIds": [],
+      "intentionalPrintPages": 18,
+      "waveText": "No-foil wave propagation pilot\n\nCase\nW20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8\n\nStage\nGPU wave propagation pilot running\n\nResources\nGPU · 1 CPU worker\n\nLast saved update\n30 Oct · 00:50:39 local\n\nSaved physical time\n0.725 s\n\nNext gate: Review wave-gauge amplitude, phase, reflection and time resolution.\n\nTransient pilot in progress; wave height, phase and reflections have not yet been accepted. This is a no-foil propagation check, not a foil-force result.\n\nWave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.\n\nPrevious transient attempt: W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3 stopped at 0.850 s on the stability guard; not accepted. Saved-field maximum: 50.092 m/s in water, 0.100 m from the outlet (x = 44.900 m; z = 1.9125 m). Streamwise velocity = -50.089 m/s; pressure = 59,676.6 Pa. The attempt is preserved.\n\nPilot gauge traces · partial record",
+      "numericsText": "Wave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.",
+      "fsText": "M10_FS020_r1 · wave free-surface variant\n\nBuilding wave free-surface mesh on CPU · 2 CPU workers · no GPU\n\nNominal free-surface spacing: 28.571 → 20.000 mm. M09 foil, prism and outer controls retained.\n\nWave-grid preparation only; accepted calm M09 remains separate. Actual cell spacing and foil/prism preservation require audit, followed by matched calm/wave comparisons. The earlier LE/TE proposal remains unbuilt.\n\nSaved update: 30 Oct · 00:44:20 local.",
+      "imageCaptions": [
+        "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8 · partial gauge traces through 0.685 s · plot saved 30 Oct · 00:49:32 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated."
+      ],
+      "errors": []
+    },
+    {
+      "kind": "professor",
+      "width": 390,
+      "overflow": false,
+      "duplicateIds": [],
+      "waveText": "No-foil wave propagation pilot\n\nCase\nW20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8\n\nStage\nGPU wave propagation pilot running\n\nResources\nGPU · 1 CPU worker\n\nLast saved update\n30 Oct · 00:50:39 local\n\nSaved physical time\n0.725 s\n\nNext gate: Review wave-gauge amplitude, phase, reflection and time resolution.\n\nTransient pilot in progress; wave height, phase and reflections have not yet been accepted. This is a no-foil propagation check, not a foil-force result.\n\nWave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.\n\nPrevious transient attempt: W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3 stopped at 0.850 s on the stability guard; not accepted. Saved-field maximum: 50.092 m/s in water, 0.100 m from the outlet (x = 44.900 m; z = 1.9125 m). Streamwise velocity = -50.089 m/s; pressure = 59,676.6 Pa. The attempt is preserved.\n\nPilot gauge traces · partial record",
+      "numericsText": "Wave numerics · short diagnostics\n\n20 versus 10 inner iterations: same second-order 1 ms case, compared over 0.502–0.750 s.\n\nPeak mass-budget residual: 0.0145194% → 0.0113353%. 0.01% gate not passed (4 samples above the limit).\n\nMaximum gauge difference: 0.2902 mm. This short check does not admit a longer wave run or foil-force comparison.\n\nCurrent half-step probe: 0.500 ms · 10 inner · second-order time. Same 0.500 s checkpoint → 0.750 s target (500 steps). Only Δt changes relative to the 1 ms reference; result pending.",
+      "fsText": "M10_FS020_r1 · wave free-surface variant\n\nBuilding wave free-surface mesh on CPU · 2 CPU workers · no GPU\n\nNominal free-surface spacing: 28.571 → 20.000 mm. M09 foil, prism and outer controls retained.\n\nWave-grid preparation only; accepted calm M09 remains separate. Actual cell spacing and foil/prism preservation require audit, followed by matched calm/wave comparisons. The earlier LE/TE proposal remains unbuilt.\n\nSaved update: 30 Oct · 00:44:20 local.",
+      "imageCaptions": [
+        "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8 · partial gauge traces through 0.685 s · plot saved 30 Oct · 00:49:32 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated."
+      ],
+      "errors": []
+    }
+  ]
+}

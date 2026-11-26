@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "updated_at": "2026-10-30T12:16:02.660370+01:00",
+  "case": "W01a_W20L4_M10_calm_start_r1",
+  "user_override": "Activate inlet wave without waiting for calm force convergence; current startup fields saved and wave activation pending",
+  "surfaces": [
+    "operational",
+    "professor"
+  ],
+  "widths": [
+    1920,
+    1360,
+    390
+  ],
+  "checks": {
+    "current_case_only": true,
+    "old_r2_history_cleared_from_live_panel": true,
+    "rich_stage_strip": "Startup \u2192 Inlet wave ramp \u2192 Wave arrival \u2192 Repeating cycles",
+    "progress_bars": 3,
+    "force_settling_gate_removed": true,
+    "phase_clock_pending": true,
+    "eta_pending_activation": true,
+    "calm_diagnostics_optional": true,
+    "loaded_actual_field_images_per_panel": 2,
+    "keyboard_vorticity_toggle_pass": true,
+    "page_overflow": false,
+    "js_errors": 0,
+    "print_heading_image_caption_same_page": true,
+    "source_copy_parity": {
+      "dashboard.html": {
+        "original": "24c710a77b5b97a24302c6a84558ba832fcbbdf8801168d67f33f51415accdf9",
+        "copy": "24c710a77b5b97a24302c6a84558ba832fcbbdf8801168d67f33f51415accdf9",
+        "equal": true
+      },
+      "professor_dashboard.html": {
+        "original": "0b4ce27bb756a107f8419e3426e78fb4e1e57d2ea4a448efb42cebafe5c45589",
+        "copy": "0b4ce27bb756a107f8419e3426e78fb4e1e57d2ea4a448efb42cebafe5c45589",
+        "equal": true
+      }
+    }
+  },
+  "fields": {
+    "free_surface_time_s": 0.587,
+    "vorticity_time_s": 0.020000000000000014,
+    "vorticity_source": "Native STAR VorticityVector component1; no velocity-gradient reconstruction",
+    "views": [
+      {
+        "name": "Foil and near wake",
+        "x": [
+          -2.0,
+          6.0
+        ],
+        "z": [
+          -1.0,
+          1.5
+        ],
+        "range": 1000.0,
+        "saved_cells_in_view": 116924,
+        "saved_cell_clipping_pct": 26.56511922274298,
+        "display_min_per_s": -1000.0,
+        "display_max_per_s": 1000.0
+      },
+      {
+        "name": "Wake focus",
+        "x": [
+          1.2050000000000003,
+          6.0
+        ],
+        "z": [
+          -0.6,
+          0.6
+        ],
+        "range": 200.0,
+        "saved_cells_in_view": 34079,
+        "saved_cell_clipping_pct": 0.0029343584025352857,
+        "display_min_per_s": -200.0,
+        "display_max_per_s": 200.0
+      }
+    ],
+    "exact_foil_triangle_intersection_mask": true,
+    "source_checkpoint_audit_zero_steps": true,
+    "accepted": false
+  },
+  "local_service": {
+    "http_pid": 39700,
+    "restarted_only_http_from": 26648,
+    "legacy_full_domain_wave_presets_disabled": true,
+    "C01_presets_allowed": true,
+    "solver_actions": 0,
+    "STOP_or_schedule_actions": 0
+  },
+  "evidence": {
+    "screens_and_DOM": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\w01a_native_fields_qa_20261030\\qa.json",
+    "print": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\w01a_native_fields_qa_20261030\\print_review.json",
+    "wide": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\w01a_native_fields_qa_20261030\\operational_1920_panel.png",
+    "mobile": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\w01a_native_fields_qa_20261030\\professor_390_panel.png",
+    "vorticity_print": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\w01a_native_fields_qa_20261030\\professor_vorticity_print_4.png",
+    "vorticity_provenance": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_vorticity_frames\\W01a_W20L4_M10_calm_start_r1_native_omega_y_t0p020_provenance.json",
+    "free_surface_provenance": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\W01a_W20L4_M10_calm_start_r1_t0p587_provenance.json"
+  },
+  "limits": [
+    "Both images are actual saved fields with different explicit timestamps; neither is claimed to be current solver time.",
+    "Display-clipping percentages are by saved cell centres within each view, not physical area.",
+    "The analytical ramp API audit failed separately; these actual calm fields do not validate inlet-wave propagation.",
+    "Next active inlet-wave case needs exact onset/ramp/arrival/analysis_origin metadata before wave-cycle binding."
+  ]
+}

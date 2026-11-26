@@ -1,0 +1,20 @@
+{
+  "signature": "f63563fea5c36219d4f3cc8bc71861a7663ccb4092b51a7a89b7a7ecefd4f1d2",
+  "generated_at": "2026-10-29T20:10:57.905975+01:00",
+  "meshes": [
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M08",
+    "M07"
+  ],
+  "timing_method": "Median and mean elapsed wall seconds between consecutive physical steps in the accepted final 0.2 s window. Mean includes recorded checkpoint/report overhead; median reduces its influence. Initialization and final exports outside this window are excluded. Other CPU activity can affect the observed times.",
+  "source": "mesh_convergence.json; force components from independent STAR reports in the accepted final 0.2 s window",
+  "files": [
+    "mesh_force_cost.png",
+    "mesh_force_cost.svg",
+    "mesh_force_cost.csv"
+  ]
+}

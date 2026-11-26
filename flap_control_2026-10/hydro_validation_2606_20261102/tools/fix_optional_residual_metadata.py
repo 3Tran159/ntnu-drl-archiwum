@@ -1,0 +1,8 @@
+from pathlib import Path
+import subprocess
+h=Path(__file__).resolve().parents[1];p=h/'tools/prepare_distance_diagnostic.py';s=p.read_text(encoding='utf8')
+old='res.append(rm.getPresentationName()+" enabled="+rm.getEnabled()+" normalized="+rm.isNormalized()+" normalization="+rm.getNormalizationType().getClass().getSimpleName()+" factor="+rm.getNormalizationType().getNormalizationFactor()+" auto_index="+rm.getAutoNormalizeIndex()+"\\n");rm.export(out.resolve("residual_"+label+"_"+rm.getPresentationName().replaceAll("[^A-Za-z0-9_-]","_")+".csv").toString());'
+new='try{res.append(rm.getPresentationName()+" enabled="+rm.getEnabled()+" normalized="+rm.isNormalized()+" normalization="+rm.getNormalizationType().getClass().getSimpleName()+" factor="+rm.getNormalizationType().getNormalizationFactor()+"\\n");}catch(Exception metadataError){res.append("OPTIONAL_METADATA_ERROR "+rm.getPresentationName()+" "+metadataError+"\\n");}try{rm.export(out.resolve("residual_"+label+"_"+rm.getPresentationName().replaceAll("[^A-Za-z0-9_-]","_")+".csv").toString());}catch(Exception exportError){res.append("RESIDUAL_EXPORT_INCOMPLETE "+rm.getPresentationName()+" "+exportError+"\\n");}'
+assert s.count(old)==1;s=s.replace(old,new);p.write_text(s,encoding='utf8')
+r=subprocess.run([r'C:\Users\ThinkPad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe',str(p)],capture_output=True,text=True,creationflags=subprocess.CREATE_NO_WINDOW);print(r.stdout);assert r.returncode==0,r.stderr
+print('Removed invalid AutoNormalizeIndex accessor. Optional metadata failures are recorded, never treated as a pass. Native fields/connectivity/safety guards remain strict.')

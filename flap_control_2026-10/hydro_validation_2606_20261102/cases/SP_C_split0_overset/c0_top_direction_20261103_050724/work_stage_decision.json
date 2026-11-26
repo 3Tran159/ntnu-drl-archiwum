@@ -1,0 +1,329 @@
+{
+  "at": "2026-11-03T05:34:30.105112+01:00",
+  "kind": "work_completed_top_direction_diagnostic",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+  "checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\checkpoint.sim",
+    "bytes": 1525385629,
+    "sha256": "c8b2396f2d087112d06045b06a6c62e93c4003eafde969aa8c8d0ca8120afc10",
+    "saved_time_s": 0.65,
+    "native_save_complete": true,
+    "hash_at": "2026-11-03T05:34:10.075972+01:00",
+    "native_reopen_verified": false,
+    "physical_time_s": 0.65,
+    "native_iteration": 11560,
+    "dt_s": 0.002,
+    "inner_iterations": 40,
+    "velocity_urf": 0.8,
+    "pressure_urf": 0.2,
+    "top_backflow_direction": "EXTRAPOLATED",
+    "top_backflow_pressure": "ENVIRONMENTAL",
+    "CL": 0.32565302062,
+    "CD": 0.00724451083952,
+    "Mh_Nm": -12.0404202686,
+    "pabs_min_Pa": 30097.6945773,
+    "scientific_approved": false,
+    "note": "Complete native save/hash verified; native reopen pending. Corrected mesh and top-direction diagnostic passed strict guards, force windows and residual checks. Far-top velocity memory remains, so final hydrodynamic/training approval is withheld pending matchedB and settling assessment."
+  },
+  "last25_means": {
+    "CL_hydro": 0.32561948776312,
+    "CD": 0.0072459371243424,
+    "Fx_N": 27.937435176616,
+    "Fz_N": 1278.1254605592,
+    "Mh_Nm": -12.040069616323999
+  },
+  "force_windows": [
+    {
+      "end_step": 50,
+      "time_s": 0.55,
+      "means": {
+        "CL_hydro": 0.32545011146716,
+        "CD": 0.0072530284021911995,
+        "Mh_Nm": -12.038321106584,
+        "Fx_N": 27.964776307488002,
+        "Fz_N": 1277.4724133112
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0002948267019096895,
+        "CD": 0.0005381721252905521,
+        "Mh_Nm": 8.271003001035679e-05,
+        "Fx_N": 0.0005381721253379005,
+        "Fz_N": 0.0002895954121160916
+      },
+      "mass_max": 6.39443442196e-09,
+      "pabs_min": 30111.1144414,
+      "relative_mean_change": {
+        "CL_hydro": 0.0003372296510322226,
+        "CD": -0.0005325302536065557,
+        "Mh_Nm": 9.763998738110402e-05
+      },
+      "force_window_pass": true
+    },
+    {
+      "end_step": 75,
+      "time_s": 0.6,
+      "means": {
+        "CL_hydro": 0.32554182864184,
+        "CD": 0.007249219225308798,
+        "Mh_Nm": -12.039265887131998,
+        "Fx_N": 27.950089645111998,
+        "Fz_N": 1277.82603805
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0002484537312375698,
+        "CD": 0.0004698723647517745,
+        "Mh_Nm": 6.950114798071028e-05,
+        "Fx_N": 0.0004698723677366825,
+        "Fz_N": 0.00024404649045657622
+      },
+      "mass_max": 5.88386380211e-09,
+      "pabs_min": 30103.6029778,
+      "relative_mean_change": {
+        "CL_hydro": 0.0002818163873612445,
+        "CD": -0.0005251843328299977,
+        "Mh_Nm": 7.848108881902682e-05
+      },
+      "force_window_pass": true
+    },
+    {
+      "end_step": 100,
+      "time_s": 0.65,
+      "means": {
+        "CL_hydro": 0.32561948776312,
+        "CD": 0.0072459371243424,
+        "Mh_Nm": -12.040069616323999,
+        "Fx_N": 27.937435176616,
+        "Fz_N": 1278.1254605592
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0002111628344862755,
+        "CD": 0.0004029538995295545,
+        "Mh_Nm": 5.9598052408892744e-05,
+        "Fx_N": 0.00040295389783747207,
+        "Fz_N": 0.00020741795557680656
+      },
+      "mass_max": 4.97449070314e-09,
+      "pabs_min": 30097.6945773,
+      "relative_mean_change": {
+        "CL_hydro": 0.00023855343445111643,
+        "CD": -0.0004527523398574207,
+        "Mh_Nm": 6.67589867633378e-05
+      },
+      "force_window_pass": true
+    }
+  ],
+  "strict_guards": {
+    "pressure": true,
+    "volume": true,
+    "quality": true,
+    "face": true,
+    "overset_active_errors": true,
+    "angle_zero": true,
+    "mass": true,
+    "omega_floor_cells": true,
+    "k_floor_cells": true,
+    "viscosity_ratio": true,
+    "finite_history": true
+  },
+  "full_native_audit": "time=0.6500000000000005 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.128750119087941E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629553493 methods={0=1481}\n",
+  "near_field": {
+    "active_cells": 255350,
+    "omega_floor_cells": 0,
+    "k_floor_cells": 0,
+    "viscosity_ratio_cap_cells": 0,
+    "max_viscosity_ratio": 1242.7055140241648,
+    "speed_max_near_m_s": 22.335879237362025,
+    "meanflow_p0_max_near_Pa": 164368.26762324793,
+    "meanflow_p0_p99_near_Pa": 162367.02619031075,
+    "pabs_min_Pa": 30097.694577269285,
+    "max_speed_location": {
+      "region": "Background",
+      "X (m)": 0.6978899300031532,
+      "Z (m)": 0.104512051498826,
+      "Pressure (Pa)": -87645.45049309822,
+      "Specific Dissipation Rate (/s)": 310.56730643246595,
+      "speed_m_s": 22.335879237362025,
+      "p0_meanflow_Pa": 161800.3001599118
+    },
+    "max_head_location": {
+      "region": "Background",
+      "X (m)": 0.0027542063527191,
+      "Z (m)": -0.0051482873221328,
+      "Pressure (Pa)": 69267.18795328034,
+      "Wall Distance (m)": 0.0001088377136768,
+      "Turbulent Kinetic Energy (J/kg)": 0.0005499664083269,
+      "Specific Dissipation Rate (/s)": 7902.263460642096,
+      "Turbulent Viscosity Ratio": 0.0605322660797655,
+      "Volume (m^3)": 7.366095356684909e-10,
+      "Cell Quality": 0.9996350493254392,
+      "speed_m_s": 13.79137989252472,
+      "p0_meanflow_Pa": 164368.26762324793
+    },
+    "head_gt1p1q_near_cells": 0,
+    "head_gt1p1q_near_volume_fraction": 0.0
+  },
+  "far_top": {
+    "at": "2026-11-03T05:34:07.700015+01:00",
+    "label": "final",
+    "selection": "Active Background volume cells,10<x<43,7<z<8; native far-band mean cross-checked against offline export",
+    "scientific_approved": false,
+    "baseline": {
+      "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\Background_final_volume.csv",
+      "cells": 544,
+      "volume_m3": 0.667529949640846,
+      "vx_mean": 16.87462163899505,
+      "vx_min": 8.16530277689985,
+      "vz_rms": 0.13407358307252543,
+      "uniform18_velocity_deviation_rms": 2.0131220137432844,
+      "pabs_min_Pa": 36741.234034183675,
+      "piezometric_min_Pa": -8080.637198255967,
+      "piezometric_max_Pa": 9511.04154676222,
+      "deficit_volume_mean": 1.1254494490836746,
+      "deficit_x_centroid_m": 31.656085448817752
+    },
+    "candidate": {
+      "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724\\Background_final_volume.csv",
+      "cells": 544,
+      "volume_m3": 0.667529949640846,
+      "vx_mean": 17.0495408659428,
+      "vx_min": 11.977371703928029,
+      "vz_rms": 0.1452666951903585,
+      "uniform18_velocity_deviation_rms": 1.416244162934481,
+      "pabs_min_Pa": 42496.7941056746,
+      "piezometric_min_Pa": -599.0160186758361,
+      "piezometric_max_Pa": 1632.8579779491056,
+      "deficit_volume_mean": 0.9504591340571998,
+      "deficit_x_centroid_m": 32.19520893155706
+    }
+  },
+  "residual": {
+    "at": "2026-11-03T05:33:51.500031+01:00",
+    "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+    "complete_steps": 100,
+    "last_step": 100,
+    "window_steps": [
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "cases": {
+      "normal": {
+        "Continuity": {
+          "normalization_factor": 0.003963208746565847,
+          "steps": 25,
+          "median_last": 0.967028858213358,
+          "median_last_over_first": 0.5194534015695036,
+          "p90_last_over_first": 0.793155689603274
+        },
+        "X-momentum": {
+          "normalization_factor": 0.02149720992236967,
+          "steps": 25,
+          "median_last": 5.624719821444683,
+          "median_last_over_first": 0.09580463951856111,
+          "p90_last_over_first": 0.1183467850006529
+        },
+        "Z-momentum": {
+          "normalization_factor": 0.01087764939339029,
+          "steps": 25,
+          "median_last": 4.8814014837958695,
+          "median_last_over_first": 0.11949594174286425,
+          "p90_last_over_first": 0.1778244545983488
+        },
+        "Tke": {
+          "normalization_factor": 0.003064984585937406,
+          "steps": 25,
+          "median_last": 0.0136623078976889,
+          "median_last_over_first": 0.08122882724320264,
+          "p90_last_over_first": 0.11836315028968993
+        },
+        "Sdr": {
+          "normalization_factor": 894340.9321518223,
+          "steps": 25,
+          "median_last": 5.7516097802698906e-06,
+          "median_last_over_first": 0.18438421686243656,
+          "p90_last_over_first": 0.23731887773443341
+        }
+      },
+      "extrapolated": {
+        "Continuity": {
+          "normalization_factor": 0.003963208746565847,
+          "steps": 25,
+          "median_last": 8.06464e-06,
+          "median_last_over_first": 0.0001165877272421279,
+          "p90_last_over_first": 0.00016340060891372176
+        },
+        "X-momentum": {
+          "normalization_factor": 0.02149720992236967,
+          "steps": 25,
+          "median_last": 0.0002469322,
+          "median_last_over_first": 7.687419057581192e-06,
+          "p90_last_over_first": 1.1936040740293086e-05
+        },
+        "Z-momentum": {
+          "normalization_factor": 0.01087764939339029,
+          "steps": 25,
+          "median_last": 0.0005339847,
+          "median_last_over_first": 1.4332608490069844e-05,
+          "p90_last_over_first": 2.4575275826032385e-05
+        },
+        "Tke": {
+          "normalization_factor": 0.003064984585937406,
+          "steps": 25,
+          "median_last": 2.099332e-07,
+          "median_last_over_first": 2.4485856850661387e-06,
+          "p90_last_over_first": 2.4872956428232016e-06
+        },
+        "Sdr": {
+          "normalization_factor": 894340.9321518223,
+          "steps": 25,
+          "median_last": 6.179673e-10,
+          "median_last_over_first": 6.383683052064868e-05,
+          "p90_last_over_first": 6.589314201319535e-05
+        }
+      }
+    },
+    "scientific_approved": false,
+    "source": "Current native STAR residual lines for complete40-inner blocks; baseline native exported monitors. No secret data output.",
+    "native_csv_crosscheck": {
+      "Continuity": true,
+      "X-momentum": true,
+      "Y-momentum": true,
+      "Z-momentum": true,
+      "Tke": true,
+      "Sdr": true
+    },
+    "median_last_extrapolated_over_normal": {
+      "Continuity": 8.339606343185963e-06,
+      "X-momentum": 4.390124447773412e-05,
+      "Z-momentum": 0.00010939167814255742,
+      "Tke": 1.5365866555789747e-05,
+      "Sdr": 0.0001074424941204899
+    }
+  },
+  "diagnostic_mechanism_positive": true,
+  "scientific_approved": false,
+  "training_approved": false,
+  "conclusion": "The direction-only change eliminated the repeated remote-top pressure minima and inner-iteration residual plateau. Near-foil field remains healthy and force windows stable. Tangential velocity memory is recovering but not fully settled; not a final training/validation result. Approve matched B0 follow-up with topEXTRAPOLATED and40inner to isolate Overset under the same boundary/numerics. Keep all nonzero angles blocked."
+}

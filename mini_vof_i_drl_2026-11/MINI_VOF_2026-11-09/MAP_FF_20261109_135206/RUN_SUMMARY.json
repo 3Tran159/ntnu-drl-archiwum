@@ -1,0 +1,67 @@
+{
+ "case": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\MAP_FF_20261109_135206",
+ "mode": "map",
+ "steps": 3644,
+ "cpus": [
+  8,
+  9
+ ],
+ "star": "2606.0002",
+ "properties": {
+  "mode": "map",
+  "steps": 3644,
+  "tick_steps": 10,
+  "expected_time_s": 3.9230000000004543,
+  "cl_target": 0.33154336603961815,
+  "plant_gain_per_deg": 0.0356,
+  "kp": 0.8,
+  "ti_s": 0.15,
+  "delta_max_deg": 2.0,
+  "rate_max_deg_s": 30.0,
+  "wall_budget_s": "40000",
+  "stop_file": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\MAP_FF_20261109_135206\\STOP",
+  "map_amp_deg": "0.16623000770467758",
+  "map_omega_rad_s": "13.7936594442347",
+  "map_theta0_rad": "1.9144815670492747",
+  "map_ramp_s": "0.4555125731921526",
+  "playback": "1",
+  "map_phase_off_deg": "125.89265164954459"
+ },
+ "launch": {
+  "returncode": 1,
+  "seconds": 18960.0,
+  "bound": [
+   [
+    "19552",
+    "starccm+"
+   ],
+   [
+    "33508",
+    "conhost"
+   ],
+   [
+    "37136",
+    "python"
+   ],
+   [
+    "37292",
+    "cmd"
+   ]
+  ],
+  "cpus": [
+   8,
+   9
+  ],
+  "np": 2,
+  "gpu": false
+ },
+ "FC_RESULT.json": {
+  "result": "DONE",
+  "integrator": 0.0,
+  "end_time_s": 5.7449999999995125,
+  "mode": "map",
+  "final_cmd_deg": -0.0240966134872924,
+  "wall_s": 18862.7802949
+ },
+ "final_sim": true
+}

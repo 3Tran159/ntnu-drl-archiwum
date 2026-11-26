@@ -1,0 +1,322 @@
+{
+  "at": "2026-11-02T22:35:09.882730+01:00",
+  "sources": {
+    "SP_B": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_B_20261102_222923",
+    "SP_C": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_C_20261102_223230"
+  },
+  "force": {
+    "SP_B": {
+      "main_pressure": [
+        41.74712528994412,
+        0.0,
+        1123.5937006563192
+      ],
+      "main_shear": [
+        18.838474702542705,
+        3.327771552205087e-15,
+        0.5960048358004881
+      ],
+      "main_total": [
+        60.58559999248683,
+        3.327771552205087e-15,
+        1124.1897054921196
+      ],
+      "flap_pressure": [
+        -34.58736868516007,
+        0.0,
+        159.79738831373686
+      ],
+      "flap_shear": [
+        1.6339227744907305,
+        1.7933976987078564e-15,
+        0.1040531499468272
+      ],
+      "flap_total": [
+        -32.953445910669345,
+        1.7933976987078564e-15,
+        159.90144146368368
+      ]
+    },
+    "SP_C": {
+      "main_pressure": [
+        40.000652581212385,
+        0.0,
+        1298.5277269140765
+      ],
+      "main_shear": [
+        20.063118477856044,
+        1.1552846651267728e-15,
+        0.5656327442262029
+      ],
+      "main_total": [
+        60.06377105906843,
+        1.1552846651267728e-15,
+        1299.0933596583027
+      ],
+      "flap_pressure": [
+        -38.99507030164039,
+        0.0,
+        171.071313452327
+      ],
+      "flap_shear": [
+        3.9162655354718052,
+        6.243138688049947e-15,
+        -0.26408481890880486
+      ],
+      "flap_total": [
+        -35.07880476616858,
+        6.243138688049947e-15,
+        170.8072286334182
+      ]
+    }
+  },
+  "fields": {
+    "SP_B_Background": {
+      "region": "Background",
+      "active_exported_cells": 256750,
+      "columns": [
+        "Pressure (Pa)",
+        "Absolute Pressure (Pa)",
+        "Volume (m^3)",
+        "Cell Quality",
+        "Wall Distance (m)",
+        "Turbulent Kinetic Energy (J/kg)",
+        "Specific Dissipation Rate (/s)",
+        "Turbulent Viscosity Ratio",
+        "Velocity[i] (m/s)",
+        "Velocity[j] (m/s)",
+        "Velocity[k] (m/s)",
+        "X (m)",
+        "Y (m)",
+        "Z (m)"
+      ],
+      "near_main_samples": 23170,
+      "wall_distance_to_native_main_ratio_quantiles": {
+        "0": 0.9907513081163795,
+        "0.01": 0.9967520704351349,
+        "0.1": 0.9999998446713558,
+        "0.5": 1.0000003753926339,
+        "0.9": 1.0054606625284515,
+        "0.99": 1.0610872468194734,
+        "1": 1.404206983598386
+      },
+      "wall_distance_absolute_error_max_m": 8.539851874528413e-05,
+      "inside_native_main": 540,
+      "inside_native_flap": 7
+    },
+    "SP_C_Background": {
+      "region": "Background",
+      "active_exported_cells": 211504,
+      "columns": [
+        "Pressure (Pa)",
+        "Absolute Pressure (Pa)",
+        "Volume (m^3)",
+        "Cell Quality",
+        "Wall Distance (m)",
+        "Turbulent Kinetic Energy (J/kg)",
+        "Specific Dissipation Rate (/s)",
+        "Turbulent Viscosity Ratio",
+        "Overset Cell Status",
+        "Overset Cell Type",
+        "Overset Error Status",
+        "Overset Interpolation Type",
+        "Overset Interpolation Cell Size Ratio",
+        "Velocity[i] (m/s)",
+        "Velocity[j] (m/s)",
+        "Velocity[k] (m/s)",
+        "X (m)",
+        "Y (m)",
+        "Z (m)"
+      ],
+      "near_main_samples": 18047,
+      "Overset Error Status": {
+        "0": 211504
+      },
+      "Overset Interpolation Type": {
+        "-2": 211504
+      },
+      "Overset Cell Type": {
+        "0": 211504
+      },
+      "wall_distance_to_native_main_ratio_quantiles": {
+        "0": 0.9899314123725289,
+        "0.01": 0.9996211150641172,
+        "0.1": 0.9999999971189886,
+        "0.5": 1.0000364710749852,
+        "0.9": 1.0072241914171614,
+        "0.99": 1.0796386302023648,
+        "1": 1.4746978216733007
+      },
+      "wall_distance_absolute_error_max_m": 8.692295228692089e-05,
+      "inside_native_main": 547,
+      "inside_native_flap": 0
+    },
+    "SP_C_FlapOverset": {
+      "region": "FlapOverset",
+      "active_exported_cells": 40657,
+      "columns": [
+        "Pressure (Pa)",
+        "Absolute Pressure (Pa)",
+        "Volume (m^3)",
+        "Cell Quality",
+        "Wall Distance (m)",
+        "Turbulent Kinetic Energy (J/kg)",
+        "Specific Dissipation Rate (/s)",
+        "Turbulent Viscosity Ratio",
+        "Overset Cell Status",
+        "Overset Cell Type",
+        "Overset Error Status",
+        "Overset Interpolation Type",
+        "Overset Interpolation Cell Size Ratio",
+        "Velocity[i] (m/s)",
+        "Velocity[j] (m/s)",
+        "Velocity[k] (m/s)",
+        "X (m)",
+        "Y (m)",
+        "Z (m)"
+      ],
+      "near_main_samples": 4260,
+      "Overset Error Status": {
+        "0": 40657
+      },
+      "Overset Interpolation Type": {
+        "-2": 40657
+      },
+      "Overset Cell Type": {
+        "0": 40657
+      },
+      "wall_distance_to_native_main_ratio_quantiles": {
+        "0": 0.9901938323909094,
+        "0.01": 0.9960422206408324,
+        "0.1": 0.9996272198123579,
+        "0.5": 0.9999978435411956,
+        "0.9": 1.0000207059639057,
+        "0.99": 1.0033984043649395,
+        "1": 1.1747120168123573
+      },
+      "wall_distance_absolute_error_max_m": 4.38653720060891e-05,
+      "inside_native_main": 0,
+      "inside_native_flap": 7
+    }
+  },
+  "full_overset": {
+    "Background_full_plane": {
+      "rows": 304810,
+      "finite_status_verified": true,
+      "columns": [
+        "Overset Cell Status",
+        "Overset Cell Type",
+        "Overset Error Status",
+        "Overset Interpolation Type",
+        "Overset Interpolation Cell Size Ratio",
+        "X (m)",
+        "Y (m)",
+        "Z (m)"
+      ],
+      "Overset Cell Status": {
+        "0": 211504,
+        "1": 91670,
+        "-2": 1636
+      },
+      "Overset Cell Type": {
+        "0": 211504,
+        "-1": 91670,
+        "3": 1636
+      },
+      "Overset Error Status": {
+        "0": 304810
+      },
+      "Overset Interpolation Type": {
+        "-2": 303174,
+        "0": 1015,
+        "2": 452,
+        "7": 169
+      },
+      "acceptor_size_ratio_quantiles": {
+        "0": 0.2936046990248932,
+        "0.01": 0.34241973895666084,
+        "0.1": 0.42636311582338726,
+        "0.5": 0.6474346350076055,
+        "0.9": 1.0717899661609305,
+        "0.99": 1.23164381823261,
+        "1": 1.595282878970911
+      }
+    },
+    "FlapOverset_full_plane": {
+      "rows": 56722,
+      "finite_status_verified": true,
+      "columns": [
+        "Overset Cell Status",
+        "Overset Cell Type",
+        "Overset Error Status",
+        "Overset Interpolation Type",
+        "Overset Interpolation Cell Size Ratio",
+        "X (m)",
+        "Y (m)",
+        "Z (m)"
+      ],
+      "Overset Cell Status": {
+        "0": 40657,
+        "1": 15142,
+        "-2": 923
+      },
+      "Overset Cell Type": {
+        "0": 40657,
+        "-1": 15142,
+        "3": 923
+      },
+      "Overset Error Status": {
+        "0": 56722
+      },
+      "Overset Interpolation Type": {
+        "-2": 55799,
+        "2": 415,
+        "0": 362,
+        "7": 146
+      },
+      "acceptor_size_ratio_quantiles": {
+        "0": 0.5634158203013927,
+        "0.01": 0.6172110216658915,
+        "0.1": 0.7947284324788125,
+        "0.5": 1.21964093925386,
+        "0.9": 2.7010583160593327,
+        "0.99": 4.174325193808914,
+        "1": 9.211892538332323
+      }
+    }
+  },
+  "training_approved": false,
+  "scientific_gate": false,
+  "force_C_minus_B_N": {
+    "main_pressure": [
+      -1.746472708731737,
+      0.0,
+      174.9340262577573
+    ],
+    "main_shear": [
+      1.2246437753133392,
+      -2.172486887078314e-15,
+      -0.03037209157428522
+    ],
+    "main_total": [
+      -0.5218289334183979,
+      -2.172486887078314e-15,
+      174.90365416618306
+    ],
+    "flap_pressure": [
+      -4.407701616480317,
+      0.0,
+      11.27392513859013
+    ],
+    "flap_shear": [
+      2.2823427609810745,
+      4.44974098934209e-15,
+      -0.36813796885563205
+    ],
+    "flap_total": [
+      -2.125358855499236,
+      4.44974098934209e-15,
+      10.90578716973451
+    ]
+  }
+}

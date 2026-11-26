@@ -1,0 +1,189 @@
+{
+  "updated_at": "2026-10-30T11:32:59.043532+01:00",
+  "case": "W07_L10_X4_M10_geometry_r1",
+  "status": "file_geometry_audited_pending_STAR_import",
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W07_L10_X4_M10_geometry_r1",
+  "builder": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\clip_extend_campaign_domain.py",
+  "independent_auditor": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\audit_clipped_campaign_domain.py",
+  "unit_tests": {
+    "passed": 7,
+    "failures": 0,
+    "scope": "canonical edge intersections, exact vertex reuse, opposite winding, two-sided clipping, remove/keep cases and tiny positive cells"
+  },
+  "code_sha256": {
+    "clip_extend_campaign_domain.py": "fb0dbb4db9f28a272123fd4a5d57701574a08057b2e2dea808a8fb927a5114c2",
+    "audit_clipped_campaign_domain.py": "286ba5299df817e7186c73f99b8d0fcf58488b6cb2efbda5bdfc0350ec69c3d9",
+    "test_clip_extend_campaign_domain.py": "8b8c322368e3ef163b56ea2fb90ecbf185bbfb16b417cebcd61a2007c13ec00f"
+  },
+  "source_identity": {
+    "source": "E:\\ntnu\\mesh_builds_20261029\\M10_FS020_r1\\mesh.CGNS",
+    "source_sha256": "fa16baf7161bdb2c40eed2c35139e01aa31e8859835e14d31a33dc19ffafb414",
+    "target": "E:\\ntnu\\quasi2d_waves_20261029\\W07_L10_X4_M10_geometry_r1",
+    "requested_x_bounds_m": [
+      -17.5,
+      22.5
+    ],
+    "flow_steps": 0,
+    "workers": 1,
+    "gpu": false
+  },
+  "build": {
+    "source": "E:\\ntnu\\mesh_builds_20261029\\M10_FS020_r1\\mesh.CGNS",
+    "source_sha256": "fa16baf7161bdb2c40eed2c35139e01aa31e8859835e14d31a33dc19ffafb414",
+    "target": "E:\\ntnu\\quasi2d_waves_20261029\\W07_L10_X4_M10_geometry_r1",
+    "requested_x_bounds_m": [
+      -17.5,
+      22.5
+    ],
+    "flow_steps": 0,
+    "workers": 1,
+    "gpu": false,
+    "status": "file_geometry_built_pending_independent_audit",
+    "source_unchanged": true,
+    "source_cells": 282379,
+    "cells": 254146,
+    "source_cell_status_counts": {
+      "remove": 33469,
+      "crop": 250,
+      "keep": 248660
+    },
+    "extension_cells": 5236,
+    "extensions": [
+      {
+        "side": "inlet",
+        "old_x_m": -11.9,
+        "new_x_m": -17.5,
+        "columns": 28,
+        "rows": 187,
+        "dx_m": 0.19999999999999998
+      }
+    ],
+    "source_bounds_m": [
+      -11.9,
+      30.940000000000005,
+      -22.0,
+      8.0
+    ],
+    "target_bounds_m": [
+      -17.5,
+      22.5,
+      -22.0,
+      8.0
+    ],
+    "span_m": 0.02,
+    "protected_x_interval_m": [
+      -5.0,
+      5.0
+    ],
+    "protected_cells_preserved": true,
+    "canonical_intersection_count": 251,
+    "expected_area_m2": 1199.8842115912971,
+    "actual_area_m2": 1199.884211591297,
+    "expected_volume_m3": 23.997684231825943,
+    "actual_volume_m3": 23.99768423182594,
+    "output_sha256": "ccbf6256f58210a3475a477b3f0bade6ecf1b4fa68662acf5106a53749c930d3",
+    "pending": [
+      "Independent signed-NFACE topology and source-preservation audit",
+      "STAR import and native cell-quality audit",
+      "Matched calm and all wave numerical/propagation accuracy checks"
+    ]
+  },
+  "independent_audit": {
+    "status": "independent_file_geometry_gates_passed_pending_STAR_import",
+    "source": "E:\\ntnu\\mesh_builds_20261029\\M10_FS020_r1\\mesh.CGNS",
+    "source_unchanged": true,
+    "source_sha256": "fa16baf7161bdb2c40eed2c35139e01aa31e8859835e14d31a33dc19ffafb414",
+    "output_sha256": "ccbf6256f58210a3475a477b3f0bade6ecf1b4fa68662acf5106a53749c930d3",
+    "cells": 254146,
+    "span_m": 0.02,
+    "x_bounds_m": [
+      -17.5,
+      22.5
+    ],
+    "z_bounds_m": [
+      -22.0,
+      8.0
+    ],
+    "wave_depth_m": 24,
+    "single_span_cells": 254146,
+    "max_target_source_xz_error_m": 0.0,
+    "negative_or_zero_volumes": 0,
+    "minimum_signed_volume_m3": 1.5473472869991132e-11,
+    "maximum_relative_cell_closure_error": 1.8703441987639484e-16,
+    "nonmanifold_edges": 0,
+    "inconsistent_internal_face_signs": 0,
+    "boundary_planes": {
+      "inlet": {
+        "plane_error_m": 0.0,
+        "face_count": 187,
+        "area_m2": 0.5999999999999999,
+        "expected_area_m2": 0.6
+      },
+      "outlet": {
+        "plane_error_m": 0.0,
+        "face_count": 250,
+        "area_m2": 0.6,
+        "expected_area_m2": 0.6
+      },
+      "bottom": {
+        "plane_error_m": 0.0,
+        "face_count": 166,
+        "area_m2": 0.8,
+        "expected_area_m2": 0.8
+      },
+      "top": {
+        "plane_error_m": 0.0,
+        "face_count": 166,
+        "area_m2": 0.8,
+        "expected_area_m2": 0.8
+      }
+    },
+    "foil_edges": 856,
+    "foil_coordinates_unchanged": true,
+    "foil_area_m2": 0.11578840870299484,
+    "source_cell_counts": {
+      "kept": 248660,
+      "cropped": 250,
+      "removed": 33469
+    },
+    "protected_interval_cells_unchanged": 153581,
+    "identified_prism_chain_cells_unchanged": 40537,
+    "prism_chain_layer_histogram": {
+      "48": 835,
+      "49": 9,
+      "3": 2,
+      "2": 2,
+      "1": 6,
+      "0": 2
+    },
+    "cropped_area_m2": 253.2000000000269,
+    "expected_cropped_remote_rectangle_area_m2": 253.20000000000016,
+    "total_area_m2": 1199.884211591297,
+    "expected_rectangle_minus_foil_area_m2": 1199.8842115912971,
+    "total_signed_volume_m3": 23.99768423182594,
+    "expected_volume_m3": 23.997684231825943,
+    "flow_steps": 0,
+    "STAR_launched": false,
+    "pending": [
+      "STAR import and native cell-quality/face-validity checks",
+      "Matched calm for this domain/settings",
+      "FifthOrder L10 wave configuration and wave-specific numerical/propagation/FS accuracy checks"
+    ],
+    "interpretation": "File-level conservative geometry/topology support only; not a STAR quality or flow acceptance result."
+  },
+  "preserved_existing_append_builder": true,
+  "STAR_launched": false,
+  "flow_steps": 0,
+  "solver_locks_modified": false,
+  "maps": [
+    "source_cell_map.csv",
+    "output_cell_map.csv",
+    "source_node_map.csv",
+    "canonical_intersections.json"
+  ],
+  "pending": [
+    "STAR import with zero flow and native quality/face-validity/negative-volume checks",
+    "Actual boundary/profile/forcing/damping and gauge bindings for L10",
+    "Own matched calm and wave-specific propagation, timestep/free-surface resolution checks"
+  ]
+}

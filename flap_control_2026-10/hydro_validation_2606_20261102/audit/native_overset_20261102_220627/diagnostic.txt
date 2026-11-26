@@ -1,0 +1,40 @@
+source=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\motion_20261102_194119\steady_init_20261102_200834\steady_init_20261102_202530\steady_init_20261102_203046\urans_from_steady_20261102_203650\stabilize_20261102_203650\checkpoint.sim
+saved_time=0.3004000000000002
+Geometry class=star.meshing.PartRepresentation
+Latest Surface/Volume class=star.meshing.LatestMeshProxyRepresentation
+Volume Mesh class=star.common.FvRepresentation
+Overset Mesh class=star.common.OversetMeshRepresentation underlying=Volume Mesh empty=true
+flux_conservation=2
+TEST 0 Volume Mesh
+Background Volume min=1.0079977988860919E-11 max=0.002544042734849246
+Background OversetCellStatus min=-2.0 max=0.0
+Background OversetCellType min=0.0 max=3.0
+Background OversetErrorStatus min=0.0 max=0.0
+Background OversetInterpolationType min=-2.0 max=7.0
+FlapOverset Volume min=9.026037388948145E-12 max=2.41209773212764E-6
+FlapOverset OversetCellStatus min=0.0 max=0.0
+FlapOverset OversetCellType min=0.0 max=0.0
+FlapOverset OversetErrorStatus min=0.0 max=0.0
+FlapOverset OversetInterpolationType min=-2.0 max=-2.0
+TEST 1 Overset Mesh
+Background Volume min=NaN max=NaN
+Background OversetCellStatus min=NaN max=NaN
+Background OversetCellType min=NaN max=NaN
+Background OversetErrorStatus min=NaN max=NaN
+Background OversetInterpolationType min=NaN max=NaN
+FlapOverset Volume min=NaN max=NaN
+FlapOverset OversetCellStatus min=NaN max=NaN
+FlapOverset OversetCellType min=NaN max=NaN
+FlapOverset OversetErrorStatus min=NaN max=NaN
+FlapOverset OversetInterpolationType min=NaN max=NaN
+TEST 2 Volume Mesh
+Background Volume min=1.0079977988860919E-11 max=0.002544042734849246
+Background OversetCellStatus min=-2.0 max=0.0
+Background OversetCellType min=0.0 max=3.0
+Background OversetErrorStatus min=0.0 max=0.0
+Background OversetInterpolationType min=-2.0 max=7.0
+FlapOverset Volume min=9.026037388948145E-12 max=2.41209773212764E-6
+FlapOverset OversetCellStatus min=0.0 max=0.0
+FlapOverset OversetCellType min=0.0 max=0.0
+FlapOverset OversetErrorStatus min=0.0 max=0.0
+FlapOverset OversetInterpolationType min=-2.0 max=-2.0

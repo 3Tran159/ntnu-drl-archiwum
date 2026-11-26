@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_preparation_r3.py", line 42, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_preparation_r3.py", line 36, in main
+    if rc or not preserved or not (case/'SUCCESS.txt').exists() or not (case/'built.sim').exists() or audit.get('steps_taken')!=0:raise RuntimeError('CPU build/audit did not complete')
+                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CPU build/audit did not complete

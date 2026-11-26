@@ -1,0 +1,126 @@
+ 
+ static final double HX=.952, HY=.02128173276777, W=2*Math.PI/.45555302324319264;
+ boolean moving, kinematics;
+ double referenceTipX, referenceTipY, previousAngle, previousTime;
+ XyzInternalTable vertices;
+ String smooth(String x){
+  String q="min(1,max(0,"+x+"))";
+  return "(10*pow("+q+",3)-15*pow("+q+",4)+6*pow("+q+",5))";
+ }
+ String motionTime(){return "($Time-<"+(start+d("motion_start_delay_s",0))+" s>)";}
+ double localPhase(double time){return 2*Math.PI*HX/10-W*time+d("phase_offset_rad",0);}
+ double smoothValue(double x){double q=Math.max(0,Math.min(1,x));return q*q*q*(10-15*q+6*q*q);}
+ double targetAngle(double time){
+  if(!moving)return 0;
+  double elapsed=time-start-d("motion_start_delay_s",0);
+  if(kinematics){
+   return -2*smoothValue(elapsed/.05)+2*smoothValue((elapsed-.05)/.05)
+          +2*smoothValue((elapsed-.10)/.05)-2*smoothValue((elapsed-.15)/.05);
+  }
+  return 2*smoothValue(elapsed/d("motion_ramp_s",T))*Math.sin(localPhase(time)+d("control_phase_rad",0));
+ }
+ void setupMotion() throws Exception {
+  if(!foil||!moving)return;
+  UserDefinedVertexMotion motion=s.get(MotionManager.class).createMotion(UserDefinedVertexMotion.class,"Sealed localized flap rotation");
+  reg.getValues().get(MotionSpecification.class).setMotion(motion);
+  UserDefinedVertexMotionSolver solver=s.getSolverManager().getSolver(UserDefinedVertexMotionSolver.class);
+  solver.setIgnoreGridFlux(false);
+  solver.setZeroGridFlux(false);
+  solver.setUpdateInnerIterations(false);
+  ff("SavedCoord");
+  String time=motionTime();
+  String command;
+  if(kinematics){
+   command="0.03490658503988659*(-"+smooth(time+"/<.05 s>")+"+"+smooth("("+time+"-<.05 s>)/<.05 s>")
+       +"+"+smooth("("+time+"-<.10 s>)/<.05 s>")+"-"+smooth("("+time+"-<.15 s>)/<.05 s>")+")";
+  }else{
+   double phase=localPhase(0)+d("control_phase_rad",0);
+   command="0.03490658503988659*"+smooth(time+"/<"+d("motion_ramp_s",T)+" s>")+"*sin("+phase+"-<"+W+" /s>*$Time)";
+  }
+  String x="($$SavedCoord[0]-<"+HX+" m>)", y="($$SavedCoord[1]-<"+HY+" m>)";
+  String radius="sqrt(pow("+x+",2)+pow("+y+",2))";
+  String a="("+command+"*"+smooth(x+"/<.035 m>")+"*"+smooth("(<1.40 m>-"+radius+")/<1.10 m>")+")";
+  UserFieldFunction f=s.getFieldFunctionManager().createFieldFunction();
+  f.setFunctionName("CB_FlapTotalDisplacement");
+  f.getTypeOption().setSelected(FieldFunctionTypeOption.Type.VECTOR);
+  Dimensions length=new Dimensions();
+  length.setLength(1);
+  f.setDimensions(length);
+  f.setDefinition("["+x+"*(cos("+a+")-1)+"+y+"*sin("+a+"),-"+x+"*sin("+a+")+"+y+"*(cos("+a+")-1),<0 m>]");
+  reg.getConditions().get(MovingVertexOption.class).setSelected(MovingVertexOption.Type.TOTAL_DISPLACEMENT);
+  VertexDisplacementProfile profile=reg.getValues().get(VertexDisplacementProfile.class);
+  profile.setTotalDisplacement(true);
+  vf(profile,f);
+  vertices=s.getTableManager().createTable(XyzInternalTable.class);
+  vertices.setPresentationName("CB Actual flap vertices");
+  vertices.getParts().setObjects(walls);
+  vertices.setExtractVertexData(true);
+  FieldFunction position=ff("Position");
+  vertices.setFieldFunctions(List.of(position.getComponentFunction(0),position.getComponentFunction(1),position.getComponentFunction(2)));
+  double[] tip=sampleTip(0);
+  referenceTipX=tip[0]-HX;
+  referenceTipY=tip[1]-HY;
+  previousAngle=0;
+  previousTime=start;
+ }
+ double[] sampleTip(int step) throws Exception {
+  Path file=kinematics||step==0?out.resolve(String.format(Locale.ROOT,"vertices_%04d.csv",step)):out.resolve("latest_vertices.csv");
+  vertices.extract();
+  vertices.export(file.toString(),",");
+  double best=0, px=0,py=0;
+  try(BufferedReader rows=Files.newBufferedReader(file)){
+   String header=rows.readLine();
+   if(header==null||!header.startsWith("\"Position[X]"))throw new IllegalStateException("Invalid native vertex coordinate schema");
+   for(String row;(row=rows.readLine())!=null;){
+    String[] c=row.split(",");
+    double x=Double.parseDouble(c[0]), y=Double.parseDouble(c[1]);
+    if(x<1.15)continue;
+    double r=Math.hypot(x-HX,y-HY);
+    if(r>best){best=r;px=x;py=y;}
+   }
+  }
+  if(best<.23||best>.25)throw new IllegalStateException("Invalid measured trailing-edge radius "+best);
+  return new double[]{px,py};
+ }
+ double measuredAngle(int step) throws Exception {
+  if(!moving)return 0;
+  double[] tip=sampleTip(step);
+  double x=tip[0]-HX,y=tip[1]-HY;
+  if(Math.abs(Math.hypot(x,y)-Math.hypot(referenceTipX,referenceTipY))>1e-6)
+   throw new IllegalStateException("Trailing-edge rigid radius changed");
+  return -Math.toDegrees(Math.atan2(referenceTipX*y-referenceTipY*x,referenceTipX*x+referenceTipY*y));
+ }
+ void kinematicRun() throws Exception {
+  for(Solver solver:s.getSolverManager().getObjects()){
+   if(!(solver instanceof UserDefinedVertexMotionSolver)&&!(solver instanceof ImplicitUnsteadySolver))solver.setFrozen(true);
+  }
+  save("START");
+  try(BufferedWriter h=Files.newBufferedWriter(out.resolve("motion.csv"))){
+   h.write("time_s,delta_command_deg,delta_measured_deg,delta_dot_rad_s,min_volume_m3,min_face_validity,min_cell_quality,solver_s\n");
+   for(int step=1;step<=40;step++){
+    if(Files.exists(stop)||System.currentTimeMillis()>deadline){result="HOLD_STOP_OR_DEADLINE";break;}
+    status("RUNNING","MOTION_ONLY");
+    long began=System.nanoTime();
+    s.getSimulationIterator().step(1);
+    double seconds=(System.nanoTime()-began)/1e9,t=s.getSolution().getPhysicalTime();
+    done=step;
+    if(Math.abs(t-(start+dt*step))>1e-8)throw new IllegalStateException("Kinematic timestep mismatch");
+    double a=measuredAngle(step), volume=v("volume"), face=v("face"), quality=v("quality");
+    h.write(t+","+targetAngle(t)+","+a+","+Math.toRadians((a-previousAngle)/(t-previousTime))+","+volume+","+face+","+quality+","+seconds+"\n");
+    h.flush();
+    previousAngle=a;
+    previousTime=t;
+    if(!(volume>0&&face>=.5&&quality>0)||Math.abs(a-targetAngle(t))>.08){
+     result="HOLD_MOTION_GEOMETRY";
+     break;
+    }
+   }
+  }
+  if(done==40&&result.equals("HOLD_NOT_RUN"))result="MOTION_NATIVE_PENDING_VERTEX_REVIEW";
+  save("FINAL");
+  write("SOLVE_STATUS.json",Map.of("status",result,"steps",done,"time_s",s.getSolution().getPhysicalTime(),
+        "frozen_flow",true,"training_approved",false));
+  status("STOPPED",result);
+ }
+
+

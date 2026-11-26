@@ -1,0 +1,57 @@
+{
+  "project": "NWAR",
+  "phase": "2.0",
+  "started": "2026-10-29",
+  "goal": "Compare foil resistance in calm water and incident waves; later assess active flap control",
+  "scope": "Foil only, without hull or supports",
+  "geometry_id": "HF_012_v3",
+  "mesh_id": "C003_012",
+  "reference": {
+    "source": "F:\\ntnu\\geometry_012_20261029\\geometry_verified.json",
+    "full_span_m": 11,
+    "root_chord_m": 1.19,
+    "half_area_m2": 5.450434304415241,
+    "thickness_c": 0.11997851163835005,
+    "camber_c": 0.02500292522096979
+  },
+  "stages": [
+    {
+      "id": "2.0",
+      "name": "Geometry and affordable diagnostic mesh",
+      "status": "completed"
+    },
+    {
+      "id": "2.1",
+      "name": "H0: hydrostatic startup, U=0 m/s",
+      "status_source": "F:\\ntnu\\mesh_screening_20261028\\flow012_short_20261029\\H0_0ms\\completed.json",
+      "status": "short diagnostic completed; not production acceptance"
+    },
+    {
+      "id": "2.2",
+      "name": "F18: calm-water startup, U=18 m/s",
+      "status_source": "F:\\ntnu\\mesh_screening_20261028\\flow012_short_20261029\\F18_18ms\\completed.json",
+      "status": "short diagnostic completed; not production acceptance"
+    },
+    {
+      "id": "2.3",
+      "name": "Wave and domain calibration followed by matched resistance comparison",
+      "status": "pending review of 2.1 and 2.2"
+    }
+  ],
+  "history": {
+    "phase": "1.0",
+    "geometry": "HF_v2 / 010",
+    "preserve_originals": true,
+    "force_results_use": "historical only; do not relabel as 012",
+    "dashboard": "F:\\ntnu\\mesh_screening_20261028\\phase1_dashboard.html"
+  },
+  "current_dashboard": "F:\\ntnu\\phase2_012_20261029\\dashboard.html",
+  "report": {
+    "id": "1vCfN0cDej6gPNw7xgHZE1PPF60DjoMAjzFWljBIcUts",
+    "tab_id": "t.n3lecsbcn58w"
+  },
+  "twenty_days_note": "Approximate extrapolation of phase-1 startup throughput to one c/U, not predicted time to converged forces",
+  "acceptance": "Diagnostic runs only. Geometry verification and completed execution are not production NWAR validation.",
+  "next_action": "Review leading-edge prism cells at y≈4.06 m and tip cells at y≈5.50 m; then bounded startup/time-step test before long foil-in-waves runs",
+  "long_wave_run_ready": false
+}

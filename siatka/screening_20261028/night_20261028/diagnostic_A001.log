@@ -1,0 +1,52 @@
+Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxwaWxvdF92M1xBMDAxXGF0dGVtcHRfN2YwM2EwMmQzZGRlNGNiZDhhYTQxZDQ2NWMzODAwZTFcbWVzaC5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 2464
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 16 days
+Wed Oct 28 20:46:20 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\mesh_screening_20261028\pilot_v3\A001\attempt_7f03a02d3dde4cbd8aa41d465c3800e1\mesh.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\mesh_screening_20261028\night_20261028\LocalDiagnostics.java
+F:\ntnu\mesh_screening_20261028\night_20261028\LocalDiagnostics.java:16: warning: [deprecation] getEnabled() in star.common.AutoSaveBase has been deprecated
+    if(s.getSimulationIterator().getAutoSave().getEnabled()||s.getSimulationIterator().getAutoSave().getAutoSaveBatch())throw new IllegalStateException("Autosave enabled");
+                                              ^
+F:\ntnu\mesh_screening_20261028\night_20261028\LocalDiagnostics.java:29: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+      scene.initializeAndWait();
+           ^
+F:\ntnu\mesh_screening_20261028\night_20261028\LocalDiagnostics.java:51: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    if(n>0&&n<100000){XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.getParts().setObjects(p);List<FieldFunction> fs=new ArrayList<>();for(String k:List.of("CellQuality","SkewnessAngle","VolumeChange","PrismLayerNumber","PrismCellThickness"))fs.add(s.getFieldFunctionManager().getFunction(k));table.setFieldFunctions(fs);table.setRepresentation(fv);table.setExtractVertexData(false);table.extract();table.export(out.resolve(name+"_"+cut+".csv").toString());}
+                                                                ^
+
+Loading/configuring connectivity (old|new partitions: 8|8)
+  fluid (index 0): 25188874 cells, 75511897 faces, 25910209 verts.
+Configuring finished
+[NTNU] SECTION_DONE y=0.5
+[NTNU] SECTION_DONE y=2.75
+[NTNU] SECTION_DONE y=4.2503873
+[NTNU] SECTION_DONE y=5.4
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

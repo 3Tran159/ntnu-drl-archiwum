@@ -1,0 +1,32 @@
+[
+  {
+    "time": "2026-10-29T11:06:13.775391+01:00",
+    "work": "Stały przekrój 012 utworzony w NX",
+    "finding": "Cięciwa 1,19 m i kształt profilu zachowane. Osobny CAD o taper=1; wycinek domeny ma szerokość 0,02 m. Przygotowanie directed mesh z jedną warstwą."
+  },
+  {
+    "time": "2026-10-29T11:22:06.187083+01:00",
+    "work": "M01: sprawdzono 37 411 komórek i jedną warstwę",
+    "finding": "100% komórek dotyka obu płaszczyzn bocznych. Zero ujemnych objętości, skew max 46,71°. Co najmniej 15 kolejnych czworokątów na 97,07% obwodu; odstępstwa przy TE. Niewielka różnica x/z boków po projekcji CAD: maks. 0,124 mm. Testy solvera w przygotowaniu."
+  },
+  {
+    "time": "2026-10-29T12:20:56+01:00",
+    "work": "Podsumowanie audytu mesha",
+    "finding": "Trzy siatki, jedna warstwa przez span, zero ujemnych objętości. Minima jakości zlokalizowane; niedobory regularnych warstw przy TE. Maks. różnica x/z boków po projekcji CAD 0,152 mm."
+  },
+  {
+    "time": "2026-10-29T12:20:56+01:00",
+    "work": "Zakończono porównanie CPU8 / CPU24 / GPU",
+    "finding": "M03 przy identycznym dt i liczbie kroków: 107,9 / 75,2 / 53,3 s. Jedna karta aktywna potwierdzona przez API STAR; wszystkie zadania kolejno."
+  },
+  {
+    "time": "2026-10-29T12:20:56+01:00",
+    "work": "Dłuższe testy GPU i ograniczenia wniosków",
+    "finding": "M02 i M03 doszły do t=0,2 s. Opór różni się o około 60,5% względem M03; nie potwierdzono niezależności sił od siatki. Na razie bez fal."
+  },
+  {
+    "time": "2026-10-29T12:20:56+01:00",
+    "work": "Zapis końcowy i przekazanie projektu",
+    "finding": "14 prób ukończonych. Gotowy Q2D_012_20261029.sim, limit t=0,25 s; zachowane wszystkie checkpointy, CSV i makra. Oryginalny poprawiony CAD i bazowy SIM niezmienione."
+  }
+]

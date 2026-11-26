@@ -1,0 +1,75 @@
+{
+  "title": "Calm-water mesh verification",
+  "cases": [
+    {
+      "id": "M03",
+      "role": "Current reference",
+      "first_layer_um": 179.9,
+      "layers": 15,
+      "refinement": 1,
+      "gpu": "Settled"
+    },
+    {
+      "id": "M02",
+      "role": "Coarser reference",
+      "first_layer_um": 179.9,
+      "layers": 15,
+      "refinement": 0.75,
+      "gpu": "Settled"
+    },
+    {
+      "id": "M04",
+      "role": "Low-y+ comparison",
+      "first_layer_um": 3,
+      "layers": 40,
+      "refinement": 1,
+      "gpu": "Selected after mesh audit"
+    },
+    {
+      "id": "M05",
+      "role": "Refinement check of M03",
+      "first_layer_um": 179.9,
+      "layers": 15,
+      "refinement": 1.25,
+      "gpu": "After M04"
+    },
+    {
+      "id": "M06",
+      "role": "Low-y+ refinement of M04",
+      "first_layer_um": 2.142857142857143,
+      "layers": 44,
+      "refinement": 1.4,
+      "gpu": "Meshing / audit",
+      "family": "low_yplus"
+    },
+    {
+      "id": "M07",
+      "role": "Low-y+ refinement of M04",
+      "first_layer_um": 1.530612244897959,
+      "layers": 48,
+      "refinement": 1.96,
+      "gpu": "Meshing / audit",
+      "family": "low_yplus"
+    },
+    {
+      "id": "M08",
+      "role": "M06 surface/outer mesh, M07 prism spacing",
+      "first_layer_um": 1.530612244897959,
+      "layers": 48,
+      "refinement": 1.4,
+      "gpu": "Meshing on2CPU; GPU after audit",
+      "family": "low_yplus"
+    },
+    {
+      "id": "M09",
+      "role": "Remote coarsening of M08; separate second-order screen",
+      "first_layer_um": 1.530612244897959,
+      "layers": 48,
+      "refinement": 1.4,
+      "family": "low_yplus",
+      "gpu": "Configured screen; see separate live namespace"
+    }
+  ],
+  "criterion": "|change in mean CD| < 0.5% and |change in mean CL| < 0.5% between adjacent non-overlapping 0.2 s windows; stop on first passing evaluation",
+  "method": "M04 changes wall-normal resolution; M05 refines tangential and outer-mesh settings. Keep geometry, speed, physical models, time step and inner iterations fixed."
+}

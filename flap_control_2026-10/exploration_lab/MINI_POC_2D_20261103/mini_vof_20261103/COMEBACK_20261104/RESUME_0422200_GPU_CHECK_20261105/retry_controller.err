@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 173, in <module>
+    launch()
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\RESUME_0422200_GPU_CHECK_20261105\resume.py", line 116, in launch
+    c.STOP.rename(D / "STOP_BEFORE_GPU_RETRY")
+  File "C:\Users\ThinkPad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\STOP_REQUESTED' -> 'F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\RESUME_0422200_GPU_CHECK_20261105\\STOP_BEFORE_GPU_RETRY'

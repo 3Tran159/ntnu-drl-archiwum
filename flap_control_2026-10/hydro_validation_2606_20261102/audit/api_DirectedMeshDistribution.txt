@@ -1,0 +1,27 @@
+Compiled from "DirectedMeshDistribution.java"
+public class star.sweptmesher.DirectedMeshDistribution extends star.base.neo.NamedObject implements star.common.SimulationProvider,star.sweptmesher.DirectedSideMeshDistribution {
+  public static final java.lang.String NUM_REPS;
+  public static final java.lang.String PART_COLLECTIONS;
+  public star.sweptmesher.DirectedMeshDistribution(star.base.neo.ClientServerObjectKey);
+  public star.sweptmesher.DirectedMeshDistributionManager getManager();
+  public star.common.Simulation getSimulation();
+  public void notifyDisplayModeChange(star.base.neo.NeoProperty);
+  public star.sweptmesher.DirectedMeshOperation getOperation();
+  public star.sweptmesher.PartCollectionGroup getPartCollections();
+  public star.common.DynamicQuerySelectorInput getPartCollectionsInput();
+  public void setPartCollectionsInput(star.common.DynamicQuerySelectorInput);
+  public star.sweptmesher.DirectedMeshDistribution$DistributionMethod getMeshControlsOption();
+  public void setMeshControlsOption(star.sweptmesher.DirectedMeshDistribution$DistributionMethod);
+  public star.sweptmesher.DirectedMeshDistribution$SizeSpecification getSizeSpecificationOption();
+  public void setSizeSpecificationOption(star.sweptmesher.DirectedMeshDistribution$SizeSpecification);
+  public int getNumRepetitions();
+  public void setNumRepetitions(int);
+  public star.sweptmesher.DirectedMeshDefaultValuesManager getDefaultValues();
+  public star.sweptmesher.DirectedMeshCustomControlManager getCustomValues();
+  public boolean getIsDefault();
+  public java.util.Collection<java.lang.Object> getChildren();
+  public boolean isEmpty();
+  public star.sweptmesher.DMHighlightSurfaces getHighlightSurfaces();
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+  static {};
+}

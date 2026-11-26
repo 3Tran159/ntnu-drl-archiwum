@@ -1,0 +1,25 @@
+{
+  "synthetic_fixture_only": true,
+  "pass": true,
+  "robust_sample": {
+    "available": true,
+    "median_s_per_step": 2.0,
+    "mean_s_per_step": 2.0,
+    "p20_s_per_step": 2.0,
+    "p80_s_per_step": 2.0,
+    "samples": 49,
+    "raw_samples": 50,
+    "excluded_timing_outliers": 1,
+    "window_s": [
+      0.003,
+      0.053
+    ],
+    "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_cycle_dashboard_preview_timing\\history.csv",
+    "dt_s": 0.001
+  },
+  "insufficient": {
+    "available": false,
+    "reason": "Fewer than ten recent regular steps after restart warm-up",
+    "samples": 4
+  }
+}

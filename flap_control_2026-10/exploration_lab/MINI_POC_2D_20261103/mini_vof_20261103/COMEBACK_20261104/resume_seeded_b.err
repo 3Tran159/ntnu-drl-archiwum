@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\resume_seeded_b.py", line 16, in <module>
+    r=run(name,dict(source=src,stokes=True,foil=True,moving=True,single_phase=True,seeded_single_phase=True,
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_sprint.py", line 24, in run
+    result=new_job(stage,settings,protection=m)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_day.py", line 185, in new_job
+    raise RuntimeError("Status/history length mismatch")
+RuntimeError: Status/history length mismatch

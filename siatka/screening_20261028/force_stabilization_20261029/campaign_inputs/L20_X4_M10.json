@@ -1,0 +1,44 @@
+{
+  "status": "paired_inputs_audited_zero_steps",
+  "at": "2026-10-30T11:30:34.680481+01:00",
+  "domain": {
+    "id": "L20_X4_M10",
+    "xmin_m": -35,
+    "xmax_m": 45,
+    "wavelength_m": 20,
+    "zone_m": 20,
+    "gauges_m": [
+      -10,
+      -5,
+      2.5,
+      5,
+      10,
+      15,
+      20
+    ],
+    "mesh": "M10",
+    "wave_depth_m": 24
+  },
+  "cells": 317277,
+  "inputs": {
+    "CALM": {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+      "sha256": "8cab371c1f4bd000283877b4e28811c978814cc30a57c9fb7701cce85fc235ce",
+      "cells": 317277,
+      "audit": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\initial_audit.json",
+      "wave_period_s": 0.0,
+      "height_m": 0
+    },
+    "H050": {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+      "sha256": "7888c3691a221fd882883ac9ad0d9d31f6901aa821ac92461594afa8d167e49e",
+      "cells": 317277,
+      "audit": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_env_setup_r1\\initial_audit.json",
+      "wave_period_s": 0.0,
+      "height_m": 0.5
+    }
+  },
+  "source_unchanged": true,
+  "flow_steps": 0,
+  "provenance": "Existing independently prepared sources; hashes checked when registered. No solver launched by registration."
+}

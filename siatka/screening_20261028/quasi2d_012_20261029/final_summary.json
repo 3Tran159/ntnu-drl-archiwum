@@ -1,0 +1,96 @@
+{
+  "M02_GPU": {
+    "final": {
+      "wall_seconds": 172.30168780000002,
+      "step": 200.0,
+      "iteration": 4000.0,
+      "physical_time_s": 0.20000000000000015,
+      "dt_s": 0.001,
+      "Fx_slice_N": 108.09197095949428,
+      "Fz_slice_N": 885.7293532177299,
+      "max_velocity_m_s": 22.04491214001825,
+      "max_convective_CFL": 51.470111219903465,
+      "foil_mean_yplus": 46.47309110599364,
+      "foil_min_yplus": 4.432771527294869,
+      "foil_max_yplus": 337.06439052968165,
+      "CD": 0.028035058346170316,
+      "CL_total": 0.2297254261898874,
+      "CL_buoyancy_subtracted": 0.2238331684058986,
+      "buoyancy_error_pct": 3798.7674099073943
+    },
+    "change_0p16_to_0p20_pct": {
+      "CD": -1.3184916984507855,
+      "CL_total": 3.8506207765782507
+    },
+    "F18_dt500us_cfl": {
+      "global_max_CFL": 26.869183639216583,
+      "interface_0p01_to_0p99_cells": 1225,
+      "interface_max_CFL": 0.48902771841069165,
+      "note": "Physical-step convective CFL; VOF dynamic substeps target 0.5, maximum20. This is not the substep CFL."
+    },
+    "F18_dt1000us_long_cfl": {
+      "global_max_CFL": 51.470111219903465,
+      "interface_0p01_to_0p99_cells": 1250,
+      "interface_max_CFL": 0.9780458086276739,
+      "note": "Physical-step convective CFL; VOF dynamic substeps target 0.5, maximum20. This is not the substep CFL."
+    }
+  },
+  "M03_GPU": {
+    "final": {
+      "wall_seconds": 279.99540870000004,
+      "step": 200.0,
+      "iteration": 4000.0,
+      "physical_time_s": 0.20000000000000015,
+      "dt_s": 0.001,
+      "Fx_slice_N": 67.34450678292743,
+      "Fz_slice_N": 950.3134309780102,
+      "max_velocity_m_s": 22.001522803149047,
+      "max_convective_CFL": 42.94671914271692,
+      "foil_mean_yplus": 44.92514387411508,
+      "foil_min_yplus": 4.639025631862468,
+      "foil_max_yplus": 255.17131522889878,
+      "CD": 0.01746667361316719,
+      "CL_total": 0.24647614663813935,
+      "CL_buoyancy_subtracted": 0.24058388885415055,
+      "buoyancy_error_pct": 4083.050974244466
+    },
+    "change_0p16_to_0p20_pct": {
+      "CD": -0.1513534608718059,
+      "CL_total": 3.8694334328427837
+    },
+    "F18_dt500us_cfl": {
+      "global_max_CFL": 18.324157903248082,
+      "interface_0p01_to_0p99_cells": 1729,
+      "interface_max_CFL": 0.7009384720017673,
+      "note": "Physical-step convective CFL; VOF dynamic substeps target 0.5, maximum20. This is not the substep CFL."
+    },
+    "F18_dt1000us_long_cfl": {
+      "global_max_CFL": 42.94671914271692,
+      "interface_0p01_to_0p99_cells": 1748,
+      "interface_max_CFL": 1.4018730476380794,
+      "note": "Physical-step convective CFL; VOF dynamic substeps target 0.5, maximum20. This is not the substep CFL."
+    }
+  },
+  "M02_relative_to_M03_at_0p2s_pct": {
+    "CD": 60.50599540049908,
+    "CL_total": -6.796081761552486
+  },
+  "M03_GPU_speedup_vs_CPU8": 2.02250050416341,
+  "M03_GPU_speedup_vs_CPU24": 1.4103203305154384,
+  "saved_sim": "F:\\ntnu\\Q2D_012_20261029.sim",
+  "saved_sim_sha256": "d2f3b3c6de61437ea03e8d2609583526905a8071653bc240dcfd3b512113e856",
+  "original_corrected_cad_sha256": "044d97c2a3f9cd5dd816b5a20d2c9e257e61fceb9fc8f80f343d7470917e5000",
+  "original_baseline_sim_sha256": "90eda181702dc9357b85237bdc7473b3882db78574a8a2820bdb4ca907f1a0f8",
+  "originals_unchanged": true,
+  "review_settings": {
+    "span_m": 0.02,
+    "physical_time_s": 0.20000000000000015,
+    "chord_m": 1.19,
+    "gpu_count": 1,
+    "stop_time_s": 0.25000000000000017,
+    "purpose": "Bounded restart for inspection; startup forces not mesh-independent",
+    "cells": 123256,
+    "reference_area_m2": 0.0238
+  },
+  "run_count": 14
+}

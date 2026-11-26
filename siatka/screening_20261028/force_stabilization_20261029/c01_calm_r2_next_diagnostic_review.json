@@ -1,0 +1,501 @@
+{
+  "status": "single_factor_halfdt_diagnostic_supported_calm_and_wave_forces_not_admitted",
+  "evidence": {
+    "1.837": {
+      "rows": 317277,
+      "nonfinite_rows": 0,
+      "cells_above50": 0,
+      "maxima": {
+        "all": {
+          "speed": 22.164393812952618,
+          "alpha": 0.9999999999999999,
+          "x": 0.700726011983162,
+          "z": 0.10432363262857308,
+          "CFL": 7.7512224019876745,
+          "p": -64780.3334046352,
+          "ux": 22.11508089184203,
+          "uz": -1.4776840808968121
+        },
+        "water": {
+          "speed": 22.164393812952618,
+          "alpha": 0.9999999999999999,
+          "x": 0.700726011983162,
+          "z": 0.10432363262857308,
+          "CFL": 7.7512224019876745,
+          "p": -64780.3334046352,
+          "ux": 22.11508089184203,
+          "uz": -1.4776840808968121
+        },
+        "global_CFL": {
+          "CFL": 43.71001073441689,
+          "speed": 18.637961444204617,
+          "alpha": 1.0,
+          "x": 0.3527692831828622,
+          "z": -0.06764516112675724
+        },
+        "interface": {
+          "speed": 18.811877027831404,
+          "alpha": 0.07763890860090798,
+          "x": 20.608795678547946,
+          "z": 1.8302026166058005,
+          "CFL": 1.30820060114217,
+          "p": 63.0590264304957,
+          "ux": 18.81165818723321,
+          "uz": 0.09073894947939357
+        },
+        "interface_CFL": {
+          "CFL": 2.274515906570456,
+          "speed": 17.984999849896848,
+          "alpha": 0.7557603993817762,
+          "x": -11.895899219373227,
+          "z": 2.0232861002728737
+        },
+        "air": {
+          "speed": 20.480506049062562,
+          "alpha": 0.0,
+          "x": 20.19991034234554,
+          "z": 2.0088415799852757,
+          "CFL": 1.2936740890718306,
+          "p": -7.130445519989033,
+          "ux": 20.478017715988116,
+          "uz": 0.3192466904527261
+        },
+        "future_jet_x17": {
+          "speed": 19.24654602360824,
+          "alpha": 2.5026699353464535e-06,
+          "x": 17.110840333341883,
+          "z": 1.8877988894045579,
+          "CFL": 1.534231863364966,
+          "p": 9.889808356304867,
+          "ux": 19.245722858054517,
+          "uz": 0.17800424103931412
+        },
+        "future_jet_x23": {
+          "speed": 19.593283275342856,
+          "alpha": 8.9204290280288e-05,
+          "x": 23.20449422603412,
+          "z": 1.8478717483954064,
+          "CFL": 1.3781845579612435,
+          "p": 15.230185628016738,
+          "ux": 19.59328205284334,
+          "uz": 0.006921384050142839
+        }
+      },
+      "water_sum_kg_s": -0.3558195334809004,
+      "air_sum_kg_s": 0.0004255701111579996,
+      "sum_minus_native_kg_s": [
+        0.0,
+        0.0
+      ]
+    },
+    "2.337": {
+      "rows": 317277,
+      "nonfinite_rows": 0,
+      "cells_above50": 0,
+      "maxima": {
+        "all": {
+          "speed": 22.15841645705352,
+          "alpha": 0.9999999999996977,
+          "x": 0.700726011983162,
+          "z": 0.10432363262857308,
+          "CFL": 7.749250389137981,
+          "p": -64716.41339594366,
+          "ux": 22.10912959897194,
+          "uz": -1.4770945332249779
+        },
+        "water": {
+          "speed": 22.15841645705352,
+          "alpha": 0.9999999999996977,
+          "x": 0.700726011983162,
+          "z": 0.10432363262857308,
+          "CFL": 7.749250389137981,
+          "p": -64716.41339594366,
+          "ux": 22.10912959897194,
+          "uz": -1.4770945332249779
+        },
+        "global_CFL": {
+          "CFL": 43.66034172812817,
+          "speed": 18.61700306565424,
+          "alpha": 0.9999999999996877,
+          "x": 0.3527692831828622,
+          "z": -0.06764516112675724
+        },
+        "interface": {
+          "speed": 20.481909016056694,
+          "alpha": 0.052240730413248886,
+          "x": 28.549278733686855,
+          "z": 1.9392327902535798,
+          "CFL": 1.2565032466447992,
+          "p": 38.981556388092606,
+          "ux": 20.475679047312994,
+          "uz": -0.5051380934477874
+        },
+        "interface_CFL": {
+          "CFL": 2.275309981249505,
+          "speed": 17.990571328539996,
+          "alpha": 0.011608197425146943,
+          "x": -11.895899219373227,
+          "z": 2.0232861002728737
+        },
+        "air": {
+          "speed": 21.57098718681154,
+          "alpha": 0.0,
+          "x": 28.49535269008581,
+          "z": 1.940086901593886,
+          "CFL": 1.290004932397083,
+          "p": -14.12203745883902,
+          "ux": 21.543740942705057,
+          "uz": -1.0838424272934373
+        },
+        "future_jet_x17": {
+          "speed": 20.059814006084533,
+          "alpha": 0.0,
+          "x": 17.446271902429697,
+          "z": 1.9886642355524773,
+          "CFL": 1.606992274106944,
+          "p": 16.522854152240125,
+          "ux": 20.05979415938882,
+          "uz": -0.028217754258520484
+        },
+        "future_jet_x23": {
+          "speed": 18.82447475898354,
+          "alpha": 0.0,
+          "x": 22.00406228193316,
+          "z": 2.091848975065919,
+          "CFL": 1.5991587567168513,
+          "p": -1.6228429738262906,
+          "ux": 18.764499443681405,
+          "uz": -1.501469473445498
+        }
+      },
+      "water_sum_kg_s": -1.1955274834517873,
+      "air_sum_kg_s": 0.0014289637340405364,
+      "sum_minus_native_kg_s": [
+        0.0,
+        0.0
+      ]
+    },
+    "2.587": {
+      "rows": 317277,
+      "nonfinite_rows": 0,
+      "cells_above50": 0,
+      "maxima": {
+        "all": {
+          "speed": 27.99098508661539,
+          "alpha": 0.0,
+          "x": 21.08062944644485,
+          "z": 2.098731693940851,
+          "CFL": 1.7880449375817713,
+          "p": -96.21946373952039,
+          "ux": 26.29173237749189,
+          "uz": 9.604168611049564
+        },
+        "water": {
+          "speed": 22.157289655457824,
+          "alpha": 0.9999999999996911,
+          "x": 0.700726011983162,
+          "z": 0.10432363262857308,
+          "CFL": 7.74890444939457,
+          "p": -64704.40456483542,
+          "ux": 22.1080104654225,
+          "uz": -1.4769421575090578
+        },
+        "global_CFL": {
+          "CFL": 43.64182208663389,
+          "speed": 18.609203004836182,
+          "alpha": 0.9999999999996871,
+          "x": 0.3527692831828622,
+          "z": -0.06764516112675724
+        },
+        "interface": {
+          "speed": 20.458221769963927,
+          "alpha": 0.039036356771108345,
+          "x": 20.77298021436141,
+          "z": 1.942186652413919,
+          "CFL": 2.5801425831473432,
+          "p": 103.38062813993697,
+          "ux": 20.32052045512393,
+          "uz": 2.3696595582310875
+        },
+        "interface_CFL": {
+          "CFL": 2.5801425831473432,
+          "speed": 20.458221769963927,
+          "alpha": 0.039036356771108345,
+          "x": 20.77298021436141,
+          "z": 1.942186652413919
+        },
+        "air": {
+          "speed": 27.99098508661539,
+          "alpha": 0.0,
+          "x": 21.08062944644485,
+          "z": 2.098731693940851,
+          "CFL": 1.7880449375817713,
+          "p": -96.21946373952039,
+          "ux": 26.29173237749189,
+          "uz": 9.604168611049564
+        },
+        "future_jet_x17": {
+          "speed": 20.556707763341322,
+          "alpha": 0.0007059064121501873,
+          "x": 18.699087030821577,
+          "z": 1.92392448342766,
+          "CFL": 1.5925381305047304,
+          "p": 78.32213927267803,
+          "ux": 20.55509723219386,
+          "uz": -0.25731661911694587
+        },
+        "future_jet_x23": {
+          "speed": 20.207261040184576,
+          "alpha": 0.0,
+          "x": 22.13932014240156,
+          "z": 1.888159826200419,
+          "CFL": 1.5579543273989833,
+          "p": 56.193084156169796,
+          "ux": 20.199197570362674,
+          "uz": 0.5708031706430203
+        }
+      },
+      "water_sum_kg_s": -0.6530478557802812,
+      "air_sum_kg_s": 0.0007840618637026354,
+      "sum_minus_native_kg_s": [
+        0.0,
+        0.0
+      ]
+    },
+    "2.777": {
+      "rows": 317277,
+      "nonfinite_rows": 0,
+      "cells_above50": 1,
+      "maxima": {
+        "all": {
+          "speed": 50.162137451766554,
+          "alpha": 0.0,
+          "x": 23.658680752113998,
+          "z": 2.018934666534552,
+          "CFL": 3.8189494118537377,
+          "p": -825.602970683823,
+          "ux": 46.747372415150515,
+          "uz": 18.191294786494606
+        },
+        "water": {
+          "speed": 23.533917647479647,
+          "alpha": 0.9951095685278785,
+          "x": 23.72266816353326,
+          "z": 2.008388811298489,
+          "CFL": 1.789648901215419,
+          "p": 3145.2710020905706,
+          "ux": 23.10936942307736,
+          "uz": 4.449980304011588
+        },
+        "global_CFL": {
+          "CFL": 43.62961435171826,
+          "speed": 18.60406523584642,
+          "alpha": 0.9999999999996878,
+          "x": 0.3527692831828622,
+          "z": -0.06764516112675724
+        },
+        "interface": {
+          "speed": 44.41697907861627,
+          "alpha": 0.030332233076405375,
+          "x": 23.690654481413056,
+          "z": 2.0308761405703155,
+          "CFL": 3.447281594584603,
+          "p": 1015.5859202807127,
+          "ux": 40.516657333413065,
+          "uz": 18.200783197352276
+        },
+        "interface_CFL": {
+          "CFL": 3.447281594584603,
+          "speed": 44.41697907861627,
+          "alpha": 0.030332233076405375,
+          "x": 23.690654481413056,
+          "z": 2.0308761405703155
+        },
+        "air": {
+          "speed": 50.162137451766554,
+          "alpha": 0.0,
+          "x": 23.658680752113998,
+          "z": 2.018934666534552,
+          "CFL": 3.8189494118537377,
+          "p": -825.602970683823,
+          "ux": 46.747372415150515,
+          "uz": 18.191294786494606
+        },
+        "future_jet_x17": {
+          "speed": 49.507680327281605,
+          "alpha": 0.0,
+          "x": 17.46756364919466,
+          "z": 2.1114008919443696,
+          "CFL": 3.626103394338003,
+          "p": -249.150875890594,
+          "ux": 46.59722641860505,
+          "uz": 16.724500036819084
+        },
+        "future_jet_x23": {
+          "speed": 50.162137451766554,
+          "alpha": 0.0,
+          "x": 23.658680752113998,
+          "z": 2.018934666534552,
+          "CFL": 3.8189494118537377,
+          "p": -825.602970683823,
+          "ux": 46.747372415150515,
+          "uz": 18.191294786494606
+        }
+      },
+      "water_sum_kg_s": 0.6557480234981973,
+      "air_sum_kg_s": -0.0007281417048454865,
+      "sum_minus_native_kg_s": [
+        0.0,
+        0.0
+      ]
+    },
+    "native_budget": {
+      "peak_time_s": 2.434999999999843,
+      "peak_pct": 0.025137315794628603,
+      "over_0p01_count": 487,
+      "first_over_s": 2.026999999999888,
+      "last_pct": 0.010310127415207251
+    },
+    "source_candidate": {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\checkpoint_t1.837.sim",
+      "bytes": 689218994,
+      "sha256": "fff17db8bc5e69f48ddb55289bb313120b0fd3ec0f030bd11fecad75f4e0dd92"
+    }
+  },
+  "updated_at": "2026-10-30T14:11:10.491183+01:00",
+  "scope": "Read-only source/history/spatial/installed-primary-documentation review. No solver launches, process changes, source edits or actions on the separate CPU22 mesh study.",
+  "conclusion": "Use a NEW controlled branch from verified checkpoint1.837s and change ONLY globaldt1ms to0.5ms. The saved2.587s state already contains elevated air velocity and the guard-failed2.777s final must not be continued. This tests temporal/interface-advection/coupling sensitivity, not an established cause or cure.",
+  "terminal": {
+    "completed_time_s": 2.776999999999805,
+    "last_history_time_s": 2.7759999999998053,
+    "guard": "50m/s",
+    "failing_cell_phase": "pure air alpha0",
+    "failing_location": "x23.65868m,z2.01893m; about1.34m before damping onset25m and21.34m before outlet45m",
+    "secondary_air_jet": "x17.46756m,z2.11140m reaches49.50768m/s",
+    "interpretation": "Both jets are in the unforced downstream core. Spatial proximity to damping onset is evidence to inspect, not proof that damping or outlet pressure caused them. Failure existed without a generated wave."
+  },
+  "source_review": {
+    "path": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_calm_settle_r2\\checkpoint_t1.837.sim",
+    "bytes": 689218994,
+    "sha256": "fff17db8bc5e69f48ddb55289bb313120b0fd3ec0f030bd11fecad75f4e0dd92",
+    "physical_time_s": 1.8369999999999085,
+    "cells": 317277,
+    "source_is_guard_failed": false,
+    "source_is_settled": false,
+    "native_abs_phase_pct_inlet": 0.0041219611818360535,
+    "BDF2_plus_flux_pct_inlet": -0.004112105324033937,
+    "source_judgement": "Pre-acceleration diagnostic source, not accuracy-certified calm. All exported fields finite; maxwater22.1644,maxair20.4805m/s. Source/copy hashes and loaded fields must be reverified before any launch."
+  },
+  "chronology": {
+    "first_speed_exceedance": {
+      "23": {
+        "time_s": 2.3559999999998515,
+        "speed_m_s": 23.152839612899967,
+        "interface_CFL": 2.2748935657126346
+      },
+      "25": {
+        "time_s": 2.377999999999849,
+        "speed_m_s": 25.034952467983448,
+        "interface_CFL": 2.2743438517370804
+      },
+      "28": {
+        "time_s": 2.3939999999998474,
+        "speed_m_s": 28.031351129023236,
+        "interface_CFL": 2.2754531141634695
+      },
+      "30": {
+        "time_s": 2.597999999999825,
+        "speed_m_s": 30.229246769325908,
+        "interface_CFL": 2.274326277102119
+      },
+      "35": {
+        "time_s": 2.715999999999812,
+        "speed_m_s": 36.325349740368445,
+        "interface_CFL": 2.2743897686512695
+      },
+      "40": {
+        "time_s": 2.750999999999808,
+        "speed_m_s": 40.19219987233592,
+        "interface_CFL": 2.4624143469843442
+      },
+      "45": {
+        "time_s": 2.7719999999998057,
+        "speed_m_s": 45.233324458978146,
+        "interface_CFL": 3.240106951346916
+      },
+      "49": {
+        "time_s": 2.7759999999998053,
+        "speed_m_s": 49.27958602030722,
+        "interface_CFL": 3.4766685059971167
+      }
+    },
+    "mass_review_first_exceeded_s": 2.026999999999888,
+    "mass_error_precedes_reported_global_speed_growth": true
+  },
+  "numerical_interpretation": [
+    "At fixed velocity/geometry, halving globaldt halves convectiveCFL. Source interface max2.2745159 predicts about1.137258 at halfdt, still above1; actual evolvedCFL must be measured. A halfstep is not a guarantee or a universal stability threshold.",
+    "The source interfaceCFL maximum lies atx?11.8959m, whereas the two failing jets are atx17.47 and23.66m. The maximum globalCFL?43.71 occurs in water nearfoilx.353 and even decreases while airspeed grows. Do not identify the largest globalCFL with the failing-cellCFL.",
+    "Reducing globaldt changes all transient transport updates and increases pressure/momentum/VOF coupling opportunities per physicalsecond at unchanged10inner. It tests combined temporal sensitivity; it cannot uniquely isolate VOF interface convection from pressure/momentum coupling.",
+    "A VOF-substep-only experiment would change the alpha convection treatment more narrowly while leaving global momentum time resolution unchanged. It is a possible later targeted comparison, not a simultaneous change in this diagnostic.",
+    "The installed theory explains HRIC CFL-sensitive fallback and second-order subcycling. It does not prove which mechanism generated these jets. Alpha[0,1], finite fields and a small signed global residual do not by themselves exclude unstable local motion.",
+    "No evidence establishes clipping, CPU affinity/CPU22 load, turbulence-viscosity limiting, surface tension or a particular mesh-transition/outlet cause. Do not raise a limiter, add interface damping/mass correction, or changeBCs while changingdt."
+  ],
+  "next_diagnostic": {
+    "source": "checkpoint_t1.837.sim",
+    "target_time_s": 2.9,
+    "global_dt_s": 0.0005,
+    "steps": 2126,
+    "single_numerical_change": "ImplicitUnsteady globaldt .001 to .0005",
+    "retain": [
+      "SECOND_ORDER",
+      "10inner every completed step",
+      "pressureAMG relative tolerance.01",
+      "VOFAMG.1 and existing maxcycles/URFs/substeps",
+      "same317277-cell geometry/free-surface/prisms",
+      "no generated wave",
+      "ENVIRONMENTAL outlet,SLIPbed,STATICtop and existing forcing/damping flags",
+      "50m/s,phase,finite,time,resource and source guards",
+      "nativewater/air and unchanged.01%inlet mass-review handling"
+    ],
+    "startup": [
+      "Verify copy SHA and loaded time1.837/cells317277; independent velocity/alpha/mass/force fingerprints against checkpoint history before stepping.",
+      "Record native report cache at load as old-step data; do not divide a cached1ms error by.5ms and call it a new result.",
+      "No reinitialization/reset/field correction; same absolute CFDtime.",
+      "Require actual.0005s increments,10completedinner and finite native phase reports after first guarded step."
+    ],
+    "mass_transition": "The first new step has mixed-spacing history. Do not apply constant-stepBDF2 coefficients to1.836,1.837,1.8375. Retain nativekg/step and divide by actual newdt after completing each step. If solver transition formulation is not verified, label only the external first-step BDF2 value unavailable; constant-step externalBDF2 is valid from1.838 using1.837/1.8375/1.838. This is stencil accounting, not removal of a failing sample.",
+    "measurement": [
+      "Record all halfsteps for nativeabsolute phase errors, signedBDF2+boundaryflux,velocity/alpha bounds andCFL; do not sample away a narrow spike.",
+      "Compare existingr2reference at common absolute times; do not needlessly rerun the original baseline.",
+      "Track air/water/interface speed and locations separately, plusx16..19 and22..25,z1.7..2.4 patches. Save checkpoint/spatial snapshots near2.027mass-onset,2.337pre-speed-growth,2.587 and2.777failuretime and final2.9.",
+      "Check force pressure/viscous components and actual gauge/interface evolution; smallCD/CL change alone cannot clear the speed guard.",
+      "Native/per-cell MassImbalance values arekg/s; retain direct sums withoutvolume multiplication. Four reviewed maps exactly reproduce their saved nativewater/air values."
+    ],
+    "bounded_success": "Reaching2.9s below unchanged physicalguards with improved/localized growth diagnostics supports short timestep sensitivity only. Allhalfsteps must retain the.01%mass criterion; no automatic calmsettling or forceaccuracy acceptance follows.",
+    "if_fails": "Preserve attempt and failingfields; do not continue them. Compare whether theairjet onset/location/growth changed. Only then choose a further isolateddt or VOFsubstep/coupling diagnostic from a pre-growth source based on evidence; do not launch an automatic cascade of changes.",
+    "wave_queue": "Keep C01?wave chain blocked until a matched calm checkpoint meets settling and required numerical/physical gates. This no-wave test supplies no wave-height,phase,reflection or waveforce validation."
+  },
+  "calm_settling": {
+    "last_window_CD_change_pct": -0.565339822202958,
+    "last_window_CL_change_pct": 0.2403216111277137,
+    "passed": false,
+    "criterion": "Both adjacent nonoverlapping.2s means change<.5%,newsettingshistory?.4s,physical/numerical gates also required",
+    "M09_template_limit": "Accepted M09original-domaincalm1ms settings do not by themselves validate extendedM10FS020calm geometry."
+  },
+  "primary_documentation": [
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-CD31C597-AB0E-4C11-9441-DA7021F16CB5.html",
+      "title": "Interface Sharpening Using Temporal Subcycling",
+      "read_this_review": true,
+      "paraphrase": "HRIC face interpolation is CFL-dependent and may fall back toward upwind at highCFL; temporal subcycling reduces volume-fraction substepCFL. This supports examining interface-advection timestep sensitivity, not a causal diagnosis."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-66449995-ADD3-46C3-A852-0AD61778FA4C.html",
+      "title": "Segregated VOF Solver Reference",
+      "read_this_review": true,
+      "paraphrase": "Substep strategy updates phase transport; with second-order temporal discretization the sub-iterations update convection. It can be preferable when the globalstep already resolves physics, a condition not yet established for this new air acceleration."
+    }
+  ],
+  "guards_changed": false,
+  "solver_actions": false
+}

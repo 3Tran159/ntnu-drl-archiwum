@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,datetime,os,pandas as pd
+h=Path(__file__).resolve().parents[1];run=h/'cases/SP_C_split0_overset/c0_top_direction_20261103_050724';read=lambda p:json.loads(p.read_text(encoding='utf8'));at=datetime.datetime.now().astimezone().isoformat()
+st=read(h/'NIGHT_QUEUE_STATE.json');r=read(run/'work_review.json');assert all(r['whole_run_guards'].values())
+cp=st['checkpoint_integrity'][str(run/'checkpoint_step_50.sim')].copy();assert cp['native_save_complete'] and abs(cp['saved_time_s']-.55)<1e-9
+row=pd.read_csv(run/'history.csv').query('step==50').iloc[0]
+cp.update(physical_time_s=float(row.time_s),native_iteration=int(row.native_iteration),dt_s=.002,inner_iterations=40,velocity_urf=.8,pressure_urf=.2,top_backflow_direction='EXTRAPOLATED',top_backflow_pressure='ENVIRONMENTAL',CL=float(row.CL_hydro),CD=float(row.CD),Mh_Nm=float(row.Mh_Nm),pabs_min_Pa=float(row.p_absolute_min_Pa),scientific_approved=False,note='Complete native save and stable SHA verified. Native reopen still pending. Strict guards and full333939-cell Overset audit passed; scientific Hold remains for matched baseline and field settling.')
+f=read(run/'top_boundary_fields_step_50.json');res=read(run/'top_residual_live_review.json')
+ev=dict(at=at,kind='work_top_boundary_midrun_review',checkpoint=cp,full_native_audit=(run/'full_audit_step_50.txt').read_text(),force_windows=r['window_results'][-2:],near_field=r['field_exports']['step_50'],far_top=f,residual=res,conclusion='Top direction change removes inner-iteration plateau and repeated far-top pressure minima. Native field confirms remaining tangential velocity deficit advects/recovers rather than disappearing instantly. Near-foil pressure/head fields remain healthy. Continue the existing100-step diagnostic; do not interrupt healthy solver. Prepare matched B only; no angle approval.',scientific_approved=False)
+(run/'work_midrun_review_step50.json').write_text(json.dumps(ev,indent=2),encoding='utf8')
+v=read(h/'WORK_CURRENT_REVIEW.json');v.update(at=at,latest_top_boundary_checkpoint=cp,top_boundary_step50_review=ev,decision='RUNNING C0 top-direction diagnostic. t0.55 checkpoint verified; pressure/residual mechanism strongly supported. Scientific HOLD remains.',obstacle='Finish controlled C0 window, then matched B0 boundary/numerics comparison. Remaining far-top velocity memory and settling prevent final approval.',next='Finish current100-step C0 test; review checkpoint, all fields and force/residual windows before registering prepared B0 follow-up. Nonzero angles blocked.')
+tmp=h/'WORK_CURRENT_REVIEW.work_tmp';tmp.write_text(json.dumps(v,indent=2,ensure_ascii=False),encoding='utf8');os.replace(tmp,h/'WORK_CURRENT_REVIEW.json')
+with (h/'NIGHT_DECISIONS.jsonl').open('a',encoding='utf8') as out:out.write(json.dumps(ev)+'\n')
+print(json.dumps(dict(at=at,checkpoint=cp,decision=ev['conclusion']),indent=2))

@@ -1,0 +1,17 @@
+Compiled from "SimulationPartManager.java"
+public class star.common.SimulationPartManager extends star.common.GeometryPartManager implements star.common.ManagesParts,star.common.GeometryManager {
+  public star.common.SimulationPartManager(star.base.neo.ClientServerObjectKey);
+  public star.common.Simulation getSimulation();
+  public star.common.GeometryPartManager getPartManager();
+  public boolean isRoot();
+  public star.common.GeometryPart getParentPart();
+  public void notifyObjectsChanged(star.base.neo.NeoProperty);
+  public boolean getEnablePartPoints();
+  public void enablePartPoints();
+  public star.common.PartContactManager getPartContactManager();
+  public void updateParts(java.util.Collection<? extends star.common.GeometryPart>);
+  public void deleteEmptyPartSurfaces(java.util.Collection<star.common.GeometryPart>);
+  public void deleteEmptyPartCurves(java.util.Collection<star.common.GeometryPart>);
+  public static void enableShellParts();
+  public static boolean areShellPartsEnabled();
+}

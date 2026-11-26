@@ -1,0 +1,8 @@
+const fs=require('fs');
+const {chromium}=require('C:/Users/ThinkPad/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const R='F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/';
+(async()=>{const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true}),out=[];
+for(const width of [1360,390]){const p=await b.newPage({viewport:{width,height:1100}}),errors=[];p.on('pageerror',e=>errors.push(String(e)));await p.goto('file:///F:/ntnu/mesh_screening_20261028/dashboard.html');await p.locator('#refreshToggle').click();await p.locator('#live-tests').screenshot({path:R+'live_tests_'+width+'.png'});
+const state=await p.evaluate(()=>({text:document.querySelector('#live-tests').innerText,progress:+document.querySelector('#live-tests progress').value,rows:document.querySelectorAll('.temporal-live-table tbody tr').length,overflow:document.documentElement.scrollWidth>innerWidth+1,data:JSON.parse(document.querySelector('#evidence').textContent).active_tests,nav:!!document.querySelector('nav a[href="#live-tests"]')}));out.push({width,errors,rows:state.rows,progress:state.progress,overflow:state.overflow,hasT02:state.text.includes('T02'),hasM09:state.text.includes('M09'),maxM15:state.text.includes('M15')&&state.data.maximum_mesh_number===15,nav:state.nav});await p.close();}
+await b.close();fs.writeFileSync(R+'live_tests_qa.json',JSON.stringify(out,null,2));console.log(JSON.stringify(out));if(out.some(x=>x.errors.length||x.overflow||x.rows!==4||x.progress<0||x.progress>100||!x.hasT02||!x.hasM09||!x.maxM15||!x.nav))process.exitCode=1;
+})().catch(e=>{console.error(e);process.exitCode=1});

@@ -1,0 +1,142 @@
+<section id="manual-control-panel" aria-labelledby="manual-title">
+<style>
+#manual-control-panel{margin:20px 0;border:1px solid #9bb6c1;padding:22px;background:#fff;color:#203b4b;min-width:0;box-sizing:border-box}
+#manual-control-panel h2{font-size:23px;margin:7px 0 12px}#manual-control-panel h3{font-size:17px;margin:18px 0 10px}
+#manual-control-panel .lc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0;min-width:0}
+#manual-control-panel fieldset{min-width:0;border:1px solid #d5e1e7;padding:16px;margin:0}#manual-control-panel legend{font-weight:700;padding:0 7px;max-width:95%;white-space:normal;line-height:1.5}
+#manual-control-panel .lc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}
+#manual-control-panel label{display:block;font-size:13px;margin:10px 0 5px}
+#manual-control-panel input,#manual-control-panel select{width:100%;min-width:0;box-sizing:border-box;padding:9px;font:inherit;border:1px solid #a9bcc7;background:white;color:#203b4b}
+#manual-control-panel input[readonly]{background:#f3f6f8}#manual-control-panel select{max-width:100%}
+#manual-control-panel .lc-actions{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+#manual-control-panel button{padding:9px 13px;border:1px solid #7a97a6;background:#eef5f8;color:#173f55;border-radius:3px;font:inherit;line-height:1.4;cursor:pointer;max-width:100%;white-space:normal}
+#manual-control-panel button.primary{background:#166286;color:white}#manual-control-panel button.stop{background:#8d3e2e;color:white}#manual-control-panel button:disabled{opacity:.45;cursor:not-allowed}
+#manual-control-panel .lc-note{font-size:13px;line-height:1.55;color:#526b78;margin:9px 0;overflow-wrap:anywhere}
+#manual-control-panel .lc-banner{padding:12px;border-left:4px solid #2483ab;background:#f0f7fa;overflow-wrap:anywhere;line-height:1.5}
+#manual-control-panel .lc-hold{background:#fff9ec;border-left-color:#8a651e}#manual-control-panel .lc-error{border-color:#b24327;background:#fff3ed}
+#manual-control-panel .lc-path{display:block;white-space:normal;overflow-wrap:anywhere;font:12px/1.5 ui-monospace,monospace;padding:9px;background:#f0f5f7;max-width:100%;box-sizing:border-box}
+#manual-control-panel .lc-file,#manual-control-panel .lc-job{border:1px solid #d5e1e7;padding:12px;margin:10px 0;overflow-wrap:anywhere}
+#manual-control-panel .lc-job small{display:block;color:#536d7a;line-height:1.5}#manual-control-panel .lc-state{font-weight:700;line-height:1.5;overflow-wrap:anywhere}
+#manual-control-panel .lc-offline{padding:12px;background:#fff5dd;line-height:1.5}
+#manual-control-panel .lc-checks{list-style:none;padding:0;margin:10px 0}
+#manual-control-panel .lc-checks li{display:grid;grid-template-columns:83px 1fr;gap:9px;border-bottom:1px solid #dce5eb;padding:8px 0;font-size:13px;line-height:1.5}
+#manual-control-panel .lc-checks strong{font-weight:600}#manual-control-panel .lc-check-ok{color:#236547}#manual-control-panel .lc-check-blocked{color:#8d3e2e}
+#manual-control-panel .lc-summary{padding:10px;background:#f3f7f9;line-height:1.6;font-size:13px;overflow-wrap:anywhere}
+#manual-control-panel .lc-docs{display:flex;flex-wrap:wrap;gap:9px 18px;font-size:13px;line-height:1.5}
+#manual-control-panel a{color:#00699e;text-decoration:underline;overflow-wrap:anywhere}
+#manual-control-panel details{margin-top:12px}#manual-control-panel summary{cursor:pointer;line-height:1.5}
+#manual-control-panel [hidden]{display:none!important}
+@media(max-width:700px){#manual-control-panel{padding:14px}#manual-control-panel .lc-grid,#manual-control-panel .lc-row{grid-template-columns:1fr}#manual-control-panel .lc-grid{gap:12px}#manual-control-panel fieldset{padding:12px}#manual-control-panel .lc-checks li{grid-template-columns:68px 1fr}}
+@media print{#manual-control-panel{break-before:page}#manual-control-panel .lc-grid,#manual-control-panel .lc-actions,#manual-control-panel .lc-offline,#manual-control-panel button{display:none!important}#manual-control-panel .lc-path{font-size:9pt}#manual-control-panel .lc-file,#manual-control-panel .lc-job{break-inside:avoid}#manual-control-panel .lc-readiness{break-inside:avoid}}
+</style>
+<span class="console-label">LOCAL SIMULATION CONTROL</span>
+<h2 id="manual-title">Choose a mesh, save a queue, then start explicitly</h2>
+<p class="lc-note">Paste the local path to a prepared mesh .sim. Inspection and recipe checks use zero flow steps. A mechanically ready input is not a validated force result. New meshes and domains need their own matching calm reference.</p>
+<div class="lc-docs"><a id="lc-guide" href="standalone_control_guide.html">Standalone control guide</a><a id="lc-rescue" href="chat_rescue.html">Recovery guide</a><a href="local_campaign_results.html" target="_blank" rel="noopener">Campaign HTML results</a></div>
+<div class="lc-offline" id="lc-offline">This file is read-only. For controls, <a href="http://127.0.0.1:8771/#manual-control-panel">open the local dashboard</a> or double-click <b>Open_NTNU_Control.cmd</b>.</div>
+<p id="lc-message" class="lc-banner" role="status" aria-live="polite">Connecting to the local controller…</p>
+<div id="lc-hold" class="lc-banner lc-hold" hidden></div>
+<div class="lc-readiness"><h3>Readiness and remaining checks</h3><p id="lc-readiness-summary" class="lc-note">Waiting for the local service. No start is enabled.</p><ul id="lc-checks" class="lc-checks"></ul></div>
+<div class="lc-grid">
+<fieldset><legend>1 · Paste and inspect a mesh</legend>
+<label for="lc-mesh-path">Prepared mesh .sim path on this computer</label><input id="lc-mesh-path" type="text" autocomplete="off" spellcheck="false" placeholder="E:\ntnu\my_mesh\prepared.sim">
+<p class="lc-note">Paste a path; no upload or manifest is required. The source is preserved. Inspection checks the file, mesh, geometry and available configuration without advancing physical time.</p>
+<div class="lc-actions"><button id="lc-inspect" disabled>Inspect mesh · zero flow steps</button></div>
+<p id="lc-import-status" class="lc-summary" aria-live="polite">Mesh inspection interface pending.</p>
+</fieldset>
+<fieldset><legend>2 · Select an inspected mesh</legend>
+<label for="lc-mesh-select">Saved mesh inspections</label><select id="lc-mesh-select"><option value="">No inspected mesh available</option></select>
+<div class="lc-actions"><button id="lc-select-mesh" disabled>Use selected mesh</button><button id="lc-validate" disabled>Check calculation recipe · zero flow steps</button></div>
+<p id="lc-mesh-profile" class="lc-summary">No inspected mesh selected.</p><code id="lc-mesh-source" class="lc-path" hidden></code>
+<p class="lc-note">Selection binds the source mesh and its time-step profile. Recipe checks establish that the local workflow can run; they do not certify mesh convergence, force accuracy or wave propagation.</p>
+</fieldset>
+<fieldset><legend>3 · Set the wave and run limits</legend>
+<label for="lc-preset">Wave case</label><select id="lc-preset"><option value="">Custom configuration</option></select>
+<div class="lc-row"><div><label for="lc-height">Crest-to-trough height H [m]</label><select id="lc-height"><option value=".25">0.25</option><option value=".5" selected>0.50</option><option value=".75">0.75</option></select></div><div><label for="lc-lambda">Wavelength λ [m]</label><select id="lc-lambda"><option>10</option><option selected>20</option><option>30</option><option>40</option></select></div></div>
+<label for="lc-length">Domain layout</label><select id="lc-length"><option value="source">Match selected source</option><option value="4">4 wavelengths</option><option value="3">3 wavelengths</option><option value="custom">Custom distances below</option></select>
+<div class="lc-row"><div><label for="lc-up">Before foil reference x = 0 [m]</label><input id="lc-up" type="number" min="11.9" max="100" step=".01" required></div><div><label for="lc-down">After trailing edge x = 1.19 m [m]</label><input id="lc-down" type="number" min="10" max="120" step=".01" required></div></div>
+<p id="lc-domain" class="lc-note">Select an inspected mesh to load its domain bounds.</p>
+<div class="lc-row"><div><label for="lc-dt">Time step from selected profile [ms]</label><input id="lc-dt" type="text" readonly value="Pending"></div><div><label for="lc-checkpoint">Checkpoint interval [physical s]</label><input id="lc-checkpoint" type="number" min=".05" max="1" step=".001" value=".05" required></div></div>
+<label for="lc-wall">Computer-time limit per solve [min]</label><input id="lc-wall" type="number" min="10" max="720" step="1" value="180" required>
+<p class="lc-note">A changed domain needs a new prepared input and matching calm reference. Changing these fields does not edit the source or an existing attempt. Fifth-order wave theory and second-order time integration are separate settings.</p>
+</fieldset>
+<fieldset><legend>4 · Save the queue, then choose Start</legend>
+<p id="lc-config-summary" class="lc-summary">Select an inspected mesh before saving a configuration.</p>
+<div class="lc-actions"><button id="lc-queue" disabled>Save run configuration to queue</button><button id="lc-prepare" disabled>Save input-preparation job</button></div>
+<p class="lc-note">Saving a job never starts a calculation. A run job will prepare the domain if needed, settle its matching C01, then activate the full-height inlet wave without a ramp. Input preparation saves a definition without starting the requested flow calculation.</p>
+<div class="lc-actions"><button id="lc-release-hold" disabled>Release campaign hold · no start</button><button id="lc-resume" class="primary" disabled>Start saved queue</button></div>
+<p id="lc-start-blocker" class="lc-note">Start requires an inspected selected mesh, completed recipe checks and an explicitly released campaign hold.</p>
+<details><summary>Save catalog configurations</summary><p class="lc-note">Save the listed wave cases with this mesh profile, including the three-wavelength sensitivity. Every requested domain still needs its own audited input and calm reference. Nothing starts until Start saved queue is pressed.</p><div class="lc-actions"><button id="lc-all" disabled>Save catalog cases to queue</button></div></details>
+</fieldset>
+</div>
+<h3>Current calculation and saved files</h3>
+<p id="lc-active" class="lc-state">Reading current case…</p><p id="lc-active-detail" class="lc-note"></p>
+<div class="lc-actions"><button id="lc-stop" class="stop" disabled>Stop, save and pause queue</button></div>
+<details><summary>Schedule a stop for the current calculation</summary>
+<div class="lc-row"><div><label for="lc-stop-time">Stop at physical time [s] — optional</label><input id="lc-stop-time" type="number" min="0" max="120" step=".001"></div><div><label for="lc-stop-min">Stop after [min] — optional</label><input id="lc-stop-min" type="number" min=".1" max="720" step=".1"></div></div>
+<div class="lc-actions"><button id="lc-schedule" disabled>Set stop schedule</button><button id="lc-unschedule" disabled>Clear schedule</button></div><p id="lc-schedule-note" class="lc-note"></p>
+</details>
+<div id="lc-calm" class="lc-banner">No accepted matching C01 checkpoint is currently listed.</div>
+<p id="lc-latest-label" class="lc-note">Latest current-case save</p><code id="lc-latest-sim" class="lc-path">No completed .sim listed.</code>
+<div id="lc-files"></div><p class="lc-note">Prepared definitions, failed diagnostic states and accepted settled references are labeled separately. Open only completed saves; a checkpoint can lag the plotted time.</p>
+<h3>5 · Review selected runs</h3><p class="lc-note">The comparative report is a saved snapshot with selectable runs, separate CL/CD histories, convergence screens and diagnostic limits. The current calculation stays in the live dashboard above.</p><p><a href="local_campaign_results.html" target="_blank" rel="noopener">Open aggregate comparison report</a></p><h3>Saved queue and errors</h3><div id="lc-jobs"></div>
+<p class="lc-note">Wave repeatability uses complete arrived-wave cycles. It does not establish mesh, time-step or propagation accuracy. Physical guards and native mass reporting remain active.</p>
+</section>
+<script>(()=>{const root=document.getElementById('manual-control-panel');if(!root||root.dataset.bound)return;root.dataset.bound='1';
+const $=id=>document.getElementById('lc-'+id);const online=location.origin==='http://127.0.0.1:8771'&&!!window.NTNU_LOCAL_TOKEN;
+let snapshot=null,workflow=null,presets=[],pending=false,initial=false,appliedMesh=null;
+const msg=(s,error=false)=>{$('message').textContent=s;$('message').classList.toggle('lc-error',error)};
+const elem=(tag,text,cls)=>{const x=document.createElement(tag);if(text!=null)x.textContent=text;if(cls)x.className=cls;return x};
+const num=v=>v!==null&&v!==''&&Number.isFinite(Number(v))?Number(v):null;
+const entries=()=>workflow?.mesh_inputs?.entries||[];
+const selected=()=>entries().find(e=>e.id===workflow?.mesh_inputs?.selected_id);
+const entryReady=e=>!!e&&(typeof e.ready==='boolean'?e.ready:e.status==='mesh_inspection_passed');
+const held=()=>workflow?.campaign_hold?.active===true;
+const sourceBounds=e=>{const b=e?.domain_x_m;if(Array.isArray(b)&&b.length===2&&b.every(v=>num(v)!==null))return b.map(Number);if(b&&num(b.min)!==null&&num(b.max)!==null)return[+b.min,+b.max];if(num(e?.upstream_m)!==null&&num(e?.downstream_m)!==null)return[-e.upstream_m,e.downstream_m+1.19];return null};
+function domainLabel(){const a=num($('up').value),b=num($('down').value),e=selected();$('domain').textContent=a===null||b===null?'Select an inspected mesh or enter valid domain distances.':(a+b+1.19).toFixed(2)+' m long · x = −'+a.toFixed(2)+' to '+(b+1.19).toFixed(2)+' m · '+(e?.label||e?.id||'no mesh selected');const bounds=sourceBounds(e);if(bounds&&a!==null&&b!==null&&(Math.abs(a+bounds[0])>.001||Math.abs(b+1.19-bounds[1])>.001))$('domain').textContent+=' · changed domain: new input and calm reference required';configSummary()}
+function applySource(e){const b=sourceBounds(e);if(b){$('up').value=(-b[0]).toFixed(3);$('down').value=(b[1]-1.19).toFixed(3)}else{$('up').value='';$('down').value=''}$('length').value='source';domainLabel()}
+function layout(){const n=$('length').value,l=+$('lambda').value;if(n==='source'){applySource(selected());return}if(n!=='custom'){$('up').value=((n==='3'?1.25:1.75)*l).toFixed(2);$('down').value=((n==='3'?1.75:2.25)*l-1.19).toFixed(2)}domainLabel();renderButtons()}
+function validConfig(){return['up','down','wall','checkpoint'].every(id=>$(id).value!==''&&$(id).checkValidity())&&+$('up').value>0&&+$('down').value>0}
+function config(action='run'){const chosen=presets.find(p=>p.id===$('preset').value)||presets[Number($('preset').value)];return{name:chosen?.name||'Custom',mesh_id:workflow?.mesh_inputs?.selected_id,height_m:+$('height').value,wavelength_m:+$('lambda').value,upstream_m:+$('up').value,downstream_m:+$('down').value,wall_minutes:+$('wall').value,checkpoint_interval_s:+$('checkpoint').value,action}}
+function configSummary(){const e=selected();$('config-summary').textContent=e?(e.label||e.id)+' · H = '+Number($('height').value).toFixed(2)+' m · λ = '+$('lambda').value+' m · checkpoint every '+$('checkpoint').value+' s. Save only; no automatic start.':'Select an inspected mesh before saving a configuration.'}
+function actionButton(text,fn){const b=elem('button',text);b.type='button';b.disabled=!online||pending;b.onclick=fn;return b}
+async function post(path,data={}){if(!online||pending)return;pending=true;renderButtons();try{const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-NTNU-Control':window.NTNU_LOCAL_TOKEN||''},body:JSON.stringify(data)});const j=await r.json();if(!r.ok)throw Error(j.error||'Action failed');msg(j.message||'Request saved');await refresh()}catch(e){msg(e.message,true)}finally{pending=false;renderButtons()}}
+function renderButtons(){const e=selected(),candidate=entries().find(e=>e.id===$('mesh-select').value),available=online&&!pending,meshOK=entryReady(e),recipeOK=workflow?.readiness?.recipe_ready===true,canSave=available&&meshOK&&validConfig(),jobs=workflow?.jobs||[];
+$('inspect').disabled=!available||!workflow?.mesh_inputs||!$('mesh-path').value.trim();$('select-mesh').disabled=!available||!entryReady(candidate)||candidate.id===e?.id;
+$('validate').disabled=!available||workflow?.readiness?.can_validate_recipe!==true;
+$('queue').disabled=$('prepare').disabled=!canSave;$('all').disabled=!canSave||!presets.length;
+$('release-hold').disabled=!available||!held()||!meshOK;
+$('resume').disabled=!available||held()||!recipeOK||!meshOK||workflow?.readiness?.ready!==true||!jobs.some(j=>['queued','waiting'].includes(j.status));
+$('stop').disabled=!available||(!snapshot?.controllable&&!['running','preparing','waiting'].includes(workflow?.state?.status));
+$('schedule').disabled=$('unschedule').disabled=!available||!snapshot?.controllable;
+const blocks=[];if(!meshOK)blocks.push('Select an inspected ready mesh.');if(!recipeOK)blocks.push('Complete recipe checks.');if(held())blocks.push('Campaign hold is active; release is a separate explicit action.');if(!jobs.some(j=>['queued','waiting'].includes(j.status)))blocks.push('Save a run or preparation job first.');$('start-blocker').textContent=blocks.length?blocks.join(' '):'Ready for an explicit Start. No calculation starts when a queue is saved.'}
+function renderChecks(){const readiness=workflow.readiness||{};$('readiness-summary').textContent=readiness.message||'Recipe readiness is pending.';$('checks').replaceChildren();const checks=readiness.checks||[];if(!checks.length)checks.push({name:'Calculation recipe',ok:readiness.recipe_ready===true,message:readiness.recipe_ready===true?'Local recipe checks passed; force accuracy remains unvalidated.':'Detailed checks are not yet available from the local service.'});for(const check of checks){const li=elem('li');li.append(elem('strong',check.ok?'Ready':'Blocked',check.ok?'lc-check-ok':'lc-check-blocked'),elem('span',(check.name||'Check')+' — '+(check.message||'')));$('checks').append(li)}}
+function renderMeshes(){const list=entries(),current=selected(),previous=$('mesh-select').value;$('mesh-select').replaceChildren(...list.map(e=>{const o=elem('option',(e.label||e.id)+' · '+(num(e.cells)!==null?Number(e.cells).toLocaleString()+' cells':'cells pending')+' · '+(entryReady(e)?'inspected ready':String(e.status||'pending').replaceAll('_',' ')));o.value=e.id;return o}));if(!list.length){const o=elem('option','No inspected mesh available');o.value='';$('mesh-select').append(o)}else $('mesh-select').value=list.some(e=>e.id===previous)?previous:current?.id||list[0].id;
+const imports=workflow.mesh_inputs?.imports||[];const imp=workflow.mesh_inputs?.import_status||(Array.isArray(imports)?imports.at(-1):null);$('import-status').textContent=typeof imp==='string'?imp:imp?([imp.status,imp.stage,imp.reason||imp.message].filter(Boolean).join(' · ')):(workflow.mesh_inputs?'No mesh inspection is currently running.':'Mesh inspection interface pending; the local service is being updated.');
+$('mesh-profile').textContent=current?(current.label||current.id)+' · '+(num(current.cells)!==null?Number(current.cells).toLocaleString()+' cells':'cell count pending')+' · '+(entryReady(current)?'Mechanically ready':'Not ready')+(current.reason?' · '+current.reason:''):'No inspected mesh selected.';
+$('mesh-source').hidden=!current?.source_path;$('mesh-source').textContent=current?.source_path||'';$('dt').value=num(current?.dt_s)!==null?(current.dt_s*1000).toFixed(3):'Pending';
+if(current?.id!==appliedMesh){appliedMesh=current?.id||null;applySource(current)}}
+function fileKind(f){const k=String(f.kind||'').toLowerCase();if(k.includes('fail')||k.includes('diagnostic'))return'Failed / diagnostic state';if(k.includes('settled'))return'Settled calm reference';if(k.includes('prepared')||k.includes('definition')||k.includes('input'))return'Prepared definition · zero new flow steps';if(k.includes('checkpoint'))return'Completed checkpoint';return f.label||f.kind||f.name||'Saved state'}
+function showFiles(files){$('files').replaceChildren();const seen=new Set();for(const f of files){if(!f.path||seen.has(f.path))continue;seen.add(f.path);const row=elem('div',null,'lc-file'),t=num(f.time_s);row.append(elem('b',fileKind(f)+(t!==null?' · t = '+t.toFixed(3)+' s':'')),elem('code',f.path,'lc-path'));if(f.reason)row.append(elem('p',f.reason,'lc-note'));const actions=elem('div',null,'lc-actions');actions.append(actionButton('Copy path',()=>navigator.clipboard.writeText(f.path).then(()=>msg('Path copied')).catch(()=>msg('Select and copy the displayed path'))),actionButton('Open .sim',()=>post('/api/workflow/open',{path:f.path})),actionButton('Show folder',()=>post('/api/workflow/open',{path:f.path,folder:true})));row.append(actions);$('files').append(row)}if(!seen.size)$('files').append(elem('p','No completed .sim save is listed yet.','lc-note'));
+const current=(snapshot.files||[]).filter(f=>f.path&&f.path.toLowerCase().endsWith('.sim')).sort((a,b)=>(num(b.time_s)||0)-(num(a.time_s)||0));const latest=current[0]||files.find(f=>f.path?.toLowerCase().endsWith('.sim'));$('latest-sim').textContent=latest?.path||'No completed .sim listed.';$('latest-label').textContent=latest?fileKind(latest)+(current.length?' · latest listed current-case .sim':' · available .sim'):'Latest current-case save'}
+function renderJobs(){$('jobs').replaceChildren();for(const j of workflow.jobs||[]){const spec=j.spec||{},row=elem('div',null,'lc-job'),length=num(spec.length_m);row.append(elem('b',(spec.name||j.id)+' · '+(spec.mesh_id||j.mesh_id||'mesh pending')+' · H '+(num(spec.height_m)!==null?spec.height_m:'?')+' m / λ '+(num(spec.wavelength_m)!==null?spec.wavelength_m:'?')+' m'+(length!==null?' · '+length.toFixed(2)+' m domain':'')),elem('div',String(j.status||'pending').replaceAll('_',' '),'lc-state'),elem('small',j.message||''));if(['queued','waiting'].includes(j.status))row.append(actionButton('Cancel saved job',()=>post('/api/workflow/cancel',{id:j.id})));if(j.status==='needs_review')row.append(actionButton('Acknowledge review; archive attempt',()=>post('/api/workflow/acknowledge',{id:j.id})));if(j.status==='paused'&&j.resume_manifest){const b=actionButton('Continue from verified checkpoint',()=>post('/api/workflow/continue-job',{id:j.id}));b.disabled=b.disabled||held()||workflow.readiness?.ready!==true;row.append(b,elem('small','Creates a new attempt after the saved checkpoint is verified.'))}$('jobs').append(row)}if(!(workflow.jobs||[]).length)$('jobs').append(elem('p','No saved jobs. Saving a configuration does not start it.','lc-note'))}
+function render(){if(!snapshot||!workflow)return;renderMeshes();renderChecks();const s=snapshot.state||{},p=s.progress||{};$('active').textContent=(s.case||'No owned calculation')+' · '+(s.computation_active?'running':'saved / inactive');$('active-detail').textContent='Physical time '+Number(p.time_s??s.source_time_s??0).toFixed(3)+' s · '+(s.scope||'');$('hold').hidden=!held()&&!workflow.paused;$('hold').textContent=held()?'Campaign paused. '+(workflow.campaign_hold?.reason||'Explicit release is required before any saved job can start.'):(workflow.paused?'Queue paused. Saved jobs remain idle until you press Start saved queue.':'');
+$('schedule-note').textContent=snapshot.schedule?.state==='scheduled'?'Stop schedule active; the first limit wins.':'No active stop schedule.';const calm=workflow.calm;$('calm').replaceChildren(elem('b',calm?'Matching settled C01 · t = '+Number(calm.physical_time_s).toFixed(3)+' s':'No accepted matching C01 checkpoint is currently listed.'));if(calm)$('calm').append(elem('code',calm.file,'lc-path'));
+showFiles([...(snapshot.files||[]),...(workflow.files||[])]);renderJobs();configSummary();renderButtons();if(!initial){msg('Local controller connected. Choose an explicit action below.');initial=true}}
+async function refresh(){try{const[a,b]=await Promise.all([fetch('/api/status',{cache:'no-store'}),fetch('/api/workflow',{cache:'no-store'})]);if(!a.ok||!b.ok)throw Error('Local service unavailable');snapshot=await a.json();workflow=await b.json();if(!presets.length&&workflow.catalog?.length){presets=workflow.catalog;$('preset').replaceChildren(...presets.map((p,i)=>{const o=elem('option',p.name+' · H '+p.height_m+' m / λ '+p.wavelength_m+' m');o.value=p.id||String(i);return o}))}render()}catch(e){msg('Local connection unavailable. Controls are disabled until the service responds.',true);workflow=null;renderButtons()}}
+$('mesh-path').oninput=renderButtons;$('mesh-select').onchange=renderButtons;
+$('inspect').onclick=()=>{let path=$('mesh-path').value.trim();if(path.startsWith('"')&&path.endsWith('"'))path=path.slice(1,-1);post('/api/workflow/inspect-mesh',{path})};
+$('select-mesh').onclick=()=>post('/api/workflow/select-mesh',{id:$('mesh-select').value});
+$('validate').onclick=()=>post('/api/workflow/validate-recipe',{});
+$('release-hold').onclick=()=>post('/api/workflow/release-hold',{});
+$('preset').onchange=()=>{const p=presets.find(p=>p.id===$('preset').value)||presets[Number($('preset').value)];if(p){$('height').value=String(p.height_m).replace(/^0\./,'.');$('lambda').value=p.wavelength_m;layout()}};
+$('lambda').onchange=layout;$('length').onchange=layout;for(const id of['up','down'])$(id).oninput=()=>{$('length').value='custom';domainLabel();renderButtons()};
+for(const id of['height','checkpoint','wall'])$(id).oninput=()=>{configSummary();renderButtons()};
+$('queue').onclick=()=>post('/api/workflow/queue',config('run'));$('prepare').onclick=()=>post('/api/workflow/queue',config('prepare'));
+$('all').onclick=()=>{const jobs=presets.map(p=>({name:p.name,mesh_id:workflow.mesh_inputs.selected_id,height_m:p.height_m,wavelength_m:p.wavelength_m,upstream_m:p.upstream_m,downstream_m:p.downstream_m,wall_minutes:+$('wall').value,checkpoint_interval_s:+$('checkpoint').value,action:'run'}));if(jobs.length&&!jobs.some(p=>/3lambda|3λ/i.test(p.name)))jobs.splice(2,0,{...jobs[0],name:'W01a3lambda',upstream_m:25,downstream_m:33.81});post('/api/workflow/queue-all',{jobs})};
+$('stop').onclick=()=>post('/api/workflow/pause',{});$('resume').onclick=()=>post('/api/workflow/resume',{});
+$('schedule').onclick=()=>post('/api/schedule',{case:snapshot.state.case,physical_time_s:$('stop-time').value===''?null:+$('stop-time').value,after_minutes:$('stop-min').value===''?null:+$('stop-min').value});
+$('unschedule').onclick=()=>post('/api/cancel-schedule',{case:snapshot.state.case});
+if(online){$('offline').hidden=true;refresh();setInterval(()=>{if(!document.hidden)refresh()},5000)}else{msg('Read-only file view. Open the local dashboard to inspect meshes or control calculations.');for(const [id,file] of[['guide','standalone_control_guide.html'],['rescue','chat_rescue.html']])$(id).href='file:///F:/ntnu/mesh_screening_20261028/'+file}
+domainLabel();renderButtons();
+})();</script>

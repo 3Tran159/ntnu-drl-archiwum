@@ -1,0 +1,93 @@
+{
+  "sampled_at": "2026-11-02T16:26:54+01:00",
+  "sample_unix": 1793633214.0947845,
+  "scope": "Whole computer; campaign activity identified separately",
+  "errors": [],
+  "memory": {
+    "used_gb": 27.352752685546875,
+    "total_gb": 63.426570892333984,
+    "free_gb": 36.07381820678711,
+    "percent": 43
+  },
+  "cpu_percent": 6.969103066635929,
+  "disks": {
+    "E": {
+      "free_gb": 138.17950057983398,
+      "total_gb": 951.6445274353027
+    },
+    "F": {
+      "free_gb": 153.46625900268555,
+      "total_gb": 758.5458946228027
+    }
+  },
+  "gpu": {
+    "name": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+    "percent": 0.0,
+    "used_mb": 441.0,
+    "total_mb": 12227.0,
+    "temperature_c": 48.0,
+    "power_W": 9.64,
+    "sm_clock_MHz": 457.0,
+    "thermal_limiter_active": false,
+    "power_limiter_active": false
+  },
+  "star_processes": 0,
+  "external_campaigns": [],
+  "campaign_hold": {
+    "active": true,
+    "status": "paused_by_user_pending_mesh_study",
+    "reason": "Waiting for the other agent's mesh convergence and optimization results before any C01 or wave launch.",
+    "updated_at": "2026-10-30T14:24:26.098931+01:00",
+    "probe_launched": false,
+    "scope": "This quasi-2D campaign only; other mesh study and HF session remain untouched.",
+    "resume_requires": "User instruction after mesh convergence and optimization review",
+    "checkpoint_policy_on_future_resume_s": 0.05
+  },
+  "stop_requested": true,
+  "locks": [],
+  "campaign_solver_observed": false,
+  "other_star_processes": 0,
+  "activity": {
+    "state": "paused",
+    "mode": "none",
+    "description": "No active campaign calculation",
+    "stage": "Waiting for mesh convergence and optimization review"
+  },
+  "last_wave": {
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+    "time_s": 0.7500000000000006,
+    "status": "target_reached",
+    "updated_at": "2026-10-30T02:05:40.924948+01:00",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14"
+  },
+  "mode_fields": {
+    "calm": [
+      "physical_time",
+      "CD",
+      "CL",
+      "adjacent_0.2s_changes",
+      "CFL",
+      "step_cost",
+      "checkpoint"
+    ],
+    "wave": [
+      "physical_time",
+      "gauge_actual_reference",
+      "phase_balance",
+      "speed",
+      "interface_CFL",
+      "alpha_bounds",
+      "step_cost",
+      "checkpoint"
+    ],
+    "preparation": [
+      "stage",
+      "elapsed",
+      "cells_when_available"
+    ],
+    "none": [
+      "last_completed",
+      "next_review"
+    ]
+  }
+}

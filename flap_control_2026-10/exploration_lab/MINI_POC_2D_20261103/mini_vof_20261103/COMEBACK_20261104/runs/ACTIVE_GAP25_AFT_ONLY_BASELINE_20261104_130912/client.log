@@ -1,0 +1,506 @@
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\input.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:44: warning: [deprecation] getWavePeriod() in star.vof.FifthOrderVofWave has been deprecated
+ double nativePeriod(){return wave==null?0:wave.getWavePeriod().getSIValue();}
+                                               ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:68: warning: [deprecation] setAngleFactor(double) in star.vof.SegregatedVofModel has been deprecated
+  pc.getModelManager().getModel(SegregatedVolumeFluxBasedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SegregatedVofModel.class).setAngleFactor(.15);
+                                                                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:167: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                                                        ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:167: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(ForcingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                  ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:168: warning: [deprecation] star.vof.LengthSpecificationOption.Type in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                                                        ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:168: warning: [deprecation] setSelected(int) in star.vof.LengthSpecificationOption has been deprecated
+   reg.getConditions().get(DampingLengthSpecificationOption.class).setSelected(LengthSpecificationOption.Type.BOUNDARY);
+                                                                  ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:179: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                 ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:179: warning: [deprecation] setUrf(double) in star.segregatedflow.PressureSolver has been deprecated
+  ImplicitUnsteadySolver un=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);un.getTimeStep().setValue(dt);un.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);PressureSolver ps=s.getSolverManager().getSolver(SegregatedFlowSolver.class).getPressureSolver();double oldUrf=ps.getUrf(),oldTol=ps.getAMGLinearSolver().getConvergeTol();ps.getAMGLinearSolver().setConvergeTol(d("pressure_tol",.01));ps.setUrf(d("pressure_urf",.5));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:181: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);if(b("fresh")){useSeededInitialFlow();s.getSolution().initializeSolution();}double nativePeriod=nativePeriod();if(Double.isFinite(nativePeriod)&&nativePeriod>.40&&nativePeriod<.52){T=nativePeriod;W=2*Math.PI/T;}write("STOKES_READBACK.json",Map.of("wave_type",wave==null?"FlatVofWave":"FifthOrderVofWave","native_period_s",nativePeriod,"period_planning_s",wave==null?0:T,"height_m",waveHeight(),"depth_m",sy+10,"wavelength_m",wave==null?0:wave.getVofWaveSpecification().getWaveLength().getSIValue(),"advancing_direction","+X","current_m_s",18,"global_initialization",b("fresh")&&oldAmp>0));
+                                         ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:182: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+  Map<String,Object>a=new LinkedHashMap<>();a.put("stage",cfg.getProperty("stage"));a.put("clean_unforced_calm",b("clean_calm"));a.put("cells",nc);a.put("start_time",start);a.put("dt",dt);a.put("inner",inner);a.put("initialization_called",b("fresh"));a.put("calm_speed_ramp_s",d("calm_speed_ramp_s",0));a.put("explicit_ambient_k_omega",b("calm_explicit_ambient"));a.put("initial_calm_current_m_s",d("calm_speed_ramp_s",0)>0?.05:18);a.put("reset_on_loaded_fields",false);a.put("old_pressure_urf",oldUrf);a.put("pressure_urf",ps.getUrf());a.put("old_pressure_tol",oldTol);a.put("pressure_tol",ps.getAMGLinearSolver().getConvergeTol());a.put("amplitude_from",oldAmp);a.put("amplitude_target",amp);a.put("amplitude_ramp_s",ramp);a.put("initial_field",oldAmp==0?"flat water and air":"native Stokes V");a.put("inlet_ramp",ramp>0?"S5, zero endpoint first/second derivative":"Existing globally initialized wave; no velocity/amplitude jump");a.put("forcing_length_m",d("forcing_length",4));a.put("damping_length_m",d("damping_length",8));a.put("outlet_and_top","native flat-wave pressure and volume fraction");a.put("vorticity_limiter",pc.getModelManager().getModel(SstKwTurbModel.class).getKwTurbRealizabilityOption().getSelectedElement().toString());a.put("all_yplus",pc.getModelManager().hasModel(KwAllYplusWallTreatment.class)!=null);a.put("sst",pc.getModelManager().hasModel(SstKwTurbModel.class)!=null);a.put("reference_C01_CL",.3156595);a.put("reference_C01_CD",.00700232);a.put("C01_not_modified",true);write("SETUP_READBACK.json",a);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:196: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  if(foil){for(ForceReportForceOption.Type type:List.of(ForceReportForceOption.Type.PRESSURE,ForceReportForceOption.Type.SHEAR)){ForceReport f=s.getReportManager().createReport(ForceReport.class);f.getForceOption().setSelected(type);f.getDirection().setComponents(1,0,0);f.setPressureOption(FluidLoadsReportPressureOption.SP_UC);f.getParts().setObjects(walls);rep.put(type==ForceReportForceOption.Type.PRESSURE?"FxPressure":"FxShear",f);}wallTable=s.getTableManager().createTable(XyzInternalTable.class);wallTable.setPresentationName("CB_Wall_Cp_yplus");wallTable.getParts().setObjects(walls);wallTable.setFieldFunctions(List.of(ff("WallYplus"),ff("Pressure"),ff("AbsolutePressure")));}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:197: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  fields=s.getTableManager().createTable(XyzInternalTable.class);fields.setPresentationName("NIGHT_FIELDS");fields.getParts().setObjects(reg);fields.setFieldFunctions(List.of(alpha,ff("AbsolutePressure"),ff("Pressure"),ff("Velocity").getComponentFunction(0),ff("Velocity").getComponentFunction(1),ff("Velocity").getComponentFunction(2),ff("TurbulentKineticEnergy"),ff("SpecificDissipationRate"),ff("TurbulentViscosityRatio"),co,ff("CellQuality"),ff("Volume")));
+                            ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:255: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+  vertices=s.getTableManager().createTable(XyzInternalTable.class);
+                              ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:340: warning: [deprecation] setUrf(double) in star.segregatedflow.VelocitySolver has been deprecated
+  flow.getVelocitySolver().setUrf(.3);
+                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:341: warning: [deprecation] setUrf(double) in star.segregatedflow.PressureSolver has been deprecated
+  flow.getPressureSolver().setUrf(.05);
+                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:390: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    table=s.getTableManager().createTable(XyzInternalTable.class);
+                             ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\MiniVofStokes.java:576: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                         ^
+
+Loading/configuring connectivity (old|new partitions: 1|1)
+  MINI_water (index 0): 9638 cells, 15329 faces, 6736 verts.
+Configuring finished
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           492   2.503720e+01   2.684681e+03   1.688661e+03   1.187544e+00   9.683150e-03 
+           493   2.488892e+01   2.673856e+03   1.679964e+03   1.145964e+00   9.612127e-03 
+           494   2.474175e+01   2.662797e+03   1.669923e+03   1.099549e+00   9.524415e-03 
+           495   2.458883e+01   2.652187e+03   1.659223e+03   1.052465e+00   9.459572e-03 
+           496   2.443892e+01   2.641420e+03   1.648069e+03   9.984378e-01   9.423237e-03 
+           497   2.429164e+01   2.630022e+03   1.637087e+03   9.427415e-01   9.413385e-03 
+           498   2.414458e+01   2.618706e+03   1.626192e+03   8.856992e-01   9.413313e-03 
+           499   2.400280e+01   2.607306e+03   1.615439e+03   8.301676e-01   9.409087e-03 
+           500   2.384297e+01   2.595389e+03   1.604894e+03   7.762194e-01   9.406981e-03 
+           501   2.368327e+01   2.582415e+03   1.594961e+03   7.271346e-01   9.405850e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           502   2.352304e+01   2.568657e+03   1.585610e+03   6.841324e-01   9.410734e-03 
+           503   2.334744e+01   2.553831e+03   1.576541e+03   6.348254e-01   9.416598e-03 
+           504   2.318972e+01   2.537952e+03   1.567807e+03   6.104120e-01   9.421682e-03 
+           505   2.303221e+01   2.522634e+03   1.559498e+03   5.971427e-01   9.412546e-03 
+           506   2.285726e+01   2.505707e+03   1.550650e+03   6.090114e-01   9.395934e-03 
+           507   2.271257e+01   2.490998e+03   1.542774e+03   6.313481e-01   9.374132e-03 
+           508   2.256339e+01   2.475732e+03   1.534995e+03   6.567916e-01   9.356926e-03 
+           509   2.240746e+01   2.459429e+03   1.526600e+03   6.840437e-01   9.344345e-03 
+           510   2.225124e+01   2.443979e+03   1.518218e+03   7.047696e-01   9.330120e-03 
+           511   2.210872e+01   2.428507e+03   1.509612e+03   7.224426e-01   9.314101e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           512   2.197250e+01   2.413137e+03   1.500766e+03   7.392878e-01   9.300023e-03 
+           513   2.182871e+01   2.398275e+03   1.491846e+03   7.547379e-01   9.291234e-03 
+           514   2.169732e+01   2.384244e+03   1.482602e+03   7.879975e-01   9.275424e-03 
+           515   2.156808e+01   2.370101e+03   1.473457e+03   7.767072e-01   9.262221e-03 
+           516   2.143827e+01   2.356077e+03   1.464405e+03   8.033234e-01   9.242284e-03 
+           517   2.133722e+01   2.346511e+03   1.458710e+03   7.952433e-01   9.222007e-03 
+           518   2.123175e+01   2.332413e+03   1.450550e+03   7.840597e-01   9.214075e-03 
+           519   2.112744e+01   2.318306e+03   1.442803e+03   7.732230e-01   9.203584e-03 
+           520   2.102053e+01   2.304546e+03   1.435635e+03   7.626265e-01   9.202268e-03 
+           521   2.090366e+01   2.291332e+03   1.429183e+03   7.508150e-01   9.200344e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           522   2.077728e+01   2.278317e+03   1.423577e+03   7.488207e-01   9.194554e-03 
+           523   2.067850e+01   2.266270e+03   1.418657e+03   7.459632e-01   9.181208e-03 
+           524   2.059500e+01   2.255814e+03   1.415557e+03   7.448503e-01   9.171803e-03 
+           525   2.052738e+01   2.245368e+03   1.413009e+03   7.342026e-01   9.162034e-03 
+           526   2.045666e+01   2.233529e+03   1.410991e+03   7.424274e-01   9.168073e-03 
+           527   2.043903e+01   2.223334e+03   1.408306e+03   7.409825e-01   9.175246e-03 
+           528   2.041116e+01   2.212668e+03   1.404281e+03   7.420806e-01   9.173944e-03 
+           529   2.035867e+01   2.201268e+03   1.398690e+03   7.878268e-01   9.172582e-03 
+           530   2.031822e+01   2.188733e+03   1.390921e+03   9.080586e-01   9.183296e-03 
+           531   2.022566e+01   2.176798e+03   1.382724e+03   9.360093e-01   9.199571e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           532   2.013568e+01   2.168462e+03   1.374285e+03   9.595501e-01   9.219444e-03 
+           533   2.005626e+01   2.157958e+03   1.366438e+03   1.008318e+00   9.234767e-03 
+           534   1.995989e+01   2.149004e+03   1.359753e+03   1.037862e+00   9.237188e-03 
+           535   1.987238e+01   2.138821e+03   1.352288e+03   1.062320e+00   9.268010e-03 
+           536   1.978137e+01   2.128504e+03   1.345278e+03   1.079429e+00   9.298861e-03 
+           537   1.968086e+01   2.118105e+03   1.338862e+03   1.100656e+00   9.303356e-03 
+           538   1.957435e+01   2.108218e+03   1.333168e+03   1.117764e+00   9.276679e-03 
+           539   1.947013e+01   2.098721e+03   1.328030e+03   1.125429e+00   9.239355e-03 
+           540   1.937438e+01   2.089975e+03   1.323633e+03   1.614636e+00   9.206698e-03 
+           541   1.928760e+01   2.081927e+03   1.320117e+03   1.737998e+00   9.192563e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           542   1.921636e+01   2.072808e+03   1.315303e+03   1.925797e+00   9.172226e-03 
+           543   1.911959e+01   2.065531e+03   1.313043e+03   2.087397e+00   9.138215e-03 
+           544   1.902193e+01   2.060122e+03   1.312923e+03   2.188589e+00   9.092175e-03 
+           545   1.896865e+01   2.053098e+03   1.311426e+03   2.186475e+00   9.048852e-03 
+           546   1.885659e+01   2.046020e+03   1.309278e+03   2.126281e+00   9.017367e-03 
+           547   1.876940e+01   2.039918e+03   1.308194e+03   2.059108e+00   9.004895e-03 
+           548   1.869152e+01   2.034768e+03   1.307915e+03   1.996156e+00   8.997977e-03 
+           549   1.862143e+01   2.030228e+03   1.308026e+03   1.936789e+00   9.003167e-03 
+           550   1.854157e+01   2.021503e+03   1.305160e+03   1.898761e+00   9.009749e-03 
+           551   1.845538e+01   2.016140e+03   1.305502e+03   1.861653e+00   9.029850e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           552   1.835689e+01   2.012462e+03   1.306800e+03   1.825517e+00   9.050614e-03 
+           553   1.827810e+01   2.008752e+03   1.308428e+03   1.795058e+00   9.042609e-03 
+           554   1.819524e+01   2.006930e+03   1.311951e+03   1.752422e+00   9.033033e-03 
+           555   1.814440e+01   2.001367e+03   1.313733e+03   1.703087e+00   9.029625e-03 
+           556   1.808438e+01   1.995094e+03   1.315081e+03   1.649145e+00   8.985771e-03 
+           557   1.802421e+01   1.988330e+03   1.316306e+03   1.596599e+00   8.959561e-03 
+           558   1.795942e+01   1.981552e+03   1.317454e+03   1.542255e+00   8.923090e-03 
+           559   1.789973e+01   1.974735e+03   1.318143e+03   1.490651e+00   8.870133e-03 
+           560   1.780401e+01   1.972074e+03   1.321079e+03   1.418738e+00   8.824860e-03 
+           561   1.777959e+01   1.963964e+03   1.321503e+03   1.350211e+00   8.790035e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           562   1.775061e+01   1.952924e+03   1.319986e+03   1.296486e+00   8.748181e-03 
+           563   1.765000e+01   1.942969e+03   1.319712e+03   1.246831e+00   8.718351e-03 
+           564   1.756850e+01   1.932981e+03   1.318988e+03   1.199420e+00   8.685664e-03 
+           565   1.747523e+01   1.923453e+03   1.318350e+03   1.155038e+00   8.655808e-03 
+           566   1.738405e+01   1.914131e+03   1.317352e+03   1.111104e+00   8.624659e-03 
+           567   1.729947e+01   1.904956e+03   1.315720e+03   1.063725e+00   8.596402e-03 
+           568   1.721225e+01   1.895396e+03   1.312864e+03   1.018437e+00   8.567758e-03 
+           569   1.710324e+01   1.887197e+03   1.310035e+03   9.719809e-01   8.542249e-03 
+           570   1.699255e+01   1.879757e+03   1.307052e+03   9.275686e-01   8.518715e-03 
+           571   1.688581e+01   1.872591e+03   1.303564e+03   8.859699e-01   8.499111e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           572   1.677815e+01   1.865858e+03   1.299782e+03   8.481793e-01   8.475077e-03 
+           573   1.666670e+01   1.859622e+03   1.295794e+03   8.126213e-01   8.469356e-03 
+           574   1.657195e+01   1.852742e+03   1.290420e+03   7.868239e-01   8.457885e-03 
+           575   1.644953e+01   1.847349e+03   1.285738e+03   7.541088e-01   8.440091e-03 
+           576   1.632294e+01   1.842758e+03   1.281750e+03   7.389726e-01   8.420009e-03 
+           577   1.619285e+01   1.838668e+03   1.277875e+03   7.320930e-01   8.387221e-03 
+           578   1.606058e+01   1.835870e+03   1.274949e+03   7.217422e-01   8.354580e-03 
+           579   1.594643e+01   1.832008e+03   1.271406e+03   7.136673e-01   8.328672e-03 
+           580   1.583143e+01   1.829044e+03   1.267765e+03   7.121182e-01   8.315393e-03 
+           581   1.572258e+01   1.825359e+03   1.264104e+03   7.107956e-01   8.307097e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           582   1.559794e+01   1.822275e+03   1.260914e+03   6.961729e-01   8.299130e-03 
+           583   1.547560e+01   1.819503e+03   1.257961e+03   7.085701e-01   8.275588e-03 
+           584   1.532732e+01   1.812029e+03   1.255661e+03   7.216713e-01   8.254373e-03 
+           585   1.516966e+01   1.800444e+03   1.252635e+03   7.215471e-01   8.238673e-03 
+           586   1.502174e+01   1.790106e+03   1.249053e+03   7.384087e-01   8.234264e-03 
+           587   1.490395e+01   1.784487e+03   1.245299e+03   7.691677e-01   8.241711e-03 
+           588   1.481636e+01   1.783189e+03   1.241013e+03   7.970441e-01   8.243591e-03 
+           589   1.475473e+01   1.783560e+03   1.236281e+03   8.174046e-01   8.238637e-03 
+           590   1.471120e+01   1.784190e+03   1.231533e+03   8.283315e-01   8.233551e-03 
+           591   1.466297e+01   1.784233e+03   1.227159e+03   8.520946e-01   8.199897e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           592   1.461453e+01   1.783181e+03   1.223679e+03   8.700783e-01   8.166849e-03 
+           593   1.457517e+01   1.781525e+03   1.220982e+03   8.747343e-01   8.155096e-03 
+           594   1.452651e+01   1.779629e+03   1.218604e+03   8.637750e-01   8.162102e-03 
+           595   1.448396e+01   1.777490e+03   1.216087e+03   8.389960e-01   8.208937e-03 
+           596   1.444231e+01   1.775304e+03   1.213068e+03   8.152315e-01   8.240324e-03 
+           597   1.441265e+01   1.773546e+03   1.210524e+03   7.840595e-01   8.219627e-03 
+           598   1.437644e+01   1.771860e+03   1.207458e+03   7.437849e-01   8.163237e-03 
+           599   1.434120e+01   1.770474e+03   1.204281e+03   7.007187e-01   8.134404e-03 
+           600   1.429476e+01   1.769600e+03   1.201266e+03   6.644582e-01   8.103363e-03 
+           601   1.425286e+01   1.768342e+03   1.197840e+03   6.421469e-01   8.084885e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           602   1.421263e+01   1.766646e+03   1.194212e+03   6.303934e-01   8.073996e-03 
+           603   1.416562e+01   1.763672e+03   1.190176e+03   6.256891e-01   8.072670e-03 
+           604   1.412423e+01   1.761495e+03   1.186805e+03   6.290629e-01   8.066231e-03 
+           605   1.408369e+01   1.759315e+03   1.184280e+03   6.315177e-01   8.049207e-03 
+           606   1.406119e+01   1.756254e+03   1.180892e+03   6.253196e-01   8.026261e-03 
+           607   1.404261e+01   1.752677e+03   1.177340e+03   6.244377e-01   7.995112e-03 
+           608   1.400795e+01   1.749536e+03   1.175281e+03   6.302440e-01   7.960871e-03 
+           609   1.396729e+01   1.745768e+03   1.175721e+03   6.372148e-01   7.917502e-03 
+           610   1.393505e+01   1.742504e+03   1.175748e+03   6.466897e-01   7.881896e-03 
+           611   1.390993e+01   1.739721e+03   1.174714e+03   6.576231e-01   7.853786e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           612   1.388308e+01   1.737463e+03   1.172975e+03   6.679219e-01   7.835059e-03 
+           613   1.385454e+01   1.735598e+03   1.170814e+03   6.768416e-01   7.823865e-03 
+           614   1.382756e+01   1.732908e+03   1.166470e+03   6.806622e-01   7.819242e-03 
+           615   1.380670e+01   1.731646e+03   1.163294e+03   6.807012e-01   7.842912e-03 
+           616   1.378970e+01   1.730643e+03   1.159796e+03   6.779444e-01   7.847650e-03 
+           617   1.377387e+01   1.730140e+03   1.156580e+03   6.750806e-01   7.838354e-03 
+           618   1.375735e+01   1.729729e+03   1.152775e+03   6.631059e-01   7.820177e-03 
+           619   1.375149e+01   1.728858e+03   1.148777e+03   6.684985e-01   7.793885e-03 
+           620   1.371933e+01   1.728477e+03   1.145784e+03   7.101137e-01   7.743873e-03 
+           621   1.367743e+01   1.729172e+03   1.145402e+03   6.678563e-01   7.701379e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           622   1.367479e+01   1.727832e+03   1.141905e+03   6.543165e-01   7.666191e-03 
+           623   1.366505e+01   1.727325e+03   1.138857e+03   6.545834e-01   7.643119e-03 
+           624   1.365104e+01   1.725843e+03   1.135888e+03   6.676113e-01   7.629833e-03 
+           625   1.362329e+01   1.724309e+03   1.133441e+03   6.865988e-01   7.622481e-03 
+           626   1.359364e+01   1.722477e+03   1.131328e+03   7.087171e-01   7.617940e-03 
+           627   1.356719e+01   1.720041e+03   1.129065e+03   7.304735e-01   7.618209e-03 
+           628   1.354646e+01   1.717434e+03   1.126651e+03   7.520496e-01   7.624487e-03 
+           629   1.351125e+01   1.714610e+03   1.122687e+03   7.756145e-01   7.625244e-03 
+           630   1.347471e+01   1.711975e+03   1.120887e+03   7.976471e-01   7.628254e-03 
+           631   1.343862e+01   1.709172e+03   1.119251e+03   8.203197e-01   7.633045e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           632   1.340406e+01   1.706224e+03   1.117845e+03   8.418897e-01   7.640846e-03 
+           633   1.337258e+01   1.702935e+03   1.116351e+03   8.667561e-01   7.666613e-03 
+           634   1.335679e+01   1.700003e+03   1.115811e+03   8.948401e-01   7.694714e-03 
+           635   1.333096e+01   1.696556e+03   1.114795e+03   9.248998e-01   7.710030e-03 
+           636   1.330298e+01   1.692562e+03   1.113841e+03   9.575331e-01   7.719662e-03 
+           637   1.328092e+01   1.688492e+03   1.112557e+03   9.900606e-01   7.711705e-03 
+           638   1.323546e+01   1.684539e+03   1.112269e+03   1.015353e+00   7.708295e-03 
+           639   1.319503e+01   1.680510e+03   1.112368e+03   1.039130e+00   7.721036e-03 
+           640   1.314025e+01   1.676343e+03   1.112226e+03   1.061426e+00   7.724591e-03 
+           641   1.311425e+01   1.671729e+03   1.110199e+03   1.085333e+00   7.697696e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           642   1.308922e+01   1.667261e+03   1.107329e+03   1.117253e+00   7.683842e-03 
+           643   1.304386e+01   1.663026e+03   1.104623e+03   1.153361e+00   7.664491e-03 
+           644   1.300288e+01   1.658828e+03   1.102221e+03   1.192061e+00   7.635014e-03 
+           645   1.297669e+01   1.654935e+03   1.100092e+03   1.226935e+00   7.597595e-03 
+           646   1.295428e+01   1.651186e+03   1.097939e+03   1.252281e+00   7.569133e-03 
+           647   1.286099e+01   1.643994e+03   1.094266e+03   1.263477e+00   7.542051e-03 
+           648   1.285138e+01   1.639503e+03   1.090621e+03   1.271156e+00   7.527797e-03 
+           649   1.284357e+01   1.635539e+03   1.088246e+03   1.271497e+00   7.508521e-03 
+           650   1.283446e+01   1.632120e+03   1.086449e+03   1.271284e+00   7.497672e-03 
+           651   1.282075e+01   1.628925e+03   1.085298e+03   1.269872e+00   7.489118e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           652   1.282449e+01   1.626057e+03   1.083609e+03   1.268626e+00   7.486491e-03 
+           653   1.280498e+01   1.623811e+03   1.083023e+03   1.286270e+00   7.486360e-03 
+           654   1.279577e+01   1.621478e+03   1.082811e+03   1.308635e+00   7.483840e-03 
+           655   1.278579e+01   1.619041e+03   1.082793e+03   1.348928e+00   7.479884e-03 
+           656   1.277927e+01   1.616625e+03   1.083047e+03   1.222395e+00   7.478434e-03 
+           657   1.277593e+01   1.614301e+03   1.083375e+03   1.133182e+00   7.462778e-03 
+           658   1.278233e+01   1.611594e+03   1.083074e+03   1.055645e+00   7.438512e-03 
+           659   1.278199e+01   1.609089e+03   1.083050e+03   9.948177e-01   7.427018e-03 
+           660   1.277472e+01   1.607116e+03   1.083384e+03   9.383651e-01   7.408933e-03 
+           661   1.278146e+01   1.604722e+03   1.083806e+03   8.944988e-01   7.395479e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           662   1.279840e+01   1.602243e+03   1.083246e+03   8.737768e-01   7.382362e-03 
+           663   1.279089e+01   1.599983e+03   1.083789e+03   8.738674e-01   7.366938e-03 
+           664   1.278725e+01   1.597605e+03   1.084229e+03   8.716995e-01   7.369980e-03 
+           665   1.277106e+01   1.595170e+03   1.085911e+03   8.608016e-01   7.378725e-03 
+           666   1.279377e+01   1.592350e+03   1.086288e+03   8.518967e-01   7.369441e-03 
+           667   1.280129e+01   1.589363e+03   1.086819e+03   8.378601e-01   7.379237e-03 
+           668   1.281799e+01   1.586067e+03   1.085999e+03   8.226173e-01   7.371493e-03 
+           669   1.280318e+01   1.582627e+03   1.086093e+03   7.942574e-01   7.378810e-03 
+           670   1.280028e+01   1.578871e+03   1.084627e+03   7.680621e-01   7.361714e-03 
+           671   1.277485e+01   1.575163e+03   1.085008e+03   7.313148e-01   7.383650e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           672   1.278376e+01   1.570991e+03   1.082288e+03   7.027806e-01   7.356372e-03 
+           673   1.274821e+01   1.567244e+03   1.082658e+03   6.658473e-01   7.345484e-03 
+           674   1.275130e+01   1.563367e+03   1.079997e+03   6.345196e-01   7.317835e-03 
+           675   1.271546e+01   1.560266e+03   1.079766e+03   6.059074e-01   7.314792e-03 
+           676   1.271047e+01   1.556840e+03   1.077554e+03   5.804148e-01   7.304550e-03 
+           677   1.269899e+01   1.553656e+03   1.074802e+03   5.607892e-01   7.304646e-03 
+           678   1.268211e+01   1.550479e+03   1.071712e+03   5.505278e-01   7.311764e-03 
+           679   1.265089e+01   1.546947e+03   1.069308e+03   5.346544e-01   7.364627e-03 
+           680   1.263790e+01   1.543350e+03   1.066191e+03   5.225384e-01   7.377833e-03 
+           681   1.261757e+01   1.539180e+03   1.063175e+03   5.154230e-01   7.369736e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           682   1.258712e+01   1.534659e+03   1.059982e+03   5.128824e-01   7.339089e-03 
+           683   1.256148e+01   1.529765e+03   1.056705e+03   5.079632e-01   7.305525e-03 
+           684   1.252906e+01   1.524723e+03   1.052871e+03   5.053687e-01   7.282448e-03 
+           685   1.249233e+01   1.519521e+03   1.048499e+03   5.088307e-01   7.265652e-03 
+           686   1.245253e+01   1.514205e+03   1.043832e+03   5.155259e-01   7.252537e-03 
+           687   1.240972e+01   1.509156e+03   1.038982e+03   5.241249e-01   7.241130e-03 
+           688   1.236644e+01   1.503942e+03   1.033994e+03   5.359581e-01   7.231101e-03 
+           689   1.232235e+01   1.498692e+03   1.028998e+03   5.529927e-01   7.227238e-03 
+           690   1.227905e+01   1.493488e+03   1.024071e+03   5.742543e-01   7.219802e-03 
+           691   1.223897e+01   1.488166e+03   1.019499e+03   5.987715e-01   7.205694e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           692   1.219253e+01   1.483226e+03   1.014961e+03   6.069394e-01   7.189553e-03 
+           693   1.215374e+01   1.478284e+03   1.010285e+03   6.019630e-01   7.166020e-03 
+           694   1.210335e+01   1.473220e+03   1.006135e+03   6.053168e-01   7.161504e-03 
+           695   1.205858e+01   1.468182e+03   1.001693e+03   6.106577e-01   7.149693e-03 
+           696   1.201124e+01   1.462154e+03   9.977615e+02   6.086039e-01   7.133882e-03 
+           697   1.195505e+01   1.457259e+03   9.931532e+02   6.131099e-01   7.113987e-03 
+           698   1.190313e+01   1.452374e+03   9.888559e+02   6.188525e-01   7.100734e-03 
+           699   1.185344e+01   1.447506e+03   9.849488e+02   6.279747e-01   7.081347e-03 
+           700   1.180495e+01   1.442801e+03   9.815645e+02   6.379812e-01   7.065937e-03 
+           701   1.175396e+01   1.437777e+03   9.783303e+02   6.509954e-01   7.048395e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           702   1.170908e+01   1.432617e+03   9.748578e+02   6.655358e-01   7.041996e-03 
+           703   1.166844e+01   1.427568e+03   9.715187e+02   6.802195e-01   7.032372e-03 
+           704   1.160688e+01   1.422578e+03   9.688889e+02   6.972440e-01   7.029938e-03 
+           705   1.155264e+01   1.417068e+03   9.659502e+02   7.141614e-01   7.025143e-03 
+           706   1.149337e+01   1.411308e+03   9.632667e+02   7.314853e-01   7.031535e-03 
+           707   1.143120e+01   1.405192e+03   9.608059e+02   7.496567e-01   7.072373e-03 
+           708   1.137470e+01   1.398707e+03   9.581242e+02   7.678689e-01   7.143038e-03 
+           709   1.132966e+01   1.392037e+03   9.550425e+02   7.886974e-01   7.193249e-03 
+           710   1.129448e+01   1.385176e+03   9.507095e+02   8.083014e-01   7.141340e-03 
+           711   1.122794e+01   1.379007e+03   9.473718e+02   8.157638e-01   7.020056e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           712   1.115988e+01   1.372916e+03   9.440327e+02   8.178602e-01   6.886524e-03 
+           713   1.107438e+01   1.368029e+03   9.415003e+02   8.243776e-01   6.824085e-03 
+           714   1.105576e+01   1.362026e+03   9.371360e+02   8.333656e-01   6.797894e-03 
+           715   1.102030e+01   1.356983e+03   9.332167e+02   8.462512e-01   6.819910e-03 
+           716   1.098196e+01   1.352355e+03   9.290821e+02   8.601043e-01   6.843244e-03 
+           717   1.091298e+01   1.349455e+03   9.267593e+02   8.557493e-01   6.872982e-03 
+           718   1.087450e+01   1.345838e+03   9.237374e+02   8.534746e-01   6.887839e-03 
+           719   1.082900e+01   1.342740e+03   9.206010e+02   8.531855e-01   6.883334e-03 
+           720   1.082146e+01   1.339278e+03   9.167060e+02   8.480634e-01   6.869040e-03 
+           721   1.075887e+01   1.337372e+03   9.133065e+02   8.431062e-01   6.873177e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           722   1.070081e+01   1.335516e+03   9.095211e+02   8.388199e-01   6.889322e-03 
+           723   1.066002e+01   1.333709e+03   9.057545e+02   8.368806e-01   6.900611e-03 
+           724   1.061654e+01   1.332251e+03   9.021742e+02   8.379833e-01   6.880084e-03 
+           725   1.057290e+01   1.330939e+03   8.988093e+02   8.400603e-01   6.837976e-03 
+           726   1.053917e+01   1.329286e+03   8.956580e+02   8.431197e-01   6.779644e-03 
+           727   1.050755e+01   1.327739e+03   8.928788e+02   8.477898e-01   6.733361e-03 
+           728   1.047705e+01   1.326211e+03   8.903905e+02   8.538482e-01   6.707149e-03 
+           729   1.042158e+01   1.325240e+03   8.893733e+02   8.660019e-01   6.694204e-03 
+           730   1.042930e+01   1.322605e+03   8.861893e+02   8.788023e-01   6.683360e-03 
+           731   1.041385e+01   1.320334e+03   8.839736e+02   8.911052e-01   6.673881e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           732   1.038876e+01   1.318033e+03   8.823473e+02   9.009157e-01   6.680451e-03 
+           733   1.036554e+01   1.315473e+03   8.802193e+02   9.075670e-01   6.691668e-03 
+           734   1.034496e+01   1.313630e+03   8.782319e+02   9.111258e-01   6.704630e-03 
+           735   1.033037e+01   1.311348e+03   8.763602e+02   9.135450e-01   6.700465e-03 
+           736   1.029424e+01   1.309609e+03   8.754177e+02   9.156723e-01   6.694872e-03 
+           737   1.026142e+01   1.307571e+03   8.747047e+02   9.146766e-01   6.705732e-03 
+           738   1.024295e+01   1.304683e+03   8.746754e+02   9.219170e-01   6.713040e-03 
+           739   1.021144e+01   1.302455e+03   8.745939e+02   9.248685e-01   6.722828e-03 
+           740   1.017372e+01   1.300553e+03   8.758666e+02   9.270160e-01   6.731383e-03 
+           741   1.013242e+01   1.299411e+03   8.762544e+02   9.306102e-01   6.735749e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           742   1.011010e+01   1.297753e+03   8.770822e+02   9.352997e-01   6.733640e-03 
+           743   1.009081e+01   1.295918e+03   8.775961e+02   9.410405e-01   6.726058e-03 
+           744   1.007156e+01   1.293714e+03   8.782900e+02   9.489835e-01   6.715059e-03 
+           745   1.004566e+01   1.291343e+03   8.793163e+02   9.606551e-01   6.707774e-03 
+           746   1.002550e+01   1.289107e+03   8.806697e+02   9.724452e-01   6.702625e-03 
+           747   1.000570e+01   1.286338e+03   8.824647e+02   9.845200e-01   6.686900e-03 
+           748   9.985187e+00   1.283593e+03   8.843801e+02   9.971306e-01   6.687410e-03 
+           749   9.964911e+00   1.280056e+03   8.859414e+02   1.012307e+00   6.674666e-03 
+           750   9.918279e+00   1.277903e+03   8.888911e+02   1.021650e+00   6.682593e-03 
+           751   9.916162e+00   1.275328e+03   8.916079e+02   1.032992e+00   6.697844e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           752   9.894236e+00   1.273413e+03   8.948714e+02   1.050106e+00   6.634070e-03 
+           753   9.880357e+00   1.271735e+03   8.984686e+02   1.066361e+00   6.728925e-03 
+           754   9.867508e+00   1.270424e+03   9.021148e+02   1.075141e+00   6.750826e-03 
+           755   9.849642e+00   1.269913e+03   9.060320e+02   1.087257e+00   6.671976e-03 
+           756   9.833555e+00   1.269892e+03   9.098485e+02   1.099214e+00   6.758853e-03 
+           757   9.826371e+00   1.270034e+03   9.130279e+02   1.100321e+00   6.775704e-03 
+           758   9.802566e+00   1.270684e+03   9.159940e+02   1.092379e+00   6.703915e-03 
+           759   9.783792e+00   1.271695e+03   9.189632e+02   1.080918e+00   6.788191e-03 
+           760   9.766395e+00   1.272858e+03   9.221283e+02   1.073983e+00   6.823923e-03 
+           761   9.749330e+00   1.273992e+03   9.251276e+02   1.071181e+00   6.770572e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           762   9.727803e+00   1.275438e+03   9.279592e+02   1.070583e+00   6.848079e-03 
+           763   9.725525e+00   1.277180e+03   9.317343e+02   1.072978e+00   6.755704e-03 
+           764   9.683100e+00   1.278420e+03   9.335492e+02   1.077753e+00   6.796685e-03 
+           765   9.676046e+00   1.280453e+03   9.371704e+02   1.076587e+00   6.781509e-03 
+           766   9.636596e+00   1.281696e+03   9.395043e+02   1.087626e+00   6.667300e-03 
+           767   9.601757e+00   1.283361e+03   9.422420e+02   1.088455e+00   6.561340e-03 
+           768   1.002048e+01   1.279262e+03   9.460120e+02   1.107322e+00   6.662385e-03 
+           769   9.960830e+00   1.280979e+03   9.436071e+02   1.159284e+00   6.727588e-03 
+           770   9.704011e+00   1.280777e+03   9.474513e+02   1.204191e+00   6.681124e-03 
+           771   9.567683e+00   1.283455e+03   9.522505e+02   1.227892e+00   6.719859e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           772   9.496067e+00   1.285130e+03   9.556661e+02   1.241711e+00   6.643544e-03 
+           773   9.456064e+00   1.286789e+03   9.582975e+02   1.237197e+00   6.706067e-03 
+           774   9.432823e+00   1.288690e+03   9.621312e+02   1.213717e+00   6.714190e-03 
+           775   9.419430e+00   1.290812e+03   9.669156e+02   1.180121e+00   6.630634e-03 
+           776   9.406154e+00   1.293244e+03   9.719828e+02   1.144652e+00   6.700766e-03 
+           777   9.392326e+00   1.295779e+03   9.764106e+02   1.123527e+00   6.715717e-03 
+           778   9.373373e+00   1.298672e+03   9.811286e+02   1.078389e+00   6.512809e-03 
+           779   9.741534e+00   1.289678e+03   9.887583e+02   1.068752e+00   6.752421e-03 
+           780   9.708002e+00   1.291124e+03   9.842572e+02   1.105343e+00   6.689225e-03 
+           781   9.481002e+00   1.293140e+03   9.890200e+02   1.110706e+00   6.730694e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           782   9.370380e+00   1.295908e+03   9.925939e+02   1.098896e+00   6.780967e-03 
+           783   9.303081e+00   1.297928e+03   9.942713e+02   1.089102e+00   6.698162e-03 
+           784   9.273000e+00   1.298817e+03   9.953476e+02   1.061833e+00   6.582025e-03 
+           785   9.615658e+00   1.287104e+03   1.001209e+03   1.054297e+00   6.706014e-03 
+           786   9.584260e+00   1.288228e+03   9.906198e+02   1.065657e+00   6.656270e-03 
+           787   9.347796e+00   1.289425e+03   9.924922e+02   1.054030e+00   6.753327e-03 
+           788   9.242577e+00   1.291957e+03   9.924181e+02   1.056573e+00   6.651070e-03 
+           789   9.179780e+00   1.293390e+03   9.898491e+02   1.061946e+00   6.677692e-03 
+           790   9.139904e+00   1.294107e+03   9.881909e+02   1.045973e+00   6.469395e-03 
+           791   9.473816e+00   1.285872e+03   9.939683e+02   1.069412e+00   6.707427e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           792   9.462190e+00   1.286495e+03   9.871890e+02   1.096715e+00   6.592859e-03 
+           793   9.241480e+00   1.287963e+03   9.884913e+02   1.093377e+00   6.629609e-03 
+           794   9.148962e+00   1.289707e+03   9.890644e+02   1.088883e+00   6.551062e-03 
+           795   9.103549e+00   1.291022e+03   9.890649e+02   1.092305e+00   6.616018e-03 
+           796   9.078921e+00   1.292008e+03   9.888042e+02   1.071603e+00   6.426742e-03 
+           797   9.390610e+00   1.287221e+03   9.985551e+02   1.116484e+00   6.609556e-03 
+           798   9.367322e+00   1.287103e+03   9.903701e+02   1.143220e+00   6.569588e-03 
+           799   9.152348e+00   1.288547e+03   9.913352e+02   1.154975e+00   6.580745e-03 
+           800   9.052547e+00   1.290664e+03   9.917187e+02   1.130791e+00   6.401097e-03 
+           801   9.357255e+00   1.288445e+03   1.002755e+03   1.185133e+00   6.679457e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           802   9.314478e+00   1.287762e+03   9.928700e+02   1.183483e+00   6.564285e-03 
+           803   9.100372e+00   1.288912e+03   9.928472e+02   1.190363e+00   6.572822e-03 
+           804   9.004535e+00   1.291567e+03   9.939384e+02   1.162133e+00   6.412998e-03 
+           805   9.329979e+00   1.289546e+03   1.008568e+03   1.223081e+00   6.623639e-03 
+           806   9.263435e+00   1.287847e+03   9.948305e+02   1.211817e+00   6.549490e-03 
+           807   9.035677e+00   1.288341e+03   9.948099e+02   1.166982e+00   6.371337e-03 
+           808   9.274884e+00   1.288104e+03   1.012477e+03   1.263865e+00   6.529953e-03 
+           809   9.169438e+00   1.285684e+03   9.977195e+02   1.264610e+00   6.477394e-03 
+           810   8.908514e+00   1.285111e+03   9.984459e+02   1.234680e+00   6.306050e-03 
+           811   9.225408e+00   1.286533e+03   1.016366e+03   1.330968e+00   6.473823e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           812   9.109671e+00   1.283031e+03   1.001147e+03   1.288675e+00   6.435440e-03 
+           813   8.847263e+00   1.281752e+03   1.001596e+03   1.242228e+00   6.265132e-03 
+           814   9.172201e+00   1.284731e+03   1.021393e+03   1.321180e+00   6.438329e-03 
+           815   9.083256e+00   1.280967e+03   1.005695e+03   1.247672e+00   6.391685e-03 
+           816   8.793309e+00   1.279889e+03   1.007130e+03   1.187821e+00   6.231441e-03 
+           817   9.095482e+00   1.282524e+03   1.025215e+03   1.248296e+00   6.394236e-03 
+           818   9.011186e+00   1.279505e+03   1.010022e+03   1.172752e+00   6.361294e-03 
+           819   8.728063e+00   1.278464e+03   1.010105e+03   1.106787e+00   6.196619e-03 
+           820   9.035934e+00   1.281968e+03   1.029014e+03   1.161684e+00   6.345308e-03 
+           821   8.950985e+00   1.278221e+03   1.013872e+03   1.109185e+00   6.301924e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           822   8.668162e+00   1.278312e+03   1.014901e+03   1.041964e+00   6.135079e-03 
+           823   8.995277e+00   1.283538e+03   1.034933e+03   1.083878e+00   6.283264e-03 
+           824   8.902983e+00   1.279393e+03   1.018920e+03   1.038187e+00   6.240949e-03 
+           825   8.604890e+00   1.280262e+03   1.020220e+03   9.698263e-01   6.081587e-03 
+           826   8.959011e+00   1.286061e+03   1.040217e+03   1.016776e+00   6.232589e-03 
+           827   8.843624e+00   1.282086e+03   1.024060e+03   9.731783e-01   6.203840e-03 
+           828   8.540808e+00   1.282915e+03   1.025339e+03   9.161132e-01   6.039368e-03 
+           829   8.911637e+00   1.289092e+03   1.045213e+03   9.715169e-01   6.214005e-03 
+           830   8.770508e+00   1.285021e+03   1.029120e+03   9.391508e-01   6.197172e-03 
+           831   8.472082e+00   1.285945e+03   1.030371e+03   8.844492e-01   6.037418e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           832   8.857149e+00   1.292260e+03   1.049214e+03   9.244459e-01   6.194364e-03 
+           833   8.694090e+00   1.288078e+03   1.033789e+03   8.488290e-01   5.988945e-03 
+           834   8.792292e+00   1.293447e+03   1.051101e+03   9.343792e-01   6.202487e-03 
+           835   8.638489e+00   1.288307e+03   1.037029e+03   8.532362e-01   5.976970e-03 
+           836   8.743007e+00   1.294667e+03   1.054189e+03   9.367572e-01   6.202185e-03 
+           837   8.576498e+00   1.289240e+03   1.040895e+03   8.577660e-01   5.967778e-03 
+           838   8.689858e+00   1.296264e+03   1.058109e+03   9.305606e-01   6.188019e-03 
+           839   8.512012e+00   1.290948e+03   1.045166e+03   8.463352e-01   5.950178e-03 
+           840   8.636341e+00   1.298363e+03   1.062576e+03   9.302096e-01   6.167821e-03 
+           841   8.447883e+00   1.293096e+03   1.049779e+03   8.473166e-01   5.934557e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           842   8.579434e+00   1.301129e+03   1.067420e+03   9.301646e-01   6.154137e-03 
+           843   8.382410e+00   1.295786e+03   1.054697e+03   8.469369e-01   5.926551e-03 
+           844   8.522734e+00   1.304040e+03   1.072482e+03   9.273775e-01   6.138696e-03 
+           845   8.328402e+00   1.298839e+03   1.060206e+03   8.457777e-01   5.912887e-03 
+           846   8.461408e+00   1.306718e+03   1.077216e+03   9.206739e-01   6.125294e-03 
+           847   8.273337e+00   1.302384e+03   1.065088e+03   8.420266e-01   5.913147e-03 
+           848   8.404286e+00   1.310122e+03   1.081995e+03   9.109180e-01   6.137844e-03 
+           849   8.219993e+00   1.306943e+03   1.069845e+03   8.321632e-01   5.925462e-03 
+           850   8.342307e+00   1.313907e+03   1.086710e+03   8.917931e-01   6.127812e-03 
+           851   8.182281e+00   1.310549e+03   1.075054e+03   8.759070e-01   6.111607e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           852   7.951741e+00   1.313721e+03   1.077027e+03   8.154769e-01   5.943030e-03 
+           853   8.303024e+00   1.318368e+03   1.093398e+03   8.643977e-01   6.087531e-03 
+           854   8.125313e+00   1.314665e+03   1.080907e+03   8.407104e-01   6.080126e-03 
+           855   7.894576e+00   1.317469e+03   1.082315e+03   7.811518e-01   5.928306e-03 
+           856   8.243928e+00   1.321251e+03   1.097894e+03   8.227528e-01   6.079105e-03 
+           857   8.075559e+00   1.317611e+03   1.084735e+03   8.034741e-01   6.070861e-03 
+           858   7.847457e+00   1.320226e+03   1.085272e+03   7.497736e-01   5.916197e-03 
+           859   8.188981e+00   1.323415e+03   1.100215e+03   7.861552e-01   6.068212e-03 
+           860   8.015620e+00   1.319145e+03   1.086696e+03   7.687029e-01   6.061267e-03 
+           861   7.775778e+00   1.321505e+03   1.086390e+03   7.199998e-01   5.896506e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           862   8.131266e+00   1.323714e+03   1.100287e+03   7.533131e-01   6.054207e-03 
+           863   7.949201e+00   1.319273e+03   1.086403e+03   7.389647e-01   6.032907e-03 
+           864   7.706273e+00   1.321468e+03   1.085268e+03   6.966127e-01   5.857067e-03 
+           865   8.060142e+00   1.322794e+03   1.097434e+03   7.233665e-01   5.996346e-03 
+           866   7.888552e+00   1.318191e+03   1.083842e+03   7.117500e-01   5.976370e-03 
+           867   7.643206e+00   1.319889e+03   1.082432e+03   6.778699e-01   5.785875e-03 
+           868   7.987079e+00   1.319543e+03   1.092947e+03   7.058103e-01   5.933861e-03 
+           869   7.811008e+00   1.314755e+03   1.079262e+03   7.034220e-01   5.941822e-03 
+           870   7.558486e+00   1.315439e+03   1.077292e+03   6.769611e-01   5.754631e-03 
+           871   7.907157e+00   1.313961e+03   1.086507e+03   7.140618e-01   5.906134e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           872   7.720013e+00   1.309224e+03   1.071949e+03   6.955668e-01   5.729270e-03 
+           873   7.816836e+00   1.308399e+03   1.079564e+03   7.368440e-01   5.912195e-03 
+           874   7.658518e+00   1.304133e+03   1.065297e+03   7.124651e-01   5.693846e-03 
+           875   7.761680e+00   1.302959e+03   1.072663e+03   7.473676e-01   5.882067e-03 
+           876   7.602471e+00   1.298856e+03   1.058425e+03   7.227956e-01   5.666930e-03 
+           877   7.709752e+00   1.297091e+03   1.064975e+03   7.540603e-01   5.890203e-03 
+           878   7.543131e+00   1.293238e+03   1.050406e+03   7.267114e-01   5.679574e-03 
+           879   7.656885e+00   1.291299e+03   1.057115e+03   7.549557e-01   5.920053e-03 
+           880   7.487819e+00   1.287173e+03   1.041714e+03   7.264940e-01   5.688698e-03 
+           881   7.602756e+00   1.285306e+03   1.048248e+03   7.502196e-01   5.956569e-03 
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr 
+           882   7.438865e+00   1.281157e+03   1.032086e+03   7.216410e-01   5.737159e-03 
+           883   7.550610e+00   1.278699e+03   1.038041e+03   7.428782e-01   6.012858e-03 
+           884   7.390738e+00   1.274213e+03   1.021266e+03   7.156590e-01   5.794640e-03 
+           885   7.500683e+00   1.271357e+03   1.027227e+03   7.366693e-01   6.070871e-03 
+           886   7.347129e+00   1.266029e+03   1.009803e+03   7.132551e-01   5.832306e-03 
+           887   7.454716e+00   1.263029e+03   1.016009e+03   7.365968e-01   6.080418e-03 
+           888   7.302915e+00   1.257376e+03   9.982101e+02   7.155214e-01   5.830768e-03 
+           889   7.409891e+00   1.254139e+03   1.004973e+03   7.435215e-01   6.088539e-03 
+           890   7.258026e+00   1.247709e+03   9.863559e+02   7.256754e-01   5.835226e-03 
+           891   7.368430e+00   1.244112e+03   9.933819e+02   7.612611e-01   6.089922e-03 
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\runs\ACTIVE_GAP25_AFT_ONLY_BASELINE_20261104_130912\FINAL.sim... complete (3.1316MB in 0.060666s).

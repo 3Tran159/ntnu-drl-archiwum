@@ -1,0 +1,21 @@
+{
+  "at": 1793736531.7629654,
+  "cause": "MPI worker descendant depth exceeded8; owned rank PID proven from this exact job log",
+  "proven_own_rank_pids": [
+    15308
+  ],
+  "STOP": {
+    "reason": "INDEPENDENT_STAR_STARTED_NO_UNLOADED_BASELINE",
+    "processes": [
+      {
+        "pid": 15308,
+        "ppid": 31400,
+        "name": "star-ccm+.exe",
+        "exe": "E:\\Program Files\\Siemens\\21.04.009-R8\\STAR-CCM+21.04.009-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\star-ccm+.exe"
+      }
+    ],
+    "at": 1793736381.9084516
+  },
+  "physical_steps_executed": 0,
+  "physical_safety_gates_unchanged": true
+}

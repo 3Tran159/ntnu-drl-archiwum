@@ -1,0 +1,33 @@
+{
+  "updated_at": "2026-10-29T22:42:17.636147+01:00",
+  "M09_force_settled": true,
+  "configured_controller_pid": 15952,
+  "CPU_preparation": {
+    "updated_at": "2026-10-29T22:42:17.636147+01:00",
+    "status": "CPU_exact_mesh_import_initialization_running",
+    "controller": "run_wave24m_preparation_r5.py",
+    "controller_pid": 32996,
+    "state_file": "wave_preparation_state.json",
+    "cpu_lock": "E:\\ntnu\\quasi2d_waves_20261029\\preparation.lock",
+    "case": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_Q2D_r5",
+    "workers": 2,
+    "gpu": false,
+    "cells": 53200,
+    "scope": "Exact Cartesian no-foil build and zero-step gauge audit. No transient results yet.",
+    "mesh": {
+      "dx_m": 0.2,
+      "dz_free_surface_m": 0.025,
+      "span_m": 0.02,
+      "depth_m": 24,
+      "volume_m3": 48
+    },
+    "preserved_attempts": {
+      "r1": "time order setter compile error",
+      "r2": "native thin-slab geometry/boundary failure",
+      "r3": "area report class compile error",
+      "r4": "thin-slab failure retained after fresh BC mapping; incomplete gauge height29.018m"
+    },
+    "next": "After R5 build: audit_nofoil_cgns.py <case>; verify geometry_pass, initial gauge area/calm/H, then run_wave24m_propagation_r1.py. Pilot is CPU2/noGPU1000stepsSO1ms10inner; check lock first. Pilot macro/controller prepared but NOT launched."
+  },
+  "dashboard_qa": "wave_preparation_ui_review.json"
+}

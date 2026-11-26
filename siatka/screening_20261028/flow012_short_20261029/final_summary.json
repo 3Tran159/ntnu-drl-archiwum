@@ -1,0 +1,113 @@
+{
+  "H0_0ms": {
+    "setup": {
+      "case": "H0_0ms",
+      "geometry": "HF_012_v3",
+      "cells": 1165391,
+      "speed_m_s": 0.0,
+      "dt_s": 0.0001,
+      "workers": 24,
+      "rho_kg_m3": 1000.0,
+      "S_ref_half_m2": 5.450434304415241,
+      "expected_hydrostatic_Fz_N": 4622.039672116392,
+      "temporal_order": "Options",
+      "wall_budget_s": 180.0,
+      "max_steps": 200,
+      "outlet_phase_backflow": "Calm volume fraction, copied from inlet; previous constant zero replaced",
+      "force_convention": "Fx +X; Fz +Z; pressure+shear; No Correction includes buoyancy. CL_total includes buoyancy.",
+      "purpose": "Short startup diagnostic, not converged forces or wave validation"
+    },
+    "completed": {
+      "steps": 10,
+      "guard_passed": true,
+      "checkpoint": "F:\\ntnu\\mesh_screening_20261028\\flow012_short_20261029\\H0_0ms\\checkpoint.sim",
+      "peak_velocity_m_s": 0.00014082333794005665,
+      "status": "wall_budget_completed",
+      "physical_time_s": 0.0010000000000000002,
+      "solver_wall_seconds": 184.1339215
+    },
+    "last": {
+      "wall_seconds": 184.1333219,
+      "step": 10.0,
+      "iteration": 200.0,
+      "physical_time_s": 0.0010000000000000002,
+      "dt_s": 0.0001,
+      "Fx_half_N": -0.00015238064796842086,
+      "Fz_half_N": 4614.541253557783,
+      "max_velocity_m_s": 0.00014082333794005665,
+      "max_convective_CFL": 9.711557591882872e-05,
+      "foil_mean_yplus": 0.006076356931048072,
+      "foil_min_yplus": 0.00022701851947550105,
+      "foil_max_yplus": 1.042303300079511,
+      "CD": null,
+      "CL_total": null,
+      "CL_buoyancy_subtracted": null,
+      "buoyancy_error_pct": -0.1622318086935562
+    },
+    "peak_CFL": 9.711557591882872e-05,
+    "peak_velocity_m_s": 0.00014082333794005665,
+    "seconds_per_step": 18.41333219,
+    "checkpoint_bytes": 858111327,
+    "history_rows": 10
+  },
+  "F18_18ms": {
+    "setup": {
+      "case": "F18_18ms",
+      "geometry": "HF_012_v3",
+      "cells": 1165391,
+      "speed_m_s": 18.0,
+      "dt_s": 1e-05,
+      "workers": 24,
+      "rho_kg_m3": 1000.0,
+      "S_ref_half_m2": 5.450434304415241,
+      "expected_hydrostatic_Fz_N": 4622.039672116392,
+      "temporal_order": "Options",
+      "wall_budget_s": 300.0,
+      "max_steps": 200,
+      "outlet_phase_backflow": "Calm volume fraction, copied from inlet; previous constant zero replaced",
+      "force_convention": "Fx +X; Fz +Z; pressure+shear; No Correction includes buoyancy. CL_total includes buoyancy.",
+      "purpose": "Short startup diagnostic, not converged forces or wave validation"
+    },
+    "completed": {
+      "steps": 15,
+      "guard_passed": true,
+      "checkpoint": "F:\\ntnu\\mesh_screening_20261028\\flow012_short_20261029\\F18_18ms\\checkpoint.sim",
+      "peak_velocity_m_s": 100.68308092604394,
+      "status": "wall_budget_completed",
+      "physical_time_s": 0.00015000000000000001,
+      "solver_wall_seconds": 301.7298233
+    },
+    "last": {
+      "wall_seconds": 300.6993554,
+      "step": 15.0,
+      "iteration": 300.0,
+      "physical_time_s": 0.00015000000000000001,
+      "dt_s": 1e-05,
+      "Fx_half_N": 21532.91388665245,
+      "Fz_half_N": 123290.5821758867,
+      "max_velocity_m_s": 71.82020570046078,
+      "max_convective_CFL": 4.608135272767184,
+      "foil_mean_yplus": 80.57363903480967,
+      "foil_min_yplus": 4.56039047656954,
+      "foil_max_yplus": 199.4862405637108,
+      "CD": 0.024386904620586278,
+      "CL_total": 0.1396316208742953,
+      "CL_buoyancy_subtracted": 0.1343969721300611,
+      "buoyancy_error_pct": 2567.4496742134847
+    },
+    "peak_CFL": 8.074390223629075,
+    "peak_velocity_m_s": 100.68308092604394,
+    "seconds_per_step": 20.046623693333334,
+    "checkpoint_bytes": 860318862,
+    "history_rows": 15,
+    "startup_extrapolation_hours_per_root_c_over_U": 36.81401573312757,
+    "coefficient_arithmetic_verified": true
+  },
+  "original_mesh_unchanged": true,
+  "run_exit": {
+    "returncode": 0,
+    "controller_status": "finished",
+    "finish_unix": 1793266566.7026505,
+    "min_free_gib": 26.548309326171875
+  }
+}

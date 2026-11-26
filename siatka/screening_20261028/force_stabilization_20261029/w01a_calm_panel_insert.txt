@@ -1,0 +1,39 @@
+def _render_calm_start(state):
+ """W01a owns a fresh time history; no inheritance of rejected wave curves."""
+ case=state.get('case','');folder=Path(state.get('directory',''))
+ history=folder/'history.csv'
+ points,errors=_history([{'path':str(history)}]) if folder.is_absolute() else ([],[])
+ progress=_read(folder/'progress.json') if folder.is_absolute() else {}
+ t=_n(progress.get('time_s',state.get('progress',{}).get('time_s')))
+ if points:t=max(t or 0,points[-1][0])
+ active=state.get('computation_active') is True
+ failed='guard' in str(progress.get('status','')).lower() or 'guard_failed' in state.get('status','').lower()
+ if failed:active=False
+ headline=('Stopped by physical stability guard' if failed else 'Calm flow settling · inlet wave has not started' if points else 'Loading fresh calm case · awaiting calculated history')
+ s=STYLE+'<section class="wave-cycle-panel" aria-label="W01a calm startup and inlet-generated wave"><h2>W01a — calm startup, then inlet-generated wave</h2><p class="wcp-status">'+_e(headline)+'</p>'
+ s+='<p>Fresh matched calm input; wave height is currently 0 m. Only this new case is plotted. Earlier W01 continuation curves remain in the historical files.</p>'
+ s+='<p class="wcp-meta">'+('GPU calculation active' if active else 'Calculation status: '+_e(state.get('status','Not recorded').replace('_',' ')))+' · saved update '+_e(_stamp(state.get('updated_at')))+'</p>'
+ if failed:s+='<p class="wcp-failure"><b>Diagnostic state only; no wave-force acceptance.</b> Review the guard stop before any continuation.</p>'
+ stats=[(_f(t)+' s','Latest calculated physical time'),('0 m','Current inlet wave height'),('Calm startup','Current stage'),('Not started','Wave phase clock')]
+ s+='<div class="wcp-stats">'+''.join('<div class="wcp-stat"><b>'+v+'</b><span>'+_e(k)+'</span></div>' for v,k in stats)+'</div>'
+ s+='<p class="wcp-empty">Wave-cycle overlays, repeatability and period estimates remain empty until an inlet-wave onset is explicitly defined. Calm force settling is reviewed separately.</p>'
+ s+='<h3>New case · force coefficient history</h3><div class="wcp-nav" role="group" aria-label="Force history time window"><button type="button" data-wcp-action="left" aria-label="Pan earlier">← Earlier</button><button type="button" data-wcp-action="right" aria-label="Pan later">Later →</button><button type="button" data-wcp-action="in" aria-label="Zoom in">Zoom in</button><button type="button" data-wcp-action="out" aria-label="Zoom out">Zoom out</button><button type="button" data-wcp-action="follow" aria-pressed="true">Follow live</button><span class="wcp-view-state">Latest saved data</span></div><div class="wcp-plots">'
+ for key,label,i in [('CD','CD',1),('CL_total','CL, total',2)]:
+  s+='<div class="wcp-history-plot" data-key="'+key+'">'+_svg([{'name':label,'color':COLORS[i-1],'points':[(p[0],p[i]) for p in points]}],label,'Physical time [s]')+'</div>'
+ s+='</div><p class="wcp-meta">Instantaneous coefficients from this calm-start case only. No periodic wave response or accepted mean is implied.</p>'
+ view=_side_view(state)
+ s+=view or '<div class="wcp-empty wcp-side-waiting"><h3>Foil and free surface · new case preview</h3><p>Waiting for a complete actual field export from W01a. The earlier wave image is cleared; no analytical substitute is shown.</p></div>'
+ s+='<details><summary>New case files and calculated checkpoints</summary><p class="wcp-path"><b>Case:</b> '+_e(case)+'</p><p class="wcp-path"><b>Folder:</b> '+_link(folder)+'</p>'
+ identity=_read(folder/'source_identity.json')
+ if identity.get('source'):s+='<p class="wcp-path"><b>Input template, not a calculated result:</b> '+_link(identity['source'])+'</p>'
+ startup=_read(folder/'startup_acceptance.json');cp=_read(folder/'latest_checkpoint.json');done=_read(folder/'completed.json');saved=[]
+ if startup.get('status')=='guarded_startup_completed':saved.append(('checkpoint_startup_t0.020.sim',.02,'Completed startup checkpoint'))
+ if cp.get('completed_save'):saved.append((Path(cp.get('file','')).name,cp.get('time_s'),'Completed flow checkpoint'))
+ if done.get('time_s',0)>0:saved.append(('final.sim',done['time_s'],'Saved calculated final state'))
+ for name,when,label in saved:
+  p=folder/name
+  if p.is_file():s+='<p class="wcp-path"><b>'+label+' · t = '+_f(when)+' s:</b> '+_link(p)+'</p>'
+ s+='<p class="wcp-path"><b>Current-case history:</b> '+_link(history)+'</p></details>'
+ payload={'case':case,'view_epoch':'fresh-calm-start-v1','period':None,'start':None,'series':{'CD':[(p[0],p[1]) for p in points],'CL_total':[(p[0],p[2]) for p in points]}}
+ return s+'<script type="application/json" class="wcp-history-data">'+json.dumps(payload,allow_nan=False).replace('</','<\\/')+'</script></section>'+INTERACTIVE
+

@@ -1,0 +1,1168 @@
+[
+  {
+    "title": "NTNU · Hydrofoil numerical verification",
+    "width": 1360,
+    "documentWidth": 1360,
+    "overflow": false,
+    "sections": [
+      {
+        "id": "setup",
+        "title": "Case definition",
+        "rect": {
+          "x": 44,
+          "y": 667.203125,
+          "width": 1272,
+          "height": 717.3125
+        }
+      },
+      {
+        "id": "lineage",
+        "title": "Experiment lineage",
+        "rect": {
+          "x": 44,
+          "y": 1384.515625,
+          "width": 1272,
+          "height": 1699.96875
+        }
+      },
+      {
+        "id": "numerics",
+        "title": "Calculation settings",
+        "rect": {
+          "x": 44,
+          "y": 3084.484375,
+          "width": 1272,
+          "height": 1063.265625
+        }
+      },
+      {
+        "id": "meshes",
+        "title": "Mesh comparison",
+        "rect": {
+          "x": 44,
+          "y": 4147.75,
+          "width": 1272,
+          "height": 1770.625
+        }
+      },
+      {
+        "id": "drag",
+        "title": "Where the drag changes",
+        "rect": {
+          "x": 44,
+          "y": 5918.375,
+          "width": 1272,
+          "height": 1163.25
+        }
+      },
+      {
+        "id": "definitions",
+        "title": "What changed in the mesh",
+        "rect": {
+          "x": 44,
+          "y": 7081.625,
+          "width": 1272,
+          "height": 1114.46875
+        }
+      },
+      {
+        "id": "cost",
+        "title": "Computational cost",
+        "rect": {
+          "x": 44,
+          "y": 8196.09375,
+          "width": 1272,
+          "height": 800.96875
+        }
+      },
+      {
+        "id": "fields",
+        "title": "Saved pressure and streamlines",
+        "rect": {
+          "x": 44,
+          "y": 8997.0625,
+          "width": 1272,
+          "height": 1475.40625
+        }
+      },
+      {
+        "id": "waves",
+        "title": "Wave programme",
+        "rect": {
+          "x": 44,
+          "y": 10472.46875,
+          "width": 1272,
+          "height": 717.625
+        }
+      },
+      {
+        "id": "sources",
+        "title": "Discussion and source records",
+        "rect": {
+          "x": 44,
+          "y": 11190.09375,
+          "width": 1272,
+          "height": 473.09375
+        }
+      }
+    ],
+    "images": [
+      {
+        "alt": "M04 · t = 1.642 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 44,
+          "y": 9209.6875,
+          "width": 1272,
+          "height": 293.21875
+        }
+      },
+      {
+        "alt": "M07 · t = 1.640 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 44,
+          "y": 9625.28125,
+          "width": 1272,
+          "height": 293.21875
+        }
+      },
+      {
+        "alt": "M08 · t = 1.600 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 44,
+          "y": 10040.875,
+          "width": 1272,
+          "height": 293.21875
+        }
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 0,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Case definition",
+        "columns": 2,
+        "rect": {
+          "x": 44,
+          "y": 834.140625,
+          "width": 724.5,
+          "height": 375.625
+        },
+        "parentWidth": 725,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Experiment lineage",
+        "columns": 3,
+        "rect": {
+          "x": 44,
+          "y": 3019.484375,
+          "width": 1272,
+          "height": 565.1875
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 6,
+        "rect": {
+          "x": 44,
+          "y": 3277.765625,
+          "width": 1272,
+          "height": 248.640625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 6,
+        "rect": {
+          "x": 44,
+          "y": 3600.84375,
+          "width": 1272,
+          "height": 186.0625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 5,
+        "rect": {
+          "x": 44,
+          "y": 4082.75,
+          "width": 1272,
+          "height": 138.671875
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 6,
+        "rect": {
+          "x": 44,
+          "y": 4797.109375,
+          "width": 1272,
+          "height": 375.625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 4,
+        "rect": {
+          "x": 44,
+          "y": 5247.171875,
+          "width": 1272,
+          "height": 248.640625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 6,
+        "rect": {
+          "x": 44,
+          "y": 5609.9375,
+          "width": 1272,
+          "height": 186.0625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Where the drag changes",
+        "columns": 5,
+        "rect": {
+          "x": 44,
+          "y": 6605.3125,
+          "width": 1272,
+          "height": 375.625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "What changed in the mesh",
+        "columns": 6,
+        "rect": {
+          "x": 44,
+          "y": 7228.5625,
+          "width": 1272,
+          "height": 423.015625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "What changed in the mesh",
+        "columns": 5,
+        "rect": {
+          "x": 44,
+          "y": 7861.953125,
+          "width": 1272,
+          "height": 233.453125
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Wave programme",
+        "columns": 4,
+        "rect": {
+          "x": 44,
+          "y": 10692.09375,
+          "width": 1272,
+          "height": 375.625
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Discussion and source records",
+        "columns": 2,
+        "rect": {
+          "x": 44,
+          "y": 11549.84375,
+          "width": 1272,
+          "height": 517.796875
+        },
+        "parentWidth": 1272,
+        "scroll": false,
+        "font": "16px"
+      }
+    ],
+    "smallText": [],
+    "invalidText": [],
+    "text": "NTNU / COMPUTATIONAL HYDRODYNAMICS\nQuasi-2D hydrofoil\nNumerical verification\n\nMesh sensitivity, calculation settings and the transition to head-wave cases.\n\nResearch discussion · 2026-10-29T22:00:35+01:00 · Data snapshot from saved solver reports\n\nSetup\nExperiment tree\nNumerics\nMeshes\nDrag\nMesh controls\nCost\nFields\nWaves\nSources\nLive update: off\nCurrent assessment\nCalculation settings\n\nHalving Δt from 1 to 0.5 ms changes both CD and CL by less than 0.001%.\n\nM04 calm-water screen, window 2.042–2.242 s. SO / 1 ms / 10 inner supported for calm mesh screening.\n\nMesh evidence\n\nM08 versus M07: +0.5085% CD; -0.1916% CL.\n\nOne finer comparison passes the 1% criterion. A second comparable confirmation is still required.\n\nWave cases\n\nFifthOrderVofWave · water depth 24 m.\n\nC01 / W01 / W02 follow configuration and mesh checks. No accepted wave-force results in this snapshot.\n\n01\nCase definition\n\nPhysical model, reference quantities and decision criteria.\n\nQuantity\tValue\nGeometry\tNACA 66-012 · a = 0.8 · f/c = 0.025 · α = 0°\nChord / span\t1.19 m / 0.020 m · one cell through the span\nFlow\tU = 18 m/s in +X · lift in +Z · fixed foil\nFree surface / foil depth\tz = +2 m / 2 m submergence\nVertical domain\tBottom z = −22 m · top z = +8 m · water depth 24 m\nReference quantities\tρ = 1000 kg/m³ · S = 0.0238 m² · ½ρU²S = 3855.6 N\nModels\tVOF air–water · SST turbulence · quasi-2D\nCalm free surface · z = +2.00 m\nAir\nWater\nU = 18 m/s\nh = 2.00 m\nc = 1.19 m\nNACA 66-012 · α = 0°\na = 0.8 · f/c = 0.025\nz = 0\nSection and calm free surface. Diagram dimensions; domain is not drawn to scale.\n\nForce settling: both adjacent non-overlapping 0.2 s means change by less than 0.5%. This is a stopping criterion, not a discretization-error estimate.\n\nMesh selection: both mean CD and CL within 1% of two finer, comparable meshes. Match solver settings and distinguish wall-function and low-y+ families.\n\nCoefficients: CD = Fx / 3855.6; CL = Fz / 3855.6. CL includes hydrostatic lift. Nominal buoyancy is 22.7182 N (ΔCL = 0.00589226). Forces below refer to the 20 mm slice.\n\n02\nExperiment lineage\n\nDesign changes and restart branches are shown separately. Dashed nodes indicate planned work.\n\nThe left lane records mesh-design changes. The right lane records shared-checkpoint continuations. These are different relationships.\n\nMesh design\n\nEach result below is a settled force-window mean. Cell count alone does not establish refinement.\n\nWall-function family · resolution series\nM02\nCoarse surface and bulk\n66,707 cells\nCD 0.024303\nCL 0.277932\nSettled mean\nM03\nFiner surface and bulk\n123,256 cells\nCD 0.016623\nCL 0.296967\nSettled mean\nM05\nFurther surface and bulk refinement\n182,527 cells\nCD 0.013209\nCL 0.299569\nSettled mean\nM03 → M04: near-wall spacing and layer count changed\nLow-y+ family · successive refinement\nM04\nFirst full layer 3.000 µm; 40 layers\n138,468 cells\nCD 0.007308\nCL 0.317901\nSettled mean\nM06\nFirst full layer 2.143 µm; 44 layers\n251,605 cells\nCD 0.007374\nCL 0.313579\nSettled mean\nM07\nFirst full layer 1.531 µm; 48 layers\n481,635 cells\nCD 0.007474\nCL 0.313630\nSettled mean\n\nM04 → M06 → M07 also refine the surface and bulk controls.\n\nM08 combines two design references\nM06 → surface and bulk controls\nM07 → first-layer height and 48 prisms\nM08\nCoarser surface/bulk than M07; same prism design\n254,989 cells\nCD 0.007512\nCL 0.313029\nSettled mean\nM08 → M09: coarsen only the remote domain\nM09\nFoil, free-surface and prism controls retained\n214,908 cells\nMesh prepared; force result pending\nNext design option · local LE/TE refinement\n\nM10 concept: finer leading and trailing edges, coarser middle chord. No flow result is implied.\n\nCalculation settings\n\nAll four tests start independently from the same M04 state. Their final mean windows are matched.\n\nM04 accepted checkpoint\nt = 1.642 s · 138,468 cells\nOriginal force window: 1.442–1.642 s\nFour independent restarts ↓\nT01\n1st-order time · 1 ms · 20 inner\nCD 0.007255\nCL 0.318971\nMatched window complete\nT02\n2nd-order time · 1 ms · 20 inner\nCD 0.007253\nCL 0.319022\nMatched window complete\nT03\n2nd-order time · 0.5 ms · 20 inner\nCD 0.007253\nCL 0.319022\nMatched window complete\nT04\n2nd-order time · 1 ms · 10 inner\nCD 0.007253\nCL 0.319017\nMatched window complete\n\nCompare T02/T01 for time order, T03/T02 for time step, and T04/T02 for inner iterations. Completed-test means use 2.042–2.242 s.\n\nOriginal M04 → T01: continued force drift\n\nThis compares different physical-time windows. It is separate from the matched-setting tests above.\n\nT02 final state → matched conservation probes\n20 vs 10 inner iterations\nSame T02 final state; 40 steps at 1 ms per branch.\nMass accumulation and net boundary flux are evaluated together. See the diagnostic results for current status.\nDecision sequence\n1 · Calculation settings\nChecks and decision: supported for calm mesh screen.\n2 · Mesh selection\nNo final mesh selected. Require agreement within 1% in both coefficients with two finer comparable cases.\n3 · Calm and waves\nC01 → W01 (H 0.5 m, λ 20 m) → W02 (H 0.5 m, λ 30 m), with matched references and propagation checks.\n\nWave plan: FifthOrderVofWave; water depth 24 m; second-order time integration is a separate setting. W01 includes the 3λ/4λ domain comparison. Additional wave combinations follow the original cases.\n\nChronological run record · local completion times\n03\nCalculation settings\n\nMatched M04 tests: time order, time step and inner iterations.\n\nAll branches restart from the same M04 state at t = 1.642 s. Only one numerical setting changes per matched comparison. Reported means use 2.042–2.242 s.\n\nTest\tOrder / Δt [ms] / inner\tMean CD\tMean CL\ts / step · s / physical s¹\tState\nT01\t1st / 1.0 / 20\t0.00725461\t0.31897091\t2.277 / 2,277\tComplete\nT02\t2nd / 1.0 / 20\t0.00725318\t0.31902201\t2.234 / 2,234\tComplete\nT03\t2nd / 0.5 / 20\t0.00725318\t0.31902182\t1.841 / 3,681\tComplete\nT04\t2nd / 1.0 / 10\t0.00725336\t0.31901736\t1.213 / 1,213\tComplete\nMatched changes\nTest / reference\tChanged setting\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\nT02 / T01\tTime order\t-0.0198%\t+0.0160%\t-0.0749%\t+0.0021%\nT03 / T02\tTime step\t+0.000075%\t-0.000061%\t+0.000213%\t+0.000020%\nT04 / T02\tInner iterations\t+0.0026%\t-0.0015%\t+0.0091%\t-0.000009%\n\nΔ [%] = 100 × (test mean − reference mean) / |reference mean|. ¹Measured median wall time; machine load was not controlled. Smaller differences describe this calm M04 screen and do not establish wave accuracy.\n\nOriginal M04 versus a longer run\n\nThe original 1.442–1.642 s window gave CD 0.00730766 and CL 0.31790138. T01 uses the same settings but a later window: -0.7259% CD and +0.3364% CL. This difference includes continued physical-time drift.\n\nMass-balance diagnostics · accumulation plus boundary flux\n04\nMesh comparison\n\nPreserve the historical cohort; make the final choice using matched settings.\n\nHistorical cohort: first-order implicit time, Δt = 1 ms, 20 inner iterations. Each mesh uses its own final settled 0.2 s window. These results are retained separately from new second-order runs.\n\n0.00727\n0.00734\n0.00741\n0.00749\n0.00756\n138\n253\n367\n482\nM04\nM06\nM08\nM07\nCells [thousands]\nMean CD · low-y+ cohort\nPoints are not joined: cell count alone does not define directional refinement.\n0.3121\n0.3138\n0.3156\n0.3174\n0.3191\n138\n253\n367\n482\nM04\nM06\nM08\nM07\nCells [thousands]\nMean CL · low-y+ cohort\nCompare both coefficients and the changed mesh controls.\nMesh / simulation\tWall family\tCells\tMean CD\tMean CL\tAveraging window [s]\nM02\tWall function\t66,707\t0.0243028\t0.2779325\t1.200–1.400\nM03\tWall function\t123,256\t0.0166227\t0.2969665\t1.516–1.716\nM04\tLow y+\t138,468\t0.0073077\t0.3179014\t1.442–1.642\nM05\tWall function\t182,527\t0.0132093\t0.2995693\t1.140–1.340\nM06\tLow y+\t251,605\t0.0073744\t0.3135789\t1.400–1.600\nM07\tLow y+\t481,635\t0.0074736\t0.3136295\t1.440–1.640\nM08\tLow y+\t254,989\t0.0075116\t0.3130286\t1.400–1.600\nPair comparisons within the historical low-y+ cohort\nTest / reference\tΔ CD\tΔ CL\tCoefficient test\nM04 / M06\t-0.9051%\t+1.3784%\tOutside 1%\nM04 / M07\t-2.2199%\t+1.3621%\tOutside 1%\nM06 / M07\t-1.3268%\t-0.0162%\tOutside 1%\nM08 / M07\t+0.5085%\t-0.1916%\tWithin 1%\n\nM06 has coarser wall-normal spacing than M08. It is a diagnostic comparison, not a finer confirmation of M08. A coefficient test by itself does not establish an accepted mesh.\n\nMatched second-order cohort · current work\nMesh / simulation\tState\tCells\tSettled mean CD\tSettled mean CL\tTime [s]\nM09\tLoading model\t214,908\t—\t—\t—\nM08\tQueued\t254,989\t—\t—\t—\nM07\tQueued\t481,635\t—\t—\t—\n\nSecond-order time, 1 ms, 10 inner iterations. Blank means indicate no accepted force result yet. Each result stops at its first passing pair of new-setting 0.2 s windows; compare residual drift before accepting a near-threshold mesh difference.\n\n05\nWhere the drag changes\n\nPressure and viscous contributions to the mean streamwise force.\n\nPressure\nViscous\nM02\n93.70\nM03\n64.09\nM04\n28.18\nM05\n50.93\nM06\n28.43\nM07\n28.82\nM08\n28.96\n0\n26\n52\n79\n105\nMean Fx on the 20 mm slice [N]\nMesh\tFx pressure [N]\tFx viscous [N]\tFx total [N]\tViscous share\nM02\t82.160\t11.542\t93.702\t12.3%\nM03\t53.112\t10.979\t64.090\t17.1%\nM04\t8.176\t20.000\t28.175\t71.0%\nM05\t38.937\t11.993\t50.930\t23.5%\nM06\t8.115\t20.317\t28.433\t71.5%\nM07\t8.072\t20.743\t28.815\t72.0%\nM08\t8.207\t20.754\t28.962\t71.7%\n\nFx total = pressure + viscous force. These are window means, not the instantaneous forces in the saved field images.\n\n06\nWhat changed in the mesh\n\nControls that differ between the low-y+ meshes; shared settings are stated once.\n\nControl\tM04\tM06\tM07\tM08\tM09\nFirst full layer [µm]\t3.000\t2.143\t1.531\t1.531\t1.531\nPrism layers\t40\t44\t48\t48\t48\nFoil target [mm]\t4.000\t2.857\t2.041\t2.857\t2.857\nFoil minimum [mm]\t0.400\t0.286\t0.204\t0.286\t0.286\nNear-foil size [mm]\t12.50\t8.93\t6.38\t8.93\t8.93\nFree-surface size [mm]\t40.00\t28.57\t20.41\t28.57\t28.57\nOuter base [mm]\t200.00\t142.86\t102.04\t142.86\t250.00\nFoil edges\t616\t856\t1,192\t856\t856\n\nShared: total prism thickness 15.46 mm; span 20 mm in one cell; unchanged foil geometry and incidence.\n\nM07 → M08: keep M07 first layer and 48 prisms; increase surface, near-foil and free-surface size targets by 40%. Foil edges: 1192 → 856.\n\nM08 → M09: keep surface, near-foil, free-surface and prism settings. Increase remote base from 142.86 to 250 mm; protect z = −3…3.2 m at 142.86 mm.\n\nMeasured near-wall resolution\nMesh\tArea-weighted y+ p95\tWall area with y+ < 1\tMaximum y+\tSaved field t [s]\nM04\t1.175\t55.66%\t293.9\t1.642\nM06\t0.846\t99.77%\t252.4\t1.600\nM08\t0.800\t99.88%\t253.6\t1.600\nM07\t0.800\t99.92%\t220.1\t1.640\n\nSmall trailing-edge regions have much larger y+ than the area-weighted p95. Low p95 alone does not prove uniform near-wall resolution.\n\n07\nComputational cost\n\nMeasured cost per physical step in the historical cohort.\n\n0.00\n0.77\n1.54\n2.31\n3.08\n67\n205\n343\n482\nM02\nM03\nM04\nM05\nM06\nM08\nM07\nCells [thousands]\nMedian computing time / step [s]\n\nOrange circles: wall-function meshes. Blue squares: low-y+ meshes. Δt = 1 ms and 20 inner iterations for this cohort. Timing includes the observed machine load; it is not a controlled hardware benchmark.\n\nM08 uses 47.1% fewer cells than M07; its recorded median step time is 1.491 s versus 2.461 s.\n\n08\nSaved pressure and streamlines\n\nAccepted saved fields, with their own physical timestamps.\n\nExpand figure\nM04 · t = 1.642 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\nExpand figure\nM07 · t = 1.640 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\nExpand figure\nM08 · t = 1.600 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\n\nThese are instantaneous snapshots at each accepted stopping time, not time-averaged fields or particle trajectories. New second-order results will be shown as a separate cohort after acceptance.\n\n09\nWave programme\n\nPrimary cases first; controlled extensions follow the agreed checks.\n\nFixed foil · U = 18 m/s · submergence 2 m · water depth 24 m · head waves. FifthOrderVofWave defines the wave shape; second-order time integration is a separate solver setting.\n\nSequence\tHeight H [m]\tWavelength λ [m]\tPurpose\nC01\t0\t—\tMatched calm reference for each changed domain\nW01\t0.50\t20\tPrimary wave case · 4λ domain\nW01 domain check\t0.50\t20\t3λ versus 4λ sensitivity\nW02\t0.50\t30\tPrimary wavelength comparison · 4λ\nW03 / W04\t0.25 / 0.75\t20\tHeight sensitivity after primary cases\nW05 / W06\t0.25 / 0.75\t30\tHeight sensitivity after primary cases\nW07 / W08\t0.50\t10 / 40\tWavelength extension after primary cases\n\nPlanned work. First verify wave height, phase, reflection, encounter direction and time resolution. Average complete settled cycles, targeting 8–10 encounter periods. A finer free-surface mesh for low H requires a matched baseline. Horizontal domains follow the planned wavelength checks; vertical depth remains 24 m.\n\n10\nDiscussion and source records\n\nExact values remain available behind the presentation.\n\nQuestions supported by the current evidence\nDoes M09 retain CD and CL with two finer confirmations under the same solver configuration?\nHow much of the mesh sensitivity is pressure drag versus viscous drag?\nDoes the selected mesh retain force and free-surface accuracy when Δt is reduced for waves?\nSource records and exact evidence\nDownload evidence JSON\nPrint / save PDF\nOpen operational dashboard\nNTNU · Quasi-2D hydrofoil study · Snapshot 2026-10-29T22:00:35+01:00\nNumerical verification in progress. No experimental validation or full-span performance claim is made by these quasi-2D results.",
+    "anchorPositions": [
+      {
+        "id": "setup",
+        "top": 70.203125,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "lineage",
+        "top": 69.515625,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "numerics",
+        "top": 70.484375,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "meshes",
+        "top": 69.75,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "drag",
+        "top": 70.375,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "definitions",
+        "top": 69.625,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "cost",
+        "top": 70.09375,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "fields",
+        "top": 70.0625,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "waves",
+        "top": 70.46875,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "sources",
+        "top": 484.09375,
+        "navBottom": 60.140625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "title": "NTNU · Hydrofoil numerical verification",
+    "width": 1920,
+    "documentWidth": 1920,
+    "overflow": false,
+    "sections": [
+      {
+        "id": "setup",
+        "title": "Case definition",
+        "rect": {
+          "x": 229,
+          "y": 683.265625,
+          "width": 1462,
+          "height": 730.25
+        }
+      },
+      {
+        "id": "lineage",
+        "title": "Experiment lineage",
+        "rect": {
+          "x": 229,
+          "y": 1413.515625,
+          "width": 1462,
+          "height": 1682.765625
+        }
+      },
+      {
+        "id": "numerics",
+        "title": "Calculation settings",
+        "rect": {
+          "x": 229,
+          "y": 3096.28125,
+          "width": 1462,
+          "height": 1086.078125
+        }
+      },
+      {
+        "id": "meshes",
+        "title": "Mesh comparison",
+        "rect": {
+          "x": 229,
+          "y": 4182.359375,
+          "width": 1462,
+          "height": 1825.953125
+        }
+      },
+      {
+        "id": "drag",
+        "title": "Where the drag changes",
+        "rect": {
+          "x": 229,
+          "y": 6008.3125,
+          "width": 1462,
+          "height": 1179.296875
+        }
+      },
+      {
+        "id": "definitions",
+        "title": "What changed in the mesh",
+        "rect": {
+          "x": 229,
+          "y": 7187.609375,
+          "width": 1462,
+          "height": 1140.640625
+        }
+      },
+      {
+        "id": "cost",
+        "title": "Computational cost",
+        "rect": {
+          "x": 229,
+          "y": 8328.25,
+          "width": 1462,
+          "height": 810.265625
+        }
+      },
+      {
+        "id": "fields",
+        "title": "Saved pressure and streamlines",
+        "rect": {
+          "x": 229,
+          "y": 9138.515625,
+          "width": 1462,
+          "height": 1622.328125
+        }
+      },
+      {
+        "id": "waves",
+        "title": "Wave programme",
+        "rect": {
+          "x": 229,
+          "y": 10760.84375,
+          "width": 1462,
+          "height": 742.96875
+        }
+      },
+      {
+        "id": "sources",
+        "title": "Discussion and source records",
+        "rect": {
+          "x": 229,
+          "y": 11503.8125,
+          "width": 1462,
+          "height": 490.5625
+        }
+      }
+    ],
+    "images": [
+      {
+        "alt": "M04 · t = 1.642 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 229,
+          "y": 9354.234375,
+          "width": 1462,
+          "height": 337.015625
+        }
+      },
+      {
+        "alt": "M07 · t = 1.640 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 229,
+          "y": 9816.734375,
+          "width": 1462,
+          "height": 337.015625
+        }
+      },
+      {
+        "alt": "M08 · t = 1.600 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 229,
+          "y": 10279.234375,
+          "width": 1462,
+          "height": 337.015625
+        }
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 0,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Case definition",
+        "columns": 2,
+        "rect": {
+          "x": 229,
+          "y": 853.296875,
+          "width": 835.328125,
+          "height": 385.46875
+        },
+        "parentWidth": 835,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Experiment lineage",
+        "columns": 3,
+        "rect": {
+          "x": 229,
+          "y": 3031.28125,
+          "width": 1462,
+          "height": 580.65625
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 6,
+        "rect": {
+          "x": 229,
+          "y": 3295.75,
+          "width": 1462,
+          "height": 248.640625
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 6,
+        "rect": {
+          "x": 229,
+          "y": 3618.828125,
+          "width": 1462,
+          "height": 190.28125
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 5,
+        "rect": {
+          "x": 229,
+          "y": 4117.359375,
+          "width": 1462,
+          "height": 141.484375
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 6,
+        "rect": {
+          "x": 229,
+          "y": 4863.65625,
+          "width": 1462,
+          "height": 385.46875
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 4,
+        "rect": {
+          "x": 229,
+          "y": 5323.5625,
+          "width": 1462,
+          "height": 248.640625
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 6,
+        "rect": {
+          "x": 229,
+          "y": 5689.4375,
+          "width": 1462,
+          "height": 190.28125
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Where the drag changes",
+        "columns": 5,
+        "rect": {
+          "x": 229,
+          "y": 6698.34375,
+          "width": 1462,
+          "height": 385.46875
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "What changed in the mesh",
+        "columns": 6,
+        "rect": {
+          "x": 229,
+          "y": 7337.640625,
+          "width": 1462,
+          "height": 434.265625
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "What changed in the mesh",
+        "columns": 5,
+        "rect": {
+          "x": 229,
+          "y": 7985.375,
+          "width": 1462,
+          "height": 239.078125
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Wave programme",
+        "columns": 4,
+        "rect": {
+          "x": 229,
+          "y": 10989.75,
+          "width": 1462,
+          "height": 385.46875
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      },
+      {
+        "title": "Discussion and source records",
+        "columns": 2,
+        "rect": {
+          "x": 229,
+          "y": 11877.9375,
+          "width": 1462,
+          "height": 531.859375
+        },
+        "parentWidth": 1462,
+        "scroll": false,
+        "font": "17px"
+      }
+    ],
+    "smallText": [],
+    "invalidText": [],
+    "text": "NTNU / COMPUTATIONAL HYDRODYNAMICS\nQuasi-2D hydrofoil\nNumerical verification\n\nMesh sensitivity, calculation settings and the transition to head-wave cases.\n\nResearch discussion · 2026-10-29T22:00:35+01:00 · Data snapshot from saved solver reports\n\nSetup\nExperiment tree\nNumerics\nMeshes\nDrag\nMesh controls\nCost\nFields\nWaves\nSources\nLive update: off\nCurrent assessment\nCalculation settings\n\nHalving Δt from 1 to 0.5 ms changes both CD and CL by less than 0.001%.\n\nM04 calm-water screen, window 2.042–2.242 s. SO / 1 ms / 10 inner supported for calm mesh screening.\n\nMesh evidence\n\nM08 versus M07: +0.5085% CD; -0.1916% CL.\n\nOne finer comparison passes the 1% criterion. A second comparable confirmation is still required.\n\nWave cases\n\nFifthOrderVofWave · water depth 24 m.\n\nC01 / W01 / W02 follow configuration and mesh checks. No accepted wave-force results in this snapshot.\n\n01\nCase definition\n\nPhysical model, reference quantities and decision criteria.\n\nQuantity\tValue\nGeometry\tNACA 66-012 · a = 0.8 · f/c = 0.025 · α = 0°\nChord / span\t1.19 m / 0.020 m · one cell through the span\nFlow\tU = 18 m/s in +X · lift in +Z · fixed foil\nFree surface / foil depth\tz = +2 m / 2 m submergence\nVertical domain\tBottom z = −22 m · top z = +8 m · water depth 24 m\nReference quantities\tρ = 1000 kg/m³ · S = 0.0238 m² · ½ρU²S = 3855.6 N\nModels\tVOF air–water · SST turbulence · quasi-2D\nCalm free surface · z = +2.00 m\nAir\nWater\nU = 18 m/s\nh = 2.00 m\nc = 1.19 m\nNACA 66-012 · α = 0°\na = 0.8 · f/c = 0.025\nz = 0\nSection and calm free surface. Diagram dimensions; domain is not drawn to scale.\n\nForce settling: both adjacent non-overlapping 0.2 s means change by less than 0.5%. This is a stopping criterion, not a discretization-error estimate.\n\nMesh selection: both mean CD and CL within 1% of two finer, comparable meshes. Match solver settings and distinguish wall-function and low-y+ families.\n\nCoefficients: CD = Fx / 3855.6; CL = Fz / 3855.6. CL includes hydrostatic lift. Nominal buoyancy is 22.7182 N (ΔCL = 0.00589226). Forces below refer to the 20 mm slice.\n\n02\nExperiment lineage\n\nDesign changes and restart branches are shown separately. Dashed nodes indicate planned work.\n\nThe left lane records mesh-design changes. The right lane records shared-checkpoint continuations. These are different relationships.\n\nMesh design\n\nEach result below is a settled force-window mean. Cell count alone does not establish refinement.\n\nWall-function family · resolution series\nM02\nCoarse surface and bulk\n66,707 cells\nCD 0.024303\nCL 0.277932\nSettled mean\nM03\nFiner surface and bulk\n123,256 cells\nCD 0.016623\nCL 0.296967\nSettled mean\nM05\nFurther surface and bulk refinement\n182,527 cells\nCD 0.013209\nCL 0.299569\nSettled mean\nM03 → M04: near-wall spacing and layer count changed\nLow-y+ family · successive refinement\nM04\nFirst full layer 3.000 µm; 40 layers\n138,468 cells\nCD 0.007308\nCL 0.317901\nSettled mean\nM06\nFirst full layer 2.143 µm; 44 layers\n251,605 cells\nCD 0.007374\nCL 0.313579\nSettled mean\nM07\nFirst full layer 1.531 µm; 48 layers\n481,635 cells\nCD 0.007474\nCL 0.313630\nSettled mean\n\nM04 → M06 → M07 also refine the surface and bulk controls.\n\nM08 combines two design references\nM06 → surface and bulk controls\nM07 → first-layer height and 48 prisms\nM08\nCoarser surface/bulk than M07; same prism design\n254,989 cells\nCD 0.007512\nCL 0.313029\nSettled mean\nM08 → M09: coarsen only the remote domain\nM09\nFoil, free-surface and prism controls retained\n214,908 cells\nMesh prepared; force result pending\nNext design option · local LE/TE refinement\n\nM10 concept: finer leading and trailing edges, coarser middle chord. No flow result is implied.\n\nCalculation settings\n\nAll four tests start independently from the same M04 state. Their final mean windows are matched.\n\nM04 accepted checkpoint\nt = 1.642 s · 138,468 cells\nOriginal force window: 1.442–1.642 s\nFour independent restarts ↓\nT01\n1st-order time · 1 ms · 20 inner\nCD 0.007255\nCL 0.318971\nMatched window complete\nT02\n2nd-order time · 1 ms · 20 inner\nCD 0.007253\nCL 0.319022\nMatched window complete\nT03\n2nd-order time · 0.5 ms · 20 inner\nCD 0.007253\nCL 0.319022\nMatched window complete\nT04\n2nd-order time · 1 ms · 10 inner\nCD 0.007253\nCL 0.319017\nMatched window complete\n\nCompare T02/T01 for time order, T03/T02 for time step, and T04/T02 for inner iterations. Completed-test means use 2.042–2.242 s.\n\nOriginal M04 → T01: continued force drift\n\nThis compares different physical-time windows. It is separate from the matched-setting tests above.\n\nT02 final state → matched conservation probes\n20 vs 10 inner iterations\nSame T02 final state; 40 steps at 1 ms per branch.\nMass accumulation and net boundary flux are evaluated together. See the diagnostic results for current status.\nDecision sequence\n1 · Calculation settings\nChecks and decision: supported for calm mesh screen.\n2 · Mesh selection\nNo final mesh selected. Require agreement within 1% in both coefficients with two finer comparable cases.\n3 · Calm and waves\nC01 → W01 (H 0.5 m, λ 20 m) → W02 (H 0.5 m, λ 30 m), with matched references and propagation checks.\n\nWave plan: FifthOrderVofWave; water depth 24 m; second-order time integration is a separate setting. W01 includes the 3λ/4λ domain comparison. Additional wave combinations follow the original cases.\n\nChronological run record · local completion times\n03\nCalculation settings\n\nMatched M04 tests: time order, time step and inner iterations.\n\nAll branches restart from the same M04 state at t = 1.642 s. Only one numerical setting changes per matched comparison. Reported means use 2.042–2.242 s.\n\nTest\tOrder / Δt [ms] / inner\tMean CD\tMean CL\ts / step · s / physical s¹\tState\nT01\t1st / 1.0 / 20\t0.00725461\t0.31897091\t2.277 / 2,277\tComplete\nT02\t2nd / 1.0 / 20\t0.00725318\t0.31902201\t2.234 / 2,234\tComplete\nT03\t2nd / 0.5 / 20\t0.00725318\t0.31902182\t1.841 / 3,681\tComplete\nT04\t2nd / 1.0 / 10\t0.00725336\t0.31901736\t1.213 / 1,213\tComplete\nMatched changes\nTest / reference\tChanged setting\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\nT02 / T01\tTime order\t-0.0198%\t+0.0160%\t-0.0749%\t+0.0021%\nT03 / T02\tTime step\t+0.000075%\t-0.000061%\t+0.000213%\t+0.000020%\nT04 / T02\tInner iterations\t+0.0026%\t-0.0015%\t+0.0091%\t-0.000009%\n\nΔ [%] = 100 × (test mean − reference mean) / |reference mean|. ¹Measured median wall time; machine load was not controlled. Smaller differences describe this calm M04 screen and do not establish wave accuracy.\n\nOriginal M04 versus a longer run\n\nThe original 1.442–1.642 s window gave CD 0.00730766 and CL 0.31790138. T01 uses the same settings but a later window: -0.7259% CD and +0.3364% CL. This difference includes continued physical-time drift.\n\nMass-balance diagnostics · accumulation plus boundary flux\n04\nMesh comparison\n\nPreserve the historical cohort; make the final choice using matched settings.\n\nHistorical cohort: first-order implicit time, Δt = 1 ms, 20 inner iterations. Each mesh uses its own final settled 0.2 s window. These results are retained separately from new second-order runs.\n\n0.00727\n0.00734\n0.00741\n0.00749\n0.00756\n138\n253\n367\n482\nM04\nM06\nM08\nM07\nCells [thousands]\nMean CD · low-y+ cohort\nPoints are not joined: cell count alone does not define directional refinement.\n0.3121\n0.3138\n0.3156\n0.3174\n0.3191\n138\n253\n367\n482\nM04\nM06\nM08\nM07\nCells [thousands]\nMean CL · low-y+ cohort\nCompare both coefficients and the changed mesh controls.\nMesh / simulation\tWall family\tCells\tMean CD\tMean CL\tAveraging window [s]\nM02\tWall function\t66,707\t0.0243028\t0.2779325\t1.200–1.400\nM03\tWall function\t123,256\t0.0166227\t0.2969665\t1.516–1.716\nM04\tLow y+\t138,468\t0.0073077\t0.3179014\t1.442–1.642\nM05\tWall function\t182,527\t0.0132093\t0.2995693\t1.140–1.340\nM06\tLow y+\t251,605\t0.0073744\t0.3135789\t1.400–1.600\nM07\tLow y+\t481,635\t0.0074736\t0.3136295\t1.440–1.640\nM08\tLow y+\t254,989\t0.0075116\t0.3130286\t1.400–1.600\nPair comparisons within the historical low-y+ cohort\nTest / reference\tΔ CD\tΔ CL\tCoefficient test\nM04 / M06\t-0.9051%\t+1.3784%\tOutside 1%\nM04 / M07\t-2.2199%\t+1.3621%\tOutside 1%\nM06 / M07\t-1.3268%\t-0.0162%\tOutside 1%\nM08 / M07\t+0.5085%\t-0.1916%\tWithin 1%\n\nM06 has coarser wall-normal spacing than M08. It is a diagnostic comparison, not a finer confirmation of M08. A coefficient test by itself does not establish an accepted mesh.\n\nMatched second-order cohort · current work\nMesh / simulation\tState\tCells\tSettled mean CD\tSettled mean CL\tTime [s]\nM09\tLoading model\t214,908\t—\t—\t—\nM08\tQueued\t254,989\t—\t—\t—\nM07\tQueued\t481,635\t—\t—\t—\n\nSecond-order time, 1 ms, 10 inner iterations. Blank means indicate no accepted force result yet. Each result stops at its first passing pair of new-setting 0.2 s windows; compare residual drift before accepting a near-threshold mesh difference.\n\n05\nWhere the drag changes\n\nPressure and viscous contributions to the mean streamwise force.\n\nPressure\nViscous\nM02\n93.70\nM03\n64.09\nM04\n28.18\nM05\n50.93\nM06\n28.43\nM07\n28.82\nM08\n28.96\n0\n26\n52\n79\n105\nMean Fx on the 20 mm slice [N]\nMesh\tFx pressure [N]\tFx viscous [N]\tFx total [N]\tViscous share\nM02\t82.160\t11.542\t93.702\t12.3%\nM03\t53.112\t10.979\t64.090\t17.1%\nM04\t8.176\t20.000\t28.175\t71.0%\nM05\t38.937\t11.993\t50.930\t23.5%\nM06\t8.115\t20.317\t28.433\t71.5%\nM07\t8.072\t20.743\t28.815\t72.0%\nM08\t8.207\t20.754\t28.962\t71.7%\n\nFx total = pressure + viscous force. These are window means, not the instantaneous forces in the saved field images.\n\n06\nWhat changed in the mesh\n\nControls that differ between the low-y+ meshes; shared settings are stated once.\n\nControl\tM04\tM06\tM07\tM08\tM09\nFirst full layer [µm]\t3.000\t2.143\t1.531\t1.531\t1.531\nPrism layers\t40\t44\t48\t48\t48\nFoil target [mm]\t4.000\t2.857\t2.041\t2.857\t2.857\nFoil minimum [mm]\t0.400\t0.286\t0.204\t0.286\t0.286\nNear-foil size [mm]\t12.50\t8.93\t6.38\t8.93\t8.93\nFree-surface size [mm]\t40.00\t28.57\t20.41\t28.57\t28.57\nOuter base [mm]\t200.00\t142.86\t102.04\t142.86\t250.00\nFoil edges\t616\t856\t1,192\t856\t856\n\nShared: total prism thickness 15.46 mm; span 20 mm in one cell; unchanged foil geometry and incidence.\n\nM07 → M08: keep M07 first layer and 48 prisms; increase surface, near-foil and free-surface size targets by 40%. Foil edges: 1192 → 856.\n\nM08 → M09: keep surface, near-foil, free-surface and prism settings. Increase remote base from 142.86 to 250 mm; protect z = −3…3.2 m at 142.86 mm.\n\nMeasured near-wall resolution\nMesh\tArea-weighted y+ p95\tWall area with y+ < 1\tMaximum y+\tSaved field t [s]\nM04\t1.175\t55.66%\t293.9\t1.642\nM06\t0.846\t99.77%\t252.4\t1.600\nM08\t0.800\t99.88%\t253.6\t1.600\nM07\t0.800\t99.92%\t220.1\t1.640\n\nSmall trailing-edge regions have much larger y+ than the area-weighted p95. Low p95 alone does not prove uniform near-wall resolution.\n\n07\nComputational cost\n\nMeasured cost per physical step in the historical cohort.\n\n0.00\n0.77\n1.54\n2.31\n3.08\n67\n205\n343\n482\nM02\nM03\nM04\nM05\nM06\nM08\nM07\nCells [thousands]\nMedian computing time / step [s]\n\nOrange circles: wall-function meshes. Blue squares: low-y+ meshes. Δt = 1 ms and 20 inner iterations for this cohort. Timing includes the observed machine load; it is not a controlled hardware benchmark.\n\nM08 uses 47.1% fewer cells than M07; its recorded median step time is 1.491 s versus 2.461 s.\n\n08\nSaved pressure and streamlines\n\nAccepted saved fields, with their own physical timestamps.\n\nExpand figure\nM04 · t = 1.642 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\nExpand figure\nM07 · t = 1.640 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\nExpand figure\nM08 · t = 1.600 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\n\nThese are instantaneous snapshots at each accepted stopping time, not time-averaged fields or particle trajectories. New second-order results will be shown as a separate cohort after acceptance.\n\n09\nWave programme\n\nPrimary cases first; controlled extensions follow the agreed checks.\n\nFixed foil · U = 18 m/s · submergence 2 m · water depth 24 m · head waves. FifthOrderVofWave defines the wave shape; second-order time integration is a separate solver setting.\n\nSequence\tHeight H [m]\tWavelength λ [m]\tPurpose\nC01\t0\t—\tMatched calm reference for each changed domain\nW01\t0.50\t20\tPrimary wave case · 4λ domain\nW01 domain check\t0.50\t20\t3λ versus 4λ sensitivity\nW02\t0.50\t30\tPrimary wavelength comparison · 4λ\nW03 / W04\t0.25 / 0.75\t20\tHeight sensitivity after primary cases\nW05 / W06\t0.25 / 0.75\t30\tHeight sensitivity after primary cases\nW07 / W08\t0.50\t10 / 40\tWavelength extension after primary cases\n\nPlanned work. First verify wave height, phase, reflection, encounter direction and time resolution. Average complete settled cycles, targeting 8–10 encounter periods. A finer free-surface mesh for low H requires a matched baseline. Horizontal domains follow the planned wavelength checks; vertical depth remains 24 m.\n\n10\nDiscussion and source records\n\nExact values remain available behind the presentation.\n\nQuestions supported by the current evidence\nDoes M09 retain CD and CL with two finer confirmations under the same solver configuration?\nHow much of the mesh sensitivity is pressure drag versus viscous drag?\nDoes the selected mesh retain force and free-surface accuracy when Δt is reduced for waves?\nSource records and exact evidence\nDownload evidence JSON\nPrint / save PDF\nOpen operational dashboard\nNTNU · Quasi-2D hydrofoil study · Snapshot 2026-10-29T22:00:35+01:00\nNumerical verification in progress. No experimental validation or full-span performance claim is made by these quasi-2D results.",
+    "anchorPositions": [
+      {
+        "id": "setup",
+        "top": 70.265625,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "lineage",
+        "top": 69.515625,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "numerics",
+        "top": 70.28125,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "meshes",
+        "top": 70.359375,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "drag",
+        "top": 70.3125,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "definitions",
+        "top": 69.609375,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "cost",
+        "top": 70.25,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "fields",
+        "top": 69.515625,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "waves",
+        "top": 69.84375,
+        "navBottom": 60.140625
+      },
+      {
+        "id": "sources",
+        "top": 466.8125,
+        "navBottom": 60.140625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "title": "NTNU · Hydrofoil numerical verification",
+    "width": 390,
+    "documentWidth": 390,
+    "overflow": false,
+    "sections": [
+      {
+        "id": "setup",
+        "title": "Case definition",
+        "rect": {
+          "x": 22,
+          "y": 1195.609375,
+          "width": 346,
+          "height": 1573.390625
+        }
+      },
+      {
+        "id": "lineage",
+        "title": "Experiment lineage",
+        "rect": {
+          "x": 22,
+          "y": 2769,
+          "width": 346,
+          "height": 4269.140625
+        }
+      },
+      {
+        "id": "numerics",
+        "title": "Calculation settings",
+        "rect": {
+          "x": 22,
+          "y": 7038.140625,
+          "width": 346,
+          "height": 1368
+        }
+      },
+      {
+        "id": "meshes",
+        "title": "Mesh comparison",
+        "rect": {
+          "x": 22,
+          "y": 8406.140625,
+          "width": 346,
+          "height": 2439.484375
+        }
+      },
+      {
+        "id": "drag",
+        "title": "Where the drag changes",
+        "rect": {
+          "x": 22,
+          "y": 10845.625,
+          "width": 346,
+          "height": 1053.671875
+        }
+      },
+      {
+        "id": "definitions",
+        "title": "What changed in the mesh",
+        "rect": {
+          "x": 22,
+          "y": 11899.296875,
+          "width": 346,
+          "height": 1367.265625
+        }
+      },
+      {
+        "id": "cost",
+        "title": "Computational cost",
+        "rect": {
+          "x": 22,
+          "y": 13266.5625,
+          "width": 346,
+          "height": 795.34375
+        }
+      },
+      {
+        "id": "fields",
+        "title": "Saved pressure and streamlines",
+        "rect": {
+          "x": 22,
+          "y": 14061.90625,
+          "width": 346,
+          "height": 1645.4375
+        }
+      },
+      {
+        "id": "waves",
+        "title": "Wave programme",
+        "rect": {
+          "x": 22,
+          "y": 15707.34375,
+          "width": 346,
+          "height": 1008.6875
+        }
+      },
+      {
+        "id": "sources",
+        "title": "Discussion and source records",
+        "rect": {
+          "x": 22,
+          "y": 16716.03125,
+          "width": 346,
+          "height": 776.59375
+        }
+      }
+    ],
+    "images": [
+      {
+        "alt": "M04 · t = 1.642 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 22,
+          "y": 14317.28125,
+          "width": 1100,
+          "height": 253.5625
+        }
+      },
+      {
+        "alt": "M07 · t = 1.640 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 22,
+          "y": 14756.28125,
+          "width": 1100,
+          "height": 253.5625
+        }
+      },
+      {
+        "alt": "M08 · t = 1.600 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.",
+        "complete": true,
+        "naturalWidth": 2772,
+        "rect": {
+          "x": 22,
+          "y": 15195.28125,
+          "width": 1100,
+          "height": 253.5625
+        }
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 0,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    ],
+    "tables": [
+      {
+        "title": "Case definition",
+        "columns": 2,
+        "rect": {
+          "x": 22,
+          "y": 1377.296875,
+          "width": 346,
+          "height": 612.3125
+        },
+        "parentWidth": 346,
+        "scroll": false,
+        "font": "16px"
+      },
+      {
+        "title": "Experiment lineage",
+        "columns": 3,
+        "rect": {
+          "x": 22,
+          "y": 6983.140625,
+          "width": 650,
+          "height": 782.375
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 6,
+        "rect": {
+          "x": 22,
+          "y": 7325.203125,
+          "width": 650,
+          "height": 247.53125
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 6,
+        "rect": {
+          "x": 22,
+          "y": 7647.171875,
+          "width": 650,
+          "height": 211.34375
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Calculation settings",
+        "columns": 5,
+        "rect": {
+          "x": 22,
+          "y": 8351.140625,
+          "width": 650,
+          "height": 126.671875
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 6,
+        "rect": {
+          "x": 22,
+          "y": 9486.015625,
+          "width": 650,
+          "height": 429.6875
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 4,
+        "rect": {
+          "x": 22,
+          "y": 10019.578125,
+          "width": 650,
+          "height": 228.640625
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Mesh comparison",
+        "columns": 6,
+        "rect": {
+          "x": 22,
+          "y": 10456.84375,
+          "width": 650,
+          "height": 211.34375
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Where the drag changes",
+        "columns": 5,
+        "rect": {
+          "x": 22,
+          "y": 11421.609375,
+          "width": 650,
+          "height": 343.625
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "What changed in the mesh",
+        "columns": 6,
+        "rect": {
+          "x": 22,
+          "y": 12090.984375,
+          "width": 650,
+          "height": 387.015625
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "What changed in the mesh",
+        "columns": 5,
+        "rect": {
+          "x": 22,
+          "y": 12919.046875,
+          "width": 650,
+          "height": 213.453125
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Wave programme",
+        "columns": 4,
+        "rect": {
+          "x": 22,
+          "y": 16020.75,
+          "width": 650,
+          "height": 474.46875
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      },
+      {
+        "title": "Discussion and source records",
+        "columns": 2,
+        "rect": {
+          "x": 22,
+          "y": 17281.6875,
+          "width": 650,
+          "height": 473.796875
+        },
+        "parentWidth": 346,
+        "scroll": true,
+        "font": "16px"
+      }
+    ],
+    "smallText": [],
+    "invalidText": [],
+    "text": "NTNU / COMPUTATIONAL HYDRODYNAMICS\nQuasi-2D hydrofoil\nNumerical verification\n\nMesh sensitivity, calculation settings and the transition to head-wave cases.\n\nResearch discussion · 2026-10-29T22:00:35+01:00 · Data snapshot from saved solver reports\n\nSetup\nExperiment tree\nNumerics\nMeshes\nDrag\nMesh controls\nCost\nFields\nWaves\nSources\nLive update: off\n\nWide tables and figures can be scrolled horizontally. Use Expand figure for pressure and streamline details.\n\nCurrent assessment\nCalculation settings\n\nHalving Δt from 1 to 0.5 ms changes both CD and CL by less than 0.001%.\n\nM04 calm-water screen, window 2.042–2.242 s. SO / 1 ms / 10 inner supported for calm mesh screening.\n\nMesh evidence\n\nM08 versus M07: +0.5085% CD; -0.1916% CL.\n\nOne finer comparison passes the 1% criterion. A second comparable confirmation is still required.\n\nWave cases\n\nFifthOrderVofWave · water depth 24 m.\n\nC01 / W01 / W02 follow configuration and mesh checks. No accepted wave-force results in this snapshot.\n\n01\nCase definition\n\nPhysical model, reference quantities and decision criteria.\n\nQuantity\tValue\nGeometry\tNACA 66-012 · a = 0.8 · f/c = 0.025 · α = 0°\nChord / span\t1.19 m / 0.020 m · one cell through the span\nFlow\tU = 18 m/s in +X · lift in +Z · fixed foil\nFree surface / foil depth\tz = +2 m / 2 m submergence\nVertical domain\tBottom z = −22 m · top z = +8 m · water depth 24 m\nReference quantities\tρ = 1000 kg/m³ · S = 0.0238 m² · ½ρU²S = 3855.6 N\nModels\tVOF air–water · SST turbulence · quasi-2D\nCalm free surface · z = +2.00 m\nAir\nWater\nU = 18 m/s\nh = 2.00 m\nc = 1.19 m\nNACA 66-012 · α = 0°\na = 0.8 · f/c = 0.025\nz = 0\nSection and calm free surface. Diagram dimensions; domain is not drawn to scale.\n\nForce settling: both adjacent non-overlapping 0.2 s means change by less than 0.5%. This is a stopping criterion, not a discretization-error estimate.\n\nMesh selection: both mean CD and CL within 1% of two finer, comparable meshes. Match solver settings and distinguish wall-function and low-y+ families.\n\nCoefficients: CD = Fx / 3855.6; CL = Fz / 3855.6. CL includes hydrostatic lift. Nominal buoyancy is 22.7182 N (ΔCL = 0.00589226). Forces below refer to the 20 mm slice.\n\n02\nExperiment lineage\n\nDesign changes and restart branches are shown separately. Dashed nodes indicate planned work.\n\nThe left lane records mesh-design changes. The right lane records shared-checkpoint continuations. These are different relationships.\n\nMesh design\n\nEach result below is a settled force-window mean. Cell count alone does not establish refinement.\n\nWall-function family · resolution series\nM02\nCoarse surface and bulk\n66,707 cells\nCD 0.024303\nCL 0.277932\nSettled mean\nM03\nFiner surface and bulk\n123,256 cells\nCD 0.016623\nCL 0.296967\nSettled mean\nM05\nFurther surface and bulk refinement\n182,527 cells\nCD 0.013209\nCL 0.299569\nSettled mean\nM03 → M04: near-wall spacing and layer count changed\nLow-y+ family · successive refinement\nM04\nFirst full layer 3.000 µm; 40 layers\n138,468 cells\nCD 0.007308\nCL 0.317901\nSettled mean\nM06\nFirst full layer 2.143 µm; 44 layers\n251,605 cells\nCD 0.007374\nCL 0.313579\nSettled mean\nM07\nFirst full layer 1.531 µm; 48 layers\n481,635 cells\nCD 0.007474\nCL 0.313630\nSettled mean\n\nM04 → M06 → M07 also refine the surface and bulk controls.\n\nM08 combines two design references\nM06 → surface and bulk controls\nM07 → first-layer height and 48 prisms\nM08\nCoarser surface/bulk than M07; same prism design\n254,989 cells\nCD 0.007512\nCL 0.313029\nSettled mean\nM08 → M09: coarsen only the remote domain\nM09\nFoil, free-surface and prism controls retained\n214,908 cells\nMesh prepared; force result pending\nNext design option · local LE/TE refinement\n\nM10 concept: finer leading and trailing edges, coarser middle chord. No flow result is implied.\n\nCalculation settings\n\nAll four tests start independently from the same M04 state. Their final mean windows are matched.\n\nM04 accepted checkpoint\nt = 1.642 s · 138,468 cells\nOriginal force window: 1.442–1.642 s\nFour independent restarts ↓\nT01\n1st-order time · 1 ms · 20 inner\nCD 0.007255\nCL 0.318971\nMatched window complete\nT02\n2nd-order time · 1 ms · 20 inner\nCD 0.007253\nCL 0.319022\nMatched window complete\nT03\n2nd-order time · 0.5 ms · 20 inner\nCD 0.007253\nCL 0.319022\nMatched window complete\nT04\n2nd-order time · 1 ms · 10 inner\nCD 0.007253\nCL 0.319017\nMatched window complete\n\nCompare T02/T01 for time order, T03/T02 for time step, and T04/T02 for inner iterations. Completed-test means use 2.042–2.242 s.\n\nOriginal M04 → T01: continued force drift\n\nThis compares different physical-time windows. It is separate from the matched-setting tests above.\n\nT02 final state → matched conservation probes\n20 vs 10 inner iterations\nSame T02 final state; 40 steps at 1 ms per branch.\nMass accumulation and net boundary flux are evaluated together. See the diagnostic results for current status.\nDecision sequence\n1 · Calculation settings\nChecks and decision: supported for calm mesh screen.\n2 · Mesh selection\nNo final mesh selected. Require agreement within 1% in both coefficients with two finer comparable cases.\n3 · Calm and waves\nC01 → W01 (H 0.5 m, λ 20 m) → W02 (H 0.5 m, λ 30 m), with matched references and propagation checks.\n\nWave plan: FifthOrderVofWave; water depth 24 m; second-order time integration is a separate setting. W01 includes the 3λ/4λ domain comparison. Additional wave combinations follow the original cases.\n\nChronological run record · local completion times\n03\nCalculation settings\n\nMatched M04 tests: time order, time step and inner iterations.\n\nAll branches restart from the same M04 state at t = 1.642 s. Only one numerical setting changes per matched comparison. Reported means use 2.042–2.242 s.\n\nTest\tOrder / Δt [ms] / inner\tMean CD\tMean CL\ts / step · s / physical s¹\tState\nT01\t1st / 1.0 / 20\t0.00725461\t0.31897091\t2.277 / 2,277\tComplete\nT02\t2nd / 1.0 / 20\t0.00725318\t0.31902201\t2.234 / 2,234\tComplete\nT03\t2nd / 0.5 / 20\t0.00725318\t0.31902182\t1.841 / 3,681\tComplete\nT04\t2nd / 1.0 / 10\t0.00725336\t0.31901736\t1.213 / 1,213\tComplete\nMatched changes\nTest / reference\tChanged setting\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\nT02 / T01\tTime order\t-0.0198%\t+0.0160%\t-0.0749%\t+0.0021%\nT03 / T02\tTime step\t+0.000075%\t-0.000061%\t+0.000213%\t+0.000020%\nT04 / T02\tInner iterations\t+0.0026%\t-0.0015%\t+0.0091%\t-0.000009%\n\nΔ [%] = 100 × (test mean − reference mean) / |reference mean|. ¹Measured median wall time; machine load was not controlled. Smaller differences describe this calm M04 screen and do not establish wave accuracy.\n\nOriginal M04 versus a longer run\n\nThe original 1.442–1.642 s window gave CD 0.00730766 and CL 0.31790138. T01 uses the same settings but a later window: -0.7259% CD and +0.3364% CL. This difference includes continued physical-time drift.\n\nMass-balance diagnostics · accumulation plus boundary flux\n04\nMesh comparison\n\nPreserve the historical cohort; make the final choice using matched settings.\n\nHistorical cohort: first-order implicit time, Δt = 1 ms, 20 inner iterations. Each mesh uses its own final settled 0.2 s window. These results are retained separately from new second-order runs.\n\n0.00727\n0.00734\n0.00741\n0.00749\n0.00756\n138\n253\n367\n482\nM04\nM06\nM08\nM07\nCells [thousands]\nMean CD · low-y+ cohort\nPoints are not joined: cell count alone does not define directional refinement.\n0.3121\n0.3138\n0.3156\n0.3174\n0.3191\n138\n253\n367\n482\nM04\nM06\nM08\nM07\nCells [thousands]\nMean CL · low-y+ cohort\nCompare both coefficients and the changed mesh controls.\nMesh / simulation\tWall family\tCells\tMean CD\tMean CL\tAveraging window [s]\nM02\tWall function\t66,707\t0.0243028\t0.2779325\t1.200–1.400\nM03\tWall function\t123,256\t0.0166227\t0.2969665\t1.516–1.716\nM04\tLow y+\t138,468\t0.0073077\t0.3179014\t1.442–1.642\nM05\tWall function\t182,527\t0.0132093\t0.2995693\t1.140–1.340\nM06\tLow y+\t251,605\t0.0073744\t0.3135789\t1.400–1.600\nM07\tLow y+\t481,635\t0.0074736\t0.3136295\t1.440–1.640\nM08\tLow y+\t254,989\t0.0075116\t0.3130286\t1.400–1.600\nPair comparisons within the historical low-y+ cohort\nTest / reference\tΔ CD\tΔ CL\tCoefficient test\nM04 / M06\t-0.9051%\t+1.3784%\tOutside 1%\nM04 / M07\t-2.2199%\t+1.3621%\tOutside 1%\nM06 / M07\t-1.3268%\t-0.0162%\tOutside 1%\nM08 / M07\t+0.5085%\t-0.1916%\tWithin 1%\n\nM06 has coarser wall-normal spacing than M08. It is a diagnostic comparison, not a finer confirmation of M08. A coefficient test by itself does not establish an accepted mesh.\n\nMatched second-order cohort · current work\nMesh / simulation\tState\tCells\tSettled mean CD\tSettled mean CL\tTime [s]\nM09\tLoading model\t214,908\t—\t—\t—\nM08\tQueued\t254,989\t—\t—\t—\nM07\tQueued\t481,635\t—\t—\t—\n\nSecond-order time, 1 ms, 10 inner iterations. Blank means indicate no accepted force result yet. Each result stops at its first passing pair of new-setting 0.2 s windows; compare residual drift before accepting a near-threshold mesh difference.\n\n05\nWhere the drag changes\n\nPressure and viscous contributions to the mean streamwise force.\n\nPressure\nViscous\nM02\n93.70\nM03\n64.09\nM04\n28.18\nM05\n50.93\nM06\n28.43\nM07\n28.82\nM08\n28.96\n0\n26\n52\n79\n105\nMean Fx on the 20 mm slice [N]\nMesh\tFx pressure [N]\tFx viscous [N]\tFx total [N]\tViscous share\nM02\t82.160\t11.542\t93.702\t12.3%\nM03\t53.112\t10.979\t64.090\t17.1%\nM04\t8.176\t20.000\t28.175\t71.0%\nM05\t38.937\t11.993\t50.930\t23.5%\nM06\t8.115\t20.317\t28.433\t71.5%\nM07\t8.072\t20.743\t28.815\t72.0%\nM08\t8.207\t20.754\t28.962\t71.7%\n\nFx total = pressure + viscous force. These are window means, not the instantaneous forces in the saved field images.\n\n06\nWhat changed in the mesh\n\nControls that differ between the low-y+ meshes; shared settings are stated once.\n\nControl\tM04\tM06\tM07\tM08\tM09\nFirst full layer [µm]\t3.000\t2.143\t1.531\t1.531\t1.531\nPrism layers\t40\t44\t48\t48\t48\nFoil target [mm]\t4.000\t2.857\t2.041\t2.857\t2.857\nFoil minimum [mm]\t0.400\t0.286\t0.204\t0.286\t0.286\nNear-foil size [mm]\t12.50\t8.93\t6.38\t8.93\t8.93\nFree-surface size [mm]\t40.00\t28.57\t20.41\t28.57\t28.57\nOuter base [mm]\t200.00\t142.86\t102.04\t142.86\t250.00\nFoil edges\t616\t856\t1,192\t856\t856\n\nShared: total prism thickness 15.46 mm; span 20 mm in one cell; unchanged foil geometry and incidence.\n\nM07 → M08: keep M07 first layer and 48 prisms; increase surface, near-foil and free-surface size targets by 40%. Foil edges: 1192 → 856.\n\nM08 → M09: keep surface, near-foil, free-surface and prism settings. Increase remote base from 142.86 to 250 mm; protect z = −3…3.2 m at 142.86 mm.\n\nMeasured near-wall resolution\nMesh\tArea-weighted y+ p95\tWall area with y+ < 1\tMaximum y+\tSaved field t [s]\nM04\t1.175\t55.66%\t293.9\t1.642\nM06\t0.846\t99.77%\t252.4\t1.600\nM08\t0.800\t99.88%\t253.6\t1.600\nM07\t0.800\t99.92%\t220.1\t1.640\n\nSmall trailing-edge regions have much larger y+ than the area-weighted p95. Low p95 alone does not prove uniform near-wall resolution.\n\n07\nComputational cost\n\nMeasured cost per physical step in the historical cohort.\n\n0.00\n0.77\n1.54\n2.31\n3.08\n67\n205\n343\n482\nM02\nM03\nM04\nM05\nM06\nM08\nM07\nCells [thousands]\nMedian computing time / step [s]\n\nOrange circles: wall-function meshes. Blue squares: low-y+ meshes. Δt = 1 ms and 20 inner iterations for this cohort. Timing includes the observed machine load; it is not a controlled hardware benchmark.\n\nM08 uses 47.1% fewer cells than M07; its recorded median step time is 1.491 s versus 2.461 s.\n\n08\nSaved pressure and streamlines\n\nAccepted saved fields, with their own physical timestamps.\n\nExpand figure\nM04 · t = 1.642 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\nExpand figure\nM07 · t = 1.640 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\nExpand figure\nM08 · t = 1.600 s · historical first-order accepted snapshot. Streamlines show instantaneous velocity; Cp subtracts nominal hydrostatic pressure ρg(2−z). Shared limits: speed 0–23 m/s and Cp −0.8…2.5.\n\nThese are instantaneous snapshots at each accepted stopping time, not time-averaged fields or particle trajectories. New second-order results will be shown as a separate cohort after acceptance.\n\n09\nWave programme\n\nPrimary cases first; controlled extensions follow the agreed checks.\n\nFixed foil · U = 18 m/s · submergence 2 m · water depth 24 m · head waves. FifthOrderVofWave defines the wave shape; second-order time integration is a separate solver setting.\n\nSequence\tHeight H [m]\tWavelength λ [m]\tPurpose\nC01\t0\t—\tMatched calm reference for each changed domain\nW01\t0.50\t20\tPrimary wave case · 4λ domain\nW01 domain check\t0.50\t20\t3λ versus 4λ sensitivity\nW02\t0.50\t30\tPrimary wavelength comparison · 4λ\nW03 / W04\t0.25 / 0.75\t20\tHeight sensitivity after primary cases\nW05 / W06\t0.25 / 0.75\t30\tHeight sensitivity after primary cases\nW07 / W08\t0.50\t10 / 40\tWavelength extension after primary cases\n\nPlanned work. First verify wave height, phase, reflection, encounter direction and time resolution. Average complete settled cycles, targeting 8–10 encounter periods. A finer free-surface mesh for low H requires a matched baseline. Horizontal domains follow the planned wavelength checks; vertical depth remains 24 m.\n\n10\nDiscussion and source records\n\nExact values remain available behind the presentation.\n\nQuestions supported by the current evidence\nDoes M09 retain CD and CL with two finer confirmations under the same solver configuration?\nHow much of the mesh sensitivity is pressure drag versus viscous drag?\nDoes the selected mesh retain force and free-surface accuracy when Δt is reduced for waves?\nSource records and exact evidence\nDownload evidence JSON\nPrint / save PDF\nOpen operational dashboard\nNTNU · Quasi-2D hydrofoil study · Snapshot 2026-10-29T22:00:35+01:00\nNumerical verification in progress. No experimental validation or full-span performance claim is made by these quasi-2D results.",
+    "anchorPositions": [
+      {
+        "id": "setup",
+        "top": 69.609375,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "lineage",
+        "top": 70,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "numerics",
+        "top": 70.140625,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "meshes",
+        "top": 70.140625,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "drag",
+        "top": 69.625,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "definitions",
+        "top": 70.296875,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "cost",
+        "top": 69.5625,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "fields",
+        "top": 69.90625,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "waves",
+        "top": 70.34375,
+        "navBottom": 56.140625
+      },
+      {
+        "id": "sources",
+        "top": 136.03125,
+        "navBottom": 56.140625
+      }
+    ],
+    "modal": {
+      "available": 1,
+      "open": true,
+      "escapeClosed": true,
+      "closeButtonWorks": true
+    },
+    "fieldWidths": [
+      {
+        "width": 1100,
+        "parentWidth": 346,
+        "parentScroll": 1100
+      },
+      {
+        "width": 1100,
+        "parentWidth": 346,
+        "parentScroll": 1100
+      },
+      {
+        "width": 1100,
+        "parentWidth": 346,
+        "parentScroll": 1100
+      }
+    ],
+    "errors": []
+  }
+]

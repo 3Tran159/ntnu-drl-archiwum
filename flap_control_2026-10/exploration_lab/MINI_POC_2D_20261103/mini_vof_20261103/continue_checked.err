@@ -1,0 +1,2 @@
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\run_mini_vof_continue_checked.py:8: SyntaxWarning: invalid escape sequence '\.'
+  ps="Get-CimInstance Win32_Process | Where-Object {$_.Name -eq 'starccm+.exe' -and $_.ExecutablePath -like '*21.02.007-R8*' -and $_.CommandLine -match 'NwarWave.java'} | ForEach-Object {$m=[regex]::Matches($_.CommandLine,'[A-Z]:[^\"\r\n]*?input\.sim');if($m.Count){$m[$m.Count-1].Value}}"

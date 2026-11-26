@@ -1,0 +1,52 @@
+{
+  "status": "FIRST_HARMONIC_MAP_DIAGNOSTIC",
+  "phase_reference": "Upstream gauge x=-3 m, crest at 0 degrees",
+  "period_s": 0.4555125731921526,
+  "dt_s": 0.0005,
+  "flap_amplitude_deg": 0.16623000770467758,
+  "phase_offset_deg": 125.89265164954459,
+  "delta_expression": "amplitude_deg * cos(wave_phase_rad + phase_offset_rad)",
+  "fixed_CL_mean": 0.3315416877500427,
+  "fixed_CL_first_harmonic": 0.0059155730569648455,
+  "active_end_s": 5.745499999999512,
+  "flap_gain_CL_per_deg": 0.03558667378199481,
+  "flap_gain_phase_deg": -6.00142179456045,
+  "fixed_CD_mean": 0.0041936940349271085,
+  "identification_CD_mean": 0.004251360113818749,
+  "mean_trim_included": false,
+  "closed_loop_or_map_test_done": false,
+  "fixed_gate": {
+    "passed": true,
+    "period_s": 0.4555125731921526,
+    "window_s": [
+      2.556,
+      3.922537719576458
+    ],
+    "gauges": {
+      "-3": {
+        "amplitude_error": 0.07379620264558195,
+        "phase_error_deg": 1.7686033894909468,
+        "complex_repeatability": 0.005713755570534915,
+        "pass_gate": true
+      },
+      "0.952": {
+        "amplitude_error": 0.042339396761900794,
+        "phase_error_deg": 4.580647432399705,
+        "complex_repeatability": 0.029461385416294776,
+        "pass_gate": true
+      }
+    },
+    "forces": {
+      "CL": {
+        "mean_relative": 0.0003173165755566911,
+        "fundamental_relative": 0.044109755281616266
+      },
+      "CD": {
+        "mean_relative": 0.00136526260070181,
+        "fundamental_relative": 0.024361054234657436
+      }
+    },
+    "fixed_checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\PHASE_MAP_WAVE_FIXED_20261106_105755\\FINAL.sim",
+    "fixed_checkpoint_sha256": "d3dacbf2fcd0200ab72fb25a9c4cb36dde74c2ec885a782982eda574f280398d"
+  }
+}

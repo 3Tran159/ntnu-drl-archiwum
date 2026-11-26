@@ -1,0 +1,170 @@
+# NTNU SCIENCE — NIGHT RUN AUTHORIZATION
+## MINI URANS–VOF ACTIVE FLAP | 03/04.11.2026
+
+Scooby, idę spać około 21:00. Chcę, żeby komputer przez noc wykonywał sensowną pracę badawczą bez konieczności mojego nadzoru.
+
+**Udzielam warunkowej zgody na poniższą, ograniczoną kampanię nocną.** Nie musisz pytać o zgodę na każdy kolejny etap, jeśli poprzedni przeszedł określone kontrole. Nie rozszerzaj jednak zakresu poza ten plan.
+
+## 1. PUNKT WYJŚCIA
+
+Mamy działający quasi-2D URANS–VOF w STAR-CCM+ 2606:
+
+- 41 280 komórek, jedna warstwa 20 mm.
+- Natywne First Order Wave.
+- U = 18 m/s.
+- λ = 10 m.
+- Testowa amplituda A = 0,05 m.
+- dt = 0,001 s.
+- Jeden rdzeń E, bez GPU.
+- 50 kroków ukończonych.
+- Średnio 2,23 s/krok po rozgrzaniu.
+- CFL interfejsu max = 0,158.
+- pABS,min = 101,14 kPa.
+- Checkpoint t = 0,050 s zweryfikowany.
+
+Nadal nierozwiązane:
+
+- Residual continuity do 0,0776 przy dotychczasowym limicie 0,01.
+- Brak weryfikacji pełnego okresu fali.
+- Brak aktywnego pochłaniania odbić.
+- Brak przebiegu z płatem.
+
+W04 zakończyło ostatni znany przebieg o 20:16. Sprawdź, czy nadal jest zatrzymane. Nie ingeruj w jego konfigurację.
+
+Zabezpiecz wszystkie istniejące checkpointy.
+
+## 2. ETAP N1 — POPRAWNA PROPAGACJA FALI
+
+Najwyższy priorytet.
+
+Doprowadź pusty zbiornik do poprawnej pracy z falą A = 0,05 m.
+
+- Skonfiguruj właściwe strefy tłumienia/pochłaniania fal bez zakłócania obszaru przyszłego płata.
+- Sprawdź rampę wejściową i granice domeny.
+- Zweryfikuj kierunek propagacji oraz częstotliwość spotkaniową dla U = 18 m/s.
+- Zastosuj sondy powierzchni swobodnej przed płatem, w jego przyszłym położeniu i dalej za nim.
+- Porównaj amplitudę, okres, przesunięcia fazowe i lokalną kinematykę z rozwiązaniem analitycznym.
+- Oceń odbicia i zachowanie bilansu masy.
+
+Nie utożsamiaj wzrostu residual continuity z automatyczną awarią, jeśli jest to przejściowe zachowanie nieustalonego VOF. Zbadaj residuale wewnątrz kroków, rzeczywisty bilans masy, ograniczenia numeryczne i ich trend. Nie obniżaj arbitralnie kryteriów PASS.
+
+Cel: co najmniej kilka pełnych okresów pozwalających ocenić propagację i stabilność okresową.
+
+Jeśli konieczna jest zmiana fizyki lub inicjalizacji, zachowaj wcześniejszy checkpoint i wykonaj nową, jednoznacznie oznaczoną próbę.
+
+**N1 musi uzyskać udokumentowany PASS, zanim przejdziesz dalej.**
+
+## 3. ETAP N2 — DOCZELOWA FALA A = 0,25 M
+
+Po PASS N1:
+
+- Przygotuj przypadek λ = 10 m, A = 0,25 m.
+- Zachowaj poprawną częstotliwość spotkaniową.
+- Zweryfikuj, czy pas zagęszczenia siatki obejmuje ruch interfejsu z odpowiednim zapasem.
+- Wykonaj kontrolę CFL, amplitudy, fazy, odbić, masy i pABS.
+- Sprawdź, czy First Order Wave jest wystarczającym przybliżeniem dla obecnego PoC, wyraźnie zaznaczając jego ograniczenia.
+
+Nie przyjmuj, że stabilność A = 0,05 m automatycznie przenosi się na A = 0,25 m.
+
+Jeśli A = 0,25 m nie przechodzi kontroli, zatrzymaj ten etap i zachowaj dane diagnostyczne. Nie obchodź limitów.
+
+## 4. ETAP N3 — FOIL WAVE/FIXED 0°
+
+Jeśli docelowa fala przejdzie PASS, uruchom pierwszy przypadek z płatem:
+
+- Quasi-2D, jedna warstwa.
+- Istniejąca siatka sealed foil około 44 442 komórek, po sprawdzeniu jej rzeczywistej jakości.
+- Zawias na głębokości 2 m.
+- Klapka nieruchoma, δ = 0°.
+- U = 18 m/s.
+- λ = 10 m, A = 0,25 m.
+- Natywne VOF Waves.
+
+Najpierw wykonaj krótki pilot i sprawdź:
+
+- Jakość siatki przy płacie i warstwy przyścienne.
+- y+ i rozdzielczość warstwy granicznej.
+- CFL, residuale i bilans masy.
+- Minimum ciśnienia absolutnego oraz jego lokalizację.
+- Rzeczywisty koszt kroku.
+- Rozdzielenie siły hydrodynamicznej i hydrostatycznego wyporu.
+
+Nie dopuść do długiego przebiegu, jeśli jakość siatki albo fizyka nie przeszły kontroli.
+
+Po PASS pilota kontynuuj do uzyskania kilku powtarzalnych okresów odpowiedzi sił. Odrzuć przejściowe cykle rozruchowe z analizy średnich.
+
+Zbieraj:
+
+- CL(t), CD(t).
+- Fx(t), Fz(t).
+- Mh(t).
+- pABS,min(t).
+- η(t) i fazę fali.
+- Residuals, CFL, masę.
+- Czas kroku i czas całkowity.
+
+Przygotuj nałożone wykresy kolejnych cykli i oblicz średnie, amplitudy oraz różnice między cyklami.
+
+To będzie nasza pierwsza trajektoria docelowego CFD do przyszłego surrogate.
+
+## 5. CZEGO NIE ROBIMY TEJ NOCY
+
+- Nie uruchamiaj WAVE/ACTIVE z ruchomą klapką. Jej kinematyka nie ma jeszcze PASS.
+- Nie trenuj DRL ani surrogate na niedojrzałych danych.
+- Nie wznawiaj dużego speed sweepu.
+- Nie ingeruj w W04.
+- Nie rozpoczynaj równoległych solverów bez sprawdzenia zasobów.
+- Nie rozpoczynaj nowej wielkiej kampanii siatek.
+- Nie poświęcaj godzin na losowe próby naprawy konfiguracji.
+
+Jeśli napotkasz powtarzający się problem, wykonaj maksymalnie dwie celowane próby naprawy. Potem HOLD i raport.
+
+## 6. AUTONOMIA, BEZPIECZEŃSTWO I KONIEC NOCY
+
+Obliczenia mają działać przez lokalny kontroler, bez konieczności aktywnego Work.
+
+Masz zgodę na sekwencję N1 → N2 → N3 wyłącznie pod warunkiem PASS poprzedniego etapu.
+
+Wymagania:
+
+- Checkpointy między etapami oraz podczas długiego przebiegu.
+- Automatyczny STOP przy błędach numerycznych, niewłaściwej jakości siatki, problemach z ciśnieniem, braku pamięci lub przestrzeni dyskowej.
+- Ochrona innych solverów i zasobów.
+- Brak nieskończonych restartów.
+- Zachowanie historii także dla FAILED/HOLD.
+- Zakończenie lub bezpieczne zapisanie i zatrzymanie obliczeń najpóźniej około 07:00 czasu Oslo.
+
+Jeżeli N1 albo N2 nie przejdzie, nie przechodź do następnych etapów. Nie musisz wykorzystywać całej nocy za wszelką cenę.
+
+## 7. RAPORT NA RANO
+
+Rano chcę zobaczyć krótki raport naukowy:
+
+1. Które etapy uzyskały PASS?
+2. Czy fala faktycznie odpowiada teorii Airy'ego?
+3. Jak wyglądają amplituda, częstotliwość, faza i odbicia?
+4. Czy mamy poprawne siły płata w rzeczywistej fali?
+5. Ile kosztuje jeden pełny cykl Mini-VOF z płatem?
+6. Czy model nadaje się do generowania danych dla surrogate?
+7. Co proponujesz jako następny eksperyment Active Flap?
+
+Przygotuj wykresy w czytelnym stylu MATLAB/Python, z rzeczywistych danych:
+
+- η(t) dla sond.
+- Porównanie z falą analityczną.
+- CL(t), CD(t), Mh(t), jeżeli N3 został ukończony.
+- Nałożone ostatnie cykle.
+- Historia CFL i pABS.
+- Krótka tabela wydajności.
+
+Nie generuj sztucznych danych ani poglądowych wykresów zamiast wyników solvera.
+
+## GŁÓWNY CEL NOCY
+
+**Uzyskać pierwszy wiarygodny, okresowy przebieg Mini-URANS–VOF z falą i nieruchomym płatem, który stanie się referencją WAVE/FIXED dla przyszłego WAVE/ACTIVE i dynamic surrogate.**
+
+Jeżeli nie uda się dojść do N3, pełna weryfikacja propagacji fali N1/N2 również będzie wartościowym wynikiem.
+
+Priorytetem jest poprawna fizyka i użyteczne dane, nie maksymalna liczba wykonanych kroków.
+
+Działaj autonomicznie w tych granicach. Nie potrzebuję kolejnych pytań przed snem.

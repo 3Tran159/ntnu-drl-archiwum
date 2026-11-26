@@ -1,0 +1,11 @@
+2.4 — Quasi-2D mesh and runtime screening
+A one-cell-thick, constant-section model was built in STAR-CCM+ 2602 Double. The verified 12% thickness and 2.5% camber were retained at chord 1.19 m and submergence 2 m. The 0.02 m span has symmetry boundaries; reference area is 0.0238 m². No physical rescaling was applied. This model excludes finite-span tip effects.
+
+Three meshes contain 37,411, 66,707 and 123,256 cells. All have one spanwise layer and zero negative-volume, unclosed or degenerated cells. Minimum quality is 0.149–0.188 and maximum skewness 46.7–52.6°. A conservative connectivity audit found at least 15 consecutive regular layers over 97.07%, 97.97% and 98.53% of the foil boundary, with deficits near the trailing edge.
+
+Fourteen pilot runs covered 0 and 18 m/s, timestep comparisons and CPU/GPU benchmarks. For 40 identical M03 steps at dt=0.5 ms, measured solver/reporting times were 107.9 s on 8 CPU processes, 75.2 s on 24, and 53.3 s on one GPU. GPU activation was verified. Longer GPU runs reached t=0.2 s at dt=1 ms in 172.3 s (M02) and 280.0 s (M03), excluding launch and final-save overhead.
+
+At t=0.2 s, M03 produced Fx=67.345 N and Fz=950.313 N on the slice: CD=0.017467, CL=0.246476 including buoyancy, or 0.240584 after subtracting nominal buoyancy. Area-mean y+=44.93, range 4.64–255.17. M02 CD=0.028035, 60.5% above M03; M03 CL still rose 3.87% from t=0.16 to 0.20 s. These first-order startup results are not converged or mesh-independent.
+
+Next: investigate drag sensitivity near the leading edge, establish force settling and timestep sensitivity, and check hydrostatic interface noise before adding waves. Histories, mesh images, CFL diagnostics and timing are in the HTML dashboard. The bounded working restart is F:\ntnu\Q2D_012_20261029.sim; original CAD and baseline SIM hashes remain unchanged.
+

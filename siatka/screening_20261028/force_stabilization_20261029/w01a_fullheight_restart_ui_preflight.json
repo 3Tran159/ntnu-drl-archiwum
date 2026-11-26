@@ -1,0 +1,27 @@
+{
+  "status": "PASS_UI_PREFLIGHT_NOT_LAUNCH",
+  "at": "2026-10-30T12:28:13.024924+01:00",
+  "case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "loading_and_first_step_labels_pass": true,
+  "old_trial_series_or_field_binding_absent": true,
+  "no_height_ramp_or_ramp_eta": true,
+  "numerical_startup_declared": {
+    "dt_s": 0.0005,
+    "inner": 50,
+    "steps": 40,
+    "full_height_wave_from_first_step": true
+  },
+  "analysis_origin_display_test": {
+    "origin_s": 10,
+    "complete_cycles": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "partial_start_s": 14,
+    "legacy_origin0_unchanged": true
+  },
+  "solver_actions": 0,
+  "actual_flow_validation": false
+}

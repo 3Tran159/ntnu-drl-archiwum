@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-03T05:14:04.854628+01:00",
+  "macro": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\macros\\B0URANSTopDirection.java",
+  "macro_sha256": "7a920c12970b99369f19f8428b8bbb7e332ca0969ca9305c4ab746075cafed20",
+  "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+  "source_sha256": "5f9a86e51f8eb96cc1adb0fd36a61ae48e015600512598517b6ec2f6c9190ff1",
+  "source_time_s": 0.3,
+  "source_native_iteration": 2250,
+  "compiled": true,
+  "registered": false,
+  "launched": false,
+  "requires": "Positive Work review of current C top-direction diagnostic and explicit local stage decision before queue registration",
+  "changes": "Matched B0 continuation from original savedt0.3s,native2250. Changes:top backflow BOUNDARY_NORMAL to EXTRAPOLATED;inner iterations15to40 to match C. Preserve original256750-cell fixed mesh,physical geometry,URF0.8/0.2,dt0.002s,SECOND_ORDER time/momentum/SST,environmental pressure/scalars,downstream and all saved fields/history. No initialization/reset/remesh. Overset not present; zero error counter means not applicable. Minimum100/maximum250steps. C0 scientific gate remains closed until Work reviews both solutions.",
+  "macro_text_lf_sha256": "ed3dea38359b72a677abffbc0ce923c1b0f69c8ba2c5b9e73d6d1bc962d4d2c8",
+  "fingerprint_note": "Windows write_text translated LF to CRLF; registration compares actual file bytes. Normalized text SHA matches originally compiled source exactly. No macro content/physics changed."
+}

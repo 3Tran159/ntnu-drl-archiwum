@@ -1,0 +1,97 @@
+{
+  "operation": "PRODUCTION_FIXED",
+  "owner": 17968,
+  "case": "DT05_I12",
+  "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_180821\\FINAL.sim",
+  "time_s": 0.5787999999999689,
+  "results": {
+    "REF": {
+      "full_s_per_step": 4.3649148613214495,
+      "wall_s_per_physical_s": 21824.574306607246,
+      "solver_s_per_step": 1.7270439,
+      "sample_count": 80,
+      "max_interface_cfl": 0.12720601149499203,
+      "max_cfl": 2.971774941825255,
+      "max_mass_relative": 5.688069310290159e-07,
+      "min_pabs_pa": 32686.33943962732,
+      "min_flap_pabs_pa": 80364.40861554937,
+      "output": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_QUAL_REF_20261105_185058",
+      "dt_s": 0.0002,
+      "inner": 20,
+      "status": "PASS",
+      "source_sha256": "e98cad7ce062353d68d0052f71d16726808b7f759b9767574df145fc43647b9d"
+    },
+    "DT04": {
+      "full_s_per_step": 4.3858521521091465,
+      "wall_s_per_physical_s": 10964.630380272865,
+      "solver_s_per_step": 1.7374796,
+      "sample_count": 40,
+      "max_interface_cfl": 0.2544120227787757,
+      "max_cfl": 5.943548608380652,
+      "max_mass_relative": 1.1378244458509428e-06,
+      "min_pabs_pa": 32686.337416600043,
+      "min_flap_pabs_pa": 80364.42100993206,
+      "output": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_QUAL_DT04_20261105_185943",
+      "dt_s": 0.0004,
+      "inner": 20,
+      "status": "PASS",
+      "source_sha256": "e98cad7ce062353d68d0052f71d16726808b7f759b9767574df145fc43647b9d",
+      "differences": {
+        "CL": 8.366612793265796e-06,
+        "CD": 1.3180792065009503e-05,
+        "Mh": 1.0269831609024649e-05,
+        "pflap_max_pa": 0.1893444169400027,
+        "pABSmin_Pa_max_pa": 0.16618406865745783
+      }
+    },
+    "DT04_I12": {
+      "full_s_per_step": 3.789091980457306,
+      "wall_s_per_physical_s": 9472.729951143265,
+      "solver_s_per_step": 1.0934429,
+      "sample_count": 40,
+      "max_interface_cfl": 0.2544120227739311,
+      "max_cfl": 5.943548690270667,
+      "max_mass_relative": 1.1386698886668926e-06,
+      "min_pabs_pa": 32686.34555547897,
+      "min_flap_pabs_pa": 80364.42084284671,
+      "output": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_QUAL_DT04_I12_20261105_190530",
+      "dt_s": 0.0004,
+      "inner": 12,
+      "status": "PASS",
+      "source_sha256": "e98cad7ce062353d68d0052f71d16726808b7f759b9767574df145fc43647b9d",
+      "differences": {
+        "CL": 1.3787226829457812e-05,
+        "CD": 1.9657035947241245e-05,
+        "Mh": 1.7717712371705394e-05,
+        "pflap_max_pa": 0.17618698941078037,
+        "pABSmin_Pa_max_pa": 0.18101941468194127
+      }
+    },
+    "DT05_I12": {
+      "full_s_per_step": 3.6964374035596848,
+      "wall_s_per_physical_s": 7392.8748071193695,
+      "solver_s_per_step": 1.0910321,
+      "sample_count": 32,
+      "max_interface_cfl": 0.31801502833029355,
+      "max_cfl": 7.429435207104223,
+      "max_mass_relative": 1.4237884381302165e-06,
+      "min_pabs_pa": 32686.3347620063,
+      "min_flap_pabs_pa": 80364.40941439866,
+      "output": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_QUAL_DT05_I12_20261105_191054",
+      "dt_s": 0.0005,
+      "inner": 12,
+      "status": "PASS",
+      "source_sha256": "e98cad7ce062353d68d0052f71d16726808b7f759b9767574df145fc43647b9d",
+      "differences": {
+        "CL": 1.9394018201915497e-05,
+        "CD": 2.8391926121301782e-05,
+        "Mh": 2.4956417959163525e-05,
+        "pflap_max_pa": 0.24204021073819604,
+        "pABSmin_Pa_max_pa": 0.2625808198499726
+      }
+    }
+  },
+  "winner": "DT05_I12",
+  "selected_for_production": false,
+  "wave_recheck_required": true
+}

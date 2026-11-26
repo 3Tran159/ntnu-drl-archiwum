@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-03T12:00:19.107667+01:00",
+  "approved_by_user": true,
+  "experiment_id": "INLET_PRESSURE_RECOVERY_20261103",
+  "previous_blocked_job": "BOUNDED_FIXED_PLUS2_SWEEP_20261103_RUN",
+  "previous_case_remains_failed": true,
+  "approved_job_ids": [
+    "INLET_PRESSURE_RECOVERY_20261103_TEST"
+  ],
+  "source": "Explicit user INLET PRESSURE FAILURE ROOT CAUSE AND RECOVERY: at most one short corrective test after evidence-based audit",
+  "scope": "50 physical steps from good C0 t0.690, delta0; C2 slowing of existing quintic; dt0.002,50inner,8CPU,noGPU; no automatic campaign continuation",
+  "root_cause_evidence": "F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\INLET_PRESSURE_AUDIT_20261103\\FIELD_AUDIT.json",
+  "safety_thresholds_unchanged": true,
+  "pressure_global_included": true,
+  "job": {
+    "id": "INLET_PRESSURE_RECOVERY_20261103_TEST",
+    "kind": "pressure_recovery",
+    "experiment_id": "INLET_PRESSURE_RECOVERY_20261103",
+    "approved": true,
+    "macro": "InletPressureRecovery.java",
+    "macro_sha256": "e3ee408cfe1de65554349987ebcccd645b890f87865152144a71d6c637016aa0",
+    "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\BOUNDED_FIXED_PLUS2_SWEEP_20261103\\approved_C0_t0690.sim",
+    "input_sha256": "7d140c9523f1e2eeb34875013d65424845def7d474df5a8b3562693b36e43d41",
+    "initial_time_s": 0.6900000000000005,
+    "cpu_processes": 8,
+    "angle_deg": 0,
+    "max_steps": 50,
+    "runtime_properties_sha256": "5e2e97b350d0e389c27163a87691e60a2e1cf7418cadbae5052b365608af782d",
+    "progress_timeout_s": 900,
+    "maximum_runtime_s": 3600,
+    "runtime_guards": {
+      "minimum_absolute_pressure_Pa": 12339.214766776897,
+      "maximum_mass_imbalance_relative": 0.0001,
+      "maximum_omega_floor_cells": 0,
+      "maximum_k_floor_cells": 0,
+      "maximum_overset_error_cells": 0,
+      "maximum_turbulent_viscosity_ratio": 99999
+    }
+  }
+}

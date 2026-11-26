@@ -1,0 +1,32 @@
+{
+  "stage": "XFOIL_CAL_CALM_U18_STABILIZE_RESUME_R1",
+  "solver_state": "STOPPED",
+  "operation": "PASS_CALM_FORCE_STABILIZATION",
+  "output": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_STABILIZE_RESUME_R1_20261109_195743",
+  "result": {
+    "status": "PASS_CALM_FORCE_STABILIZATION",
+    "samples": 2800,
+    "startup_s": 143.0427236999967,
+    "solver_step_median_s": 1.1255529,
+    "solver_step_mean_s": 1.3212353031842576,
+    "end_to_end_s": 5126.30597679998,
+    "dt_s": 0.0005,
+    "checkpoint_sha256_input": "d0ca7661f35762a8ee8fa71a822784853a9cae1f73c455eae5525521bfb94f92",
+    "checkpoint": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_STABILIZE_RESUME_R1_20261109_195743\\FINAL.sim",
+    "checkpoint_sha256": "a7756df90289c645b6b60cbb524c083efa3b49b8706e063b20efb2c5b69b800a",
+    "state": {
+      "status": "PASS_CALM_FORCE_STABILIZATION",
+      "amplitude_target": 0.0,
+      "training_approved": false,
+      "reason": "",
+      "residual_pass": true,
+      "solver_seconds": 3703.4960924,
+      "time_s": 3.400000000000303,
+      "steps": 2800,
+      "foil": true
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "at": "2026-11-09T21:23:10.554855+01:00"
+}

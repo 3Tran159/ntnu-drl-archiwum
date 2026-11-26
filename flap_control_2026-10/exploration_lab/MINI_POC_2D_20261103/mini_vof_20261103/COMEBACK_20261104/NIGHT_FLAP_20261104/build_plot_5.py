@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path(__file__).with_name("plot_completed_gap.py")
+s=p.read_text()
+s=s.replace('out=root/"NIGHT_FLAP_20261104/GAP_PLUS_MINUS_2"','out=root/"NIGHT_FLAP_20261104"')
+s=s.replace('root/"SHARP_SEALED_CYCLE_RESUME_1P064S/single_phase_combined.csv"','out/"SHARP_SEALED_PLUS_MINUS_5/cycle_full_available.csv"')
+s=s.replace('out/"cycle_full_available.csv",1.0,"2.5 mm gap"','out/"GAP_PLUS_MINUS_5_DT020_RESUME/cycle_full_available.csv",1.0,"2.5 mm gap | partial, dt 0.25 → 0.20 ms"')
+s=s.replace('1.05,"Sharp sealed"','1.05,"Sharp sealed | dt 0.25 ms"')
+s=s.replace('Complete ±2° cycle | 18 m/s | matched outer mesh','±5° target cycle | 18 m/s | matched outer mesh')
+s=s.replace('complete_cycle_time_EN.png','plus_minus_5_cycle_time_EN.png').replace('complete_cycle_CL_CD_vs_deflection_EN.png','plus_minus_5_CL_CD_vs_deflection_EN.png')
+p.with_name("plot_plus_minus_5.py").write_text(s)

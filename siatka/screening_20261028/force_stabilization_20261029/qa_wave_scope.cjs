@@ -1,0 +1,10 @@
+const fs=require('fs'),assert=require('assert');
+const {chromium}=require('C:/Users/ThinkPad/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const R='F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/';
+(async()=>{const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true}),out=[];
+for(const width of [1360,390]){const p=await b.newPage({viewport:{width,height:1100}}),errors=[];p.on('pageerror',e=>errors.push(String(e)));await p.goto('file:///F:/ntnu/mesh_screening_20261028/dashboard.html');await p.locator('#refreshToggle').click();
+await p.addStyleTag({content:'html{scroll-behavior:auto!important}'});await p.evaluate(async()=>{document.querySelectorAll('img').forEach(i=>i.loading='eager');await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));await document.fonts.ready;});await p.locator('#wave-campaign-plan').scrollIntoViewIfNeeded();await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));await p.locator('#wave-campaign-plan').screenshot({path:R+'wave_scope_'+width+'.png',animations:'disabled'});
+const x=await p.evaluate(()=>({text:document.querySelector('#wave-campaign-plan').innerText,rows:document.querySelectorAll('#wave-campaign-plan tbody tr').length,overflow:document.documentElement.scrollWidth>innerWidth+1,scope:JSON.parse(document.querySelector('#evidence').textContent).wave_scope}));
+assert.equal(x.rows,8);assert(x.text.includes('24 m water depth'));assert(x.text.includes('FifthOrderVofWave'));assert(!x.text.includes('16 m'));assert(!x.overflow);assert(!errors.length);assert(x.scope.cases.every(c=>c.depth_m===24&&c.wave_model==='FifthOrderVofWave'));
+out.push({width,errors,overflow:x.overflow,plannedRows:x.rows,depth24:true,fifthOrderWaves:true});await p.close();}
+await b.close();fs.writeFileSync(R+'wave_scope_qa.json',JSON.stringify(out,null,2));console.log(JSON.stringify(out));})().catch(e=>{console.error(e);process.exitCode=1});

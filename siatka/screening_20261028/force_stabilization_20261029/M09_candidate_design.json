@@ -1,0 +1,21 @@
+{
+  "id": "M09",
+  "status": "cpu_build_in_progress",
+  "base_reference": "Accepted M08; M08/M07 agreement passes both 1% coefficient limits",
+  "change": "Outer base0.142857m to0.25m; add middle-domain protection atold0.142857m acrossx[-11.9,30.94],z[-3,3.2]. Existing finer foil andFScontrols remain.",
+  "preserved": {
+    "foil_target_m": 0.0028571428571428576,
+    "foil_min_m": 0.00028571428571428574,
+    "global_min_m": 0.0003571428571428572,
+    "near_foil_m": 0.00892857142857143,
+    "free_surface_m": 0.028571428571428574,
+    "first_layer_m": 1.5306122448979595e-06,
+    "layers": 48,
+    "total_prism_m": 0.01546,
+    "domain": "unchanged",
+    "surface_growth": 1.2
+  },
+  "admission": "Reaudit source geometry,exactspan,layercoverage,zero invalidcells, transitions; then same force screen and1%comparison. Final time/order settings must match.",
+  "controller": "build_optimized_m09.py",
+  "comparison_evidence": "M08_M07_comparison.json"
+}

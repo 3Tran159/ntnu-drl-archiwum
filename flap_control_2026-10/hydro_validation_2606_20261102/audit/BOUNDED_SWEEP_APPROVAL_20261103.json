@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-03T11:35:52.432423+01:00",
+  "approved_by_user": true,
+  "experiment_id": "BOUNDED_FIXED_PLUS2_SWEEP_20261103",
+  "previous_blocked_job": "SPEED_SWEEP_PLUS2_20261103_SMOKE",
+  "previous_case_remains_failed": true,
+  "approved_job_ids": [
+    "BOUNDED_FIXED_PLUS2_SWEEP_20261103_RUN"
+  ],
+  "source": "Explicit current user NTNU CFD CONTINUE TO FIXED-FLAP VELOCITY SWEEP: authorize prepare and launch bounded staged campaign without further per-stage questions",
+  "scope": "C0t0.690 no reset; same18to10 law; settleC0at10; smooth0to+2 at10; settle; fixed+2 U10/12/14/16/18; 8CPU noGPU dt0.002; no5deg/waves/DRL",
+  "inner_iterations": 50,
+  "residual_threshold": 0.01,
+  "residual_nonpass_policy": "Diagnostic samples only; no static point or subsequent measurement stage until force/residual stabilization passes. No reclassification of old omega test.",
+  "safety_thresholds_unchanged": true,
+  "retention": "Only newly generated periodic recovery files: keep two after new SHA-verified save; preserve source, old checkpoints, stable+2U10 anchor and final result.",
+  "source_checkpoint": "F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\C0_speed_down_20261103\\run_20261103_111057\\checkpoint.sim",
+  "source_sha256": "7d140c9523f1e2eeb34875013d65424845def7d474df5a8b3562693b36e43d41",
+  "macro_sha256": "1e31558831056ba4cd2bef3cc49113c987229e50d2e495a20926ceb70ca80db2",
+  "job": {
+    "id": "BOUNDED_FIXED_PLUS2_SWEEP_20261103_RUN",
+    "kind": "bounded_sweep",
+    "experiment_id": "BOUNDED_FIXED_PLUS2_SWEEP_20261103",
+    "approved": true,
+    "macro": "BoundedFixedFlapSweep.java",
+    "macro_sha256": "1e31558831056ba4cd2bef3cc49113c987229e50d2e495a20926ceb70ca80db2",
+    "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\BOUNDED_FIXED_PLUS2_SWEEP_20261103\\approved_C0_t0690.sim",
+    "input_sha256": "7d140c9523f1e2eeb34875013d65424845def7d474df5a8b3562693b36e43d41",
+    "initial_time_s": 0.6900000000000005,
+    "cpu_processes": 8,
+    "angles_deg": [
+      0,
+      2
+    ],
+    "speeds_m_s": [
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "runtime_properties_sha256": "5e2e97b350d0e389c27163a87691e60a2e1cf7418cadbae5052b365608af782d",
+    "progress_timeout_s": 900,
+    "maximum_runtime_s": 86400,
+    "runtime_guards": {
+      "minimum_absolute_pressure_Pa": 12339.214766776897,
+      "maximum_mass_imbalance_relative": 0.0001,
+      "maximum_omega_floor_cells": 0,
+      "maximum_k_floor_cells": 0,
+      "maximum_overset_error_cells": 0,
+      "maximum_turbulent_viscosity_ratio": 99999
+    }
+  }
+}

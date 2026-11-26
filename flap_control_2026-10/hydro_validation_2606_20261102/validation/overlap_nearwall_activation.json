@@ -1,0 +1,293 @@
+{
+  "coordinate_caution": "Distances use full-plane sample coordinates, not exact volume-cell centroids; for interface-location comparison only. Same native foil polygon. x[.74,.91] excludes hinge gap.",
+  "cases": {
+    "control": {
+      "Background": {
+        "acceptors_near_profile": 318,
+        "acceptor_distance_quantiles_m": {
+          "0.0": 0.00024688749869606784,
+          "0.1": 0.0004665661796204774,
+          "0.5": 0.006610242283624338,
+          "0.9": 0.012289206843146787,
+          "1.0": 0.014350227781210914
+        },
+        "active_cells_by_distance_band": [
+          {
+            "lo_m": 0,
+            "hi_m": 0.0001,
+            "cells": 2360
+          },
+          {
+            "lo_m": 0.0001,
+            "hi_m": 0.0005,
+            "cells": 1432
+          },
+          {
+            "lo_m": 0.0005,
+            "hi_m": 0.001,
+            "cells": 500
+          },
+          {
+            "lo_m": 0.001,
+            "hi_m": 0.002,
+            "cells": 601
+          },
+          {
+            "lo_m": 0.002,
+            "hi_m": 0.005,
+            "cells": 629
+          },
+          {
+            "lo_m": 0.005,
+            "hi_m": 0.01,
+            "cells": 272
+          },
+          {
+            "lo_m": 0.01,
+            "hi_m": 0.02,
+            "cells": 29
+          }
+        ]
+      },
+      "FlapOverset": {
+        "acceptors_near_profile": 92,
+        "acceptor_distance_quantiles_m": {
+          "0.0": 2.0944464130017657e-05,
+          "0.1": 0.0001269198321683399,
+          "0.5": 0.0007113868059384636,
+          "0.9": 0.005822941096335534,
+          "1.0": 0.008750788495541376
+        },
+        "active_cells_by_distance_band": [
+          {
+            "lo_m": 0,
+            "hi_m": 0.0001,
+            "cells": 0
+          },
+          {
+            "lo_m": 0.0001,
+            "hi_m": 0.0005,
+            "cells": 8
+          },
+          {
+            "lo_m": 0.0005,
+            "hi_m": 0.001,
+            "cells": 36
+          },
+          {
+            "lo_m": 0.001,
+            "hi_m": 0.002,
+            "cells": 60
+          },
+          {
+            "lo_m": 0.002,
+            "hi_m": 0.005,
+            "cells": 166
+          },
+          {
+            "lo_m": 0.005,
+            "hi_m": 0.01,
+            "cells": 116
+          },
+          {
+            "lo_m": 0.01,
+            "hi_m": 0.02,
+            "cells": 106
+          }
+        ]
+      }
+    },
+    "overlap1mm": {
+      "Background": {
+        "acceptors_near_profile": 384,
+        "acceptor_distance_quantiles_m": {
+          "0.0": 0.00024685515859471276,
+          "0.1": 0.0005462550642463034,
+          "0.5": 0.0011934468920259682,
+          "0.9": 0.0016325997170611461,
+          "1.0": 0.0019082443973247973
+        },
+        "active_cells_by_distance_band": [
+          {
+            "lo_m": 0,
+            "hi_m": 0.0001,
+            "cells": 2360
+          },
+          {
+            "lo_m": 0.0001,
+            "hi_m": 0.0005,
+            "cells": 1435
+          },
+          {
+            "lo_m": 0.0005,
+            "hi_m": 0.001,
+            "cells": 436
+          },
+          {
+            "lo_m": 0.001,
+            "hi_m": 0.002,
+            "cells": 132
+          },
+          {
+            "lo_m": 0.002,
+            "hi_m": 0.005,
+            "cells": 0
+          },
+          {
+            "lo_m": 0.005,
+            "hi_m": 0.01,
+            "cells": 0
+          },
+          {
+            "lo_m": 0.01,
+            "hi_m": 0.02,
+            "cells": 0
+          }
+        ]
+      },
+      "FlapOverset": {
+        "acceptors_near_profile": 427,
+        "acceptor_distance_quantiles_m": {
+          "0.0": 1.882766431532839e-05,
+          "0.1": 0.0001200561640966594,
+          "0.5": 0.0005092394873310583,
+          "0.9": 0.000963594413925013,
+          "1.0": 0.00121048936618132
+        },
+        "active_cells_by_distance_band": [
+          {
+            "lo_m": 0,
+            "hi_m": 0.0001,
+            "cells": 0
+          },
+          {
+            "lo_m": 0.0001,
+            "hi_m": 0.0005,
+            "cells": 5
+          },
+          {
+            "lo_m": 0.0005,
+            "hi_m": 0.001,
+            "cells": 56
+          },
+          {
+            "lo_m": 0.001,
+            "hi_m": 0.002,
+            "cells": 412
+          },
+          {
+            "lo_m": 0.002,
+            "hi_m": 0.005,
+            "cells": 1279
+          },
+          {
+            "lo_m": 0.005,
+            "hi_m": 0.01,
+            "cells": 2019
+          },
+          {
+            "lo_m": 0.01,
+            "hi_m": 0.02,
+            "cells": 3938
+          }
+        ]
+      }
+    },
+    "patch05mm": {
+      "Background": {
+        "acceptors_near_profile": 394,
+        "acceptor_distance_quantiles_m": {
+          "0.0": 0.00017868835239538407,
+          "0.1": 0.0004665661781887813,
+          "0.5": 0.0010228021966059118,
+          "0.9": 0.0016325236322816258,
+          "1.0": 0.0019082444294179282
+        },
+        "active_cells_by_distance_band": [
+          {
+            "lo_m": 0,
+            "hi_m": 0.0001,
+            "cells": 2360
+          },
+          {
+            "lo_m": 0.0001,
+            "hi_m": 0.0005,
+            "cells": 1416
+          },
+          {
+            "lo_m": 0.0005,
+            "hi_m": 0.001,
+            "cells": 419
+          },
+          {
+            "lo_m": 0.001,
+            "hi_m": 0.002,
+            "cells": 119
+          },
+          {
+            "lo_m": 0.002,
+            "hi_m": 0.005,
+            "cells": 0
+          },
+          {
+            "lo_m": 0.005,
+            "hi_m": 0.01,
+            "cells": 0
+          },
+          {
+            "lo_m": 0.01,
+            "hi_m": 0.02,
+            "cells": 0
+          }
+        ]
+      },
+      "FlapOverset": {
+        "acceptors_near_profile": 442,
+        "acceptor_distance_quantiles_m": {
+          "0.0": 2.1368676542444838e-05,
+          "0.1": 0.00010210332517659323,
+          "0.5": 0.0004690036427216623,
+          "0.9": 0.0009544209245097859,
+          "1.0": 0.001294440152124738
+        },
+        "active_cells_by_distance_band": [
+          {
+            "lo_m": 0,
+            "hi_m": 0.0001,
+            "cells": 0
+          },
+          {
+            "lo_m": 0.0001,
+            "hi_m": 0.0005,
+            "cells": 18
+          },
+          {
+            "lo_m": 0.0005,
+            "hi_m": 0.001,
+            "cells": 99
+          },
+          {
+            "lo_m": 0.001,
+            "hi_m": 0.002,
+            "cells": 475
+          },
+          {
+            "lo_m": 0.002,
+            "hi_m": 0.005,
+            "cells": 1479
+          },
+          {
+            "lo_m": 0.005,
+            "hi_m": 0.01,
+            "cells": 2310
+          },
+          {
+            "lo_m": 0.01,
+            "hi_m": 0.02,
+            "cells": 3904
+          }
+        ]
+      }
+    }
+  }
+}

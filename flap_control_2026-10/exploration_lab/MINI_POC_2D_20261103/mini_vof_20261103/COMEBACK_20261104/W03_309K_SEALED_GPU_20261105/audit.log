@@ -1,0 +1,51 @@
+Starting local server: starserver.bat -readonly -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XFcwM18zMDlLX1NFQUxFRF9HUFVfMjAyNjExMDVcVzAzXzMwOUtfT1JJR0lOQUxfQ09QWS5zaW0=
+Serial process 2360
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+Thu Nov  5 21:50:33 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\W03_309K_ORIGINAL_COPY.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.1.151
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Loading module: StarSweptMesher
+Loading module: CaeIOCgns
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=1 
+Warning: The requested SolutionHistory file does not exist, F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\HF_foil.simh
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\AuditW03Copy.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\AuditW03Copy.java:24: error: incompatible types: star.common.Model cannot be converted to star.common.PhysicsModel
+   for(PhysicsModel m:reg.getPhysicsContinuum().getModelManager().getObjects())lines.add("model="+m.getClass().getSimpleName());
+                                                                            ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\AuditW03Copy.java:31: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+   XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);
+                                           ^
+
+error: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\AuditW03Copy.java:24: error: incompatible types: star.common.Model cannot be converted to star.common.PhysicsModel
+   for(PhysicsModel m:reg.getPhysicsContinuum().getModelManager().getObjects())lines.add("model="+m.getClass().getSimpleName());
+                                                                            ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\W03_309K_SEALED_GPU_20261105\AuditW03Copy.java:31: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+   XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);
+                                           ^
+
+Action not allowed in read-only mode (AutoSaveBatch).
+To make changes open in read-write mode.
+Command: AutoSaveBatch
+   error: Server Error
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

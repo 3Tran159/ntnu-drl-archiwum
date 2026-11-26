@@ -1,0 +1,91 @@
+{
+  "updated_at": "2026-10-30T00:31:37.881Z",
+  "scope": "Bounded dashboard UI update only: native R10/R11 numerical lineage and prepared M10 free-surface mesh/inputs",
+  "status": "passed",
+  "qa_file": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_dashboard_qa.json",
+  "qa_script": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/qa_m10_native_lineage_ui.cjs",
+  "viewports": [
+    1920,
+    1360,
+    390
+  ],
+  "dashboards": [
+    "F:/ntnu/mesh_screening_20261028/dashboard.html",
+    "F:/ntnu/mesh_screening_20261028/professor_dashboard.html"
+  ],
+  "checks": {
+    "all_six_views_pass": true,
+    "js_errors": 0,
+    "page_overflow": false,
+    "duplicate_ids": false,
+    "m10_mobile_all_columns_visible": true,
+    "header_collisions": false,
+    "pdf_intentional_pages": 19,
+    "pdf_actual_pages": 19,
+    "print_pages_17_18_visually_checked": true,
+    "print_orphans_or_clipping": false
+  },
+  "pdf": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_qa.pdf",
+  "visual_review": [
+    "Desktop/projector diagnostic table has distinct rows for R6/R8/R10/R11; native absolute and legacy signed budget definitions retained.",
+    "M10 table fits all three columns on 390 px; long headings wrap, no overlap. Wider diagnostic table has an explicit horizontal-scroll hint.",
+    "Print page 17 retains planned wave cases and current R11 status. Page 18 contains the compact diagnostic table and measured M10 geometry with clear margins; all 19 pages intentional."
+  ],
+  "science_display": {
+    "calm_M09": "Supported calm template preserved; no wave acceptance implied.",
+    "R10": "Reporting equivalence recorded; both original 0.01% checks not met. Native absolute peak and native signed equivalence are distinguished.",
+    "R11": "Active during QA; final metrics pending. Parent partial exceedance record is intentionally not promoted to a final result. Dynamic renderer reads final review when present.",
+    "M10": "282379-cell short mesh; 317277-cell extension preserving source cells; both C01/W01 inputs prepared with zero flow steps. No flow admission.",
+    "live_times": [
+      {
+        "dashboard": "main",
+        "width": 1920,
+        "time": "Saved physical time\n0.680 s"
+      },
+      {
+        "dashboard": "main",
+        "width": 1360,
+        "time": "Saved physical time\n0.680 s"
+      },
+      {
+        "dashboard": "main",
+        "width": 390,
+        "time": "Saved physical time\n0.680 s"
+      },
+      {
+        "dashboard": "professor",
+        "width": 1920,
+        "time": "Saved physical time\n0.680 s"
+      },
+      {
+        "dashboard": "professor",
+        "width": 1360,
+        "time": "Saved physical time\n0.680 s"
+      },
+      {
+        "dashboard": "professor",
+        "width": 390,
+        "time": "Saved physical time\n0.680 s"
+      }
+    ]
+  },
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py"
+  ],
+  "runtime_or_science_files_modified": false,
+  "screenshots": [
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1920_diagnostics.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1920_m10.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1360_diagnostics.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1360_m10.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_390_diagnostics.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_390_m10.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1920_diagnostics.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1920_m10.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1360_diagnostics.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1360_m10.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_390_diagnostics.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_390_m10.png"
+  ]
+}

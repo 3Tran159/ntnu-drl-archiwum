@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-10-30T13:09:20.423216+01:00",
+  "status": "matched_C01_settling_then_full_height_inlet",
+  "user_instruction": "First settle matched C01, preserve computed reusable checkpoint, then introduce full prescribed inlet wave without height ramp",
+  "candidate": "W01a",
+  "initial_stage": "C01 calm force settling",
+  "wave_stage": "inlet_generated_FifthOrder_constant_full_height_from_activation",
+  "do_not_initialize_full_domain_with_wave": true,
+  "apply_to_all_later_waves_only_after_candidate_passes": true,
+  "acceptance": "Physical/source/resource guards pass and complete arrived-wave cycles repeat; calm settling alone does not validate wave startup.",
+  "wave_clock": "Activation and measured sustained arrival recorded separately; exclude pre-arrival samples from cycle screen",
+  "halfdt_r3": "prepared_only_not_launched_latest_user_prioritizes_new_inlet_startup",
+  "formal_force_accuracy_admitted": false,
+  "require_calm_force_settling": true,
+  "reason": "Latest user policy supersedes fresh-t0 simultaneous wave startup",
+  "immediate_wave_authorization": null,
+  "candidate_case": "C01_W20L4_M10_calm_settle_r2",
+  "height_ramp_required": false,
+  "height_ramp_duration_s": 0,
+  "latest_user_authorization": "User requests reusable settled C01 and standalone dashboard control"
+}

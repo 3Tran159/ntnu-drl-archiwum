@@ -1,0 +1,99 @@
+{
+  "at": "2026-11-03T02:15:13.068120+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_cold_20261103_021037",
+  "scientific_approved": false,
+  "geometry_caution": "Inside cell-centroid test, not full polyhedron intersection; polygon/tessellation micrometre differences reported without silently treating them as exact geometry.",
+  "regions": {
+    "Background": {
+      "source_rows": 210199,
+      "after_rows": 210199,
+      "geometry": {
+        "source": {
+          "main": {
+            "active_centers_inside": 715,
+            "max_penetration_m": 7.087005029161548e-05,
+            "above_10um": 261,
+            "above_100um": 0
+          },
+          "flap": {
+            "active_centers_inside": 0,
+            "max_penetration_m": 0,
+            "above_10um": 0,
+            "above_100um": 0
+          }
+        },
+        "after": {
+          "main": {
+            "active_centers_inside": 715,
+            "max_penetration_m": 7.087005029161548e-05,
+            "above_10um": 261,
+            "above_100um": 0
+          },
+          "flap": {
+            "active_centers_inside": 0,
+            "max_penetration_m": 0,
+            "above_10um": 0,
+            "above_100um": 0
+          }
+        }
+      },
+      "full_mesh": {
+        "source_cells": 304810,
+        "after_cells": 304810,
+        "unique_matches": 304810,
+        "max_coordinate_difference_m": 0.0,
+        "max_volume_relative_difference": 0.0,
+        "status_changes": 0,
+        "error_cells": 0,
+        "difficult_cells": 0
+      }
+    },
+    "FlapOverset": {
+      "source_rows": 163736,
+      "after_rows": 163736,
+      "geometry": {
+        "source": {
+          "main": {
+            "active_centers_inside": 0,
+            "max_penetration_m": 0,
+            "above_10um": 0,
+            "above_100um": 0
+          },
+          "flap": {
+            "active_centers_inside": 12,
+            "max_penetration_m": 3.299500296625255e-06,
+            "above_10um": 0,
+            "above_100um": 0
+          }
+        },
+        "after": {
+          "main": {
+            "active_centers_inside": 0,
+            "max_penetration_m": 0,
+            "above_10um": 0,
+            "above_100um": 0
+          },
+          "flap": {
+            "active_centers_inside": 12,
+            "max_penetration_m": 3.299500296625255e-06,
+            "above_10um": 0,
+            "above_100um": 0
+          }
+        }
+      },
+      "full_mesh": {
+        "source_cells": 274658,
+        "after_cells": 274658,
+        "unique_matches": 274658,
+        "max_coordinate_difference_m": 0.0,
+        "max_volume_relative_difference": 0.0,
+        "status_changes": 0,
+        "error_cells": 0,
+        "difficult_cells": 0
+      }
+    }
+  },
+  "connectivity_changed": false,
+  "flow_continuation_approved": false,
+  "conclusion": "No measured hole-cutting change; cannot approve wall-protection remedy until native connectivity is actually recomputed and checked."
+}

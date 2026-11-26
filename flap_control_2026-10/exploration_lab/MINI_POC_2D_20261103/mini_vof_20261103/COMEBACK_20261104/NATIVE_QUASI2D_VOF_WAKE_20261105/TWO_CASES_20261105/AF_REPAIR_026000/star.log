@@ -1,0 +1,64 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -printpids -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XE5BVElWRV9RVUFTSTJEX1ZPRl9XQUtFXzIwMjYxMTA1XFRXT19DQVNFU18yMDI2MTEwNVxBRl9SRVBBSVJfMDI2MDAwXENQXzAwMDAyNV90MC4wMjYwMDAuc2lt
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 2584
+Total number of processes : 1
+
+Host ID 0 Rank 0 on THINKPAD-LUCJAN with process ID 2584
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 8 days
+Thu Nov  5 14:30:04 2026
+
+Server::start -host THINKPAD-LUCJAN:47835
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\AF_REPAIR_026000\CP_000025_t0.026000.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: StarSweptMesher
+Loading module: ConservativeMapping
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\AF_REPAIR_026000\RepairPlayback.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\AF_REPAIR_026000\RepairPlayback.java:53: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+  streams.getCurrentView().setInput(v(.6,.02,.01),v(.6,.02,3),v(0,1,0),.54,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);
+                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\AF_REPAIR_026000\RepairPlayback.java:73: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+  Scene sc=s.getSceneManager().createScene(name);sc.setPresentationName(name);sc.initializeAndWait();
+                                                                                ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\AF_REPAIR_026000\RepairPlayback.java:74: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+  sc.getCurrentView().setInput(v(.60,.025,.01),v(.60,.025,3),v(0,1,0),.44,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);
+                     ^
+
+Loading/configuring connectivity (old|new partitions: 2|1)
+  MINI_water_air (index 0): 25617 cells, 75473 faces, 100772 verts.
+  MINI_water_air (index 0): 25617 cells, 75473 faces, 100772 verts.
+  MINI_water_air (index 0): 25617 cells, 75473 faces, 100772 verts.
+Configuring finished
+ Representation : AF - Playback, Import Mesh  : FvMesh 1.
+ Representation : AF - Playback, Import State : AF_resume_t0.021000.
+ Representation : CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_142054_AF_resume, Import Mesh  : FvMesh 1.
+ Representation : CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_142054_AF_resume, Import State : AF_resume_t0.021000.
+ Representation : AF - Playback, Import State : State 2.
+ Representation : AF - Previous view, Import State : State 2.
+ Representation : AF - Previous view, Import Mesh  : FvMesh 1.
+ Representation : AF - Previous view, Import State : State 2.
+ Representation : CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_142054_AF_resume, Import Mesh  : FvMesh 1.
+ Representation : CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_142054_AF_resume, Import State : AF_resume_t0.021000.
+ Representation : AF - Repaired Playback, Import Mesh  : FvMesh 1.
+ Representation : AF - Repaired Playback, Import State : State 2.
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\AF_REPAIR_026000\Sharp_Sealed_VOF_AF_REPAIRED_REVIEW.sim... complete (108.19MB in 0.47026s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

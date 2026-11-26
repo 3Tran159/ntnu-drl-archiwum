@@ -1,0 +1,113 @@
+{
+  "at": "2026-11-03T04:14:01.133683+01:00",
+  "kind": "work_completed_urans_review",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710",
+  "source_checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint.sim",
+    "bytes": 1211413778,
+    "sha256": "d4b0c8eca2ff355739b2c1cfda79def31b56e48434c475976c157bce2bbfba55",
+    "saved_time_s": 0.3,
+    "native_save_complete": true,
+    "hash_at": "2026-11-03T04:13:27.326767+01:00",
+    "native_reopen_verified": false
+  },
+  "last": {
+    "step": 150.0,
+    "time_s": 0.3,
+    "elapsed_s": 0.3,
+    "flap_angle_deg": 0.0,
+    "flap_angular_velocity_deg_s": 0.0,
+    "Fx_N": 28.0842708279,
+    "Fz_N": 1274.56110281,
+    "CL_hydro": 0.324695025229,
+    "CD": 0.00728402086002,
+    "Mh_Nm": -12.0312620388,
+    "p_absolute_min_Pa": 30173.5099121,
+    "cavitation_margin_Pa": 27834.2951453,
+    "safety_reserve_Pa": 17834.2951453,
+    "dt_s": 0.002,
+    "mass_imbalance_relative": 1.31477430572e-06,
+    "net_mass_flow_kg_s": -0.0141995625017,
+    "omega_floor_cells": 0.0,
+    "k_floor_cells": 0.0,
+    "max_turbulent_viscosity_ratio": 1242.39918437,
+    "overset_error_cells": 0.0,
+    "min_volume_m3": 9.128750119090001e-12,
+    "min_cell_quality": 0.0610481862402,
+    "min_face_validity": 1.0,
+    "max_speed_m_s": 22.33150173,
+    "yplus_mean": 2.88140190186,
+    "yplus_max": 265.016215298,
+    "native_iteration": 4560.0,
+    "wall_clock_s": 806.000962
+  },
+  "last_25_means": {
+    "CL_hydro": 0.32454750837299995,
+    "CD": 0.0072883761886736,
+    "Fx_N": 28.101063233056003,
+    "Fz_N": 1273.9923368215998,
+    "Mh_Nm": -12.030204931780002
+  },
+  "delta_B_percent": {
+    "CL_hydro": -0.8399196637450146,
+    "CD": 1.74208457690177
+  },
+  "whole_run_guards": {
+    "pressure": true,
+    "volume": true,
+    "quality": true,
+    "face": true,
+    "overset_active_errors": true,
+    "angle_zero": true,
+    "mass": true,
+    "omega_floor_cells": true,
+    "k_floor_cells": true,
+    "viscosity_ratio": true,
+    "finite_history": true
+  },
+  "last_three_window_passes": [
+    true,
+    true,
+    true
+  ],
+  "field_review": {
+    "active_cells": 255350,
+    "omega_floor_cells": 0,
+    "k_floor_cells": 0,
+    "viscosity_ratio_cap_cells": 0,
+    "max_viscosity_ratio": 1242.399184366689,
+    "speed_max_near_m_s": 22.331501730015525,
+    "meanflow_p0_max_near_Pa": 164443.11902037502,
+    "meanflow_p0_p99_near_Pa": 162374.86837268516,
+    "pabs_min_Pa": 30173.509912096662,
+    "max_speed_location": {
+      "region": "Background",
+      "X (m)": 0.6978899300031532,
+      "Z (m)": 0.104512051498826,
+      "Pressure (Pa)": -87568.81466285756,
+      "Specific Dissipation Rate (/s)": 309.64523071007795,
+      "speed_m_s": 22.331501730015525,
+      "p0_meanflow_Pa": 161779.17009598564
+    },
+    "max_head_location": {
+      "region": "Background",
+      "X (m)": 0.0027542063527191,
+      "Z (m)": -0.0051482873221328,
+      "Pressure (Pa)": 68811.05979812368,
+      "Wall Distance (m)": 0.0001088377136768,
+      "Turbulent Kinetic Energy (J/kg)": 0.0005532932178484,
+      "Specific Dissipation Rate (/s)": 7907.919931684726,
+      "Turbulent Viscosity Ratio": 0.0624687280154858,
+      "Volume (m^3)": 7.366095356684909e-10,
+      "Cell Quality": 0.9996350493254392,
+      "speed_m_s": 13.829827129957291,
+      "p0_meanflow_Pa": 164443.11902037502
+    },
+    "head_gt1p1q_near_cells": 0,
+    "head_gt1p1q_near_volume_fraction": 0.0
+  },
+  "scientific_approved": false,
+  "continuation_approved": true,
+  "approved_inner_iterations": 40,
+  "next": "Continue exact retained0degree solution with only15to40 inner iterations,dt0.002s and all other settings unchanged. Bounded numerical sensitivity: minimum75,maximum150additional timesteps. Compare force change with preceding drift and examine residuals. No nonzero angles before the completed0degree scientific audit."
+}

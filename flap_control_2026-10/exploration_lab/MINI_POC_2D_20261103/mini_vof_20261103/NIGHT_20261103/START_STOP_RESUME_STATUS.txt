@@ -1,0 +1,11 @@
+NTNU MINI-VOF NIGHT 03/04 NOVEMBER 2026
+Authorized sequence: N1 emptyA=.05 -> N2 emptyA=.25 -> N3 calm/foil0 -> WAVE/FIXEDfoil0A=.25. Each successor requires an explicit saved PASS.
+CPU: one MPI, E logicalCPU4, mask16; no GPU. No active flap, DRL, large sweep or W04 modifications.
+START: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\START_MINI_VOF_NIGHT_20261103.cmd
+STOP: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\STOP_MINI_VOF_NIGHT_20261103.cmd
+STATUS: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\STATUS_MINI_VOF_NIGHT_20261103.cmd
+RESUME: inspect NIGHT_STATUS.json and QUEUE_STATE.json first. If a solver/lock is active, do not start a second controller. An old dead lock or safety STOP needs diagnosis; do not remove a physical FAIL/HOLD to force progression. Completed jobs/stagePASS are reused, never blindly replayed. No Windows autostart or task scheduler has been created.
+Checkpoints: START.sim, FINAL.sim and CP_step_time.sim inside each job. Original t=.050checkpoint and all prior HOLD/FAIL remain unchanged. SHA256manifests saved after native job exit.
+Hard native/parent stop deadline:06:50Oslo, leaving10minutes before07:00. Native stop is checked at every physical step; saves fields and exits gracefully. A hung critical native operation cannot safely be force-terminated automatically.
+Morning: MORNING_REPORT.txt / MORNING_REPORT.json; stageSCIENTIFIC_REVIEW.json, plotsETA_ANALYTIC.png, ETA_CYCLE_OVERLAY.png, SAFETY_COST.png and FORCES/FORCE_CYCLE_OVERLAY when foil data exist.
+Acceptance: boundedPoC only, no quantitative grid/energy validation and no training authorization. Sealedfoil is not equivalent to the real2.5mm gap.

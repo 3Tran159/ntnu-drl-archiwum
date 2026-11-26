@@ -1,0 +1,35 @@
+{
+  "updated_at": "2026-10-30T00:32:45.119352+01:00",
+  "status": "short_pilot_completed_targeted_inner_review_pending",
+  "pilot": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+  "source_unchanged": true,
+  "completed_time_s": 1.2,
+  "peak_mass_budget_pct_inlet": 0.01451935956931171,
+  "mass_spike_times_s": [
+    0.617,
+    0.618,
+    0.624,
+    0.625
+  ],
+  "mass_peak_time_s": 0.618,
+  "next": "Matched20inner diagnostic fromsame0.500 checkpointto0.750; do notweaken0.01%budgetreviewgate. Ifpasses, boundedlongerpropagationwithnewID, cache-safecontinuationandchoseninnercount; ifnot, inspectdt/inner/VOF consistency.",
+  "current_controller": {
+    "status": "propagation_GPU_running",
+    "updated_at": "2026-10-30T00:32:38.063601+01:00",
+    "controller_pid": 36724,
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_inner20probe_r6",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_inner20probe_r6",
+    "workers": 1,
+    "gpu": true,
+    "scope": "Environmental outlet and slip bed no-foil pilot; not force or final propagation validation",
+    "elapsed_s": 98.00730109214783,
+    "launcher_pid": 26388,
+    "progress": {}
+  },
+  "cache_recovery": "r5 innerprobe endedbeforefirststep because analyticwavecachewasNaN atload; physicalfieldreportsfinite,sourcesunchanged. r6 separatelyrecordsunavailablet0theory, requiresfiniteanalyticinventoryandgaugesafterfirstguardedstep, noflowreinitialization.",
+  "interpretation": "9.53mm equivalentwhole-domaininventorydifference vsundampedwave includesdampingzone mismatch; notcoreleveldrift orprovedmassleak. Corecyclemeanerrors-1.44to+1.18mm. IntegratedBDF2residual~0.018mm equivalentthroughfirstperiod. Addzonal(equalphase) inventory tolongertrial.",
+  "calm_wave_inputs": "paired_inputs_prepared_pending_flow_gates",
+  "input_results": "wave_foil_case_preparation_results.json",
+  "longer_prototype": "run_wave_continuation_r5.py remainsUNLAUNCHED andgated; it lacksnewanalyticcachehandling andassumes10inner. Preparefreshcorrectedlongerattemptonlyafterprobe.",
+  "wave_force_admitted": false
+}

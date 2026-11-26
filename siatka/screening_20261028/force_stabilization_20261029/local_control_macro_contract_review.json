@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "created_at": "2026-10-30T14:40:21.101501+01:00",
+  "test_count": 13,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "build_local_control_macro.py": "fe9c7d1616ac6b5c1b88e1c5cd83758411db46738ffb65c22d8e6b6f54c02421",
+    "LocalCalmWave.java": "799e2ea2f2b0e91d84703fec9b46b4322b9d4f4b45ba89abc02388363e86f0f9"
+  },
+  "scope": "Generated Java static assertions and pure mocked timing/guard contracts. javac compilation only. No STAR API run, CFD, process control or queue mutation. Runtime validation remains pending.",
+  "output": "test_activation_clock_boundary_and_metadata (__main__.MacroContracts.test_activation_clock_boundary_and_metadata) ... ok\ntest_all_saved_wave_bindings_checked (__main__.MacroContracts.test_all_saved_wave_bindings_checked) ... ok\ntest_checkpoint_interval_bounds_and_multiple (__main__.MacroContracts.test_checkpoint_interval_bounds_and_multiple) ... ok\ntest_checkpoint_metadata_and_atomic_publication (__main__.MacroContracts.test_checkpoint_metadata_and_atomic_publication) ... ok\ntest_exact_source_time_mesh_dt_inner_checks (__main__.MacroContracts.test_exact_source_time_mesh_dt_inner_checks) ... ok\ntest_failed_field_not_promoted_as_latest_checkpoint (__main__.MacroContracts.test_failed_field_not_promoted_as_latest_checkpoint) ... ok\ntest_new_wave_requires_flat_and_only_one_creation (__main__.MacroContracts.test_new_wave_requires_flat_and_only_one_creation) ... ok\ntest_original_physical_and_report_guards_retained (__main__.MacroContracts.test_original_physical_and_report_guards_retained) ... ok\ntest_physical_cadence_avoids_tenfold_exports (__main__.MacroContracts.test_physical_cadence_avoids_tenfold_exports) ... ok\ntest_receipt_matches_generated_file_and_discloses_pending_runtime (__main__.MacroContracts.test_receipt_matches_generated_file_and_discloses_pending_runtime) ... ok\ntest_resume_is_explicit_and_saved_wave_only (__main__.MacroContracts.test_resume_is_explicit_and_saved_wave_only) ... ok\ntest_resume_setup_validates_without_any_flow (__main__.MacroContracts.test_resume_setup_validates_without_any_flow) ... ok\ntest_startup_never_exceeds_selected_dt (__main__.MacroContracts.test_startup_never_exceeds_selected_dt) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.003s\n\nOK\n"
+}

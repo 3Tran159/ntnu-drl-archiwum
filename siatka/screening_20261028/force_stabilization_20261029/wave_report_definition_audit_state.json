@@ -1,0 +1,26 @@
+{
+  "status": "report_definitions_ready",
+  "updated_at": "2026-10-30T01:01:31.630949+01:00",
+  "controller_pid": 33140,
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_R4_t0p750_report_definition_audit_r1",
+  "source": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4\\checkpoint_t0.750.sim",
+  "workers": 1,
+  "gpu": false,
+  "scope": "Zero-step report-definition diagnostic; no physics or time changes",
+  "result": {
+    "returncode": 0,
+    "source_unchanged": true,
+    "audit": {
+      "gpu_count": 0,
+      "time_before_s": 0.7500000000000006,
+      "net_outward_unsmoothed_kg_s": 6.622989157363887,
+      "status": "report_definitions_exported_zero_steps",
+      "time_after_s": 0.7500000000000006,
+      "cells": 53200,
+      "steps_taken": 0,
+      "scope": "Diagnostic only: report definitions and independent unsmoothed values; no temporal or physics changes, no simulation state saved",
+      "saved_reports_inspected": 9
+    }
+  },
+  "next": "Compare existing/default and independent unsmoothed reports, then inspect temporal/source settings before revising any diagnostic"
+}

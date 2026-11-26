@@ -1,0 +1,239 @@
+{
+  "updated_at": "2026-11-03T05:19:12.068591+01:00",
+  "scientific_approved": false,
+  "training_approved": false,
+  "current_run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+  "active_job": "c0_top_backflow_extrapolated",
+  "root_cause_assessment": "Old C/B difference CL+14.6869%,CD-9.5692% is rejected. About94% of excess lift was on the fixed main foil with abnormal near-wall pressure/velocity peaks. More inner iterations and interpolation-only changes did not fix it. A locally refined rectangular-cage case still recreated those peaks with second-order momentum. Restricting that numerical cage to the flap/hinge removed the peaks while preserving physical STL geometry and all304810 Background cells of the refined rectangular comparator (not claiming identity to the original361532-cell case). CorrectedC40 meanCL0.32521117,CD0.00726354:oldB differences -0.637%,+1.395%, diagnostic only. The distinct shared far-top boundary problem requires a matched-boundary B/C follow-up before scientific acceptance.",
+  "controlled_boundary_test": {
+    "at": "2026-11-03T05:06:57.106203+01:00",
+    "diagnostic_approved": true,
+    "scientific_approved": false,
+    "author": "Work",
+    "decision": "Run a separate 0-degree top-backflow direction diagnostic from the native-reopened C40 t0.45s checkpoint. Change only top pressure-outlet backflow direction BOUNDARY_NORMAL to EXTRAPOLATED. Keep environmental backflow pressure, scalar values, piezometric pressure zero, downstream outlet, mesh, geometry, dt0.002, 40 inner iterations and URFs0.8/0.2. No reset, initialization or remesh.",
+    "evidence": {
+      "C_audit": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\pressure_outlets_SP_C_20261103_045619",
+      "B_audit": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\pressure_outlets_SP_B_20261103_045925",
+      "both": "Native B and C top and downstream use BOUNDARY_NORMAL, ENVIRONMENTAL, piezometric0Pa. Read-only inspections completed with source SHA unchanged and no solver steps.",
+      "spatial": "Both B and C show pressure dips and tangential speed loss in remote 10<x<43,7<z<8 top band. Pressure URF0.1 trial did not resolve them.",
+      "manual": "Installed Flow Boundaries Reference GUID-E14693DE-8C70-4C1E-9DDE-CD4E8591E1BC recommends Extrapolated backflow direction for flow largely parallel to the outlet. Pressure-outlet theory Eq681/682: interior velocity direction, environmental pressure correction uses normal velocity.",
+      "causal_separation": "This shared boundary issue is distinct from the old Overset near-wall Cp spike responsible for the large old B/C force difference."
+    },
+    "acceptance": "Evaluate native fields, residual decay, far-top velocity recovery, per-zone pressure minima and force stability. Technical guard pass alone is insufficient for scientific approval. Old B is not a matched reference after this boundary change; matched B follow-up required if diagnostic succeeds.",
+    "limits": {
+      "cpu": 8,
+      "gpu": false,
+      "angle_deg": 0,
+      "min_steps": 100,
+      "max_steps": 250,
+      "nonzero_angles_blocked": true,
+      "scientific_gate": false
+    },
+    "source_sha256": "8b6162b9baa27a5e04c38048dbab3c801cdd99266200a320231390d1f3f8feed",
+    "record_timestamp_source": "native preparation event; corrected draft timestamp"
+  },
+  "current_review": {
+    "at": "2026-11-03T05:17:47.836297+01:00",
+    "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+    "samples": 34,
+    "time_s": 0.518,
+    "native_iteration": 8920,
+    "scientific_approved": false,
+    "notes": "Top direction only: BOUNDARY_NORMAL to EXTRAPOLATED. URF0.8/0.2 and40inner retained. Branch startsC40t0.45. OldB reference is not matched to the revised boundary; deltas are descriptive only.",
+    "strict_guards": {
+      "pressure": true,
+      "mass": true,
+      "omega_floor": true,
+      "k_floor": true,
+      "overset": true,
+      "volume": true,
+      "quality": true,
+      "face": true,
+      "visc": true,
+      "finite": true
+    },
+    "last": {
+      "step": 34.0,
+      "time_s": 0.518,
+      "elapsed_s": 0.068,
+      "flap_angle_deg": 0.0,
+      "flap_angular_velocity_deg_s": 0.0,
+      "Fx_N": 27.9672256559,
+      "Fz_N": 1277.41318034,
+      "CL_hydro": 0.325434748625,
+      "CD": 0.00725366367255,
+      "Mh_Nm": -12.0381657416,
+      "p_absolute_min_Pa": 30117.5530363,
+      "cavitation_margin_Pa": 27778.3382696,
+      "safety_reserve_Pa": 17778.3382696,
+      "dt_s": 0.002,
+      "mass_imbalance_relative": 5.25939227642e-09,
+      "net_mass_flow_kg_s": 5.68014365854e-05,
+      "omega_floor_cells": 0.0,
+      "k_floor_cells": 0.0,
+      "max_turbulent_viscosity_ratio": 1242.5014502,
+      "overset_error_cells": 0.0,
+      "min_volume_m3": 9.128750119090001e-12,
+      "min_cell_quality": 0.0610481862402,
+      "min_face_validity": 1.0,
+      "max_speed_m_s": 22.3350368442,
+      "yplus_mean": 2.88219263294,
+      "yplus_max": 265.040930978,
+      "native_iteration": 8920.0,
+      "wall_clock_s": 482.917355
+    },
+    "last25_means": {
+      "CL_hydro": 0.32538203806284005,
+      "CD": 0.007255783381919201,
+      "Fx_N": 27.975398407328,
+      "Fz_N": 1277.2099494932002,
+      "Mh_Nm": -12.037603388887998
+    },
+    "last25_pressure": {
+      "min_global_Pa": 30117.5530363,
+      "max_global_Pa": 30128.5712014,
+      "std_global_Pa": 3.3857925610774937,
+      "min_near_Pa": 30117.5530363,
+      "top_minimum_steps": 0,
+      "all_minimum_steps": 25
+    },
+    "last25_mass_max": 9.84871146809e-09,
+    "far_first": {
+      "step": 1.0,
+      "time_s": 0.452,
+      "vx_volume_mean_m_s": 16.8745414251,
+      "vx_min_m_s": 8.29325604487,
+      "vx_max_m_s": 18.0062296971,
+      "vz_min_m_s": -0.493866585879,
+      "vz_max_m_s": 0.806603589801
+    },
+    "far_last": {
+      "step": 34.0,
+      "time_s": 0.518,
+      "vx_volume_mean_m_s": 16.9088931299,
+      "vx_min_m_s": 10.6220284573,
+      "vx_max_m_s": 18.0039011314,
+      "vz_min_m_s": -0.546490182911,
+      "vz_max_m_s": 0.885705496319
+    },
+    "far_last25_means": {
+      "vx_volume_mean_m_s": 16.89325935166,
+      "vx_min_m_s": 10.0877828117288,
+      "vx_max_m_s": 18.009105945064004,
+      "vz_min_m_s": -0.53440140825672,
+      "vz_max_m_s": 0.8966915360238
+    },
+    "last25_force_relative_range": {
+      "CL_hydro": 0.0003344514425193523,
+      "CD": 0.0006035942557096464,
+      "Mh_Nm": 9.796023858771937e-05
+    },
+    "delta_oldB_percent_diagnostic_only": {
+      "CL_hydro": -0.5849430302703684,
+      "CD": 1.2871053036642044,
+      "Mh_Nm": -1.0560490915597298
+    },
+    "native_status": {},
+    "queue_job_state": "active"
+  },
+  "table": [
+    [
+      "A original single phase",
+      0.33845873967668,
+      0.00676595907917,
+      "Historical comparison; top-boundary follow-up pending"
+    ],
+    [
+      "B flap0 no Overset",
+      0.32729653634048,
+      0.007163580556642399,
+      "Historical baseline; shared top-boundary problem"
+    ],
+    [
+      "C original Overset — REJECTED",
+      0.37536624743796,
+      0.00647808662144,
+      "CL+14.6869%,CD-9.5692%; near-wall interface artifacts"
+    ],
+    [
+      "C corrected,15inner,t0.3",
+      0.324547508373,
+      0.00728837618867,
+      "Guards passed; scientific HOLD"
+    ],
+    [
+      "C corrected,40inner,t0.45",
+      0.32521116660556,
+      0.0072635418628296,
+      "Small sensitivity; shared boundary issue persists"
+    ],
+    [
+      "C pressureURF0.1,t0.6",
+      0.3255489913458,
+      0.0072491403650392,
+      "Did not solve boundary problem; separate branch preserved"
+    ],
+    [
+      "C top direction extrapolated,t0.518",
+      0.32538203806284005,
+      0.007255783381919201,
+      "New boundary; not directly comparable to oldB; scientific HOLD"
+    ]
+  ],
+  "limits": {
+    "cpu_ranks": 8,
+    "gpu": false,
+    "nonzero_angles": false
+  },
+  "reviewed_checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+    "sha256": "8b6162b9baa27a5e04c38048dbab3c801cdd99266200a320231390d1f3f8feed",
+    "bytes": 1356288278,
+    "native_iteration": 7560,
+    "physical_time_s": 0.45,
+    "dt_s": 0.002,
+    "inner_iterations": 40,
+    "velocity_urf": 0.8,
+    "pressure_urf": 0.2,
+    "flow_convection": "SECOND_ORDER",
+    "sst_convection": "SECOND_ORDER",
+    "CL": 0.325287740062,
+    "CD": 0.00725971308672,
+    "Mh_Nm": -12.0370688069,
+    "pabs_min_Pa": 30140.209384,
+    "native_reopen_verified": true,
+    "scientific_approved": false,
+    "note": "Healthy diagnostic checkpoint, complete save/hash and strict guards. Pressure-residual diagnosis remains pending; not approved hydrodynamics or training.",
+    "native_reopen_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint_readback.txt"
+  },
+  "latest_completed_pressure_diagnostic": {
+    "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547",
+    "checkpoint": {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_pressure_urf01_20261103_043547\\checkpoint.sim",
+      "bytes": 1501163461,
+      "sha256": "e457f6e1bdaa7c59708416c0534f7c62188adebaa0f58dfacf5681877392d0ec",
+      "saved_time_s": 0.6,
+      "native_save_complete": true,
+      "hash_at": "2026-11-03T04:55:45.199146+01:00",
+      "native_reopen_verified": false
+    },
+    "time_s": 0.6,
+    "native_iteration": 10560,
+    "pressure_urf": 0.1,
+    "velocity_urf": 0.8,
+    "inner_iterations": 40,
+    "last_25_means": {
+      "CL_hydro": 0.32554899134580007,
+      "CD": 0.0072491403650392005,
+      "Fx_N": 27.94978559144,
+      "Fz_N": 1277.8536545728002,
+      "Mh_Nm": -12.03950027058
+    },
+    "delta_B_percent": {
+      "CL_hydro": -0.5339332381024686,
+      "CD": 1.1943721121062456
+    },
+    "scientific_approved": false,
+    "remedy_accepted": false
+  }
+}

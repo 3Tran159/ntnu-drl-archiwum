@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-10-29T23:01:45.633982+01:00",
+  "outputs": [
+    "configured_fields.png",
+    "configured_fields.svg",
+    "configured_fields_M09.png",
+    "configured_fields_M09.svg",
+    "configured_fields_M08.png",
+    "configured_fields_M08.svg",
+    "configured_fields_M07.png",
+    "configured_fields_M07.svg"
+  ],
+  "meshes": {
+    "M09": {
+      "mesh": "M09",
+      "status": "settled",
+      "time_s": 1.6399999999999302,
+      "source_cells": 214908,
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_SO1ms_inner10_r1\\velocity_vectors.csv",
+      "source_sha256": "1cf5bd777dccb16ecea431e597641559eb2ca2b9d7091ea068c3777e4c583068",
+      "mesh_file": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M09\\mesh.CGNS",
+      "mesh_sha256": "9079ce01c95d6ca45c6c723d04f25c32060c5c846b4d701017dc592b84281fb0",
+      "history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_SO1ms_inner10_r1\\history.csv",
+      "max_abs_spanwise_velocity_m_s": 1.6281364474714343e-14,
+      "display_grid_clipping": {
+        "speed": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        },
+        "Cp": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        }
+      }
+    },
+    "M08": {
+      "mesh": "M08",
+      "status": "settled",
+      "time_s": 1.9999999999998905,
+      "source_cells": 254989,
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M08_SO1ms_inner10_r1\\velocity_vectors.csv",
+      "source_sha256": "65a735327432f3c12d66d64588bc1daa226eb6bd191a41a9e161b8b3e87663dc",
+      "mesh_file": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M08\\mesh.CGNS",
+      "mesh_sha256": "03d34e803622db1d4069f95cbac6cc409e41c558288100bef9cebd77f3cdac38",
+      "history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M08_SO1ms_inner10_r1\\history.csv",
+      "max_abs_spanwise_velocity_m_s": 1.5826674816667384e-14,
+      "display_grid_clipping": {
+        "speed": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        },
+        "Cp": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        }
+      }
+    },
+    "M07": {
+      "mesh": "M07",
+      "status": "settled",
+      "time_s": 2.0399999999998863,
+      "source_cells": 481635,
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M07_SO1ms_inner10_r1\\velocity_vectors.csv",
+      "source_sha256": "6ad171dd1c14833bce451ccd04e1a78a6b8d2c2e0b34f6c25c55f9165f019464",
+      "mesh_file": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M07\\mesh.CGNS",
+      "mesh_sha256": "b1a19f2bb6e47911a1225259f59b91edc2610053810314851a4dd615b994c030",
+      "history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M07_SO1ms_inner10_r1\\history.csv",
+      "max_abs_spanwise_velocity_m_s": 1.7894171958820977e-13,
+      "display_grid_clipping": {
+        "speed": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        },
+        "Cp": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        }
+      }
+    }
+  },
+  "method": "Same display method as audited plot_flow_fields.py. Zero solver steps. Delaunay interpolation of saved cell-centred x-z fields; triangles sampled in solid interior masked and foil polygon overlaid from CGNS connectivity. Instantaneous 2D streamlines, not particle paths.",
+  "solver_configuration": {
+    "time_order": "SECOND_ORDER",
+    "dt_s": 0.001,
+    "inner": 10
+  },
+  "field_type": "Instantaneous accepted saved states, not time-averaged fields. Force tables use separate final-window means.",
+  "pressure_definition": "Cp = [p - rho*g*(waterline_z-z)]/(0.5*rho*U^2), with rho=1000 kg/m^3, g=9.81 m/s^2, waterline_z=2 m, U=18 m/s. Nominal hydrostatic pressure is subtracted.",
+  "common_colour_limits": {
+    "speed_m_s": [
+      0,
+      23
+    ],
+    "Cp": [
+      -0.8,
+      2.5
+    ]
+  },
+  "view_m": {
+    "x": [
+      -0.35,
+      2.7
+    ],
+    "z": [
+      -0.42,
+      0.44
+    ]
+  },
+  "font_pt": {
+    "body": 12.5,
+    "ticks": 12,
+    "titles": 14
+  }
+}

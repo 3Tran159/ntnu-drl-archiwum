@@ -1,0 +1,283 @@
+{
+  "at": "2026-11-03T04:27:47.226566+01:00",
+  "label": "step_1",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433",
+  "scientific_approved": false,
+  "notes": "Snapshot localization of active-cell pressure minima. Does not localize earlier unsaved pressure dips; no inference that all history minima share this position.",
+  "zones": {
+    "all_active": {
+      "cells": 255350,
+      "pabs_min_Pa": 30133.052957065895,
+      "speed_max_m_s": 22.331567794949017,
+      "lowest5": [
+        {
+          "region": "Background",
+          "X (m)": 0.7173270344254031,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953565438012048,
+          "Absolute Pressure (Pa)": 30133.052957065895,
+          "Pressure (Pa)": -89876.50014746448,
+          "speed_m_s": 0.5591701863994624,
+          "Volume (m^3)": 8.745342457817949e-11,
+          "Cell Quality": 0.9999996024562776,
+          "Wall Distance (m)": 1.0000000000000002e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.717327167308189,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953581973225556,
+          "Absolute Pressure (Pa)": 30133.45835041278,
+          "Pressure (Pa)": -89876.07853307246,
+          "speed_m_s": 1.4818461883921876,
+          "Volume (m^3)": 1.0210358080809307e-10,
+          "Cell Quality": 0.9999996024576944,
+          "Wall Distance (m)": 2.424177519079938e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.7173275035835409,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953623817507385,
+          "Absolute Pressure (Pa)": 30133.467072454107,
+          "Pressure (Pa)": -89876.0287617889,
+          "speed_m_s": 3.7621468951615653,
+          "Volume (m^3)": 1.3917767554329506e-10,
+          "Cell Quality": 0.9999996024600196,
+          "Wall Distance (m)": 6.622098739040724e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.7173273224512364,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953601278385339,
+          "Absolute Pressure (Pa)": 30133.48061632508,
+          "Pressure (Pa)": -89876.03732879761,
+          "speed_m_s": 2.5540506955737836,
+          "Volume (m^3)": 1.192079503087418e-10,
+          "Cell Quality": 0.999999602459032,
+          "Wall Distance (m)": 4.360918607474637e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.7173277150587718,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 0.0953650132338756,
+          "Absolute Pressure (Pa)": 30133.499598052334,
+          "Pressure (Pa)": -89875.97042133998,
+          "speed_m_s": 5.003293851687842,
+          "Volume (m^3)": 1.6249277911618598e-10,
+          "Cell Quality": 0.9999996024617788,
+          "Wall Distance (m)": 9.262067311595356e-06
+        }
+      ]
+    },
+    "near_foil": {
+      "cells": 90654,
+      "pabs_min_Pa": 30133.052957065895,
+      "speed_max_m_s": 22.331567794949017,
+      "lowest5": [
+        {
+          "region": "Background",
+          "X (m)": 0.7173270344254031,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953565438012048,
+          "Absolute Pressure (Pa)": 30133.052957065895,
+          "Pressure (Pa)": -89876.50014746448,
+          "speed_m_s": 0.5591701863994624,
+          "Volume (m^3)": 8.745342457817949e-11,
+          "Cell Quality": 0.9999996024562776,
+          "Wall Distance (m)": 1.0000000000000002e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.717327167308189,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953581973225556,
+          "Absolute Pressure (Pa)": 30133.45835041278,
+          "Pressure (Pa)": -89876.07853307246,
+          "speed_m_s": 1.4818461883921876,
+          "Volume (m^3)": 1.0210358080809307e-10,
+          "Cell Quality": 0.9999996024576944,
+          "Wall Distance (m)": 2.424177519079938e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.7173275035835409,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953623817507385,
+          "Absolute Pressure (Pa)": 30133.467072454107,
+          "Pressure (Pa)": -89876.0287617889,
+          "speed_m_s": 3.7621468951615653,
+          "Volume (m^3)": 1.3917767554329506e-10,
+          "Cell Quality": 0.9999996024600196,
+          "Wall Distance (m)": 6.622098739040724e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.7173273224512364,
+          "Y (m)": 0.02,
+          "Z (m)": 0.0953601278385339,
+          "Absolute Pressure (Pa)": 30133.48061632508,
+          "Pressure (Pa)": -89876.03732879761,
+          "speed_m_s": 2.5540506955737836,
+          "Volume (m^3)": 1.192079503087418e-10,
+          "Cell Quality": 0.999999602459032,
+          "Wall Distance (m)": 4.360918607474637e-06
+        },
+        {
+          "region": "Background",
+          "X (m)": 0.7173277150587718,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 0.0953650132338756,
+          "Absolute Pressure (Pa)": 30133.499598052334,
+          "Pressure (Pa)": -89875.97042133998,
+          "speed_m_s": 5.003293851687842,
+          "Volume (m^3)": 1.6249277911618598e-10,
+          "Cell Quality": 0.9999996024617788,
+          "Wall Distance (m)": 9.262067311595356e-06
+        }
+      ]
+    },
+    "top_boundary_band": {
+      "cells": 1284,
+      "pabs_min_Pa": 32634.586835049573,
+      "speed_max_m_s": 18.02071530660256,
+      "lowest5": [
+        {
+          "region": "Background",
+          "X (m)": 20.78290081810713,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.752409515157489,
+          "Absolute Pressure (Pa)": 32634.586835049573,
+          "Pressure (Pa)": -12259.273407448363,
+          "speed_m_s": 17.00277109076108,
+          "Volume (m^3)": 0.0015225914576073,
+          "Cell Quality": 0.5783706102032709,
+          "Wall Distance (m)": 21.06837272241252
+        },
+        {
+          "region": "Background",
+          "X (m)": 42.58023544449878,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.777968267293333,
+          "Absolute Pressure (Pa)": 36330.96672266092,
+          "Pressure (Pa)": -8312.1621506595,
+          "speed_m_s": 15.49944704074312,
+          "Volume (m^3)": 0.0011763222023662,
+          "Cell Quality": 0.5723275493276344,
+          "Wall Distance (m)": 42.112427296346624
+        },
+        {
+          "region": "Background",
+          "X (m)": 18.65533044254879,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.759030944497255,
+          "Absolute Pressure (Pa)": 37201.45553600578,
+          "Pressure (Pa)": -7627.448481890595,
+          "speed_m_s": 17.17778379795694,
+          "Volume (m^3)": 0.0013672507794424,
+          "Cell Quality": 0.5674756071164232,
+          "Wall Distance (m)": 19.11257719771428
+        },
+        {
+          "region": "Background",
+          "X (m)": 20.859686755366283,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.936253347033597,
+          "Absolute Pressure (Pa)": 38726.3736075768,
+          "Pressure (Pa)": -4363.978567072577,
+          "speed_m_s": 14.989690081809668,
+          "Volume (m^3)": 0.0007239863795994,
+          "Cell Quality": 0.6689511019799592,
+          "Wall Distance (m)": 21.2106987800028
+        },
+        {
+          "region": "Background",
+          "X (m)": 20.271817868425845,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.936210958490627,
+          "Absolute Pressure (Pa)": 38913.991539861,
+          "Pressure (Pa)": -4176.776466412689,
+          "speed_m_s": 15.664123099307707,
+          "Volume (m^3)": 0.0007239863795994,
+          "Cell Quality": 0.6481662637444153,
+          "Wall Distance (m)": 20.66643978268537
+        }
+      ]
+    },
+    "far_aft_top": {
+      "cells": 408,
+      "pabs_min_Pa": 32634.586835049573,
+      "speed_max_m_s": 18.0162033658106,
+      "lowest5": [
+        {
+          "region": "Background",
+          "X (m)": 20.78290081810713,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.752409515157489,
+          "Absolute Pressure (Pa)": 32634.586835049573,
+          "Pressure (Pa)": -12259.273407448363,
+          "speed_m_s": 17.00277109076108,
+          "Volume (m^3)": 0.0015225914576073,
+          "Cell Quality": 0.5783706102032709,
+          "Wall Distance (m)": 21.06837272241252
+        },
+        {
+          "region": "Background",
+          "X (m)": 42.58023544449878,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.777968267293333,
+          "Absolute Pressure (Pa)": 36330.96672266092,
+          "Pressure (Pa)": -8312.1621506595,
+          "speed_m_s": 15.49944704074312,
+          "Volume (m^3)": 0.0011763222023662,
+          "Cell Quality": 0.5723275493276344,
+          "Wall Distance (m)": 42.112427296346624
+        },
+        {
+          "region": "Background",
+          "X (m)": 20.859686755366283,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.936253347033597,
+          "Absolute Pressure (Pa)": 38726.3736075768,
+          "Pressure (Pa)": -4363.978567072577,
+          "speed_m_s": 14.989690081809668,
+          "Volume (m^3)": 0.0007239863795994,
+          "Cell Quality": 0.6689511019799592,
+          "Wall Distance (m)": 21.2106987800028
+        },
+        {
+          "region": "Background",
+          "X (m)": 20.271817868425845,
+          "Y (m)": 0.0199999999999999,
+          "Z (m)": 7.936210958490627,
+          "Absolute Pressure (Pa)": 38913.991539861,
+          "Pressure (Pa)": -4176.776466412689,
+          "speed_m_s": 15.664123099307707,
+          "Volume (m^3)": 0.0007239863795994,
+          "Cell Quality": 0.6481662637444153,
+          "Wall Distance (m)": 20.66643978268537
+        },
+        {
+          "region": "Background",
+          "X (m)": 32.07172665391878,
+          "Y (m)": 0.02,
+          "Z (m)": 7.942629063016392,
+          "Absolute Pressure (Pa)": 40459.52409600555,
+          "Pressure (Pa)": -2568.2823021772474,
+          "speed_m_s": 13.583241478446544,
+          "Volume (m^3)": 0.0006327171375985,
+          "Cell Quality": 0.6403066259984513,
+          "Wall Distance (m)": 31.886838094428768
+        }
+      ]
+    }
+  },
+  "history_summary": {
+    "samples": 47,
+    "min_pabs_Pa": 21853.6821114,
+    "max_mass_imbalance": 2.58695277641e-05,
+    "correlation_pabs_mass": -0.13999534124810248
+  }
+}

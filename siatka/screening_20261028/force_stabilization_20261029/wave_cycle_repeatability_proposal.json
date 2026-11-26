@@ -1,0 +1,94 @@
+{
+  "title": "Exploratory W01 cycle-repeatability screen",
+  "date": "2026-10-30",
+  "status": "Implemented and synthetic-tested; no solver launched by this review",
+  "guidance": "User relayed Sverre's practical guidance: approximately ten wave periods for a repeating force response; if not repeating after twenty, inspect the setup.",
+  "scope": "Practical stopping/review criterion only; not validation of force accuracy",
+  "source": {
+    "case": "W01_W20L4_M10_FS020_diagnostic_r1",
+    "setup": "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_diagnostic_r1/setup.json",
+    "period_s": 0.8472673206891129,
+    "saved_restart_time_s": 0.168,
+    "settings": "SECOND_ORDER, dt 0.001 s, ten inner iterations after startup; preserve continuation wave clock and settings"
+  },
+  "module": "wave_cycle_repeatability.py",
+  "interface": "evaluate(history_paths, period, min_cycles=10, max_cycles=20) -> JSON-safe dictionary; read-only",
+  "clock": {
+    "origin_s": 0,
+    "earliest_review_s": 8.472673206891129,
+    "review_cap_s": 16.945346413782257,
+    "earliest_1ms_step_time_from_t0168_s": 8.473,
+    "cap_1ms_step_time_from_t0168_s": 16.946,
+    "remaining_steps_to10": 8305,
+    "remaining_steps_to20": 16778,
+    "note": "These are total physical wave periods from original t=0, not additional periods after restart. No phase reset or flow reinitialization."
+  },
+  "history_rules": [
+    "Merge only verified original/continuation histories from the same settings and wave clock.",
+    "Keep complete intervals [(k-1)T,kT]. Never extrapolate incomplete first/last cycles.",
+    "Interpolate 256 equally spaced points within each complete cycle; the right endpoint is excluded from periodic quadrature but must have a data bracket.",
+    "Require four latest consecutive complete cycles; exclude cycles with non-finite force samples or history gaps exceeding 2.5 median steps.",
+    "Conflicting duplicate force values in the four evaluated cycles prevent a repeatability stop; unreadable input files also prevent it."
+  ],
+  "metrics": {
+    "coefficients": [
+      "CD",
+      "CL_total"
+    ],
+    "comparisons": "Worst of all six pairs among the four latest cycles; both coefficients must satisfy every applicable metric.",
+    "epsilon": {
+      "CD": 0.000001,
+      "CL_total": 0.00001
+    },
+    "mean_scale": "max(cycle RMS(C) across four cycles, epsilon)",
+    "amplitude_scale": "max(fundamental amplitudes, half peak-to-peak amplitudes, 0.1*mean_scale, epsilon)",
+    "waveform_scale": "max(cycle RMS(C-mean) across four cycles, 0.1*mean_scale, epsilon)",
+    "thresholds": {
+      "cycle_mean_difference_pct": 0.5,
+      "fundamental_amplitude_difference_pct": 2,
+      "half_peak_to_peak_difference_pct": 2,
+      "unshifted_mean_removed_waveform_RMS_difference_pct": 3,
+      "wrapped_fundamental_phase_difference_deg": 2
+    },
+    "phase_rule": "Only applicable if every fundamental amplitude >=0.1*amplitude_scale. Otherwise N/A; the mean/amplitude/waveform requirements still apply. This relevance filter is not a measured SNR test.",
+    "phase_definition": "C = mean + a*cos(theta)+b*sin(theta); amplitude=sqrt(a*a+b*b); phase=atan2(-b,a); theta uses the unchanged absolute wave clock.",
+    "notes": [
+      "All percentages use the explicit shared scales, avoiding near-zero means/amplitudes in denominators.",
+      "Do not phase-align the curves before comparison; that would hide changing force-wave phase.",
+      "Four-cycle all-pair comparison detects cumulative drift that can pass isolated adjacent-cycle checks.",
+      "Thresholds are a proposed engineering screen for this exploratory campaign, not a universal CFD standard."
+    ]
+  },
+  "stopping": {
+    "earliest": "At or after10T, save at the first complete-cycle assessment for which all four-cycle tests pass.",
+    "cap": "At20T save and inspect if repeatability is not achieved. Do not automatically extend beyond20periods or label the setup wrong solely because this criterion did not pass.",
+    "interpretation": "Nonperiodic forces can reflect continuing startup, slow drift, numerical/BC/reflection issues or physical aperiodicity. Diagnose using force/gauge/field and conservation histories.",
+    "separate_guards": "Keep finite fields, phase bounds, speed/resource guards. Continue reporting the existing0.01% inlet mass-review flag and user's exploratory exception separately."
+  },
+  "cost_estimate": {
+    "basis": "Saved W01 last50 main steps at t0.168",
+    "median_wall_s_per_step": 2.142279049999999,
+    "to10_periods_hours": 4.94211875284722,
+    "to20_periods_hours": 9.984210528027774,
+    "limitation": "Excludes load/save and changing resource contention; extrapolation only."
+  },
+  "validation": {
+    "synthetic_tests_passed": 12,
+    "elapsed_test_s": 0.65,
+    "test_module": "test_wave_cycle_repeatability.py",
+    "cases": [
+      "Stable sine with harmonics",
+      "Mean drift",
+      "Phase drift without realignment",
+      "Near-zero signals and finite JSON",
+      "Incomplete first cycle",
+      "Missing interval in recent cycle",
+      "No early stop before10periods",
+      "20period review cap",
+      "Consistent continuation overlap",
+      "Conflicting overlap",
+      "Nonfinite force sample",
+      "Missing history file"
+    ]
+  }
+}

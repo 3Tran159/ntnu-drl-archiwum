@@ -1,0 +1,147 @@
+input=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\RECOVERED_PERF_20261103\production_source.sim
+physical_time_s=1.2360000000000009
+iteration=26010
+isInitialized_flag=true
+model=star.metrics.ThreeDimensionalModel
+model=star.material.SingleComponentLiquidModel
+model=star.segregatedflow.SegregatedFlowModel
+model=star.metrics.GradientsModel
+model=star.flow.ConstantDensityModel
+model=star.turbulence.TurbulentModel
+model=star.turbulence.RansTurbulenceModel
+model=star.kwturb.KOmegaTurbulence
+model=star.kwturb.SstKwTurbModel
+model=star.walldistance.WallDistanceModel
+model=star.kwturb.KwAllYplusWallTreatment
+model=star.flow.GravityModel
+model=star.metrics.CellQualityRemediationModel
+model=star.overset.OversetConservationModel
+model=star.common.ImplicitUnsteadyModel
+reference=star.flow.ReferencePressure 101325.0 
+reference=star.flow.MinimumAllowableAbsolutePressure 1000.0 
+reference=star.flow.MaximumAllowableAbsolutePressure 1.0E8 
+reference=star.flow.ReferenceAltitude  [0.0, 0.0, 2.0]
+reference=star.flow.Gravity  [0.0, 0.0, -9.8100004196167]
+reference=star.walldistance.MinimumAllowableWallDistance 1.0E-6 
+density=1000.0
+viscosity=0.001
+velocity_urf=0.8
+pressure_urf=0.2
+dynamic_urf=false
+continuity_initialization=false
+flow_convection=1
+SST_convection=1
+dt=0.002
+time_order=1
+inner=50 used=true
+solver=star.common.PartitioningSolver frozen=false
+solver=star.segregatedflow.SegregatedFlowSolver frozen=false
+solver=star.kwturb.KwTurbSolver frozen=false
+solver=star.kwturb.KwTurbViscositySolver frozen=false
+solver=star.walldistance.WallDistanceSolver frozen=false
+solver=star.solvermeshing.OversetLoadBalancingSolver frozen=false
+solver=star.common.ImplicitUnsteadySolver frozen=false
+solver=star.motion.RigidMotionSolver frozen=false
+REGION=Background
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.span_source type=star.common.SymmetryBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Domain.span_source type=star.common.SymmetryBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin type=star.common.WallBoundary
+star.flow.WallShearStressOption selected=0
+star.common.DynamicOversetBehaviour selected=0
+star.common.PrismLayerShrinkageBehaviour selected=0
+star.flow.WallSlidingOption selected=0
+star.motion.WallReferenceFrameOption selected=1
+star.turbulence.WallSurfaceOption selected=0
+star.turbulence.BlendedWallFunctionCondition
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc type=star.common.WallBoundary
+star.flow.WallShearStressOption selected=0
+star.common.DynamicOversetBehaviour selected=0
+star.common.PrismLayerShrinkageBehaviour selected=0
+star.flow.WallSlidingOption selected=0
+star.motion.WallReferenceFrameOption selected=1
+star.turbulence.WallSurfaceOption selected=0
+star.turbulence.BlendedWallFunctionCondition
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top type=star.common.PressureBoundary
+star.flow.BackflowSpecification direction=0 pressure=2 scalar=1
+star.flow.PressureOutletBoundaryOption selected=0
+star.common.PrismLayerShrinkageBehaviour selected=0
+star.flow.FlowBoundaryDiffusionOption selected=1
+star.kwturb.KwTurbSpecOption selected=2
+star.flow.StaticPressureProfile method=star.common.FunctionScalarProfileMethod function=HYDRO_PiezometricZero definition=<0 Pa>
+star.turbulence.TurbulenceIntensityProfile method=star.common.ConstantScalarProfileMethod value=0.001
+star.turbulence.TurbulentViscosityRatioProfile method=star.common.ConstantScalarProfileMethod value=10.0
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.inlet type=star.common.InletBoundary
+star.flow.InletVelocityOption selected=0
+star.motion.ReferenceFrameOption selected=0
+star.flow.FlowBoundaryDiffusionOption selected=1
+star.common.PrismLayerShrinkageBehaviour selected=0
+star.kwturb.KwTurbSpecOption selected=2
+star.flow.VelocityProfile method=star.common.ConstantVectorProfileMethod value=[17.094122680825645, 0.0, 0.0]
+star.turbulence.TurbulenceIntensityProfile method=star.common.ConstantScalarProfileMethod value=0.001
+star.turbulence.TurbulentViscosityRatioProfile method=star.common.ConstantScalarProfileMethod value=10.0
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.outlet type=star.common.PressureBoundary
+star.flow.BackflowSpecification direction=1 pressure=2 scalar=1
+star.flow.PressureOutletBoundaryOption selected=0
+star.common.PrismLayerShrinkageBehaviour selected=0
+star.motion.ReferenceFrameOption selected=0
+star.flow.FlowBoundaryDiffusionOption selected=1
+star.kwturb.KwTurbSpecOption selected=2
+star.flow.StaticPressureProfile method=star.common.FunctionScalarProfileMethod function=HYDRO_PiezometricZero definition=<0 Pa>
+star.turbulence.TurbulenceIntensityProfile method=star.common.ConstantScalarProfileMethod value=0.001
+star.turbulence.TurbulentViscosityRatioProfile method=star.common.ConstantScalarProfileMethod value=10.0
+BOUNDARY=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.bottom type=star.common.WallBoundary
+star.flow.WallShearStressOption selected=1
+star.common.DynamicOversetBehaviour selected=0
+star.common.PrismLayerShrinkageBehaviour selected=0
+REGION=FlapOverset
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_TightCage.span_source type=star.common.SymmetryBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightCage.span_source type=star.common.SymmetryBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_Flap.NativeSkin type=star.common.WallBoundary
+star.flow.WallShearStressOption selected=0
+star.common.DynamicOversetBehaviour selected=0
+star.common.PrismLayerShrinkageBehaviour selected=0
+star.flow.WallSlidingOption selected=0
+star.motion.WallReferenceFrameOption selected=1
+star.turbulence.WallSurfaceOption selected=0
+star.turbulence.BlendedWallFunctionCondition
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_Flap.HingeArc type=star.common.WallBoundary
+star.flow.WallShearStressOption selected=0
+star.common.DynamicOversetBehaviour selected=0
+star.common.PrismLayerShrinkageBehaviour selected=0
+star.flow.WallSlidingOption selected=0
+star.motion.WallReferenceFrameOption selected=1
+star.turbulence.WallSurfaceOption selected=0
+star.turbulence.BlendedWallFunctionCondition
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_TightCage.OversetArc type=star.common.OversetMeshBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_TightCage.OversetLowerRamp type=star.common.OversetMeshBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_TightCage.OversetLowerAft type=star.common.OversetMeshBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_TightCage.OversetTrailing type=star.common.OversetMeshBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_TightCage.OversetUpperAft type=star.common.OversetMeshBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+BOUNDARY=FlapOverset exact quasi2D fluid.Hydro_TightOverset_fluid.Hydro_TightCage.OversetUpperRamp type=star.common.OversetMeshBoundary
+star.common.PrismLayerShrinkageBehaviour selected=0
+motion=Stationary type=star.motion.StationaryMotion
+motion=Flap prescribed rigid rotation type=star.motion.RotatingMotion
+angle=<0 deg>
+origin=
+axis=[0.0, 1.0, 0.0]
+HF_Fx_N=36.41983020853985
+HF_Fz_N=1035.0084917733527
+HF_CL_hydro=0.2911296635570924
+HF_CD=0.010473632286832462
+HF_Mh_Nm=-11.155150812388303
+HF_pabs_liquid_all=30475.263503155133
+HF_min_volume=9.128750119087941E-12
+HF_min_quality=0.06104818624018239
+HF_min_face_validity=1.0
+HF_yplus_mean=2.818532542669027
+HF_yplus_max=265.6442097376337
+cells=333939

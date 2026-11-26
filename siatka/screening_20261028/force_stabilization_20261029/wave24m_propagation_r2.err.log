@@ -1,0 +1,46 @@
+Exception in thread Thread-1 (drain):
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r2.py", line 40, in main
+    state('propagation_CPU_running',elapsed_s=time.time()-start,launcher_pid=p.pid,progress=e.read(case/'progress.json',{}))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r2.py", line 9, in state
+    e.write(R/'wave_propagation_state.json',d);e.write(R/'wave_preparation_state.json',d)
+                                               ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_until_settled.py", line 11, in write
+    temp=p.with_suffix(p.suffix+'.tmp');temp.write_text(json.dumps(obj,indent=2,ensure_ascii=False),encoding='utf-8');temp.replace(p)
+                                                                                                                      ~~~~~~~~~~~~^^^
+Traceback (most recent call last):
+  File "C:\Python315\Lib\pathlib\__init__.py", line 1292, in replace
+    os.replace(self, target)
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python315\Lib\threading.py", line 1219, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python315\Lib\threading.py", line 1161, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r2.py", line 34, in drain
+    for line in p.stdout:log.write(e.redact(line));log.flush()
+                         ~~~~~~~~~^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_preparation_state.json.tmp' -> 'F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_preparation_state.json'
+
+During handling of the above exception, another exception occurred:
+
+ValueError: I/O operation on closed file.
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r2.py", line 51, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r2.py", line 48, in main
+    except BaseException as ex:state('needs_review',error=str(ex));raise
+                               ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r2.py", line 9, in state
+    e.write(R/'wave_propagation_state.json',d);e.write(R/'wave_preparation_state.json',d)
+                                               ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_until_settled.py", line 11, in write
+    temp=p.with_suffix(p.suffix+'.tmp');temp.write_text(json.dumps(obj,indent=2,ensure_ascii=False),encoding='utf-8');temp.replace(p)
+                                                                                                                      ~~~~~~~~~~~~^^^
+  File "C:\Python315\Lib\pathlib\__init__.py", line 1292, in replace
+    os.replace(self, target)
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_preparation_state.json.tmp' -> 'F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_preparation_state.json'

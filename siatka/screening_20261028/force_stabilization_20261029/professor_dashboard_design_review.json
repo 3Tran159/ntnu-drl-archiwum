@@ -1,0 +1,200 @@
+{
+  "review_date": "2026-10-29",
+  "reviewer": "professor_design",
+  "scope": "Design review only; no campaign/controller mutations",
+  "title": "Quasi-2D hydrofoil: numerical verification and mesh selection",
+  "purpose": "A finite, evidence-led research discussion page, separate from the operational dashboard.",
+  "visual_system": {
+    "background": "#ffffff",
+    "ink": "#172632",
+    "muted": "#52606b",
+    "rules": "#d5dce1",
+    "blue": "#0072B2",
+    "orange": "#D55E00",
+    "layout": "1160px max width; 48px desktop gutters; 20px mobile; single-column sections with occasional two-column plots",
+    "type": "Segoe UI/Arial; body16px/1.5; scientific table14px minimum; section24px; page title32px",
+    "restrictions": [
+      "No gradients, decorative cards, shadows, KPI theatre or AI/promo subtitles",
+      "No whole-dashboard raster images; recompose primary data as readable tables/SVG",
+      "Colour is redundant with line style, shape and label",
+      "No tool, controller PID, resume command, private publisher or CPU operational details in main narrative",
+      "Do not auto-refresh while presenting; show fixed as-of timestamp and manual refresh"
+    ]
+  },
+  "sections": [
+    {
+      "id": "summary",
+      "heading": "Current evidence",
+      "content": [
+        "One-sentence research question: Which economical mesh and solver configuration preserve the hydrofoil forces?",
+        "Compact setup line: NACA66-012, alpha0deg, U18m/s, c1.19m, submergence2m, depth24m, span20mm/onecell, SST+VOF",
+        "Small accurate foil/free-surface schematic",
+        "Three quantitative findings with scope, not generic green pass cards",
+        "Clearly state selection pending if no supported mesh is selected"
+      ]
+    },
+    {
+      "id": "lineage",
+      "heading": "Experiment sequence",
+      "content": [
+        "Two lanes: mesh-design relationships and numerical-state branches",
+        "Each node: identifier, changed control, compact result, status; links to data details",
+        "Label connectors as design change or restart from; chronology is not solver ancestry",
+        "Mobile replaces wide graph with semantic nested lists; desktop retains editable/readable SVG or CSS nodes",
+        "Known family distinction wall-function vs low-y+ remains visible"
+      ]
+    },
+    {
+      "id": "numerics",
+      "heading": "Time integration and inner convergence",
+      "content": [
+        "One shared M04 checkpoint fan-out to T01–T04; settings table4rows",
+        "Main comparison table uses same2.042–2.242s window: pair, changed variable, deltaCD, deltaCL, measured cost",
+        "Original M04 vsT01 placed separately as continued-drift evidence: different timewindows, not temporal-order effect",
+        "Show final conservation and inner-monitor checks separately from force sensitivity; no unsupported global 'validated' banner",
+        "Time order and FifthOrderVofWave are different concepts"
+      ]
+    },
+    {
+      "id": "mesh",
+      "heading": "Mesh sensitivity",
+      "content": [
+        "Two panels: low-y+ primary focus and wall-function context; avoid one yaxis flattening low-y+CD variation",
+        "Plot means with identifiable mesh labels, not latest instantaneous samples",
+        "Use unconnected markers for cross-family or non-directional mesh changes; design links are not convergence fits",
+        "Compact change table fromM07→M08→M09: sixchangedtargets, prismsettingssharedonce; donotduplicateunchangedboxes",
+        "Primary comparison rows include deltaCD,deltaCL,pressureFx,viscousFx,cells,cost with reference named",
+        "M08/M07 currentlyonefinerconfirmation; nofinalselection fromthatpairalone"
+      ]
+    },
+    {
+      "id": "fields",
+      "heading": "Flow and wall resolution",
+      "content": [
+        "At most three well-sized scientific panels: pressureCp, actual streamlines/pressure field, wall-y+ distribution",
+        "Every figure names mesh, accepted saved timestamp, quantityunits and common colour scale",
+        "Instantaneous fields explicitly distinguished from force-windowmeans",
+        "Use y+ area distribution/p95 and TEcoverage, not just maxy+"
+      ]
+    },
+    {
+      "id": "discussion",
+      "heading": "Findings and unresolved checks",
+      "content": [
+        "Short evidence-backed statements; observedresult vs interpretation vs pendingcheck in separate columns",
+        "OriginalM04 accumulateddrift vs localstoppingcriterion is an importantdiscussionpoint",
+        "State why M06cellcount cannotserve as refinement ofM08 inwallnormaldirection",
+        "Cost comparisons contextualised by samehardware/settings and actualphysicaltimeadvanced"
+      ]
+    },
+    {
+      "id": "waves",
+      "heading": "Wave campaign",
+      "content": [
+        "Separate planned section; C01,W01,W02, W013lambda sensitivity first; extraW03–W08second",
+        "FifthOrderVofWave,24mdepth,U18,headwaves; secondordertime withtesteddt separately",
+        "No blank plots or projectedforceclaims; showprepared/running/resultavailable statusonly",
+        "Matchedcalm,propagation/amplitude/phase/reflection/time checksbeforewaveforcecomparisons"
+      ]
+    },
+    {
+      "id": "sources",
+      "heading": "Data and definitions",
+      "content": [
+        "Per-case local.sim links, meanwindow,coefficientreferencearea/density/velocity/sign conventions",
+        "Machine-readable provenance manifest and generated timestamp",
+        "Print-readable source IDs; detailhistory preserved outside the presentation narrative"
+      ]
+    }
+  ],
+  "lineage": {
+    "mesh": [
+      [
+        "M03",
+        "M04",
+        "Near-wall treatment changed"
+      ],
+      [
+        "M04",
+        "M06",
+        "Surface/bulk and wall-normal refinement"
+      ],
+      [
+        "M06",
+        "M07",
+        "Further refinement"
+      ],
+      [
+        "M06",
+        "M08",
+        "Surface/bulk controls retained (design reference)"
+      ],
+      [
+        "M07",
+        "M08",
+        "Prisms retained (design reference)"
+      ],
+      [
+        "M08",
+        "M09",
+        "Remote-domain coarsening"
+      ],
+      [
+        "M08",
+        "M10 design",
+        "Local LE/TE refinement concept; not built"
+      ]
+    ],
+    "temporal": [
+      [
+        "M04 accepted checkpoint 1.642s",
+        "T01",
+        "FO /1ms /20inner"
+      ],
+      [
+        "M04 accepted checkpoint 1.642s",
+        "T02",
+        "SO /1ms /20inner"
+      ],
+      [
+        "M04 accepted checkpoint 1.642s",
+        "T03",
+        "SO /0.5ms /20inner"
+      ],
+      [
+        "M04 accepted checkpoint 1.642s",
+        "T04",
+        "SO /1ms /10inner"
+      ],
+      [
+        "T02 final 2.242s",
+        "Conservation20inner",
+        "40step matched continuation"
+      ],
+      [
+        "T02 final 2.242s",
+        "Conservation10inner",
+        "40step matched continuation"
+      ]
+    ],
+    "warning": "T01/T02/T03/T04 did not restart sequentially from each other; a sequential arrow chain would misstate experiment design."
+  },
+  "readability_tests": [
+    "1360x900 and1920x1080: no cut labels, maincomparisons legible withoutzoom, no overlay ongraph",
+    "390x844: no documenthorizontaloverflow; primaryfindings andtree readablewithout sidewaysscroll; onlydetailedtables may scrolllocally",
+    "100% and125%browserzoom; keyboardfocus on every interactivecase",
+    "Labelbounding-box intersectiontest on all plots; no tiny datalabels",
+    "Hover emphasis not required to read exported/print charts",
+    "PrinttoPDF: landscape/A4 orexplicitpages; nofigure/table truncation; repeatedtableheaders; nohalfnode pagebreaks",
+    "Visual inspection of actual screenshots is required, not DOMwidth checksalone",
+    "All displayedmeans match persisted accepted windows; runningvalues never occupy acceptedmeans column"
+  ],
+  "priority_fixes": [
+    "P0: Preserve scientific distinction between settling, temporal sensitivity, conservation and mesh independence.",
+    "P0: Branch temporal tests from sharedM04 checkpoint rather than misleading sequence.",
+    "P1: Upgrade presentation typography from current11–13px tables to14–16px andreducecolumns.",
+    "P1: Separate originalM04 continueddrift from matchedsettingscomparisons.",
+    "P1: Avoid wallfunctionCD scale flattening low-y+ differences.",
+    "P2: Quiet currentoperations; preserve a manuallyrefreshed snapshot forprofessor."
+  ]
+}

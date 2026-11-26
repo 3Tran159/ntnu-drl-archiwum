@@ -1,0 +1,439 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-29T23:12:06.866Z",
+  "scope": "Bounded dashboard/UI update; no controller, plan, solver, simulation or field-renderer changes.",
+  "latest_review": true,
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py",
+    "build_dashboard_en.py"
+  ],
+  "current_science_display": {
+    "calm_mesh": {
+      "mesh": "M09",
+      "status": "supported_calm_mesh_template",
+      "time_order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner": 10,
+      "time_step_difference_pct": {
+        "CD": -0.002423192674722394,
+        "CL_total": 0.0014533340171437937
+      },
+      "display_verified": true
+    },
+    "wave_previous": {
+      "case": "W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3",
+      "status": "stability_guard",
+      "stop_s": 0.85,
+      "steps": 850,
+      "maximum_speed_m_s": 50.09167376978524,
+      "maximum_phase": "water",
+      "position_m": {
+        "x": 44.9,
+        "z": 1.9125
+      },
+      "ux_m_s": -50.08876098601088,
+      "pressure_Pa": 59676.63475539558,
+      "accepted": false,
+      "evidence": "Preserved controller_result.json/source_unchanged + finite case/time-matched spatial diagnostic"
+    },
+    "wave_current": "R13 VOF tolerance sensitivity marked running from live state during final QA; first progress pending in snapshot",
+    "foil_domain_preparation": {
+      "case": "C01_W20L4_M09_mesh_r1",
+      "cells": 246885,
+      "status": "mesh_prepared_pending_boundary_and_flow_setup",
+      "single_span_topology_passed": true,
+      "invalid_geometry_cells": 0,
+      "flow_steps": 0,
+      "separate_from_mesh_selection_and_wave_flow_acceptance": true
+    },
+    "M10": "317277-cell extended mesh and both C01/W01 zero-step inputs ready",
+    "R10": "Native signed budget agrees with legacy reconstruction; both 0.01% checks not met",
+    "R12": "Reporting-only trace complete; 1500 samples per phase; stopping evidence measured, cause of mass plateau unproven; 0.01438646% native peak fails 0.01% gate",
+    "R11": "Completed and failed mass gate; final metrics populated dynamically"
+  },
+  "browser_qa": {
+    "dashboards": [
+      "main",
+      "professor"
+    ],
+    "widths": [
+      1920,
+      1360,
+      390
+    ],
+    "javascript_errors": 0,
+    "duplicate_ids": 0,
+    "document_overflow": false,
+    "visual_review": [
+      "Professor desktop wave panel",
+      "Main mobile wave panel",
+      "Professor mobile foil preparation",
+      "Professor print wave page17"
+    ]
+  },
+  "print_qa": {
+    "path": "wave_guard_professor_qa.pdf",
+    "intentional_pages": 18,
+    "actual_pages": 18,
+    "changed_page": 17,
+    "no_clipping_or_orphans_on_changed_page": true,
+    "note": "Previously verified common-endpoint figure pages unchanged."
+  },
+  "fixes": [
+    "Terminal result time takes precedence over last progress sample; stability-guard stop explicit; resources marked run ended for completed attempt.",
+    "Previous failed attempt is selected from preserved finite case/time-matched diagnostics and completed source-unchanged records; no assumption that maximum belongs to air.",
+    "Completed foil mesh displays actual cells/topology/zero flow steps.",
+    "Long active case wraps on mobile; removed 14 px overflow and clarified that 0.5% force settling applies to calm cases."
+  ],
+  "artifacts": [
+    "wave_guard_completed_dashboard_qa.json",
+    "wave_guard_professor_qa.pdf",
+    "wave_guard_print17.png",
+    "wave_guard_completed_professor_1360.png",
+    "wave_guard_completed_main_390.png",
+    "foil_mesh_prepared_professor_390.png"
+  ],
+  "previous_full_review": "calm_support_wave_trial_dashboard_qa.json (historical common-endpoint image hash verification)",
+  "paired_input_preparation_update": {
+    "status": "passed",
+    "checked_at": "2026-10-29T23:23:24.625Z",
+    "scope": "C01/W01 paired-input preparation display only; no numerical data, controller or simulation changed.",
+    "sources_edited": [
+      "configured_mesh_panel.py",
+      "build_professor_dashboard.py"
+    ],
+    "display": {
+      "paired_input_stage": "initializing_copy_CPU",
+      "active_copy": "C01_W20L4_M09_env_setup_r2",
+      "workers": 1,
+      "gpu": false,
+      "zero_step_preparation_only": true,
+      "flow_admitted": false,
+      "dynamic_completed_admission": "source_unchanged, returncode=0, audit.status=prepared_zero_steps and audit.flow_steps=0",
+      "failure_display": "Review required; flow checks pending; saved error displayed",
+      "current_wave_case": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+      "case_matched_figures_only": true,
+      "status_at_last_capture": "propagation_pilot_complete_pending_review",
+      "saved_time_at_capture_s": 1.2,
+      "steps": 1200,
+      "wave_accepted": false
+    },
+    "qa": {
+      "widths": [
+        1360,
+        390
+      ],
+      "dashboards": [
+        "main",
+        "professor"
+      ],
+      "javascript_errors": 0,
+      "duplicate_ids": 0,
+      "document_overflow": false,
+      "visual_screenshots": [
+        "paired_input_prep_main_1360.png",
+        "paired_input_prep_professor_390.png"
+      ],
+      "actual_print_pages": 18,
+      "changed_wave_page": 17,
+      "print_no_clipping_or_orphans": true,
+      "operational_preparation_panel_screen_only": true
+    },
+    "artifacts": [
+      "paired_input_preparation_dashboard_qa.json",
+      "paired_input_professor_qa.pdf",
+      "paired_input_print17.png"
+    ],
+    "previous_full_review": "wave_guard_completed_ui_review.json"
+  },
+  "latest_bounded_update": "2026-10-30T00:53:00.165Z",
+  "wave_numerics_fs_update": {
+    "status": "passed",
+    "checked_at": "2026-10-29T23:50:55.602Z",
+    "scope": "Wave numerical diagnostics and M10 free-surface preparation UI only; no controllers, solvers, plans or scientific data changed.",
+    "sources_edited": [
+      "configured_mesh_panel.py",
+      "build_professor_dashboard.py"
+    ],
+    "display": {
+      "R6": {
+        "reference": "R4",
+        "only_change": "10 to 20 inner iterations",
+        "window_s": [
+          0.502,
+          0.75
+        ],
+        "mass_peak_reference_pct": 0.01451935956931171,
+        "mass_peak_probe_pct": 0.0113353042956708,
+        "mass_gate_pct": 0.01,
+        "mass_gate_pass": false,
+        "samples_above_gate": 4,
+        "max_gauge_difference_mm": 0.2902115581271403
+      },
+      "R8": {
+        "case": "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8",
+        "state_at_capture": "propagation_GPU_running",
+        "time_at_capture_s": 0.725,
+        "settings": "second-order / 0.5 ms / 10 inner",
+        "same_source_s": 0.5,
+        "target_s": 0.75,
+        "steps": 500,
+        "result_at_capture": "pending",
+        "future_result": "Dynamically display case-matched finite unchanged-source wave_halfdt_probe_r8_review.json when present; no wave-force acceptance claim"
+      },
+      "M10": {
+        "id": "M10_FS020_r1",
+        "state_at_capture": "building_on_two_CPU",
+        "workers": 2,
+        "gpu": false,
+        "reference": "M09",
+        "nominal_FS_mm": [
+          28.571428571428573,
+          20
+        ],
+        "foil_prism_outer_controls": "unchanged by design; actual regenerated mesh audit still required",
+        "flow_admitted": false,
+        "old_LE_TE_design": "unbuilt"
+      },
+      "calm_M09_supported": true
+    },
+    "qa": {
+      "dashboards": [
+        "main",
+        "professor"
+      ],
+      "widths": [
+        1360,
+        390
+      ],
+      "javascript_errors": 0,
+      "duplicate_ids": 0,
+      "document_overflow": false,
+      "visual_review": [
+        "wave_numerics_professor_1360.png",
+        "wave_numerics_main_390.png",
+        "wave_fs_variant_professor_390.png",
+        "wave_numerics_fs_print17.png"
+      ],
+      "print_actual_pages": 18,
+      "print_intentional_pages": 18,
+      "changed_page17_no_clipping_or_orphans": true,
+      "print_adjustment": "Earlier R3 failure detail remains on-screen; omit it from the printed wave summary when the newer numerical diagnostic is present, avoiding an orphaned note page."
+    },
+    "artifacts": [
+      "wave_numerics_fs_dashboard_qa.json",
+      "wave_numerics_fs_professor_qa.pdf",
+      "wave_numerics_fs_print17.png"
+    ],
+    "previous_review": "paired_input_preparation_ui_review.json"
+  },
+  "wave_completed_audit_update": {
+    "status": "passed",
+    "checked_at": "2026-10-30T00:05:11.589Z",
+    "scope": "Dashboard status/readability only; no runtime, controller, solver, plan or scientific-data changes.",
+    "sources_edited": [
+      "configured_mesh_panel.py",
+      "build_professor_dashboard.py",
+      "build_dashboard_en.py"
+    ],
+    "display": {
+      "R8": {
+        "status": "Completed — mass-budget criterion not met",
+        "time_s": 0.75,
+        "steps": 500,
+        "peak_mass_budget_pct": 0.016637157241220096,
+        "gate_pct": 0.01,
+        "gate_pass": false,
+        "samples_above": 6,
+        "total_samples": 497,
+        "max_gauge_difference_mm": 0.2633149514039701,
+        "max_speed_m_s": 21.569160837168827,
+        "longer_propagation_admitted": false
+      },
+      "report_audit": {
+        "status_at_capture": "report_definitions_ready",
+        "display": "Report definitions exported; interpretation pending",
+        "workers": 1,
+        "gpu": false,
+        "steps_taken": 0,
+        "source_checkpoint": "R4 checkpoint_t0.750.sim",
+        "interpretation": "No established physical mass loss or validated wave claim."
+      },
+      "M10": {
+        "status_at_capture": "building_on_two_CPU",
+        "workers": 2,
+        "gpu": false,
+        "separate_from_calm_M09": true
+      },
+      "calm_M09_supported": true
+    },
+    "qa": {
+      "dashboards": [
+        "main",
+        "professor"
+      ],
+      "widths": [
+        1360,
+        390
+      ],
+      "javascript_errors": 0,
+      "duplicate_ids": 0,
+      "document_overflow": false,
+      "precise_R8_values_match_review": true,
+      "current_case_only_wave_figures": true,
+      "print_actual_pages": 18,
+      "print_intentional_pages": 18,
+      "changed_page": 17,
+      "no_clipping_or_orphan_on_changed_print_page": true,
+      "visual_review": [
+        "wave_completed_audit_professor_1360.png",
+        "wave_completed_audit_main_390.png",
+        "wave_completed_audit_print17.png"
+      ]
+    },
+    "print_policy": "Keep scientific numerical evidence; omit operational audit metadata, update/resource labels and repetitive status explanation to retain the existing intentional18-page structure.",
+    "artifacts": [
+      "wave_completed_audit_dashboard_qa.json",
+      "wave_completed_audit_professor_qa.pdf",
+      "wave_completed_audit_print17.png"
+    ],
+    "previous_review": "wave_numerics_fs_ui_review.json"
+  },
+  "m10_native_lineage_update": {
+    "updated_at": "2026-10-30T00:31:37.881Z",
+    "scope": "Bounded dashboard UI update only: native R10/R11 numerical lineage and prepared M10 free-surface mesh/inputs",
+    "status": "passed",
+    "qa_file": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_dashboard_qa.json",
+    "qa_script": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/qa_m10_native_lineage_ui.cjs",
+    "viewports": [
+      1920,
+      1360,
+      390
+    ],
+    "dashboards": [
+      "F:/ntnu/mesh_screening_20261028/dashboard.html",
+      "F:/ntnu/mesh_screening_20261028/professor_dashboard.html"
+    ],
+    "checks": {
+      "all_six_views_pass": true,
+      "js_errors": 0,
+      "page_overflow": false,
+      "duplicate_ids": false,
+      "m10_mobile_all_columns_visible": true,
+      "header_collisions": false,
+      "pdf_intentional_pages": 19,
+      "pdf_actual_pages": 19,
+      "print_pages_17_18_visually_checked": true,
+      "print_orphans_or_clipping": false
+    },
+    "pdf": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_qa.pdf",
+    "visual_review": [
+      "Desktop/projector diagnostic table has distinct rows for R6/R8/R10/R11; native absolute and legacy signed budget definitions retained.",
+      "M10 table fits all three columns on 390 px; long headings wrap, no overlap. Wider diagnostic table has an explicit horizontal-scroll hint.",
+      "Print page 17 retains planned wave cases and current R11 status. Page 18 contains the compact diagnostic table and measured M10 geometry with clear margins; all 19 pages intentional."
+    ],
+    "science_display": {
+      "calm_M09": "Supported calm template preserved; no wave acceptance implied.",
+      "R10": "Reporting equivalence recorded; both original 0.01% checks not met. Native absolute peak and native signed equivalence are distinguished.",
+      "R11": "Active during QA; final metrics pending. Parent partial exceedance record is intentionally not promoted to a final result. Dynamic renderer reads final review when present.",
+      "M10": "282379-cell short mesh; 317277-cell extension preserving source cells; both C01/W01 inputs prepared with zero flow steps. No flow admission.",
+      "live_times": [
+        {
+          "dashboard": "main",
+          "width": 1920,
+          "time": "Saved physical time\n0.680 s"
+        },
+        {
+          "dashboard": "main",
+          "width": 1360,
+          "time": "Saved physical time\n0.680 s"
+        },
+        {
+          "dashboard": "main",
+          "width": 390,
+          "time": "Saved physical time\n0.680 s"
+        },
+        {
+          "dashboard": "professor",
+          "width": 1920,
+          "time": "Saved physical time\n0.680 s"
+        },
+        {
+          "dashboard": "professor",
+          "width": 1360,
+          "time": "Saved physical time\n0.680 s"
+        },
+        {
+          "dashboard": "professor",
+          "width": 390,
+          "time": "Saved physical time\n0.680 s"
+        }
+      ]
+    },
+    "sources_edited": [
+      "configured_mesh_panel.py",
+      "build_professor_dashboard.py"
+    ],
+    "runtime_or_science_files_modified": false,
+    "screenshots": [
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1920_diagnostics.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1920_m10.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1360_diagnostics.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_1360_m10.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_390_diagnostics.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_main_390_m10.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1920_diagnostics.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1920_m10.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1360_diagnostics.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_1360_m10.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_390_diagnostics.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/m10_native_lineage_professor_390_m10.png"
+    ]
+  },
+  "r12_trace_update": {
+    "updated_at": "2026-10-30T00:53:00.165Z",
+    "status": "passed",
+    "scope": "Reporting-only R12 trace evidence in both English dashboards; no runtime/science edits",
+    "qa_file": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_dashboard_qa.json",
+    "screenshots": [
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_main_1920.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_main_1360.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_main_390.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_1920.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_1360.png",
+      "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_390.png"
+    ],
+    "viewports": [
+      1920,
+      1360,
+      390
+    ],
+    "all_six_views_pass": true,
+    "checks": {
+      "js_errors": 0,
+      "page_overflow": false,
+      "duplicate_ids": false,
+      "trace_table_fits_mobile": true,
+      "print_actual_pages": 19,
+      "print_intentional_pages": 19,
+      "print_pages_17_18_visually_checked": true,
+      "print_clipping_or_orphans": false
+    },
+    "pdf": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_qa.pdf",
+    "content": [
+      "R12 shown separately because its record ends at 0.650 s rather than the earlier 0.750 s comparison endpoint.",
+      "Complete 1500 water and 1500 air inner samples with matching physical-step endpoints.",
+      "Actual VOF one-cycle residual ratios 0.001342–0.004043; pressure two-cycle ratios 0.040178–0.080081.",
+      "Relative stopping at 0.1 observed; constant API cycle getters explicitly unreliable for sequencing/cost.",
+      "Native mass-budget peak 0.01438646% above unchanged 0.01% gate; no numerical or physics changes and no causal claim.",
+      "R11 completed failed outcome populated dynamically; M10 prepared inputs and all calm/historical cohorts preserved.",
+      "R13 became active during QA, correctly sourced from wave_propagation_state.json; first transient progress was still pending in the captured snapshot."
+    ],
+    "sources_edited": [
+      "configured_mesh_panel.py",
+      "build_professor_dashboard.py"
+    ],
+    "runtime_or_science_files_modified": false
+  }
+}

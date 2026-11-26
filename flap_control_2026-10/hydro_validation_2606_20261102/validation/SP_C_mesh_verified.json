@@ -1,0 +1,23 @@
+{
+  "cells": 361532,
+  "min_volume_m3": 9.026037388590407e-12,
+  "min_cell_quality": 0.05077428743976946,
+  "min_face_validity": 1.0,
+  "centroid_y_min": 0.01999999999999994,
+  "centroid_y_max": 0.020000000000000035,
+  "nominal_gap_m": 0.0025,
+  "gap_core_target_m": 0.00035,
+  "hinge_prism_layers": 24,
+  "hinge_prism_thickness_m": 0.00065,
+  "native_prism_layers": 48,
+  "native_prism_thickness_m": 0.01546,
+  "first_prism_m": 1.530612244897959e-06,
+  "hydrodynamically_validated": false,
+  "negative_volume_cells": 0,
+  "unclosed_cells": 0,
+  "overset_interpolation": "Linear quasi2D",
+  "checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+  "sha256": "8d4692832503adba9a8dca8b1583c56ea57a6f5979c2887b3dca1a70bb8f8eb6",
+  "prism_layer_settings_are_targets": true,
+  "prism_detection_note": "STAR documentation GUID-1F005C26 warns that prism layer detection may be reduced for directed meshes; configured 48/24 must not be mistaken for measured complete coverage."
+}

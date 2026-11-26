@@ -1,0 +1,144 @@
+{
+  "at": "2026-11-03T15:53:10.621227+01:00",
+  "current_lab": "EXPLORATION LAB",
+  "current_run": "sealed_demo_delta_0",
+  "main_model": "L1_GAP_true2D_steady_SST",
+  "runs": [
+    {
+      "run_id": "gap_delta_0_gentle_start",
+      "fidelity": "L1_GAP",
+      "cells": 89750,
+      "mesh_seconds": 3.4751007000013487,
+      "min_SICN": 0.015974386910192533,
+      "gap_mm": 2.5,
+      "delta_deg": 0,
+      "native_sim": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0_gentle_start\\MINI_prepared.sim",
+      "state": {
+        "status": "HOLD_PHYSICAL",
+        "iterations_this_run": 1,
+        "elapsed_s": 2.4922302,
+        "validation": false,
+        "DRL_allowed": false
+      },
+      "samples": 1,
+      "latest": {
+        "iteration": "1",
+        "solver_s": "0.2657398",
+        "elapsed_s": "1.1989829",
+        "CL": "0.034214608137601056",
+        "CD": "0.48482873469362814",
+        "Mh": "-2930.017753182507",
+        "Fx": "93465.28347423763",
+        "Fy": "6595.892156766731",
+        "pABSmin": "-4322943.101565355",
+        "mass_relative": "1.1757828635346217E-4",
+        "min_quality": "0.15517515669441467"
+      },
+      "solver_mean_s_per_iteration_after10": null,
+      "W04_max_slowdown": 0.006926399210102296
+    },
+    {
+      "run_id": "gap_delta_0",
+      "fidelity": "L1_GAP",
+      "cells": 89750,
+      "mesh_seconds": 3.4751007000013487,
+      "min_SICN": 0.015974386910192533,
+      "gap_mm": 2.5,
+      "delta_deg": 0,
+      "native_sim": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0\\MINI_prepared.sim",
+      "state": {
+        "status": "HOLD_PHYSICAL",
+        "iterations_this_run": 1,
+        "elapsed_s": 2.980074,
+        "validation": false,
+        "DRL_allowed": false
+      },
+      "samples": 1,
+      "latest": {
+        "iteration": "3",
+        "solver_s": "0.3684991",
+        "elapsed_s": "2.557408",
+        "CL": "0.19844114926886247",
+        "CD": "-1.4337031832406792",
+        "Mh": "-3404.3504273490685",
+        "Fx": "-276389.2996651381",
+        "Fy": "38255.48475605131",
+        "pABSmin": "-1799624.1811583072",
+        "mass_relative": "9.419109203491728E-4",
+        "min_quality": "0.15517515669441467"
+      },
+      "solver_mean_s_per_iteration_after10": null,
+      "W04_max_slowdown": 0.0
+    },
+    {
+      "run_id": "gap_delta_2",
+      "fidelity": "L1_GAP",
+      "cells": 90198,
+      "mesh_seconds": 3.231044000000111,
+      "min_SICN": 0.015974386910192533,
+      "gap_mm": 2.5,
+      "delta_deg": 2,
+      "native_sim": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_2\\MINI_prepared.sim",
+      "state": {
+        "status": "BUILT_NOT_SOLVED",
+        "cells": 90198,
+        "true_2D": true,
+        "SST": true,
+        "VOF": false,
+        "Overset": false,
+        "fields_initialized": false,
+        "solver_iterations": 0
+      },
+      "samples": 0,
+      "latest": null
+    },
+    {
+      "run_id": "sealed_demo_delta_0",
+      "fidelity": "L1_SEALED_ALGORITHM_DEMONSTRATOR",
+      "cells": 14776,
+      "mesh_seconds": 0.6448042999982135,
+      "min_SICN": 0.004401745677350322,
+      "gap_mm": 0,
+      "delta_deg": 0,
+      "native_sim": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\sealed_demo_delta_0\\MINI_prepared.sim",
+      "state": {
+        "status": "HOLD_LIMIT",
+        "iterations_this_run": 900,
+        "elapsed_s": 63.1693086,
+        "validation": false,
+        "DRL_allowed": false
+      },
+      "samples": 900,
+      "latest": {
+        "iteration": "900",
+        "solver_s": "0.0247569",
+        "elapsed_s": "63.0223075",
+        "CL": "0.3238441283144926",
+        "CD": "0.005389185969011046",
+        "Mh": "-560.383443382757",
+        "Fx": "1038.9272711059496",
+        "Fy": "62430.67105646788",
+        "pABSmin": "26892.71426325821",
+        "mass_relative": "3.25992198020305E-7",
+        "min_quality": "0.06964124789458148"
+      },
+      "solver_mean_s_per_iteration_after10": 0.04159562876404494,
+      "W04_max_slowdown": 0.022465445228162517
+    }
+  ],
+  "validation_lab": "ARCHIVED HOLD; production t1.212 preserved; W04 priority",
+  "static_plan_deg": [
+    -5,
+    -2,
+    0,
+    2,
+    5
+  ],
+  "dynamic_plan_amplitudes_deg": [
+    2,
+    5
+  ],
+  "DRL_5deg_allowed": false,
+  "sealed_equivalence": false,
+  "no_wave_or_DRL_started": true
+}

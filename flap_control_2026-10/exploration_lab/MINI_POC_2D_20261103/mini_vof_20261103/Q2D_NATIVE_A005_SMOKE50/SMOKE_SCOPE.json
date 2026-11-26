@@ -1,0 +1,12 @@
+{
+  "steps": 50,
+  "dt_s": 0.001,
+  "CPU": 1,
+  "affinity_mask": 16,
+  "GPU": false,
+  "native_first_order_wave": true,
+  "native_wave_BC_and_initial_fields": true,
+  "forcing_damping_zones": false,
+  "reason": "Bounded .05s pilot on initialized wave; before long propagation, absorption/reflections require separate verification; no night launch",
+  "remaining_absorption_API_issue": "2606 boundary no longer exposes legacy VofWaveForcingLength in boundary values"
+}

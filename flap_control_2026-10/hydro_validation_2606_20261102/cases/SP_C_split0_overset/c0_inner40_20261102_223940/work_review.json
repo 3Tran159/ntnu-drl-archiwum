@@ -1,0 +1,138 @@
+{
+  "at": "2026-11-02T23:09:41.337635+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940",
+  "samples": 108,
+  "last_time_s": 0.5184,
+  "macro_status": {
+    "status": "paused_by_marker",
+    "steps": 108,
+    "start_time_s": 0.3024000000000002,
+    "saved_time_s": 0.5184000000000004,
+    "pressure_violations": 0,
+    "hydrodynamic_convergence_verified": false,
+    "training_approved": false
+  },
+  "scientific_approved": false,
+  "training_approved": false,
+  "whole_run_guards": {
+    "pressure": true,
+    "volume": true,
+    "quality": true,
+    "face": true,
+    "overset_active_errors": true,
+    "angle_zero": true
+  },
+  "window_results": [
+    {
+      "end_step": 25,
+      "time_s": 0.3524,
+      "means": {
+        "CL_hydro": 0.37539095481532003,
+        "CD": 0.006476618704222801,
+        "Mh_Nm": -11.366911699607996,
+        "Fx_N": 24.971251075995998,
+        "Fz_N": 1470.0243289256
+      },
+      "relative_ranges": {
+        "CL_hydro": 9.119202676798407e-05,
+        "CD": 0.0009162241813201775,
+        "Mh_Nm": 0.00011565764164814009,
+        "Fx_N": 0.0009162241823755261,
+        "Fz_N": 8.978589496982193e-05
+      },
+      "mass_max": 2.2633669305091813e-05,
+      "pabs_min": 20992.0111448
+    },
+    {
+      "end_step": 50,
+      "time_s": 0.4024,
+      "means": {
+        "CL_hydro": 0.37540161166952,
+        "CD": 0.0064762184330132,
+        "Mh_Nm": -11.366843328688,
+        "Fx_N": 24.969707790328,
+        "Fz_N": 1470.0654174928
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0001452844162214944,
+        "CD": 0.0011708310595805577,
+        "Mh_Nm": 0.00018641360127243746,
+        "Fx_N": 0.0011708310583964827,
+        "Fz_N": 0.00014304427374311256
+      },
+      "mass_max": 2.8931896521060956e-05,
+      "pabs_min": 20973.0789524,
+      "relative_mean_change": {
+        "CL_hydro": 2.8388681355462353e-05,
+        "CD": -6.180249724130338e-05,
+        "Mh_Nm": -6.014907285467608e-06
+      },
+      "force_window_pass": true
+    },
+    {
+      "end_step": 75,
+      "time_s": 0.4524,
+      "means": {
+        "CL_hydro": 0.37541962682348,
+        "CD": 0.0064754311419076005,
+        "Mh_Nm": -11.367103680712,
+        "Fx_N": 24.966672310728,
+        "Fz_N": 1470.1348767183997
+      },
+      "relative_ranges": {
+        "CL_hydro": 9.12651138937946e-05,
+        "CD": 0.0005506759105077046,
+        "Mh_Nm": 0.00011382040107516168,
+        "Fx_N": 0.0005506759102249644,
+        "Fz_N": 8.98579593559605e-05
+      },
+      "mass_max": 2.99824502235424e-05,
+      "pabs_min": 20994.693145,
+      "relative_mean_change": {
+        "CL_hydro": 4.798901602964811e-05,
+        "CD": -0.00012156648416705718,
+        "Mh_Nm": 2.2904514161981027e-05
+      },
+      "force_window_pass": true
+    },
+    {
+      "end_step": 100,
+      "time_s": 0.5024,
+      "means": {
+        "CL_hydro": 0.37544780491372004,
+        "CD": 0.0064732909865904,
+        "Mh_Nm": -11.367668245524001,
+        "Fx_N": 24.958420727888,
+        "Fz_N": 1470.2435201648002
+      },
+      "relative_ranges": {
+        "CL_hydro": 9.958829832185222e-05,
+        "CD": 0.0007426696945895107,
+        "Mh_Nm": 0.00012719033215713012,
+        "Fx_N": 0.0007426696946128063,
+        "Fz_N": 9.805292662256765e-05
+      },
+      "mass_max": 2.5787805496427743e-05,
+      "pabs_min": 20989.49196,
+      "relative_mean_change": {
+        "CL_hydro": 7.50575841717005e-05,
+        "CD": -0.0003305039109056107,
+        "Mh_Nm": 4.966654900484535e-05
+      },
+      "force_window_pass": true
+    }
+  ],
+  "last_25_means": {
+    "CL_hydro": 0.3754542958118,
+    "CD": 0.0064730337038452004,
+    "Fx_N": 24.95742874854,
+    "Fz_N": 1470.2685464715998,
+    "Mh_Nm": -11.367685732752
+  },
+  "delta_B_percent": {
+    "CL_hydro": 14.713800521623144,
+    "CD": -9.639688523595813
+  },
+  "field_exports": {},
+  "energy_screen_caution": "Mean-flow piezometric total pressure is a consistency diagnostic, not a strict universal Bernoulli bound in unsteady viscous RANS."
+}

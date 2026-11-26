@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "case": "W01a_W20L4_M10_calm_start_r1",
+  "reviewed_at": "2026-10-30",
+  "surfaces": [
+    "operational",
+    "professor"
+  ],
+  "widths": [
+    1920,
+    1360,
+    390
+  ],
+  "scope": "New-case transition, stage-aware restored progress visuals, controls compatibility, catalog integration and read-only UI QA",
+  "results": {
+    "isolated_current_case_history": true,
+    "old_r2_curves_removed_from_current_panel": true,
+    "old_restart_time_removed": true,
+    "wave_period": null,
+    "phase_overlays_inactive": true,
+    "current_height_m": 0,
+    "stage_cards": 4,
+    "progress_bars": 3,
+    "calm_eta": "Measured current-case main-step history only; first assessment and diagnostic cap labelled separately; no predicted settling time",
+    "planned_wave_visual": "Muted pending onset;10periods indicative,20review cap",
+    "manual_stop_validation": "W01a resolved path accepted; outside/unrelated cases rejected; no STOP file created",
+    "http_service_pid": 26648,
+    "http_previous_pid": 584,
+    "solver_actions": 0,
+    "computed_file": "checkpoint_startup_t0.020.sim,407.7MiB,verified completed startup",
+    "collector_mode": "calm",
+    "catalog_rows": 11,
+    "catalog_period_W01a": "Pending",
+    "js_errors": 0,
+    "page_overflow": false,
+    "duplicate_ids": 0,
+    "images": "Current side view intentionally awaiting W01a export; historical unloaded lazy images are not counted as broken",
+    "original_working_copy_hash_parity": true
+  },
+  "evidence": {
+    "ui": "w01a_transition_qa_20261030/qa.json",
+    "catalog": "w01a_transition_qa_20261030/catalog_integrated_qa.json",
+    "print": "w01a_transition_qa_20261030/catalog_print_review.json",
+    "wide": "w01a_transition_qa_20261030/operational_1920_panel.png",
+    "mobile": "w01a_transition_qa_20261030/professor_390_panel.png",
+    "catalog_print": "w01a_transition_qa_20261030/professor_catalog_print_3.png"
+  },
+  "limitations": [
+    "Screenshots record a changing live case; state times differ between captures.",
+    "Latest actual whole-field export from W01a not yet available at review; previous-wave image cleared.",
+    "CPU zero-step audit export is being prepared separately; no scientific field/force acceptance is implied."
+  ],
+  "campaign_report": {
+    "status": "PASS bounded screen review",
+    "widths": [
+      1360,
+      390
+    ],
+    "rows": 16,
+    "banner": "Campaign unarmed \u00b7 physical guard failure",
+    "rejected_W01_time_s": 1.064,
+    "accepted_mean_coefficients": "Pending",
+    "evidence": "w01a_transition_qa_20261030/campaign_1360.png"
+  },
+  "superseded_by": "w01a_native_fields_ui_review.json"
+}

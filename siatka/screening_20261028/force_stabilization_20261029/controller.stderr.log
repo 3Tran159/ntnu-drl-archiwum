@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_queue.py", line 84, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_queue.py", line 75, in main
+    r=run_job(j);results.append(r);write(ROOT/'queue_results.json',results)
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_queue.py", line 28, in run_job
+    if shutil.disk_usage(ROOT).free<20*GIB:raise RuntimeError('Insufficient disk reserve')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Insufficient disk reserve

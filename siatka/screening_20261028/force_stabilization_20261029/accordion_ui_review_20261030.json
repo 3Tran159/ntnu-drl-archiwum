@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "updated_at": "2026-10-30T07:56:55.697Z",
+  "scope": "Both English local dashboards: collapsible sections, live operational status, restored original schematic, screen and print checks.",
+  "viewports": [
+    1920,
+    1360,
+    390
+  ],
+  "checks": {
+    "horizontal_topic_bars": true,
+    "nested_mesh_test_bars": true,
+    "separate_wave_validation": true,
+    "keyboard_toggle": true,
+    "expanded_state_survives_reload": true,
+    "no_javascript_errors": true,
+    "no_duplicate_ids": true,
+    "no_page_overflow": true,
+    "no_broken_visible_images": true,
+    "main_computer_status_outside_collapsible_sections": true,
+    "original_schematic_single_instance_in_header": true,
+    "desktop_schematic_right_mobile_stacked": true
+  },
+  "professor": {
+    "status": "PASS",
+    "pdf_pages": 20,
+    "visual_review": "Overview and expanded mesh/wave sections inspected. All print pages rendered and visually reviewed; wave gauge figure, three table rows and caveat fit one page after correction."
+  },
+  "operational": {
+    "status": "PASS",
+    "pdf_pages": 39,
+    "visual_review": "Overview, live computer values and expanded mesh/wave sections inspected at desktop and mobile sizes. Print images bounded; blank pages and orphan static-figure header corrected. Long historical archive remains fully included.",
+    "observed_status_sample": {
+      "cpu_pct": 79,
+      "gpu_pct": 3,
+      "memory_used_GiB": 23.9,
+      "memory_total_GiB": 63.4,
+      "sample_age_s": [
+        15,
+        17
+      ],
+      "campaign": "Paused — no campaign solve"
+    },
+    "historical_force_chart": {
+      "status": "PASS",
+      "viewport_1360": {
+        "charts": 2,
+        "paths_per_chart": 7,
+        "viewBox": "0 0 1144 340"
+      },
+      "viewport_390": {
+        "charts": 2,
+        "paths_per_chart": 7,
+        "viewBox": "0 0 310 290"
+      },
+      "finite_paths": true,
+      "rendered_after_opening_previously_collapsed_ancestors": true
+    }
+  },
+  "artifacts": {
+    "folder": "accordion_qa_20261030",
+    "combined_checks": "accordion_qa_20261030/qa.json",
+    "latest_main_checks": "accordion_qa_20261030/qa_main.json",
+    "latest_main_print": "accordion_qa_20261030/qa_main_print.json",
+    "header_checks": "accordion_qa_20261030/header_qa.json",
+    "force_charts": "accordion_qa_20261030/force_chart_qa.json",
+    "main_pdf": "accordion_qa_20261030/main_expanded.pdf",
+    "professor_pdf": "accordion_qa_20261030/professor_expanded.pdf"
+  },
+  "notes": [
+    "Operational print includes the complete historical archive; professor print is the focused discussion version.",
+    "Older rendered page files are preserved. Use the current PDF page count, not the number of leftover image files, to identify current print pages.",
+    "Machine readings are whole-computer samples. Separate STAR work was not controlled or modified."
+  ],
+  "no_cfd_launched": true,
+  "source_files_edited_by_qa": false
+}

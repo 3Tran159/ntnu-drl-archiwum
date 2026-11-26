@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-03T11:10:14.315280+01:00",
+  "job": {
+    "id": "C0_SPEED_DOWN_20261103_SMOKE",
+    "kind": "c0_speeddown",
+    "experiment_id": "C0_SPEED_DOWN_20261103",
+    "approved": true,
+    "macro": "C0SpeedDownSmoke.java",
+    "macro_sha256": "2931ec27a120262f16413404d97b1ae8b2f402d1721a40396648397ad8f14b79",
+    "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\relocation_reopen_20261103_082325\\C0_recovered_t065.sim",
+    "input_sha256": "c8b2396f2d087112d06045b06a6c62e93c4003eafde969aa8c8d0ca8120afc10",
+    "initial_time_s": 0.65,
+    "cpu_processes": 8,
+    "angle_deg": 0,
+    "progress_timeout_s": 900,
+    "maximum_runtime_s": 1800,
+    "runtime_guards": {
+      "minimum_absolute_pressure_Pa": 12339.214766776897,
+      "maximum_mass_imbalance_relative": 0.0001,
+      "maximum_omega_floor_cells": 0,
+      "maximum_k_floor_cells": 0,
+      "maximum_overset_error_cells": 0,
+      "maximum_turbulent_viscosity_ratio": 99999
+    }
+  },
+  "backup": "F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\C0_speed_down_20261103\\integration_backup_20261103_111012",
+  "original_candidate_preserved": true,
+  "correction": "Only executable copy: mass imbalance normalized by actual inlet mass flow instead of18m/s constant; same1e-4 threshold; distinctive diagnostic outcome labels",
+  "preflight_resources": {
+    "ram_available_GiB": 40.96,
+    "disk_free_GiB": 19.96
+  },
+  "registered": true,
+  "launched": false
+}

@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-03T00:09:43.281619+01:00",
+  "kind": "work_scientific_decision",
+  "previous_job": "c0_fresh_no_continuity_init",
+  "conclusion": "rejected_initialization_diverged_50_iterations",
+  "next_job": {
+    "id": "c0_fresh_no_flux_init",
+    "macro": "FreshC0NoFluxInit.java",
+    "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+    "initial_time_s": 0,
+    "angle_deg": 0,
+    "approved": true,
+    "purpose": "Startup diagnostic only: relative to no-CI control, disable Overset flux correction. Same mesh, DISTANCE, physics. Original historical C began with conservation NONE. Tighter divergence guards; no acceptance of this different numerical configuration."
+  },
+  "scientific_gate": false,
+  "reason": "Valid uniform initial pressure did not prevent subsequent pressure divergence. Historical C initialized with conservation NONE and was switched to FLUX_CORRECTION later; test this difference explicitly."
+}

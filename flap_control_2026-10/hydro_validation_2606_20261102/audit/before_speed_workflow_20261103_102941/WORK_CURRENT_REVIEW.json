@@ -1,0 +1,118 @@
+{
+  "at": "2026-11-03T08:57:40.269777+01:00",
+  "status": "FAIL_PLUS2_SCIENTIFIC_HOLD",
+  "scientific_approved": false,
+  "training_eligible": false,
+  "last_decision": "Five active URANS ramp steps passed. Continuation prepared from t0.660 checkpoint; not launched. Old step+2 failure remains blocked.",
+  "original_rejected_difference": {
+    "CL_percent": 14.6869,
+    "CD_percent": -9.56915
+  },
+  "C0": {
+    "time_s": 0.65,
+    "iteration": 11560,
+    "CL_mean25": 0.32561948776312,
+    "CD_mean25": 0.0072459371243424,
+    "Mh_mean25": -12.040069616324,
+    "pabs_min_Pa": 30097.6945773,
+    "mass_relative": 2.98365817057e-09
+  },
+  "B0": {
+    "time_s": 0.5,
+    "iteration": 6250,
+    "CL_mean25": 0.32661098046588,
+    "CD_mean25": 0.007191107030274,
+    "Mh_mean25": -12.160189508284
+  },
+  "current_difference_percent": {
+    "CL": -0.3035699232603051,
+    "CD": 0.762470838461593
+  },
+  "confirmed": [
+    "Original Cp/head spikes near hinge and y+~571 rejected.",
+    "isEmpty() audit invalid; replaced with native midspan full Overset extraction.",
+    "More inner iterations and interpolation alone did not cure original case.",
+    "Tight numerical cage removed near-wall spikes; physical geometry retained.",
+    "Top backflow EXTRAPOLATED strongly improved C0 residual plateau and top pressure spikes. Matched B0 completed."
+  ],
+  "not_established": [
+    "Formal grid/time uncertainty remains unquantified.",
+    "Far-field velocity memory remains.",
+    "Matched original A control and quantitative energy validation remain separate.",
+    "No +2degree hydrodynamic solution yet."
+  ],
+  "next_test": "Review and run only the first +2degree hydrodynamic diagnostic in a new copy; no later angles queued.",
+  "parameters": {
+    "version": "2606.0002 build21.04.009-R8",
+    "CPU": 8,
+    "GPU": false,
+    "MPI": "ms",
+    "U": 18,
+    "rho": 1000,
+    "mu": 0.001,
+    "Re": 21420000,
+    "chord_m": 1.19,
+    "span_m": 0.02,
+    "hinge_xyz": [
+      0.952,
+      0.02,
+      0.02128173276776986
+    ],
+    "hinge_x_c": 0.8,
+    "gap_m": 0.0025,
+    "delta": 0,
+    "model": "single phase URANS SST AllYplus",
+    "dt": 0.002,
+    "inner": 40,
+    "URF": [
+      0.8,
+      0.2
+    ],
+    "schemes": "SECOND_ORDER",
+    "top_backflow": "EXTRAPOLATED",
+    "pref_Pa": 101325,
+    "water_C": 20,
+    "vapor_Pa": 2339.2147668,
+    "required_cavitation_margin_Pa": 10000,
+    "CPU_max": 16
+  },
+  "C0_mesh": {
+    "cells": 333939,
+    "active": 255350,
+    "inactive": 77108,
+    "acceptors": 1481,
+    "errors": 0,
+    "difficult": 0,
+    "min_volume": 9.128750119e-12,
+    "min_quality": 0.061048186,
+    "interpolation": "DISTANCE",
+    "flux_correction": true,
+    "prism_targets": [
+      48,
+      24
+    ],
+    "collapsed_faces": 630,
+    "negative_volume": false,
+    "formal_validation": false
+  },
+  "unsaved_solver_progress": null,
+  "native_reopen_verified": true,
+  "accepted_for_kinematics": true,
+  "quantitative_hydrodynamic_validation": false,
+  "obstacle": "No short-start blocker. Full0.2s ramp/hold and automatic stability criterion still require actual run.",
+  "acceptance_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\C0_KINEMATIC_BASE_ACCEPTANCE_20261103.json",
+  "current_job_kind": "ramp",
+  "current_mesh_cells": 333939,
+  "current_case_label": "C +2deg preparation only; no hydrodynamic run",
+  "next": "User runs F:\\ntnu\\flap_control\\START_RAMP_PLUS2.cmd; one existing controller executes only approved ramp/hold.",
+  "kinematic_sweep_accepted": true,
+  "kinematic_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\KINEMATIC_POC_REVIEW_20261103.json",
+  "current_run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\plus2_benchmark_20261103_091101",
+  "current_case_checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\static_plus2_prepared_20261103_085250\\SP_C_plus2_prepared_NOT_SOLVED_2606.sim",
+    "bytes": 1528117142,
+    "sha256": "4f5fd71acc76a75f21fbacdaa8d6e2e0c3b4145d34fd3480b0a19429fbeba22a",
+    "saved_time_s": 0.67
+  },
+  "static_preparation_review": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\STATIC_PLUS2_PREPARATION_REVIEW_20261103.json"
+}

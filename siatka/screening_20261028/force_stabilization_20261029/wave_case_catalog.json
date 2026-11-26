@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "title": "Wave cases and parameters",
+  "updated_at": "2026-10-30",
+  "shared": {
+    "water_depth_m": 24,
+    "air_height_m": 6,
+    "z_bounds_m": [
+      -22,
+      8
+    ],
+    "waterline_z_m": 2,
+    "speed_m_s": 18,
+    "foil_submergence_m": 2,
+    "span_m": 0.02,
+    "wave_theory": "Fifth-order",
+    "time_integration": "Second-order implicit"
+  },
+  "definitions": {
+    "H": "Crest-to-trough wave height",
+    "lambda": "Wavelength",
+    "T": "Actual STAR encounter period for this case",
+    "W": "Wave configuration",
+    "a": "Changed startup version",
+    "M": "Mesh identifier",
+    "r": "Technical attempt identifier; it does not define a new wave"
+  },
+  "cases": [
+    {
+      "id": "C01",
+      "height_m": 0,
+      "wavelength_m": null,
+      "domain_length_m": null,
+      "domain_id": null,
+      "campaign_case_id": null,
+      "startup": "Settle the matched calm flow, then save reusable computed C01_settled.sim",
+      "purpose": "Matched calm references",
+      "status_default": "Separate reference required for each domain"
+    },
+    {
+      "id": "W01",
+      "height_m": 0.5,
+      "wavelength_m": 20,
+      "domain_length_m": 80,
+      "domain_id": "L20_X4_M10",
+      "campaign_case_id": "W01",
+      "startup": "Wave initialized throughout the domain",
+      "purpose": "Original wave setup; preserved failed trial",
+      "failure_review": "wave_foil_r2_guard_review.json",
+      "period_source": "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/setup.json",
+      "period_key": "wave_period_s",
+      "status_default": "Stopped · physical guard failure"
+    },
+    {
+      "id": "W01a",
+      "height_m": 0.5,
+      "wavelength_m": 20,
+      "domain_length_m": 80,
+      "domain_id": "L20_X4_M10",
+      "campaign_case_id": null,
+      "startup": "Copy the settled computed C01; full inlet H = 0.50 m from wave activation; no height ramp",
+      "purpose": "Changed startup; same H, wavelength and domain as W01",
+      "active_prefix": "W01a_",
+      "status_default": "Waiting for settled C01 and saved-state wave setup"
+    },
+    {
+      "id": "W02",
+      "height_m": 0.5,
+      "wavelength_m": 30,
+      "domain_length_m": 120,
+      "domain_id": "L30_X4_M10",
+      "campaign_case_id": "W02",
+      "startup": "Wave startup pending configuration review",
+      "purpose": "Original longer-wave case",
+      "status_default": "Planned"
+    },
+    {
+      "id": "W03",
+      "height_m": 0.25,
+      "wavelength_m": 20,
+      "domain_length_m": 80,
+      "domain_id": "L20_X4_M10",
+      "campaign_case_id": "W03",
+      "startup": "Wave startup pending configuration review",
+      "purpose": "Lower wave height",
+      "status_default": "Planned"
+    },
+    {
+      "id": "W04",
+      "height_m": 0.75,
+      "wavelength_m": 20,
+      "domain_length_m": 80,
+      "domain_id": "L20_X4_M10",
+      "campaign_case_id": "W04",
+      "startup": "Wave startup pending configuration review",
+      "purpose": "Higher wave height",
+      "status_default": "Planned"
+    },
+    {
+      "id": "W05",
+      "height_m": 0.25,
+      "wavelength_m": 30,
+      "domain_length_m": 120,
+      "domain_id": "L30_X4_M10",
+      "campaign_case_id": "W05",
+      "startup": "Wave startup pending configuration review",
+      "purpose": "Longer wave, lower height",
+      "status_default": "Planned"
+    },
+    {
+      "id": "W06",
+      "height_m": 0.75,
+      "wavelength_m": 30,
+      "domain_length_m": 120,
+      "domain_id": "L30_X4_M10",
+      "campaign_case_id": "W06",
+      "startup": "Wave startup pending configuration review",
+      "purpose": "Longer wave, higher height",
+      "status_default": "Planned"
+    },
+    {
+      "id": "W07",
+      "height_m": 0.5,
+      "wavelength_m": 10,
+      "domain_length_m": 40,
+      "domain_id": "L10_X4_M10",
+      "campaign_case_id": "W07",
+      "startup": "Wave startup pending configuration review",
+      "purpose": "Short-wave case; separate 40 m domain",
+      "status_default": "Planned"
+    },
+    {
+      "id": "W08",
+      "height_m": 0.5,
+      "wavelength_m": 40,
+      "domain_length_m": 160,
+      "domain_id": "L40_X4_M10",
+      "campaign_case_id": "W08",
+      "startup": "Wave startup pending configuration review",
+      "purpose": "Longest-wave case",
+      "status_default": "Planned"
+    },
+    {
+      "id": "W01_3lambda",
+      "height_m": 0.5,
+      "wavelength_m": 20,
+      "domain_length_m": 60,
+      "domain_id": "L20_X3_M10",
+      "campaign_case_id": "W01_X3",
+      "startup": "Matched startup required for the domain comparison",
+      "purpose": "Three-wavelength domain sensitivity",
+      "status_default": "Planned sensitivity"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "running_with_user_early_stop_policy",
+  "case": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2",
+  "source": "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_diagnostic_r1/final.sim",
+  "initial_time_s": 0.168,
+  "period_s": 0.8472673206891129,
+  "minimum_assessment_periods": 4,
+  "maximum_periods": 20,
+  "earliest_assessment_s": 3.3890692827564517,
+  "target_cap_s": 16.946,
+  "steps": 16778,
+  "dt_s": 0.001,
+  "inner": 10,
+  "settings_changed": false,
+  "reinitialized": false,
+  "client_connection": "existing server port47829; no second GPU solver",
+  "stop_rule": "Evaluate as soon as four consecutive complete cycles are available and repeatable; ten is a rough expectation, no minimum10periodwait; twenty is diagnostic cap.",
+  "typical_periods": 10,
+  "policy_override_at": "2026-10-30T10:56:39.915423+01:00",
+  "policy_file": "wave_cycle_policy_current.json"
+}

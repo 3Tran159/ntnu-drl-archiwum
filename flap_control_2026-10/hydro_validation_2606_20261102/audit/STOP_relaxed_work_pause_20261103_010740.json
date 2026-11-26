@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-03T01:05:00+01:00",
+  "requested_by": "Work",
+  "scope": "owned flap CFD only",
+  "target_job": "c0_relaxed_initialization",
+  "reason": "Scientific diagnostic pause: refined/relaxed startup develops increasing localized excess mean-flow head (0.616MPa at50 to1.267MPa at250), speed49-52m/s and persistent SST clipping/cap; preserve partial fields and checkpoint at next10-iteration boundary. Not proof of asymptotic divergence, no acceptance.",
+  "requested_action": "graceful macro exit with full exports and checkpoint; no process termination"
+}

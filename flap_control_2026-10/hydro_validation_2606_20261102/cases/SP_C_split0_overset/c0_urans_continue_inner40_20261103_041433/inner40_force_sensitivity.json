@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-03T04:35:18.323289+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433",
+  "time_s": 0.45,
+  "samples": 75,
+  "scientific_approved": false,
+  "warning": "15-to-40 is a continuous-time continuation, so phase mean changes include physical drift. No paired-time claim.",
+  "metrics": {
+    "CL_hydro": {
+      "mean15_last25": 0.32454750837299995,
+      "mean40_last25": 0.32521116660556004,
+      "phase_change_percent": 0.20448723698021087,
+      "first5_vs_saved15_percent": 0.008754192578086517,
+      "change_vs_B_percent": -0.6371499552780491,
+      "last25_range_percent": 0.04593095973890758,
+      "last25_slope_percent_per_0p05s": 0.044567230605836124
+    },
+    "CD": {
+      "mean15_last25": 0.0072883761886736,
+      "mean40_last25": 0.0072635418628296,
+      "phase_change_percent": -0.3407388038311421,
+      "first5_vs_saved15_percent": -0.020193049447081446,
+      "change_vs_B_percent": 1.3954098149215666,
+      "last25_range_percent": 0.1066056110948537,
+      "last25_slope_percent_per_0p05s": -0.0789555195400507
+    },
+    "Mh_Nm": {
+      "mean15_last25": -12.030204931780002,
+      "mean40_last25": -12.036034791039999,
+      "phase_change_percent": 0.048460182457876755,
+      "first5_vs_saved15_percent": -0.0002931758936508544,
+      "change_vs_B_percent": -1.0689422949203609,
+      "last25_range_percent": 0.020135237576792205,
+      "last25_slope_percent_per_0p05s": -0.011027364429202317
+    }
+  },
+  "pressure_min_Pa": 21853.6821114,
+  "safety_reserve_min_Pa": 9514.46734458,
+  "mass_imbalance_max": 2.92046931259e-05
+}

@@ -1,0 +1,269 @@
+{
+  "at": "2026-11-03T14:21:44+0100",
+  "passes": 52,
+  "total": 52,
+  "overall_pass": true,
+  "results": [
+    {
+      "test": "Controller discovers multiple independent run_ids",
+      "pass": true,
+      "detail": "15"
+    },
+    {
+      "test": "Explicit smoke/production grouped",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "RAMP 5+73 unique samples",
+      "pass": true,
+      "detail": "78"
+    },
+    {
+      "test": "RAMP fail is preserved",
+      "pass": true,
+      "detail": "FAILED"
+    },
+    {
+      "test": "No expectation of new ramp samples",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "RAMP time never duplicated",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "RAMP provenance for 2 controller segments",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "RAMP first and last segments distinct",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Known latest dynamic run discovered",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "External approved controller output root discovered",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "External speed-down 20 source samples",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "External speed-down is diagnostic, not accepted",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Unknown dynamic run rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Case paths constrained to campaign",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Legacy reference series retained",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Combined registry contains all references + controller runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Completed alone never scientific ACCEPTED",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Explicit accepted scientific gate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Failed remains FAILED",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "New run_id becomes registry key",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Restart overlapping samples collapse",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "New segment overrides matching time",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Flow fields come from same named ramp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Two or more actual vector snapshots",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Latest full velocity older than failed solver",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Later mesh-only frame not fabricated into flow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Cp blocked without validated pressure reference",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Native source field time preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Real Background/FlapOverset layers",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Background has >1000 active populated bins",
+      "pass": true,
+      "detail": "20845"
+    },
+    {
+      "test": "FlapOverset has native populated active cells",
+      "pass": true,
+      "detail": "4252"
+    },
+    {
+      "test": "Velocity and pressure are from actual columns",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "No inactive/acceptor cells enter raster",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Native main and flap wall samples",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "No full field on newest mesh-only snapshot",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Hinge ROI properly clipped",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Invalid ROI rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Invalid frame identity rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Native mesh image real",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Real point pressure at last failure",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "New 12.339 kPa screen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/run_series",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/flow/manifest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/flow/frame",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /flow_field.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /flow_field.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /runs_registry.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "HTTP /api/flow/native",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Unknown run HTTP 404",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "Completed native CFD archives untouched",
+      "pass": true,
+      "detail": "no size/mtime changes"
+    },
+    {
+      "test": "Only volatile controller metadata may change independently",
+      "pass": true,
+      "detail": "external controller changes: []"
+    }
+  ],
+  "policy": "READ ONLY; test artifacts only in project_dashboard"
+}

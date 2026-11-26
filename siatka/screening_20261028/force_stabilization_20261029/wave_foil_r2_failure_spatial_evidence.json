@@ -1,0 +1,490 @@
+[
+  {
+    "time_s": 0.668,
+    "cells": 317277,
+    "all_fields_finite": true,
+    "maxima": {
+      "all": {
+        "Mass Imbalance of water (kg/s)": 4.122803385622417e-08,
+        "Mass Imbalance of air (kg/s)": 0.0,
+        "Mass Imbalance (kg/s)": 4.122803387573981e-08,
+        "Volume Fraction of water": 1.0,
+        "Density (kg/m^3)": 1000.0,
+        "Pressure (Pa)": -65813.97398992517,
+        "Convective Courant Number": 7.727730436185076,
+        "Velocity[i] (m/s)": 22.09420275429106,
+        "Velocity[j] (m/s)": -6.782568673403726e-17,
+        "Velocity[k] (m/s)": -1.515130329276994,
+        "Velocity: Magnitude (m/s)": 22.146092550660438,
+        "X (m)": 0.7036794941436321,
+        "Y (m)": 0.020000000000000004,
+        "Z (m)": 0.10541747186045475
+      },
+      "water_a_ge_099": {
+        "Mass Imbalance of water (kg/s)": 4.122803385622417e-08,
+        "Mass Imbalance of air (kg/s)": 0.0,
+        "Mass Imbalance (kg/s)": 4.122803387573981e-08,
+        "Volume Fraction of water": 1.0,
+        "Density (kg/m^3)": 1000.0,
+        "Pressure (Pa)": -65813.97398992517,
+        "Convective Courant Number": 7.727730436185076,
+        "Velocity[i] (m/s)": 22.09420275429106,
+        "Velocity[j] (m/s)": -6.782568673403726e-17,
+        "Velocity[k] (m/s)": -1.515130329276994,
+        "Velocity: Magnitude (m/s)": 22.146092550660438,
+        "X (m)": 0.7036794941436321,
+        "Y (m)": 0.020000000000000004,
+        "Z (m)": 0.10541747186045475
+      },
+      "interface_001_099": {
+        "Mass Imbalance of water (kg/s)": -1.5915318614241276e-05,
+        "Mass Imbalance of air (kg/s)": 8.373473729526197e-09,
+        "Mass Imbalance (kg/s)": -1.5906945139404992e-05,
+        "Volume Fraction of water": 0.04219290620192995,
+        "Density (kg/m^3)": 43.34227471448763,
+        "Pressure (Pa)": 7.243946018043535,
+        "Convective Courant Number": 0.09500368155041723,
+        "Velocity[i] (m/s)": 18.469102110959685,
+        "Velocity[j] (m/s)": -3.925101558230488e-18,
+        "Velocity[k] (m/s)": 0.01997947396525161,
+        "Velocity: Magnitude (m/s)": 18.469112917637258,
+        "X (m)": 35.989718309859164,
+        "Y (m)": 0.020000000000000004,
+        "Z (m)": 2.274338617496008
+      },
+      "air_a_le_001": {
+        "Mass Imbalance of water (kg/s)": -1.396471741346644e-10,
+        "Mass Imbalance of air (kg/s)": -6.809152644851602e-08,
+        "Mass Imbalance (kg/s)": -6.823117366591691e-08,
+        "Volume Fraction of water": 6.748763875529956e-08,
+        "Density (kg/m^3)": 1.2000674066535886,
+        "Pressure (Pa)": 1.6786197592420227,
+        "Convective Courant Number": 0.26088288858535147,
+        "Velocity[i] (m/s)": 21.101774245710665,
+        "Velocity[j] (m/s)": 1.3618892596722151e-17,
+        "Velocity[k] (m/s)": 3.346419727875772,
+        "Velocity: Magnitude (m/s)": 21.36547217620182,
+        "X (m)": 44.900985915492946,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.3549672542628874
+      },
+      "jet_patch": {
+        "Mass Imbalance of water (kg/s)": 2.59596169494003e-06,
+        "Mass Imbalance of air (kg/s)": -4.197427554026233e-09,
+        "Mass Imbalance (kg/s)": 2.5917642680894915e-06,
+        "Volume Fraction of water": 0.9959136398007938,
+        "Density (kg/m^3)": 995.9185434330328,
+        "Pressure (Pa)": 204.79972522430253,
+        "Convective Courant Number": 1.307984755628231,
+        "Velocity[i] (m/s)": 18.458393033785498,
+        "Velocity[j] (m/s)": 3.626700070602284e-19,
+        "Velocity[k] (m/s)": 0.2123558216800242,
+        "Velocity: Magnitude (m/s)": 18.459614524271693,
+        "X (m)": -3.865840272809863,
+        "Y (m)": 0.020000000000000004,
+        "Z (m)": 2.265397959758975
+      }
+    },
+    "zones": {
+      "forcing": {
+        "cells": 18700,
+        "signed_water_kg_s": -0.10078513351956482,
+        "signed_air_kg_s": 0.00012251630561456778,
+        "absolute_water_kg_s": 0.1384803745013956,
+        "absolute_air_kg_s": 0.00025545768650676203
+      },
+      "core": {
+        "cells": 262278,
+        "signed_water_kg_s": 0.1575337909810765,
+        "signed_air_kg_s": -0.00019042134150606472,
+        "absolute_water_kg_s": 3.810936096522048,
+        "absolute_air_kg_s": 0.004628651441811249
+      },
+      "damping": {
+        "cells": 36299,
+        "signed_water_kg_s": 0.1132454031759633,
+        "signed_air_kg_s": -0.0001270662922280127,
+        "absolute_water_kg_s": 0.47310782723288947,
+        "absolute_air_kg_s": 0.0006746145051690328
+      },
+      "jet_patch": {
+        "cells": 4231,
+        "signed_water_kg_s": -0.05289393131159189,
+        "signed_air_kg_s": 6.482823722346225e-05,
+        "absolute_water_kg_s": 0.08068542102234891,
+        "absolute_air_kg_s": 9.81441961013712e-05
+      }
+    },
+    "native_calibration": {
+      "water_sum_error_kg_s": 1.0269562977782698e-14,
+      "air_sum_error_kg_s": -1.111307226797642e-18,
+      "calibrated": true
+    }
+  },
+  {
+    "time_s": 0.938,
+    "cells": 317277,
+    "all_fields_finite": true,
+    "maxima": {
+      "all": {
+        "Mass Imbalance of water (kg/s)": 1.3455168489800995e-09,
+        "Mass Imbalance of air (kg/s)": 4.569116894039697e-21,
+        "Mass Imbalance (kg/s)": 1.3455168489800995e-09,
+        "Volume Fraction of water": 1.0,
+        "Density (kg/m^3)": 1000.0,
+        "Pressure (Pa)": -66504.49910664414,
+        "Convective Courant Number": 7.893341547246321,
+        "Velocity[i] (m/s)": 22.513324794664882,
+        "Velocity[j] (m/s)": -1.2956417255746328e-16,
+        "Velocity[k] (m/s)": -1.636992720642379,
+        "Velocity: Magnitude (m/s)": 22.572760984813282,
+        "X (m)": 0.7093159013265847,
+        "Y (m)": 0.02,
+        "Z (m)": 0.10371565696808349
+      },
+      "water_a_ge_099": {
+        "Mass Imbalance of water (kg/s)": 1.3455168489800995e-09,
+        "Mass Imbalance of air (kg/s)": 4.569116894039697e-21,
+        "Mass Imbalance (kg/s)": 1.3455168489800995e-09,
+        "Volume Fraction of water": 1.0,
+        "Density (kg/m^3)": 1000.0,
+        "Pressure (Pa)": -66504.49910664414,
+        "Convective Courant Number": 7.893341547246321,
+        "Velocity[i] (m/s)": 22.513324794664882,
+        "Velocity[j] (m/s)": -1.2956417255746328e-16,
+        "Velocity[k] (m/s)": -1.636992720642379,
+        "Velocity: Magnitude (m/s)": 22.572760984813282,
+        "X (m)": 0.7093159013265847,
+        "Y (m)": 0.02,
+        "Z (m)": 0.10371565696808349
+      },
+      "interface_001_099": {
+        "Mass Imbalance of water (kg/s)": 0.007352314933105234,
+        "Mass Imbalance of air (kg/s)": -8.862152064964459e-06,
+        "Mass Imbalance (kg/s)": 0.0073434527810372074,
+        "Volume Fraction of water": 0.23426316942902226,
+        "Density (kg/m^3)": 235.18205362570743,
+        "Pressure (Pa)": 75.62836757021323,
+        "Convective Courant Number": 0.09383280036822346,
+        "Velocity[i] (m/s)": 18.52208179819803,
+        "Velocity[j] (m/s)": 6.118729086106498e-18,
+        "Velocity[k] (m/s)": 0.002186677828681429,
+        "Velocity: Magnitude (m/s)": 18.522081927275313,
+        "X (m)": 42.722676056338024,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.21411053325502
+      },
+      "air_a_le_001": {
+        "Mass Imbalance of water (kg/s)": 0.0005604491531042746,
+        "Mass Imbalance of air (kg/s)": -6.003249788325959e-07,
+        "Mass Imbalance (kg/s)": 0.0005598488281254425,
+        "Volume Fraction of water": 0.0,
+        "Density (kg/m^3)": 1.2,
+        "Pressure (Pa)": 0.3606120610263777,
+        "Convective Courant Number": 1.475140959967388,
+        "Velocity[i] (m/s)": 19.016930153698926,
+        "Velocity[j] (m/s)": -1.8374841081281733e-17,
+        "Velocity[k] (m/s)": -0.7558347454906972,
+        "Velocity: Magnitude (m/s)": 19.031944688684717,
+        "X (m)": -4.89419124019302,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.0089527420982347
+      },
+      "jet_patch": {
+        "Mass Imbalance of water (kg/s)": 1.0192867136505273e-08,
+        "Mass Imbalance of air (kg/s)": -4.001080938786927e-09,
+        "Mass Imbalance (kg/s)": 6.191786204416683e-09,
+        "Volume Fraction of water": 4.606411496688727e-06,
+        "Density (kg/m^3)": 1.2046008838028928,
+        "Pressure (Pa)": -1.5496066650171623,
+        "Convective Courant Number": 1.2244878614946422,
+        "Velocity[i] (m/s)": 18.712385338545815,
+        "Velocity[j] (m/s)": -2.7276071224911574e-17,
+        "Velocity[k] (m/s)": -0.4026164662591058,
+        "Velocity: Magnitude (m/s)": 18.716716193743157,
+        "X (m)": -4.341811893529179,
+        "Y (m)": 0.02,
+        "Z (m)": 2.1264915581458137
+      }
+    },
+    "zones": {
+      "forcing": {
+        "cells": 18700,
+        "signed_water_kg_s": 0.47706436590598433,
+        "signed_air_kg_s": -0.0005553252370726923,
+        "absolute_water_kg_s": 0.5360810139673984,
+        "absolute_air_kg_s": 0.0007394291782446014
+      },
+      "core": {
+        "cells": 262278,
+        "signed_water_kg_s": -1.5780667215836421,
+        "signed_air_kg_s": 0.0018919981649070702,
+        "absolute_water_kg_s": 10.534201066490532,
+        "absolute_air_kg_s": 0.01270234099723687
+      },
+      "damping": {
+        "cells": 36299,
+        "signed_water_kg_s": 0.13426594568926892,
+        "signed_air_kg_s": -0.00016199548767877774,
+        "absolute_water_kg_s": 1.272621926037478,
+        "absolute_air_kg_s": 0.0016562692994670995
+      },
+      "jet_patch": {
+        "cells": 4231,
+        "signed_water_kg_s": 0.20151404906407971,
+        "signed_air_kg_s": -0.00024271716843364446,
+        "absolute_water_kg_s": 0.2874485165027689,
+        "absolute_air_kg_s": 0.0003487901301662768
+      }
+    },
+    "native_calibration": {
+      "water_sum_error_kg_s": 3.5083047578154947e-14,
+      "air_sum_error_kg_s": -4.553649124439119e-18,
+      "calibrated": true
+    }
+  },
+  {
+    "time_s": 0.972,
+    "cells": 317277,
+    "all_fields_finite": true,
+    "maxima": {
+      "all": {
+        "Mass Imbalance of water (kg/s)": -2.469435031893924e-09,
+        "Mass Imbalance of air (kg/s)": 8.136430405720739e-20,
+        "Mass Imbalance (kg/s)": -2.469435031893924e-09,
+        "Volume Fraction of water": 0.9999999999999998,
+        "Density (kg/m^3)": 999.9999999999998,
+        "Pressure (Pa)": -65849.81945124867,
+        "Convective Courant Number": 7.873700208676872,
+        "Velocity[i] (m/s)": 22.460438314802296,
+        "Velocity[j] (m/s)": -1.0517529858138675e-16,
+        "Velocity[k] (m/s)": -1.6348447434818167,
+        "Velocity: Magnitude (m/s)": 22.519858050803276,
+        "X (m)": 0.7093159013265847,
+        "Y (m)": 0.02,
+        "Z (m)": 0.10371565696808349
+      },
+      "water_a_ge_099": {
+        "Mass Imbalance of water (kg/s)": -2.469435031893924e-09,
+        "Mass Imbalance of air (kg/s)": 8.136430405720739e-20,
+        "Mass Imbalance (kg/s)": -2.469435031893924e-09,
+        "Volume Fraction of water": 0.9999999999999998,
+        "Density (kg/m^3)": 999.9999999999998,
+        "Pressure (Pa)": -65849.81945124867,
+        "Convective Courant Number": 7.873700208676872,
+        "Velocity[i] (m/s)": 22.460438314802296,
+        "Velocity[j] (m/s)": -1.0517529858138675e-16,
+        "Velocity[k] (m/s)": -1.6348447434818167,
+        "Velocity: Magnitude (m/s)": 22.519858050803276,
+        "X (m)": 0.7093159013265847,
+        "Y (m)": 0.02,
+        "Z (m)": 0.10371565696808349
+      },
+      "interface_001_099": {
+        "Mass Imbalance of water (kg/s)": 7.831448531359086e-05,
+        "Mass Imbalance of air (kg/s)": -1.0147485460289545e-07,
+        "Mass Imbalance (kg/s)": 7.821301045825638e-05,
+        "Volume Fraction of water": 0.965295188726656,
+        "Density (kg/m^3)": 965.336834500184,
+        "Pressure (Pa)": 164.85791640766666,
+        "Convective Courant Number": 0.09548083871073025,
+        "Velocity[i] (m/s)": 18.527991476158537,
+        "Velocity[j] (m/s)": 7.174545681633031e-18,
+        "Velocity[k] (m/s)": -0.024075560552844256,
+        "Velocity: Magnitude (m/s)": 18.52800711823102,
+        "X (m)": 43.11873239436619,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.21411053325502
+      },
+      "air_a_le_001": {
+        "Mass Imbalance of water (kg/s)": -1.578170072683147e-05,
+        "Mass Imbalance of air (kg/s)": 2.8152870736042335e-08,
+        "Mass Imbalance (kg/s)": -1.5753547856095854e-05,
+        "Volume Fraction of water": 6.738232538627786e-06,
+        "Density (kg/m^3)": 1.2067301466595814,
+        "Pressure (Pa)": -3.169021982527655,
+        "Convective Courant Number": 1.3645036110477626,
+        "Velocity[i] (m/s)": 19.177475819194612,
+        "Velocity[j] (m/s)": -6.147227984259616e-17,
+        "Velocity[k] (m/s)": -0.3772609697682434,
+        "Velocity: Magnitude (m/s)": 19.181186215536947,
+        "X (m)": -3.7787954698871267,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.116403969361876
+      },
+      "jet_patch": {
+        "Mass Imbalance of water (kg/s)": -1.578170072683147e-05,
+        "Mass Imbalance of air (kg/s)": 2.8152870736042335e-08,
+        "Mass Imbalance (kg/s)": -1.5753547856095854e-05,
+        "Volume Fraction of water": 6.738232538627786e-06,
+        "Density (kg/m^3)": 1.2067301466595814,
+        "Pressure (Pa)": -3.169021982527655,
+        "Convective Courant Number": 1.3645036110477626,
+        "Velocity[i] (m/s)": 19.177475819194612,
+        "Velocity[j] (m/s)": -6.147227984259616e-17,
+        "Velocity[k] (m/s)": -0.3772609697682434,
+        "Velocity: Magnitude (m/s)": 19.181186215536947,
+        "X (m)": -3.7787954698871267,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.116403969361876
+      }
+    },
+    "zones": {
+      "forcing": {
+        "cells": 18700,
+        "signed_water_kg_s": 0.5377830501283573,
+        "signed_air_kg_s": -0.0006353292932570944,
+        "absolute_water_kg_s": 0.5913308073028973,
+        "absolute_air_kg_s": 0.0007996124098400182
+      },
+      "core": {
+        "cells": 262278,
+        "signed_water_kg_s": -1.8057466261200146,
+        "signed_air_kg_s": 0.002167071709518754,
+        "absolute_water_kg_s": 12.479155049046657,
+        "absolute_air_kg_s": 0.015054262456554833
+      },
+      "damping": {
+        "cells": 36299,
+        "signed_water_kg_s": 0.1774535404176688,
+        "signed_air_kg_s": -0.00022125371832537594,
+        "absolute_water_kg_s": 1.3307961306386382,
+        "absolute_air_kg_s": 0.0016950148747456192
+      },
+      "jet_patch": {
+        "cells": 4231,
+        "signed_water_kg_s": 0.17961000745570113,
+        "signed_air_kg_s": -0.0002155400090459645,
+        "absolute_water_kg_s": 0.28120115795817896,
+        "absolute_air_kg_s": 0.0003549855191935507
+      }
+    },
+    "native_calibration": {
+      "water_sum_error_kg_s": 9.237055564881302e-14,
+      "air_sum_error_kg_s": -4.5536491244391186e-17,
+      "calibrated": true
+    }
+  },
+  {
+    "time_s": 1.064,
+    "cells": 317277,
+    "all_fields_finite": true,
+    "maxima": {
+      "all": {
+        "Mass Imbalance of water (kg/s)": 0.004254605510438872,
+        "Mass Imbalance of air (kg/s)": -5.018306005715421e-06,
+        "Mass Imbalance (kg/s)": 0.004249587204433159,
+        "Volume Fraction of water": 0.0,
+        "Density (kg/m^3)": 1.2,
+        "Pressure (Pa)": -764.8533080809311,
+        "Convective Courant Number": 3.4480061716118406,
+        "Velocity[i] (m/s)": 27.663173605809423,
+        "Velocity[j] (m/s)": -1.6611347680845025e-15,
+        "Velocity[k] (m/s)": 43.77896960589133,
+        "Velocity: Magnitude (m/s)": 51.786575033484375,
+        "X (m)": -3.8598986491318876,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.2088456422374816
+      },
+      "water_a_ge_099": {
+        "Mass Imbalance of water (kg/s)": 3.9061692769237766e-09,
+        "Mass Imbalance of air (kg/s)": -1.8279450202876202e-20,
+        "Mass Imbalance (kg/s)": 3.9061692769237766e-09,
+        "Volume Fraction of water": 1.0,
+        "Density (kg/m^3)": 1000.0,
+        "Pressure (Pa)": -63965.00460495971,
+        "Convective Courant Number": 7.77053766776448,
+        "Velocity[i] (m/s)": 22.210467388349898,
+        "Velocity[j] (m/s)": -1.3003190247814066e-16,
+        "Velocity[k] (m/s)": -1.7093902659942888,
+        "Velocity: Magnitude (m/s)": 22.27615040105517,
+        "X (m)": 0.7150417018862368,
+        "Y (m)": 0.02,
+        "Z (m)": 0.10328071150801763
+      },
+      "interface_001_099": {
+        "Mass Imbalance of water (kg/s)": -1.1393901611839174e-05,
+        "Mass Imbalance of air (kg/s)": 8.305534386892494e-08,
+        "Mass Imbalance (kg/s)": -1.1310846267958106e-05,
+        "Volume Fraction of water": 0.013263054225239771,
+        "Density (kg/m^3)": 14.447138560169483,
+        "Pressure (Pa)": -891.6215467898212,
+        "Convective Courant Number": 1.2846654374253308,
+        "Velocity[i] (m/s)": 16.663855276937568,
+        "Velocity[j] (m/s)": -2.25634029840401e-16,
+        "Velocity[k] (m/s)": 14.95752412993628,
+        "Velocity: Magnitude (m/s)": 22.39222188145576,
+        "X (m)": -3.813218426255954,
+        "Y (m)": 0.02,
+        "Z (m)": 2.2092024463020654
+      },
+      "air_a_le_001": {
+        "Mass Imbalance of water (kg/s)": 0.004254605510438872,
+        "Mass Imbalance of air (kg/s)": -5.018306005715421e-06,
+        "Mass Imbalance (kg/s)": 0.004249587204433159,
+        "Volume Fraction of water": 0.0,
+        "Density (kg/m^3)": 1.2,
+        "Pressure (Pa)": -764.8533080809311,
+        "Convective Courant Number": 3.4480061716118406,
+        "Velocity[i] (m/s)": 27.663173605809423,
+        "Velocity[j] (m/s)": -1.6611347680845025e-15,
+        "Velocity[k] (m/s)": 43.77896960589133,
+        "Velocity: Magnitude (m/s)": 51.786575033484375,
+        "X (m)": -3.8598986491318876,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.2088456422374816
+      },
+      "jet_patch": {
+        "Mass Imbalance of water (kg/s)": 0.004254605510438872,
+        "Mass Imbalance of air (kg/s)": -5.018306005715421e-06,
+        "Mass Imbalance (kg/s)": 0.004249587204433159,
+        "Volume Fraction of water": 0.0,
+        "Density (kg/m^3)": 1.2,
+        "Pressure (Pa)": -764.8533080809311,
+        "Convective Courant Number": 3.4480061716118406,
+        "Velocity[i] (m/s)": 27.663173605809423,
+        "Velocity[j] (m/s)": -1.6611347680845025e-15,
+        "Velocity[k] (m/s)": 43.77896960589133,
+        "Velocity: Magnitude (m/s)": 51.786575033484375,
+        "X (m)": -3.8598986491318876,
+        "Y (m)": 0.019999999999999997,
+        "Z (m)": 2.2088456422374816
+      }
+    },
+    "zones": {
+      "forcing": {
+        "cells": 18700,
+        "signed_water_kg_s": 0.27517373806950396,
+        "signed_air_kg_s": -0.0003327721210638028,
+        "absolute_water_kg_s": 0.312540703809936,
+        "absolute_air_kg_s": 0.00040337665067241335
+      },
+      "core": {
+        "cells": 262278,
+        "signed_water_kg_s": -0.5306657631973181,
+        "signed_air_kg_s": 0.0006846669938369301,
+        "absolute_water_kg_s": 14.788255756582235,
+        "absolute_air_kg_s": 0.018282343760216365
+      },
+      "damping": {
+        "cells": 36299,
+        "signed_water_kg_s": -0.36245866324325604,
+        "signed_air_kg_s": 0.00042937179720614914,
+        "absolute_water_kg_s": 1.4379969140953368,
+        "absolute_air_kg_s": 0.001744757827553156
+      },
+      "jet_patch": {
+        "cells": 4231,
+        "signed_water_kg_s": 0.3752589703431761,
+        "signed_air_kg_s": -0.0002459404809994886,
+        "absolute_water_kg_s": 1.0356177723546012,
+        "absolute_air_kg_s": 0.0015114238661611864
+      }
+    },
+    "native_calibration": {
+      "water_sum_error_kg_s": 1.3988810110276972e-14,
+      "air_sum_error_kg_s": 1.6263032587282567e-18,
+      "calibrated": true
+    }
+  }
+]

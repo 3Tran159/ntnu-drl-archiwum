@@ -1,0 +1,126 @@
+{
+  "at": "2026-10-30T12:06:34.981280+01:00",
+  "pass": true,
+  "tests": 7,
+  "real_solver_launches": 0,
+  "real_stop_markers": 0,
+  "real_locks_modified": 0,
+  "server_restarts": 0,
+  "catalog_snapshot": [
+    {
+      "id": "W01_M10",
+      "label": "W01 \u00b7 H 0.50 m / wavelength 20 m \u00b7 M10",
+      "height": 0.5,
+      "wavelength": 20,
+      "cells": 317277,
+      "source": "W01_W20L4_M10_FS020_env_setup_r1",
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "enabled": false,
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "C01_M10",
+      "label": "C01 \u00b7 Calm / 80 m domain \u00b7 M10",
+      "height": 0,
+      "wavelength": 20,
+      "cells": 317277,
+      "source": "C01_W20L4_M10_FS020_env_setup_r1",
+      "review": "Matched calm reference for M10 wave runs; new force settling required.",
+      "enabled": true
+    },
+    {
+      "id": "W01_M09",
+      "label": "W01 \u00b7 H 0.50 m / wavelength 20 m \u00b7 M09",
+      "height": 0.5,
+      "wavelength": 20,
+      "cells": 246885,
+      "source": "W01_W20L4_M09_env_setup_r2",
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "enabled": false,
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "C01_M09",
+      "label": "C01 \u00b7 Calm / 80 m domain \u00b7 M09",
+      "height": 0,
+      "wavelength": 20,
+      "cells": 246885,
+      "source": "C01_W20L4_M09_env_setup_r2",
+      "review": "Matched calm reference for the M09 long domain.",
+      "enabled": true
+    },
+    {
+      "id": "W03_M10",
+      "label": "W03 \u00b7 H 0.25 m / wavelength 20 m \u00b7 M10",
+      "height": 0.25,
+      "wavelength": 20,
+      "cells": 317277,
+      "source": "W01_W20L4_M10_FS020_env_setup_r1",
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "enabled": false,
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "W04_M10",
+      "label": "W04 \u00b7 H 0.75 m / wavelength 20 m \u00b7 M10",
+      "height": 0.75,
+      "wavelength": 20,
+      "cells": 317277,
+      "source": "W01_W20L4_M10_FS020_env_setup_r1",
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "enabled": false,
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "W02",
+      "label": "W02 \u00b7 H 0.50 m / wavelength 30 m",
+      "enabled": false,
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "W05",
+      "label": "W05 \u00b7 H 0.25 m / wavelength 30 m",
+      "enabled": false,
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "W06",
+      "label": "W06 \u00b7 H 0.75 m / wavelength 30 m",
+      "enabled": false,
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "W07",
+      "label": "W07 \u00b7 H 0.50 m / wavelength 10 m",
+      "enabled": false,
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    },
+    {
+      "id": "W08",
+      "label": "W08 \u00b7 H 0.50 m / wavelength 40 m",
+      "enabled": false,
+      "review": "Wave startup update in progress; W01a validation pending.",
+      "disabled_reason": "legacy_wave_recipe_unbound",
+      "startup_mode": "legacy_full_domain_wave"
+    }
+  ],
+  "policy_snapshot": {
+    "present": true,
+    "status": "conditional_pending_W01a_wave_validation",
+    "legacy_wave_starts_blocked": true,
+    "message": "Wave startup update in progress; W01a validation pending."
+  },
+  "log": "test_absent_policy_preserves_legacy_validation (__main__.Tests.test_absent_policy_preserves_legacy_validation) ... ok\ntest_malformed_present_policy_fails_closed (__main__.Tests.test_malformed_present_policy_fails_closed) ... ok\ntest_mock_http_catalog_and_launch_guard (__main__.Tests.test_mock_http_catalog_and_launch_guard) ... ok\ntest_pending_policy_blocks_wave_and_allows_calm (__main__.Tests.test_pending_policy_blocks_wave_and_allows_calm) ... ok\ntest_policy_not_cached_and_base_catalog_unchanged (__main__.Tests.test_policy_not_cached_and_base_catalog_unchanged) ... ok\ntest_source_validation_rechecks_policy (__main__.Tests.test_source_validation_rechecks_policy) ... ok\ntest_unknown_validated_flag_cannot_bind_legacy_recipe (__main__.Tests.test_unknown_validated_flag_cannot_bind_legacy_recipe) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.570s\n\nOK\n"
+}

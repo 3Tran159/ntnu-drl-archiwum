@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NIGHT_FLAP_20261104\vof_native_recovery.py", line 106, in <module>
+    source,start,prefix=rescue_source(state)
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NIGHT_FLAP_20261104\vof_native_recovery.py", line 53, in rescue_source
+    STOP.rename(dest/"STOP_AUTOMATIC_ARCHIVED.txt")
+  File "C:\Users\ThinkPad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+OSError: [WinError 17] The system cannot move the file to a different disk drive: 'F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\STOP_REQUESTED' -> 'T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\CALM_VOF_FIXED_SEALED_DT020_WMI_INTERRUPTED\\STOP_AUTOMATIC_ARCHIVED.txt'

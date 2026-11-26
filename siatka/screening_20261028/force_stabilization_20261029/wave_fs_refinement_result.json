@@ -1,0 +1,55 @@
+{
+  "status": "short_domain_mesh_audited_pending_extension",
+  "updated_at": "2026-10-30T01:05:58.605534+01:00",
+  "design": {
+    "id": "M10_FS020_r1",
+    "mesh_number": 10,
+    "family": "M09_derived_wave_grid",
+    "reference": "M09",
+    "linear_refinement": 1.4,
+    "outer_base_m": 0.25,
+    "first_layer_um": 1.530612244897959,
+    "layers": 48,
+    "total_prism_m": 0.01546,
+    "free_surface_m": 0.02,
+    "protected_middle_size_m": 0.14285714285714288,
+    "protected_middle_xz_m": [
+      -11.9,
+      30.94,
+      -3,
+      3.2
+    ],
+    "purpose": "Wave FS sensitivity: change only nominal free-surface control0.0285714to0.020m; preserve M09 foil/near-foil/prism/outer controls. Regenerated actual edges must be audited. Extend to matched4lambda domain after build; requires its own pairedcalm/wave, no accuracyclaim."
+  },
+  "result": {
+    "id": "M10_FS020_r1",
+    "mesh_number": 10,
+    "family": "M09_derived_wave_grid",
+    "reference": "M09",
+    "linear_refinement": 1.4,
+    "outer_base_m": 0.25,
+    "first_layer_um": 1.530612244897959,
+    "layers": 48,
+    "total_prism_m": 0.01546,
+    "free_surface_m": 0.02,
+    "protected_middle_size_m": 0.14285714285714288,
+    "protected_middle_xz_m": [
+      -11.9,
+      30.94,
+      -3,
+      3.2
+    ],
+    "purpose": "Wave FS sensitivity: change only nominal free-surface control0.0285714to0.020m; preserve M09 foil/near-foil/prism/outer controls. Regenerated actual edges must be audited. Extend to matched4lambda domain after build; requires its own pairedcalm/wave, no accuracyclaim.",
+    "cells": 282379
+  },
+  "source_unchanged": true,
+  "source_sha256": "dae55574062fcb4e2d0d1371a2c925943ae341cf43649402d329b92021fc11d2",
+  "directory": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M10_FS020_r1",
+  "flow_steps": 0,
+  "pending": [
+    "Audit actualFSsize andfoil/prismpreservation",
+    "Extend coherentlyto80m preservingrefinedboundaryspacing",
+    "STARimport/quality/boundaryaudit",
+    "Matchedcalm/W01prep andgrid/forcecomparison"
+  ]
+}

@@ -1,0 +1,56 @@
+from pathlib import Path
+import json,datetime,shutil
+h=Path(__file__).resolve().parents[1];r=h.parent;now=datetime.datetime.now().astimezone().isoformat()
+st=json.loads((h/'NIGHT_QUEUE_STATE.json').read_text());cfg=json.loads((h/'NIGHT_QUEUE.json').read_text());review=json.loads((h/'WORK_CURRENT_REVIEW.json').read_text(encoding='utf8'))
+a=st.get('active');cp=review['reviewed_recovery_checkpoint'];p=r/'HOME_RESUME_INSTRUCTIONS.md'
+backup=h/'audit'/('HOME_RESUME_before_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'.md');shutil.copy2(p,backup)
+j=next((x for x in cfg['jobs'] if a and x['id']==a['id']),None)
+lines=['# HOME RESUME — NTNU moving flap, STAR 2606','Updated '+now+' (Europe/Berlin).','',
+'## Read current state first',*[str(h/n) for n in ['NIGHT_STATUS.json','NIGHT_QUEUE_STATE.json','NIGHT_QUEUE.json','WORK_CURRENT_REVIEW.json','NIGHT_DECISIONS.jsonl','NIGHT_DASHBOARD.html']],'',
+'The controller may remain active when Work disconnects. Check current process ownership and birth-times before starting anything. A launcher PID is not evidence of solving: require native iteration or physical-time/history growth. Do not duplicate an active STAR job. No scheduler approval is available or needed; do not retry scheduling.',
+'','## Current operation',('Active job: '+a['id']+'; '+a['macro']+'; '+str(a['cpu_processes'])+'CPU/MSMPI/noGPU.' if a else 'No owned STAR job active according to last durable snapshot; verify processes again.'),('Output: '+a['output'] if a else ''),('Input: '+a['input'] if a else ''),('Reviewed scope: '+j['purpose'] if j else ''),'',
+'This connectivity audit is not a qualified flow solution. The zero-storage test is permitted to clear ONLY uniform storage from the exact source with iteration0/time0, on a separate copy. It must preserve the full native mesh coordinates and physical geometry. Never initialize, clear or reset a progressed hydro checkpoint. No new flow continuation is approved until Work reviews the actual native assembly and geometry.',
+'','## Retained recovery checkpoint with solved fields',cp['path'],'SHA256 '+cp['sha256']+'; '+str(cp['bytes'])+' bytes.','Native save complete; native reopen and force readback verified in the following momentum continuation.','Physical time0s, native iteration1850. Steady SST initialization; both momentum and SST convection FIRST_ORDER; DISTANCE interpolation, FLUX_CORRECTION; velocity/pressure URF0.3/0.1. No time-step advance in this steady stage.',
+'Last values: CL0.289407725466, CD0.012965258589, Mh-14.5227139984Nm, minimum absolute pressure33257.4230723Pa. Zero k/omega floor cells; no viscosity cap; mass gate passed. Forces still drifted. These are NOT approved hydrodynamic results.',
+'Resume must preserve its mesh, fields, monitors, history and counter. A new reviewed continuation macro must validate this exact hash and read back Fx/Fz/Mh/CL/CD before solving. Do not rerun a Fresh macro on it.',
+'','## Rejected and mesh-only checkpoints',
+str(h/'cases/SP_C_split0_overset/c0_momentum_second_20261103_013313/initialization_error.sim'),
+'Momentum-only second-order trial stopped after90 additional/native1940 iterations: pabs7192.627Pa breached12339.2147668Pa. SST was still first-order and no k/omega floor cells were present. Preserve for diagnosis; do not resume this rejected result.',
+str(h/'cases/SP_C_split0_overset/c0_overlap_band05mm_20261103_003837/SP_C_mesh_ready.sim'),
+'Protected zero-step mesh source; SHA25635b44cb5cd54d35cf7e7b849140524b9f2be5d4ffc8b583da44495db5ba88865. Uniform initial fields only.579468 cells=304810Background+274658Overset. Native full audit:372961active,203063inactive,3444acceptors,0errors,0difficult interpolation,positive volume,minQ0.0610482. The background mesh matches the prior control. This mesh pass is not force validation.',
+'Files named layer_candidate.sim or mesh_only_candidate.sim from c0_layers36_* are diagnostic copies. Their status alone does not authorize solving; require corresponding Work geometry/connectivity review.',
+'','## Last archived transient diagnostic',
+str(h/'cases/SP_C_split0_overset/c0_distance_20261102_232050/checkpoint.sim'),
+'Time0.6644s, dt0.002s, timestep333, native iteration9506.729271037bytes; SHA256e3594c9b927545954e305d5b062672dec93f3a418df2a1ebe99885b6c2c5f375. Native reopen verified. Deliberately stopped after73 steps because anomalous turbulence remained. Do not automatically extend it.',
+'','## Geometry and physics',
+'Original modified NACA66-012 geometry; c1.19m; span y0.01–0.03m, one cell through span. Hinge x/c0.80 at[0.952,0.02,0.02128173276776986]m, axis+y, current angle0deg. Nominal gap2.5mm. No geometry substitution.',
+'U18m/s,rho1000kg/m3,mu0.001Pa.s,Re2.142e7,SSTAllYplus,single phase. Reference pressure101325Pa,gravity[0,0,-9.8100004196167],reference altitude z2m. Reference area0.0238m2,qS3855.6N; CL removes the recorded buoyancy,CD=Fx/qS,Mh is flap-only about+y hinge.',
+'The source mesh refinement changed only Overset resolution: outer1mm and inner0.5mm atx[0.74,0.955],z[-0.08,0.13]m; hinge0.35mm retained. Original full background cells unchanged. Protection36layers is an unqualified numerical experiment.',
+'20C vapor pressure2339.2147668Pa; required working reserve10kPa. Strict continuation gates: pabs_min>12339.2147668Pa,relative mass imbalance<1e-4,zero native Overset errors/difficult stencils,positive volumes,zero k/omega floor cells,viscosity ratio<99999. Failure must save a diagnostic checkpoint and HOLD, with no forced termination.',
+'','## Exact execution environment',
+'STAR2606.0002,Build21.04.009-R8.',
+r'E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\lib\win64\clang20.1vc14.2-r8\lib\starccm+.exe',
+r'Python: C:\Users\ThinkPad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe',
+'Maximum8MPI ranks total for owned solves; diagnostic audits1rank; MicrosoftMPI(-mpi ms),-cpubind off,noGPU. Let resource guards defer launches if RAM/disk limits are reached.',
+'License reuse is already explicitly approved in '+str(h/'audit/LICENSE_USE_APPROVAL.json')+'. night_native.py provides the authorized task license only in the child environment. Never display the key or obtain another campaign\'s credentials.',
+'','## Restart the local controller, only if absent',
+'First re-audit live STAR and controller PID birth-times and paths. Read durable state, completed save banners and checkpoint hashes. An interrupted native job must be reconciled before any new launch. Do not requeue a completed/failed job blindly.',
+'PowerShell commands (the second is for a foreground supervised controller; unattended launch must use a hidden process with log redirection):',
+'```powershell',
+"& 'C:\\Users\\ThinkPad\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' 'F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\tools\\night_queue.py' --check",
+"& 'C:\\Users\\ThinkPad\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' 'F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\tools\\night_queue.py'",
+'```',
+'The controller adopts durable records, enforces the whitelist and holds for scientific review. It does not authorize new angles. Work must approve a concrete new numerical diagnostic in NIGHT_QUEUE.json after reviewing evidence; no repeated identical failures.',
+'When reopening the solved1850 checkpoint: validate exact SHA,size,time0,native1850 and force readback, then use a dedicated no-reset continuation. A later conversion to matched URANS must be explicitly recorded, preserve saved fields, and verify stationary0degree mesh pose/connectivity before flow steps. Never regenerate the mesh as part of a normal restart.',
+'','## Scientific decision and baseline',
+review['decision'],review['summary'],review['next'],
+'A original single phase: CL0.3384587397,CD0.00676595908. B flap0withoutOverset: CL0.3272965363,CD0.00716358056. Stabilized force histories only, not mesh/time independence.',
+'Original C: CL0.3753662474,CD0.00647808662; +14.6869%CL/-9.5692%CD versusB, rejected. B/C volume meshes differ, so the whole discrepancy cannot yet be attributed to interpolation alone.',
+'C01 VOF CL0.3156595,CD0.00700232 remain historical references, not required single-phase targets. No VOF bridge has been run in this phase.',
+'Known API cautions: FullMeshViewRepresentation.isEmpty() is not a validity guard; loaded fields may exist while Solution.isInitialized() reportsfalse. Use actual field/force/time readback. Full-plane export coordinates are plane-polygon centers, not true volume-cell centers. Compare like representations.',
+'','## Protected work',
+'Do not modify C01,W01,W03,PRE_W04,other agents\' processes or unrelated queues. No W04,excludedW07(lambda92.5m),waves or DRL. No ±2/±5/dynamic flap runs before positive C0 scientific audit. Preserve all originals, accepted checkpoints and partial/rejected results.',
+'Read-only external observation at2026-11-03 00:57 found STAR21.02.007,1CPU+GPU running '+r'E:\ntnu_mesh_optimization_20261030\nwar_automation_20261102\runs\W04_20261103_001413_af9f6d\input.sim'+'. This was not launched by the flap queue. Re-audit current ownership; never use stale PIDs to stop anything.',
+str(r/'checkpoints/Flap_CFD_HOME_RESUME_20261102.sim')+' is the old44763-cell mechanical POC, not the hydrodynamic recovery state.','']
+p.write_text('\n'.join(lines),encoding='utf8')
+print(json.dumps(dict(written=str(p),backup=str(backup),at=now,active_job=a['id'] if a else None),indent=2))

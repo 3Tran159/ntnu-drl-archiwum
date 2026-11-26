@@ -1,0 +1,40 @@
+Compiled from "RegionManager.java"
+public class star.common.RegionManager extends star.common.GroupableSimulationObjectManager<star.common.Region> implements star.common.SimulationChild, star.common.ProvidesIcon, star.base.neo.ui.Duplicator<star.common.Region> {
+  public void setIconProvider(star.common.ProvidesIcon);
+  public star.common.RegionManager(star.base.neo.ClientServerObjectKey);
+  public boolean childVisible();
+  public int childOrder();
+  public star.common.Region getRegion(java.lang.String);
+  public java.util.Collection<star.common.Region> getRegions();
+  public star.common.DynamicQueryGroup<star.common.Region> getPartsPropertyGroup();
+  public java.util.List<star.common.Region> getPartsPropertyGroupInput();
+  public void setPartsPropertyGroupInput(java.util.List<star.common.Region>);
+  public int getChildrenCount();
+  public star.common.Region createEmptyRegion();
+  public star.common.Region createEmptyRegion(star.base.neo.ClientServerObjectGroup);
+  public star.common.Region createEmptyShellRegion();
+  public star.common.Region createEmptyShellRegion(star.base.neo.ClientServerObjectGroup);
+  public star.common.Region createEmptySurfaceRegion();
+  public star.common.Region createEmptySurfaceRegion(star.base.neo.ClientServerObjectGroup);
+  public star.common.Region createEmptyNetworkRegion();
+  public star.common.Region createEmptyNetworkRegion(star.base.neo.ClientServerObjectGroup);
+  public star.common.Region duplicate(star.common.Region, star.base.neo.ClientServerObjectGroup);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, java.lang.String, java.lang.String, boolean);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, java.lang.String, boolean);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, star.common.Region, java.lang.String, star.common.Boundary, java.lang.String, java.lang.Object, star.common.RegionManager$CreateInterfaceMode);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, star.common.Region, java.lang.String, star.common.Boundary, star.common.RegionManager$CreateInterfaceMode);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, star.common.Region, java.lang.String, star.common.Boundary, java.lang.String, java.lang.Object, star.common.RegionManager$CreateInterfaceMode, java.lang.String, star.common.Boundary);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, star.common.Region, java.lang.String, star.common.Boundary, star.common.RegionManager$CreateInterfaceMode, java.lang.String, star.common.Boundary);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, star.common.Region, java.lang.String, star.common.Boundary, java.lang.String, star.common.FeatureCurve, boolean);
+  public void newRegionsFromParts(java.util.Collection<star.common.GeometryPart>, java.lang.String, star.common.Region, java.lang.String, star.common.Boundary, boolean);
+  public void updateRegionsAssignedToParts(java.util.Collection<star.common.GeometryPart>);
+  public <T extends star.common.ManagesParts & star.base.neo.CsoKeyProvider> void updateInterfacesFromPartContacts(java.util.Collection<T>);
+  public <T extends star.common.ManagesParts & star.base.neo.CsoKeyProvider> void updateInterfacesFromPartContacts(java.util.Collection<T>, star.common.RegionManager$CreateInterfaceMode);
+  public void removeRegion(star.common.Region);
+  public void removeRegions(java.util.List<star.common.Region>);
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+  public javax.swing.ImageIcon getIcon();
+  public java.lang.Class<? extends star.base.neo.ClientServerObject> getManagedType();
+  public star.base.neo.ClientServerObject duplicate(star.base.neo.ClientServerObject, star.base.neo.ClientServerObjectGroup);
+  static {};
+}

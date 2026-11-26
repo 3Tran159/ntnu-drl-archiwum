@@ -1,0 +1,1080 @@
+Starting local server: starserver.bat -power -cpubind off -np 8 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRccmVsb2NhdGlvbl9yZW9wZW5fMjAyNjExMDNfMDgyMzI1XEMwX3JlY292ZXJlZF90MDY1LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 29272
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 08:40:54 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\relocation_reopen_20261103_082325\C0_recovered_t065.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=8 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_083855\KinematicPoc333939.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_083855\KinematicPoc333939.java:13: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_083855\KinematicPoc333939.java:26: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");proofScene=sc;sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_083855\KinematicPoc333939.java:28: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_083855\KinematicPoc333939.java:29: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_083855\KinematicPoc333939.java:38: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+Files.createDirectories(out);stopGuard();s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);
+                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_083855\KinematicPoc333939.java:52: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+scene();Scene sc=proofScene;sc.setPresentationName("Kinematics ONLY - flow frozen");sc.getCurrentView().setInput(new DoubleVector(new double[]{1.035,.02,.02}),new DoubleVector(new double[]{1.035,-3,.02}),new DoubleVector(new double[]{0,0,1}),.22,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("frame_000.png").toString(),1,1100,800);
+                                                                                                       ^
+
+Loading/configuring connectivity (old|new partitions: 8|8)
+  Background (index 4): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 5): 29129 cells, 67202 faces, 78870 verts.
+Configuring finished
+FULL_OVERSET_AUDIT time=0.6500000000000005 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.128750119087941E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629553493 methods={0=1481}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\kinematic_poc_20261103_083855\kinematic_ready.sim... complete (1.4207GB in 1.4724s).
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  326: Time  6.520000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11561                                                                                       2.880013e+01   1.278410e+03  -1.204136e+01   3.256934e-01   7.469688e-03       3.009770e+04      4.875607e+04            3.009769e+04      3.009769e+04     5.313474e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6520000000000005 total=333939 active=255349 inactive=77114 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=9.128750119027163E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6668486468702155 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  327: Time  6.540000e-01
+         11562                                                                                       2.966573e+01   1.278561e+03  -1.204229e+01   3.257324e-01   7.694193e-03       3.009770e+04      4.875611e+04            3.009769e+04      3.009769e+04     5.313478e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6540000000000005 total=333939 active=255323 inactive=77139 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=9.128750118982442E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.671511330567046 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  328: Time  6.560000e-01
+         11563                                                                                       3.052529e+01   1.278705e+03  -1.204321e+01   3.257699e-01   7.917130e-03       3.009770e+04      4.875615e+04            3.009769e+04      3.009769e+04     5.313482e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6560000000000005 total=333939 active=255320 inactive=77149 acceptors=1470 errors=0 difficult_interpolation=0 min_volume=9.128750118934564E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6613889179920394 methods={0=1470}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  329: Time  6.580000e-01
+         11564                                                                                       3.137535e+01   1.278844e+03  -1.204412e+01   3.258057e-01   8.137606e-03       3.009770e+04      4.875620e+04            3.009769e+04      3.009769e+04     5.313487e+04        5.659621e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6580000000000005 total=333939 active=255312 inactive=77151 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=5.6596209532905526E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6463908892157302 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  330: Time  6.600000e-01
+         11565                                                                                       3.221252e+01   1.278975e+03  -1.204501e+01   3.258399e-01   8.354736e-03       3.009770e+04      4.875625e+04            3.009769e+04      3.009769e+04     5.313493e+04        2.541349e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6600000000000005 total=333939 active=255313 inactive=77160 acceptors=1466 errors=0 difficult_interpolation=0 min_volume=2.541349184967495E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6388826251928894 methods={0=1466}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  331: Time  6.620000e-01
+         11566                                                                                       3.303343e+01   1.279100e+03  -1.204588e+01   3.258722e-01   8.567649e-03       3.009770e+04      4.875632e+04            3.009769e+04      3.009769e+04     5.313500e+04        3.231458e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6620000000000005 total=333939 active=255287 inactive=77173 acceptors=1479 errors=0 difficult_interpolation=0 min_volume=3.2314579767332722E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.623362377840549 methods={0=1479}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  332: Time  6.640000e-01
+         11567                                                                                       3.383476e+01   1.279217e+03  -1.204672e+01   3.259027e-01   8.775486e-03       3.009770e+04      4.875640e+04            3.009769e+04      3.009769e+04     5.313507e+04        2.843241e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6640000000000005 total=333939 active=255293 inactive=77173 acceptors=1473 errors=0 difficult_interpolation=0 min_volume=2.8432408365736046E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6233623778405568 methods={0=1473}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  333: Time  6.660000e-01
+         11568                                                                                       3.461330e+01   1.279327e+03  -1.204754e+01   3.259312e-01   8.977410e-03       3.009770e+04      4.875648e+04            3.009769e+04      3.009769e+04     5.313516e+04        4.384330e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6660000000000005 total=333939 active=255297 inactive=77172 acceptors=1470 errors=0 difficult_interpolation=0 min_volume=4.384329519171317E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6008525820396844 methods={0=1470}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  334: Time  6.680000e-01
+         11569                                                                                       3.536590e+01   1.279430e+03  -1.204832e+01   3.259579e-01   9.172605e-03       3.009770e+04      4.875656e+04            3.009769e+04      3.009769e+04     5.313524e+04        4.545354e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6680000000000005 total=333939 active=255276 inactive=77186 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=4.545354355621714E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6008525820396864 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  335: Time  6.700000e-01
+         11570                                                                                       3.608951e+01   1.279526e+03  -1.204908e+01   3.259827e-01   9.360284e-03       3.009770e+04      4.875665e+04            3.009769e+04      3.009769e+04     5.313533e+04        3.530710e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6700000000000005 total=333939 active=255282 inactive=77177 acceptors=1480 errors=0 difficult_interpolation=0 min_volume=3.5307102620404286E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5882048611488075 methods={0=1480}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  336: Time  6.720000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11571                                                                                       3.678122e+01   1.279614e+03  -1.204979e+01   3.260055e-01   9.539687e-03       3.009770e+04      4.875674e+04            3.009769e+04      3.009769e+04     5.313543e+04        4.039778e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6720000000000005 total=333939 active=255281 inactive=77173 acceptors=1485 errors=0 difficult_interpolation=0 min_volume=4.0397778476277994E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5740318078716105 methods={0=1485}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  337: Time  6.740000e-01
+         11572                                                                                       3.743821e+01   1.279695e+03  -1.205047e+01   3.260265e-01   9.710088e-03       3.009770e+04      4.875683e+04            3.009769e+04      3.009769e+04     5.313552e+04        3.614564e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6740000000000005 total=333939 active=255268 inactive=77186 acceptors=1485 errors=0 difficult_interpolation=0 min_volume=3.6145637350561406E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.574031807871604 methods={0=1485}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  338: Time  6.760000e-01
+         11573                                                                                       3.805785e+01   1.279769e+03  -1.205111e+01   3.260457e-01   9.870797e-03       3.009770e+04      4.875693e+04            3.009769e+04      3.009769e+04     5.313562e+04        4.107857e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6760000000000005 total=333939 active=255268 inactive=77184 acceptors=1487 errors=0 difficult_interpolation=0 min_volume=4.107856614531596E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5740318078716078 methods={0=1487}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  339: Time  6.780000e-01
+         11574                                                                                       3.863760e+01   1.279835e+03  -1.205171e+01   3.260630e-01   1.002116e-02       3.009770e+04      4.875702e+04            3.009769e+04      3.009769e+04     5.313571e+04        5.654315e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6780000000000005 total=333939 active=255272 inactive=77190 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=5.6543149790972946E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.631707604760249 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  340: Time  6.800000e-01
+         11575                                                                                       3.917514e+01   1.279896e+03  -1.205226e+01   3.260786e-01   1.016058e-02       3.009770e+04      4.875711e+04            3.009769e+04      3.009769e+04     5.313580e+04        4.375602e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6800000000000005 total=333939 active=255277 inactive=77179 acceptors=1483 errors=0 difficult_interpolation=0 min_volume=4.375601594093648E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5938341555604496 methods={0=1483}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  341: Time  6.820000e-01
+         11576                                                                                       3.966827e+01   1.279949e+03  -1.205276e+01   3.260925e-01   1.028848e-02       3.009770e+04      4.875719e+04            3.009769e+04      3.009769e+04     5.313588e+04        4.899143e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6820000000000005 total=333939 active=255269 inactive=77188 acceptors=1482 errors=0 difficult_interpolation=0 min_volume=4.8991432315111525E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5938341555604552 methods={0=1482}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  342: Time  6.840000e-01
+         11577                                                                                       4.011501e+01   1.279996e+03  -1.205322e+01   3.261047e-01   1.040435e-02       3.009770e+04      4.875727e+04            3.009769e+04      3.009769e+04     5.313596e+04        6.065216e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6840000000000005 total=333939 active=255282 inactive=77180 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=6.065215614290474E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6113744900800724 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  343: Time  6.860000e-01
+         11578                                                                                       4.051355e+01   1.280037e+03  -1.205362e+01   3.261153e-01   1.050772e-02       3.009770e+04      4.875735e+04            3.009769e+04      3.009769e+04     5.313604e+04        7.183616e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6860000000000005 total=333939 active=255288 inactive=77175 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=7.183615758313814E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6218959115132838 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  344: Time  6.880000e-01
+         11579                                                                                       4.086227e+01   1.280072e+03  -1.205397e+01   3.261244e-01   1.059816e-02       3.009770e+04      4.875741e+04            3.009769e+04      3.009769e+04     5.313611e+04        4.831182e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6880000000000005 total=333939 active=255302 inactive=77160 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=4.831182231730289E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6174587553031297 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  345: Time  6.900000e-01
+         11580                                                                                       4.115976e+01   1.280102e+03  -1.205428e+01   3.261320e-01   1.067532e-02       3.009770e+04      4.875747e+04            3.009769e+04      3.009769e+04     5.313616e+04        5.004274e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6900000000000005 total=333939 active=255296 inactive=77166 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=5.0042740660210215E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6174587553031152 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  346: Time  6.920000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11581                                                                                       4.140482e+01   1.280125e+03  -1.205452e+01   3.261382e-01   1.073888e-02       3.009770e+04      4.875752e+04            3.009769e+04      3.009769e+04     5.313621e+04        5.688655e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6920000000000005 total=333939 active=255295 inactive=77166 acceptors=1478 errors=0 difficult_interpolation=0 min_volume=5.688655323804121E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6235737137195483 methods={0=1478}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  347: Time  6.940000e-01
+         11582                                                                                       4.159646e+01   1.280144e+03  -1.205472e+01   3.261429e-01   1.078858e-02       3.009770e+04      4.875756e+04            3.009769e+04      3.009769e+04     5.313625e+04        6.404918e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6940000000000005 total=333939 active=255290 inactive=77169 acceptors=1480 errors=0 difficult_interpolation=0 min_volume=6.4049175518531006E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.614680071824571 methods={0=1480}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  348: Time  6.960000e-01
+         11583                                                                                       4.173390e+01   1.280157e+03  -1.205486e+01   3.261463e-01   1.082423e-02       3.009770e+04      4.875758e+04            3.009769e+04      3.009769e+04     5.313628e+04        6.977698e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6960000000000005 total=333939 active=255290 inactive=77167 acceptors=1482 errors=0 difficult_interpolation=0 min_volume=6.9776979603833055E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.614680071824569 methods={0=1482}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  349: Time  6.980000e-01
+         11584                                                                                       4.181659e+01   1.280164e+03  -1.205494e+01   3.261483e-01   1.084568e-02       3.009770e+04      4.875760e+04            3.009769e+04      3.009769e+04     5.313630e+04        7.386412e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.6980000000000005 total=333939 active=255298 inactive=77161 acceptors=1480 errors=0 difficult_interpolation=0 min_volume=7.386412013817199E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.614680071824571 methods={0=1480}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  350: Time  7.000000e-01
+         11585                                                                                       4.184419e+01   1.280167e+03  -1.205497e+01   3.261489e-01   1.085283e-02       3.009770e+04      4.875761e+04            3.009769e+04      3.009769e+04     5.313630e+04        7.647460e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7000000000000005 total=333939 active=255296 inactive=77165 acceptors=1478 errors=0 difficult_interpolation=0 min_volume=7.647459659193251E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6146800718245737 methods={0=1478}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\kinematic_poc_20261103_083855\checkpoint_step_25.sim... complete (1.4232GB in 1.367s).
+KINEMATIC_POC step=25 angle=5.0 full_overset_errors=0
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  351: Time  7.020000e-01
+         11586                                                                                       4.181659e+01   1.280164e+03  -1.205494e+01   3.261483e-01   1.084568e-02       3.009770e+04      4.875760e+04            3.009769e+04      3.009769e+04     5.313630e+04        7.775864e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7020000000000005 total=333939 active=255298 inactive=77161 acceptors=1480 errors=0 difficult_interpolation=0 min_volume=7.775863614357432E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6146800718245717 methods={0=1480}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  352: Time  7.040000e-01
+         11587                                                                                       4.173390e+01   1.280157e+03  -1.205486e+01   3.261463e-01   1.082423e-02       3.009770e+04      4.875758e+04            3.009769e+04      3.009769e+04     5.313628e+04        7.752462e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7040000000000005 total=333939 active=255290 inactive=77167 acceptors=1482 errors=0 difficult_interpolation=0 min_volume=7.752461601091135E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6146800718245615 methods={0=1482}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  353: Time  7.060000e-01
+         11588                                                                                       4.159646e+01   1.280144e+03  -1.205472e+01   3.261429e-01   1.078858e-02       3.009770e+04      4.875756e+04            3.009769e+04      3.009769e+04     5.313625e+04        7.628607e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7060000000000005 total=333939 active=255290 inactive=77169 acceptors=1480 errors=0 difficult_interpolation=0 min_volume=7.628607008186165E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6146800718245684 methods={0=1480}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  354: Time  7.080000e-01
+         11589                                                                                       4.140482e+01   1.280125e+03  -1.205452e+01   3.261382e-01   1.073888e-02       3.009770e+04      4.875752e+04            3.009769e+04      3.009769e+04     5.313621e+04        6.380443e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7080000000000005 total=333939 active=255295 inactive=77166 acceptors=1478 errors=0 difficult_interpolation=0 min_volume=6.380442628517328E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6235737137195245 methods={0=1478}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  355: Time  7.100000e-01
+         11590                                                                                       4.115976e+01   1.280102e+03  -1.205428e+01   3.261320e-01   1.067532e-02       3.009770e+04      4.875747e+04            3.009769e+04      3.009769e+04     5.313616e+04        5.396944e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7100000000000005 total=333939 active=255296 inactive=77166 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=5.396944476269719E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6174587553030924 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  356: Time  7.120000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11591                                                                                       4.086227e+01   1.280072e+03  -1.205397e+01   3.261244e-01   1.059816e-02       3.009770e+04      4.875741e+04            3.009769e+04      3.009769e+04     5.313611e+04        4.228944e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7120000000000005 total=333939 active=255302 inactive=77160 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=4.228944121278041E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.617458755303106 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  357: Time  7.140000e-01
+         11592                                                                                       4.051355e+01   1.280037e+03  -1.205362e+01   3.261153e-01   1.050772e-02       3.009770e+04      4.875735e+04            3.009769e+04      3.009769e+04     5.313604e+04        3.805864e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7140000000000005 total=333939 active=255288 inactive=77175 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=3.805864077487899E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6218959115132516 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  358: Time  7.160000e-01
+         11593                                                                                       4.011501e+01   1.279996e+03  -1.205322e+01   3.261047e-01   1.040435e-02       3.009770e+04      4.875727e+04            3.009769e+04      3.009769e+04     5.313596e+04        3.044907e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7160000000000005 total=333939 active=255282 inactive=77180 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=3.0449069638400343E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.611374490080053 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  359: Time  7.180000e-01
+         11594                                                                                       3.966827e+01   1.279949e+03  -1.205276e+01   3.260925e-01   1.028848e-02       3.009770e+04      4.875719e+04            3.009769e+04      3.009769e+04     5.313588e+04        5.905926e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7180000000000005 total=333939 active=255269 inactive=77188 acceptors=1482 errors=0 difficult_interpolation=0 min_volume=5.905925568510182E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5938341555604472 methods={0=1482}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  360: Time  7.200000e-01
+         11595                                                                                       3.917514e+01   1.279896e+03  -1.205226e+01   3.260786e-01   1.016058e-02       3.009770e+04      4.875711e+04            3.009769e+04      3.009769e+04     5.313580e+04        4.021032e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7200000000000005 total=333939 active=255277 inactive=77179 acceptors=1483 errors=0 difficult_interpolation=0 min_volume=4.0210322927176505E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5938341555604523 methods={0=1483}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  361: Time  7.220000e-01
+         11596                                                                                       3.863760e+01   1.279835e+03  -1.205171e+01   3.260630e-01   1.002116e-02       3.009770e+04      4.875702e+04            3.009769e+04      3.009769e+04     5.313571e+04        2.901800e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7220000000000005 total=333939 active=255272 inactive=77190 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=2.9018003331478864E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6317076047602452 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  362: Time  7.240000e-01
+         11597                                                                                       3.805785e+01   1.279769e+03  -1.205111e+01   3.260457e-01   9.870797e-03       3.009770e+04      4.875693e+04            3.009769e+04      3.009769e+04     5.313562e+04        2.631512e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7240000000000005 total=333939 active=255268 inactive=77184 acceptors=1487 errors=0 difficult_interpolation=0 min_volume=2.6315115725846614E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.574031807871646 methods={0=1487}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  363: Time  7.260000e-01
+         11598                                                                                       3.743821e+01   1.279695e+03  -1.205047e+01   3.260265e-01   9.710088e-03       3.009770e+04      4.875683e+04            3.009769e+04      3.009769e+04     5.313552e+04        3.367111e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7260000000000005 total=333939 active=255268 inactive=77186 acceptors=1485 errors=0 difficult_interpolation=0 min_volume=3.3671114955081833E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.574031807871648 methods={0=1485}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  364: Time  7.280000e-01
+         11599                                                                                       3.678122e+01   1.279614e+03  -1.204979e+01   3.260055e-01   9.539687e-03       3.009770e+04      4.875674e+04            3.009769e+04      3.009769e+04     5.313543e+04        2.671308e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7280000000000005 total=333939 active=255281 inactive=77173 acceptors=1485 errors=0 difficult_interpolation=0 min_volume=2.671308039071128E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.574031807871654 methods={0=1485}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  365: Time  7.300000e-01
+         11600                                                                                       3.608951e+01   1.279526e+03  -1.204908e+01   3.259827e-01   9.360284e-03       3.009770e+04      4.875665e+04            3.009769e+04      3.009769e+04     5.313533e+04        3.182983e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7300000000000005 total=333939 active=255282 inactive=77177 acceptors=1480 errors=0 difficult_interpolation=0 min_volume=3.1829827220471516E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.5882048611488535 methods={0=1480}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 413 cells in FlapOverset
+TimeStep  366: Time  7.320000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11601                                                                                       3.536590e+01   1.279430e+03  -1.204832e+01   3.259579e-01   9.172605e-03       3.009770e+04      4.875656e+04            3.009769e+04      3.009769e+04     5.313524e+04        2.519201e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7320000000000005 total=333939 active=255276 inactive=77186 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=2.519201024883341E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6008525820397315 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 413 cells in FlapOverset
+TimeStep  367: Time  7.340000e-01
+         11602                                                                                       3.461330e+01   1.279327e+03  -1.204754e+01   3.259312e-01   8.977410e-03       3.009770e+04      4.875648e+04            3.009769e+04      3.009769e+04     5.313516e+04        2.126330e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7340000000000005 total=333939 active=255297 inactive=77172 acceptors=1470 errors=0 difficult_interpolation=0 min_volume=2.126329711684968E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6008525820397395 methods={0=1470}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  368: Time  7.360000e-01
+         11603                                                                                       3.383476e+01   1.279217e+03  -1.204672e+01   3.259027e-01   8.775486e-03       3.009770e+04      4.875640e+04            3.009769e+04      3.009769e+04     5.313507e+04        3.218910e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7360000000000005 total=333939 active=255293 inactive=77173 acceptors=1473 errors=0 difficult_interpolation=0 min_volume=3.218910195838944E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6233623778406132 methods={0=1473}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 413 cells in FlapOverset
+TimeStep  369: Time  7.380000e-01
+         11604                                                                                       3.303343e+01   1.279100e+03  -1.204588e+01   3.258722e-01   8.567649e-03       3.009770e+04      4.875632e+04            3.009769e+04      3.009769e+04     5.313500e+04        2.672819e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7380000000000005 total=333939 active=255287 inactive=77173 acceptors=1479 errors=0 difficult_interpolation=0 min_volume=2.672818513264389E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.623362377840618 methods={0=1479}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 414 cells in FlapOverset
+TimeStep  370: Time  7.400000e-01
+         11605                                                                                       3.221252e+01   1.278975e+03  -1.204501e+01   3.258399e-01   8.354736e-03       3.009770e+04      4.875625e+04            3.009769e+04      3.009769e+04     5.313493e+04        2.221865e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7400000000000005 total=333939 active=255313 inactive=77160 acceptors=1466 errors=0 difficult_interpolation=0 min_volume=2.221864913494504E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.638882625192951 methods={0=1466}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 413 cells in FlapOverset
+TimeStep  371: Time  7.420000e-01
+         11606                                                                                       3.137535e+01   1.278844e+03  -1.204412e+01   3.258057e-01   8.137606e-03       3.009770e+04      4.875620e+04            3.009769e+04      3.009769e+04     5.313487e+04        2.734181e-12   5.510420e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7420000000000005 total=333939 active=255312 inactive=77151 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=2.7341810267601306E-12 min_quality=0.05510420273780264 max_acceptor_size_ratio=1.6463908892157886 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 413 cells in FlapOverset
+TimeStep  372: Time  7.440000e-01
+         11607                                                                                       3.052529e+01   1.278705e+03  -1.204321e+01   3.257699e-01   7.917130e-03       3.009770e+04      4.875615e+04            3.009769e+04      3.009769e+04     5.313482e+04        2.758990e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7440000000000005 total=333939 active=255320 inactive=77149 acceptors=1470 errors=0 difficult_interpolation=0 min_volume=2.758990131439473E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6613889179921049 methods={0=1470}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  373: Time  7.460000e-01
+         11608                                                                                       2.966573e+01   1.278561e+03  -1.204229e+01   3.257324e-01   7.694193e-03       3.009770e+04      4.875611e+04            3.009769e+04      3.009769e+04     5.313478e+04        3.853966e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7460000000000006 total=333939 active=255323 inactive=77139 acceptors=1477 errors=0 difficult_interpolation=0 min_volume=3.853965747452509E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6715113305671359 methods={0=1477}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  374: Time  7.480000e-01
+         11609                                                                                       2.880013e+01   1.278410e+03  -1.204136e+01   3.256934e-01   7.469688e-03       3.009770e+04      4.875607e+04            3.009769e+04      3.009769e+04     5.313474e+04        5.211494e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7480000000000006 total=333939 active=255349 inactive=77114 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=5.211493502792148E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6668486468703019 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  375: Time  7.500000e-01
+         11610                                                                                       2.793194e+01   1.278255e+03  -1.204042e+01   3.256530e-01   7.244511e-03       3.009770e+04      4.875605e+04            3.009769e+04      3.009769e+04     5.313472e+04        6.412568e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7500000000000006 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=6.4125680079838314E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629554341 methods={0=1481}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\kinematic_poc_20261103_083855\checkpoint_step_50.sim... complete (1.4232GB in 1.3126s).
+KINEMATIC_POC step=50 angle=-1.2710352895928203E-14 full_overset_errors=0
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  376: Time  7.520000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11611                                                                                       2.706461e+01   1.278094e+03  -1.203948e+01   3.256114e-01   7.019558e-03       3.009770e+04      4.875604e+04            3.009769e+04      3.009769e+04     5.313471e+04        7.389722e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7520000000000006 total=333939 active=255370 inactive=77088 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=7.389722456450423E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6890092009435722 methods={0=1481}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  377: Time  7.540000e-01
+         11612                                                                                       2.620159e+01   1.277930e+03  -1.203854e+01   3.255687e-01   6.795724e-03       3.009770e+04      4.875604e+04            3.009769e+04      3.009769e+04     5.313471e+04        8.158839e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7540000000000006 total=333939 active=255377 inactive=77097 acceptors=1465 errors=0 difficult_interpolation=0 min_volume=8.158838511893325E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.675911660250885 methods={0=1465}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  378: Time  7.560000e-01
+         11613                                                                                       2.534630e+01   1.277762e+03  -1.203760e+01   3.255252e-01   6.573893e-03       3.009770e+04      4.875605e+04            3.009769e+04      3.009769e+04     5.313472e+04        8.754700e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7560000000000006 total=333939 active=255392 inactive=77077 acceptors=1470 errors=0 difficult_interpolation=0 min_volume=8.754699885048975E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.693705488657159 methods={0=1470}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  379: Time  7.580000e-01
+         11614                                                                                       2.450211e+01   1.277591e+03  -1.203667e+01   3.254810e-01   6.354940e-03       3.009770e+04      4.875607e+04            3.009769e+04      3.009769e+04     5.313474e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7580000000000006 total=333939 active=255414 inactive=77054 acceptors=1471 errors=0 difficult_interpolation=0 min_volume=9.128750119299533E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6943149596412737 methods={0=1471}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  380: Time  7.600000e-01
+         11615                                                                                       2.367233e+01   1.277419e+03  -1.203576e+01   3.254363e-01   6.139727e-03       3.009770e+04      4.875610e+04            3.009769e+04      3.009769e+04     5.313476e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7600000000000006 total=333939 active=255422 inactive=77041 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=9.128750119289163E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765356235710136 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  381: Time  7.620000e-01
+         11616                                                                                       2.286022e+01   1.277246e+03  -1.203486e+01   3.253915e-01   5.929095e-03       3.009770e+04      4.875614e+04            3.009769e+04      3.009769e+04     5.313480e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7620000000000006 total=333939 active=255457 inactive=77024 acceptors=1458 errors=0 difficult_interpolation=0 min_volume=9.128750119150347E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.694298169586877 methods={0=1458}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  382: Time  7.640000e-01
+         11617                                                                                       2.206894e+01   1.277074e+03  -1.203397e+01   3.253467e-01   5.723866e-03       3.009770e+04      4.875619e+04            3.009769e+04      3.009769e+04     5.313484e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7640000000000006 total=333939 active=255451 inactive=77032 acceptors=1456 errors=0 difficult_interpolation=0 min_volume=9.128750119247907E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.694343955296059 methods={0=1456}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  383: Time  7.660000e-01
+         11618                                                                                       2.130156e+01   1.276902e+03  -1.203312e+01   3.253022e-01   5.524836e-03       3.009770e+04      4.875624e+04            3.009769e+04      3.009769e+04     5.313490e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7660000000000006 total=333939 active=255488 inactive=76985 acceptors=1466 errors=0 difficult_interpolation=0 min_volume=9.128750119328089E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765815691344894 methods={0=1466}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  384: Time  7.680000e-01
+         11619                                                                                       2.056105e+01   1.276733e+03  -1.203229e+01   3.252583e-01   5.332775e-03       3.009770e+04      4.875630e+04            3.009769e+04      3.009769e+04     5.313495e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7680000000000006 total=333939 active=255487 inactive=76993 acceptors=1459 errors=0 difficult_interpolation=0 min_volume=9.128750119360685E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765815691345074 methods={0=1459}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  385: Time  7.700000e-01
+         11620                                                                                       1.985026e+01   1.276567e+03  -1.203148e+01   3.252153e-01   5.148423e-03       3.009770e+04      4.875636e+04            3.009769e+04      3.009769e+04     5.313502e+04        5.924617e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7700000000000006 total=333939 active=255513 inactive=76954 acceptors=1472 errors=0 difficult_interpolation=0 min_volume=5.92461715866851E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6853708046680929 methods={0=1472}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  386: Time  7.720000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11621                                                                                       1.917191e+01   1.276406e+03  -1.203072e+01   3.251734e-01   4.972484e-03       3.009770e+04      4.875643e+04            3.009769e+04      3.009769e+04     5.313508e+04        6.415394e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7720000000000006 total=333939 active=255528 inactive=76939 acceptors=1472 errors=0 difficult_interpolation=0 min_volume=6.415394296749169E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765838462213447 methods={0=1472}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  387: Time  7.740000e-01
+         11622                                                                                       1.852859e+01   1.276250e+03  -1.202999e+01   3.251330e-01   4.805632e-03       3.009770e+04      4.875650e+04            3.009769e+04      3.009769e+04     5.313515e+04        6.506922e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7740000000000006 total=333939 active=255560 inactive=76912 acceptors=1467 errors=0 difficult_interpolation=0 min_volume=6.5069216258030555E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765838462213472 methods={0=1467}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  388: Time  7.760000e-01
+         11623                                                                                       1.792275e+01   1.276100e+03  -1.202930e+01   3.250942e-01   4.648498e-03       3.009770e+04      4.875657e+04            3.009769e+04      3.009769e+04     5.313522e+04        5.819159e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7760000000000006 total=333939 active=255582 inactive=76869 acceptors=1488 errors=0 difficult_interpolation=0 min_volume=5.819159176485841E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.676583846221336 methods={0=1488}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  389: Time  7.780000e-01
+         11624                                                                                       1.735667e+01   1.275958e+03  -1.202865e+01   3.250574e-01   4.501678e-03       3.009770e+04      4.875664e+04            3.009769e+04      3.009769e+04     5.313529e+04        6.106862e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7780000000000006 total=333939 active=255598 inactive=76860 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=6.106862444320024E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6853709587393253 methods={0=1481}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  390: Time  7.800000e-01
+         11625                                                                                       1.683249e+01   1.275825e+03  -1.202805e+01   3.250228e-01   4.365725e-03       3.009770e+04      4.875671e+04            3.009769e+04      3.009769e+04     5.313536e+04        3.335807e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7800000000000006 total=333939 active=255611 inactive=76845 acceptors=1483 errors=0 difficult_interpolation=0 min_volume=3.3358069243749975E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839233257167 methods={0=1483}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  391: Time  7.820000e-01
+         11626                                                                                       1.635217e+01   1.275701e+03  -1.202750e+01   3.249907e-01   4.241148e-03       3.009770e+04      4.875678e+04            3.009769e+04      3.009769e+04     5.313543e+04        3.821478e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7820000000000006 total=333939 active=255623 inactive=76841 acceptors=1475 errors=0 difficult_interpolation=0 min_volume=3.821478333663975E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839257773927 methods={0=1475}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  392: Time  7.840000e-01
+         11627                                                                                       1.591751e+01   1.275588e+03  -1.202700e+01   3.249613e-01   4.128413e-03       3.009770e+04      4.875684e+04            3.009769e+04      3.009769e+04     5.313549e+04        5.313229e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7840000000000006 total=333939 active=255648 inactive=76807 acceptors=1484 errors=0 difficult_interpolation=0 min_volume=5.313228933307554E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839257773862 methods={0=1484}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  393: Time  7.860000e-01
+         11628                                                                                       1.553012e+01   1.275485e+03  -1.202656e+01   3.249348e-01   4.027939e-03       3.009770e+04      4.875690e+04            3.009769e+04      3.009769e+04     5.313555e+04        3.695142e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7860000000000006 total=333939 active=255653 inactive=76799 acceptors=1487 errors=0 difficult_interpolation=0 min_volume=3.6951421106156656E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839257773971 methods={0=1487}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  394: Time  7.880000e-01
+         11629                                                                                       1.519145e+01   1.275395e+03  -1.202617e+01   3.249114e-01   3.940100e-03       3.009770e+04      4.875696e+04            3.009769e+04      3.009769e+04     5.313560e+04        4.018562e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7880000000000006 total=333939 active=255662 inactive=76794 acceptors=1483 errors=0 difficult_interpolation=0 min_volume=4.018561610610332E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839257773933 methods={0=1483}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  395: Time  7.900000e-01
+         11630                                                                                       1.490274e+01   1.275318e+03  -1.202583e+01   3.248913e-01   3.865220e-03       3.009770e+04      4.875700e+04            3.009769e+04      3.009769e+04     5.313565e+04        4.954933e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7900000000000006 total=333939 active=255687 inactive=76764 acceptors=1488 errors=0 difficult_interpolation=0 min_volume=4.954932521936204E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.685370961689005 methods={0=1488}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  396: Time  7.920000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11631                                                                                       1.466506e+01   1.275253e+03  -1.202556e+01   3.248746e-01   3.803575e-03       3.009770e+04      4.875704e+04            3.009769e+04      3.009769e+04     5.313569e+04        5.934634e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7920000000000006 total=333939 active=255682 inactive=76770 acceptors=1487 errors=0 difficult_interpolation=0 min_volume=5.9346344875304065E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.676583927221713 methods={0=1487}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  397: Time  7.940000e-01
+         11632                                                                                       1.447929e+01   1.275203e+03  -1.202534e+01   3.248615e-01   3.755393e-03       3.009770e+04      4.875708e+04            3.009769e+04      3.009769e+04     5.313572e+04        6.795697e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7940000000000006 total=333939 active=255685 inactive=76762 acceptors=1492 errors=0 difficult_interpolation=0 min_volume=6.7956971159104654E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839272217213 methods={0=1492}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  398: Time  7.960000e-01
+         11633                                                                                       1.434611e+01   1.275167e+03  -1.202519e+01   3.248521e-01   3.720850e-03       3.009770e+04      4.875710e+04            3.009769e+04      3.009769e+04     5.313574e+04        7.448974e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7960000000000006 total=333939 active=255693 inactive=76758 acceptors=1488 errors=0 difficult_interpolation=0 min_volume=7.448973714707465E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839272217238 methods={0=1488}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  399: Time  7.980000e-01
+         11634                                                                                       1.426601e+01   1.275145e+03  -1.202509e+01   3.248464e-01   3.700074e-03       3.009770e+04      4.875711e+04            3.009769e+04      3.009769e+04     5.313576e+04        4.977327e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.7980000000000006 total=333939 active=255705 inactive=76748 acceptors=1486 errors=0 difficult_interpolation=0 min_volume=4.977327488420254E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839272217353 methods={0=1486}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  400: Time  8.000000e-01
+         11635                                                                                       1.423927e+01   1.275137e+03  -1.202506e+01   3.248445e-01   3.693140e-03       3.009770e+04      4.875712e+04            3.009769e+04      3.009769e+04     5.313576e+04        3.387367e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8000000000000006 total=333939 active=255708 inactive=76741 acceptors=1490 errors=0 difficult_interpolation=0 min_volume=3.387367054142733E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839272217404 methods={0=1490}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\kinematic_poc_20261103_083855\checkpoint_step_75.sim... complete (1.4232GB in 1.1807s).
+KINEMATIC_POC step=75 angle=-5.0 full_overset_errors=0
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  401: Time  8.020000e-01
+         11636                                                                                       1.426601e+01   1.275145e+03  -1.202509e+01   3.248464e-01   3.700074e-03       3.009770e+04      4.875711e+04            3.009769e+04      3.009769e+04     5.313576e+04        3.117987e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8020000000000006 total=333939 active=255705 inactive=76748 acceptors=1486 errors=0 difficult_interpolation=0 min_volume=3.11798689863955E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839272217407 methods={0=1486}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  402: Time  8.040000e-01
+         11637                                                                                       1.434611e+01   1.275167e+03  -1.202519e+01   3.248521e-01   3.720850e-03       3.009770e+04      4.875710e+04            3.009769e+04      3.009769e+04     5.313574e+04        2.846665e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8040000000000006 total=333939 active=255693 inactive=76758 acceptors=1488 errors=0 difficult_interpolation=0 min_volume=2.8466653703292986E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.676583927221735 methods={0=1488}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  403: Time  8.060000e-01
+         11638                                                                                       1.447929e+01   1.275203e+03  -1.202534e+01   3.248615e-01   3.755393e-03       3.009770e+04      4.875708e+04            3.009769e+04      3.009769e+04     5.313572e+04        2.872548e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8060000000000006 total=333939 active=255685 inactive=76762 acceptors=1492 errors=0 difficult_interpolation=0 min_volume=2.87254844804545E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839272217382 methods={0=1492}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  404: Time  8.080000e-01
+         11639                                                                                       1.466506e+01   1.275253e+03  -1.202556e+01   3.248746e-01   3.803575e-03       3.009770e+04      4.875704e+04            3.009769e+04      3.009769e+04     5.313569e+04        3.661905e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8080000000000006 total=333939 active=255682 inactive=76770 acceptors=1487 errors=0 difficult_interpolation=0 min_volume=3.6619050796060766E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.676583927221727 methods={0=1487}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  405: Time  8.100000e-01
+         11640                                                                                       1.490274e+01   1.275318e+03  -1.202583e+01   3.248913e-01   3.865220e-03       3.009770e+04      4.875700e+04            3.009769e+04      3.009769e+04     5.313565e+04        5.483072e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8100000000000006 total=333939 active=255687 inactive=76764 acceptors=1488 errors=0 difficult_interpolation=0 min_volume=5.483072204166457E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6853709616890087 methods={0=1488}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  406: Time  8.120000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11641                                                                                       1.519145e+01   1.275395e+03  -1.202617e+01   3.249114e-01   3.940100e-03       3.009770e+04      4.875696e+04            3.009769e+04      3.009769e+04     5.313560e+04        4.631552e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8120000000000006 total=333939 active=255662 inactive=76794 acceptors=1483 errors=0 difficult_interpolation=0 min_volume=4.6315520164091925E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839257774098 methods={0=1483}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  407: Time  8.140000e-01
+         11642                                                                                       1.553012e+01   1.275485e+03  -1.202656e+01   3.249348e-01   4.027939e-03       3.009770e+04      4.875690e+04            3.009769e+04      3.009769e+04     5.313555e+04        3.341799e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8140000000000006 total=333939 active=255653 inactive=76799 acceptors=1487 errors=0 difficult_interpolation=0 min_volume=3.341799485445526E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839257774036 methods={0=1487}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 413 cells in FlapOverset
+TimeStep  408: Time  8.160000e-01
+         11643                                                                                       1.591751e+01   1.275588e+03  -1.202700e+01   3.249613e-01   4.128413e-03       3.009770e+04      4.875684e+04            3.009769e+04      3.009769e+04     5.313549e+04        2.497378e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8160000000000006 total=333939 active=255648 inactive=76807 acceptors=1484 errors=0 difficult_interpolation=0 min_volume=2.497377750714469E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839257774036 methods={0=1484}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  409: Time  8.180000e-01
+         11644                                                                                       1.635217e+01   1.275701e+03  -1.202750e+01   3.249907e-01   4.241148e-03       3.009770e+04      4.875678e+04            3.009769e+04      3.009769e+04     5.313543e+04        2.318048e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8180000000000006 total=333939 active=255623 inactive=76841 acceptors=1475 errors=0 difficult_interpolation=0 min_volume=2.318047639067223E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.676583925777401 methods={0=1475}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  410: Time  8.200000e-01
+         11645                                                                                       1.683249e+01   1.275825e+03  -1.202805e+01   3.250228e-01   4.365725e-03       3.009770e+04      4.875671e+04            3.009769e+04      3.009769e+04     5.313536e+04        2.301867e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8200000000000006 total=333939 active=255611 inactive=76845 acceptors=1483 errors=0 difficult_interpolation=0 min_volume=2.301866681602832E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765839233257267 methods={0=1483}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  411: Time  8.220000e-01
+         11646                                                                                       1.735667e+01   1.275958e+03  -1.202865e+01   3.250574e-01   4.501678e-03       3.009770e+04      4.875664e+04            3.009769e+04      3.009769e+04     5.313529e+04        2.478427e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8220000000000006 total=333939 active=255598 inactive=76860 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=2.478426667351477E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6853709587393155 methods={0=1481}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 412 cells in FlapOverset
+TimeStep  412: Time  8.240000e-01
+         11647                                                                                       1.792275e+01   1.276100e+03  -1.202930e+01   3.250942e-01   4.648498e-03       3.009770e+04      4.875657e+04            3.009769e+04      3.009769e+04     5.313522e+04        3.523686e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8240000000000006 total=333939 active=255582 inactive=76869 acceptors=1488 errors=0 difficult_interpolation=0 min_volume=3.5236862770359538E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765838462213327 methods={0=1488}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 413 cells in FlapOverset
+TimeStep  413: Time  8.260000e-01
+         11648                                                                                       1.852859e+01   1.276250e+03  -1.202999e+01   3.251330e-01   4.805632e-03       3.009770e+04      4.875650e+04            3.009769e+04      3.009769e+04     5.313515e+04        2.297880e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8260000000000006 total=333939 active=255560 inactive=76912 acceptors=1467 errors=0 difficult_interpolation=0 min_volume=2.2978795233017142E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.676583846221332 methods={0=1467}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  414: Time  8.280000e-01
+         11649                                                                                       1.917191e+01   1.276406e+03  -1.203072e+01   3.251734e-01   4.972484e-03       3.009770e+04      4.875643e+04            3.009769e+04      3.009769e+04     5.313508e+04        5.104896e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8280000000000006 total=333939 active=255528 inactive=76939 acceptors=1472 errors=0 difficult_interpolation=0 min_volume=5.104896386721005E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765838462213292 methods={0=1472}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  415: Time  8.300000e-01
+         11650                                                                                       1.985026e+01   1.276567e+03  -1.203148e+01   3.252153e-01   5.148423e-03       3.009770e+04      4.875636e+04            3.009769e+04      3.009769e+04     5.313502e+04        5.688719e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8300000000000006 total=333939 active=255513 inactive=76954 acceptors=1472 errors=0 difficult_interpolation=0 min_volume=5.688719076819236E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6853708046680673 methods={0=1472}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  416: Time  8.320000e-01
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) Mapped k minimum (J/kg) Mapped omega minimum (/s) HF_density_min_init 2 (kg/m^3) HF_density_min_init 3 (kg/m^3) HF_density_min_init 4 (kg/m^3) 
+         11651                                                                                       2.056105e+01   1.276733e+03  -1.203229e+01   3.252583e-01   5.332775e-03       3.009770e+04      4.875630e+04            3.009769e+04      3.009769e+04     5.313495e+04        5.842807e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8320000000000006 total=333939 active=255487 inactive=76993 acceptors=1459 errors=0 difficult_interpolation=0 min_volume=5.8428071545853095E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.676581569134471 methods={0=1459}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  417: Time  8.340000e-01
+         11652                                                                                       2.130156e+01   1.276902e+03  -1.203312e+01   3.253022e-01   5.524836e-03       3.009770e+04      4.875624e+04            3.009769e+04      3.009769e+04     5.313490e+04        7.326583e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8340000000000006 total=333939 active=255488 inactive=76985 acceptors=1466 errors=0 difficult_interpolation=0 min_volume=7.326582595331992E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765815691344632 methods={0=1466}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  418: Time  8.360000e-01
+         11653                                                                                       2.206894e+01   1.277074e+03  -1.203397e+01   3.253467e-01   5.723866e-03       3.009770e+04      4.875619e+04            3.009769e+04      3.009769e+04     5.313484e+04        8.620525e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8360000000000006 total=333939 active=255451 inactive=77032 acceptors=1456 errors=0 difficult_interpolation=0 min_volume=8.620525177363074E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6943439552960202 methods={0=1456}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  419: Time  8.380000e-01
+         11654                                                                                       2.286022e+01   1.277246e+03  -1.203486e+01   3.253915e-01   5.929095e-03       3.009770e+04      4.875614e+04            3.009769e+04      3.009769e+04     5.313480e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8380000000000006 total=333939 active=255457 inactive=77024 acceptors=1458 errors=0 difficult_interpolation=0 min_volume=9.128750119370601E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.694298169586862 methods={0=1458}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  420: Time  8.400000e-01
+         11655                                                                                       2.367233e+01   1.277419e+03  -1.203576e+01   3.254363e-01   6.139727e-03       3.009770e+04      4.875610e+04            3.009769e+04      3.009769e+04     5.313476e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8400000000000006 total=333939 active=255422 inactive=77041 acceptors=1476 errors=0 difficult_interpolation=0 min_volume=9.128750119555176E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6765356235710012 methods={0=1476}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  421: Time  8.420000e-01
+         11656                                                                                       2.450211e+01   1.277591e+03  -1.203667e+01   3.254810e-01   6.354940e-03       3.009770e+04      4.875607e+04            3.009769e+04      3.009769e+04     5.313474e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8420000000000006 total=333939 active=255414 inactive=77054 acceptors=1471 errors=0 difficult_interpolation=0 min_volume=9.128750119472466E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6943149596412785 methods={0=1471}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  422: Time  8.440000e-01
+         11657                                                                                       2.534630e+01   1.277762e+03  -1.203760e+01   3.255252e-01   6.573893e-03       3.009770e+04      4.875605e+04            3.009769e+04      3.009769e+04     5.313472e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8440000000000006 total=333939 active=255392 inactive=77077 acceptors=1470 errors=0 difficult_interpolation=0 min_volume=9.128750119517358E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6937054886571583 methods={0=1470}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  423: Time  8.460000e-01
+         11658                                                                                       2.620159e+01   1.277930e+03  -1.203854e+01   3.255687e-01   6.795724e-03       3.009770e+04      4.875604e+04            3.009769e+04      3.009769e+04     5.313471e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8460000000000006 total=333939 active=255377 inactive=77097 acceptors=1465 errors=0 difficult_interpolation=0 min_volume=9.128750119411918E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.675911660250885 methods={0=1465}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  424: Time  8.480000e-01
+         11659                                                                                       2.706461e+01   1.278094e+03  -1.203948e+01   3.256114e-01   7.019558e-03       3.009770e+04      4.875604e+04            3.009769e+04      3.009769e+04     5.313471e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8480000000000006 total=333939 active=255370 inactive=77088 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.12875011928344E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.689009200943584 methods={0=1481}
+
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 411 cells in FlapOverset
+TimeStep  425: Time  8.500000e-01
+         11660                                                                                       2.793194e+01   1.278255e+03  -1.204042e+01   3.256530e-01   7.244511e-03       3.009770e+04      4.875605e+04            3.009769e+04      3.009769e+04     5.313472e+04        9.128750e-12   6.104819e-02         1.000000e+00   2.882393e+00   2.650433e+02                 1.000000e+03                                                                   1.000000e+03                   1.000000e+03                   1.000000e+03 
+FULL_OVERSET_AUDIT time=0.8500000000000006 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.12875011943403E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629554326 methods={0=1481}
+
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\kinematic_poc_20261103_083855\checkpoint_step_100.sim... complete (1.4232GB in 1.4138s).
+KINEMATIC_POC step=100 angle=2.5420705791856405E-14 full_overset_errors=0
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\kinematic_poc_20261103_083855\motion_verified.sim... complete (1.4232GB in 1.4365s).
+KINEMATIC_POC KINEMATICS_PASSED_FLOW_NOT_SOLVED
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

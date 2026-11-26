@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-03T05:06:57.106203+01:00",
+  "diagnostic_approved": true,
+  "scientific_approved": false,
+  "author": "Work",
+  "decision": "Run a separate 0-degree top-backflow direction diagnostic from the native-reopened C40 t0.45s checkpoint. Change only top pressure-outlet backflow direction BOUNDARY_NORMAL to EXTRAPOLATED. Keep environmental backflow pressure, scalar values, piezometric pressure zero, downstream outlet, mesh, geometry, dt0.002, 40 inner iterations and URFs0.8/0.2. No reset, initialization or remesh.",
+  "evidence": {
+    "C_audit": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\pressure_outlets_SP_C_20261103_045619",
+    "B_audit": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\pressure_outlets_SP_B_20261103_045925",
+    "both": "Native B and C top and downstream use BOUNDARY_NORMAL, ENVIRONMENTAL, piezometric0Pa. Read-only inspections completed with source SHA unchanged and no solver steps.",
+    "spatial": "Both B and C show pressure dips and tangential speed loss in remote 10<x<43,7<z<8 top band. Pressure URF0.1 trial did not resolve them.",
+    "manual": "Installed Flow Boundaries Reference GUID-E14693DE-8C70-4C1E-9DDE-CD4E8591E1BC recommends Extrapolated backflow direction for flow largely parallel to the outlet. Pressure-outlet theory Eq681/682: interior velocity direction, environmental pressure correction uses normal velocity.",
+    "causal_separation": "This shared boundary issue is distinct from the old Overset near-wall Cp spike responsible for the large old B/C force difference."
+  },
+  "acceptance": "Evaluate native fields, residual decay, far-top velocity recovery, per-zone pressure minima and force stability. Technical guard pass alone is insufficient for scientific approval. Old B is not a matched reference after this boundary change; matched B follow-up required if diagnostic succeeds.",
+  "limits": {
+    "cpu": 8,
+    "gpu": false,
+    "angle_deg": 0,
+    "min_steps": 100,
+    "max_steps": 250,
+    "nonzero_angles_blocked": true,
+    "scientific_gate": false
+  },
+  "source_sha256": "8b6162b9baa27a5e04c38048dbab3c801cdd99266200a320231390d1f3f8feed",
+  "record_timestamp_source": "native preparation event; corrected draft timestamp"
+}

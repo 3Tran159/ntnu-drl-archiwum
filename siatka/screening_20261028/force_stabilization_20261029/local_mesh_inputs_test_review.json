@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-30T14:53:59.767453+01:00",
+  "status": "passed_offline_compile_and_isolated_tests",
+  "source_hashes": {
+    "local_mesh_inputs.py": "c9b95ed9459b179799bf661567a3df472c711974ca87bdd7249831175e5ef7ce",
+    "InspectLocalMesh.java": "eb0e335182c463d45831aeeacb49dc72fdad75d792c55fcc9bc6b8f9317547a8",
+    "build_local_mesh_inputs.py": "588b9db2453cff2ff2c2000bfd88e21834a4f6674f7d701f6bdbcf204f85d016",
+    "test_local_mesh_inputs.py": "888de29ef5fc169e13eed7273c929d51acdf5a25f7e1def1d3b0a236d693a186"
+  },
+  "tests": {
+    "count": 32,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.209,
+    "command": "C:/Python315/python.exe test_local_mesh_inputs.py",
+    "real_STAR_launch": false,
+    "live_registry_mutations": false
+  },
+  "native_compile": {
+    "status": "javac_passed",
+    "at": "2026-10-30T14:52:44.673716+01:00",
+    "macro": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\InspectLocalMesh.java",
+    "macro_sha256": "eb0e335182c463d45831aeeacb49dc72fdad75d792c55fcc9bc6b8f9317547a8",
+    "compiled_directory": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\compiled_local_mesh_import_a920295c9d",
+    "compile_log": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\compiled_local_mesh_import_a920295c9d\\compile.log",
+    "zero_flow_static_scan": true,
+    "STAR_launched": false,
+    "returncode": 0
+  },
+  "file_only_geometry_test": {
+    "directory": "E:/ntnu/quasi2d_waves_20261029/LOCAL_MESH_IMPORT_FILE_TEST_9e97b126931b",
+    "source": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2/mesh.CGNS",
+    "passed": true,
+    "cells": 317277,
+    "foil_edges": 856,
+    "method": "Read-only existing CGNS hardlink; full NGON/NFACE validation, no STAR, no selection/import registry."
+  },
+  "compatibility_contract": {
+    "status": "mesh_inspection_passed",
+    "ready": true,
+    "means": "Mechanical/current recipe compatibility only. No convergence, force accuracy or settled C01 approval.",
+    "hard_gates": [
+      "one volume region fluid, exact supported boundary names",
+      "fixed z/span/foil shape; full single-span NGON/NFACE topology",
+      "native cell quality and geometric audits",
+      "dt0.0001..0.001,10inner,SECOND_ORDER",
+      "water+air, VOF WaveModel, existing FlatVofWave Calm and segregated pressure/VOF solvers"
+    ],
+    "replaced_only_in_new_C01": [
+      "current/wind/waterline",
+      "wave reference/retained fields",
+      "inlet/outlet/top/bed/foil BCs",
+      "pressure/VOF AMG tolerance"
+    ],
+    "original_source_never_changed": true
+  },
+  "limits": [
+    "Native macro compiled against installed STAR API but was not launched in this task. The first explicit Inspect button must produce its own runtime zero-flow receipt.",
+    ">1M/different foil edge count compatibility exercised using isolated 1.2M/1663-edge mock; full actual file audit here used existing317277-cell mesh.",
+    "Import does not approve physics calibration, mesh convergence, timestep accuracy, matched calm or wave forces.",
+    "Emergency STOP_ALL blocks a new inspection; local flow PAUSE does not. Inspect button never removes either marker."
+  ]
+}

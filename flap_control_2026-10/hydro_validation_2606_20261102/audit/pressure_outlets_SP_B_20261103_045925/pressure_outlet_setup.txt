@@ -1,0 +1,45 @@
+source=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_split0_stabilized_2606.sim
+physical_time_s=0.3000000000000002
+native_iteration=2250
+cells=256750
+NO_SOLVER_STEPS_NO_SIM_SAVE
+
+REGION=Background
+BOUNDARY=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.top
+type=Pressure Outlet
+condition_class=star.flow.BackflowSpecification
+backflow_bucket=conditions
+backflow_direction_value=1
+backflow_direction_name=BOUNDARY_NORMAL
+backflow_pressure_option=2
+backflow_scalar_option=1
+condition_class=star.flow.PressureOutletBoundaryOption
+condition_class=star.motion.ReferenceFrameOption
+condition_class=star.flow.FlowBoundaryDiffusionOption
+condition_class=star.kwturb.KwTurbSpecOption
+value_class=star.flow.StaticPressureProfile
+value_class=star.turbulence.TurbulenceIntensityProfile
+value_class=star.turbulence.TurbulentViscosityRatioProfile
+static_pressure_method=FunctionScalarProfileMethod
+pressure_field=HYDRO_PiezometricZero
+pressure_definition=<0 Pa>
+
+REGION=Background
+BOUNDARY=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.outlet
+type=Pressure Outlet
+condition_class=star.flow.BackflowSpecification
+backflow_bucket=conditions
+backflow_direction_value=1
+backflow_direction_name=BOUNDARY_NORMAL
+backflow_pressure_option=2
+backflow_scalar_option=1
+condition_class=star.flow.PressureOutletBoundaryOption
+condition_class=star.motion.ReferenceFrameOption
+condition_class=star.flow.FlowBoundaryDiffusionOption
+condition_class=star.kwturb.KwTurbSpecOption
+value_class=star.flow.StaticPressureProfile
+value_class=star.turbulence.TurbulenceIntensityProfile
+value_class=star.turbulence.TurbulentViscosityRatioProfile
+static_pressure_method=FunctionScalarProfileMethod
+pressure_field=HYDRO_PiezometricZero
+pressure_definition=<0 Pa>

@@ -1,0 +1,66 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Jfc3BsaXQwX2ZpeGVkXFNQX0Jfc3BsaXQwX3N0YWJpbGl6ZWRfMjYwNi5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 30408
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 03:50:57 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_split0_stabilized_2606.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=8 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:6: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+Files.createDirectories(out);s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);
+                                                                    ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:11: warning: [deprecation] getUrf() in star.segregatedflow.VelocitySolver has been deprecated
+b.append("velocity_urf="+flow.getVelocitySolver().getUrf()+"\npressure_urf="+flow.getPressureSolver().getUrf()+"\ndynamic_velocity_urf="+flow.getVelocitySolver().getUseDynamicLocalUrf()+"\ncontinuity_initialization="+flow.getContinuityInitialization()+"\n");
+                                                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:11: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+b.append("velocity_urf="+flow.getVelocitySolver().getUrf()+"\npressure_urf="+flow.getPressureSolver().getUrf()+"\ndynamic_velocity_urf="+flow.getVelocitySolver().getUseDynamicLocalUrf()+"\ncontinuity_initialization="+flow.getContinuityInitialization()+"\n");
+                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:12: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nflow_SECOND_ORDER="+FlowUpwindOption.Type.SECOND_ORDER.getValue()+"\n");
+                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:13: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+b.append("SST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\nSST_SECOND_ORDER="+UpwindOption.Type.SECOND_ORDER.getValue()+"\n");
+                                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:14: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+b.append("dt_s="+us.getTimeStep().getValue()+"\ntime_discretization="+us.getTimeDiscretizationOption().getSelected()+"\ntime_SECOND_ORDER="+TimeDiscretizationOption.Type.SECOND_ORDER.getValue()+"\n");
+                                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:14: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+b.append("dt_s="+us.getTimeStep().getValue()+"\ntime_discretization="+us.getTimeDiscretizationOption().getSelected()+"\ntime_SECOND_ORDER="+TimeDiscretizationOption.Type.SECOND_ORDER.getValue()+"\n");
+                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:18: warning: [deprecation] star.common.EnumeratedOption in star.common has been deprecated
+for(Region r:s.getRegionManager().getRegions())for(Boundary boundary:r.getBoundaryManager().getBoundaries())if(boundary.getBoundaryType() instanceof PressureBoundary){b.append("boundary="+boundary.getPresentationName()+"\n");for(Object c:boundary.getConditions().getObjects())if(c instanceof EnumeratedOption)b.append(" option="+c.getClass().getSimpleName()+" selected="+((EnumeratedOption)c).getSelected()+"\n");}
+                                                                                                                                                                                                                                                                                                    ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:18: warning: [deprecation] star.common.EnumeratedOption in star.common has been deprecated
+for(Region r:s.getRegionManager().getRegions())for(Boundary boundary:r.getBoundaryManager().getBoundaries())if(boundary.getBoundaryType() instanceof PressureBoundary){b.append("boundary="+boundary.getPresentationName()+"\n");for(Object c:boundary.getConditions().getObjects())if(c instanceof EnumeratedOption)b.append(" option="+c.getClass().getSimpleName()+" selected="+((EnumeratedOption)c).getSelected()+"\n");}
+                                                                                                                                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_034849\InspectBMatchingNumerics.java:18: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+for(Region r:s.getRegionManager().getRegions())for(Boundary boundary:r.getBoundaryManager().getBoundaries())if(boundary.getBoundaryType() instanceof PressureBoundary){b.append("boundary="+boundary.getPresentationName()+"\n");for(Object c:boundary.getConditions().getObjects())if(c instanceof EnumeratedOption)b.append(" option="+c.getClass().getSimpleName()+" selected="+((EnumeratedOption)c).getSelected()+"\n");}
+                                                                                                                                                                                                                                                                                                                                                                                                        ^
+
+Loading/configuring connectivity (old|new partitions: 8|1)
+  Background (index 1): 256750 cells, 707402 faces, 906624 verts.
+Configuring finished
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

@@ -1,0 +1,55 @@
+{
+  "updated_at": "2026-10-30T01:36:28.032480+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_inner40phaseBudget_dt1ms_r11",
+  "source_unchanged": true,
+  "settings": "SO1ms40inner versus identicalSO1ms10inner R10; bothfromsameR4t0.500",
+  "window_s": [
+    0.502,
+    0.75
+  ],
+  "samples": 249,
+  "metrics": {
+    "native_water_error_kg_s": {
+      "max_abs": 0.9520108816859312,
+      "mean_abs": 0.0524261885123588
+    },
+    "native_air_error_kg_s": {
+      "max_abs": 0.0011514670888062195,
+      "mean_abs": 6.659459914165534e-05
+    },
+    "native_sum_error_kg_s": {
+      "max_abs": 0.9508909650524462,
+      "mean_abs": 0.052361722770798806
+    },
+    "native_sum_pct_inward_mass": {
+      "max_abs": 0.011144986616723137,
+      "mean_abs": 0.0006135400303853828
+    },
+    "native_abs_sum_pct_inward_mass": {
+      "max_abs": 0.011171238745202133,
+      "mean_abs": 0.000615075723338578
+    },
+    "bdf2_plus_faceflux_pct_inward_mass": {
+      "max_abs": 0.011144989242869793,
+      "mean_abs": 0.000613540115079659
+    },
+    "bdf2_plus_phaseflux_pct_inward_mass": {
+      "max_abs": 0.011144989242912432,
+      "mean_abs": 0.0006135401150729862
+    },
+    "faceflux_minus_phaseflux_kg_s": {
+      "max_abs": 1.4551915228366852e-11,
+      "mean_abs": 4.266224143256145e-12
+    }
+  },
+  "native_vs_inventory_max_difference_pct": 4.849334389286138e-09,
+  "phase_vs_mixture_max_flux_difference_kg_s": 1.4551915228366852e-11,
+  "native_inventory_consistent": true,
+  "short_mass_gate_pass": false,
+  "native_phase_mass_gate_pass": false,
+  "legacy_faceflux_mass_gate_pass": false,
+  "original_threshold_pct": 0.01,
+  "max_gauge_40minus10_difference_mm": 0.3461476649313511,
+  "gauge_40minus10_RMS_difference_mm": 0.0740661191049509,
+  "scope": "Diagnostic comparison. Native phase errors are sums of phase transport residual timesdt perSiemensGUID-187276CC-89DA-4F69-B1AE-500038C45DE8. LegacyBDF2+FaceFlux retained. Nativephasefluxanddensityreconstructionreview requiredbeforeanygateinterpretation. Nofoilforceadmission."
+}

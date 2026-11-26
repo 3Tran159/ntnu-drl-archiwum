@@ -1,0 +1,68 @@
+{
+  "api": {
+    "star/vof/FifthOrderVofWave.class": [
+      "star/vof/VofWave",
+      "star/vof/FifthOrderVofWave",
+      "WaveHeight",
+      "getWaveHeight",
+      "getVofWaveSpecification",
+      "Lstar/vof/VofWaveSpecificationBase",
+      "star/vof/VofWaveSpecificationBase",
+      "getWavePeriod",
+      "WaveSpecification",
+      "star/vof/VofWaveSpecificationOption",
+      "Lstar/vof/VofWaveSpecificationOption",
+      "FirstWaveFront",
+      "Lstar/vof/FifthOrderVofWave",
+      "getWaveHeightInput",
+      "Wave Height",
+      "Wave Height is vertical distance from crest to trough",
+      "setWaveHeightInput",
+      "setWaveHeight",
+      "setWavePeriod",
+      "getFirstWaveFront",
+      "First Wave Front Setting",
+      "JFirst Wave Front Setting",
+      "setFirstWaveFront",
+      "FifthOrderVofWave.java",
+      "FifthOrderVofWave",
+      "getWaveHeight",
+      "getVofWaveSpecification"
+    ],
+    "star/vof/VofWave.class": [
+      "star/vof/ManagedVofWave",
+      "star/vof/VofWave",
+      "Lstar/vof/VofWave",
+      "VofWave.java"
+    ],
+    "star/vof/VofWaveModel.class": [
+      "star/vof/VofWaveModel",
+      "EnableTheoryComparison",
+      "getVofWaveManager",
+      "Lstar/vof/VofWaveManager",
+      "VofWaveManager",
+      "star/vof/VofWaveManager",
+      "Lstar/vof/VofWaveModel",
+      "getEnableTheoryComparison",
+      "Enable Theory Comparison",
+      "setEnableTheoryComparison",
+      "VofWaveModel.java",
+      "VOF Waves",
+      "getVofWaveManager"
+    ]
+  },
+  "references": [
+    {
+      "path": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\doc\\en\\online\\STARCCMP\\GUID-663A1066-0A35-40FB-93D4-AD2A72739AE8.html",
+      "snippets": [
+        "arriage . Ramp Time Facilitates a more robust solution by reducing oscillation. At release time, force and moments are applied to the body and can cause a shock effect. Applying a ramp time applies the forces and moments proportionally across the interval to reduce the shock effect. The value of this property is typically 10 times the release time. --> Unpublished work \u00a9 Siemens 2026 Corporate Information Privacy Policy Cookies Policy Terms of Use Digital ID Need Support? Support Center Follow Us --> "
+      ]
+    },
+    {
+      "path": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\doc\\en\\online\\STARCCMP\\GUID-A037C549-46A5-4D96-A1FD-2023229B16B9.html",
+      "snippets": [
+        "on that is defined as: f r = { 0 : t &lt; t s t - t s t r : t s \u2264 t &lt; t s + t r 1 : t \u2265 t s + t r \u2062 (5031) where t s is the user-specified release time and t r is the specified ramp time. External Forces and Moments User-defined Forces and Moments Simcenter STAR-CCM+ allows you to define external forces and moments directly. You can define: Forces acting on the 6-DOF body at its center of mass: Forces acting on the 6-DOF body at a specified location: Moments acting on the 6-DOF body with respect to the body position: In addition to user-defined forces and moments, Simcenter STAR-CCM+ provides the following predefined types: Gravity Force The gravity force is defined as: f g = m g (5032) where m is the mass of the rigid body. Fluid Force and Moment The force and moment exerted by the surrounding fluid can be written as: f f l"
+      ]
+    }
+  ]
+}

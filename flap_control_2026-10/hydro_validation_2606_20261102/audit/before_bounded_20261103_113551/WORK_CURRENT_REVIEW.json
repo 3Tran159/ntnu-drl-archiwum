@@ -1,0 +1,121 @@
+{
+  "at": "2026-11-03T11:23:09.655569+01:00",
+  "status": "EXECUTION_PASS_CONTINUATION_HOLD",
+  "scientific_approved": false,
+  "training_eligible": false,
+  "last_decision": "20-step execution completed and checkpoint saved. Continuation HOLD: final omega residual ratio0.010000225 exceeds unchanged0.01 gate. No further solver steps or full sweep.",
+  "original_rejected_difference": {
+    "CL_percent": 14.6869,
+    "CD_percent": -9.56915
+  },
+  "C0": {
+    "time_s": 0.65,
+    "iteration": 11560,
+    "CL_mean25": 0.32561948776312,
+    "CD_mean25": 0.0072459371243424,
+    "Mh_mean25": -12.040069616324,
+    "pabs_min_Pa": 30097.6945773,
+    "mass_relative": 2.98365817057e-09
+  },
+  "B0": {
+    "time_s": 0.5,
+    "iteration": 6250,
+    "CL_mean25": 0.32661098046588,
+    "CD_mean25": 0.007191107030274,
+    "Mh_mean25": -12.160189508284
+  },
+  "current_difference_percent": {
+    "CL": -0.3035699232603051,
+    "CD": 0.762470838461593
+  },
+  "confirmed": [
+    "Original Cp/head spikes near hinge and y+~571 rejected.",
+    "isEmpty() audit invalid; replaced with native midspan full Overset extraction.",
+    "More inner iterations and interpolation alone did not cure original case.",
+    "Tight numerical cage removed near-wall spikes; physical geometry retained.",
+    "Top backflow EXTRAPOLATED strongly improved C0 residual plateau and top pressure spikes. Matched B0 completed."
+  ],
+  "not_established": [
+    "Formal grid/time uncertainty remains unquantified.",
+    "Far-field velocity memory remains.",
+    "Matched original A control and quantitative energy validation remain separate.",
+    "No +2degree hydrodynamic solution yet."
+  ],
+  "next_test": "Prepare and test a consistent, stable fixed+2/10m/s startup in a separately identified diagnostic. Do not continue this failed checkpoint, do not relax guards. No full sweep until native startup passes.",
+  "parameters": {
+    "version": "2606.0002 build21.04.009-R8",
+    "CPU": 8,
+    "GPU": false,
+    "MPI": "ms",
+    "U": 18,
+    "rho": 1000,
+    "mu": 0.001,
+    "Re": 21420000,
+    "chord_m": 1.19,
+    "span_m": 0.02,
+    "hinge_xyz": [
+      0.952,
+      0.02,
+      0.02128173276776986
+    ],
+    "hinge_x_c": 0.8,
+    "gap_m": 0.0025,
+    "delta": 0,
+    "model": "single phase URANS SST AllYplus",
+    "dt": 0.002,
+    "inner": 40,
+    "URF": [
+      0.8,
+      0.2
+    ],
+    "schemes": "SECOND_ORDER",
+    "top_backflow": "EXTRAPOLATED",
+    "pref_Pa": 101325,
+    "water_C": 20,
+    "vapor_Pa": 2339.2147668,
+    "required_cavitation_margin_Pa": 10000,
+    "CPU_max": 8
+  },
+  "C0_mesh": {
+    "cells": 333939,
+    "active": 255350,
+    "inactive": 77108,
+    "acceptors": 1481,
+    "errors": 0,
+    "difficult": 0,
+    "min_volume": 9.128750119e-12,
+    "min_quality": 0.061048186,
+    "interpolation": "DISTANCE",
+    "flux_correction": true,
+    "prism_targets": [
+      48,
+      24
+    ],
+    "collapsed_faces": 630,
+    "negative_volume": false,
+    "formal_validation": false
+  },
+  "unsaved_solver_progress": null,
+  "native_reopen_verified": true,
+  "accepted_for_kinematics": true,
+  "quantitative_hydrodynamic_validation": false,
+  "obstacle": "['final_inner_residual_Sdr']",
+  "acceptance_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\C0_KINEMATIC_BASE_ACCEPTANCE_20261103.json",
+  "current_job_kind": "c0_speeddown",
+  "current_mesh_cells": 333939,
+  "current_case_label": "C0 fixed0deg U18 toward10 smoke20steps",
+  "next": "HOLD; assess the inner-convergence criterion from saved histories; do not replay or extend this20-step test automatically",
+  "kinematic_sweep_accepted": true,
+  "kinematic_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\KINEMATIC_POC_REVIEW_20261103.json",
+  "current_run": "F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\C0_speed_down_20261103\\run_20261103_111057",
+  "current_case_checkpoint": {
+    "path": "F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\C0_speed_down_20261103\\run_20261103_111057\\checkpoint.sim",
+    "bytes": 1525645964,
+    "sha256": "7d140c9523f1e2eeb34875013d65424845def7d474df5a8b3562693b36e43d41",
+    "saved_time_s": 0.6900000000000005,
+    "native_save_complete": true,
+    "hash_at": "2026-11-03T11:21:03.048162+01:00",
+    "native_reopen_verified": false
+  },
+  "static_preparation_review": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\STATIC_PLUS2_PREPARATION_REVIEW_20261103.json"
+}

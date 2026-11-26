@@ -1,0 +1,8 @@
+{
+  "updated_at": "2026-10-29T22:49:51.260796+01:00",
+  "status": "zero_step_gauge_guard",
+  "physical_steps": 0,
+  "preserved_attempt": "W20_H24_X4_CPUprop_dt1ms_r1",
+  "evidence": "history has onlyt0 finite independent volume/speed/alpha/CFL; first derived-plane gauge failed before any transientstep. R5zero-step gauges were valid.",
+  "recovery": "Newr2 reinitializes disposablezero-timecopy, checksfirstgauges andrecords exactreporterrors iffailure; guardsunchanged. Cause notyetproven."
+}

@@ -1,0 +1,41 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXHNlYWxlZF9tb3Rpb25fcHJvYmVfMjAyNjExMDNcaW5wdXQuc2lt
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 9528
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 17:24:54 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\sealed_motion_probe_20261103\input.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\sealed_motion_probe_20261103\ProbeMiniMorpher.java
+Currently enabled models: PhysicsContinuumModel, BoundaryInterfaceModel, star.common.DirectRegionInterfaceModel, star.common.IndirectRegionInterfaceModel, star.common.MixingPlaneInterfaceModel, star.metrics.TwoDimensionalModel, star.common.PartitioningModel, star.motion.UniqueMotionModel, star.material.SingleComponentLiquidModel, star.material.VoidFractionAndSolidityModel, star.material.VolumePorosityModel, star.segregatedflow.SegregatedFlowModel, star.metrics.GradientsModel, star.physics.FsiFluidModelEnabler, star.flow.ConstantDensityModel, star.turbulence.TurbulentModel, star.energy.ViscousSubModel, star.flow.EffectiveViscosityModel, star.turbulence.RansTurbulenceModel, star.kwturb.KOmegaTurbulence, star.kwturb.SstKwTurbModel, star.walldistance.WallDistanceModel, star.kwturb.KwAllYplusWallTreatment, star.motion.StationaryModel, star.motion.MotionCoordinateHelperModel, star.metrics.CellQualityRemediationModel, star.common.ImplicitUnsteadyModel
+The model star.morpher.MeshDeformationModel is incompatible with the currently enabled models in L1 true2D water steady SST:
+ is marked by enabled model star.common.ImplicitUnsteadyModel as incompatible.
+Command: EnableModel
+   error: Server Error
+java.lang.RuntimeException: The model star.morpher.MeshDeformationModel is incompatible with the currently enabled models in L1 true2D water steady SST:
+ is marked by enabled model star.common.ImplicitUnsteadyModel as incompatible.
+Command: EnableModel
+   error: Server Error
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

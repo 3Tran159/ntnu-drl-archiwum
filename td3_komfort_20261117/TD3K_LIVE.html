@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TD3 with a passenger-comfort criterion - live training</title>
+<style>
+:root{--bg:#fafaf8;--card:#fff;--ink:#1d1d1b;--mut:#6b6b66;--line:#e4e3de;--a:#2a6fdb;--b:#e07a1f;--mpc:#1a9e5c;--lim:#c0392b}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:14px 18px 6px}h1{font-size:19px;margin:0 0 2px}.sub{color:var(--mut);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:12px;padding:10px 18px 24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card h2{font-size:14px;margin:0 0 2px}.card p.d{margin:0 0 6px;color:var(--mut);font-size:12.5px}
+canvas{width:100%;height:260px;display:block}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.kpi{border-left:4px solid var(--a);padding:4px 10px}.kpi.b{border-color:var(--b)}
+.kpi .t{font-weight:600}.kpi .v{font-size:22px;font-variant-numeric:tabular-nums}.kpi .m{color:var(--mut);font-size:12px}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:4px 0}.bar i{display:block;height:100%;background:var(--a)}.b .bar i{background:var(--b)}
+.leg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:4px}.leg span:before{content:"";display:inline-block;width:14px;height:3px;margin-right:5px;vertical-align:middle;background:var(--c)}
+.wide{grid-column:1/-1}
+</style></head><body>
+<header><h1>TD3 trained with our passenger-comfort criterion</h1>
+<div class="sub">Faltinsen-B model, Godø regular wave (H 1.5 m, T 5 s), foil load 90 %. Reward = the MPC cost: foil drag + strut drag + W_A·z̈² + actuator energy. Refreshes every 10 s. <span id="upd"></span></div></header>
+<div class="grid">
+<div class="card wide"><h2>Progress</h2><div class="kpis" id="kpis"></div></div>
+
+<div class="card wide"><h2>What does 0.5 m/s² feel like? The same hull at different z̈ RMS</h2>
+<p class="d">Each hull heaves at the Godø encounter period (1.94 s), in real time and at true scale (same scale horizontally and vertically, ~4–5 m of hull shown). The Godø wave (amplitude 0.73 m, λ 39 m) passes underneath; the foil on its strut stays submerged and the hull flies above the water. The scale under the passenger (75 kg) shows what they "weigh" at each instant – that is how the force on their feet changes. Sinusoidal motion: amplitude = √2·z̈ RMS / ω², ω = 3.24 rad/s. The phase between wave and hull is illustrative.</p>
+<canvas id="feel" style="height:380px"></canvas>
+<canvas id="iso" style="height:92px;margin-top:6px"></canvas>
+<p class="d" style="margin-top:4px">Comfort scale of ISO 2631-1 (Annex C, frequency-weighted RMS acceleration). Note: ISO weights frequencies; we quote unweighted z̈ (as NORDFORSK does). Motion sickness: ISO 2631 filter W_f is most sensitive at 0.1–0.3 Hz; our wave gives 0.52 Hz, just above the worst band.</p></div>
+
+<div class="card wide"><h2>Simulation: how the current policy flies the foil</h2>
+<p class="d">The current TD3 "brain" (without training noise) flies 8 encounter periods of the Godø wave in the Faltinsen-B model; updated every ~4 min from the latest training checkpoint. The boat moves to the right, waves come from the right. True scale, only the foil is drawn 3× larger. Dots behind the foil = where the foil was during the last 0.65 s (at 12.35 m/s).
+<span id="abtn"></span> <button id="spd">speed 1×</button></p>
+<canvas id="anim" style="height:330px"></canvas></div>
+
+<div class="card wide"><h2>MPC with W_A 3 on irregular seas S1–S4 (model)</h2>
+<p class="d">Ideal MPC (knows the future wave) with comfort weight W_A 3, Faltinsen-B model, JONSWAP seas, foil load 90 %, realisation seed 0, 300 s per sea state. Same drawing as above (foil 3× larger). The surface ahead of and behind the foil is reconstructed from the elevation at the leading edge, assuming the pattern travels at the encounter speed of the spectral peak – approximate for an irregular sea. The strip chart below shows the last 20 s; drag and z̈ figures are averages over 30–300 s.
+<span id="sbtn"></span> <button id="sspd">speed 1×</button></p>
+<canvas id="seas" style="height:330px"></canvas>
+<canvas id="seastr" style="height:170px;margin-top:4px"></canvas>
+<div class="leg"><span style="--c:#7fb3d5">η at leading edge [m]</span><span style="--c:#1d1d1b">foil z [m]</span><span style="--c:#2a6fdb">θ/10 [°]</span><span style="--c:#c0392b">z̈/5 [m/s²]</span></div></div>
+
+<div class="card wide"><h2>Key chart: drag vs comfort, TD3 vs MPC</h2>
+<p class="d">Each TD3 dot = one policy evaluation (every 25 episodes, 4 wave phases, last ~4 periods); lighter = earlier in training, darker = later. Green diamonds = MPC in the same model on the same wave. Red line = NORDFORSK passenger limit 0.49 m/s². Better = left and down.</p>
+<canvas id="front" style="height:340px"></canvas>
+<div class="leg"><span style="--c:var(--a)">TD3, W_A 1.5</span><span style="--c:var(--b)">TD3, W_A 0 (no comfort term)</span><span style="--c:var(--mpc)">MPC (W_A 1.5 / 3; test harness)</span><span style="--c:var(--lim)">limit 0.05 g</span></div></div>
+
+<div class="card"><h2>Foil drag-power change in evaluation [%]</h2><p class="d">Relative to calm water (57.03 W per 0.02 m strip). Dashed green line = MPC W_A 1.5 (−13.7 %).</p><canvas id="ed"></canvas></div>
+<div class="card"><h2>z̈ RMS in evaluation [m/s²]</h2><p class="d">Hull vertical acceleration. Red line = 0.49 m/s²; dashed green = MPC W_A 1.5 (0.46).</p><canvas id="ea"></canvas></div>
+<div class="card"><h2>Return per training episode</h2><p class="d">With exploration noise; thick line = 20-episode mean. The first 10 % of steps are pure noise around trim (the policy is not acting yet).</p><canvas id="ret"></canvas></div>
+<div class="card"><h2>Episode length [10 ms control ticks]</h2><p class="d">Full episode = 8 periods ≈ 1549 ticks. Shorter = the foil broke out (|z| > 0.75 m or submergence < 1 chord).</p><canvas id="len"></canvas></div>
+<div class="card wide"><h2>Current training episode, W_A 1.5</h2><p class="d">Foil height z [m], foil angle θ and command [°/10], surface elevation above the leading edge η [m]. With exploration noise, so this is not the "clean" policy.</p><canvas id="ep" style="height:240px"></canvas>
+<div class="leg"><span style="--c:#1d1d1b">z</span><span style="--c:var(--a)">θ/10</span><span style="--c:#9aa">command/10</span><span style="--c:#7fb3d5">η</span></div></div>
+</div>
+<script>
+const RUNS=[{tag:"TD3K_WA1.5",col:"#2a6fdb",wa:"1.5"},{tag:"TD3K_WA0",col:"#e07a1f",wa:"0"}];
+const MPC=[{a:0.46,d:-13.7,l:"MPC W_A 1.5"},{a:0.23,d:-7.0,l:"MPC W_A 3"}];
+async function get(u,txt){try{const r=await fetch(u+"?"+Date.now(),{cache:"no-store"});if(!r.ok)return null;return txt?await r.text():await r.json()}catch(e){return null}}
+function csv(t){if(!t)return[];const L=t.trim().split(/\r?\n/);const h=L[0].split(",");return L.slice(1).map(l=>{const v=l.split(",");const o={};h.forEach((k,i)=>o[k]=v[i]===""?NaN:+v[i]);return o})}
+function setup(c){const r=window.devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;c.width=w*r;c.height=h*r;const x=c.getContext("2d");x.scale(r,r);x.clearRect(0,0,w,h);return{x,w,h}}
+function nice(a,b){if(!isFinite(a)||!isFinite(b)){a=0;b=1}if(a===b){a-=1;b+=1}const s=Math.pow(10,Math.floor(Math.log10((b-a)/4)));const st=[1,2,2.5,5,10].map(m=>m*s).find(q=>(b-a)/q<=6);return{a:Math.floor(a/st)*st,b:Math.ceil(b/st)*st,st}}
+function plot(id,series,o={}){const c=document.getElementById(id);const{x,w,h}=setup(c);const P={l:48,r:10,t:8,b:30};
+ let X=[],Y=[];series.forEach(s=>s.pts.forEach(p=>{X.push(p[0]);Y.push(p[1])}));(o.hl||[]).forEach(v=>Y.push(v.y));
+ if(!X.length){x.fillStyle="#999";x.fillText(o.empty||"waiting for data…",P.l+10,h/2);return}
+ const nx=nice(o.xmin??Math.min(...X),o.xmax??Math.max(...X)),ny=nice(o.ymin??Math.min(...Y),o.ymax??Math.max(...Y));
+ const sx=v=>P.l+(v-nx.a)/(nx.b-nx.a)*(w-P.l-P.r),sy=v=>h-P.b-(v-ny.a)/(ny.b-ny.a)*(h-P.t-P.b);
+ x.strokeStyle="#eee";x.fillStyle="#777";x.font="11px system-ui";x.lineWidth=1;
+ for(let v=ny.a;v<=ny.b+1e-9;v+=ny.st){x.beginPath();x.moveTo(P.l,sy(v));x.lineTo(w-P.r,sy(v));x.stroke();x.fillText(+v.toFixed(3),4,sy(v)+4)}
+ for(let v=nx.a;v<=nx.b+1e-9;v+=nx.st){x.fillText(o.xf?o.xf(v):+v.toFixed(3),sx(v)-10,h-P.b+15)}
+ if(o.xl){x.fillText(o.xl,w-P.r-x.measureText(o.xl).width,h-3)}
+ (o.hl||[]).forEach(l=>{x.strokeStyle=l.c;x.setLineDash(l.dash?[6,4]:[]);x.lineWidth=1.5;x.beginPath();x.moveTo(P.l,sy(l.y));x.lineTo(w-P.r,sy(l.y));x.stroke();x.setLineDash([])});
+ (o.vl||[]).forEach(l=>{x.strokeStyle=l.c;x.lineWidth=1.5;x.beginPath();x.moveTo(sx(l.x),P.t);x.lineTo(sx(l.x),h-P.b);x.stroke()});
+ series.forEach(s=>{x.strokeStyle=s.col;x.fillStyle=s.col;x.lineWidth=s.lw||1.5;x.globalAlpha=s.alpha??1;
+  if(s.dots){s.pts.forEach((p,i)=>{x.globalAlpha=s.fade?0.25+0.75*i/Math.max(1,s.pts.length-1):1;x.beginPath();if(s.diamond){const X0=sx(p[0]),Y0=sy(p[1]);x.moveTo(X0,Y0-7);x.lineTo(X0+7,Y0);x.lineTo(X0,Y0+7);x.lineTo(X0-7,Y0);x.closePath()}else x.arc(sx(p[0]),sy(p[1]),s.r||3.5,0,7);x.fill();if(s.lab&&p[2]){x.globalAlpha=1;x.fillStyle="#333";x.fillText(p[2],sx(p[0])+9,sy(p[1])+4);x.fillStyle=s.col}})}
+  else{x.beginPath();s.pts.forEach((p,i)=>i?x.lineTo(sx(p[0]),sy(p[1])):x.moveTo(sx(p[0]),sy(p[1])));x.stroke()}x.globalAlpha=1})}
+const roll=(a,n)=>a.map((_,i)=>{const s=a.slice(Math.max(0,i-n+1),i+1);return s.reduce((p,q)=>p+q,0)/s.length});
+const kf=v=>v>=1e6?(v/1e6).toFixed(2)+" M":v>=1e3?Math.round(v/1e3)+" k":v;
+async function tick(){
+ const D=await Promise.all(RUNS.map(async r=>({r,st:await get(`runs/${r.tag}/STATUS.json`),tl:csv(await get(`runs/${r.tag}/train_log.csv`,1)),ev:csv(await get(`runs/${r.tag}/eval.csv`,1))})));
+ document.getElementById("kpis").innerHTML=D.map((d,i)=>{const s=d.st||{};const f=(s.step||0)/(s.total||1);const last=d.tl.slice(-30);const wall=last.length>1?(last[last.length-1].wall_s-last[0].wall_s):0;const sp=wall>0?(last[last.length-1].step-last[0].step)/wall:(s.steps_per_s||0);
+  const eta=sp>0?((s.total-s.step)/sp/3600):NaN;const end=f>=1?"done":isFinite(eta)?"ends ~"+new Date(Date.now()+eta*3.6e6).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}):"–";
+  const ph=f<0.1?"phase 1: pure noise around trim":f<0.3?"phase 2: policy + strong noise":"phase 3: policy, noise decaying";const e=d.ev[d.ev.length-1];
+  return `<div class="kpi ${i?"b":""}"><div class="t">TD3, W_A ${d.r.wa}</div><div class="bar"><i style="width:${(100*Math.min(f,1)).toFixed(1)}%"></i></div>
+  <div class="v">${(100*f).toFixed(1)} %</div><div class="m">${kf(s.step||0)} / ${kf(s.total||0)} steps · episode ${s.episode||0} · ${sp.toFixed(1)} steps/s · ${end}<br>${ph}${e?` · latest evaluation: drag ${(100*e.D_rel_mean).toFixed(1)} %, z̈ ${e.acc_rms.toFixed(2)} m/s², break-outs ${e.n_term}/4`:" · evaluations start in phase 2"}</div></div>`}).join("");
+ const S=d=>d.step/1e3;
+ plot("front",[...D.map(d=>({col:d.r.col,dots:1,fade:1,pts:d.ev.filter(e=>e.n_term==0).map(e=>[e.acc_rms,100*e.D_rel_mean])})),{col:"#1a9e5c",dots:1,diamond:1,lab:1,pts:MPC.map(m=>[m.a,m.d,m.l])}],{vl:[{x:0.49,c:"#c0392b"}],xl:"z̈ RMS [m/s²]",xmin:0,empty:"policy evaluations start after phase 1 (~140 k steps)"});
+ plot("ed",D.map(d=>({col:d.r.col,pts:d.ev.map(e=>[S(e),100*e.D_rel_mean])})),{hl:[{y:-13.7,c:"#1a9e5c",dash:1}],xl:"k steps",empty:"evaluations start in phase 2"});
+ plot("ea",D.map(d=>({col:d.r.col,pts:d.ev.map(e=>[S(e),e.acc_rms])})),{hl:[{y:0.49,c:"#c0392b"},{y:0.46,c:"#1a9e5c",dash:1}],xl:"k steps",ymin:0,empty:"evaluations start in phase 2"});
+ plot("ret",D.flatMap(d=>[{col:d.r.col,alpha:0.25,lw:1,pts:d.tl.map(t=>[S(t),t.ret])},{col:d.r.col,lw:2.5,pts:(()=>{const r=roll(d.tl.map(t=>t.ret),20);return d.tl.map((t,i)=>[S(t),r[i]])})()}]),{xl:"k steps"});
+ plot("len",D.map(d=>({col:d.r.col,lw:2,pts:(()=>{const r=roll(d.tl.map(t=>t.len),20);return d.tl.map((t,i)=>[S(t),r[i]])})()})),{hl:[{y:1549,c:"#999",dash:1}],xl:"k steps",ymin:0});
+ const L=await get(`runs/TD3K_WA1.5/live_ep.json`);
+ if(L&&L.z){const t=L.z.map((_,i)=>i*0.01);plot("ep",[{col:"#7fb3d5",pts:L.eta.map((v,i)=>[t[i],v])},{col:"#9aa",lw:1,pts:L.cmd.map((v,i)=>[t[i],v/10])},{col:"#2a6fdb",pts:L.th.map((v,i)=>[t[i],v/10])},{col:"#1d1d1b",lw:2,pts:L.z.map((v,i)=>[t[i],v])}],{xl:`time in episode ${L.episode} [s] · mode ${L.mode} · noise σ ${L.sigma}`})}
+ document.getElementById("upd").textContent="As of "+new Date().toLocaleTimeString("en-GB");
+}
+tick();setInterval(tick,10000);addEventListener("resize",tick);
+// ---- foil animation ----
+const DEMO={};let SEL="TD3K_WA1.5",SPD=1,T0=performance.now(),FIT={};
+document.getElementById("spd").onclick=e=>{SPD=SPD===1?0.25:1;e.target.textContent="speed "+(SPD===1?"1×":"¼×")};
+function fit(d){const w=d.ome;let a=[[0,0],[0,0]],b=[0,0];d.eta.forEach((y,i)=>{const t=i*d.dt,c=Math.cos(w*t),s=Math.sin(w*t);a[0][0]+=c*c;a[0][1]+=c*s;a[1][1]+=s*s;b[0]+=y*c;b[1]+=y*s});a[1][0]=a[0][1];
+ const det=a[0][0]*a[1][1]-a[0][1]*a[1][0];const p=(b[0]*a[1][1]-b[1]*a[0][1])/det,q=(a[0][0]*b[1]-a[1][0]*b[0])/det;return{p,q}}   // eta = p cos(w t) + q sin(w t)
+async function loadDemo(){for(const r of RUNS){const d=await get(`runs/${r.tag}/demo_ep.json`);if(d&&d.z){DEMO[r.tag]=d;FIT[r.tag]=fit(d)}}
+ document.getElementById("abtn").innerHTML=RUNS.map(r=>`<button data-t="${r.tag}" style="border:2px solid ${r.col};background:${SEL===r.tag?r.col:"#fff"};color:${SEL===r.tag?"#fff":r.col};border-radius:6px;padding:2px 8px;margin-right:4px">W_A ${r.wa}</button>`).join("");
+ document.querySelectorAll("#abtn button").forEach(b=>b.onclick=()=>{SEL=b.dataset.t;T0=performance.now();loadDemo()})}
+loadDemo();setInterval(loadDemo,60000);
+function frame(){const c=document.getElementById("anim");const{x,w,h}=setup(c);const d=DEMO[SEL];
+ if(!d){x.fillStyle="#999";x.font="13px system-ui";x.fillText("waiting for the first training checkpoint (every ~5 min)…",20,h/2);return requestAnimationFrame(frame)}
+ const n=d.z.length,i=Math.floor((performance.now()-T0)/1000*SPD/d.dt)%n,t=i*d.dt,F=FIT[SEL],U=12.35;
+ const X0=w<700?-4:-9,X1=w<700?6:13,Y0=-2.4,Y1=2.6,sc=Math.min((w-130)/(X1-X0),h/(Y1-Y0)),ox=10,sx=v=>ox+(v-X0)*sc,sy=v=>h-(v-Y0)*sc;
+ const eta=xx=>{const tt=t+d.k*xx/d.ome;return F.p*Math.cos(d.ome*tt)+F.q*Math.sin(d.ome*tt)};   // surface xx m ahead of LE = what reaches the LE after k xx / we
+ x.beginPath();x.moveTo(sx(X0),sy(Y0));for(let xx=X0;xx<=X1;xx+=0.1)x.lineTo(sx(xx),sy(eta(xx)));x.lineTo(sx(X1),sy(Y0));x.closePath();
+ const gr=x.createLinearGradient(0,sy(1),0,sy(Y0));gr.addColorStop(0,"#9cc9ea");gr.addColorStop(1,"#2f6f9f");x.fillStyle=gr;x.fill();
+ x.strokeStyle="#1f5f8f";x.lineWidth=2;x.beginPath();for(let xx=X0;xx<=X1;xx+=0.1)(xx===X0?x.moveTo:x.lineTo).call(x,sx(xx),sy(eta(xx)));x.stroke();
+ x.setLineDash([4,4]);x.strokeStyle="rgba(255,255,255,.6)";x.lineWidth=1;x.beginPath();x.moveTo(sx(X0),sy(0));x.lineTo(sx(X1),sy(0));x.stroke();x.setLineDash([]);
+ const z=d.z[i],th=d.th[i]*Math.PI/180,yf=-d.depth+z;
+ for(let j=Math.max(0,i-65);j<i;j+=3){x.fillStyle=`rgba(255,255,255,${0.15+0.6*(j-i+65)/65})`;x.beginPath();x.arc(sx(-U*(i-j)*d.dt),sy(-d.depth+d.z[j]),2.2,0,7);x.fill()}
+ const hb=z+0.75;x.fillStyle="#3b3b38";x.beginPath();x.moveTo(sx(-7),sy(hb+0.9));x.lineTo(sx(3.2),sy(hb+0.9));x.quadraticCurveTo(sx(4.6),sy(hb+0.8),sx(4.2),sy(hb));x.lineTo(sx(-7),sy(hb));x.closePath();x.fill();
+ x.strokeStyle="#555";x.lineWidth=Math.max(3,0.06*sc);x.beginPath();x.moveTo(sx(0.08),sy(hb));x.lineTo(sx(0.08),sy(yf));x.stroke();
+ const L=3*d.chord;x.save();x.translate(sx(0.08),sy(yf));x.rotate(-th);x.fillStyle="#f2b134";x.strokeStyle="#7a5410";x.lineWidth=1;x.beginPath();
+ const yt=s=>0.6*L*(0.2969*Math.sqrt(s)-0.126*s-0.3516*s*s+0.2843*s**3-0.1015*s**4);
+ for(let k=0;k<=40;k++){const s=k/40;x.lineTo((0.25-s)*L*sc,-yt(s)*sc)}
+ for(let k=40;k>=0;k--){const s=k/40;x.lineTo((0.25-s)*L*sc,yt(s)*sc)}
+ x.closePath();x.fill();x.stroke();x.restore();
+ const acc=d.acc[i],px=w-115;x.fillStyle="#fff";x.fillRect(px-8,0,123,h);x.fillStyle="#1d1d1b";x.font="12px system-ui";
+ const rows=[["time",t.toFixed(2)+" s"],["foil z",(z>=0?"+":"")+z.toFixed(2)+" m"],["angle θ",d.th[i].toFixed(1)+"°"],["submergence",(eta(0)-yf).toFixed(2)+" m"],["z̈ now",acc.toFixed(2)+" m/s²"]];
+ rows.forEach((r,k)=>{x.fillStyle="#6b6b66";x.fillText(r[0],px,18+k*32);x.fillStyle="#1d1d1b";x.font="bold 14px system-ui";x.fillText(r[1],px,33+k*32);x.font="12px system-ui"});
+ const by=18+5*32,bh=h-by-48,mid=by+bh/2,s2=bh/2/3;x.fillStyle="#eee";x.fillRect(px,by,22,bh);x.fillStyle=Math.abs(acc)>0.49?"#c0392b":"#1a9e5c";x.fillRect(px,mid,22,-Math.max(-3,Math.min(3,acc))*s2);
+ x.strokeStyle="#c0392b";[0.49,-0.49].forEach(v=>{x.beginPath();x.moveTo(px-3,mid-v*s2);x.lineTo(px+25,mid-v*s2);x.stroke()});x.fillStyle="#6b6b66";x.font="11px system-ui";x.fillText("±0.05 g",px+28,mid-0.49*s2+4);
+ x.fillStyle="#1d1d1b";x.font="12px system-ui";x.fillText(`eval: drag ${d.dP_pct>0?"+":""}${d.dP_pct} %`,px,h-28);x.fillText(`z̈ RMS ${d.acc_rms} m/s²`,px,h-12);
+ x.fillStyle="rgba(255,255,255,.9)";x.font="12px system-ui";x.fillText(`policy from step ${kf(d.step)} (saved ${d.time})${d.term?" · BROKE OUT OF THE WATER":""}`,16,18);
+ requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
+// ---- MPC W_A 3 on irregular seas ----
+const SEAS={S1:[1.5,5.0],S2:[1.0,3.5],S3:[1.5,8.0],S4:[2.25,6.0]},SV={},SR={};let SSEL="S1",SSPD=1,ST0=performance.now();
+const P_CALM_F=57.06,P_CALM_S=12.35*85.5*0.02*1.09;
+document.getElementById("sspd").onclick=e=>{SSPD=SSPD===1?0.25:1;e.target.textContent="speed "+(SSPD===1?"1×":"¼×")};
+async function loadSeas(){for(const s in SEAS){if(!SV[s]){const v=await get(`seas/viz_${s}.json`);if(v&&v.data){const C={};v.cols.forEach((c,i)=>C[c]=v.data.map(r=>r[i]));SV[s]=C}}const r=await get(`seas/res_${s}.json`);if(r)SR[s]=r}
+ document.getElementById("sbtn").innerHTML=Object.keys(SEAS).map(s=>`<button data-s="${s}" style="border:2px solid #1a9e5c;background:${SSEL===s?"#1a9e5c":"#fff"};color:${SSEL===s?"#fff":"#1a9e5c"};border-radius:6px;padding:2px 8px;margin-right:4px${SV[s]?"":";opacity:.4"}">${s} (Hs ${SEAS[s][0]} m, Tp ${SEAS[s][1]} s)${SV[s]?"":" – computing"}</button>`).join("");
+ document.querySelectorAll("#sbtn button").forEach(b=>b.onclick=()=>{SSEL=b.dataset.s;ST0=performance.now();loadSeas()})}
+loadSeas();setInterval(loadSeas,60000);
+function seasFrame(){const c=document.getElementById("seas");const{x,w,h}=setup(c);const C=SV[SSEL];
+ if(!C){x.fillStyle="#999";x.font="13px system-ui";x.fillText(`${SSEL}: still computing…`,20,h/2);drawStrip(null,0);return requestAnimationFrame(seasFrame)}
+ const T=C.t,n=T.length,dt=T[1]-T[0],t0=T[0],tt=t0+((performance.now()-ST0)/1000*SSPD)%(T[n-1]-t0-25),i=Math.min(n-1,Math.floor((tt-t0)/dt));
+ const [Hs,Tp]=SEAS[SSEL],wp=2*Math.PI/Tp,kp=wp*wp/9.81,we=wp+kp*12.35,U=12.35;
+ const etaAt=ts=>{const j=(ts-t0)/dt;if(j<=0)return C.eta_LE[0];if(j>=n-1)return C.eta_LE[n-1];const a=Math.floor(j),f=j-a;return C.eta_LE[a]*(1-f)+C.eta_LE[a+1]*f};
+ const eta=xx=>etaAt(tt+xx*kp/we);
+ const X0=w<700?-4:-9,X1=w<700?6:13,Y0=-2.6,Y1=2.8,sc=Math.min((w-130)/(X1-X0),h/(Y1-Y0)),sx=v=>10+(v-X0)*sc,sy=v=>h-(v-Y0)*sc;
+ x.beginPath();x.moveTo(sx(X0),sy(Y0));for(let xx=X0;xx<=X1;xx+=0.1)x.lineTo(sx(xx),sy(eta(xx)));x.lineTo(sx(X1),sy(Y0));x.closePath();
+ const gr=x.createLinearGradient(0,sy(1),0,sy(Y0));gr.addColorStop(0,"#9cc9ea");gr.addColorStop(1,"#2f6f9f");x.fillStyle=gr;x.fill();
+ x.strokeStyle="#1f5f8f";x.lineWidth=2;x.beginPath();for(let xx=X0;xx<=X1;xx+=0.1)(xx===X0?x.moveTo:x.lineTo).call(x,sx(xx),sy(eta(xx)));x.stroke();
+ x.setLineDash([4,4]);x.strokeStyle="rgba(255,255,255,.6)";x.lineWidth=1;x.beginPath();x.moveTo(sx(X0),sy(0));x.lineTo(sx(X1),sy(0));x.stroke();x.setLineDash([]);
+ const z=C.z_foil[i],th=C.theta_deg[i]*Math.PI/180,yf=-1.09+z;
+ for(let j=Math.max(0,i-13);j<i;j++){x.fillStyle=`rgba(255,255,255,${0.15+0.6*(j-i+13)/13})`;x.beginPath();x.arc(sx(-U*(i-j)*dt),sy(-1.09+C.z_foil[j]),2.2,0,7);x.fill()}
+ const hb=z+0.75;x.fillStyle="#3b3b38";x.beginPath();x.moveTo(sx(-7),sy(hb+0.9));x.lineTo(sx(3.2),sy(hb+0.9));x.quadraticCurveTo(sx(4.6),sy(hb+0.8),sx(4.2),sy(hb));x.lineTo(sx(-7),sy(hb));x.closePath();x.fill();
+ x.strokeStyle="#555";x.lineWidth=Math.max(3,0.06*sc);x.beginPath();x.moveTo(sx(0.08),sy(hb));x.lineTo(sx(0.08),sy(yf));x.stroke();
+ const L=3*0.312;x.save();x.translate(sx(0.08),sy(yf));x.rotate(-th);x.fillStyle="#f2b134";x.strokeStyle="#7a5410";x.lineWidth=1;x.beginPath();
+ const yt=s=>0.6*L*(0.2969*Math.sqrt(s)-0.126*s-0.3516*s*s+0.2843*s**3-0.1015*s**4);
+ for(let k=0;k<=40;k++){const s=k/40;x.lineTo((0.25-s)*L*sc,-yt(s)*sc)}for(let k=40;k>=0;k--){const s=k/40;x.lineTo((0.25-s)*L*sc,yt(s)*sc)}x.closePath();x.fill();x.stroke();x.restore();
+ const acc=C.acc[i],px=w-115;x.fillStyle="#fff";x.fillRect(px-8,0,123,h);x.font="12px system-ui";
+ const rows=[["time",tt.toFixed(1)+" s"],["foil z",(z>=0?"+":"")+z.toFixed(2)+" m"],["angle θ",C.theta_deg[i].toFixed(1)+"°"],["submergence",C.sub[i].toFixed(2)+" m"],["z̈ now",acc.toFixed(2)+" m/s²"]];
+ rows.forEach((r,k)=>{x.fillStyle="#6b6b66";x.fillText(r[0],px,18+k*32);x.fillStyle="#1d1d1b";x.font="bold 14px system-ui";x.fillText(r[1],px,33+k*32);x.font="12px system-ui"});
+ const R=SR[SSEL];if(R){const df=100*(R.P_foil_W/P_CALM_F-1),dtot=100*((R.P_foil_W+R.P_strut_W)/(P_CALM_F+P_CALM_S)-1);x.fillStyle="#1d1d1b";x.font="12px system-ui";
+  [`foil drag ${df>0?"+":""}${df.toFixed(1)} %`,`foil+strut ${dtot>0?"+":""}${dtot.toFixed(1)} %`,`z̈ RMS ${R.acc_rms.toFixed(2)} m/s²`,`min submergence ${R.sub_min.toFixed(2)} m`].forEach((s,k)=>x.fillText(s,px,h-58+k*16))}
+ x.fillStyle="rgba(255,255,255,.9)";x.fillText(`${SSEL}: Hs ${Hs} m, Tp ${Tp} s · MPC W_A 3`,16,18);
+ drawStrip(C,i);requestAnimationFrame(seasFrame)}
+function drawStrip(C,i){const c=document.getElementById("seastr");const{x,w,h}=setup(c);if(!C)return;const dt=C.t[1]-C.t[0],nw=Math.round(20/dt),a=Math.max(0,i-nw),P={l:40,r:10};
+ const sx=j=>P.l+(j-a)/nw*(w-P.l-P.r),sy=v=>h/2-v*h/5;x.strokeStyle="#eee";[-2,-1,0,1,2].forEach(v=>{x.beginPath();x.moveTo(P.l,sy(v));x.lineTo(w-P.r,sy(v));x.stroke();x.fillStyle="#777";x.font="10px system-ui";x.fillText(v,8,sy(v)+3)});
+ [["eta_LE","#7fb3d5",1,1.5],["z_foil","#1d1d1b",1,2],["theta_deg","#2a6fdb",0.1,1.5],["acc","#c0392b",0.2,1]].forEach(([k,col,f,lw])=>{x.strokeStyle=col;x.lineWidth=lw;x.beginPath();for(let j=a;j<=i;j++)(j===a?x.moveTo:x.lineTo).call(x,sx(j),sy(C[k][j]*f));x.stroke()});
+ x.fillStyle="#777";x.fillText("last 20 s",w-60,h-4)}
+requestAnimationFrame(seasFrame);
+// ---- what accelerations feel like ----
+const FEEL=[{l:"MPC W_A 3",s:"model",a:0.23,c:"#1a9e5c"},{l:"limit 0.05 g",s:"NORDFORSK; adaptive MPC in URANS",a:0.49,c:"#c0392b"},{l:"TD3 W_A 1.5",s:"model",a:1.0,c:"#2a6fdb"},{l:"PID1 (Godø)",s:"URANS",a:1.94,c:"#777"},{l:"MPC W_A 0",s:"model, no comfort term",a:3.16,c:"#e07a1f"}];
+const OM=3.2441,MKG=75,KW=2*Math.PI/39.03,AW=0.73;
+function feel(){const c=document.getElementById("feel");const{x,w,h}=setup(c);const t=performance.now()/1000,n=FEEL.length,lw=w/n,sc=h*0.2;
+ FEEL.forEach((f,k)=>{const A=Math.SQRT2*f.a/OM/OM,ph=OM*t,z=A*Math.sin(ph),acc=-Math.SQRT2*f.a*Math.sin(ph),cx=k*lw+lw/2,y0=h*0.3,yw=y0+1.3*sc;
+  x.save();x.beginPath();x.rect(k*lw+4,0,lw-8,h-50);x.clip();
+  const lx=k*lw+4,rx=(k+1)*lw-4,etaW=px=>AW*Math.cos(OM*t+KW*(px-cx)/sc);
+  x.beginPath();x.moveTo(lx,h);for(let px=lx;px<=rx;px+=3)x.lineTo(px,yw-etaW(px)*sc);x.lineTo(rx,h);x.closePath();
+  const gr=x.createLinearGradient(0,yw-AW*sc,0,h);gr.addColorStop(0,"#b9dcf2");gr.addColorStop(1,"#4f8fbf");x.fillStyle=gr;x.fill();
+  x.strokeStyle="#2f6f9f";x.lineWidth=1.5;x.beginPath();for(let px=lx;px<=rx;px+=3)(px===lx?x.moveTo:x.lineTo).call(x,px,yw-etaW(px)*sc);x.stroke();
+  x.strokeStyle="rgba(255,255,255,.7)";x.setLineDash([4,4]);x.lineWidth=1;x.beginPath();x.moveTo(lx,yw);x.lineTo(rx,yw);x.stroke();x.setLineDash([]);
+  const yc=y0-z*sc,yfoil=yw+1.09*sc-z*sc;
+  x.strokeStyle="#555";x.lineWidth=3;x.beginPath();x.moveTo(cx+lw*0.1,yc);x.lineTo(cx+lw*0.1,yfoil);x.stroke();
+  x.fillStyle="#f2b134";x.beginPath();x.ellipse(cx+lw*0.1,yfoil,0.156*sc*2,4,0,0,7);x.fill();
+  x.fillStyle="#3b3b38";x.beginPath();x.moveTo(cx-lw*0.38,yc);x.lineTo(cx+lw*0.32,yc);x.quadraticCurveTo(cx+lw*0.42,yc,cx+lw*0.4,yc-18);x.lineTo(cx-lw*0.38,yc-18);x.closePath();x.fill();
+  const kg=MKG*(1+acc/9.81);x.fillStyle=f.c;x.fillRect(cx-16,yc-24,32,6);x.strokeStyle="#1d1d1b";x.lineWidth=2;const py=yc-24;
+  x.beginPath();x.moveTo(cx-5,py);x.lineTo(cx,py-16);x.lineTo(cx+5,py);x.moveTo(cx,py-16);x.lineTo(cx,py-34);x.moveTo(cx-9,py-28);x.lineTo(cx+9,py-28);x.stroke();x.beginPath();x.arc(cx,py-40,6,0,7);x.stroke();
+  x.fillStyle="#1d1d1b";x.font="bold 13px system-ui";x.textAlign="center";x.fillText(kg.toFixed(0)+" kg",cx,py-52);x.restore();
+  x.textAlign="center";x.font=(lw<170?"bold 10px":"bold 13px")+" system-ui";x.fillStyle=f.c;x.fillText(f.l,cx,h-36);x.fillStyle="#1d1d1b";x.font="12px system-ui";
+  if(lw<170){x.font="10px system-ui";x.fillText(`${f.a.toFixed(2)} m/s²`,cx,h-21);x.fillText(`±${(100*A).toFixed(0)} cm`,cx,h-8);x.textAlign="left";return}
+  x.fillText(`z̈ RMS ${f.a.toFixed(2)} m/s² · hull ±${(100*A).toFixed(0)} cm`,cx,h-21);x.fillStyle="#6b6b66";x.fillText(`scale ${(MKG*(1-Math.SQRT2*f.a/9.81)).toFixed(0)}–${(MKG*(1+Math.SQRT2*f.a/9.81)).toFixed(0)} kg · ${f.s}`,cx,h-6);x.textAlign="left"});
+ requestAnimationFrame(feel)}
+requestAnimationFrame(feel);
+function iso(){const c=document.getElementById("iso");const{x,w,h}=setup(c);const X=v=>14+v/3.2*(w-28),Z=[[0,0.315,"#cfe8d6","not uncomfortable"],[0.315,0.63,"#e6efc8","a little uncomfortable"],[0.5,1.0,"#f6e3b4","fairly uncomfortable"],[0.8,1.6,"#f4c9a0","uncomfortable"],[1.25,2.5,"#eea98e","very uncomfortable"],[2.0,3.2,"#e58b7a","extremely uncomfortable"]];
+ Z.forEach((z,i)=>{const y=6+(i%2)*14;x.fillStyle=z[2];x.fillRect(X(z[0]),y,X(z[1])-X(z[0]),26);x.fillStyle="#333";x.font="10.5px system-ui";x.fillText(z[3],X(z[0])+3,y+(i%2?24:12))});
+ x.fillStyle="#555";x.font="11px system-ui";for(let v=0;v<=3;v+=0.5){x.fillText(v.toFixed(1),X(v)-6,h-4)}
+ FEEL.forEach(f=>{x.strokeStyle=f.c;x.lineWidth=3;x.beginPath();x.moveTo(X(f.a),2);x.lineTo(X(f.a),h-18);x.stroke()});}
+iso();addEventListener("resize",iso);
+</script></body></html>

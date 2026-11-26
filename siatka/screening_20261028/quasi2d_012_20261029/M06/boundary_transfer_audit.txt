@@ -1,0 +1,7 @@
+HF_012_wall : star.common.WallBoundary
+DOMAIN.top : star.common.PressureBoundary
+DOMAIN.inlet : star.common.InletBoundary
+DOMAIN.outlet : star.common.PressureBoundary
+Q2D_span_source : star.common.SymmetryBoundary
+Q2D_span_target : star.common.SymmetryBoundary
+DOMAIN.bottom : star.common.SymmetryBoundary

@@ -1,0 +1,114 @@
+Starting local server: starserver.bat -new -power -cpubind off -np 1 
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 29652
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 20:14:36 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\MiniVofNativeQ2D.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\MiniVofNativeQ2D.java:23: warning: [deprecation] setAngleFactor(double) in star.vof.SegregatedVofModel has been deprecated
+pc.getModelManager().getModel(SegregatedVolumeFluxBasedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.SECOND_ORDER);pc.getModelManager().getModel(SegregatedVofModel.class).setAngleFactor(.15);
+                                                                                                                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\MiniVofNativeQ2D.java:24: warning: [deprecation] setWaveLength(double) in star.vof.FirstOrderVofWave has been deprecated
+VofWaveModel vm=pc.getModelManager().getModel(VofWaveModel.class);vm.setEnableTheoryComparison(true);FirstOrderVofWave wave=vm.getVofWaveManager().createVofWave(FirstOrderVofWave.class,"MINI_FirstOrder");wave.setHeavyFluidDensity(1000);wave.setLightFluidDensity(1.2);wave.setDeepWaterApproximation(true);wave.getSpecificationOption().setSelected(VofWaveSpecificationOption.Type.WAVE_LENGTH_SPECIFIED);wave.setWaveLength(10);wave.setAmplitude(.05);wave.getPointOnLevel().setComponents(0,sy,0);wave.getVerticalDirection().setComponents(0,1,0);wave.getAdvancingDirection().setComponents(1,0,0);wave.getCurrent().setComponents(18,0,0);wave.getWind().setComponents(18,0,0);wave.setFirstWaveFront(false);pc.getModelManager().getModel(SstKwTurbModel.class).getKwTurbRealizabilityOption().setSelected(KwTurbRealizabilityOption.Type.VORTICITY);reg.getConditions().get(VofWaveZoneOption.class).setSelected(VofWaveZoneOptionEnum.FORCING_DAMPING);reg.getValues().get(ForcingVofWaveSpecification.class).setForcingVofWave(wave);
+                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\MiniVofNativeQ2D.java:31: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                       ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\MiniVofNativeQ2D.java:37: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable field=s.getTableManager().createTable(XyzInternalTable.class);field.setPresentationName("Wave_field_check");field.getParts().setObjects(reg);field.setFieldFunctions(List.of(alpha,s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("Velocity").getComponentFunction(0),s.getFieldFunctionManager().getFunction("Velocity").getComponentFunction(1)));
+                                          ^
+
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+
+
+Importing F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\mesh_3d.msh
+Loading module: CaeIOCgns
+Reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\mesh_3d.msh...
+Importing cells
+Cell type: hexahedral
+   Name: cell-1
+   Number of cells: 41280
+   Zone type: fluid
+   Zone 2 type interior, name interior
+   Zone 3 type velocity-inlet, name inlet
+   Zone 4 type pressure-outlet, name outlet
+   Zone 5 type pressure-outlet, name top
+   Zone 6 type wall, name bottom
+   Zone 7 type symmetry, name span_front
+   Zone 8 type symmetry, name span_back
+   Zone 1 type fluid, name MINI_water_air
+Importing faces
+Group: interior-2
+   Number of faces: 82111
+   Topology: quadrilateral
+   Type: 2
+Importing faces
+Group: velocity-inlet-3
+   Number of faces: 129
+   Topology: quadrilateral
+   Type: 10
+Importing faces
+Group: pressure-outlet-4
+   Number of faces: 129
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: pressure-outlet-5
+   Number of faces: 320
+   Topology: quadrilateral
+   Type: 5
+Importing faces
+Group: wall-6
+   Number of faces: 320
+   Topology: quadrilateral
+   Type: 3
+Importing faces
+Group: symmetry-7
+   Number of faces: 41280
+   Topology: quadrilateral
+   Type: 7
+Importing faces
+Group: symmetry-8
+   Number of faces: 41280
+   Topology: quadrilateral
+   Type: 7
+
+Partitioning region MINI_water_air (41280 cells, 1 partitions)
+Partitioning complete
+Importing nodes
+Dimension: 3
+   Number of nodes: 83460
+   Zone id: 1
+Processing mesh
+Finished reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\Q2D_NATIVE_A005_FIELDS\mesh_3d.msh
+Reordering
+Finished importing
+Imported coordinate extents (m)
+X extents: [-12.0, 28.0]
+   Y extents: [-10.0, 4.0]
+   Z extents: [0.0, 0.02]
+
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: VofModel
+Loading module: WavesModel
+java.lang.RuntimeException: Class: class star.vof.VofWaveForcingLength
+   ConditionManager: star.common.PhysicsValueManager_1369
+   error: Condition not found in ConditionManager
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

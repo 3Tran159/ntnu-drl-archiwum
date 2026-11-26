@@ -1,0 +1,64 @@
+time=0.3000000000000002 initialized_flag=false
+solver=Partitioning class=star.common.PartitioningSolver
+solver=Segregated Flow class=star.segregatedflow.SegregatedFlowSolver frozen=false
+solver=K-Omega Turbulence class=star.kwturb.KwTurbSolver frozen=false
+solver=K-Omega Turbulent Viscosity class=star.kwturb.KwTurbViscositySolver frozen=false
+solver=Wall Distance class=star.walldistance.WallDistanceSolver
+solver=Implicit Unsteady class=star.common.ImplicitUnsteadySolver
+inner_iterations=15 used=true
+dt=0.002 time_discretization=1
+region=Background motion=Stationary
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.span_source type=Symmetry Plane
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Domain.span_source type=Symmetry Plane
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Main.NativeSkin type=Wall
+  option=WallShearStressOption selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Main.HingeArc type=Wall
+  option=WallShearStressOption selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Flap.NativeSkin type=Wall
+  option=WallShearStressOption selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Flap.HingeArc type=Wall
+  option=WallShearStressOption selected=0
+  option=WallSlidingOption selected=0
+  option=WallReferenceFrameOption selected=1
+  option=WallSurfaceOption selected=0
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.top type=Pressure Outlet
+  option=PressureOutletBoundaryOption selected=0
+  option=ReferenceFrameOption selected=0
+  option=FlowBoundaryDiffusionOption selected=1
+  option=KwTurbSpecOption selected=2
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.inlet type=Velocity Inlet
+  option=InletVelocityOption selected=0
+  option=ReferenceFrameOption selected=0
+  option=FlowBoundaryDiffusionOption selected=1
+  option=KwTurbSpecOption selected=2
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.outlet type=Pressure Outlet
+  option=PressureOutletBoundaryOption selected=0
+  option=ReferenceFrameOption selected=0
+  option=FlowBoundaryDiffusionOption selected=1
+  option=KwTurbSpecOption selected=2
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.bottom type=Wall
+  option=WallShearStressOption selected=1
+model=star.metrics.ThreeDimensionalModel
+model=star.material.SingleComponentLiquidModel
+model=star.segregatedflow.SegregatedFlowModel
+model=star.metrics.GradientsModel
+model=star.flow.ConstantDensityModel
+model=star.turbulence.TurbulentModel
+model=star.turbulence.RansTurbulenceModel
+model=star.kwturb.KOmegaTurbulence
+model=star.kwturb.SstKwTurbModel
+model=star.walldistance.WallDistanceModel
+model=star.kwturb.KwAllYplusWallTreatment
+model=star.flow.GravityModel
+model=star.metrics.CellQualityRemediationModel
+model=star.common.ImplicitUnsteadyModel
+motion_velocity_fields=[]

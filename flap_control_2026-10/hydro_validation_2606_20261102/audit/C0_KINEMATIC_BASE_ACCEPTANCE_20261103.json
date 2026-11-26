@@ -1,0 +1,204 @@
+{
+  "at": "2026-11-03T08:35:36.706837+01:00",
+  "accepted_for_kinematics": true,
+  "quantitative_hydrodynamic_validation": false,
+  "energy_analysis_approved": false,
+  "training_approved": false,
+  "native_reopen_verified": true,
+  "source_C0": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\relocation_reopen_20261103_082325\\C0_recovered_t065.sim",
+  "source_time_s": 0.65,
+  "source_iteration": 11560,
+  "mesh_cells": 333939,
+  "numerics": {
+    "density": "1000.0",
+    "viscosity": "0.001",
+    "velocity_urf": "0.8",
+    "pressure_urf": "0.2",
+    "dynamic_urf": "false",
+    "continuity_initialization": "false",
+    "flow_convection": "1",
+    "SST_convection": "1",
+    "dt": "0.002",
+    "time_order": "1",
+    "inner": "40 used=true"
+  },
+  "matching_physical_boundaries": {
+    "Hydro_Domain.span_source": [
+      [
+        "star.common.SymmetryBoundary"
+      ],
+      [
+        "star.common.SymmetryBoundary"
+      ]
+    ],
+    "Hydro_Main.NativeSkin": [
+      [
+        "star.common.WallBoundary",
+        "star.flow.WallShearStressOption selected=0",
+        "star.flow.WallSlidingOption selected=0",
+        "star.motion.WallReferenceFrameOption selected=1",
+        "star.turbulence.WallSurfaceOption selected=0",
+        "star.turbulence.BlendedWallFunctionCondition"
+      ]
+    ],
+    "Hydro_Main.HingeArc": [
+      [
+        "star.common.WallBoundary",
+        "star.flow.WallShearStressOption selected=0",
+        "star.flow.WallSlidingOption selected=0",
+        "star.motion.WallReferenceFrameOption selected=1",
+        "star.turbulence.WallSurfaceOption selected=0",
+        "star.turbulence.BlendedWallFunctionCondition"
+      ]
+    ],
+    "Hydro_Flap.NativeSkin": [
+      [
+        "star.common.WallBoundary",
+        "star.flow.WallShearStressOption selected=0",
+        "star.flow.WallSlidingOption selected=0",
+        "star.motion.WallReferenceFrameOption selected=1",
+        "star.turbulence.WallSurfaceOption selected=0",
+        "star.turbulence.BlendedWallFunctionCondition"
+      ]
+    ],
+    "Hydro_Flap.HingeArc": [
+      [
+        "star.common.WallBoundary",
+        "star.flow.WallShearStressOption selected=0",
+        "star.flow.WallSlidingOption selected=0",
+        "star.motion.WallReferenceFrameOption selected=1",
+        "star.turbulence.WallSurfaceOption selected=0",
+        "star.turbulence.BlendedWallFunctionCondition"
+      ]
+    ],
+    "Hydro_Domain.top": [
+      [
+        "star.common.PressureBoundary",
+        "star.flow.BackflowSpecification direction=0 pressure=2 scalar=1",
+        "star.flow.PressureOutletBoundaryOption selected=0",
+        "star.flow.FlowBoundaryDiffusionOption selected=1",
+        "star.kwturb.KwTurbSpecOption selected=2",
+        "star.flow.StaticPressureProfile method=star.common.FunctionScalarProfileMethod function=HYDRO_PiezometricZero definition=<0 Pa>",
+        "star.turbulence.TurbulenceIntensityProfile method=star.common.ConstantScalarProfileMethod value=0.001",
+        "star.turbulence.TurbulentViscosityRatioProfile method=star.common.ConstantScalarProfileMethod value=10.0"
+      ]
+    ],
+    "Hydro_Domain.inlet": [
+      [
+        "star.common.InletBoundary",
+        "star.flow.InletVelocityOption selected=0",
+        "star.motion.ReferenceFrameOption selected=0",
+        "star.flow.FlowBoundaryDiffusionOption selected=1",
+        "star.kwturb.KwTurbSpecOption selected=2",
+        "star.flow.VelocityProfile method=star.common.ConstantVectorProfileMethod value=[18.0, 0.0, 0.0]",
+        "star.turbulence.TurbulenceIntensityProfile method=star.common.ConstantScalarProfileMethod value=0.001",
+        "star.turbulence.TurbulentViscosityRatioProfile method=star.common.ConstantScalarProfileMethod value=10.0"
+      ]
+    ],
+    "Hydro_Domain.outlet": [
+      [
+        "star.common.PressureBoundary",
+        "star.flow.BackflowSpecification direction=1 pressure=2 scalar=1",
+        "star.flow.PressureOutletBoundaryOption selected=0",
+        "star.motion.ReferenceFrameOption selected=0",
+        "star.flow.FlowBoundaryDiffusionOption selected=1",
+        "star.kwturb.KwTurbSpecOption selected=2",
+        "star.flow.StaticPressureProfile method=star.common.FunctionScalarProfileMethod function=HYDRO_PiezometricZero definition=<0 Pa>",
+        "star.turbulence.TurbulenceIntensityProfile method=star.common.ConstantScalarProfileMethod value=0.001",
+        "star.turbulence.TurbulentViscosityRatioProfile method=star.common.ConstantScalarProfileMethod value=10.0"
+      ]
+    ],
+    "Hydro_Domain.bottom": [
+      [
+        "star.common.WallBoundary",
+        "star.flow.WallShearStressOption selected=1"
+      ]
+    ]
+  },
+  "readback": {
+    "B0": {
+      "report_readback_matches_history": true,
+      "reports": {
+        "HF_CL_hydro": 0.3265643858133681,
+        "HF_CD": 0.007193173920424497,
+        "HF_Mh_Nm": -12.159737996002615,
+        "HF_Fx_N": 27.73400136758869,
+        "HF_Fz_N": 1281.7686094808307,
+        "HF_pabs_liquid_all": 30088.519667482673
+      },
+      "field_readback": {
+        "Background": {
+          "cells": 256750,
+          "compared_fields": [
+            "Pressure (Pa)",
+            "Absolute Pressure (Pa)",
+            "Volume (m^3)",
+            "Cell Quality",
+            "Wall Distance (m)",
+            "Turbulent Kinetic Energy (J/kg)",
+            "Specific Dissipation Rate (/s)",
+            "Velocity[i] (m/s)",
+            "Velocity[j] (m/s)",
+            "Velocity[k] (m/s)"
+          ],
+          "max_scaled_field_difference": 4.257816321739938e-12
+        }
+      }
+    },
+    "C0": {
+      "report_readback_matches_history": true,
+      "reports": {
+        "HF_CL_hydro": 0.3256530206195925,
+        "HF_CD": 0.007244510839521137,
+        "HF_Mh_Nm": -12.040420268556348,
+        "HF_Fx_N": 27.931935992857692,
+        "HF_Fz_N": 1278.2547498397096,
+        "HF_pabs_liquid_all": 30097.694577269285
+      },
+      "field_readback": {
+        "Background": {
+          "cells": 227270,
+          "compared_fields": [
+            "Pressure (Pa)",
+            "Absolute Pressure (Pa)",
+            "Volume (m^3)",
+            "Cell Quality",
+            "Wall Distance (m)",
+            "Turbulent Kinetic Energy (J/kg)",
+            "Specific Dissipation Rate (/s)",
+            "Velocity[i] (m/s)",
+            "Velocity[j] (m/s)",
+            "Velocity[k] (m/s)"
+          ],
+          "max_scaled_field_difference": 0.0
+        },
+        "FlapOverset": {
+          "cells": 28502,
+          "compared_fields": [
+            "Pressure (Pa)",
+            "Absolute Pressure (Pa)",
+            "Volume (m^3)",
+            "Cell Quality",
+            "Wall Distance (m)",
+            "Turbulent Kinetic Energy (J/kg)",
+            "Specific Dissipation Rate (/s)",
+            "Velocity[i] (m/s)",
+            "Velocity[j] (m/s)",
+            "Velocity[k] (m/s)"
+          ],
+          "max_scaled_field_difference": 0.0
+        }
+      }
+    }
+  },
+  "rationale": "Both recovered checkpoints reproduce saved fields/reports. Matching physics/numerics, strict field and full C0 Overset guards, stable forces and strong inner residual decay justify frozen-flow kinematic POC. No need for further0degree iteration solely to reduce B/C force difference.",
+  "uncertainty": [
+    "B0 grid256750 versus C0 grid333939; no formal grid convergence/error bound.",
+    "dt0.002s not independently halved; temporal accuracy unquantified.",
+    "Far-top mean vx about17.1m/s,below18m/s; residual startup disturbance persists. Near-foil diagnostics and forces stable; not a quantitatively validated farfield.",
+    "Local wall y+ max~265(C)/272(B),99th percentiles~76/71 on flap; suitable only for present POC decision.",
+    "isInitialized() is false immediately after reopen in both; actual saved fields/time were independently re-evaluated and matched. No initialize/reset invoked.",
+    "Y momentum normalized residual is roundoff-scale: raw about1e-16; excluded from ratio gate explicitly."
+  ],
+  "next_experiment": "Single frozen-flow sinusoidal rigid flap sweep +/-5degrees,period0.2s,dt0.002s,100 steps,full native Overset check every step; independent geometry clearance check. No force validation from this sweep."
+}

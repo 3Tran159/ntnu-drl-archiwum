@@ -1,0 +1,57 @@
+Starting local server: starserver.bat -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -cpubind off -np 1 -xencoded-session QzpcVXNlcnNcVGhpbmtQYWRcRG9jdW1lbnRzXENoYXRHUFRcbnRudSBzY2llbmNlXGZsYXBfcG9jXzI2MDZfMjAyNjExMDJcaW5wdXRfY29weS5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 40056
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 14:49:03 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\input_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.1.151
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Loading module: StarSweptMesher
+Loading module: CaeIOCgns
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=1 
+Warning: The requested SolutionHistory file does not exist, C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\HF_foil.simh
+Playing macro: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:90: warning: [deprecation] setUseAlternateHoleCutting(boolean) in star.common.IndirectRegionInterface has been deprecated
+   IndirectRegionInterface inter=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");inter.setInterfaceType(OversetMeshInterface.class);inter.setUseAlternateHoleCutting(true);inter.setEnabledZeroDonorCheck(true);
+                                                                                                                                                                                  ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:90: warning: [deprecation] setEnabledZeroDonorCheck(boolean) in star.common.IndirectRegionInterface has been deprecated
+   IndirectRegionInterface inter=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");inter.setInterfaceType(OversetMeshInterface.class);inter.setUseAlternateHoleCutting(true);inter.setEnabledZeroDonorCheck(true);
+                                                                                                                                                                                                                         ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:92: warning: [deprecation] getAxisOrigin() in star.motion.RotatingMotion has been deprecated
+   rot.getAxisOrigin().setComponents(xh,0,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);
+      ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:92: warning: [deprecation] getAxisDirection() in star.motion.RotatingMotion has been deprecated
+   rot.getAxisOrigin().setComponents(xh,0,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);
+                                                 ^
+
+POC_STAGE clearing disposable copy
+Loading/configuring connectivity (old|new partitions: 1|1)
+  fluid (index 2): 309441 cells, 853329 faces, 1091534 verts.
+Configuring finished
+java.lang.RuntimeException: error: Fx_half is being used by ReportMonitor Fx_half Monitor and cannot be deleted.
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

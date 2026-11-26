@@ -1,0 +1,165 @@
+{
+  "B": {
+    "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\RunHydroStatic_SP_B_20261102_195203.log",
+    "residual_columns": [
+      "Continuity",
+      "Xmomentum",
+      "Ymomentum",
+      "Zmomentum",
+      "Tke",
+      "Sdr"
+    ],
+    "last375_median": [
+      1.189436,
+      0.4950609,
+      2.685543,
+      1.69596,
+      0.4796799,
+      0.5109625
+    ],
+    "last375_max": [
+      2.750444,
+      2.292757,
+      33.67858,
+      6.412478,
+      4.117917,
+      1.94705
+    ],
+    "last375_min": [
+      0.5092491,
+      0.1506883,
+      0.1977616,
+      0.7081784,
+      0.02173976,
+      0.01742617
+    ],
+    "final_numeric": [
+      0.876864,
+      0.4018876,
+      4.20767,
+      1.313189,
+      0.3564075,
+      0.3965407
+    ],
+    "turbulent_viscosity_limiter_messages": 0,
+    "last_limiter": [],
+    "last_report_rows": [
+      [
+        0.296,
+        1.262777,
+        0.5551923,
+        3.00871,
+        1.346125,
+        0.4629101,
+        0.5744719
+      ],
+      [
+        0.298,
+        0.9221018,
+        0.4374402,
+        3.583199,
+        1.623063,
+        0.3197578,
+        0.4296037
+      ],
+      [
+        0.3,
+        0.876864,
+        0.4018876,
+        4.20767,
+        1.313189,
+        0.3564075,
+        0.3965407
+      ]
+    ],
+    "interpretation": "Logged normalized residuals; normalization/reference scales must be considered, not standalone acceptance."
+  },
+  "C": {
+    "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\RunURANSFromSteady_SP_C_20261102_203650.log",
+    "residual_columns": [
+      "Continuity",
+      "Xmomentum",
+      "Ymomentum",
+      "Zmomentum",
+      "Tke",
+      "Sdr"
+    ],
+    "last375_median": [
+      0.2580846,
+      0.3008995,
+      0.2440279,
+      0.2275933,
+      0.9691604,
+      5.066907e-08
+    ],
+    "last375_max": [
+      0.6395086,
+      2.238941,
+      7.260804,
+      1.2233,
+      0.972705,
+      1.929991
+    ],
+    "last375_min": [
+      0.03431821,
+      0.03024698,
+      0.04470115,
+      0.04563302,
+      0.9572657,
+      5.065943e-08
+    ],
+    "final_numeric": [
+      0.158922,
+      0.1176561,
+      0.1306817,
+      0.1604426,
+      0.9695632,
+      5.066737e-08
+    ],
+    "turbulent_viscosity_limiter_messages": 1602,
+    "last_limiter": [
+      [
+        "1",
+        "FlapOverset"
+      ],
+      [
+        "1",
+        "FlapOverset"
+      ],
+      [
+        "1",
+        "FlapOverset"
+      ]
+    ],
+    "last_report_rows": [
+      [
+        0.2964,
+        0.03431821,
+        0.03024698,
+        0.04470115,
+        0.04563302,
+        0.9690947,
+        5.066913e-08
+      ],
+      [
+        0.2984,
+        0.1344567,
+        0.1325297,
+        0.05355834,
+        0.06236838,
+        0.9694159,
+        5.066038e-08
+      ],
+      [
+        0.3004,
+        0.158922,
+        0.1176561,
+        0.1306817,
+        0.1604426,
+        0.9695632,
+        5.066737e-08
+      ]
+    ],
+    "interpretation": "Logged normalized residuals; normalization/reference scales must be considered, not standalone acceptance."
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": {
+    "status": "smoke_passed_not_converged",
+    "steps": 20,
+    "start_time_s": 0.0,
+    "saved_time_s": 0.008000000000000002,
+    "pressure_violations": 0,
+    "hydrodynamic_convergence_verified": false,
+    "training_approved": false
+  },
+  "working_sim": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\SP_A_singlephase_smoke_passed_2606.sim",
+  "sha256": "29f63479d55cfda64bfa557030eb305dafe3e2717e4d0197a5e00e4c9964e464",
+  "mesh_id": "C01_309441_native_mesh",
+  "mesh_changed": false,
+  "CPU_processes": 4,
+  "MPI": "ms",
+  "GPU_compute": false,
+  "reference_C01_VOF": {
+    "CL_hydro": 0.31565950495122014,
+    "CD": 0.007002316911710474
+  },
+  "preliminary_comparison": {
+    "CL_hydro": {
+      "C01_VOF": 0.31565950495122014,
+      "SP_A_singlephase": 0.3388473492647,
+      "difference": 0.023187844313479866,
+      "relative_difference_percent": 7.345840676352555
+    },
+    "CD": {
+      "C01_VOF": 0.007002316911710474,
+      "SP_A_singlephase": 0.006783801228952,
+      "difference": -0.0002185156827584746,
+      "relative_difference_percent": -3.120619725066076
+    }
+  },
+  "last_10_steps": {
+    "CL_hydro": {
+      "mean": 0.3388473492647,
+      "min": 0.338840085357,
+      "max": 0.338854142175
+    },
+    "CD": {
+      "mean": 0.006783801228952,
+      "min": 0.00678240824991,
+      "max": 0.00678529866918
+    },
+    "Fx_N": {
+      "mean": 26.15562401836,
+      "min": 26.1502532484,
+      "max": 26.1613975489
+    },
+    "Fz_N": {
+      "mean": 1329.178028936,
+      "min": 1329.15002221,
+      "max": 1329.20421968
+    },
+    "Mh_Nm": {
+      "mean": 495.0715191081,
+      "min": 495.063627224,
+      "max": 495.078633925
+    },
+    "p_absolute_min_Pa": {
+      "mean": 28432.72746997,
+      "min": 28431.2820494,
+      "max": 28434.1796999
+    },
+    "safety_reserve_Pa": {
+      "mean": 16093.51270321,
+      "min": 16092.0672827,
+      "max": 16094.9649332
+    }
+  },
+  "training_approved": false,
+  "limitations": [
+    "20 steps and 0.008 s are a startup/monitor smoke test, not a temporal-convergence study",
+    "Stationary initialization force-window tolerances CL 0.5%, CD 1%; formal refinement and averaging remain pending",
+    "Moment is the whole intact foil about the future hinge, not a flap hinge load"
+  ],
+  "correction": "Explicitly cleared inherited VOF fields in a NEW singlephase copy before steady initialization. Repeating steady->URANS then passed; original C01 unchanged."
+}

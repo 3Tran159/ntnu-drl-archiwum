@@ -1,0 +1,97 @@
+{
+  "B": {
+    "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_B_20261102_234628",
+    "frozen_solver_lines": [
+      "solver=Segregated Flow class=star.segregatedflow.SegregatedFlowSolver frozen=false",
+      "solver=K-Omega Turbulence class=star.kwturb.KwTurbSolver frozen=false",
+      "solver=K-Omega Turbulent Viscosity class=star.kwturb.KwTurbViscositySolver frozen=false"
+    ],
+    "models": [
+      "star.metrics.ThreeDimensionalModel",
+      "star.material.SingleComponentLiquidModel",
+      "star.segregatedflow.SegregatedFlowModel",
+      "star.metrics.GradientsModel",
+      "star.flow.ConstantDensityModel",
+      "star.turbulence.TurbulentModel",
+      "star.turbulence.RansTurbulenceModel",
+      "star.kwturb.KOmegaTurbulence",
+      "star.kwturb.SstKwTurbModel",
+      "star.walldistance.WallDistanceModel",
+      "star.kwturb.KwAllYplusWallTreatment",
+      "star.flow.GravityModel",
+      "star.metrics.CellQualityRemediationModel",
+      "star.common.ImplicitUnsteadyModel"
+    ],
+    "region_motion": [
+      "Background motion=Stationary"
+    ],
+    "grid_velocity": [],
+    "unread_properties": [],
+    "wall_status": {
+      "main": {
+        "rows": 1163
+      },
+      "flap": {
+        "rows": 730
+      }
+    }
+  },
+  "C_distance": {
+    "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\comparison_SP_C_20261102_234320",
+    "frozen_solver_lines": [
+      "solver=Segregated Flow class=star.segregatedflow.SegregatedFlowSolver frozen=false",
+      "solver=K-Omega Turbulence class=star.kwturb.KwTurbSolver frozen=false",
+      "solver=K-Omega Turbulent Viscosity class=star.kwturb.KwTurbViscositySolver frozen=false"
+    ],
+    "models": [
+      "star.metrics.ThreeDimensionalModel",
+      "star.material.SingleComponentLiquidModel",
+      "star.segregatedflow.SegregatedFlowModel",
+      "star.metrics.GradientsModel",
+      "star.flow.ConstantDensityModel",
+      "star.turbulence.TurbulentModel",
+      "star.turbulence.RansTurbulenceModel",
+      "star.kwturb.KOmegaTurbulence",
+      "star.kwturb.SstKwTurbModel",
+      "star.walldistance.WallDistanceModel",
+      "star.kwturb.KwAllYplusWallTreatment",
+      "star.flow.GravityModel",
+      "star.metrics.CellQualityRemediationModel",
+      "star.overset.OversetConservationModel",
+      "star.common.ImplicitUnsteadyModel"
+    ],
+    "region_motion": [
+      "Background motion=Stationary",
+      "FlapOverset motion=Flap prescribed rigid rotation"
+    ],
+    "grid_velocity": [
+      "GridVelocityVar_max_magnitude=0.0"
+    ],
+    "unread_properties": [],
+    "wall_status": {
+      "main": {
+        "rows": 1163,
+        "Overset Cell Status": {
+          "0": 1163
+        },
+        "Overset Error Status": {
+          "0": 1163
+        }
+      },
+      "flap": {
+        "rows": 730,
+        "Overset Cell Status": {
+          "0": 730
+        },
+        "Overset Error Status": {
+          "0": 730
+        }
+      }
+    }
+  },
+  "models_only_C": [
+    "star.overset.OversetConservationModel"
+  ],
+  "models_only_B": [],
+  "scientific_approved": false
+}

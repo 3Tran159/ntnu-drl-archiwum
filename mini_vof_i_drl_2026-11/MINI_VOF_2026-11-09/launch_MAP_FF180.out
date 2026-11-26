@@ -1,0 +1,107 @@
+{
+ "case": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\MAP_FF180_20261109_135209",
+ "mode": "map",
+ "steps": 3644,
+ "cpus": [
+  10,
+  11
+ ],
+ "star": "2606.0002",
+ "launch": {
+  "returncode": 1,
+  "seconds": 16186.0,
+  "bound": [
+   [
+    "7848",
+    "conhost"
+   ],
+   [
+    "16840",
+    "python"
+   ],
+   [
+    "17064",
+    "python"
+   ],
+   [
+    "18856",
+    "conhost"
+   ],
+   [
+    "19564",
+    "python"
+   ],
+   [
+    "21152",
+    "conhost"
+   ],
+   [
+    "26216",
+    "conhost"
+   ],
+   [
+    "26260",
+    "cmd"
+   ],
+   [
+    "28796",
+    "cmd"
+   ],
+   [
+    "29636",
+    "mpiexec"
+   ],
+   [
+    "29676",
+    "cmd"
+   ],
+   [
+    "29836",
+    "starccm+"
+   ],
+   [
+    "30608",
+    "cmd"
+   ],
+   [
+    "32020",
+    "smpd"
+   ],
+   [
+    "32092",
+    "cmd"
+   ],
+   [
+    "34408",
+    "python"
+   ],
+   [
+    "35004",
+    "star-ccm+"
+   ],
+   [
+    "36336",
+    "cmd"
+   ],
+   [
+    "37396",
+    "star-ccm+"
+   ]
+  ],
+  "cpus": [
+   10,
+   11
+  ],
+  "np": 2,
+  "gpu": false
+ },
+ "FC_RESULT.json": {
+  "integrator": 0.0,
+  "result": "DONE",
+  "wall_s": 16076.2002601,
+  "final_cmd_deg": 0.024096613487292966,
+  "mode": "map",
+  "end_time_s": 5.7449999999995125
+ },
+ "final_sim": true
+}

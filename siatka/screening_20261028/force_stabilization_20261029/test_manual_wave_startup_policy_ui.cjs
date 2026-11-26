@@ -1,0 +1,17 @@
+const fs=require('fs'),{chromium}=require('C:/Users/ThinkPad/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const R='F:/ntnu/mesh_screening_20261028/force_stabilization_20261029',record=JSON.parse(fs.readFileSync(R+'/manual_wave_startup_policy_test_review.json','utf8'));
+(async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--disable-gpu']});const result={at:new Date().toISOString(),all_network_mocked:true,real_actions:0,views:[]};
+try{for(const width of [1360,390]){const p=await browser.newPage({viewport:{width,height:1000}}),errors=[],requests=[];p.on('pageerror',e=>errors.push(e.message));
+await p.addInitScript(()=>sessionStorage.setItem('ntnu-control-form',JSON.stringify([['manual-preset','W01_M10']])));
+const html='<!doctype html><html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>window.NTNU_LOCAL_TOKEN="mock-only-not-a-credential";</script><body>'+fs.readFileSync(R+'/manual_control_panel.html','utf8')+'</body></html>';
+await p.route('**/*',route=>{const req=route.request(),url=new URL(req.url());requests.push({path:url.pathname,method:req.method()});if(req.method()!=='GET')return route.abort();
+if(url.pathname==='/mock-policy')return route.fulfill({contentType:'text/html',body:html});
+if(url.pathname==='/api/catalog')return route.fulfill({contentType:'application/json',body:JSON.stringify({presets:record.catalog_snapshot,startup_policy:record.policy_snapshot})});
+if(url.pathname==='/api/status')return route.fulfill({contentType:'application/json',body:JSON.stringify({busy:false,pending:null,blocked_by_stop:false,controllable:false,stop_requested:false,state:{},files:[],schedule:{}})});
+return route.abort();});
+await p.goto('http://127.0.0.1:8771/mock-policy');await p.locator('#manual-preset option').last().waitFor({state:'attached'});await p.waitForFunction(()=>document.querySelector('#manual-run-status').textContent.includes('No campaign calculation'));
+const checks={restoredWaveSelected:await p.locator('#manual-preset').inputValue()==='W01_M10',waveStartDisabled:await p.locator('#manual-start').isDisabled(),messageVisible:await p.locator('#manual-startup-policy').isVisible(),messageCorrect:(await p.locator('#manual-startup-policy').innerText()).includes('Wave startup update in progress; W01a validation pending'),allWaveOptionsDisabled:await p.locator('#manual-preset option').evaluateAll(xs=>xs.filter(x=>x.value.startsWith('W')).every(x=>x.disabled)),noJsErrors:errors.length===0,noPageOverflow:await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)};
+await p.locator('#manual-control-panel').screenshot({path:R+'/manual_wave_startup_policy_ui_'+width+'.png'});
+await p.selectOption('#manual-preset','C01_M10');checks.calmStartEnabled=!(await p.locator('#manual-start').isDisabled());checks.noMutationRequest=requests.every(x=>x.method==='GET');
+result.views.push({width,checks,errors,requests});await p.close();}
+result.pass=result.views.every(x=>Object.values(x.checks).every(Boolean));fs.writeFileSync(R+'/manual_wave_startup_policy_ui_review.json',JSON.stringify(result,null,2));console.log(JSON.stringify({pass:result.pass,views:result.views.map(x=>({width:x.width,checks:x.checks}))}));}finally{await browser.close();}})().catch(e=>{console.error(e.stack);process.exitCode=1;});

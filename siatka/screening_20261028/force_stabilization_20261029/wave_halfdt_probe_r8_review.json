@@ -1,0 +1,37 @@
+{
+  "updated_at": "2026-10-30T00:51:59.474473+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8",
+  "reference": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+  "completed": {
+    "status": "target_reached",
+    "steps": 500,
+    "time_s": 0.7499999999999728
+  },
+  "source_unchanged": true,
+  "settings_change": "1ms to0.5ms only;10inner andsameBC; restartfromsameR4t0.500state",
+  "window_s": [
+    0.502,
+    0.75
+  ],
+  "history_finite": true,
+  "budget_1ms10inner_max_abs_pct": 0.01451935956931171,
+  "budget_halfdt10inner_max_abs_pct": 0.016637157241220096,
+  "budget_1ms_mean_abs_pct": 0.0009092620792831824,
+  "budget_halfdt_mean_abs_pct": 0.0007206956609592118,
+  "budget_halfdt_samples_above_0p01": 6,
+  "budget_sample_counts": [
+    249,
+    497
+  ],
+  "halfdt_all_steps_included": true,
+  "max_speed_halfdt_m_s": 21.569160837168827,
+  "phase_bounds": [
+    0.0,
+    1.0
+  ],
+  "max_gauge_difference_halfdtminus1ms_mm": 0.2633149514039701,
+  "RMS_gauge_difference_mm": 0.06531639801765243,
+  "final_mass_difference_kg": 0.009016940806759521,
+  "scope": "Targetedtimestep diagnostic, allhalfstepmasssamplesincluded; notlongwave/reflection orfoilforce validation",
+  "short_mass_gate_pass": false
+}

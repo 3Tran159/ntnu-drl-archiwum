@@ -1,0 +1,364 @@
+{
+  "status": "REVIEW",
+  "plan": [
+    "GAP_PLUS_MINUS_2",
+    "SHARP_SEALED_PLUS_MINUS_5",
+    "GAP_PLUS_MINUS_5",
+    "CALM_VOF_PAIR",
+    "SURROGATE_PILOT"
+  ],
+  "active": null,
+  "runs": {
+    "GAP_PLUS_MINUS_2": {
+      "status": "PASS_DIAGNOSTIC_SMOKE",
+      "samples": 268,
+      "startup_s": 135.08741360000022,
+      "solver_step_median_s": 0.5288517,
+      "solver_step_mean_s": 0.6018565365019012,
+      "end_to_end_s": 992.3667003999999,
+      "dt_s": 0.00025,
+      "checkpoint_sha256_input": "3a46d58d0a5bf23221309580e5cbfa1d5a05bc3943b72976b48b33a69125bdfa",
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\GAP_PLUS_MINUS_2_20261104_212535\\FINAL.sim",
+      "checkpoint_sha256": "ac8397b12d513ef2f9c05b513b8693deeda4dadc511ef4115a49502482e726f0",
+      "state": {
+        "U_m_s": 18.0,
+        "normalized_max_final25": 5.9201174630038444,
+        "time_s": 1.1999999999999844,
+        "VOF": false,
+        "steps": 268,
+        "training_approved": false,
+        "status": "PASS_DIAGNOSTIC_SMOKE"
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "total_steps": 800,
+      "angle_range_deg": [
+        -2.0,
+        1.9999999999999993
+      ],
+      "flap_pmin_Pa": 8137.79819154377,
+      "hinge_pmin_Pa": 11237.89923744819,
+      "samples_at_or_below_vapor": 0,
+      "p_vapor_Pa": 2339.214766776897,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\GAP_PLUS_MINUS_2",
+      "cycle_complete": true
+    },
+    "SHARP_SEALED_PLUS_MINUS_5": {
+      "status": "PASS_DIAGNOSTIC_SMOKE",
+      "samples": 2000,
+      "startup_s": 138.14869629999885,
+      "solver_step_median_s": 0.7579343,
+      "solver_step_mean_s": 0.7251279337343358,
+      "end_to_end_s": 7438.232731499998,
+      "dt_s": 0.00025,
+      "checkpoint_sha256_input": "f509fe6f7d70b61b9d53177ce7d4cd1cb2cc1b2fc11b23fcc57fae136a06e527",
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\SHARP_SEALED_PLUS_MINUS_5_20261104_214413\\FINAL.sim",
+      "checkpoint_sha256": "c598b60930a899ce8979ab03ba60b3c1ef6e3c296f74a5e9052b8bea972d469e",
+      "state": {
+        "status": "PASS_DIAGNOSTIC_SMOKE",
+        "training_approved": false,
+        "steps": 2000,
+        "VOF": false,
+        "time_s": 1.5500000000001013,
+        "normalized_max_final25": 4.716138953469911,
+        "U_m_s": 18.0
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "total_steps": 2000,
+      "angle_range_deg": [
+        -4.999999999999999,
+        5.0
+      ],
+      "flap_pmin_Pa": 21525.176608340815,
+      "hinge_pmin_Pa": 21645.536953792005,
+      "samples_at_or_below_vapor": 0,
+      "p_vapor_Pa": 2339.214766776897,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\SHARP_SEALED_PLUS_MINUS_5",
+      "cycle_complete": true
+    },
+    "GAP_PLUS_MINUS_5": {
+      "status": "HOLD_SINGLE_PHASE_SAFETY",
+      "samples": 429,
+      "startup_s": 175.06419870000173,
+      "solver_step_median_s": 0.83097185,
+      "solver_step_mean_s": 0.8598375839622642,
+      "end_to_end_s": 1771.7933953000029,
+      "dt_s": 0.00025,
+      "checkpoint_sha256_input": "b2f3313fc2fcefcdf9557a0ee582acc7035dc5c8e9d80a4de06ba9ec4547bb37",
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\GAP_PLUS_MINUS_5_20261105_004222\\FINAL.sim",
+      "checkpoint_sha256": "4a49b1ea2a83eb8d97edf77c83dc23f14b91ca0d699405c12547ce585c1de7b5",
+      "state": {
+        "U_m_s": 18.0,
+        "normalized_max_final25": 0.0,
+        "time_s": 1.1072499999999534,
+        "VOF": false,
+        "steps": 429,
+        "training_approved": false,
+        "status": "HOLD_SINGLE_PHASE_SAFETY"
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "total_steps": 429,
+      "angle_range_deg": [
+        -4.885597557023673,
+        -3.988009579239126e-07
+      ],
+      "flap_pmin_Pa": 46547.29720830306,
+      "hinge_pmin_Pa": 48552.88162841735,
+      "samples_at_or_below_vapor": 0,
+      "p_vapor_Pa": 2339.214766776897,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\GAP_PLUS_MINUS_5",
+      "cycle_complete": false
+    },
+    "CALM_VOF_FIXED_SEALED": {
+      "status": "HOLD_CFL",
+      "samples": 1,
+      "startup_s": 160.79541439999957,
+      "solver_step_median_s": null,
+      "solver_step_mean_s": null,
+      "end_to_end_s": 261.3575372000014,
+      "dt_s": 0.00025,
+      "checkpoint_sha256_input": null,
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_SEALED_20261105_011346\\FINAL.sim",
+      "checkpoint_sha256": "568f43a6d6bed0370370fab1336f75b5a1c6adab3ff81b40bfd205ccf0d4fbe3",
+      "state": {
+        "time_s": 0.00025,
+        "steps": 1,
+        "foil": true,
+        "status": "HOLD_CFL",
+        "amplitude_target": 0.0,
+        "training_approved": false,
+        "reason": "CFL",
+        "residual_pass": false,
+        "solver_seconds": 1.6040731
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\CALM_VOF_FIXED_SEALED",
+      "data_class": "EXPLORATORY",
+      "pflap_min_Pa": -4888877.11083804,
+      "samples_flap_below_vapor": 1,
+      "max_interface_CFL": 0.019709743219584044
+    },
+    "CALM_VOF_FIXED_GAP": {
+      "status": "HOLD_CFL",
+      "samples": 1,
+      "startup_s": 161.00053670000125,
+      "solver_step_median_s": null,
+      "solver_step_mean_s": null,
+      "end_to_end_s": 260.90268730000025,
+      "dt_s": 0.00025,
+      "checkpoint_sha256_input": null,
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_GAP_20261105_011830\\FINAL.sim",
+      "checkpoint_sha256": "de718ccf06a5d7e8be2183b64eeba36779c395d6ef616e5295782ef85ddfec3b",
+      "state": {
+        "steps": 1,
+        "time_s": 0.00025,
+        "solver_seconds": 1.4419725,
+        "residual_pass": false,
+        "reason": "CFL",
+        "training_approved": false,
+        "amplitude_target": 0.0,
+        "status": "HOLD_CFL",
+        "foil": true
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\CALM_VOF_FIXED_GAP",
+      "data_class": "EXPLORATORY",
+      "pflap_min_Pa": -5775260.61928273,
+      "samples_flap_below_vapor": 1,
+      "max_interface_CFL": 0.019702442233261962
+    },
+    "CALM_VOF_PAIR": {
+      "status": "HOLD"
+    },
+    "SURROGATE_PILOT": {
+      "status": "HOLD",
+      "reason": "Matched CALM/VOf fixed force gates not both passed"
+    },
+    "GAP_PLUS_MINUS_5_DT020_RESUME": {
+      "status": "HOLD_SINGLE_PHASE_SAFETY",
+      "samples": 1222,
+      "startup_s": 167.71834379999927,
+      "solver_step_median_s": 0.8634953,
+      "solver_step_mean_s": 0.909898086852917,
+      "end_to_end_s": 5254.327488500003,
+      "dt_s": 0.0002,
+      "checkpoint_sha256_input": "e23c23f1a83fe59296ad20ca56862527aaeff6d795d38f2cc57aa0ff47cabb90",
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\GAP_PLUS_MINUS_5_DT020_RESUME_20261105_012314\\FINAL.sim",
+      "checkpoint_sha256": "df8d72f86c8a412d0dd8a767a4868a959faff84429c3b254ef9510a8fe0b26cc",
+      "state": {
+        "U_m_s": 18.0,
+        "normalized_max_final25": 0.0,
+        "time_s": 1.344399999999924,
+        "VOF": false,
+        "steps": 1222,
+        "training_approved": false,
+        "status": "HOLD_SINGLE_PHASE_SAFETY"
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\GAP_PLUS_MINUS_5_DT020_RESUME",
+      "total_steps": 1622,
+      "angle_range_deg": [
+        -4.999999999999999,
+        4.509462648732882
+      ],
+      "flap_pmin_Pa": -49100.52412376972,
+      "hinge_pmin_Pa": -44244.569570078165,
+      "samples_at_or_below_vapor": 192,
+      "cycle_complete": false,
+      "initial_dt_s": 0.00025,
+      "change_dt_at_s": 1.1
+    },
+    "CALM_VOF_FIXED_SEALED_DT020": {
+      "status": "HOLD",
+      "reason": "Command '['powershell', '-NoProfile', '-Command', \"$ErrorActionPreference='Stop'; @(Get-CimInstance Win32_Process | Where-Object {$_.Name -match '^(starccm[+w]|star-ccm\\\\+|smpd|mpiexec|impi)' } | Select-Object Name,ProcessId,ParentProcessId,ExecutablePath) | ConvertTo-Json -Compress\"]' timed out after 25 seconds",
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\CALM_VOF_FIXED_SEALED_DT020_WMI_INTERRUPTED",
+      "saved_time_s": 0.12160000000000143,
+      "checkpoint_sha256": "4a10dec655200e9b84a471835388b5cdb2a15da0d7245bfecf065108533f19e2"
+    },
+    "CALM_VOF_FIXED_GAP_DT020": {
+      "status": "HOLD_WALL_BUDGET",
+      "samples": 2372,
+      "startup_s": 133.61567219999415,
+      "solver_step_median_s": 0.6517219,
+      "solver_step_mean_s": 0.679146331009717,
+      "end_to_end_s": 5931.9092213999975,
+      "dt_s": 0.0002,
+      "checkpoint_sha256_input": null,
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_GAP_DT020_20261105_051303\\FINAL.sim",
+      "checkpoint_sha256": "0bf3a0733174f30f6bd61893d25ec7e697dded39f61f3149397cf16d15d4bdbb",
+      "state": {
+        "steps": 2372,
+        "time_s": 0.4743999999999804,
+        "solver_seconds": 1611.5977957000039,
+        "residual_pass": false,
+        "reason": "",
+        "training_approved": false,
+        "amplitude_target": 0.0,
+        "status": "HOLD_WALL_BUDGET",
+        "foil": true
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\CALM_VOF_FIXED_GAP_DT020",
+      "data_class": "EXPLORATORY",
+      "pflap_min_Pa": -7238462.906476311,
+      "samples_flap_below_vapor": 12,
+      "max_interface_CFL": 0.018481060812920096,
+      "last_0p05_s": {
+        "CL_buoyancy_corrected": 0.2885703778697934,
+        "CL_total": 0.29444933825345243,
+        "CD": 0.008745727946578115,
+        "mean_Mh_Nm_per_m": -610.5172550110058,
+        "pABS_flap_min_Pa": 47557.78637195443
+      },
+      "stabilization": {
+        "CL_drift_fraction": 0.016918843230346182,
+        "stable_windows": 0,
+        "time_s": 0.4499999999999831,
+        "CD": 0.008848280971136852,
+        "CD_range_fraction": 0.023560404581295123,
+        "CD_drift_fraction": 0.021298427204520666,
+        "CL": 0.2864051487763932,
+        "CL_range_fraction": 0.015630051645525493
+      }
+    },
+    "CALM_VOF_PAIR_DT020": {
+      "status": "HOLD"
+    },
+    "SURROGATE_PILOT_DT020": {
+      "status": "HOLD",
+      "reason": "Matched CALM/VOf fixed force gates not both passed"
+    },
+    "CALM_VOF_FIXED_SEALED_DT020_WMI_RESUME": {
+      "status": "HOLD_WALL_BUDGET",
+      "samples": 2007,
+      "startup_s": 140.03822980000405,
+      "solver_step_median_s": 0.7116323499999999,
+      "solver_step_mean_s": 0.73590357997003,
+      "end_to_end_s": 5933.868345900002,
+      "dt_s": 0.0002,
+      "checkpoint_sha256_input": "4a10dec655200e9b84a471835388b5cdb2a15da0d7245bfecf065108533f19e2",
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_SEALED_DT020_WMI_RESUME_20261105_033403\\FINAL.sim",
+      "checkpoint_sha256": "d330aa91faee6da20c34d1e9a1553d2472f64309853a2f4535638e47a9068273",
+      "state": {
+        "solver_seconds": 1478.0219678999993,
+        "residual_pass": false,
+        "reason": "",
+        "training_approved": false,
+        "amplitude_target": 0.0,
+        "status": "HOLD_WALL_BUDGET",
+        "foil": true,
+        "steps": 2007,
+        "time_s": 0.522999999999975
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\NIGHT_FLAP_20261104\\CALM_VOF_FIXED_SEALED_DT020_WMI_RESUME",
+      "data_class": "EXPLORATORY",
+      "pflap_min_Pa": 83775.96635548149,
+      "samples_flap_below_vapor": 0,
+      "max_interface_CFL": 0.018551187806297727,
+      "last_0p05_s": {
+        "CL_buoyancy_corrected": 0.29879672772828086,
+        "CL_total": 0.3046889205789984,
+        "CD": 0.008582502698459287,
+        "mean_Mh_Nm_per_m": -581.2307960699786,
+        "pABS_flap_min_Pa": 83775.96635548149
+      },
+      "stabilization": {
+        "CD_range_fraction": 0.027527844646030208,
+        "CD_drift_fraction": 0.020685243975957536,
+        "CL": 0.2986906801535292,
+        "CL_range_fraction": 0.014623288218664874,
+        "CL_drift_fraction": 0.013976121337570754,
+        "stable_windows": 0,
+        "time_s": 0.5215999999999752,
+        "CD": 0.008587042688824006
+      }
+    },
+    "CALM_VOF_PAIR_DT020_RECOVERY": {
+      "status": "EXPLORATORY_MATCHED_TIME_WINDOW",
+      "begin_s": 0.42460000000000003,
+      "end_s": 0.47440000000000004,
+      "dt_s": 0.0002,
+      "sealed": {
+        "CL_buoyancy_corrected": 0.29481649207215616,
+        "CL_total": 0.30070868492287367,
+        "CD": 0.008757991530757119,
+        "pABS_flap_min_Pa": 83794.13060165627
+      },
+      "gap": {
+        "CL_buoyancy_corrected": 0.2885703778697934,
+        "CL_total": 0.29444933825345243,
+        "CD": 0.008745727946578115,
+        "pABS_flap_min_Pa": 47557.78637195443
+      },
+      "training_approved": false
+    },
+    "SURROGATE_PILOT_DT020_RECOVERY": {
+      "status": "HOLD",
+      "reason": "Paired baseline requires stable forces and a distinct pilot budget"
+    }
+  },
+  "pressure_policy": "WARN_AT_2339.214766776897_PA",
+  "mpi_logical_cpu": [
+    12,
+    22
+  ],
+  "night_end": "2026-11-05T07:00:00+01:00",
+  "resource_policy": "Wait for measured host CPU headroom; protect fixed foreign affinity.",
+  "calm_equal_budget_seconds": 7172,
+  "native_import_retry": "Matched inputs moved to launcher-approved directory with unchanged hashes",
+  "vof_timestep_retry": {
+    "from_s": 0.00025,
+    "to_s": 0.0002,
+    "reason": "First-step global CFL above 25; interface CFL below 0.02."
+  },
+  "process_inventory_recovery": "Saved native state, filter by exact STAR process names, timeout 60 s",
+  "resource_wait": "Unpinned independent STAR ranks and fewer than four spare CPU equivalents"
+}

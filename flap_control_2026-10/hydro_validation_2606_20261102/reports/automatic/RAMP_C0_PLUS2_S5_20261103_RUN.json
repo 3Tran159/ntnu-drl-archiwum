@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-03T10:10:07.825585+01:00",
+  "job": "RAMP_C0_PLUS2_S5_20261103_RUN",
+  "state": "failed",
+  "macro_status": {
+    "status": "ramp_failed",
+    "steps": 73,
+    "saved_time_s": 0.8060000000000006,
+    "scientific_approved": false
+  },
+  "checkpoints": [
+    {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\ramp_plus2_20261103_094340\\checkpoint_step_45.sim",
+      "bytes": 1528550031,
+      "sha256": "580fd901f06bf13fcc2d035a0bb637538990906c2c889aa994d19e199e8d25ea"
+    },
+    {
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\ramp_plus2_20261103_094340\\error_checkpoint.sim",
+      "bytes": 1528685973,
+      "sha256": "971a9409a9fc4cc09e5cb38644b97cfacde3f59b71a5a483a5ebd2b65a08aa48"
+    }
+  ],
+  "log": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\runs\\redacted\\RampPlus2Run_SP_C_20261103_094340.log",
+  "scientific_approval": false,
+  "note": "Execution completion does not approve scientific results."
+}

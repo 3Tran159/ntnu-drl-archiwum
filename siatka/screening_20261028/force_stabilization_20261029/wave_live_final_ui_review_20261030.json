@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "updated_at": "2026-10-30T10:44:48.299Z",
+  "case": "W01_W20L4_M10_FS020_cycles_r2",
+  "widths": [
+    1920,
+    1360,
+    390
+  ],
+  "surfaces": [
+    "operational",
+    "professor"
+  ],
+  "screen": {
+    "javascript_errors": 0,
+    "page_horizontal_overflow": false,
+    "duplicate_ids": 0,
+    "broken_visible_images": 0,
+    "coefficient_plots_visible": 2,
+    "phase_panel_present": true,
+    "actual_field_side_view_present": true
+  },
+  "interaction": {
+    "tested_widths": [
+      1360,
+      390
+    ],
+    "time_pan": true,
+    "zoom": true,
+    "drag": true,
+    "keyboard_home_follows_latest": true,
+    "manual_time_window_survives_reload": true,
+    "manual_horizontal_scroll_survives_pan_and_reload": true,
+    "manual_test_scroll_px": {
+      "CD": 41,
+      "CL_total": 83
+    },
+    "follow_latest_edge_visible_initial_button_and_reload": true,
+    "desktop_unaffected": true
+  },
+  "policy": {
+    "four_complete_cycles_required": true,
+    "ten_typical_not_minimum": true,
+    "twenty_cap": true,
+    "partial_cycle_excluded": true,
+    "raw_deviation_table_waits_for_full_cycle_data": true
+  },
+  "terminal_priority": {
+    "status": "physical_guard_failure",
+    "stopped_time_s": 1.064,
+    "headline_overrides_stale_state": true,
+    "no_active_claim": true,
+    "no_eta_when_inactive": true,
+    "diagnostic_fields_not_accepted": true,
+    "failed_final_state_not_for_continuation": true,
+    "independent_max_speed_m_s": 51.786575033484375
+  },
+  "side_view": {
+    "latest_export_in_final_check_s": 1.064,
+    "case_status": "physical_guard_failed",
+    "accepted": false,
+    "field_timestamp_explicit": true,
+    "actual_alpha_and_foil_geometry": true,
+    "provenance_link": true
+  },
+  "print": {
+    "full_review_operational_pages": 45,
+    "full_review_professor_pages": 24,
+    "terminal_recheck_first_pages": 7,
+    "headings_not_orphaned": true,
+    "criteria_tables_not_split": true,
+    "figures_legible": true
+  },
+  "file_parity": {
+    "original_and_working_copy_sha256_equal": true,
+    "evidence": "wave_live_final_qa_20261030/file_parity.json"
+  },
+  "artifacts": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_live_final_qa_20261030",
+  "limitations": [
+    "Current real case lacks complete cycles; populated full-cycle/deviation preview validation is recorded separately by the readability agent.",
+    "Visual and interaction QA does not validate CFD numerical accuracy."
+  ],
+  "changes_owned": [
+    "plot_wave_side_view.py",
+    "wave_side_view_refresh.py",
+    "manual_control_server.py: approved import and separate renderer daemon only",
+    "wave_cycle_dashboard_panel.py: approved mobile follow-scroll and terminal-failure-priority changes"
+  ],
+  "safety": "No CFD launch, stop, scheduling or source edits. Only local HTTP process36724 was explicitly restarted as584. Tests activate only plot navigation; non-GET/HEAD requests blocked."
+}

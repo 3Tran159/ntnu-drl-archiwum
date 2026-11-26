@@ -1,0 +1,10 @@
+Compiled from "Solver.java"
+public abstract class star.common.Solver extends star.base.neo.ClientServerObject implements star.common.RestoresDefaults {
+  public static final java.lang.String PROP_FROZEN;
+  protected star.common.Solver(star.base.neo.ClientServerObjectKey);
+  public star.common.Simulation getSimulation();
+  public void setFrozen(boolean);
+  public boolean getFrozen();
+  public int getPriority();
+  protected star.common.RampCalculatorManager getNamedRampCalculatorManager(java.lang.String);
+}

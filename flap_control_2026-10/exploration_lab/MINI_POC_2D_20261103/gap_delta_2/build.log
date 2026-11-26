@@ -1,0 +1,105 @@
+Starting local server: starserver.bat -new -power -np 1 
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 4024
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 15:27:47 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\BuildMini.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\BuildMini.java:18: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.setPresentationName("MINI Cp walls");tab.getParts().setObjects(walls);tab.setFieldFunctions(List.of(cp,s.getFieldFunctionManager().getFunction("WallYplus")));
+                                        ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\BuildMini.java:19: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+s.getSimulationIterator().getAutoSave().setEnabled(false);Files.writeString(r.resolve("native_boundaries.txt"),bs.toString());long nc=((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount();s.saveState(r.resolve("MINI_prepared.sim").toString());Files.writeString(r.resolve("BUILD_STATUS.json"),"{\"status\":\"BUILT_NOT_SOLVED\",\"cells\":"+nc+",\"true_2D\":true,\"SST\":true,\"VOF\":false,\"Overset\":false,\"fields_initialized\":false,\"solver_iterations\":0}");
+                                       ^
+
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+
+
+Importing F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\gap_delta_2\mesh_2d.msh
+Loading module: CaeIOCgns
+Reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\gap_delta_2\mesh_2d.msh...
+Importing cells
+Cell type: mixed
+   Name: cell-1
+   Number of cells: 90198
+   Zone type: fluid
+   Zone 2 type interior, name interior
+   Zone 3 type wall, name main
+   Zone 4 type wall, name flap
+   Zone 5 type velocity-inlet, name inlet
+   Zone 6 type pressure-outlet, name outlet
+   Zone 7 type symmetry, name farfield
+   Zone 1 type fluid, name MINI_water
+Importing faces
+Group: interior-2
+   Number of faces: 152973
+   Topology: linear
+   Type: 2
+Importing faces
+Group: wall-3
+   Number of faces: 1952
+   Topology: linear
+   Type: 3
+Importing faces
+Group: wall-4
+   Number of faces: 1258
+   Topology: linear
+   Type: 3
+Importing faces
+Group: velocity-inlet-5
+   Number of faces: 27
+   Topology: linear
+   Type: 10
+Importing faces
+Group: pressure-outlet-6
+   Number of faces: 27
+   Topology: linear
+   Type: 5
+Importing faces
+Group: symmetry-7
+   Number of faces: 80
+   Topology: linear
+   Type: 7
+
+Partitioning region MINI_water (90198 cells, 1 partitions)
+Partitioning complete
+Importing nodes
+Dimension: 2
+   Number of nodes: 66118
+   Zone id: 1
+Processing mesh
+Finished reading F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\gap_delta_2\mesh_2d.msh
+Reordering
+Finished importing
+Imported coordinate extents (m)
+X extents: [-5.95, 11.9]
+   Y extents: [-5.95, 5.95]
+   Z extents: [0.0, 0.0]
+
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\gap_delta_2\MINI_prepared.sim... complete (5.3729MB in 0.059565s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

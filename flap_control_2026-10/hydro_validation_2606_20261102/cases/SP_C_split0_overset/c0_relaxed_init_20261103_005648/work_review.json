@@ -1,0 +1,136 @@
+{
+  "at": "2026-11-03T01:04:08.471467+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648",
+  "last_iteration": 330,
+  "physical_time_s": 0,
+  "phase": "steady_initialization",
+  "scientific_approved": false,
+  "training_approved": false,
+  "last": {
+    "iteration": 330.0,
+    "Fx_N": 63.7450748393,
+    "Fz_N": 653.407344922,
+    "CL_hydro": 0.16359072035,
+    "CD": 0.0165331141299,
+    "Mh_Nm": -12.0031237248,
+    "p_absolute_min_Pa": -29207.783991,
+    "safety_reserve_Pa": -41546.9987578,
+    "net_mass_flow_kg_s": 0.185904290076,
+    "mass_imbalance_relative": 1.72133601922e-05,
+    "yplus_mean": 3.65733809917,
+    "yplus_max": 1052.1701413,
+    "min_quality": 0.0634994802697,
+    "pressure_identity_error_Pa": 8.73114913702e-11,
+    "rho_min": 1000.0,
+    "rho_max": 1000.0,
+    "omega_floor_cells": 65.0,
+    "k_floor_cells": 48.0,
+    "max_turbulent_viscosity_ratio": 95459.38522126216,
+    "overset_error_cells": 0.0,
+    "max_speed_m_s": 51.75579913255135,
+    "max_absolute_pressure_Pa": 336795.189334246
+  },
+  "windows": [
+    {
+      "iteration": 100,
+      "CL": 0.15492195471698,
+      "CD": 0.22589243366498998,
+      "Mh": -35.907508611939996,
+      "pressure_min": -1870313.39826,
+      "mass_max": 0.000474537645163,
+      "omega_max": 0,
+      "k_max": 0,
+      "viscosity_ratio_max": 5664.530742196608
+    },
+    {
+      "iteration": 200,
+      "CL": 0.1314145049556,
+      "CD": 0.018494571575050002,
+      "Mh": -12.774677797710002,
+      "pressure_min": -95205.4377073,
+      "mass_max": 9.94421868637e-06,
+      "omega_max": 1,
+      "k_max": 980,
+      "viscosity_ratio_max": 14356.11464872804
+    },
+    {
+      "iteration": 300,
+      "CL": 0.1506411595707,
+      "CD": 0.016795376155790003,
+      "Mh": -11.173765993850001,
+      "pressure_min": -98398.6547118,
+      "mass_max": 2.38868467901e-05,
+      "omega_max": 25,
+      "k_max": 649,
+      "viscosity_ratio_max": 100000.0
+    }
+  ],
+  "last_window_changes_percent": {
+    "CL": 14.630542208104025,
+    "CD": -9.187535987869488,
+    "Mh": -12.53191531881126
+  },
+  "field_exports": {
+    "fresh_initialized": {
+      "active_cells": 372961,
+      "omega_floor_cells": 0,
+      "k_floor_cells": 0,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 10.0,
+      "speed_max_near_m_s": 23.491661212866948,
+      "meanflow_p0_max_near_Pa": 2204096.6263793735,
+      "meanflow_p0_p99_near_Pa": 583951.377274412,
+      "pabs_min_Pa": -1126493.232127844,
+      "max_speed_location": {
+        "region": "Background",
+        "X (m)": 0.7373078688296077,
+        "Z (m)": 0.0942269171971747,
+        "Pressure (Pa)": -213931.9391369772,
+        "Specific Dissipation Rate (/s)": 48.60000000000001,
+        "speed_m_s": 23.491661212866948,
+        "p0_meanflow_Pa": 61997.134133081534
+      }
+    },
+    "iter_250": {
+      "active_cells": 372961,
+      "omega_floor_cells": 5,
+      "k_floor_cells": 203,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 67692.39350025733,
+      "speed_max_near_m_s": 49.197761009129486,
+      "meanflow_p0_max_near_Pa": 1266927.4181566455,
+      "meanflow_p0_p99_near_Pa": 233759.28367988928,
+      "pabs_min_Pa": -93026.58432679591,
+      "max_speed_location": {
+        "region": "FlapOverset",
+        "X (m)": 0.8239080323790805,
+        "Z (m)": -0.0285318858403513,
+        "Pressure (Pa)": 46631.995748256886,
+        "Specific Dissipation Rate (/s)": 82097.3193948907,
+        "speed_m_s": 49.197761009129486,
+        "p0_meanflow_Pa": 1256841.8399039675
+      }
+    },
+    "iter_50": {
+      "active_cells": 372961,
+      "omega_floor_cells": 0,
+      "k_floor_cells": 0,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 1780.2015052644242,
+      "speed_max_near_m_s": 37.43301972176455,
+      "meanflow_p0_max_near_Pa": 616079.7523484267,
+      "meanflow_p0_p99_near_Pa": 192201.9019931697,
+      "pabs_min_Pa": -558862.4736086744,
+      "max_speed_location": {
+        "region": "FlapOverset",
+        "X (m)": 0.7720089654537075,
+        "Z (m)": 0.0902626828189289,
+        "Pressure (Pa)": -84535.73039658033,
+        "Specific Dissipation Rate (/s)": 1.6220215550895272,
+        "speed_m_s": 37.43301972176455,
+        "p0_meanflow_Pa": 616079.7523484267
+      }
+    }
+  },
+  "energy_screen_caution": "Mean-flow piezometric total pressure is a consistency diagnostic, not a strict universal Bernoulli bound in unsteady viscous RANS."
+}

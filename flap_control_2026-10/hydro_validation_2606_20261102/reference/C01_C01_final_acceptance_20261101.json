@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-01T16:07:47.927750+01:00",
+  "status": "C01_PRIMARY_SETTLED_SAVED_ACCEPTED",
+  "project_primary_settled": true,
+  "checkpoint": "E:\\ntnu_mesh_optimization_20261030\\clean_c01_campaign_20261101\\C01_warm_M13_steady_rho1000_air1p2_20261101\\final.sim",
+  "checkpoint_sha256": "9af4857b948e0494088b5421f8ede100e66344fc2631cc00030406640d7cc295",
+  "history_sha256": "0dab54c1eeb868f1f5be0ccff4b20e7564da43b92c318c3550dd827d1f9dda53",
+  "source_lineage": [
+    "E:\\ntnu_mesh_optimization_20261030\\M13_farfield15_20261031\\M13_GPU_calm_dt0004\\final.sim",
+    "E:\\ntnu_mesh_optimization_20261030\\clean_c01_campaign_20261101\\C01_warm_M13_steady_rho1000_air1p2_20261101\\final.sim"
+  ],
+  "source_unchanged": true,
+  "physical_time_s": 4.699199999999548,
+  "end_time_rounded_s": 4.6992,
+  "floating_comparison_correction": "abs(actual-4.6992)<1e-8, original >= was false by 4.5e-13s",
+  "cells": 309441,
+  "dt_s": 0.0004,
+  "inner_iterations": 10,
+  "water_density_kg_m3": 1000,
+  "air_density_kg_m3": 1.2,
+  "water_inventory_range_m3": [
+    38.365866903114956,
+    38.37886167028428
+  ],
+  "final_mass_fluxes_kg_s": {
+    "DOMAIN.bottom": 0.0,
+    "DOMAIN.inlet": -8642.59199999774,
+    "DOMAIN.outlet": 8628.158263476222,
+    "DOMAIN.top": 0.1472038676583955,
+    "HF_012_wall": 0.0,
+    "Q2D_span_source": 0.0,
+    "Q2D_span_target": 0.0
+  },
+  "max_CFL": 17.43162049362765,
+  "two_full_raw_checks": [
+    {
+      "at_time_s": 4.49919999999957,
+      "metrics": {
+        "CL": {
+          "latest_mean": 0.3153899431752842,
+          "shift_pct": 0.0945330020093697,
+          "rms_previous_pct": 0.02947510366511211,
+          "rms_latest_pct": 0.02483759390120241
+        },
+        "CD": {
+          "latest_mean": 0.007016901264694643,
+          "shift_pct": 0.22436527946357906,
+          "rms_previous_pct": 0.06922584676438173,
+          "rms_latest_pct": 0.059333429251946235
+        }
+      }
+    },
+    {
+      "at_time_s": 4.699199999999548,
+      "metrics": {
+        "CL": {
+          "latest_mean": 0.31565950495122014,
+          "shift_pct": 0.08539637543232291,
+          "rms_previous_pct": 0.02483759390120241,
+          "rms_latest_pct": 0.024359840493550403
+        },
+        "CD": {
+          "latest_mean": 0.007002316911710474,
+          "shift_pct": 0.20827896206437227,
+          "rms_previous_pct": 0.059333429251946235,
+          "rms_latest_pct": 0.0593075163293139
+        }
+      }
+    }
+  ],
+  "normalized_CL_hydro": 0.31565950495122014,
+  "normalized_CD_total": 0.007002316911710474,
+  "suitable_as_W01_source": true,
+  "wave_results_validated": false
+}

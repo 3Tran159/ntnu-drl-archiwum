@@ -1,0 +1,11 @@
+from pathlib import Path
+p=Path(__file__).with_name("calm_pair_ready.py")
+s=p.read_text()
+s=s.replace("def run(stage, options):", "def run(stage, options, budget_seconds=9800):")
+s=s.replace("limit_seconds=min(9800,int(END-time.time()-90))", "limit_seconds=min(budget_seconds,int(END-time.time()-90))")
+s=s.replace('    for key in ("sealed","gap"):', '''    budget=max(0,int((END-time.time()-600)/2))
+    state["calm_equal_budget_seconds"]=min(9800,budget)
+    for key in ("sealed","gap"):''')
+s=s.replace("matched_calm_fixed=True))", "matched_calm_fixed=True), budget_seconds=min(9800,budget))")
+s=s.replace("    if STOP.exists() or query(OWNER) or END-time.time()<420:", "    if STOP.exists() or query(OWNER) or END-time.time()<420 or budget_seconds<420:")
+p.write_text(s)

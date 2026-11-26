@@ -1,0 +1,57 @@
+NTNU FLAP FILE ROTATION
+
+Scope
+F:\ntnu\flap_control and the two Active Flaps archives on H: only.
+NWAR, all wave campaigns, W04k, PRE_W04, C01 masters and Godo are not managed.
+Wave exclusions are listed in WAVE_EXCLUSIONS.json and protected_roots in policy.json.
+
+Retention
+- Active run: keep the latest 3 committed, complete checkpoints.
+- Closed completed run: keep FINAL.sim and 1 intermediate recovery checkpoint.
+- Closed interrupted/HOLD run: keep FINAL.sim or the saved failure state and 2 checkpoints.
+- A named restart source or metadata-referenced checkpoint is retained regardless of count.
+- A checkpoint being written, newer than the native receipt, locked, changed since audit,
+  outside the approved roots, or without a verified terminal state is not deleted.
+- Input, START, model/geometry masters, .simh histories, CSV data and scientific logs are retained.
+- Closed F-drive cases must have a verified H-drive archive before checkpoint pruning.
+- Identical histories already indexed on H are reused by hash. No permission changes.
+- Readable archive filenames on H may be hard links to verified H content objects.
+  These names share storage and are not independent backup copies. Do not delete blobs manually.
+- H-local finals are catalogued in place. This is not an independent second physical copy.
+
+Runtime
+- Active runs checked every minute; full legacy scan every five minutes.
+- One maintenance worker, below-normal priority, no GPU, no solver launches.
+- Native numerical/safety/convergence gates are unchanged.
+- Archive reserve: 30 GiB. Copy budget: 8 GiB per pass.
+- Hashes are checked before archival/deletion and rechecked at least daily.
+- Source and target sizes/timestamps must remain stable during copying.
+- All deletion intents and outcomes are recorded. Unknown legacy states remain for review.
+- Windows startup does not launch CFD. File rotation starts with our CFD launcher or by START.
+
+Commands
+F:\ntnu\flap_control\storage_management\FILE_ROTATION.cmd START
+F:\ntnu\flap_control\storage_management\FILE_ROTATION.cmd STATUS
+F:\ntnu\flap_control\storage_management\FILE_ROTATION.cmd STOP
+
+STOP stops file maintenance only; it does not stop a CFD simulation.
+Do not run an additional CFD controller to start file maintenance.
+
+Files
+Policy: F:\ntnu\flap_control\storage_management\policy.json
+Status: F:\ntnu\flap_control\storage_management\STATUS.json
+Deletion journal: F:\ntnu\flap_control\storage_management\DELETIONS.jsonl
+Explicit source pins: F:\ntnu\flap_control\storage_management\pins.json
+Archive index: H:\NTNU_RESEARCH_ARCHIVE\Active_Flaps\FINAL_ARCHIVES\ROTATION\cases
+Verified unique archive data: the paths recorded in each ARCHIVE_MANIFEST.json
+
+Restoring
+Each archive manifest maps original source paths to hash-verified archived files.
+Restore those original paths, or relink Solution History paths in STAR if opening
+from another location. Intermediate checkpoints are intentionally not archived
+as a second growing series. Their retained FINAL and fallback checkpoints remain.
+
+Validation
+File-only tests cover active rotation, incomplete writes, source pins, corrupt
+final files, unknown legacy cases, HOLD labels, an out-of-scope target and a real
+Windows file-sharing lock, and wave-case exclusions. No STAR solver is started by these tests.

@@ -1,0 +1,50 @@
+{
+  "started_at": "2026-10-30T11:19:24.625359+01:00",
+  "server_pid": 36856,
+  "case": "W01_W20L4_M10_FS020_cycles_r2",
+  "original_mask": 16777215,
+  "test_mask": 3,
+  "numerical_changes": false,
+  "other_processes_changed": false,
+  "stages": [
+    {
+      "stage": "A_original_affinity",
+      "completed_at": "2026-10-30T11:20:10.983309+01:00",
+      "start_time_s": 0.8500000000000006,
+      "end_time_s": 0.8680000000000007,
+      "ordinary_steps": 16,
+      "median_step_s": 2.531432699999982,
+      "mean_step_s": 2.4649599124999924,
+      "gpu_mean_pct": 22.59090909090909,
+      "gpu_power_mean_W": 42.694545454545455
+    },
+    {
+      "stage": "B_CPU0_CPU1",
+      "completed_at": "2026-10-30T11:20:57.284105+01:00",
+      "start_time_s": 0.8680000000000007,
+      "end_time_s": 0.8880000000000007,
+      "ordinary_steps": 18,
+      "median_step_s": 2.3108447499998874,
+      "mean_step_s": 2.3381457944444466,
+      "gpu_mean_pct": 32.45454545454545,
+      "gpu_power_mean_W": 46.34681818181818
+    },
+    {
+      "stage": "A2_original_affinity",
+      "completed_at": "2026-10-30T11:21:43.540645+01:00",
+      "start_time_s": 0.8880000000000007,
+      "end_time_s": 0.9060000000000007,
+      "ordinary_steps": 16,
+      "median_step_s": 2.6092643499999895,
+      "mean_step_s": 2.5877771875000093,
+      "gpu_mean_pct": 25.636363636363637,
+      "gpu_power_mean_W": 40.95727272727273
+    }
+  ],
+  "status": "completed",
+  "current_mask": 3,
+  "kept_CPU0_CPU1": true,
+  "median_step_reduction_pct": 10.096053997194787,
+  "interpretation": "Sequential live-run timing; physical state changes across windows. Requires improvement against both reference windows; no claim of exact matched-state benchmark.",
+  "ended_at": "2026-10-30T11:21:43.544926+01:00"
+}

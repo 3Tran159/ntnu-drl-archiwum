@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a111c">
+<meta name="description" content="Read-only NTNU hydrofoil research telemetry and validation control center.">
+<title>NTNU Science · Project Control Center</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/ramp_live.css">
+<link rel="stylesheet" href="/flow_field.css">
+<link rel="stylesheet" href="/runs_registry.css">
+<script src="/app.js" defer></script>
+<script src="/ramp_live.js" defer></script>
+<script src="/flow_field.js" defer></script>
+</head>
+<body>
+<!--MINI_LABS_START--><section style="padding:16px;margin:12px;border:1px solid #56889d"><h2>EXPLORATION LAB — SEALED MINI</h2><p>HOLD / DAY_CONTINUATION</p><p>SEALED0: ACCEPTED_FOR_SEALED_EXPLORATION_ONLY · +2°: NUMERICAL_POC_STABILIZED_NOT_VALIDATED · orbitalCFD: NOT VERIFIED.</p><p>VALIDATION LAB: old sweepHOLD. Night requires user selection. W04haspriority.</p><small>2026-11-03T17:25:08.642551+01:00</small></section><!--MINI_LABS_END-->
+<div class="app">
+  <aside class="sidebar">
+    <a class="brand" href="#overview" aria-label="NTNU Science home">
+      <div class="brandmark">N<span>·</span></div>
+      <div><b>NTNU<span class="brand-sep">/</span>SCIENCE</b><small>PROJECT CONTROL CENTER</small></div>
+    </a>
+    <div class="nav-caption">RESEARCH WORKSPACE</div>
+    <nav class="sidenav" id="sidenav" aria-label="Project sections">
+      <button class="navitem active" data-page="overview"><span class="nav-icon">◈</span><span>Overview</span><small>01</small></button>
+      <button class="navitem" data-page="ramp"><span class="nav-icon">↗</span><span>Flap Live</span><small>LIVE</small></button>
+      <button class="navitem" data-page="flow"><span class="nav-icon">◉</span><span>Flow Field</span><small>CFD</small></button>
+      <button class="navitem" data-page="live"><span class="nav-icon">⌁</span><span>CFD Live</span><small>02</small></button>
+      <button class="navitem" data-page="validation"><span class="nav-icon">≋</span><span>Validation Lab</span><small>03</small></button>
+      <button class="navitem" data-page="mesh"><span class="nav-icon">▦</span><span>Mesh & Overset</span><small>04</small></button>
+      <button class="navitem" data-page="waves"><span class="nav-icon">∿</span><span>Waves Lab</span><small>05</small></button>
+      <button class="navitem" data-page="flap"><span class="nav-icon">⤴</span><span>Active Flap</span><small>06</small></button>
+      <button class="navitem" data-page="ndll"><span class="nav-icon">⇄</span><span>NDLL vs URANS</span><small>07</small></button>
+      <button class="navitem" data-page="learning"><span class="nav-icon">◇</span><span>Surrogate & DRL</span><small>08</small></button>
+      <button class="navitem" data-page="hardware"><span class="nav-icon">▤</span><span>Computation</span><small>09</small></button>
+      <button class="navitem" data-page="history"><span class="nav-icon">◷</span><span>Research Log</span><small>10</small></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="tiny-heading">INTEGRITY POLICY</div>
+      <div class="integrity"><span class="green-dot"></span> Sources read-only</div>
+      <p>No solver or queue control. Independent application.</p>
+      <div class="sidebar-foot">NTNU · MARINE TECHNOLOGY <span>2026</span></div>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div class="topbar-left"><span class="lab-icon">⌬</span> <span>RESEARCH OPERATIONS</span><span class="slash">/</span><b id="top-current-page">OVERVIEW</b></div>
+      <div class="topbar-right">
+        <span class="refresh"><span class="green-dot" id="connection-dot"></span><span id="connection-label">CONNECTING</span></span>
+        <span class="divider-vert"></span>
+        <span id="local-clock" class="clock">--:--</span>
+        <button class="icon-button" id="refresh-button" title="Refresh now" aria-label="Refresh">↻</button>
+      </div>
+    </header>
+    <main>
+      <section class="page active" id="page-overview" data-title="OVERVIEW">
+        <div class="status-banner" id="status-banner">
+          <div><span class="pulse-circle" id="status-pulse"></span><div><div class="banner-tag">PROJECT STATUS</div><strong id="overall-state">CONNECTING</strong></div></div>
+          <p id="overall-reason">Loading campaign state…</p>
+          <span class="flag" id="source-flag">READ ONLY</span>
+        </div>
+        <section class="rl-overview" id="rl-overview" aria-label="Current active flap experiment">
+          <div class="rl-quick-head"><div><span class="rl-label" id="rl-quick-label">CURRENT EXPERIMENT</span><b id="rl-quick-title">Locating active run...</b></div><span id="rl-quick-status" class="rl-pill">CONNECTING</span></div>
+          <div class="rl-quick-line"><span id="rl-quick-detail">Waiting for controller metadata</span><strong id="rl-quick-progress-text">—</strong></div><div class="rl-track"><div class="rl-track-fill" id="rl-quick-progress"></div></div>
+          <div class="rl-quick-grid"><div><small>δ ACTUAL</small><b id="rl-quick-angle">—</b></div><div><small>CL</small><b id="rl-quick-cl">—</b></div><div><small>CD</small><b id="rl-quick-cd">—</b></div><div><small>pABS</small><b id="rl-quick-pabs">—</b></div><div><small>t [s]</small><b id="rl-quick-time">—</b></div></div>
+          <div class="rl-quick-footer"><small id="rl-quick-updated">Awaiting update</small><button data-open="live" id="rl-quick-open" class="rl-open">Inspect current run →</button></div>
+        </section>
+        <article class="flow-overview-preview">
+          <div class="flow-overview-bar"><div><span class="flow-eyebrow">FLOW FIELD / LAST REAL EXPORT</span><strong id="flow-overview-title">Checking field sources...</strong></div><button class="rl-open" data-open="flow">Explore fields →</button></div>
+          <div class="flow-overview-body"><canvas id="flow-preview-canvas" role="img" aria-label="Last authentic recorded CFD velocity field preview"></canvas><div class="flow-overview-explainer" id="flow-overview-meta">No flow field has been validated yet.</div></div>
+        </article>
+        <div class="metric-grid">
+          <div class="metric"><div class="metric-label">PHASE <span>01 / 07</span></div><div class="metric-value sm" id="m-phase">—</div><div class="metric-foot">Static / Overset validation</div></div>
+          <div class="metric"><div class="metric-label">LAST CASE <span>STAR-CCM+</span></div><div class="metric-value sm" id="m-case">—</div><div class="metric-foot" id="m-case-foot">—</div></div>
+          <div class="metric"><div class="metric-label">SIMULATION TIME <span>t, s</span></div><div class="metric-value numeric" id="m-time">—</div><div class="metric-foot" id="m-step">Step — · Iteration —</div></div>
+          <div class="metric"><div class="metric-label">VALIDATION GATE <span>SCIENTIFIC</span></div><div class="metric-value sm amber" id="m-gate">PENDING</div><div class="metric-foot">Diagnostic ≠ accepted</div></div>
+        </div>
+        <div class="cols two">
+          <article class="panel primary-panel">
+            <div class="panel-head"><div><span class="panel-kicker">CURRENT RESEARCH</span><h2>Validation checkpoint</h2></div><span class="tag amber">DIAGNOSTIC</span></div>
+            <div class="comparison-inline">
+              <div><small>CL · B0</small><strong id="ov-bcl">—</strong></div>
+              <div><small>CL · C0</small><strong id="ov-ccl">—</strong></div>
+              <div><small>ΔCL</small><strong id="ov-dcl">—</strong></div>
+              <div><small>ΔCD</small><strong id="ov-dcd">—</strong></div>
+            </div>
+            <div class="microbar"><div class="microbar-head"><span>PROOF-OF-CONCEPT SCREEN</span><span id="poc-threshold">Target &lt;1%</span></div><div class="microbar-track"><div class="microbar-fill" id="poc-fill"></div></div></div>
+            <p class="note">B0 / C0 mean force comparison. This does not establish mesh independence or validate hydrodynamic convergence.</p>
+            <button class="text-link" data-open="validation">Open validation analysis <span>↗</span></button>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div><span class="panel-kicker">RESEARCH CONTROL</span><h2>Decision & next step</h2></div><span class="tag subtle">WORK AGENT</span></div>
+            <div class="decision-block"><small>LATEST DECISION</small><p id="ov-decision">—</p></div>
+            <div class="decision-block border-top"><small>SCIENTIFIC BLOCKER</small><p id="ov-blocker">—</p></div>
+            <div class="decision-block border-top"><small>NEXT PLANNED STEP</small><p id="ov-next">—</p></div>
+          </article>
+        </div>
+        <div class="cols two lower">
+          <article class="panel dense"><div class="panel-head"><div><span class="panel-kicker">RECOVERY</span><h2>Last checkpoint</h2></div><span class="tag subtle" id="checkpoint-tag">UNVERIFIED</span></div><div class="pathbox" id="checkpoint-path">—</div><div class="rowspread"><span id="checkpoint-size">File metadata unavailable</span><button class="copy-btn" id="copy-checkpoint">Copy path</button></div></article>
+          <article class="panel dense"><div class="panel-head"><div><span class="panel-kicker">PROJECT ROADMAP</span><h2>Research gates</h2></div></div><div class="roadmap compact"><div class="roadmap-item current"><i>01</i><span>Calm water & static flap</span><b>ACTIVE</b></div><div class="roadmap-item"><i>02</i><span>Prescribed flap motion</span><b>CHECK</b></div><div class="roadmap-item"><i>03</i><span>Wave + phase sweeps</span><b>PLANNED</b></div><div class="roadmap-item"><i>04</i><span>NDLL / energy / DRL</span><b>PLANNED</b></div></div></article>
+        </div>
+        <div class="footer-note">Read-only ingestion · Actual STAR output only · Timestamp and provenance preserved · <span id="overview-footer-update">—</span></div>
+      </section>
+
+      <section class="page" id="page-live" data-title="CFD LIVE">
+        <div class="section-title"><div class="eyebrow">SOLVER TELEMETRY</div><h1>CFD Live <em>Monitor</em></h1><p>Recorded histories from the actual run. Live status requires fresh evidence.</p></div>
+        <div class="toolrow"><label>RUN <select id="live-run"><option value="B0">B0 · Fixed flap</option><option value="C0">C0 · Corrected Overset</option><option value="K0">K0 · Motion / flow frozen</option><option value="A0">A0 · Original foil</option><option value="W04pre">PRE_W04 · Calm ramp</option></select></label><label class="registry-follow-active"><input id="live-follow-active" type="checkbox" checked> Follow active run</label><label>SIGNAL <select id="live-metric"><option value="CL">CL [-]</option><option value="CD">CD [-]</option><option value="Fx">Fx [N]</option><option value="Fz">Fz [N]</option><option value="Mh">Mh [N·m]</option><option value="angular_rate">Angular velocity [°/s]</option><option value="angle_error">Angle error [°]</option><option value="center_error">Center error [m]</option><option value="quality">Min cell quality [-]</option><option value="orphan">Overset errors [-]</option><option value="pabs">pabs,min [Pa]</option><option value="cav">Cavitation margin [Pa]</option><option value="mass">Mass imbalance [-]</option><option value="angle">Flap angle [°]</option></select></label><label>SAMPLES <select id="live-window"><option value="all">ALL</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label><button id="export-chart" class="button-outline">Export SVG ↓</button></div>
+        <article class="panel dense registry-compare"><div class="panel-head"><div><span class="panel-kicker">CONTROLLER RUN REGISTRY</span><h2>Available histories & overlays</h2></div><span id="registry-total" class="tag subtle">DISCOVERING</span></div><p class="registry-helper">New controller run_id values appear automatically. Select a primary case above and toggle overlays below. Curves retain their native physical time, without phase shifting.</p><div id="live-compare-list" class="registry-options"></div></article>
+        <article class="panel chart-panel"><div class="panel-head"><div><span class="panel-kicker">TIME HISTORY</span><h2 id="live-chart-title">CL(t)</h2></div><span class="tag subtle">RECORDED</span></div><div class="chart-box" id="live-chart"></div><div class="chart-legend" id="live-legend"></div></article>
+        <div class="metric-grid six" id="live-stats"><div class="metric">Waiting for history…</div></div>
+        <div class="cols two"><article class="panel chart-panel"><div class="panel-head"><div><span class="panel-kicker">NUMERICS</span><h2>Native residuals</h2></div><span class="tag subtle">LOG SCALE</span></div><div class="chart-box" id="residual-chart"></div><div class="chart-legend" id="residual-legend"></div></article><article class="panel"><div class="panel-head"><div><span class="panel-kicker">INTEGRITY</span><h2>Field safety</h2></div></div><div class="kv-list" id="live-safety">—</div><div class="source-foot" id="live-source">—</div></article></div>
+      </section>
+
+      <section class="page" id="page-validation" data-title="VALIDATION LAB">
+        <div class="section-title"><div class="eyebrow">SCIENTIFIC QUALITY GATES</div><h1>Validation <em>Lab</em></h1><p>Traceable B0 vs C0 comparison with run-specific windows, deltas and residuals.</p></div>
+        <div class="info-banner"><span class="tag amber">DIAGNOSTIC</span><span>Acceptance screen &lt;1% is a proof-of-concept threshold only; no experimental validation or grid independence is implied.</span></div>
+        <article class="panel registry-validation"><div class="panel-head"><div><span class="panel-kicker">ALL CONTROLLER CASES</span><h2>Cross-experiment trace comparison</h2></div><span class="tag subtle" id="validation-registry-count">AUTO DISCOVERY</span></div><div class="toolrow"><label>SIGNAL <select id="validation-registry-metric"><option value="CL">CL [-]</option><option value="CD">CD [-]</option><option value="Mh">Mh [N·m]</option><option value="Fx">Fx [N]</option><option value="Fz">Fz [N]</option><option value="pabs">pabs,min [Pa]</option><option value="angle">Measured δ [deg]</option></select></label></div><p class="registry-helper">Choose runs to compare. Failed runs remain visible with their actual data; only explicitly scientifically approved runs are marked ACCEPTED.</p><div class="registry-options" id="validation-registry-picker"></div><div class="chart-box" id="validation-registry-chart"></div><div class="chart-legend" id="validation-registry-legend"></div><div class="table-scroll"><table><thead><tr><th>Run / status</th><th>Samples</th><th>Mean of last 25</th><th>Window [s]</th><th>Segments</th><th>Source</th></tr></thead><tbody id="validation-registry-table"></tbody></table></div></article>
+        <div class="metric-grid" id="validation-kpis"></div>
+        <div class="cols two"><article class="panel chart-panel"><div class="panel-head"><div><span class="panel-kicker">COMPARATIVE FORCE HISTORY</span><h2>CL over physical time</h2></div><span class="tag subtle">B0 / C0</span></div><div id="validation-cl" class="chart-box"></div><div class="chart-legend"><span class="legend-dot blue"></span>B0 fixed <span class="legend-dot teal"></span>C0 corrected Overset</div></article><article class="panel chart-panel"><div class="panel-head"><div><span class="panel-kicker">COMPARATIVE FORCE HISTORY</span><h2>CD over physical time</h2></div><span class="tag subtle">B0 / C0</span></div><div id="validation-cd" class="chart-box"></div><div class="chart-legend"><span class="legend-dot blue"></span>B0 fixed <span class="legend-dot teal"></span>C0 corrected Overset</div></article></div>
+        <article class="panel"><div class="panel-head"><div><span class="panel-kicker">MEASUREMENT PROVENANCE</span><h2>Numerical comparison table</h2></div></div><div class="table-scroll"><table><thead><tr><th>Quantity</th><th>B0 · fixed</th><th>C0 · Overset</th><th>Δ vs B0</th><th>Unit</th></tr></thead><tbody id="validation-table"></tbody></table></div><div class="source-foot" id="validation-provenance">—</div></article>
+        <div class="cols two"><article class="panel"><div class="panel-head"><div><span class="panel-kicker">QUALIFICATION</span><h2>Stability & evidence</h2></div></div><div class="kv-list" id="validation-quality"></div></article><article class="panel"><div class="panel-head"><div><span class="panel-kicker">METHOD</span><h2>Scope & limitations</h2></div></div><p class="body-copy">The B and C traces are separate diagnostic continuations. Their absolute physical-time ranges do not overlap. Force averages use the last 25 CSV samples of each run; overlay is not phase alignment. A matching boundary-condition, pressure residual and mesh-convergence audit is still required before scientific acceptance.</p><p class="body-copy subtle-text">Current check: 0° fixed flap, single-phase, URANS SST k-ω. Not a whole-craft energy balance.</p></article></div>
+      </section>
+
+      <section class="page" id="page-mesh" data-title="MESH & OVERSET">
+        <div class="section-title"><div class="eyebrow">DISCRETIZATION QUALITY</div><h1>Mesh & <em>Overset</em></h1><p>Actual solver-exported mesh images and engineering guardrails.</p></div>
+        <div class="metric-grid" id="mesh-metrics"></div>
+        <article class="panel"><div class="panel-head"><div><span class="panel-kicker">MESH EVOLUTION</span><h2>Corrected Overset interface</h2></div><span class="tag teal">SOURCE VERIFIED</span></div><div class="mesh-compare"><div><span>ORIGINAL OVERESET</span><b>361,532</b><small>Problematic near-wall interpolation</small></div><div class="mesh-arrow">→</div><div><span>CORRECTED CAGE</span><b>333,939</b><small>Background preserved; interface relocated</small></div></div><div class="source-foot">Read the mesh review for acceptors, error cells, interpolation ratio and background identity.</div></article>
+        <div class="image-grid" id="mesh-images"></div>
+        <article class="panel"><div class="panel-head"><div><span class="panel-kicker">CHECKS</span><h2>Overset & field quality</h2></div></div><div class="kv-list" id="mesh-guards"></div></article>
+      </section>
+
+      <section class="page" id="page-waves" data-title="WAVES LAB">
+        <div class="section-title"><div class="eyebrow">REGULAR / IRREGULAR SEA STATES</div><h1>Waves <em>Lab</em></h1><p>Wave cases are independent. No jobs will be restarted or launched here.</p></div>
+        <div class="panel"><div class="panel-head"><div><span class="panel-kicker">DISCOVERED CAMPAIGNS</span><h2>Historical wave evidence</h2></div><span class="tag subtle">READ ONLY</span></div><div id="wave-cases" class="case-rows"></div></div>
+        <article class="panel chart-panel"><div class="panel-head"><div><span class="panel-kicker">OBSERVED FORCE RESPONSE</span><h2>Recorded CL(t) in waves</h2></div><span class="tag subtle">EXTERNAL CAMPAIGN</span></div><div class="toolrow"><label>RUN <select id="wave-run"><option value="W02">W02 · Unaccepted extension</option><option value="W03">W03 · Smoke test only</option><option value="W04pre">PRE_W04 · Calm preparation</option></select></label></div><div id="wave-chart" class="chart-box"></div><div class="source-foot" id="wave-source">—</div></article>
+        <article class="panel chart-panel"><div class="panel-head"><div><span class="panel-kicker">FREE SURFACE PROBE</span><h2>Measured η(t) · x = −0.5 m</h2></div><span class="tag subtle">VOF EXTRACTION</span></div><div id="wave-gauge-chart" class="chart-box"></div><div class="source-foot" id="wave-gauge-source">—</div></article>
+        <div class="empty-science"><div class="empty-symbol">∿</div><h2>Wave added resistance</h2><p>Analytical-vs-VOF wave probes, encounter frequency, cyclic force superposition and added resistance require verified compatible datasets. No fabricated wave curves are shown.</p><span>NOT YET INTEGRATED</span></div>
+      </section>
+
+      <section class="page" id="page-ramp" data-title="ACTIVE FLAP LIVE">
+        <div class="ramp-sectionhead">
+          <div><div class="eyebrow">DYNAMIC HYDRODYNAMIC RESPONSE · READ ONLY</div><h1>Active Flap <em>Live</em></h1><p>Observed ramp data, real STAR output. No CFD control or synthetic samples.</p></div>
+          <div class="rl-pill" id="rl-state">WAITING FOR SOURCE</div>
+        </div>
+        <section class="rl-hero" aria-label="Active ramp status">
+          <div class="rl-hero-top"><div><span class="rl-label">ACTIVE EXPERIMENT</span><h2>RAMP 0° → +2°</h2><small id="rl-run-info">Connecting to controller...</small></div><div class="rl-phase" id="rl-phase">NO DATA</div></div>
+          <div class="rl-progress-title"><span>Physical-time progress through ramp</span><strong id="rl-progress-text">—</strong></div>
+          <div class="rl-track"><div class="rl-track-fill" id="rl-progress"></div></div>
+          <div class="rl-hero-metrics">
+            <div><small>ACTUAL δ</small><b id="rl-angle">—</b><small>deg</small></div>
+            <div><small>CL</small><b id="rl-cl">—</b><small>[-]</small></div>
+            <div><small>CD</small><b id="rl-cd">—</b><small>[-]</small></div>
+            <div><small>pABS, MIN</small><b id="rl-pabs">—</b><small>kPa</small></div>
+            <div><small>TIME</small><b id="rl-time">—</b><small>s</small></div>
+            <div><small>HINGE Mh</small><b id="rl-mh">—</b><small>N·m</small></div>
+          </div>
+          <div class="rl-provenance-strip"><span id="rl-last-updated">No source timestamp</span><span id="rl-data-count">— samples</span><span class="rl-status-explain" id="rl-status-reason">Waiting for controller</span></div>
+        </section>
+        <article class="flow-inline-panel">
+          <div><span class="flow-eyebrow">FLOW FIELD · REAL CFD EXPORTS</span><h3>Velocity, pressure & Overset geometry</h3><p id="flow-ramp-note">Checking recorded native fields; missing time steps will not be synthesized.</p></div>
+          <button class="rl-open" data-open="flow">Open Flow Field →</button>
+        </article>
+        <div class="rl-toolbar">
+          <label>TIME WINDOW<select id="rl-window"><option value="all">Entire experiment</option><option value="100">Last 100 steps</option><option value="50">Last 50 steps</option><option value="20">Last 20 steps</option></select></label>
+          <div class="rl-zoom-buttons"><button id="rl-zoom-in" title="Zoom in around selected time">Zoom +</button><button id="rl-zoom-out" title="Zoom out">Zoom −</button><button id="rl-reset" title="Reset time scale">Reset</button></div>
+          <label>EXPORT PLOT<select id="rl-export-plot"><option value="rl-angle-chart">δ(t) / commanded vs actual</option><option value="rl-cl-chart">CL(t)</option><option value="rl-cd-chart">CD(t)</option><option value="rl-mh-chart">Mh(t)</option><option value="rl-pabs-chart">pabs(t)</option><option value="rl-cl-angle-chart">Dynamic CL(δ)</option><option value="rl-mh-angle-chart">Dynamic Mh(δ)</option><option value="rl-cd-angle-chart">Dynamic CD(δ)</option><option value="rl-power-chart">Pmech(t)</option></select></label>
+          <button class="rl-export" id="rl-export-png">PNG ↓</button><button class="rl-export" id="rl-export-csv">CSV ↓</button>
+        </div>
+        <section class="rl-inspector">
+          <div class="rl-inspector-head"><div><span class="rl-label">SYNCHRONIZED TIME CURSOR</span><h3 id="rl-timeline-cursor">Touch or hover any time chart</h3></div><span id="rl-time-selection" class="rl-cursor-note">No selection</span></div>
+          <div class="rl-inspector-grid" id="rl-field-values">Waiting for recorded samples...</div>
+          <div class="rl-series-toggles" id="rl-toggles"></div>
+        </section>
+        <div class="rl-chart-label"><span>KINEMATICS</span><small>RAMP 0.650–0.850 s · recorded trajectory only</small></div>
+        <div class="rl-charts">
+          <article class="rl-chart"><h3>Flap deflection δ(t) <small>deg</small></h3><div id="rl-angle-chart" class="rl-plot"></div><p>Recorded commanded and measured deflection. Ramp boundaries from the experimental plan.</p></article>
+          <article class="rl-chart"><h3>Angular velocity dδ/dt <small>deg/s</small></h3><div id="rl-rate-chart" class="rl-plot"></div><p>Recorded native angular velocity, not numerical differentiation.</p></article>
+        </div>
+        <div class="rl-chart-label"><span>HYDRODYNAMIC FORCE RESPONSE</span><small>Shared physical-time range across all time charts</small></div>
+        <div class="rl-charts">
+          <article class="rl-chart"><h3>CL(t) <small>[-]</small></h3><div class="rl-plot" id="rl-cl-chart"></div></article>
+          <article class="rl-chart"><h3>CD(t) <small>[-]</small></h3><div class="rl-plot" id="rl-cd-chart"></div></article>
+          <article class="rl-chart"><h3>Fx(t) <small>N</small></h3><div class="rl-plot" id="rl-fx-chart"></div></article>
+          <article class="rl-chart"><h3>Fz(t) <small>N</small></h3><div class="rl-plot" id="rl-fz-chart"></div></article>
+          <article class="rl-chart"><h3>Mh(t) <small>N·m</small></h3><div class="rl-plot" id="rl-mh-chart"></div></article>
+          <article class="rl-chart"><h3>Signed Pmech(t) <small>W</small></h3><div class="rl-plot" id="rl-power-chart"></div><p>Mh × dδ/dt [rad/s]. Sign depends on recorded hinge-moment convention. Not actuator electric power.</p></article>
+        </div>
+        <div class="rl-chart-label"><span>SAFETY & NUMERICS</span><small>pABS diagnostic threshold = 12.34 kPa</small></div>
+        <div class="rl-charts">
+          <article class="rl-chart"><h3>Minimum absolute pressure <small>kPa</small></h3><div class="rl-plot" id="rl-pabs-chart"></div><p>Dashed threshold 12.34 kPa. Not an experimental cavitation validation.</p></article>
+          <article class="rl-chart"><h3>Relative mass imbalance <small>[-]</small></h3><div class="rl-plot" id="rl-mass-chart"></div></article>
+          <article class="rl-chart"><h3>Overset error cells <small>count</small></h3><div class="rl-plot" id="rl-overset-chart"></div></article>
+          <article class="rl-chart"><h3>k / ω floor counts <small>cells</small></h3><div class="rl-plot" id="rl-floor-chart"></div></article>
+          <article class="rl-chart"><h3>Minimum mesh quality <small>[-]</small></h3><div class="rl-plot" id="rl-quality-chart"></div></article>
+          <article class="rl-chart"><h3>Native residual readback <small>iteration axis</small></h3><div class="rl-plot" id="rl-resid-chart"></div><p id="rl-resid-note">Native residual files may lack physical-time mapping. They are never falsely synchronized to time.</p></article>
+        </div>
+        <div class="rl-chart-label"><span>DYNAMIC PARAMETRIC TRAJECTORIES</span><small>Connected in temporal order · not static flap polars</small></div>
+        <div class="rl-charts">
+          <article class="rl-chart"><h3>Dynamic CL(δ) <small>[-] versus deg</small></h3><div class="rl-plot" id="rl-cl-angle-chart"></div></article>
+          <article class="rl-chart"><h3>Dynamic CD(δ) <small>[-] versus deg</small></h3><div class="rl-plot" id="rl-cd-angle-chart"></div></article>
+          <article class="rl-chart"><h3>Dynamic Mh(δ) <small>N·m versus deg</small></h3><div class="rl-plot" id="rl-mh-angle-chart"></div></article>
+          <article class="rl-chart"><h3>Hinge moment vs angular rate <small>N·m versus deg/s</small></h3><div class="rl-plot" id="rl-mh-rate-chart"></div></article>
+        </div>
+        <section class="rl-metadata">
+          <div><span class="rl-label">LAST CONTROLLER CHECKPOINT</span><p id="rl-checkpoint">No checkpoint metadata</p></div>
+          <div><span class="rl-label">ACTIVE HISTORY / SEGMENTS</span><p id="rl-source">No source yet</p><div id="rl-segments"></div></div>
+        </section>
+        <p class="rl-science-note">These curves describe transient, prescribed-flap URANS response for this exact run. They do not establish static flap polars, actuator consumption, vehicle net power or scientific acceptance. Missing measurements are shown as missing, never interpolated.</p>
+      </section>
+
+      <section class="page" id="page-flow" data-title="FLOW FIELD">
+        <div class="flow-head"><div><span class="flow-eyebrow">SOURCE-VERIFIED VISUALIZATION / READ ONLY</span><h1>Flow Field</h1><p>Native cell-centered exports only. No fictitious frames, no interpolated time fields.</p></div><span class="flow-state" id="flow-state">DISCOVERING</span></div>
+        <div class="flow-summary">
+          <div><small>LATEST CONTROLLER STATE</small><strong id="flow-current-experiment">—</strong><span id="flow-current-time">—</span></div>
+          <div><small>LATEST FULL FIELD</small><strong id="flow-latest-field">—</strong><span id="flow-lag">—</span></div>
+          <div><small>PRESSURE THRESHOLD</small><strong>12.339 <em>kPa</em></strong><span id="flow-pressure-state">Point diagnostic only</span></div>
+        </div>
+        <div class="flow-tools">
+          <div class="flow-tabs" role="group" aria-label="Flow mode"><button data-flow-mode="live" class="selected">LIVE</button><button data-flow-mode="history">HISTORY</button></div>
+          <label>SNAPSHOT<select id="flow-snapshot"></select></label>
+          <label>SCALAR FIELD<select id="flow-scalar">
+            <option value="speed">Velocity magnitude [m/s]</option>
+            <option value="pabs">Absolute pressure [kPa]</option>
+            <option value="gauge">STAR Pressure [kPa]</option>
+            <option value="cp" disabled>Cp (reference p∞ unavailable)</option>
+            <option value="vorticity">Approx. vorticity [1/s]</option>
+            <option value="k">Turbulence k [J/kg]</option>
+            <option value="omega">Turbulence ω [1/s]</option>
+            <option value="mu">Turbulent viscosity ratio [-]</option>
+            <option value="quality">Cell quality [-]</option>
+          </select></label>
+          <label>REGION<select id="flow-region"><option value="foil">Whole foil</option><option value="nose">Leading edge</option><option value="hinge">Hinge / gap</option><option value="wake">Wake</option></select></label>
+        </div>
+        <div class="flow-tools flow-tools-secondary">
+          <label class="flow-check"><input type="checkbox" id="flow-contours" checked> Contours</label>
+          <label class="flow-check"><input type="checkbox" id="flow-streamlines" checked> Streamlines</label>
+          <label class="flow-check"><input type="checkbox" id="flow-vectors"> Sampled vectors</label>
+          <label class="flow-check"><input type="checkbox" id="flow-samples"> Overset sample overlay</label>
+          <label class="flow-check"><input type="checkbox" id="flow-wall" checked> Wall geometry</label>
+          <label class="flow-density">Streamline density <input id="flow-density" type="range" min="5" max="28" step="1" value="14"><output id="flow-density-label">14</output></label>
+          <button id="flow-reset-view">Reset view</button><button id="flow-export-png">Export PNG ↓</button>
+        </div>
+        <section class="flow-player">
+          <button id="flow-play" aria-label="Play native snapshots">Play</button>
+          <input id="flow-time-slider" type="range" min="0" max="0" step="1" value="0" aria-label="Recorded snapshot index">
+          <strong id="flow-frame-time">—</strong>
+          <small id="flow-frame-status">Only saved frames</small>
+        </section>
+        <div class="flow-view-grid">
+          <article class="flow-canvas-card">
+            <div class="flow-panel-head"><div><small>SIMCENTER STAR-CCM+ · ACTIVE CELLS</small><h2 id="flow-canvas-title">Velocity magnitude [m/s]</h2></div><span id="flow-provenance-tag" class="flow-state">NO DATA</span></div>
+            <div class="flow-surface"><canvas id="flow-canvas" width="1000" height="550" aria-label="Actual CFD scalar field with optional sampled streamlines"></canvas><div id="flow-canvas-overlay" class="flow-overlay-message">Loading field snapshots...</div></div>
+            <div class="flow-legend"><span id="flow-color-min">—</span><canvas id="flow-colorbar" width="340" height="14"></canvas><span id="flow-color-max">—</span><small id="flow-unit">[m/s]</small></div>
+            <div id="flow-hover" class="flow-hover">Move or tap over a populated cell to read its mean measured value.</div>
+            <p class="flow-caveat" id="flow-data-note">Cell-bin means of active native fluid cells. Transparent pixels have no sampled data; mesh edges are shown only in genuine STAR screenshots.</p>
+          </article>
+          <aside class="flow-side">
+            <div class="flow-side-card"><small>RECORDED SNAPSHOT</small><strong id="flow-selected-time">—</strong><p id="flow-selected-detail">Waiting for source metadata.</p></div>
+            <div class="flow-side-card"><small>VALIDITY & OVERSET</small><div id="flow-quality"><p>Awaiting native cell status.</p></div></div>
+            <div class="flow-side-card"><small>PRESSURE MINIMUM LOCATION</small><div id="flow-minima">No matched point observation.</div></div>
+          </aside>
+        </div>
+        <section class="flow-compare">
+          <div class="flow-section-title"><span>COMPARE SAVED SNAPSHOTS</span><small>Independent native frames, no temporal interpolation</small></div>
+          <div class="flow-tools"><label>SNAPSHOT B<select id="flow-compare-snapshot"></select></label><label class="flow-check"><input type="checkbox" id="flow-same-scale" checked> Lock the same color scale</label></div>
+          <div class="flow-compare-cards">
+            <article><span id="flow-compare-a-title">A · main snapshot</span><canvas id="flow-compare-a" width="720" height="360"></canvas></article>
+            <article><span id="flow-compare-b-title">B · comparison snapshot</span><canvas id="flow-compare-b" width="720" height="360"></canvas></article>
+          </div>
+          <p class="flow-caveat">Two files with equal physical time may come from distinct continuation states. Cross-run snapshots are not automatically assumed identical or physically equivalent.</p>
+        </section>
+        <section class="flow-geometry">
+          <div class="flow-section-title"><span>NATIVE MESH AND HINGE</span><small>Unaltered STAR-exported mesh images, never reconstructed from cell centers</small></div>
+          <div class="flow-image-pair">
+            <figure><img id="flow-mesh-foil" loading="lazy" alt="Original STAR mesh export around hydrofoil"><figcaption>Whole foil · actual mesh edges</figcaption></figure>
+            <figure><img id="flow-mesh-hinge" loading="lazy" alt="Original STAR mesh export at flap hinge and gap"><figcaption>Hinge / gap · actual mesh edges</figcaption></figure>
+          </div>
+          <p class="flow-caveat" id="flow-geometry-accuracy">Native mesh screenshots may be generated at the end of the run, not at the currently displayed field timestamp. The cell-center field never substitutes for exact mesh topology.</p>
+        </section>
+        <p class="flow-caveat">Streamlines and vorticity are postprocessed from archived vector-cell samples with strict availability checks; they are numerical reconstructions, not native STAR streamline integrations. No interpolation over absent time steps or inside solid surfaces. The full pressure field is available only in recorded volume exports.</p>
+      </section>
+
+      <section class="page" id="page-flap" data-title="ACTIVE FLAP">
+        <div class="section-title"><div class="eyebrow">HYDRODYNAMIC ACTUATION</div><h1>Active <em>Flap</em></h1><p>Native geometry and prescribed-motion proof-of-concept, not yet an optimized controller.</p></div>
+        <article class="flow-inline-panel"><div><span class="flow-eyebrow">FLOW FIELD / NATIVE CFD</span><h3>Velocity, pressure, turbulence & Overset</h3><p>Actual recorded field snapshots and native mesh images, separate from the frozen-flow K0 test.</p></div><button class="rl-open" data-open="flow">View native flow fields →</button></article>
+        <div class="metric-grid" id="flap-geometry"></div>
+        <article class="panel"><div class="panel-head"><div><span class="panel-kicker">PRESCRIBED MOTION · FROZEN FLOW</span><h2>Kinematic proof of concept</h2></div><span class="tag subtle" id="flap-kinematic-status">CHECKING</span></div><div class="metric-grid" id="kinematic-metrics"></div><div id="kinematic-chart" class="chart-box"></div><div class="chart-legend">Actual measured flap angle versus physical time. No hydrodynamic forces solved.</div><div class="source-foot" id="kinematic-source">—</div></article>
+        <div class="cols two"><article class="panel"><div class="panel-head"><div><span class="panel-kicker">KINEMATICS</span><h2>Geometry / hinge</h2></div></div><div id="flap-details" class="kv-list"></div><div class="source-foot" id="flap-source"></div></article><article class="panel image-holder"><div class="panel-head"><div><span class="panel-kicker">STAR EXPORT</span><h2>Native flap geometry</h2></div></div><div id="flap-image"></div></article></div>
+        <div class="empty-science"><div class="empty-symbol">δ</div><h2>CL(δ) · CD(δ) · Mh(δ)</h2><p>Nonzero deflection sweep is not scientifically cleared. Amplitude × phase heatmaps and actuator net power will appear only after accepted real experiments.</p><span>AWAITING SCIENTIFIC GATE</span></div>
+      </section>
+
+      <section class="page" id="page-ndll" data-title="NDLL vs URANS">
+        <div class="section-title"><div class="eyebrow">MODEL CROSS-VALIDATION</div><h1>NDLL <em>vs</em> URANS</h1><p>Comparable inputs first: hydrofoil geometry, motion, wave encounter and heave / pitch.</p></div>
+        <div class="empty-science large-empty"><div class="empty-symbol">⇄</div><h2>Model comparison not yet started</h2><p>Godø / Steen NDLL–FASTSHIPS is the intended reference. URANS–VOF force phase, amplitude and energetic differences will be compared only after the geometries and kinematics are harmonized. Quasi-2D fixed-foil results are not a full-vehicle performance prediction.</p><span>PLANNED · NO DATA</span></div>
+      </section>
+
+      <section class="page" id="page-learning" data-title="SURROGATE & DRL">
+        <div class="section-title"><div class="eyebrow">FUTURE CONTROL POLICY</div><h1>Surrogate <em>& DRL</em></h1><p>High-fidelity CFD data → dynamic surrogate → policy training → URANS validation.</p></div>
+        <div class="empty-science large-empty"><div class="empty-symbol">◇</div><h2>Training has not started</h2><p>Dataset quality, multi-step rollout error, training reward, constraint violations and actuator-adjusted net power remain unavailable. Training and generalization metrics will never be synthesized.</p><span>NOT STARTED</span></div>
+      </section>
+
+      <section class="page" id="page-hardware" data-title="COMPUTATION">
+        <div class="section-title"><div class="eyebrow">WORKSTATION TELEMETRY</div><h1>Computer <em>& Compute</em></h1><p>ThinkPad resources. Unavailable sensors are explicitly shown as N/A.</p></div>
+        <div class="metric-grid" id="hardware-metrics"></div>
+        <div class="cols two"><article class="panel"><div class="panel-head"><div><span class="panel-kicker">DISK HEALTH</span><h2>Available capacity</h2></div></div><div id="disk-health" class="progress-list"></div></article><article class="panel"><div class="panel-head"><div><span class="panel-kicker">SOLVER PROCESSES</span><h2>Observed STAR / MPI</h2></div></div><div id="hardware-procs" class="kv-list"></div></article></div>
+        <article class="panel chart-panel"><div class="panel-head"><div><span class="panel-kicker">LOCAL BROWSER SESSION</span><h2>Resource history</h2></div><span class="tag subtle">SINCE PAGE OPEN</span></div><div id="hardware-chart" class="chart-box"></div><div class="source-foot">CPU temperature and GPU limiting are N/A unless a reliable sensor returns them. No ETA without live rate and target progress.</div></article>
+      </section>
+
+      <section class="page" id="page-history" data-title="RESEARCH LOG">
+        <div class="section-title"><div class="eyebrow">EXPERIMENT AUDIT TRAIL</div><h1>Research <em>Log</em></h1><p>Actual review artifacts and recorded agent decisions, newest first.</p></div>
+        <div class="cols two"><article class="panel"><div class="panel-head"><div><span class="panel-kicker">EXPERIMENT REVIEWS</span><h2>Validation records</h2></div><span class="tag subtle" id="history-count">—</span></div><div class="history-list" id="history-reviews"></div></article><article class="panel"><div class="panel-head"><div><span class="panel-kicker">SCIENTIFIC DECISIONS</span><h2>Decision timeline</h2></div></div><div class="history-list" id="history-decisions"></div></article></div>
+      </section>
+    </main>
+    <div class="bottom-safe"></div>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

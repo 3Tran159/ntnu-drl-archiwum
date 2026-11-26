@@ -1,0 +1,112 @@
+{
+  "generated_at_utc": "2026-10-30T08:10:53.453Z",
+  "purpose": "Primary-source review of mass-balance tolerances for discussion, following user acceptance of the observed approximately 0.0143% native absolute phase residual for an exploratory first foil-wave case.",
+  "conclusion": "Published CFD studies and official solver guidance use some global mass-imbalance thresholds larger than 0.0143%. This shows that 0.01% is not a universal CFD standard. Definitions, normalizations and time treatment differ, so these sources do not validate the present forces, prove an outlet disturbance is harmless, or establish an equivalent admissible STAR-CCM+ native absolute phase error.",
+  "project_metric": {
+    "observed_peak_percent_approx": 0.0143,
+    "definition_context": "Native phase mass-conservation errors have units kg/step and are divided by dt, with the absolute phase residual normalized by inlet mass flow; independently checked against BDF2 accumulation plus boundary flux. Exact current implementation and numerical values remain governed by the campaign's native phase audit JSON.",
+    "comparison_caution": "A cumulative inventory error relative to initial water mass, a signed mixture mass-flow balance, and an absolute phase error per step divided by inlet flow are distinct measures. Their percentages cannot be interchanged."
+  },
+  "sources": [
+    {
+      "id": "assefa_tesfay_2025",
+      "type": "peer_reviewed_article",
+      "title": "Synergetic Improvement of Blade Entry and Water Admission Angles for High Efficiency Cross-Flow Turbines in Micro-Hydropower Applications",
+      "authors": [
+        "Ephrem Yohannes Assefa",
+        "Asfafaw Haileselassie Tesfay"
+      ],
+      "year": 2025,
+      "url": "https://www.mdpi.com/1996-1073/18/17/4540",
+      "doi": "10.3390/en18174540",
+      "location": "Section 3.2, after VOF equation (14)",
+      "criterion_percent": 0.1,
+      "claim": "Uses a global mass imbalance below 0.1%, alongside governing-equation residuals of 1e-5.",
+      "flow": "Water-air VOF cross-flow turbine; abstract describes steady-state RANS and frozen-rotor treatment is used.",
+      "definition_limit": "The relevant paragraph does not provide an explicit mass-imbalance denominator or demonstrate equivalence to absolute phase conservation error.",
+      "quality_caution": "Abstract and methods contain differing steady/unsteady wording. Use only as an example of a published global criterion, not as validation authority for this wave campaign.",
+      "verification": "Publisher text retrieved via web search including Section 3.2; direct open requests returned access errors."
+    },
+    {
+      "id": "coppel_2010",
+      "type": "primary_phd_thesis",
+      "title": "A Computational Fluid Dynamic Investigation of Rowing Oar Blades",
+      "authors": [
+        "Anna Louise Coppel"
+      ],
+      "year": 2010,
+      "institution": "University of Birmingham",
+      "url": "https://etheses.bham.ac.uk/id/eprint/793/1/Coppell10PhD.pdf",
+      "location": "Printed page 108, PDF page index 124, 2D flat rectangular oar blade discussion",
+      "reported_upper_bound_percent": 0.1,
+      "claim": "Reports inlet and outlet mass-flow monitoring and a mass imbalance below 0.1% for the 2D free-surface oar-blade simulation.",
+      "flow": "Water-air free surface and blade interaction.",
+      "definition_limit": "The nearby continuity expression compares inlet and outlet rho*A*V. It does not supply an accumulation-inclusive, native absolute phase metric or an explicit normalized-error formula.",
+      "interpretation": "A reported upper bound, not evidence that the actual residual was greater than 0.0143%.",
+      "verification": "Primary university thesis PDF opened and checked."
+    },
+    {
+      "id": "fluent_mixing_elbow",
+      "type": "official_solver_tutorial",
+      "title": "ANSYS Fluent Tutorial Guide: Fluid Flow and Heat Transfer in a Mixing Elbow",
+      "url": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v242/en/flu_tg/flu_tg_elbow_mesh_wtc.html",
+      "location": "Convergence discussion and overall flux balance check",
+      "criterion_percent": 0.2,
+      "claim": "Tutorial recommends a net imbalance below 0.2% of the net flux through the domain when checking a converged solution.",
+      "flow": "Steady single-phase heated mixing elbow.",
+      "definition_limit": "Overall boundary-flux balance in a steady tutorial, not a transient water-air phase error including accumulation.",
+      "verification": "Official page opened and checked."
+    },
+    {
+      "id": "cfx_global_balance",
+      "type": "official_solver_guide",
+      "title": "ANSYS CFX Modeling Guide, 16.10.3 Global Balances and Integrated Quantities",
+      "url": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v251/en/cfx_mod/i1323938.html",
+      "criterion_percent": 1,
+      "claim": "The conservation-target default is a fractional imbalance of 0.01 (1%). The guide says hydrodynamic global imbalances should at least be less than 1% before considering convergence.",
+      "definition_url": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v251/en/cfx_solv/i1299644.html",
+      "definition_location": "Section 3.2.1.12 Global Conservation Statistics",
+      "definition_limit": "CFX normalization uses the largest contribution within the relevant connected-domain equation group. Multiphase normalization depends on coupled versus segregated volume fractions; it is not automatically the present inlet-normalized metric.",
+      "verification": "Both official pages opened and checked."
+    },
+    {
+      "id": "xie_2020_counterexample",
+      "type": "peer_reviewed_wave_article",
+      "title": "A Cartesian cut-cell based multiphase flow model for large-eddy simulation of three-dimensional wave-structure interaction",
+      "authors": [
+        "Zhihua Xie",
+        "Thorsten Stoesser",
+        "Shiqiang Yan",
+        "Qingwei Ma",
+        "Pengzhi Lin"
+      ],
+      "year": 2020,
+      "doi": "10.1016/j.compfluid.2020.104747",
+      "url": "https://orca.cardiff.ac.uk/id/eprint/135374/2/1-s2.0-S0045793020303170-main.pdf",
+      "location": "Travelling-wave closed-channel test, PDF page 7",
+      "reported_end_mass_error_percent_upper_bounds": [
+        0.001,
+        0.0015,
+        0.002
+      ],
+      "claim": "Reports end-of-simulation mass errors below 0.001%, 0.0015% and 0.002% for the three tested amplitude-to-depth ratios.",
+      "definition_limit": "End-of-run mass error in a closed-channel test differs from a per-step open-domain inlet-normalized residual.",
+      "reason_included": "Counterexample to any claim that larger mass-error tolerances are universal for wave CFD.",
+      "verification": "Primary author-repository article PDF opened and checked."
+    }
+  ],
+  "practical_interpretation": {
+    "supported": "Proceeding as an exploratory case is a stated project decision with the observed residual disclosed and monitored; literature supports that allowable residual criteria are context dependent.",
+    "not_supported": [
+      "A universal literature-backed 0.1% threshold for this exact STAR-CCM+ metric.",
+      "No effect on foil forces solely because a disturbance is near the outlet.",
+      "Production-quality or mesh/time/reflection-validated wave forces."
+    ],
+    "retain_observations": [
+      "Native phase residual and BDF2 accumulation-plus-flux history.",
+      "Cumulative and equal-phase inventory trends with forcing/core/damping distinguished.",
+      "Local maxima, bounded volume fraction, wave gauges and force histories.",
+      "Matched calm reference and subsequent wave-domain, free-surface mesh, timestep and reflection checks."
+    ]
+  }
+}

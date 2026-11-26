@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-03T14:45:59.832501+01:00",
+  "verdict": "RESOURCE_HOLD",
+  "CFD_steps": 5,
+  "checkpoint_saved": true,
+  "not_a_completed_benchmark": true,
+  "action": {
+    "at": "2026-11-03T14:45:59.832501+01:00",
+    "reason": "6P+2E MPI8 raised W04 median from1.636 to1.985s; after own solver ended, W04 returned to1.721s. Preserve W04 affinity; own8/12/16MPI now use E cores with zero affinity overlap.18/20 deferred because no18/20 nonoverlapping CPU slots exist while W04 has unchangedPmask.",
+    "eligible_cpu_counts": [
+      8,
+      12,
+      16
+    ],
+    "excluded_cpu_counts": [
+      18,
+      20
+    ],
+    "threshold_unchanged": true,
+    "W04_unchanged": true
+  }
+}

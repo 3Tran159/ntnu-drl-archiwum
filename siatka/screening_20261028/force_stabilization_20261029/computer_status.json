@@ -1,0 +1,208 @@
+{
+  "sampled_at": "2026-10-30T09:49:34+01:00",
+  "sample_unix": 1793350174.9584696,
+  "scope": "Whole computer; campaign activity identified separately",
+  "errors": [],
+  "memory": {
+    "used_gb": 27.546245574951172,
+    "total_gb": 63.426570892333984,
+    "free_gb": 35.88032531738281,
+    "percent": 43
+  },
+  "cpu_percent": 3.4932221063607938,
+  "disks": {
+    "E": {
+      "free_gb": 262.820556640625,
+      "total_gb": 951.6445274353027
+    },
+    "F": {
+      "free_gb": 157.56604385375977,
+      "total_gb": 758.5458946228027
+    }
+  },
+  "gpu": {
+    "name": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+    "percent": 0.0,
+    "used_mb": 4455.0,
+    "total_mb": 12227.0,
+    "temperature_c": 51.0
+  },
+  "star_processes": 42,
+  "stop_requested": false,
+  "locks": [
+    {
+      "name": "queue.lock",
+      "modified_at": "2026-10-30T09:48:59.651099+01:00",
+      "owner": {
+        "pid": 28140,
+        "purpose": "Saved paused wave server; retained for interactive inspection",
+        "case": "W01_W20L4_M10_FS020_diagnostic_r1"
+      }
+    }
+  ],
+  "campaign_solver_observed": true,
+  "other_star_processes": 41,
+  "state_file": "wave_foil_run_state.json",
+  "concurrent_activity": [],
+  "activity": {
+    "state": "running",
+    "mode": "wave",
+    "case": "W01_W20L4_M10_FS020_diagnostic_r1",
+    "description": "W01 paused by user; calculated state saved; server retained for inspection",
+    "stage": "paused_saved_server_open",
+    "controller_pid": 28140,
+    "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_foil_run_state.json",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1",
+    "metrics": {
+      "time_s": 0.16800000000000012,
+      "step": 148.0,
+      "wall_s": 810.9460493,
+      "max_speed_m_s": 22.517759695389326,
+      "max_CFL": 45.42661176431784,
+      "interface_CFL": 2.454978553649546,
+      "alpha_min": 0.0,
+      "alpha_max": 1.0,
+      "mass_kg": 38399.58412270862,
+      "water_volume_m3": 38.3880525646984,
+      "net_outward_mass_kg_s": -95.39667011266313,
+      "inward_mass_kg_s": 8759.030050692341,
+      "vof_substeps": 1.0,
+      "CD": 0.010572843630516242,
+      "CL_total": 0.2082086460504387,
+      "Fx_slice_N": 40.76465590181842,
+      "Fz_slice_N": 802.7692557120714,
+      "pressure_drag_N": 19.316224539926502,
+      "viscous_drag_N": 21.44843136189192
+    },
+    "saved_at": "2026-10-30T09:47:23.723682+01:00",
+    "progress": {
+      "max_speed_m_s": 22.535586073023687,
+      "wall_s": 461.33172940000003,
+      "CL_total": 0.2083767829144018,
+      "interface_CFL": 2.4543368702987918,
+      "time_s": 0.16000000000000011,
+      "CD": 0.01059342271802227,
+      "steps": 140
+    },
+    "data_age_s": 131.6227731704712,
+    "cost": {
+      "seconds_per_step": 39.946087000000034,
+      "seconds_per_physical_second": 39946.087
+    },
+    "checkpoint": {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\final.sim",
+      "size_bytes": 499188536,
+      "modified_at": "2026-10-30T09:47:33.864143+01:00",
+      "verification": "File observed; validity requires the corresponding completed save record"
+    },
+    "elapsed_wall_s": 36.225714921951294,
+    "cells": null,
+    "gauge_samples": [
+      {
+        "time_s": 0.16000000000000011,
+        "x_m": -10.0,
+        "eta_actual_m": -0.10167674492306134,
+        "eta_analytic_m": -0.1010183255637962
+      },
+      {
+        "time_s": 0.16000000000000011,
+        "x_m": -5.0,
+        "eta_actual_m": -0.2196834505334202,
+        "eta_analytic_m": -0.2223168641857427
+      },
+      {
+        "time_s": 0.16000000000000011,
+        "x_m": 2.5,
+        "eta_actual_m": 0.20831996348390547,
+        "eta_analytic_m": 0.23441389137330404
+      },
+      {
+        "time_s": 0.16000000000000011,
+        "x_m": 5.0,
+        "eta_actual_m": 0.22434111773062426,
+        "eta_analytic_m": 0.2388562059536028
+      },
+      {
+        "time_s": 0.16000000000000011,
+        "x_m": 10.0,
+        "eta_actual_m": -0.09588554014198536,
+        "eta_analytic_m": -0.09842827980397928
+      },
+      {
+        "time_s": 0.16000000000000011,
+        "x_m": 15.0,
+        "eta_actual_m": -0.2256856439127226,
+        "eta_analytic_m": -0.22650051580281527
+      },
+      {
+        "time_s": 0.16000000000000011,
+        "x_m": 20.0,
+        "eta_actual_m": 0.0867249081949879,
+        "eta_analytic_m": 0.08490926649734476
+      }
+    ],
+    "phase_budget": {
+      "time_s": 0.16800000000000012,
+      "step": 148.0,
+      "dt_s": 0.001,
+      "native_water_error_kg_step": -0.0001616523801895142,
+      "native_air_error_kg_step": 2.009530221405555e-07,
+      "native_sum_error_kg_step": -0.00016145142716737364,
+      "native_water_error_kg_s": -0.1616523801895142,
+      "native_air_error_kg_s": 0.0002009530221405555,
+      "native_sum_error_kg_s": -0.16145142716737362,
+      "native_sum_pct_inward_mass": -0.001843256915811266,
+      "native_abs_sum_pct_inward_mass": 0.0018478453924114734,
+      "bdf2_accumulation_kg_s": 95.23521810478996,
+      "faceflux_net_outward_kg_s": -95.39667011266313,
+      "bdf2_plus_faceflux_kg_s": -0.16145200787316583,
+      "bdf2_plus_faceflux_pct_inward_mass": -0.0018432635456069038,
+      "inward_mass_kg_s": 8759.030050692341,
+      "phase_net_outward_kg_s": -95.39667011266131,
+      "bdf2_plus_phaseflux_kg_s": -0.16145200787134684,
+      "bdf2_plus_phaseflux_pct_inward_mass": -0.0018432635455861367,
+      "faceflux_minus_phaseflux_kg_s": -1.8189894035458565e-12,
+      "native_water_error_log": null,
+      "native_air_error_log": null
+    },
+    "mass_peak_pct": 0.003108317223258647,
+    "mass_review_limit_pct": 0.01
+  },
+  "last_wave": {
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14",
+    "time_s": 0.7500000000000006,
+    "status": "target_reached",
+    "updated_at": "2026-10-30T02:05:40.924948+01:00",
+    "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_pressureTol01_dt1ms_r14"
+  },
+  "mode_fields": {
+    "calm": [
+      "physical_time",
+      "CD",
+      "CL",
+      "adjacent_0.2s_changes",
+      "CFL",
+      "step_cost",
+      "checkpoint"
+    ],
+    "wave": [
+      "physical_time",
+      "gauge_actual_reference",
+      "phase_balance",
+      "speed",
+      "interface_CFL",
+      "alpha_bounds",
+      "step_cost",
+      "checkpoint"
+    ],
+    "preparation": [
+      "stage",
+      "elapsed",
+      "cells_when_available"
+    ],
+    "none": [
+      "last_completed",
+      "next_review"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+[
+  "Zakończono 14 prób na 3 siatkach (37 411 / 66 707 / 123 256 komórek), przy 0 i 18 m/s. Zachowano cięciwę 1,19 m i grubość 12%; bez skalowania fizycznej geometrii.",
+  "W każdej siatce dokładnie jedna warstwa przez szerokość. Zero ujemnych, niezamkniętych i zdegenerowanych komórek; min quality 0,149–0,188, min volume change 0,0186–0,0651, max skew 46,7–52,6°. Są to wskaźniki diagnostyczne, a nie dowód dokładności sił.",
+  "Co najmniej 15 kolejnych regularnych warstw: M01 97,07%, M02 97,97%, M03 98,53%. Niedobory skupione przy ostrej krawędzi spływu; 100% obwodu ma przynajmniej jedną warstwę. Kryterium 99,9% samo nie przesądza o przydatności mesha.",
+  "Na M01 dt 0,1 → 0,5 ms zmienia CD o +0,14%, CL o −0,13% przy t=0,02 s; na M02 dt 0,25 → 0,5 ms około −0,08% dla obu. Dłuższy przebieg z dt=1 ms pozostaje próbą rozruchową bez osobnego testu niezależności czasowej na t=0,2 s.",
+  "GPU rzeczywiście aktywne (1 GPU potwierdzone przez STAR). M03, 40 kroków dt=0,5 ms: CPU8 107,9 s, CPU24 75,2 s, GPU 53,3 s. GPU jest 2,02× szybsze od CPU8 i 1,41× od CPU24. Czasy obejmują solver i raportowanie; uruchamianie GPU dodaje narzut.",
+  "Dłuższe próby GPU, 200 kroków dt=1 ms do t=0,2 s: M02 172,3 s; M03 280,0 s. M03: Fx=67,345 N, Fz=950,313 N na wycinek 0,02 m; CD=0,017467, CL=0,246476 (z wyporem), CL bez nominalnego wyporu=0,240584.",
+  "Brak niezależności od siatki: przy t=0,2 s M02 ma CD=0,028035, M03 CD=0,017467 (M02 około 60,5% wyżej). CL odpowiednio 0,229725 i 0,246476. Siły wciąż ewoluują. M03 to roboczy kandydat do dalszej diagnostyki, nie zaakceptowany wynik NWAR.",
+  "M03 GPU przy t=0,2 s: y+ średnie=44,93, min=4,64, max=255,17. To nie siatka z y+≈1. Lokalne rozkłady y+ i krawędź spływu wymagają uwzględnienia przy wyborze sposobu traktowania ściany.",
+  "Test 0 m/s M02: przy profilu max |U|≈0,00021 m/s; globalne 0,427 m/s dotyczy niemal czystego powietrza przy powierzchni. W niemal czystej wodzie max≈0,0149 m/s, w interfejsie≈0,179 m/s. Przed falami potrzebna kontrola spoczynkowej powierzchni.",
+  "CFL globalny w cienkich komórkach przy ścianie i CFL interfejsu są osobnymi diagnostykami. Pliki interface_cfl.json podają oba; aktywne subkroki VOF z celem 0,5. Duże globalne CFL nie jest samodzielnym dowodem błędu ani dokładności.",
+  "Gotowy plik roboczy: F:\\ntnu\\Q2D_012_20261029.sim. Zapisany przy t=0,2 s; limit dalszego biegu ustawiony na t=0,25 s. Oryginalny CAD i bazowy SIM sprawdzone sumami SHA-256, bez zmian.",
+  "Następna praca: wyjaśnić różnicę oporu M02/M03 (LE, ciśnienie, rozruch), potwierdzić stabilizację sił i dt, sprawdzić interfejs; dopiero potem porównywać warunki spokojnej wody i fal. Quasi-2D opisuje przekrój, bez wirów końcowych i oporu indukowanego całego płata."
+]

@@ -1,0 +1,216 @@
+{
+  "audit_scope": "Professor dashboard numerical review; snapshot of saved evidence, no simulations modified",
+  "audited_at_local": "2026-10-29T21:53:00+01:00",
+  "sources": [
+    "mesh_convergence.json",
+    "mesh_definition_evidence.json",
+    "temporal_validation_results.json",
+    "temporal_original_comparison.json",
+    "professor_inner_audit.json",
+    "conservation_probe_results.json",
+    "M09_build_result.json",
+    "selected_snapshots.json",
+    "flow_visualization_provenance.json",
+    "vertical_domain_preservation.json"
+  ],
+  "presentation_status": {
+    "temporal": "T01–T04 completed; supported settings for next calm-mesh screen: SECOND_ORDER, dt=1ms,10inner. Final selected mesh and wave propagation need independent checks.",
+    "mesh": "No final mesh selected. M08 agrees with M07 in total CD/CL, but this is only one finer confirmation. M09 is built, audited,214908cells; flow not launched at audit time.",
+    "waves": "Planned only: FifthOrderVofWave,24mdepth, U18m/s, submergence2m; original C01/W01/W02 and W01 3lambda/4lambda test first, extras after."
+  },
+  "coefficient_definitions": {
+    "reference_density_kg_m3": 1000,
+    "velocity_m_s": 18,
+    "chord_m": 1.19,
+    "span_m": 0.02,
+    "area_m2": 0.0238,
+    "qA_N": 3855.6,
+    "CD": "Fx/(0.5*rho*U^2*c*b); positive+x",
+    "CL_total": "Fz/(0.5*rho*U^2*c*b); positive+z; contains hydrostatic force",
+    "CL_dynamic": "CL_total - 22.718189111947265/3855.6; label the subtracted buoyancy reference explicitly if shown",
+    "force_split": "Fx_total = Fx_pressure + Fx_viscous on20mm slice. Component sum is an arithmetic/report consistency check, not independent conservation validation.",
+    "settling": "100*(latest0.2smean-previous0.2smean)/abs(previousmean); both absolute changes strictly<0.5%; adjacent windows non-overlapping",
+    "mesh_comparison": "100*(candidate mean-finer reference mean)/abs(finer reference mean); both absolute CD and CL differences<=1%",
+    "temporal_comparison": "100*(test mean-reference mean)/abs(reference mean); T01–T04 same1.642s starting checkpoint, common2.042–2.242s comparison window",
+    "uncertainty": "RMS across a drifting deterministic time trace is not a confidence interval or discretization uncertainty. Do not present as error bars proving accuracy."
+  },
+  "temporal_results": [
+    {
+      "case": "M04 original",
+      "order": 1,
+      "dt_ms": 1,
+      "inner": 20,
+      "window_s": [
+        1.442,
+        1.642
+      ],
+      "CD": 0.007307661327439915,
+      "CL": 0.31790137645391037
+    },
+    {
+      "case": "T01",
+      "order": 1,
+      "dt_ms": 1,
+      "inner": 20,
+      "window_s": [
+        2.042,
+        2.242
+      ],
+      "CD": 0.007254613115486969,
+      "CL": 0.31897091162517405,
+      "pressure_N": 7.974597980510292,
+      "viscous_N": 19.99628834756127,
+      "median_s_step": 2.2774570999999924
+    },
+    {
+      "case": "T02",
+      "order": 2,
+      "dt_ms": 1,
+      "inner": 20,
+      "window_s": [
+        2.042,
+        2.242
+      ],
+      "CD": 0.007253175474380762,
+      "CL": 0.31902201199136043,
+      "pressure_N": 7.968628081902061,
+      "viscous_N": 19.996715277120405,
+      "median_s_step": 2.233769900000027
+    },
+    {
+      "case": "T03",
+      "order": 2,
+      "dt_ms": 0.5,
+      "inner": 20,
+      "window_s": [
+        2.042,
+        2.242
+      ],
+      "CD": 0.0072531809303015326,
+      "CL": 0.31902181581585365,
+      "pressure_N": 7.968645025350466,
+      "viscous_N": 19.996719369520125,
+      "median_s_step": 1.840678500000081
+    },
+    {
+      "case": "T04",
+      "order": 2,
+      "dt_ms": 1,
+      "inner": 10,
+      "window_s": [
+        2.042,
+        2.242
+      ],
+      "CD": 0.007253362115623457,
+      "CL": 0.319017364510186,
+      "pressure_N": 7.969349403707407,
+      "viscous_N": 19.9967135692904,
+      "median_s_step": 1.213397499999985
+    }
+  ],
+  "key_differences_pct": [
+    {
+      "test": "T01",
+      "reference": "M04 original",
+      "CD": -0.7259259779014684,
+      "CL": 0.3364361561418852,
+      "meaning": "Later-time drift with same settings; not a time-order effect."
+    },
+    {
+      "test": "T02",
+      "reference": "T01",
+      "CD": -0.01981692315387722,
+      "CL": 0.016020384406222502,
+      "meaning": "Time-order sensitivity at common endpoint/window."
+    },
+    {
+      "test": "T03",
+      "reference": "T02",
+      "CD": 0.00007522113300575821,
+      "CL": -0.00006149278087712281,
+      "meaning": "dt sensitivity on this calm M04 branch; cannot certify waves."
+    },
+    {
+      "test": "T04",
+      "reference": "T02",
+      "CD": 0.0025732349004181755,
+      "CL": -0.0014567901272542164,
+      "meaning": "10vs20inner; small coefficient change under this calm condition."
+    }
+  ],
+  "configuration_recommendation": {
+    "supported_scope": "SECOND_ORDER/1ms/10inner for next calm-mesh screening, with original stability guards and ongoing mass-budget monitoring.",
+    "inner_audit": "T04 final200steps finite; savedfields finite,alpha[0,1], force-monitors exactly match independent reports. Last-half Fx max0.000884%,Fzmax0.000438%.",
+    "conservation": "40steps from matchedT02 checkpoint,2.242–2.282s.20inner integrated mass+flux residual+5.9411e-6kg;10inner−4.0839e-7kg. BDF2max residual1.9780e-6%and5.6941e-6%ofinlet;BEmax0.0004333%and0.0004365%. Both formulations small; do not equate endpoint net mass flux with conservation defect.",
+    "limitation": "VOFsubstepsAPI=1; configured DYNAMIC target0.5 does not prove effective substepping. Wave and selected-mesh accuracy remain separate.",
+    "controller_prepared_not_launched": "Superseded: parent inspected and launched run_configured_mesh_screen.py --run, PID15952, at~21:52. Active stage M09 guardedstartup; noflowresultyet.",
+    "launch_gates_checked": "Temporal/conservation/M09 identity/topology gates passed; parent inspected no rootcampaignsolver/lock before launch. SeparateSTARsession untouched."
+  },
+  "mesh_findings": [
+    {
+      "comparison": "M04/M06",
+      "CD_pct": -0.9050585408945039,
+      "CL_pct": 1.378440255504136,
+      "decision": "Fails1%CL."
+    },
+    {
+      "comparison": "M04/M07",
+      "CD_pct": -2.2198816894465363,
+      "CL_pct": 1.362067274637601,
+      "decision": "Failsboth."
+    },
+    {
+      "comparison": "M06/M07",
+      "CD_pct": -1.3268317526527158,
+      "CL_pct": -0.01615035783276031,
+      "decision": "FailsCD; pressure difference+0.0435705N,viscous−0.4258982N(coarse-fine)."
+    },
+    {
+      "comparison": "M08/M07",
+      "CD_pct": 0.5084708800015153,
+      "CL_pct": -0.1915914493668979,
+      "pressure_pct": 1.6817959949555825,
+      "viscous_pct": 0.0519008395387654,
+      "decision": "Both total coefficients pass1%, pressure component itselfdiffers1.682%; oneconfirmationonly."
+    }
+  ],
+  "mesh_design_story": [
+    "M02→M03→M05: wall-function spacing family; distinguish from low-y+ family and do not pool as one refinement curve.",
+    "M03→M04: same nominal outer/surface/FS sizes, near-wall h1 179.9→3um and15→40layers.",
+    "M04→M06→M07: general refinement plus thinner first layers and more prism layers.",
+    "M08: M06 outer/surface/FS sizes combined with M07 prisms(h1=1.5306um,48layers,T=15.46mm); tests wall-normal sensitivity relativeM06.",
+    "M07→M08: six nominal bulk/surface sizes+40%, prism settings unchanged; foil edges1192→856,cells481635→254989(−47.1%).",
+    "M09: M08foil/prisms/FS controls; only remote base.142857→.25m withprotectedmiddle;cells214908(−15.7%vsM08).No force result yet.",
+    "M10: LE/TE local-refinement design only; not built. Never show an achieved saving or result."
+  ],
+  "required_caveats": [
+    "All historical mesh-force means currentlyFIRST_ORDER1ms20inner. NewSECOND_ORDER10inner results need separate panel/namespace; do not mix as a validated refinement sequence.",
+    "Adjacent0.5%settling does not bound accumulated drift; originalM04 tosame-settingcontinuationCDchanged0.726%. Final comparisons near1%need matched suitable windows and settings.",
+    "M08y+p95=.799742 and99.882966%area<1, butisolatedTEmax253.607. ShowdistributionandlocalizedTEexception; avoid'allwallresolvedbelow1'.",
+    "Morecells alone does not establish directional refinement; linkcomparisons tomeshcontrolchanges.",
+    "Runtime is measuredmedianbetweenphysicalsteps inacceptedfinal0.2s, nottotaljobwalltime. Init/finalexportexcluded; checkpointoverheadandotherCPUactivityaffectmeasurements.",
+    "T03.5ms hasmorestepsperphysicalsecond; comparecostperphysicalsecond aswellasperstep. Smallers/stepdoesnotmeanfasteroverall.",
+    "Pressure/Cp/streamlineplots areinstantaneoussavedfields atnamedtimestamps, not0.2smeans; Delaunayinterpolated2Dstreamlines,notparticlepaths.",
+    "Never comparehistoricalM03latestCDinstant≈.01662withlow-y+M04≈.0073as a matching result.",
+    "Brockett formula is an analytical reference, not experimental validation. Include exactreference/assumptions and hydrostaticcorrection; ifcitationnotverified,keepoutofheadlinevalidationclaims.",
+    "CurrentverticaldomainactualCGNSz−22..8m,waterlinez2m→24mwaterdepthand6mair.16mdeprecated.",
+    "FifthOrderVofWave iswave-theorychoice; SECOND_ORDER isindependenttimeintegrationchoice.",
+    "Configured M09 firstsettled window may occurnear1.6s while M08/M07 new-setting continuation windowsoccuraround2.0s. Label this as a matched-settingsscreen. Before final1%selection, use matchedendpoint continuations if differencesareclose or driftmaterial; preservefirstpasssettlingresultsas distinctattempts."
+  ],
+  "timeline_rules": [
+    "Use physicaltime labels for solver states and wallclocktimes fromprocess.started_at + controllerelapsed for chronologicaltimeline. Never substitute filesystemcopytime.",
+    "Labelsolidarrows checkpointcontinuation anddashedarrows meshdesigninheritance; M08 hasdualM06size/M07prisminputs.",
+    "Keep failedstartup/recovery as collapsed diagnosticbranch withreason/sourcecheckpoint; do notmakefailedattemptslooklikeseparateacceptedmeshes.",
+    "Showfour decisiongates: configurationscreen,meshcomparison,selectedmesh/time+wavepropagation,forcewaves. Plannednodes visuallydistinct.",
+    "Conclusions must cite sourcefile/attempt/window directly; .simlink andCSVdownload provideauditability."
+  ],
+  "recommended_display_precision": {
+    "CD": 6,
+    "CL": 6,
+    "force_N": 3,
+    "percent_main": 3,
+    "cell_count": "integer withthousandsseparators",
+    "time_s": 3,
+    "very_small_delta": "Use<0.001% forT03/T02 headline; retainexactvaluesindownload/tooltip."
+  }
+}

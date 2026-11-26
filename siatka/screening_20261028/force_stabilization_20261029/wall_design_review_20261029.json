@@ -1,0 +1,76 @@
+{
+  "updated_at": "2026-10-29T17:32:00+01:00",
+  "subject": "Fluid Mechanics 101 guidance applied to the low-y+ mesh family",
+  "sources": [
+    {
+      "url": "https://www.fluidmechanics101.com/pdf/calculators.pdf",
+      "local_file": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/reference_sources/FM101_calculators.pdf",
+      "pages": "4–7",
+      "use": "First full cell height = 2 * wall-to-centroid distance; correct first height with measured y+; cover boundary layer and transition smoothly to outer mesh."
+    },
+    {
+      "url": "https://static.skillshare.com/uploads/attachment/342580655/6cdf2f84/lectureNotes.pdf",
+      "page": 45,
+      "use": "Generic wall-function discussion recommends y+<5 or y+>30, avoiding buffer region. This is not a universal SST-specific y+=1 rule."
+    },
+    {
+      "local_file": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-70D648E4-1172-43E5-8F45-C8D92F12D814.html",
+      "use": "STAR All-y+ guidance: below 1 or above 30; low-y+ target below 1."
+    }
+  ],
+  "analytical_estimate": {
+    "rho": 1000,
+    "U": 18,
+    "L": 1.19,
+    "mu": 0.001,
+    "mu_status": "Assumption for analytical estimate, not verified from the saved material definition",
+    "Re": 21420000,
+    "Cf": 0.0023071479425807563,
+    "ut": 0.6113574786473807,
+    "first_um": 3.2714084146397786,
+    "delta_mm": 15.458475596838007,
+    "designs": [
+      {
+        "mesh": "M04",
+        "first_um": 3,
+        "layers": 40,
+        "total_mm": 15.46,
+        "equivalent_growth": 1.1875157536447514,
+        "last_mm": 2.4437516238761225
+      },
+      {
+        "mesh": "M06",
+        "first_um": 2.1428571428571432,
+        "layers": 44,
+        "total_mm": 15.46,
+        "equivalent_growth": 1.176446088900955,
+        "last_mm": 2.3205478069139707
+      },
+      {
+        "mesh": "M07",
+        "first_um": 1.5306122448979593,
+        "layers": 48,
+        "total_mm": 15.46,
+        "equivalent_growth": 1.167518675065768,
+        "last_mm": 2.219552786695863
+      }
+    ],
+    "method": "Re=rho*U*L/mu; Cf=(2log10(Re)-0.65)^-2.3; ut=U sqrt(Cf/2); h1=2 mu/(rho ut); delta99=0.38 L/Re^0.2. Fully turbulent flat-plate estimate, not foil validation."
+  },
+  "interpretation": {
+    "target": "Retain y+ below 1 over the resolved wall for the low-y+ family; do not switch to wall functions merely to make the maximum acceptable.",
+    "first_height": "M04 measured frozen-shear correction suggests about 2.55 um for p95 y+=1; M06 gives 2.53 um. Current M06 2.142857 um has useful margin.",
+    "recommended_starting_parameters": {
+      "first_full_layer_um": 2.142857142857143,
+      "layers": 44,
+      "total_mm": 15.46,
+      "equivalent_geometric_growth": 1.176446088900955
+    },
+    "growth_caveat": "Growth values solve a geometric series from nominal h1, N and T. They are equivalent design ratios, not independently verified local STAR stretching ratios.",
+    "total_caveat": "15.46 mm matches the assumed-viscosity flat-plate delta99 estimate. Check upper/lower foil velocity profiles, pressure gradients and prism-to-core transition before final selection.",
+    "trailing_edge": "M06 has 99.770152% wall area y+<1, but max252.4436 at x/c0.999404 with only one continuous quad layer. Local topology/spacing must be reviewed and repaired without altering foil geometry; global first-height reduction alone does not fix layer collapse.",
+    "causality": "M04 to M06 changes wall-normal, tangential and outer refinement together. CD/CL differences cannot be attributed uniquely to y+.",
+    "source_math_check": "For fixed h1 and N, total T increases with r. Use the explicit coverage condition T>=delta99; do not blindly follow wording that smaller r necessarily improves coverage.",
+    "next": "Let existing M07 finish. Compare final windows within family. No new mesh admitted or simulation altered by this design review; preserve M08–M10 for targeted checks. At least two finer confirmations per current plan."
+  }
+}

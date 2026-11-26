@@ -1,0 +1,202 @@
+{
+  "status": "physical_speed_guard_failure_interpreted_halfdt_short_diagnostic_supported",
+  "scope": "Read-only inspection of saved W01 r2 histories and cell data. No solver launch, API attachment, active controller edit, process-affinity change or guard change.",
+  "case": "W01_W20L4_M10_FS020_cycles_r2",
+  "conclusion": "A rapidly growing low-density air jet in the unforced core crossed the unchanged 50 m/s speed guard. The saved 0.668 s checkpoint precedes that growth and supports a controlled half-timestep short diagnostic. This is not evidence of a cured mass-balance problem or accepted wave forces.",
+  "evidence_files": [
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_foil_r2_guard_review.json",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/completed.json",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/latest_checkpoint.json",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/history.csv",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/native_phase_budget.csv",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/local_balance_t0.668.csv",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/local_balance_t0.938.csv",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/local_balance_t0.972.csv",
+    "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/local_balance_t1.064.csv",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_foil_r2_failure_spatial_evidence.json",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_foil_r2_interface_cfl_spatial_evidence.json",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_halfdt_probe_r8_review.json"
+  ],
+  "observed_failure": {
+    "physical_time_s": 1.064,
+    "maximum_speed_m_s": 51.786575033484375,
+    "maximum_speed_location_m": [
+      -3.8598986491318876,
+      0.02,
+      2.2088456422374816
+    ],
+    "water_fraction_at_speed_max": 0,
+    "density_at_speed_max_kg_m3": 1.2,
+    "velocity_xz_m_s": [
+      27.663173605809423,
+      43.77896960589133
+    ],
+    "reported_pressure_at_speed_max_Pa": -764.8533080809311,
+    "local_CFL_at_speed_max": 3.4480061716118406,
+    "cells_above50": 2,
+    "water_alpha_ge_099_max_speed_m_s": 22.27615040105517,
+    "alpha_bounds": [
+      0,
+      1
+    ],
+    "all_final_export_fields_finite": true,
+    "locality": "The jet is at x\u2248\u22123.86 m in core \u221215..25 m, upstream of the foil and remote from the outlet. This location differs from the old no-foil outlet failures.",
+    "chronology": "Whole-domain maximum remains about 22.6 m/s through 1.03 s, first exceeds 25 at 1.041, 30 at 1.049, 40 at 1.057, reaches 49.9096 at 1.063 and 51.7866 at 1.064.",
+    "history_terminal_semantics": "The guard triggers before the failing step is appended to history.csv/native_phase_budget.csv. Their last row at 1.063 is valid as a pre-guard row, not as the terminal physical time. completed.json and final spatial exports establish 1.064.",
+    "field_use": "final.sim and final fields are preserved diagnostic evidence only; do not continue these guard-failed fields."
+  },
+  "cfl_distinctions": {
+    "checkpoint_interface_max": {
+      "value": 4.579445634408377,
+      "location_m": [
+        -11.898003921438342,
+        0.02,
+        1.8241439591396102
+      ],
+      "water_fraction": 0.8498026535249505,
+      "speed_m_s": 17.66139661541846
+    },
+    "failure_interface_max": {
+      "value": 4.759378565398392,
+      "location_m": [
+        -11.898012807348602,
+        0.02,
+        2.144017019128371
+      ],
+      "water_fraction": 0.9881074761848679,
+      "speed_m_s": 18.26693675150122
+    },
+    "failure_global_max": {
+      "value": 44.34700875408934,
+      "location_m": [
+        0.3527692831828622,
+        0.02,
+        -0.06764516112675724
+      ],
+      "water_fraction": 1,
+      "speed_m_s": 18.904120443836682
+    },
+    "interpretation": "Global maximum CFL, interface maximum CFL, and maximum speed occur in different cells. Interface maxima are near the original mesh/inlet-extension join at x\u2248\u221211.9, while the air jet occurs near \u22123.86. Spatial separation does not prove causation or independence.",
+    "halfdt_limit": "For frozen velocity and geometry, halving dt halves convective CFL: the checkpoint interface maximum would be about 2.29, not below one. Actual evolved maxima must be measured. The chosen halfdt is a bounded sensitivity diagnostic, not a guaranteed stable timestep or a universal CFL acceptance argument."
+  },
+  "mass_evidence": {
+    "checkpoint_native_abs_phase_pct_inlet": 0.0019943913843513943,
+    "checkpoint_BDF2_plus_flux_pct_inlet": 0.001989813840406694,
+    "maximum_native_abs_phase_pct_inlet": 0.01509830308079449,
+    "maximum_at_s": 1.016,
+    "BDF2_plus_flux_at_same_peak_pct_inlet": -0.015062074361288369,
+    "recorded_steps_native_above_0p01": 44,
+    "last_preguard_native_pct_inlet": 0.008403354343074368,
+    "last_preguard_BDF2_pct_inlet": -0.008382305306255666,
+    "unchanged_review_gate_pct_inlet": 0.01,
+    "spatial_calibration": "Four examined cell maps at .668/.938/.972/1.064 sum to their native water and air errors within 1e\u221212 kg/s. Cell values are already kg/s; no volume multiplication was used.",
+    "distribution": "At 1.064 absolute water-cell residual sums are 14.7883 kg/s in the core, 1.4380 in outlet damping and .31254 in inlet forcing. Their signed sums cancel strongly. The future-jet patch x\u22124.5..\u22123,z1.5..2.7 contributes 1.03562 kg/s absolute water residual and +.375259 kg/s signed. These measurements do not establish the momentum instability mechanism.",
+    "interpretation": "A small global signed mass residual can coexist with an air-velocity failure. The new foil map is not the old no-foil result dominated by one or two outlet cells. Retain native phase and BDF2 diagnostics and the separate physical guards; no budget redefinition."
+  },
+  "checkpoint_review": {
+    "path": "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2/checkpoint_t0.668.sim",
+    "completed_save_marker": true,
+    "reported_time_s": 0.668,
+    "global_speed_m_s": 22.146092550660438,
+    "air_alpha_le_001_max_speed_m_s": 21.36547217620182,
+    "future_jet_patch_max_speed_m_s": 18.459614524271693,
+    "patch_cells": 4231,
+    "alpha_bounds": [
+      0,
+      1
+    ],
+    "future_patch_at_0p972_max_speed_m_s": 19.181186215536947,
+    "judgement": "Suitable as a preserved pre-guard source for the short diagnostic, conditional on fresh source/copy hashes, exact loaded clock, mesh and independent field/force/mass fingerprints. Not an accuracy-certified state.",
+    "required_load_checks": [
+      "Hash checkpoint before copy, verify copied hash and preserve both; never overwrite source.",
+      "Confirm loaded physical time .668 and 317277 cells; wave/domain/boundary/AMG/source flags unchanged.",
+      "Use the .668 force/mass fingerprint, not the old macro's hardcoded .168 values.",
+      "Confirm physical alpha, velocity and mass fields finite before first step; no initialization/reset of wave clock.",
+      "Record native and analytic cache-at-load separately. Cached old-step native kg/error values must not be rescaled and treated as a new .5 ms solution.",
+      "Require finite analytic gauge/inventory and native phase reports after the first guarded .5 ms step.",
+      "Confirm actual .5 ms increments, SECOND_ORDER, ten completed inner iterations, unchanged pressure/VOF AMG tolerances and all physical/resource guards."
+    ],
+    "read_only_sha256": "5f74189d12aaa3689c52c64fd387855bf01da83c853b72e8578eb9b80ce18b72",
+    "bytes": 502219377
+  },
+  "timestep_transition": {
+    "caution": "The first .668\u2192.6685 step has a mixed-spacing BDF2 stencil: previous spacing is .001, new spacing is .0005. The constant-step 1.5,\u22122,.5 formula divided by new dt is not valid for that mixed stencil.",
+    "safe_external_diagnostic": "Continue collecting mass/flux and native phase error on every halfstep. If solver-specific variable-step accumulation is not explicitly confirmed, mark only the external first-step BDF2 value unavailable. The constant-step external stencil is valid from the second new increment t=.669 using masses at .668,.6685,.669. This is an explicit stencil-availability distinction, not removal of a failing sample or relaxation of the gate.",
+    "mathematical_variable_BDF2": "For h=current dt, r=h/previous_dt: D[M]=(((1+2r)/(1+r))*M_n\u2212(1+r)*M_(n\u22121)+(r*r/(1+r))*M_(n\u22122))/h. For r=.5 coefficients are 4/3,\u22123/2,1/6. Do not assume STAR's transition policy from this algebra alone; confirm before comparing native residual at the first transition.",
+    "actual_dt_units": "Post-step native MassConservationError remains kg per completed physical step; divide by actual .0005 s only after that step has been performed."
+  },
+  "hypothesis_assessment": [
+    {
+      "hypothesis": "Temporal/pressure\u2013VOF coupling sensitivity on the refined free-surface mesh",
+      "support": "Local air acceleration grows quickly while phase remains bounded; significant interface CFL and high density contrast are present.",
+      "limit": "No inner momentum/pressure convergence or local face-flux sequence establishes this mechanism. Halfdt tests sensitivity, not a unique cause."
+    },
+    {
+      "hypothesis": "Local mesh-transition/interface advection contribution",
+      "support": "Largest interface CFL occurs near x\u221211.9 mesh join; this is a concrete location for a future cell/face audit.",
+      "limit": "The jet is elsewhere. No spatiotemporal perturbation tracking proves the join caused it. Do not infer CFL cell dimensions from polygon bounding boxes or grazing chords."
+    },
+    {
+      "hypothesis": "Old outlet instability mechanism",
+      "support": "Old no-foil runs failed near outlet, but that is historical evidence for different geometry/settings.",
+      "limit": "Current maximum-speed failure is upstream in core. The previous causal interpretation cannot simply be transferred."
+    },
+    {
+      "hypothesis": "CPU affinity or utilization caused physical instability",
+      "support": "None established.",
+      "limit": "CPU/GPU activity measurements and process affinity are performance observations. They do not establish a physical/numerical cause."
+    },
+    {
+      "hypothesis": "VOF clipping or capillary spurious currents",
+      "support": "Not demonstrated by available output.",
+      "limit": "Bounds [0,1] and low alpha in fast cells do not prove clipping; surface-tension settings and momentum/source balances were not established by this review."
+    }
+  ],
+  "next_test": {
+    "recommended": "From the verified .668 checkpoint, a new short attempt to 1.2 s changing only global dt .001\u2192.0005, with 10 inner iterations and all other numerics/physics/guards unchanged.",
+    "steps": 1064,
+    "reason": "It crosses the original 1.036\u20131.064 growth interval at the same absolute wave phase and modestly beyond it. Existing r2 provides the matched 1 ms reference; no duplicate baseline is needed.",
+    "keep": [
+      "50 m/s and phase/finite/time/resource guards",
+      "Native water/air diagnostics on every new halfstep and correctly qualified BDF2 accumulation+flux",
+      "Independent force/component and actual/reference gauge reports",
+      "Absolute wave clock, checkpoints and original attempt preservation",
+      "Explicit separation of exploratory mass exception from physical stability and force accuracy"
+    ],
+    "compare": "Compare all halfsteps for physical/mass maxima, and matched common times for force/gauge differences. Track water/air/interface speed separately and export the jet patch and mesh-join fields around onset. A small change in CD/CL alone cannot clear a speed failure.",
+    "success_meaning": "Reaching 1.2 with bounded fields supports only short temporal-stability sensitivity. It does not validate 10\u201320 wave cycles, free-surface resolution, reflections, timestep accuracy or forces.",
+    "if_failed": "Preserve the new failure and return to the same clean checkpoint for a separately justified control. Inspect actual pressure/VOF convergence, local cell/face geometry and momentum flux around the join and jet region before changing another setting. A further dt reduction may be safer than adding uncontrolled parameter changes, but needs a new attempt and remains a diagnostic.",
+    "alternative": "No critical evidence currently requires rejecting the bounded halfdt test. A fresh zero-time rebuild would alter more history and is not the clean first comparison. Do not continue the 1.064 failed state, loosen 50 m/s or remove air cells from the speed guard."
+  },
+  "old_nofoil_halfdt_distinction": {
+    "case": "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8",
+    "old_window_s": [
+      0.502,
+      0.75
+    ],
+    "old_halfdt_budget_peak_pct_inlet": 0.016637157241220096,
+    "old_max_speed_m_s": 21.569160837168827,
+    "conclusion": "R8 disproved that halving dt automatically cures the old no-foil mass-residual spikes in that short window. It did not test the new 317277-cell foil mesh, the core air jet, or times beyond1 s. It neither guarantees nor rules out the present physical-stability benefit. The unchanged .01% review gate still applies."
+  },
+  "primary_documentation": [
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-A5EBD0EF-AF66-40B7-8BC7-B63F953A32F1.html",
+      "title": "Choosing a Time-Step",
+      "finding": "Time-step choice requires physical time-scale judgment; the guide identifies convective CFL as relevant for advected quantities."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-5393A28D-6965-4993-94B6-C3BD5EFE3DC2.html",
+      "title": "Adaptive Time-Stepping",
+      "finding": "The free-surface timestep discussion explicitly identifies interfaces crossing meshes with different CFL and changing velocity fields as relevant situations. This is support for examining timestep sensitivity, not a recommendation here to add adaptive stepping as a simultaneous change."
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-CD31C597-AB0E-4C11-9441-DA7021F16CB5.html",
+      "title": "Interface Sharpening Using Temporal Subcycling",
+      "finding": "Installed VOF theory distinguishes second-order BDF2 global accumulation from convection subcycling; substeps=1 does not prove first-order time integration."
+    }
+  ],
+  "numerical_accuracy_validated": false,
+  "physical_guard_retained": true,
+  "active_changes": false,
+  "updated_at": "2026-10-30T11:42:01.325986+01:00"
+}

@@ -1,0 +1,425 @@
+{
+  "updated_at": "2026-10-29T22:59:41.834387+01:00",
+  "cases": [
+    {
+      "id": "M07_SO1ms_inner10_r1",
+      "window": [
+        1.8399999999998864,
+        2.0399999999998863
+      ],
+      "steps": 200,
+      "all_history_finite": true,
+      "monitors": {
+        "Fx_half_Monitor": {
+          "end": {
+            "median": 28.650889890039572,
+            "p95": 28.678898098324055,
+            "max": 28.682134065796852,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.0005855141648739186,
+            "p95": 0.0007229689517481159,
+            "max": 0.001266705658418665,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Fz_half_Monitor": {
+          "end": {
+            "median": 1212.4610500661704,
+            "p95": 1213.1282156673324,
+            "max": 1213.2176427548347,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.00025306006475461085,
+            "p95": 0.00030541491448593896,
+            "max": 0.000597900296017029,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Continuity": {
+          "end": {
+            "median": 0.0038020501062514863,
+            "p95": 0.007354258748930497,
+            "max": 0.11814561083955849,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "X-momentum": {
+          "end": {
+            "median": 5.197079204106883e-05,
+            "p95": 6.950568048210143e-05,
+            "max": 0.0008828319388152434,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Y-momentum": {
+          "end": {
+            "median": 0.032100738454158756,
+            "p95": 0.037498509420352204,
+            "max": 0.04165576330536591,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Z-momentum": {
+          "end": {
+            "median": 3.133083155924647e-05,
+            "p95": 4.4603037972934685e-05,
+            "max": 0.001424636848519515,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Tke": {
+          "end": {
+            "median": 4.5054542940616966e-09,
+            "p95": 5.91320599633245e-09,
+            "max": 8.282368134317807e-08,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Sdr": {
+          "end": {
+            "median": 9.300629951256653e-09,
+            "p95": 1.0786225919140053e-08,
+            "max": 3.0126804559422617e-07,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "water": {
+          "end": {
+            "median": 0.002540727221067258,
+            "p95": 0.011872704126473267,
+            "max": 0.018101954798097595,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "fields_all_finite": true,
+      "cells": 481635,
+      "vof_substeps": [
+        1
+      ],
+      "BDF2_mass_budget_abs_pct_of_inlet": {
+        "median": 4.7089564894577854e-05,
+        "p95": 9.825920991460535e-05,
+        "max": 0.005781885209276733,
+        "n": 200
+      },
+      "pressure_viscous_sum_max_error_N": 3.552713678800501e-15,
+      "max_speed_all_history_m_s": 23.880689537963107,
+      "wall_yplus_max": 220.08546179775556
+    },
+    {
+      "id": "M08_SO1ms_inner10_r1",
+      "window": [
+        1.7999999999998906,
+        1.9999999999998905
+      ],
+      "steps": 200,
+      "all_history_finite": true,
+      "monitors": {
+        "Fx_half_Monitor": {
+          "end": {
+            "median": 28.802060407747437,
+            "p95": 28.824550659513292,
+            "max": 28.82706195844809,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.0004486873411613474,
+            "p95": 0.0005267531158266286,
+            "max": 0.0006562590905230722,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Fz_half_Monitor": {
+          "end": {
+            "median": 1210.0901385333673,
+            "p95": 1210.5419782097424,
+            "max": 1210.5986227942146,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.00019282847551840208,
+            "p95": 0.00022665091686703532,
+            "max": 0.00028789072562355333,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Continuity": {
+          "end": {
+            "median": 0.0027305960045346314,
+            "p95": 0.003195160511002773,
+            "max": 0.004480586384035919,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "X-momentum": {
+          "end": {
+            "median": 2.758886572104302e-05,
+            "p95": 3.515917342876699e-05,
+            "max": 3.6803467454999927e-05,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Y-momentum": {
+          "end": {
+            "median": 0.09689611246763442,
+            "p95": 0.11667720134964622,
+            "max": 0.1324579738222435,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Z-momentum": {
+          "end": {
+            "median": 1.5053816058887203e-05,
+            "p95": 2.09233672582136e-05,
+            "max": 2.1673412220844516e-05,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Tke": {
+          "end": {
+            "median": 3.1024895817272936e-09,
+            "p95": 3.620626084950689e-09,
+            "max": 3.89970403625493e-09,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Sdr": {
+          "end": {
+            "median": 5.5233322285840765e-09,
+            "p95": 6.6935873088455405e-09,
+            "max": 7.133818454844266e-09,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "water": {
+          "end": {
+            "median": 8.253899554514887e-05,
+            "p95": 0.0020044418007167876,
+            "max": 0.0032020433350341895,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "fields_all_finite": true,
+      "cells": 254989,
+      "vof_substeps": [
+        1
+      ],
+      "BDF2_mass_budget_abs_pct_of_inlet": {
+        "median": 4.378749681238022e-05,
+        "p95": 7.158041363300461e-05,
+        "max": 7.632720904613395e-05,
+        "n": 200
+      },
+      "pressure_viscous_sum_max_error_N": 3.552713678800501e-15,
+      "max_speed_all_history_m_s": 22.190998232995955,
+      "wall_yplus_max": 253.58610292228627
+    },
+    {
+      "id": "M09_SO1ms_inner10_r1",
+      "window": [
+        1.4399999999999302,
+        1.6399999999999302
+      ],
+      "steps": 200,
+      "all_history_finite": true,
+      "monitors": {
+        "Fx_half_Monitor": {
+          "end": {
+            "median": 28.93782805628596,
+            "p95": 28.99274810961264,
+            "max": 28.999626085725684,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.0010116692470466555,
+            "p95": 0.0013180911394130024,
+            "max": 0.0013735715336150086,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Fz_half_Monitor": {
+          "end": {
+            "median": 1207.3383972385473,
+            "p95": 1208.252604058494,
+            "max": 1208.3443481568202,
+            "n": 200
+          },
+          "half_iterations_change_pct": {
+            "median": 0.00046558171701915484,
+            "p95": 0.0006134841946667601,
+            "max": 0.0006443443302759264,
+            "n": 200
+          },
+          "missing": 0,
+          "nonfinite": 0,
+          "independent_crosscheck_max_N": 0.0
+        },
+        "Continuity": {
+          "end": {
+            "median": 0.00467469369408058,
+            "p95": 0.005577909520016394,
+            "max": 0.005753705755319337,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "X-momentum": {
+          "end": {
+            "median": 8.863723308326962e-05,
+            "p95": 9.310771523443133e-05,
+            "max": 9.521725595521052e-05,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Y-momentum": {
+          "end": {
+            "median": 0.21391373933507946,
+            "p95": 0.27100330637587083,
+            "max": 0.32830393037414396,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Z-momentum": {
+          "end": {
+            "median": 9.146790127747332e-05,
+            "p95": 9.572988137473436e-05,
+            "max": 9.771884179762586e-05,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Tke": {
+          "end": {
+            "median": 6.6562899450697066e-09,
+            "p95": 8.215853208325366e-09,
+            "max": 8.717874286530322e-09,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "Sdr": {
+          "end": {
+            "median": 1.2417235735670948e-08,
+            "p95": 1.443561167229015e-08,
+            "max": 1.492959281257231e-08,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        },
+        "water": {
+          "end": {
+            "median": 0.00018994593651090128,
+            "p95": 0.0018349737618417045,
+            "max": 0.0054444056768325165,
+            "n": 200
+          },
+          "half_iterations_change_pct": null,
+          "missing": 0,
+          "nonfinite": 0
+        }
+      },
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "fields_all_finite": true,
+      "cells": 214908,
+      "vof_substeps": [
+        1
+      ],
+      "BDF2_mass_budget_abs_pct_of_inlet": {
+        "median": 3.666249357286996e-05,
+        "p95": 7.157740462675424e-05,
+        "max": 9.89927262242386e-05,
+        "n": 200
+      },
+      "pressure_viscous_sum_max_error_N": 3.552713678800501e-15,
+      "max_speed_all_history_m_s": 22.920340759279902,
+      "wall_yplus_max": 253.60416899924863
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "campaign_id": "NTNU_W01_W08_exploratory_20261030",
+  "updated_at": "2026-10-30T11:30:34.317591+01:00",
+  "settings": {
+    "dt_s": 0.001,
+    "inner": 10,
+    "order": "SECOND_ORDER",
+    "wave_min_complete_cycles": 4,
+    "typical_cycles": 10,
+    "max_cycles": 20,
+    "calm_max_time_s": 6,
+    "wall_limit_s": 129600,
+    "mass_exception_exploratory": true
+  },
+  "cases": [
+    {
+      "id": "C01_L20_M10",
+      "domain_id": "L20_X4_M10",
+      "height_m": 0,
+      "source_label": "CALM",
+      "prerequisites": [],
+      "stage": "original"
+    },
+    {
+      "id": "W01",
+      "domain_id": "L20_X4_M10",
+      "height_m": 0.5,
+      "source_label": "H050",
+      "prerequisites": [
+        "C01_L20_M10"
+      ],
+      "stage": "original",
+      "adopt_existing": {
+        "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2",
+        "parent_history": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\history.csv",
+        "initial_time_s": 0.168,
+        "expected_cells": 317277
+      }
+    },
+    {
+      "id": "C01_L30_M10",
+      "domain_id": "L30_X4_M10",
+      "height_m": 0,
+      "source_label": "CALM",
+      "prerequisites": [
+        "W01"
+      ],
+      "stage": "original"
+    },
+    {
+      "id": "W02",
+      "domain_id": "L30_X4_M10",
+      "height_m": 0.5,
+      "source_label": "H050",
+      "prerequisites": [
+        "C01_L30_M10"
+      ],
+      "stage": "original"
+    },
+    {
+      "id": "C01_L20_X3_M10",
+      "domain_id": "L20_X3_M10",
+      "height_m": 0,
+      "source_label": "CALM",
+      "prerequisites": [
+        "W02"
+      ],
+      "stage": "original_check"
+    },
+    {
+      "id": "W01_X3",
+      "domain_id": "L20_X3_M10",
+      "height_m": 0.5,
+      "source_label": "H050",
+      "prerequisites": [
+        "C01_L20_X3_M10"
+      ],
+      "stage": "original_check"
+    },
+    {
+      "id": "C01_L20_M09",
+      "domain_id": "L20_X4_M09",
+      "height_m": 0,
+      "source_label": "CALM",
+      "prerequisites": [
+        "W01_X3"
+      ],
+      "stage": "original_check"
+    },
+    {
+      "id": "W01_M09_FS_CHECK",
+      "domain_id": "L20_X4_M09",
+      "height_m": 0.5,
+      "source_label": "H050",
+      "prerequisites": [
+        "C01_L20_M09"
+      ],
+      "stage": "original_check",
+      "notes": "Matched-domain free-surface grid comparison against M10; not uniform GCI."
+    },
+    {
+      "id": "W03",
+      "domain_id": "L20_X4_M10",
+      "height_m": 0.25,
+      "source_label": "H025",
+      "prerequisites": [
+        "W01_M09_FS_CHECK",
+        "W01"
+      ],
+      "stage": "extension",
+      "notes": "Exploratory lower-height run; final force comparisons need free-surface refinement with matched H0.5/calm if grid changes."
+    },
+    {
+      "id": "W04",
+      "domain_id": "L20_X4_M10",
+      "height_m": 0.75,
+      "source_label": "H075",
+      "prerequisites": [
+        "W03"
+      ],
+      "stage": "extension",
+      "notes": "Check crest coverage of refined free-surface band and spatial fields; accuracy remains pending."
+    },
+    {
+      "id": "W05",
+      "domain_id": "L30_X4_M10",
+      "height_m": 0.25,
+      "source_label": "H025",
+      "prerequisites": [
+        "W04",
+        "W02"
+      ],
+      "stage": "extension",
+      "notes": "Exploratory lower-height run; final grid sensitivity pending."
+    },
+    {
+      "id": "W06",
+      "domain_id": "L30_X4_M10",
+      "height_m": 0.75,
+      "source_label": "H075",
+      "prerequisites": [
+        "W05"
+      ],
+      "stage": "extension"
+    },
+    {
+      "id": "C01_L10_M10",
+      "domain_id": "L10_X4_M10",
+      "height_m": 0,
+      "source_label": "CALM",
+      "prerequisites": [
+        "W06"
+      ],
+      "stage": "extension"
+    },
+    {
+      "id": "W07",
+      "domain_id": "L10_X4_M10",
+      "height_m": 0.5,
+      "source_label": "H050",
+      "prerequisites": [
+        "C01_L10_M10"
+      ],
+      "stage": "extension",
+      "notes": "40m domain requires audited remote clipping; never reuse80m as4lambda."
+    },
+    {
+      "id": "C01_L40_M10",
+      "domain_id": "L40_X4_M10",
+      "height_m": 0,
+      "source_label": "CALM",
+      "prerequisites": [
+        "W07"
+      ],
+      "stage": "extension"
+    },
+    {
+      "id": "W08",
+      "domain_id": "L40_X4_M10",
+      "height_m": 0.5,
+      "source_label": "H050",
+      "prerequisites": [
+        "C01_L40_M10"
+      ],
+      "stage": "extension"
+    }
+  ],
+  "final_accuracy_admitted": false,
+  "accuracy_pending": [
+    "Wave-specific matched timestep sensitivity",
+    "Free-surface refinement incl lower heights",
+    "Propagation/reflection review",
+    "Equal-phase matched calm/wave load comparisons"
+  ],
+  "scope": "All original and bounded requested wave combinations. Sequential exploratory data collection; repeated cycles are not proof of final numerical accuracy. Stop before unresolved/unprepared inputs; never silently skip to extras."
+}

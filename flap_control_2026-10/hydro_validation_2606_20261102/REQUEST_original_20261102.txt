@@ -1,0 +1,159 @@
+# NEXT STAGE: Moving-Flap Hydrodynamic Model and Validation
+
+Continue the existing NTNU Active Flap CFD project in STAR-CCM+ 2606.
+
+The previous proof of concept was successful:
+- 44,763 cells, Overset Mesh
+- Moving flap at x/c = 0.80
+- ±5° motion verified
+- Initial transient completed
+- Working reference: `flap_poc_2606_20261102/FlapPOC_2606_working.sim`
+
+**Objective:** Upgrade this working mechanical demonstrator into a numerically credible hydrodynamic model suitable for generating CFD training data.
+
+Do not build a new motion architecture. Reuse the proven Overset implementation.
+
+## 1. Improve flap geometry
+
+- Preserve the native NACA 66-012 modified contour.
+- Keep the hinge at x/c = 0.80.
+- Reduce the present 17.85 mm gap.
+- Investigate an initial clearance of approximately 2–3 mm, but adjust it if required for mesh reliability.
+- Verify that the moving flap never intersects the fixed foil throughout ±5°.
+- Make gap width and hinge geometry parametrically adjustable.
+- Ensure that sufficient cells resolve the gap and that Overset donor/acceptor connectivity remains valid.
+
+Preserve the successful POC and create a separate working copy.
+
+## 2. Build a credible calm-water CFD model
+
+Use:
+- U = 18 m/s
+- Water density = 1000 kg/m³
+- Dynamic viscosity = 0.001 Pa·s
+- URANS SST k-ω
+- Quasi-2D configuration
+- Initially single-phase flow, without waves
+
+Reuse the lessons from our previous M10–M13 mesh campaign. Start with a moderately refined mesh, not an unnecessarily expensive one.
+
+Check mesh quality, wall treatment, prism layers, Overset connectivity and timestep sensitivity.
+
+Do not assume that the previous coarse-mesh force results are physically valid.
+
+## 3. Validation stage V1: Fixed flap
+
+Start with δ = 0°.
+
+Compare:
+1. Original unmodified NACA 66-012 geometry, C01.
+2. New split geometry with the flap fixed at 0°.
+
+Our previous accepted reference CL was approximately 0.31566, but use the actual C01 data and consistent normalization.
+
+Determine how much of any CL/CD difference originates from the flap gap, modified geometry and Overset interpolation.
+
+Next, run static deflections of −2°, +2°, −5° and +5°.
+
+Export CL, CD, Fx, Fz, hinge moment and pressure distribution.
+
+Check whether trends agree with established flapped-airfoil theory and relevant experimental studies.
+
+## 4. Validation stage V2: Dynamic flap
+
+After the stationary cases pass:
+
+- Test harmonic flap motion at ±2°.
+- Test at least two excitation frequencies.
+- Extend to ±5° if stable.
+- Record the complete time histories.
+- Check amplitude and phase lag of CL, CD and hinge moment.
+- Compare the response against appropriate unsteady airfoil theory within its assumptions.
+
+Perform a limited mesh and timestep sensitivity study before approving the results for surrogate-model training.
+
+## 5. Mandatory constraint: Cavitation avoidance
+
+Implement pressure-based cavitation monitoring.
+
+For every physical timestep, evaluate:
+
+`p_absolute_min > p_vapor(T) + safety_margin`
+
+Requirements:
+- Check fixed foil, flap, gap and nearby liquid region.
+- Use correct absolute pressure and hydrostatic reference.
+- Export minimum pressure and its spatial location.
+- Record the safety margin and when a violation occurs.
+- Distinguish preliminary pressure-based screening from actual cavitation-model validation.
+
+Do not accept an apparent drag reduction achieved at the expense of cavitation risk.
+
+## 6. Mandatory constraint: Free-surface clearance
+
+Our hydrofoil must not approach the free surface so closely that ventilation, loss of lift or strong unintended free-surface effects invalidate the operating condition.
+
+Define a minimum instantaneous vertical clearance:
+
+`h_clear(t) = z_free_surface(t) - z_highest_foil_point(t)`
+
+using an upward-positive vertical coordinate.
+
+For the later VOF cases:
+
+- Monitor undisturbed wave elevation and local free-surface deformation.
+- Track the moving foil's highest point.
+- Calculate h_clear/c throughout the simulation.
+- Detect any potential air connection or ventilation.
+- Introduce a configurable minimum-clearance requirement.
+- Perform a sensitivity study with immersion depth instead of assuming one universal safe h/c value.
+
+Do not use a fixed depth of two chords as an automatic acceptance criterion. Establish the appropriate operating envelope numerically.
+
+Cavitation avoidance and sufficient free-surface clearance are independent constraints. Both must be satisfied.
+
+## 7. Experimental validation references
+
+Use the following as methodological benchmarks. Where the experimental geometry differs, create a separate validation case rather than directly comparing absolute values with our NACA 66-012.
+
+- Wilson (1982): Experimental Performance of a Flapped Hydrofoil in Calm Water at Low Froude Numbers.
+- Pernod et al. (2023): Free-Surface Effects on Two-Dimensional Hydrofoils by RANS-VOF Simulations.
+- Conolly (1963): Flapped Hydrofoils in Waves, Subcavitating Flow.
+- Portal-Porras et al. (2023): Active Flow Control on Airfoils by Reinforcement Learning.
+- Mohammed Arab et al. (2022): Effects on Cavitation Inception of Leading and Trailing Edge Flaps.
+
+Separate numerical verification (mesh/timestep) from experimental validation.
+
+## 8. Dataset preparation
+
+Prepare synchronized exports containing:
+
+`time, flap_angle, flap_angular_velocity, Fx, Fz, CL, CD, hinge_moment, p_absolute_min, cavitation_margin, mesh_id, dt`
+
+For future wave cases, additionally include:
+
+`wave_elevation_upstream, wave_elevation_local, h_clear, h_clear/c, wave_frequency, wave_phase`
+
+Store complete transient histories, not only averaged coefficients.
+
+## 9. Deliverables and stopping point
+
+Deliver:
+1. Updated working STAR-CCM+ 2606 simulation.
+2. Geometry and mesh visualizations.
+3. Fixed-flap comparison against C01.
+4. First static-flap results.
+5. Initial dynamic response if the stationary model passes.
+6. Validation and mesh-quality report.
+7. CSV data with full metadata.
+8. Explicit list of unresolved issues.
+
+**Stop before starting the wave campaign or DRL training.**
+
+If the stationary or moving model fails a numerical quality check, investigate and correct it rather than generating additional unreliable data.
+
+Do not modify C01, W01, W03, existing queues or files belonging to other agents. Avoid resource conflicts.
+
+Work only in the existing project and preserve completed checkpoints.
+
+Our priority is a physically credible and repeatable CFD model, not producing large amounts of data as quickly as possible.

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\local_recipe_validation.py", line 56, in <module>
+    try:main(sys.argv[2])
+        ~~~~^^^^^^^^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\local_recipe_validation.py", line 42, in main
+    cpu([str(e.STAR),*e.saved_options(1),'-batch',str(B/'LocalCalmWave.java'),str(B/'input.sim')],B,'star',env,900)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\prepare_campaign_domain.py", line 26, in cpu
+    if p.returncode:raise RuntimeError(name+' failed; inspect preserved redacted log')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: star failed; inspect preserved redacted log

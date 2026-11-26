@@ -1,0 +1,13 @@
+Compiled from "MeshPartFactory.java"
+public class star.meshing.MeshPartFactory extends star.common.SimulationObject {
+  public star.meshing.MeshPartFactory(star.base.neo.ClientServerObjectKey);
+  public star.meshing.SimpleSpherePart createNewSpherePart(star.common.GeometryPartManager);
+  public star.meshing.SimpleBlockPart createNewBlockPart(star.common.GeometryPartManager);
+  public star.meshing.SimpleConePart createNewConePart(star.common.GeometryPartManager);
+  public star.meshing.SimpleCylinderPart createNewCylinderPart(star.common.GeometryPartManager);
+  public star.meshing.MeshPart newPartFromPartSurfaces(java.util.Collection<star.common.PartSurface>);
+  public star.meshing.MeshPart newShellFromPartSurfaces(java.util.Collection<star.common.PartSurface>);
+  public void newShellsFromPartSurfaces(java.util.Collection<star.common.PartSurface>);
+  public void combineMeshParts(star.common.GeometryPart, java.util.Collection<? extends star.common.GeometryPart>);
+  public void combineParts(star.meshing.MeshPart, java.util.Collection<star.meshing.MeshPart>);
+}

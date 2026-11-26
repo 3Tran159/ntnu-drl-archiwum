@@ -1,0 +1,38 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent
+text=(R/'WavePressureToleranceR14.java').read_text(encoding='utf8')
+def sub(a,b):
+ global text
+ if a not in text:raise RuntimeError('Missing macro anchor: '+a[:90])
+ text=text.replace(a,b)
+sub('WavePressureToleranceR14','FoilWaveDiagnosticR1')
+sub('R14','W01')
+sub('steps!=250','steps!=1180')
+sub('1 ms and250steps','1 ms and1180 main steps')
+sub('s.getSolution().getPhysicalTime()-.5','s.getSolution().getPhysicalTime()')
+sub('"PropagationUnit"','"FoilPrepUnit"')
+sub('double[] xs={-10,-5,0,2.5,5,10,15,20};','double[] xs={-10,-5,2.5,5,10,15,20};')
+sub('new double[]{x,20.01,2}','new double[]{x,.02,2}')
+sub('"target_time_s",.75','"target_time_s",1.2')
+sub('"reinitialized",false','"reinitialized",false')
+sub('Single-control pressure AMG tolerance0.1to0.01 sensitivity0.500to0.750s; SO1ms10inner and baselineVOFtol0.1 unchanged; no reinitialization; notpropagationacceptance','First foil-wave exploratory W01: H0.5m L20m H24m M10 FS020; guarded startup0.5ms50inner40steps then SO1ms10inner to1.2s; pressuretol0.01. User accepts prior observed mass deviation for exploration; original0.01percent remains a diagnostic flag.')
+sub('Single-control pressure AMG tolerance sensitivity; original 0.01% inventory budget gate retained; no force or final propagation acceptance','First exploratory foil-wave trial with user-authorized mass-review exception; 0.01% remains reported, not a claim of verified force accuracy')
+sub('ReportMonitor waterInner=everyInner(nativeWater),airInner=everyInner(nativeAir);','setupForces();setupViews();s.saveState(out.resolve("inspection_setup.sim").toString());\n   ReportMonitor waterInner,airInner;')
+anchor='long previousVofCycles=vofAmg.getTotalNumberCycles()'
+sub(anchor,'guardedStartup(us,vmax,cfl,amin,amax,nativeWater,nativeAir);initialTime=s.getSolution().getPhysicalTime();\n   waterInner=everyInner(nativeWater);airInner=everyInner(nativeAir);\n   SumReport zw=cellSum("MassImbalancewater"),za=cellSum("MassImbalanceair");zw.getParts().setObjects(outletCells);za.getParts().setObjects(outletCells);zw.setPresentationName("W01 last outlet columns water imbalance kg/s");za.setPresentationName("W01 last outlet columns air imbalance kg/s");zoneWaterMonitor=innerMonitor(zw);zoneAirMonitor=innerMonitor(za);\n   s.getPlotManager().createMonitorPlot(List.of(waterInner,airInner),"W01 - Native phase error kg per step");s.getPlotManager().createMonitorPlot(List.of(zoneWaterMonitor,zoneAirMonitor),"W01 - Outlet column imbalance kg per second");\n   '+anchor)
+sub('double previousMass=Double.NaN,secondPreviousMass=Double.NaN;','double previousMass=Double.NaN,secondPreviousMass=Double.NaN;int eventExports=0;')
+sub('vof_substeps\\n','vof_substeps,CD,CL_total,Fx_slice_N,Fz_slice_N,pressure_drag_N,viscous_drag_N\\n')
+sub('if(step==112||step==117||step==118||step==125)localSnapshot(t,nw/dt,na/dt,localWater,localAir,localMixture);','if(step>0 && (step%250==0 || ((100*(Math.abs(nw)+Math.abs(na))/dt/in)>.01 && eventExports<12))){localSnapshot(t,nw/dt,na/dt,localWater,localAir,localMixture);eventExports++;}\n     if(step>0 && (step%25==0 || step<=3))exportOutlet(t);')
+sub('h.write(t+","+step+","+wall+', 'double[] load=forces();h.write(t+","+step+","+wall+')
+sub('getSubStepCount()+"\\n");h.flush();','getSubStepCount()+","+load[0]/3855.6+","+load[1]/3855.6+","+load[0]+","+load[1]+","+load[2]+","+load[3]+"\\n");h.flush();')
+sub('json(Map.of("time_s",t,"steps",step,"wall_s",wall,"max_speed_m_s",v,"interface_CFL",ci))','json(Map.of("time_s",t,"steps",step,"wall_s",wall,"max_speed_m_s",v,"interface_CFL",ci,"CD",load[0]/3855.6,"CL_total",load[1]/3855.6))')
+sub('if(step>0&&step%150==0)s.saveState(out.resolve(String.format(Locale.ROOT,"checkpoint_t%.3f.sim",t)).toString());','if(step>0&&step%250==0){String cp=String.format(Locale.ROOT,"checkpoint_t%.3f.sim",t);s.saveState(out.resolve(cp).toString());Files.writeString(out.resolve("latest_checkpoint.json"),json(Map.of("file",out.resolve(cp).toString(),"time_s",t,"completed_save",true)));zoneWaterMonitor.export(out.resolve("outlet_water_per_inner.csv").toString());zoneAirMonitor.export(out.resolve("outlet_air_per_inner.csv").toString());}')
+sub('if(wall>2400)','if(wall>7200)')
+sub('waterInner.export(out.resolve("native_water_per_inner.csv").toString());','zoneWaterMonitor.export(out.resolve("outlet_water_per_inner.csv").toString());zoneAirMonitor.export(out.resolve("outlet_air_per_inner.csv").toString());\n   waterInner.export(out.resolve("native_water_per_inner.csv").toString());')
+sub('s.saveState(out.resolve("final.sim").toString());Files.writeString','localSnapshot(s.getSolution().getPhysicalTime(),nativeWater.getReportMonitorValue()/dt,nativeAir.getReportMonitorValue()/dt,localWater,localAir,localMixture);exportOutlet(s.getSolution().getPhysicalTime());\n   s.saveState(out.resolve("final.sim").toString());Files.writeString')
+sub('Files.writeString(out.resolve("macro_error.txt"),e.toString());','Files.writeString(out.resolve("macro_error.txt"),e.toString());s.saveState(out.resolve("guard_or_error_preserved.sim").toString());')
+# Retain full calibrated snapshots at selected events; smaller outlet tables sample more often.
+helper=(R/'w01_diagnostic_helpers.java.txt').read_text(encoding='utf8')
+text=text.replace(' public void execute(){',helper+'\n public void execute(){',1)
+(R/'FoilWaveDiagnosticR1.java').write_text(text,encoding='utf8')
+print('Wrote new W01 macro; old macro unchanged; bytes',len(text.encode()))

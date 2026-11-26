@@ -1,0 +1,107 @@
+{
+  "verified_at": "2026-10-30T12:32:44.433084+01:00",
+  "case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "status": "fresh_t0_full_height_GPU_progress_confirmed",
+  "controller_pid": 2896,
+  "launcher_pid": 228,
+  "latest_startup_sample": {
+    "time_s": 0.010000000000000005,
+    "step": 20.0,
+    "wall_s": 90.3232244,
+    "max_speed_m_s": 23.177913455989522,
+    "max_CFL": 31.95987011690008,
+    "interface_CFL": 1.1168164571070613,
+    "alpha_min": 0.0,
+    "alpha_max": 1.0,
+    "Fx_slice_N": 44.49214110532474,
+    "Fz_slice_N": 634.8756147673646,
+    "CD": 0.011539615391981726,
+    "CL_total": 0.16466324690511583,
+    "native_water_kg_s": 0.002137042580735894,
+    "native_air_kg_s": -2.5530150219820124e-06,
+    "native_abs_pct_inward_mass": 2.4741613817221673e-05,
+    "bdf2_plus_flux_pct_inward_mass": 2.4695075458945458e-05,
+    "full_inlet_height_m": 0.5,
+    "analytic_period_s": 0.8472673206891129
+  },
+  "activation": {
+    "case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+    "activation_time_s": 0.0,
+    "ramp_duration_s": 0.0,
+    "ramp_end_time_s": 0.0,
+    "time_s": 0.010000000000000005,
+    "height_m": 0.5,
+    "target_height_m": 0.5,
+    "height_mode": "constant_full_height_from_activation",
+    "wave_period_s": 0.8472673206891129,
+    "planning_full_height_period_s": 0.8472673206891129,
+    "stage": "inlet_wave_full_amplitude",
+    "first_front": false,
+    "global_wave_initialization": false,
+    "force_settling_required": false,
+    "analysis_origin_s": null,
+    "cycle_screen": "Pending measured wave arrival and full-amplitude cycles; no calm/ramp samples admitted"
+  },
+  "binding": {
+    "forcing_zone_x_m": [
+      -35,
+      -15
+    ],
+    "global_initialization": false,
+    "source_calm_time_s": 0.0,
+    "initial_conditions_unchanged": true,
+    "damping_zone_x_m": [
+      25,
+      45
+    ],
+    "require_calm_force_settling": false,
+    "forcing_wave": "W01a inlet generated FifthOrder H050 L20 1",
+    "wave_height_definition": "0.5",
+    "boundary_bindings": [
+      {
+        "forcing": "NO",
+        "boundary": "DOMAIN.bottom",
+        "damping": "NO"
+      },
+      {
+        "forcing": "YES",
+        "boundary": "DOMAIN.inlet",
+        "damping": "NO"
+      },
+      {
+        "forcing": "NO",
+        "boundary": "DOMAIN.outlet",
+        "damping": "YES"
+      },
+      {
+        "forcing": "NO",
+        "boundary": "DOMAIN.top",
+        "damping": "NO"
+      },
+      {
+        "forcing": "NO",
+        "boundary": "HF_012_wall",
+        "damping": "NO"
+      },
+      {
+        "forcing": "NO",
+        "boundary": "Q2D_span_source",
+        "damping": "NO"
+      },
+      {
+        "forcing": "NO",
+        "boundary": "Q2D_span_target",
+        "damping": "NO"
+      }
+    ]
+  },
+  "checks": {
+    "all_recorded_startup_heights_exactly_point5": true,
+    "height_ramp_zero": true,
+    "time_started_zero": true,
+    "no_global_wave_initialization": true,
+    "speed_under_50": true,
+    "alpha_bounded": true
+  },
+  "limitation": "Early numerical startup only; actual propagated wave height and periodic forces remain to be measured."
+}

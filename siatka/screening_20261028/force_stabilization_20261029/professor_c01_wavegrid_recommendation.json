@@ -1,0 +1,84 @@
+{
+  "status": "initial_short_pilot_candidate_only",
+  "decision": "The extended M09 mesh is not rejected solely for differing from the approximate H/20 recommendation. It is a reasonable initial short W01 pilot candidate after boundary and startup checks, but wave-grid accuracy is unvalidated.",
+  "source_mesh": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M09_mesh_r1/mesh_star_export.CGNS",
+  "existing_data_preserved": true,
+  "measurement_reports": [
+    "professor_c01_free_surface_resolution.json",
+    "professor_c01_free_surface_ray_resolution.json"
+  ],
+  "installed_primary_guideline": {
+    "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-886FDC20-F60F-4875-8D46-109D27E6ED08.html",
+    "streamwise_spacing": "lambda/80 to lambda/100; for lambda20, 0.25 to 0.20 m",
+    "vertical_spacing": "About H/20; for H0.5, about0.025 m",
+    "interpretation": "Mesh-design guidance, not a universal pass/fail limit or demonstration of accuracy.",
+    "transitions": "Avoid changes of vertical resolution within the wave zone.",
+    "timestep": "P/(2.4*n) is an initial guideline for first/fifth-order waves; actual propagation, interface motion and time-step sensitivity still require checking.",
+    "bottom": "The installed guideline specifies inlet, no-slip or slip-wall bottom boundaries and explicitly excludes symmetry at the bottom."
+  },
+  "measured": {
+    "inlet_extension": {
+      "dx_m": 0.19913793103448277,
+      "dz_m": 0.02857601103920615,
+      "equivalent_full_cells_per_height": 17.497193688580342,
+      "ray_crossed_cells_per_0p5m": 19
+    },
+    "outlet_extension": {
+      "dx_m": 0.19802816901408443,
+      "dz_m_range": [
+        0.028160128351782276,
+        0.029106037629501813
+      ],
+      "ray_crossed_cells_per_0p5m": 18
+    },
+    "foil_above": {
+      "x_range_m": [
+        -0.0003685843239392502,
+        1.19
+      ],
+      "bbox_dx_median_m": 0.03150588148168043,
+      "bbox_dx_max_m": 0.04218972492296125,
+      "bbox_dz_median_m": 0.03270866211776058,
+      "bbox_dz_max_m": 0.042291740233361796,
+      "ray_crossed_cells_range": [
+        18,
+        25
+      ],
+      "sampled_vertical_chord_max_range_m": [
+        0.029078810674177058,
+        0.03984763803623448
+      ]
+    },
+    "original_mesh_sampled_ray_counts": [
+      18,
+      30
+    ],
+    "nofoil_R5": {
+      "dx_m": 0.2,
+      "dz_m": 0.025,
+      "equivalent_cells_per_lambda": 100,
+      "equivalent_cells_per_height": 20
+    }
+  },
+  "measurement_limits": [
+    "Ray counts include partially intersected end cells and small grazing intersections; they are not equivalent to that many full uniform cells.",
+    "Polygon bounding-box extents are not effective face-normal spacings. Tiny ray chords near vertices must not be used as physical cell size or CFL limits.",
+    "Topology and mesh quality passed independently; neither that result nor these counts establishes wave propagation accuracy.",
+    "The 1 ms no-foil R5 result does not transfer automatically to the much smaller streamwise free-surface cells of the foil mesh."
+  ],
+  "economical_controlled_check": [
+    "Use the preserved current mesh for a bounded pilot only. Compare incoming-wave gauges outside forcing and sufficiently upstream of the foil; compare whole-cycle height, phase, mean level and equal-phase inventory. Downstream disturbances from the foil are physical and must not be judged against a no-foil analytic wave without separating them.",
+    "Create one coherent free-surface refinement variant while preserving the foil geometry, near-wall spacing, prism layers, near-foil controls and domain. Existing raw M09 FS target is about0.0285714 m; target0.020 m is a practical first refinement. Confirm resulting geometry rather than treating input size as achieved spacing.",
+    "Extend the refined wave band across the complete domain and generated extension strips, including forcing/damping zones; avoid improving only the foil-local surface or leaving coarse extension bands. Cover the predicted complete crest/trough envelope with at least10% margin; place vertical growth transitions outside this envelope.",
+    "If supported by the mesh builder, refine vertical spacing independently while retaining sufficient streamwise spacing. Otherwise document that the0.020 target also changes horizontal resolution and treat it as coupled free-surface refinement, not a vertical-only test.",
+    "Run the same established boundary treatment, wave, domain, timestep and inner settings on the pair. Use a timestep shown adequate on the refined wave mesh, then compare wave-gauge amplitude/phase/mean and complete-cycle mean and harmonic force responses. Retain separate pressure/viscous Fx comparisons.",
+    "Each changed foil wave mesh needs its own matched calm reference. Do not use the current C01 mesh's calm result as the matched reference for a regenerated grid.",
+    "Escalate to further refinement only if the controlled pair shows consequential changes; do not rebuild or discard the validated foil boundary-layer mesh simply to hit a nominal count."
+  ],
+  "temporal_note": {
+    "typical_foil_bbox_dx_m": 0.03150588148168043,
+    "wave_period_s": 0.8472673206891129,
+    "guideline_dt_s_for_typical_dx": 0.0005561229956027525,
+    "warning": "This approximate~0.56ms guideline is not a measured stability limit; actual field/interface CFL and temporal sensitivity govern admission."
+  }
+}

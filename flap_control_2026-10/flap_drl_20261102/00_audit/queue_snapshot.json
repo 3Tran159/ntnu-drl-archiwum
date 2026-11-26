@@ -1,0 +1,75 @@
+{
+  "path": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\queue.sqlite",
+  "tables": [
+    "jobs"
+  ],
+  "rows": {
+    "jobs": [
+      {
+        "id": "27292001747644e7",
+        "created": "2026-11-02T08:42:48.851141+01:00",
+        "updated": "2026-11-02T09:37:11.304310+01:00",
+        "status": "preflight_blocked",
+        "case_id": "W03",
+        "spec": "{\"id\": \"W03\", \"title\": \"D\\u0142u\\u017csza fala\", \"H\": 0.5, \"L\": 30, \"T\": 1.2075530192963324, \"ready\": true, \"blocker\": null, \"existing\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\night_wave_queue_20261101\\\\W03_rho1000_air1p2_from_C01_20261101\", \"scientific\": \"diagnostic\", \"dt\": 0.0004, \"mode\": \"fresh\", \"extra_cycles\": 1, \"smoke\": 10, \"source\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\C01_warm_M13_steady_rho1000_air1p2_20261101\\\\final.sim\", \"source_sha\": \"9af4857b948e0494088b5421f8ede100e66344fc2631cc00030406640d7cc295\", \"source_time\": 4.699199999999548, \"parent_id\": null, \"parent_folder\": null, \"budget_s\": 900}",
+        "folder": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W03_20261102_084248_272920",
+        "message": "Test nie wystartował: istniejąca kontynuacja W03 zajmowała GPU. Zero kroków.",
+        "controller_pid": 17440,
+        "controller_birth": "134380789687224144",
+        "request_key": "c054ed892bc64b5885e8a3b6c405ecd1"
+      },
+      {
+        "id": "5873921a9db143fd",
+        "created": "2026-11-02T08:43:55.102218+01:00",
+        "updated": "2026-11-02T09:37:11.298812+01:00",
+        "status": "completed",
+        "case_id": "W03",
+        "spec": "{\"id\": \"W03\", \"title\": \"D\\u0142u\\u017csza fala\", \"H\": 0.5, \"L\": 30, \"T\": 1.2075530192963324, \"ready\": true, \"blocker\": null, \"existing\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\night_wave_queue_20261101\\\\W03_rho1000_air1p2_from_C01_20261101\", \"scientific\": \"diagnostic\", \"dt\": 0.0004, \"mode\": \"fresh\", \"extra_cycles\": 1, \"smoke\": 10, \"source\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\C01_warm_M13_steady_rho1000_air1p2_20261101\\\\final.sim\", \"source_sha\": \"9af4857b948e0494088b5421f8ede100e66344fc2631cc00030406640d7cc295\", \"source_time\": 4.699199999999548, \"parent_id\": null, \"parent_folder\": null, \"budget_s\": 900}",
+        "folder": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W03_20261102_084355_587392",
+        "message": "Gotowe: test zapisany, checklista i raport dostępne.",
+        "controller_pid": 29000,
+        "controller_birth": "134380809788857332",
+        "request_key": "5b1d3bfb70d0477b8112ce1c63ad1b21"
+      },
+      {
+        "id": "c8d21a96c5764191",
+        "created": "2026-11-02T09:26:09.962370+01:00",
+        "updated": "2026-11-02T09:28:37.312183+01:00",
+        "status": "paused",
+        "case_id": "W03",
+        "spec": "{\"id\": \"W03\", \"title\": \"D\\u0142u\\u017csza fala\", \"H\": 0.5, \"L\": 30, \"T\": 1.2075530192963324, \"ready\": true, \"blocker\": null, \"existing\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\night_wave_queue_20261101\\\\W03_rho1000_air1p2_from_C01_20261101\", \"scientific\": \"diagnostic\", \"dt\": 0.0004, \"mode\": \"extend\", \"stop_kind\": \"steps\", \"extra_cycles\": 1, \"smoke\": 20, \"source\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\nwar_automation_20261102\\\\runs\\\\W03_20261102_084355_587392\\\\wave_pilot_final.sim\", \"source_sha\": \"50df2e75813bad60bb2cbd24a9834ca7e6d49523b7e57b476bf726ed95a15380\", \"source_time\": 4.703199999999548, \"parent_id\": \"5873921a9db143fd\", \"parent_folder\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\nwar_automation_20261102\\\\runs\\\\W03_20261102_084355_587392\", \"budget_s\": 900, \"extra_steps\": 20}",
+        "folder": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W03_20261102_092609_c8d21a",
+        "message": "Pauza zapisana. Można wznowić.",
+        "controller_pid": 29000,
+        "controller_birth": "134380809788857332",
+        "request_key": "selftest_real_pause_20261102"
+      },
+      {
+        "id": "c85d49e79ffb49f7",
+        "created": "2026-11-02T09:32:48.968042+01:00",
+        "updated": "2026-11-02T09:37:11.287303+01:00",
+        "status": "completed",
+        "case_id": "W03",
+        "spec": "{\"id\": \"W03\", \"title\": \"D\\u0142u\\u017csza fala\", \"H\": 0.5, \"L\": 30, \"T\": 1.2075530192963324, \"ready\": true, \"blocker\": null, \"existing\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\night_wave_queue_20261101\\\\W03_rho1000_air1p2_from_C01_20261101\", \"scientific\": \"diagnostic\", \"dt\": 0.0004, \"mode\": \"resume\", \"stop_kind\": \"steps\", \"extra_cycles\": 1, \"smoke\": 20, \"source\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\nwar_automation_20261102\\\\runs\\\\W03_20261102_092609_c8d21a\\\\wave_pilot_final.sim\", \"source_sha\": \"e15cb774eecd39b67182297cd1f8ebfbb4f495e687c68b7d62cd71956e9e720a\", \"source_time\": 4.703199999999548, \"parent_id\": \"c8d21a96c5764191\", \"parent_folder\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\nwar_automation_20261102\\\\runs\\\\W03_20261102_092609_c8d21a\", \"budget_s\": 43200, \"extra_steps\": 20}",
+        "folder": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W03_20261102_093248_c85d49",
+        "message": "Gotowe: test zapisany, checklista i raport dostępne.",
+        "controller_pid": 8988,
+        "controller_birth": "134380819689745424",
+        "request_key": "selftest_real_resume_20261102"
+      },
+      {
+        "id": "8e2e4553a39d43cb",
+        "created": "2026-11-02T09:44:16.883999+01:00",
+        "updated": "2026-11-02T10:20:57.684470+01:00",
+        "status": "completed",
+        "case_id": "W02",
+        "spec": "{\"id\": \"W02\", \"title\": \"Mniejsza wysoko\\u015b\\u0107\", \"H\": 0.25, \"L\": 20, \"T\": 0.8478873476270992, \"ready\": true, \"blocker\": null, \"existing\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\night_wave_queue_20261101\\\\W02_rho1000_air1p2_from_C01_20261101\", \"scientific\": \"diagnostic\", \"dt\": 0.0004, \"mode\": \"extend\", \"stop_kind\": \"steps\", \"extra_cycles\": 1, \"smoke\": 0, \"source\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\night_wave_queue_20261101\\\\W02_rho1000_air1p2_from_C01_20261101\\\\wave_pilot_final.sim\", \"source_sha\": \"9ed2d6bde4e3ea9329809ff218edc4b2ee3f5ea25e89169d4154bbff3fa2072a\", \"source_time\": 11.379200000006316, \"parent_id\": null, \"parent_folder\": \"E:\\\\ntnu_mesh_optimization_20261030\\\\clean_c01_campaign_20261101\\\\night_wave_queue_20261101\\\\W02_rho1000_air1p2_from_C01_20261101\", \"budget_s\": 43200, \"extra_steps\": 2120}",
+        "folder": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W02_20261102_094416_8e2e45",
+        "message": "Gotowe: wynik, checklista i raport zapisane.",
+        "controller_pid": 31408,
+        "controller_birth": "134380826568976261",
+        "request_key": "964a17db-7023-4e73-8d93-817fef46cf4e_W02"
+      }
+    ]
+  }
+}

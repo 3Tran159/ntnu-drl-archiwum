@@ -1,0 +1,26 @@
+{
+  "cells": 251605,
+  "source_vertices": 465939,
+  "source_cells_unchanged": true,
+  "source_xz_coordinates_unchanged": true,
+  "span_m": 0.02,
+  "minimum_source_area_m2": 1.0830842268414617e-09,
+  "minimum_reconstructed_volume_m3": 2.1661684536829234e-11,
+  "total_volume_m3": 25.701684231823084,
+  "negative_or_zero_reconstructed_volumes": 0,
+  "self_intersecting_source_cells": 0,
+  "nonmanifold_source_edges": 0,
+  "same_side_internal_faces": 0,
+  "boundary_face_counts": {
+    "Polyfaces_fluid": 715603,
+    "HF_012_wall": 856,
+    "DOMAIN.top": 301,
+    "DOMAIN.inlet": 242,
+    "DOMAIN.outlet": 241,
+    "Q2D_span_source": 251605,
+    "Q2D_span_target": 251605,
+    "DOMAIN.bottom": 301
+  },
+  "method": "Rebuild all spanwise faces and signed NFACE connectivity from unchanged valid source-plane polygons. Native target projection and its inconsistent pairings are discarded.",
+  "output_sha256": "4aa62d29aee2b7ba6f95532887629326846d6fbad7ad121c0cde41dcb1ac5ee5"
+}

@@ -1,0 +1,90 @@
+{
+  "status": "completed_supported",
+  "updated_at": "2026-10-29T23:33:01.175881+01:00",
+  "controller_pid": 38828,
+  "result": {
+    "updated_at": "2026-10-29T23:33:01.138879+01:00",
+    "id": "M09_SO_dt05ms_common_t2040_r1",
+    "mesh": "M09",
+    "status": "time_step_screen_pass",
+    "same_start_s": 1.6399999999999302,
+    "window": [
+      1.84,
+      2.04
+    ],
+    "reference": {
+      "mesh": "M09",
+      "id": "M09_SO_common_t2040_r1",
+      "cells": 214908,
+      "order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner_iterations": 10,
+      "status": "matched_endpoint_review",
+      "window": [
+        1.84,
+        2.04
+      ],
+      "means": {
+        "CD": 0.0074651881466775176,
+        "CL_total": 0.31395932517814296,
+        "pressure_drag_N": 8.031930539582895,
+        "viscous_drag_N": 20.750848878746943
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.22587556539099574,
+        "CL_total": 0.1107010140942967
+      },
+      "settling_check_pass": true,
+      "source_unchanged": true,
+      "all_saved_fields_finite": true,
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "last_interface_CFL": 2.107118277760013,
+      "source_sim": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\matched_endpoint_20261029\\M09_SO_common_t2040_r1\\final.sim",
+      "history_sources": [
+        "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_SO1ms_inner10_r1\\history.csv",
+        "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\matched_endpoint_20261029\\M09_SO_common_t2040_r1\\history.csv"
+      ],
+      "combined_history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\matched_endpoint_20261029\\M09_SO_common_t2040_r1\\matched_history.csv",
+      "reused_accepted_field": false,
+      "force_component_sum_max_error_N": 3.552713678800501e-15
+    },
+    "half_step_means": {
+      "CD": 0.007465007250785193,
+      "CL_total": 0.31396388805581577,
+      "pressure_drag_N": 8.031396604245307,
+      "viscous_drag_N": 20.750685351882083
+    },
+    "half_vs_1ms_difference_pct": {
+      "CD": -0.002423192674722394,
+      "CL_total": 0.0014533340171437937,
+      "pressure_drag_N": -0.006647658803277557,
+      "viscous_drag_N": -0.000788049037489545
+    },
+    "adjacent_mean_change_pct": {
+      "CD": -0.22612732729799956,
+      "CL_total": 0.11107748696343478
+    },
+    "inner_forces": {
+      "Fx_half_Monitor": {
+        "max_half_iteration_change_pct": 0.0003089188660225347,
+        "max_independent_difference_N": 0.0
+      },
+      "Fz_half_Monitor": {
+        "max_half_iteration_change_pct": 0.0001529106961012235,
+        "max_independent_difference_N": 0.0
+      }
+    },
+    "max_BDF2_mass_budget_pct_of_inlet": 4.9036832614115914e-05,
+    "phase_bounds": [
+      0.0,
+      1.0
+    ],
+    "all_saved_fields_finite": true,
+    "source_unchanged": true,
+    "source_sim": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\selected_mesh_time_20261029\\M09_SO_dt05ms_common_t2040_r1\\final.sim",
+    "scope": "Calm selected mesh sensitivity only; not wave propagation acceptance"
+  }
+}

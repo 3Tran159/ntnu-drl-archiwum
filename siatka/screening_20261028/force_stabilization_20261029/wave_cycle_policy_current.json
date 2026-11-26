@@ -1,0 +1,10 @@
+{
+  "status": "user_corrected_no_minimum_10_cycle_wait",
+  "min_cycles": 4,
+  "typical_cycles": 10,
+  "max_cycles": 20,
+  "interpretation": "Evaluate whenever the last four complete cycles overlap; ten periods is an expectation, not a minimum. Save and diagnose at20 periods if still not repeatable.",
+  "controller_legacy_assessment_minimum": 10,
+  "authoritative_assessment_file": "wave_periodicity_current.json",
+  "stop_method": "Independent file-based watcher requests the active macro's graceful STOP on first practical four-cycle pass; no solver numerical change."
+}

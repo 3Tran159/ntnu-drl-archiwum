@@ -1,0 +1,54 @@
+{
+  "Background": {
+    "representation": "Volume Mesh for both source and current, active subset only",
+    "active_cells": 211504,
+    "nearest_unique": 211504,
+    "matched_within_1nm": 211504,
+    "distance_quantiles_m": {
+      "0": 0.0,
+      "0.5": 0.0,
+      "0.99": 3.552713678800501e-15,
+      "1": 2.842170943040401e-14
+    },
+    "relative_volume_difference_quantiles": {
+      "0": 0.0,
+      "0.5": 0.0,
+      "0.99": 3.9796830103961336e-16,
+      "1": 2.905851867413138e-13
+    },
+    "worst_distance_source_xz": [
+      42.59132278719429,
+      -0.0194717141041043
+    ],
+    "worst_distance_current_xz": [
+      42.591322787194315,
+      -0.0194717141041043
+    ]
+  },
+  "FlapOverset": {
+    "representation": "Volume Mesh for both source and current, active subset only",
+    "active_cells": 40657,
+    "nearest_unique": 40657,
+    "matched_within_1nm": 40620,
+    "distance_quantiles_m": {
+      "0": 0.0,
+      "0.5": 4.553442605056512e-16,
+      "0.99": 2.0078238367923023e-15,
+      "1": 1.708566396860585e-08
+    },
+    "relative_volume_difference_quantiles": {
+      "0": 0.0,
+      "0.5": 8.272552116102245e-13,
+      "0.99": 4.360451046090703e-11,
+      "1": 0.003539898252511476
+    },
+    "worst_distance_source_xz": [
+      0.9568783288205966,
+      -0.0133398442755659
+    ],
+    "worst_distance_current_xz": [
+      0.9568783273238802,
+      -0.0133398272555849
+    ]
+  }
+}

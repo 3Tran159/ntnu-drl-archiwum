@@ -1,0 +1,377 @@
+{
+  "at": "2026-11-03T07:32:18.606573+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\b0_top_direction_20261103_053542",
+  "samples": 100,
+  "last_time_s": 0.5,
+  "macro_status": {
+    "status": "urans_diagnostic_ready",
+    "steps": 100,
+    "saved_time_s": 0.5000000000000003,
+    "dt_s": 0.002,
+    "native_iteration": 6250,
+    "force_windows_stable": true,
+    "solution_reset": false,
+    "mesh_regenerated": false,
+    "scientific_approved": false,
+    "hydrodynamic_convergence_verified": false,
+    "training_approved": false
+  },
+  "scientific_approved": false,
+  "training_approved": false,
+  "whole_run_guards": {
+    "pressure": true,
+    "volume": true,
+    "quality": true,
+    "face": true,
+    "overset_active_errors": true,
+    "angle_zero": true,
+    "mass": true,
+    "omega_floor_cells": true,
+    "k_floor_cells": true,
+    "viscosity_ratio": true,
+    "finite_history": true
+  },
+  "last": {
+    "step": 100.0,
+    "time_s": 0.5,
+    "elapsed_s": 0.2,
+    "flap_angle_deg": 0.0,
+    "flap_angular_velocity_deg_s": 0.0,
+    "Fx_N": 27.7340013676,
+    "Fz_N": 1281.76860948,
+    "CL_hydro": 0.326564385813,
+    "CD": 0.00719317392042,
+    "Mh_Nm": -12.159737996,
+    "p_absolute_min_Pa": 30088.5196675,
+    "cavitation_margin_Pa": 27749.3049007,
+    "safety_reserve_Pa": 17749.3049007,
+    "dt_s": 0.002,
+    "mass_imbalance_relative": 2.46882842071e-10,
+    "net_mass_flow_kg_s": 2.66633469437e-06,
+    "omega_floor_cells": 0.0,
+    "k_floor_cells": 0.0,
+    "max_turbulent_viscosity_ratio": 1491.85500839,
+    "overset_error_cells": 0.0,
+    "min_volume_m3": 9.121557741170001e-12,
+    "min_cell_quality": 0.0563512407881,
+    "min_face_validity": 1.0,
+    "max_speed_m_s": 22.3427211435,
+    "yplus_mean": 2.82760506063,
+    "yplus_max": 271.718823818,
+    "native_iteration": 6250.0,
+    "wall_clock_s": 982.598345
+  },
+  "window_results": [
+    {
+      "end_step": 25,
+      "time_s": 0.35,
+      "means": {
+        "CL_hydro": 0.32705592417688,
+        "CD": 0.0071723056270772,
+        "Mh_Nm": -12.164333469039997,
+        "Fx_N": 27.653541575764,
+        "Fz_N": 1283.663784796
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0009730052919874815,
+        "CD": 0.001500184742459917,
+        "Mh_Nm": 0.0006227268694400754,
+        "Fx_N": 0.0015001847443786133,
+        "Fz_N": 0.000955823942789635
+      },
+      "mass_max": 1.12537506067e-07,
+      "pabs_min": 20599.5927385
+    },
+    {
+      "end_step": 50,
+      "time_s": 0.4,
+      "means": {
+        "CL_hydro": 0.32686708605048004,
+        "CD": 0.007180114347273599,
+        "Mh_Nm": -12.162656610039999,
+        "Fx_N": 27.683648877344,
+        "Fz_N": 1282.9357005148
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.0004783005804868568,
+        "CD": 0.0009142307284413566,
+        "Mh_Nm": 0.00011810523358969996,
+        "Fx_N": 0.0009142307291981788,
+        "Fz_N": 0.00046984994630520395
+      },
+      "mass_max": 8.39522390042e-10,
+      "pabs_min": 30070.9555651,
+      "relative_mean_change": {
+        "CL_hydro": -0.0005773878790766851,
+        "CD": 0.0010887322156099,
+        "Mh_Nm": -0.00013785046293457448
+      },
+      "force_window_pass": true
+    },
+    {
+      "end_step": 75,
+      "time_s": 0.45,
+      "means": {
+        "CL_hydro": 0.32672354028135997,
+        "CD": 0.0071861977375176,
+        "Mh_Nm": -12.16128255094,
+        "Fx_N": 27.707103996784,
+        "Fz_N": 1282.382245448
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.00037071518292096183,
+        "CD": 0.0007235562073185863,
+        "Mh_Nm": 9.705877608345049e-05,
+        "Fx_N": 0.0007235562079070816,
+        "Fz_N": 0.0003641625433116143
+      },
+      "mass_max": 5.94421989162e-10,
+      "pabs_min": 30077.5413577,
+      "relative_mean_change": {
+        "CL_hydro": -0.00043915638877722873,
+        "CD": 0.0008472553429892393,
+        "Mh_Nm": -0.00011297359976980559
+      },
+      "force_window_pass": true
+    },
+    {
+      "end_step": 100,
+      "time_s": 0.5,
+      "means": {
+        "CL_hydro": 0.32661098046588,
+        "CD": 0.007191107030274,
+        "Mh_Nm": -12.160189508283997,
+        "Fx_N": 27.726032265927998,
+        "Fz_N": 1281.9482598236
+      },
+      "relative_ranges": {
+        "CL_hydro": 0.00029520896652782493,
+        "CD": 0.0005928987931970879,
+        "Mh_Nm": 7.699977861054979e-05,
+        "Fx_N": 0.0005928987942571199,
+        "Fz_N": 0.00028998918415886355
+      },
+      "mass_max": 4.57350189983e-10,
+      "pabs_min": 30083.8781714,
+      "relative_mean_change": {
+        "CL_hydro": -0.00034451088336961977,
+        "CD": 0.0006831558128117532,
+        "Mh_Nm": -8.987889652456449e-05
+      },
+      "force_window_pass": true
+    }
+  ],
+  "last_25_means": {
+    "CL_hydro": 0.32661098046588,
+    "CD": 0.007191107030274,
+    "Fx_N": 27.726032265927998,
+    "Fz_N": 1281.9482598236,
+    "Mh_Nm": -12.160189508283997
+  },
+  "delta_B_percent": {
+    "CL_hydro": -0.20946016791538735,
+    "CD": 0.38425579797629617
+  },
+  "omega_floor_cells": {
+    "first": 0.0,
+    "latest": 0.0,
+    "last_25_min": 0.0,
+    "last_25_max": 0.0
+  },
+  "k_floor_cells": {
+    "first": 0.0,
+    "latest": 0.0,
+    "last_25_min": 0.0,
+    "last_25_max": 0.0
+  },
+  "max_turbulent_viscosity_ratio": {
+    "first": 1484.03242268,
+    "latest": 1491.85500839,
+    "last_25_min": 1491.85500839,
+    "last_25_max": 1492.07364561
+  },
+  "field_exports": {
+    "continuation_ready": {
+      "active_cells": 256750,
+      "omega_floor_cells": 0,
+      "k_floor_cells": 0,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 1483.5217881859649,
+      "speed_max_near_m_s": 22.34558892570459,
+      "meanflow_p0_max_near_Pa": 164071.8271993807,
+      "meanflow_p0_p99_near_Pa": 162440.51206907118,
+      "pabs_min_Pa": 29089.903374335045,
+      "max_speed_location": {
+        "region": "Background",
+        "X (m)": 0.6979168986495702,
+        "Z (m)": 0.1045103103384185,
+        "Pressure (Pa)": -87680.62983245478,
+        "Specific Dissipation Rate (/s)": 313.1459189751564,
+        "speed_m_s": 22.34558892570459,
+        "p0_meanflow_Pa": 161982.04238583098
+      },
+      "max_head_location": {
+        "region": "Background",
+        "X (m)": 0.0029546026300391,
+        "Z (m)": -0.0055394728216089,
+        "Pressure (Pa)": 65054.27108355596,
+        "Wall Distance (m)": 0.0002100434838199,
+        "Turbulent Kinetic Energy (J/kg)": 0.0003455248736913,
+        "Specific Dissipation Rate (/s)": 6012.939381562836,
+        "Turbulent Viscosity Ratio": 0.0424890312205814,
+        "Volume (m^3)": 1.3904525523716843e-09,
+        "Cell Quality": 0.9995642098033858,
+        "speed_m_s": 14.07249488298537,
+        "p0_meanflow_Pa": 164071.8271993807
+      },
+      "head_gt1p1q_near_cells": 0,
+      "head_gt1p1q_near_volume_fraction": 0.0
+    },
+    "final": {
+      "active_cells": 256750,
+      "omega_floor_cells": 0,
+      "k_floor_cells": 0,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 1491.8550083880475,
+      "speed_max_near_m_s": 22.34272114346943,
+      "meanflow_p0_max_near_Pa": 164044.25795679097,
+      "meanflow_p0_p99_near_Pa": 162394.36636015266,
+      "pabs_min_Pa": 30088.519667482677,
+      "max_speed_location": {
+        "region": "Background",
+        "X (m)": 0.6979168986495702,
+        "Z (m)": 0.1045103103384185,
+        "Pressure (Pa)": -87662.48034103661,
+        "Specific Dissipation Rate (/s)": 312.8593403711875,
+        "speed_m_s": 22.34272114346943,
+        "p0_meanflow_Pa": 161936.11370638135
+      },
+      "max_head_location": {
+        "region": "Background",
+        "X (m)": 0.0029546026300391,
+        "Z (m)": -0.0055394728216089,
+        "Pressure (Pa)": 64733.105809451146,
+        "Wall Distance (m)": 0.0002100434838199,
+        "Turbulent Kinetic Energy (J/kg)": 0.0003452909065442,
+        "Specific Dissipation Rate (/s)": 6010.609645358801,
+        "Turbulent Viscosity Ratio": 0.0424988199876266,
+        "Volume (m^3)": 1.3904525523716843e-09,
+        "Cell Quality": 0.9995642098033858,
+        "speed_m_s": 14.093342552236486,
+        "p0_meanflow_Pa": 164044.25795679097
+      },
+      "head_gt1p1q_near_cells": 0,
+      "head_gt1p1q_near_volume_fraction": 0.0
+    },
+    "step_1": {
+      "active_cells": 256750,
+      "omega_floor_cells": 0,
+      "k_floor_cells": 0,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 1484.0324226784437,
+      "speed_max_near_m_s": 22.34553226083182,
+      "meanflow_p0_max_near_Pa": 164200.86154954898,
+      "meanflow_p0_p99_near_Pa": 162564.6899710216,
+      "pabs_min_Pa": 20599.59273847916,
+      "max_speed_location": {
+        "region": "Background",
+        "X (m)": 0.6979168986495702,
+        "Z (m)": 0.1045103103384185,
+        "Pressure (Pa)": -87560.96692804083,
+        "Specific Dissipation Rate (/s)": 313.14345603545377,
+        "speed_m_s": 22.34553226083182,
+        "p0_meanflow_Pa": 162100.43908189703
+      },
+      "max_head_location": {
+        "region": "Background",
+        "X (m)": 0.0029546026300391,
+        "Z (m)": -0.0055394728216089,
+        "Pressure (Pa)": 65179.19914600928,
+        "Wall Distance (m)": 0.0002100434838199,
+        "Turbulent Kinetic Energy (J/kg)": 0.0003454891858662,
+        "Specific Dissipation Rate (/s)": 6012.38958837426,
+        "Turbulent Viscosity Ratio": 0.0424801115153809,
+        "Volume (m^3)": 1.3904525523716843e-09,
+        "Cell Quality": 0.9995642098033858,
+        "speed_m_s": 14.072786675249482,
+        "p0_meanflow_Pa": 164200.86154954898
+      },
+      "head_gt1p1q_near_cells": 0,
+      "head_gt1p1q_near_volume_fraction": 0.0
+    },
+    "step_100": {
+      "active_cells": 256750,
+      "omega_floor_cells": 0,
+      "k_floor_cells": 0,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 1491.8550083880475,
+      "speed_max_near_m_s": 22.34272114346943,
+      "meanflow_p0_max_near_Pa": 164044.25795679097,
+      "meanflow_p0_p99_near_Pa": 162394.36636015266,
+      "pabs_min_Pa": 30088.519667482677,
+      "max_speed_location": {
+        "region": "Background",
+        "X (m)": 0.6979168986495702,
+        "Z (m)": 0.1045103103384185,
+        "Pressure (Pa)": -87662.48034103661,
+        "Specific Dissipation Rate (/s)": 312.8593403711875,
+        "speed_m_s": 22.34272114346943,
+        "p0_meanflow_Pa": 161936.11370638135
+      },
+      "max_head_location": {
+        "region": "Background",
+        "X (m)": 0.0029546026300391,
+        "Z (m)": -0.0055394728216089,
+        "Pressure (Pa)": 64733.105809451146,
+        "Wall Distance (m)": 0.0002100434838199,
+        "Turbulent Kinetic Energy (J/kg)": 0.0003452909065442,
+        "Specific Dissipation Rate (/s)": 6010.609645358801,
+        "Turbulent Viscosity Ratio": 0.0424988199876266,
+        "Volume (m^3)": 1.3904525523716843e-09,
+        "Cell Quality": 0.9995642098033858,
+        "speed_m_s": 14.093342552236486,
+        "p0_meanflow_Pa": 164044.25795679097
+      },
+      "head_gt1p1q_near_cells": 0,
+      "head_gt1p1q_near_volume_fraction": 0.0
+    },
+    "step_50": {
+      "active_cells": 256750,
+      "omega_floor_cells": 0,
+      "k_floor_cells": 0,
+      "viscosity_ratio_cap_cells": 0,
+      "max_viscosity_ratio": 1492.1051618319896,
+      "speed_max_near_m_s": 22.343669446315655,
+      "meanflow_p0_max_near_Pa": 164048.99038735597,
+      "meanflow_p0_p99_near_Pa": 162404.79621254702,
+      "pabs_min_Pa": 30077.45121828464,
+      "max_speed_location": {
+        "region": "Background",
+        "X (m)": 0.6979168986495702,
+        "Z (m)": 0.1045103103384185,
+        "Pressure (Pa)": -87673.82873069751,
+        "Specific Dissipation Rate (/s)": 313.16946163582173,
+        "speed_m_s": 22.343669446315655,
+        "p0_meanflow_Pa": 161945.95343241232
+      },
+      "max_head_location": {
+        "region": "Background",
+        "X (m)": 0.0029546026300391,
+        "Z (m)": -0.0055394728216089,
+        "Pressure (Pa)": 64850.87440953625,
+        "Wall Distance (m)": 0.0002100434838199,
+        "Turbulent Kinetic Energy (J/kg)": 0.0003453640970818,
+        "Specific Dissipation Rate (/s)": 6011.249697843241,
+        "Turbulent Viscosity Ratio": 0.0424904528995553,
+        "Volume (m^3)": 1.3904525523716843e-09,
+        "Cell Quality": 0.9995642098033858,
+        "speed_m_s": 14.08531973210546,
+        "p0_meanflow_Pa": 164048.99038735597
+      },
+      "head_gt1p1q_near_cells": 0,
+      "head_gt1p1q_near_volume_fraction": 0.0
+    }
+  },
+  "overset_applicability": "Not applicable: fixed one-region B mesh, no Overset interface. Zero counter is not a donor audit.",
+  "energy_screen_caution": "Mean-flow piezometric total pressure is a consistency diagnostic, not a strict universal Bernoulli bound in unsteady viscous RANS."
+}

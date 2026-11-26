@@ -1,0 +1,26 @@
+Compiled from "SimpleBlockPart.java"
+public class star.meshing.SimpleBlockPart extends star.meshing.SimpleShapePart implements star.common.BlockDataProvider {
+  public static final java.lang.String PROP_V1;
+  public static final java.lang.String PROP_V2;
+  public static final java.lang.String PROP_V1_INPUT;
+  public static final java.lang.String PROP_V2_INPUT;
+  public star.meshing.SimpleBlockPart(star.base.neo.ClientServerObjectKey);
+  public star.coremodule.ui.SourceEditorPanel getEditor(star.vis.SceneBase);
+  public void setCorners(star.base.neo.DoubleVector, star.base.neo.DoubleVector);
+  public void setCorner1(star.base.neo.DoubleVector);
+  public star.common.Coordinate getCorner1();
+  public star.common.CoordinateInput getCorner1Input();
+  public void setCorner1Input(star.common.CoordinateInput);
+  public void setCorner2(star.base.neo.DoubleVector);
+  public star.common.Coordinate getCorner2();
+  public star.common.CoordinateInput getCorner2Input();
+  public void setCorner2Input(star.common.CoordinateInput);
+  public double[] getCaptionAttachmentPoint();
+  public int getMinXFace();
+  public int getMinYFace();
+  public int getMinZFace();
+  public int getMaxXFace();
+  public int getMaxYFace();
+  public int getMaxZFace();
+  public java.lang.String journalChild(star.base.neo.ClientServerObject);
+}

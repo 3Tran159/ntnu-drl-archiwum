@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_nwar52_native_mesh.py", line 19, in <module>
+    job=new_job("NWAR52_NATIVE_MESH",dict(verify=True,nwar_mesh_file=mesh.as_posix(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_day.py", line 181, in new_job
+    raise RuntimeError("Native checkpoint readback failed")
+RuntimeError: Native checkpoint readback failed

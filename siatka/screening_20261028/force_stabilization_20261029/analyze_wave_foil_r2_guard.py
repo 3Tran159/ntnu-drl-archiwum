@@ -1,0 +1,7 @@
+import csv,json,math,heapq,datetime
+from pathlib import Path
+R=Path(r'F:/ntnu/mesh_screening_20261028/force_stabilization_20261029');A=Path(r'E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_cycles_r2')
+rows=list(csv.DictReader((A/'checkpoint_fields.csv').open()));names=list(rows[0]);data=[{k:float(v) for k,v in r.items()} for r in rows]
+v='Velocity: Magnitude (m/s)';a='Volume Fraction of water';c='Convective Courant Number'
+d=dict(at=datetime.datetime.now().astimezone().isoformat(),case=A.name,status='physical_speed_guard_failed',time_s=json.loads((A/'completed.json').read_text())['time_s'],cells=len(data),finite_all=all(math.isfinite(x) for r in data for x in r.values()),alpha_min=min(r[a] for r in data),alpha_max=max(r[a] for r in data),max_speed_m_s=max(r[v] for r in data),water_max_speed_m_s=max(r[v] for r in data if r[a]>.5),air_max_speed_m_s=max(r[v] for r in data if r[a]<.5),max_CFL=max(r[c] for r in data),cells_speed_above50=sum(r[v]>50 for r in data),top_speed_cells=heapq.nlargest(8,data,key=lambda r:r[v]),top_CFL_cells=heapq.nlargest(3,data,key=lambda r:r[c]),final_state_diagnostic_only=True,continuation_allowed=False,latest_pre_guard_checkpoint=json.loads((A/'latest_checkpoint.json').read_text()),interpretation='Location is measured; cause not established. Native final.sim stores failed fields for inspection, not an accepted result or restart source.')
+(R/'wave_foil_r2_guard_review.json').write_text(json.dumps(d,indent=2),encoding='utf8');print(json.dumps(d,indent=2))

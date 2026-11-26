@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-29T23:20:00+01:00",
+  "scope": "Populated common-window tables and active candidate timestep panel, UI only.",
+  "modified_sources": [
+    "build_professor_dashboard.py: current assessment follows common-window and decision JSON",
+    "configured_mesh_panel.py: remove duplicate print heading; explicit loading label before first saved step"
+  ],
+  "viewports": [
+    1920,
+    1360,
+    390
+  ],
+  "dashboards": [
+    "operational",
+    "professor"
+  ],
+  "browser": {
+    "javascript_errors": 0,
+    "duplicate_ids": 0,
+    "document_overflow": false,
+    "full_pair_rows": 3,
+    "all_pair_percentages_match_json": true,
+    "gauge_enlarge_close_and_escape": true
+  },
+  "table_evidence": {
+    "window_s": [
+      1.84,
+      2.04
+    ],
+    "M09_vs_M07": {
+      "CD_pct": 0.46669816039398243,
+      "CL_pct": -0.16425229705644426
+    },
+    "M09_vs_M08": {
+      "CD_pct": -0.02557357387804068,
+      "CL_pct": 0.016736017018529083
+    },
+    "columns": "Candidate/reference, CD, CL, pressure Fx, viscous Fx, coefficient-only threshold"
+  },
+  "time_panel": {
+    "case": "M09_SO_dt05ms_common_t2040_r1",
+    "running": true,
+    "result_pending": true,
+    "calm_template_decision_pending": true,
+    "source_checkpoint_s": 1.64,
+    "half_step_ms": 0.5,
+    "reused_baseline_ms": 1
+  },
+  "print": {
+    "path": "matched_endpoint_professor_qa.pdf",
+    "actual_pages": 18,
+    "intentional_pages": 18,
+    "reviewed_pages": [
+      6,
+      7,
+      18
+    ],
+    "clean_layout": true,
+    "partial_wave_traces_excluded": true
+  },
+  "numerical_controls_modified": false,
+  "evidence_files": [
+    "matched_endpoint_dashboard_qa.json",
+    "matched_endpoint_assessment_1920.png",
+    "matched_endpoint_ui_professor_1920.png",
+    "matched_endpoint_ui_main_390.png",
+    "selected_time_ui_professor_1920.png",
+    "selected_time_ui_professor_390.png",
+    "matched_endpoint_complete_print-06.png",
+    "matched_endpoint_complete_print-07.png",
+    "matched_endpoint_complete_print-18.png"
+  ],
+  "final_copy_changes": [
+    "Completed endpoint panel now states that all three meshes use 1.840–2.040 s at identical settings.",
+    "Candidate panel states: Time-step acceptance pending. Wave propagation and domain checks remain separate."
+  ],
+  "parent_maintenance_note": "Parent added plot_wave_pilot_live.py to the 75 s update_status.py plot refresh when active gauge/history files exist; no layout or solver change.",
+  "final_copy_qa": "The 1920/1360/390 browser checks and 18-page PDF export passed after these wording changes.",
+  "latest_review": false,
+  "superseded_by": "calm_support_wave_trial_ui_review.json",
+  "current_state_note": "M09 is now the supported calm template; common-endpoint fields are displayed. Consult the superseding record for current wave-pilot state and completed QA."
+}

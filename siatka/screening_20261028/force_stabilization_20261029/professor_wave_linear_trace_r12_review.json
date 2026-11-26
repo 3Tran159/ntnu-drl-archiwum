@@ -1,0 +1,134 @@
+{
+  "title": "Independent review of R12 per-inner conservation and AMG trace",
+  "date": "2026-10-30",
+  "scope": "Read-only analysis of saved files; no solver launch, physics change or dashboard edit",
+  "sources": {
+    "case": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12",
+    "log": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12/star.log",
+    "water": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12/native_water_per_inner.csv",
+    "air": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12/native_air_per_inner.csv",
+    "setup": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12/linear_trace_setup.json",
+    "physical_history": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12/history.csv",
+    "counter_api": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12/amg_cycle_counts.csv"
+  },
+  "findings": {
+    "new_phase_monitors": {
+      "samples_each": 1500,
+      "finite": true,
+      "updates_per_step": 10,
+      "steps": 150
+    },
+    "AMG": {
+      "vof": {
+        "n": 310,
+        "cycles_range": [
+          1,
+          1
+        ],
+        "reduction_range": [
+          0.001342295,
+          0.004043318
+        ],
+        "max_cycle_hits": 0,
+        "above_tol": 0,
+        "time_range": [
+          0.605,
+          0.635
+        ],
+        "vof_would_require_extra_work_at_tol0p001": 310
+      },
+      "pressure": {
+        "n": 310,
+        "cycles_range": [
+          2,
+          2
+        ],
+        "reduction_range": [
+          0.04017767,
+          0.08008076
+        ],
+        "max_cycle_hits": 0,
+        "above_tol": 0,
+        "time_range": [
+          0.605,
+          0.635
+        ],
+        "vof_would_require_extra_work_at_tol0p001": 310
+      }
+    },
+    "stop_interpretation": "In the 0.605–0.635 s trace, all 310 VOF solves stop after one AMG cycle at reduction0.001342295–0.004043318; all310 pressure solves stop after two cycles at reduction0.04017767–0.08008076. Both satisfy current relative target0.1. No solve hits30 cycles. Epsilon is0. Relative convergence is therefore the active observed stopping condition.",
+    "sequencing": "310 VOF and310 pressure solves span31 physical steps and10 iterations per step. VOF transport does update each inner iteration in the traced window; once-per-physical-step VOF is ruled out here.",
+    "counter_limitation": "The API cumulative cycle getters stay at their checkpoint values despite explicit AMG solves in the log. Their zero differences are unusable as active GPU solve counts in this case.",
+    "native_behavior": "Native phase error is not monotone within a physical step. At0.617 it oscillates between roughly0.0075% and0.0137%; at0.618 it drops below0.01% on inner3, then rises to0.01438646% at inner10. This is not evidence that three iterations suffice.",
+    "inherited_monitor_caveat": "Log NaNs from inherited Fx_half, Fz_half and Maximum Velocity monitors are separate from the1500 finite new native phase samples and independent physical history. They do not invalidate the newly sampled phase errors, and must not be treated as those reports.",
+    "spatial_or_clipping_cause": "Not established by these traces. Neither AMG convergence ratios nor bounded saved alpha locates the error or proves clipping."
+  },
+  "per_inner_native_absolute_phase_sum_pct": {
+    "time_0p617": [
+      0.08306198380780816,
+      0.020572396333291075,
+      0.007878510566551786,
+      0.013684718501054814,
+      0.01368772636591539,
+      0.007515958812923301,
+      0.01368706467290688,
+      0.01369373299186363,
+      0.007552829348107562,
+      0.013593908751275694
+    ],
+    "time_0p618": [
+      0.08391187316975189,
+      0.021350286501717986,
+      0.009955151179689262,
+      0.013932380007327707,
+      0.013840117293047093,
+      0.014062921702236896,
+      0.01419701445285668,
+      0.014291796189042185,
+      0.01436041242826144,
+      0.014386459896882217
+    ],
+    "normalization": "100*(abs(water_error_kg_step)+abs(air_error_kg_step))/(dt*inward_mixture_mass_kg_s_at_that_physical_step); dt=.001s. Keep signed total separately."
+  },
+  "recommendation": {
+    "single_control": "Change only SegregatedVofSolver AMG ConvergeTol from0.1 to0.001 in a fresh matched continuation.",
+    "reason": "Every observed VOF reduction is already below0.01, so0.01 would leave one-cycle exits unchanged. Every observed VOF reduction is above0.001, so0.001 should demand additional linear work and directly test phase-linear-solve sensitivity.",
+    "retain": [
+      "R4 checkpoint at0.500s",
+      "second-order1ms",
+      "10 actual inner iterations",
+      "pressure and velocity AMG settings",
+      "VOF URF0.9",
+      "all phase/finite/speed guards",
+      "0.01% conservation gate",
+      "all prior attempts and raw histories"
+    ],
+    "measure": [
+      "actual VOF cycles and achieved residual reduction in the same0.605–0.635 window",
+      "native error at every inner iteration",
+      "final physical-step signed budget and absolute phase sum",
+      "gauge differences and runtime cost",
+      "source hash and all unchanged settings"
+    ],
+    "limitation": "This is a discriminating test, not a diagnosed cure. A small linear residual does not by itself certify nonlinear phase conservation. If the same plateau persists, do not keep tightening tolerances or adding inner iterations without a spatial/coupling diagnostic.",
+    "avoid": "Do not choose the earliest isolated inner-iteration threshold crossing as convergence: the measured trace demonstrates subsequent rebound."
+  },
+  "primary_references": [
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-800CB29E-32C2-4DA1-8023-5C44E3E657EE.html",
+      "title": "AMG Linear Solver Reference",
+      "supports": "Relative convergence target, Epsilon, Max Cycles and LOW verbosity meanings"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-187276CC-89DA-4F69-B1AE-500038C45DE8.html",
+      "title": "Assessing Mass Conservation Errors",
+      "supports": "Native phase error is transport-equation iteration error multiplied bydt"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-CD31C597-AB0E-4C11-9441-DA7021F16CB5.html",
+      "title": "Interface Sharpening Using Temporal Subcycling",
+      "supports": "Per-inner VOF update and BDF2/subcycling distinction"
+    }
+  ],
+  "method": "Independent Python standard-library parser read only saved CSV/log files; associates equation-labelled AMG summaries with the following global iteration row. No raw licensing/header material was emitted."
+}

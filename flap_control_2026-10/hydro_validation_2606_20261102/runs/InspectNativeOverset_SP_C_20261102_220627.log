@@ -1,0 +1,48 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcbW90aW9uXzIwMjYxMTAyXzE5NDExOVxzdGVhZHlfaW5pdF8yMDI2MTEwMl8yMDA4MzRcc3RlYWR5X2luaXRfMjAyNjExMDJfMjAyNTMwXHN0ZWFkeV9pbml0XzIwMjYxMTAyXzIwMzA0Nlx1cmFuc19mcm9tX3N0ZWFkeV8yMDI2MTEwMl8yMDM2NTBcc3RhYmlsaXplXzIwMjYxMTAyXzIwMzY1MFxjaGVja3BvaW50LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 6872
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 22:08:35 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\motion_20261102_194119\steady_init_20261102_200834\steady_init_20261102_202530\steady_init_20261102_203046\urans_from_steady_20261102_203650\stabilize_20261102_203650\checkpoint.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=8 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_220627\InspectNativeOverset.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_220627\InspectNativeOverset.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+Files.createDirectories(out);s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);
+                                                                    ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_220627\InspectNativeOverset.java:12: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+PhysicsContinuum pc=(PhysicsContinuum)s.getContinuumManager().getObject("HYDRO water SST singlephase");info.append("flux_conservation="+pc.getModelManager().getModel(OversetConservationModel.class).getOversetConservationOption().getSelected()+"\n");
+                                                                                                                                                                                                                                    ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_220627\InspectNativeOverset.java:18: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.getParts().setObjects(region);table.setRepresentation(rep);table.setExtractVertexData(false);table.setFieldFunctions(ff);table.extract();table.export(out.resolve(region.getPresentationName()+"_representation_"+i+".csv").toString());
+                                          ^
+
+Loading/configuring connectivity (old|new partitions: 8|1)
+  Background (index 3): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 4): 56722 cells, 150363 faces, 189362 verts.
+Configuring finished
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

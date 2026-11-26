@@ -1,0 +1,71 @@
+Native mesh job pinned to logical CPU 2
+Starting local server: starserver.bat -power -cpubind off -np 1 -printpids -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XFNIQVJQX1NFQUxFRF9OQVRJVkVfMjAyNjExMDVcU2hhcnBfU2VhbGVkX09yaWdpbmFsX01lc2hfUkVGRVJFTkNFLnNpbQ==
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 37600
+Total number of processes : 1
+
+Host ID 0 Rank 0 on THINKPAD-LUCJAN with process ID 37600
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 8 days
+Thu Nov  5 12:05:37 2026
+
+Server::start -host THINKPAD-LUCJAN:47834
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\Sharp_Sealed_Original_Mesh_REFERENCE.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\NativeSharpSealed.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\NativeSharpSealed.java:35: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+    regions.removeRegions(Collections.singletonList(old));
+           ^
+
+Reading surface from .stl file: SharpSealedFluidDomain.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.86, Wall Time: 0.87, Memory: 202.88 MB
+Imported surface statistics:
+  # Faces:         58288
+  # Vertices:      29144
+  # Special Edges: 0
+
+NATIVE_INPUT Span0
+NATIVE_INPUT Span1
+NATIVE_INPUT Main
+NATIVE_INPUT Flap
+NATIVE_INPUT Inlet
+NATIVE_INPUT Outlet
+NATIVE_INPUT Bottom
+NATIVE_INPUT Top
+Mesh Operation 01 Prepare sharp sealed for 2D complete. CPU Time: 0.06, Wall Time: 0.06, Memory: 207.55 MB
+ Only 1 part was assigned to a region
+6 part surfaces were assigned to 6 boundaries
+No Interfaces were created
+NATIVE_BOUNDARY Sharp sealed fluid domain.Main WallBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Flap WallBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Inlet InletBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Outlet PressureBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Bottom SymmetryBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Top SymmetryBoundary
+Loading module: StarTwodmesher
+NATIVE_2D_MESHERS [star.twodmesher.DelaunayAutoMesher2d, star.twodmesher.DualAutoMesher2d, star.twodmesher.QuadAutoMesher2d]
+NATIVE_MESH_DEFAULTS [0.27 m, Surface Growth Rate, Minimum Surface Size, Target Surface Size, Surface Curvature, Surface Proximity, CAD Projection, Prism Layer Controls]
+java.lang.RuntimeException: Class: class star.meshing.SurfaceSizeOption
+   ConditionManager: star.meshing.CustomMeshControlConditionManager_30568
+   error: Condition not found in ConditionManager
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

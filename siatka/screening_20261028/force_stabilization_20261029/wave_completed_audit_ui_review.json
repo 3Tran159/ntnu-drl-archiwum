@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-30T00:05:11.589Z",
+  "scope": "Dashboard status/readability only; no runtime, controller, solver, plan or scientific-data changes.",
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py",
+    "build_dashboard_en.py"
+  ],
+  "display": {
+    "R8": {
+      "status": "Completed — mass-budget criterion not met",
+      "time_s": 0.75,
+      "steps": 500,
+      "peak_mass_budget_pct": 0.016637157241220096,
+      "gate_pct": 0.01,
+      "gate_pass": false,
+      "samples_above": 6,
+      "total_samples": 497,
+      "max_gauge_difference_mm": 0.2633149514039701,
+      "max_speed_m_s": 21.569160837168827,
+      "longer_propagation_admitted": false
+    },
+    "report_audit": {
+      "status_at_capture": "report_definitions_ready",
+      "display": "Report definitions exported; interpretation pending",
+      "workers": 1,
+      "gpu": false,
+      "steps_taken": 0,
+      "source_checkpoint": "R4 checkpoint_t0.750.sim",
+      "interpretation": "No established physical mass loss or validated wave claim."
+    },
+    "M10": {
+      "status_at_capture": "building_on_two_CPU",
+      "workers": 2,
+      "gpu": false,
+      "separate_from_calm_M09": true
+    },
+    "calm_M09_supported": true
+  },
+  "qa": {
+    "dashboards": [
+      "main",
+      "professor"
+    ],
+    "widths": [
+      1360,
+      390
+    ],
+    "javascript_errors": 0,
+    "duplicate_ids": 0,
+    "document_overflow": false,
+    "precise_R8_values_match_review": true,
+    "current_case_only_wave_figures": true,
+    "print_actual_pages": 18,
+    "print_intentional_pages": 18,
+    "changed_page": 17,
+    "no_clipping_or_orphan_on_changed_print_page": true,
+    "visual_review": [
+      "wave_completed_audit_professor_1360.png",
+      "wave_completed_audit_main_390.png",
+      "wave_completed_audit_print17.png"
+    ]
+  },
+  "print_policy": "Keep scientific numerical evidence; omit operational audit metadata, update/resource labels and repetitive status explanation to retain the existing intentional18-page structure.",
+  "artifacts": [
+    "wave_completed_audit_dashboard_qa.json",
+    "wave_completed_audit_professor_qa.pdf",
+    "wave_completed_audit_print17.png"
+  ],
+  "previous_review": "wave_numerics_fs_ui_review.json"
+}

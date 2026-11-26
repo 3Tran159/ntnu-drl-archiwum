@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_foil_wave24m_setup_r1.py", line 52, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_foil_wave24m_setup_r1.py", line 43, in main
+    if rc or not same or audit.get('status')!='prepared_zero_steps' or audit.get('flow_steps')!=0:raise RuntimeError('Preparation audit failed; preserve attempt and inspect')
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Preparation audit failed; preserve attempt and inspect

@@ -1,0 +1,63 @@
+{
+  "job": "RECOVERED_PERF_20261103_MPI8_DT2_EONLY",
+  "output": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\RECOVERED_PERF_20261103\\run_20261103_144631",
+  "MPI": 8,
+  "dt_s": 0.002,
+  "inner": 50,
+  "steps": 5,
+  "measured_steps": 2,
+  "solver_mean_s": 24.31344985,
+  "mean_step_s": 27.561,
+  "median_step_s": 27.561,
+  "max_step_s": 27.866,
+  "seconds_per_physical_second": 13780.5,
+  "solver_seconds_per_physical_second": 12156.724925,
+  "communication_delta_mean_s": 2.6924241501060333,
+  "communication_delta_nonnegative": true,
+  "native_cpu_mean_s": 194.29800000000006,
+  "benchmark_complete": false,
+  "physical_pass": true,
+  "residual_pass": false,
+  "max_omega_ratio": 0.023447057004823076,
+  "last_omega_ratio": 0.023447057004823076,
+  "max_mass_relative": 2.3588332166854998e-08,
+  "pabs_min_Pa": 30333.38477563538,
+  "pmin_location": {
+    "zone": "near",
+    "x_m": 0.7173270344254031,
+    "y_m": 0.02,
+    "z_m": 0.0953565438012048
+  },
+  "cfl_max": 1313.9036480204984,
+  "cfl_volume_mean": 0.2007501260295952,
+  "matched_times": 0,
+  "differences": {},
+  "MPI_equivalent": true,
+  "resource_pass": false,
+  "diagnostic_CPU_eligible": false,
+  "timestep_accepted": false,
+  "W04_median_step_s": 1.9756722499996613,
+  "W04_slowdown_fraction": 0.2078589578500467,
+  "W04_peak_rolling40_slowdown_fraction_during_solving": 0.2078589578500467,
+  "W04_affinity_preserved": true,
+  "own_affinity_verified": true,
+  "hardware": {
+    "P": {
+      "mean_utilization_percent": 36.325,
+      "mean_frequency_MHz": 3502.625,
+      "limit_flags": [
+        0
+      ]
+    },
+    "E": {
+      "mean_utilization_percent": 56.2375,
+      "mean_frequency_MHz": 3148.55,
+      "limit_flags": [
+        0
+      ]
+    }
+  },
+  "peak_RAM_owned_GiB": 4.28662109375,
+  "validation_data_eligible": false,
+  "verdict": "INCOMPLETE_RESOURCE_HOLD"
+}

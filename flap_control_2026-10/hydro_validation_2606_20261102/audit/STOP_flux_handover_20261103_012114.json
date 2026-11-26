@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-03 00:19:56 UTC",
+  "source": "Work",
+  "target_job": "c0_first_order_continuation",
+  "reason": "End bounded first-order recovery for scientific review: more than400 additional iterations with pressure above threshold and zero k/omega clipping; source geometry/mesh unchanged. Forces are still drifting and remain unapproved. Preserve full fields/checkpoint, then isolate restoration of Overset FLUX_CORRECTION.",
+  "action": "Graceful macro stop at next10-iteration boundary; no process termination"
+}

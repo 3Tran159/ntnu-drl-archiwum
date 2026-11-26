@@ -1,0 +1,23 @@
+const fs=require('fs'),path=require('path');
+const {chromium}=require('C:/Users/ThinkPad/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const R='F:/ntnu/mesh_screening_20261028/force_stabilization_20261029',B=path.dirname(R);
+(async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--disable-gpu']});const out={updated_at:new Date().toISOString(),views:[],screenshots:[],errors:[]};
+try{for(const kind of ['main','professor'])for(const width of [1920,1360,390]){
+ const p=await browser.newPage({viewport:{width,height:1000}});const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto('file:///'+B+'/'+(kind==='main'?'dashboard.html':'professor_dashboard.html'),{waitUntil:'load'});
+ await p.addStyleTag({content:'*{scroll-behavior:auto!important}body>nav{display:none!important}'});
+ await p.evaluate(async()=>{document.querySelectorAll('img').forEach(i=>i.loading='eager');await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));await document.fonts.ready;});
+ const wave=p.locator(kind==='main'?'#wave-preparation-live':'main #waves .wave-preparation-status');
+ const diag=wave.locator('.wave-numerical-probe');const mesh=p.locator(kind==='main'?'#wave-foil-preparation-live .wave-fs-refinement':'main #waves .wave-fs-refinement');
+ const rows=await diag.locator('tbody tr').allTextContents(),waveText=await wave.innerText(),meshText=await mesh.innerText();
+ const body=await p.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,duplicateIds:[...document.querySelectorAll('[id]')].map(x=>x.id).filter((x,i,a)=>a.indexOf(x)<i)}));
+ const checks={noJsErrors:errors.length===0,noPageOverflow:body.scroll<=body.width+1,noDuplicateIds:body.duplicateIds.length===0,r10Populated:rows.some(x=>x.includes('R10 / R4')&&x.includes('0.014355557')&&x.includes('0.014386460')&&x.includes('Not met')),r11Running:rows.some(x=>x.includes('R11 / R10')&&x.includes('Running')),r11Current:waveText.includes('inner40phaseBudget_dt1ms_r11')&&waveText.includes('GPU wave propagation pilot running'),m10Ready:meshText.includes('Extended mesh and paired inputs ready')&&meshText.includes('317,277')&&meshText.includes('282,379'),m10BothInputs:meshText.includes('C01_W20L4_M10_FS020_env_setup_r1')&&meshText.includes('W01_W20L4_M10_FS020_env_setup_r1')&&meshText.includes('Prepared with zero flow steps'),geometryMeasured:meshText.includes('30.689')&&meshText.includes('21.812')&&meshText.includes('16.901')};
+ checks.m10TableFits=await mesh.locator('.wave-data-table').evaluate(el=>el.scrollWidth<=el.clientWidth+1);
+ checks.m10HeaderFits=await mesh.locator('.wave-data-table th:first-child').evaluate(el=>{const r=document.createRange();r.selectNodeContents(el);return r.getBoundingClientRect().right<=el.getBoundingClientRect().right+1;});
+ for(const [label,loc] of [['diagnostics',diag],['m10',mesh]]){const file=R+'/m10_native_lineage_'+kind+'_'+width+'_'+label+'.png';await loc.screenshot({path:file,timeout:30000});out.screenshots.push(file);}
+ out.views.push({kind,width,checks,rows,case:await wave.locator('[data-prep-label="Case"]').innerText(),time:await wave.locator('[data-prep-label="Saved physical time"]').innerText(),body,errors});await p.close();
+ }
+ const p=await browser.newPage({viewport:{width:1360,height:1000}});await p.goto('file:///'+B+'/professor_dashboard.html',{waitUntil:'load'});await p.evaluate(async()=>{document.querySelectorAll('img').forEach(i=>i.loading='eager');await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));await document.fonts.ready;});await p.emulateMedia({media:'print'});
+ out.print={intentionalPages:await p.locator('.print-report .print-page').count(),titles:await p.locator('.print-report .print-page>h2').allTextContents(),file:R+'/m10_native_lineage_professor_qa.pdf'};await p.pdf({path:out.print.file,format:'A4',printBackground:true,preferCSSPageSize:true});await p.close();
+ out.pass=out.views.every(x=>Object.values(x.checks).every(Boolean))&&out.print.intentionalPages===19;fs.writeFileSync(R+'/m10_native_lineage_dashboard_qa.json',JSON.stringify(out,null,2));console.log(JSON.stringify({pass:out.pass,views:out.views.map(v=>({kind:v.kind,width:v.width,checks:v.checks})),print:out.print}));
+}finally{await browser.close();}})().catch(e=>{console.error(e.stack);process.exitCode=1;});

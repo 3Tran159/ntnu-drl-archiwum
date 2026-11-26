@@ -1,0 +1,86 @@
+Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVx3YXZlX2RlcHRoXzIwMjYxMDI5XFcyMF9IMTZfWDNcYnVpbHQuc2lt
+*****************************************************************************************
+Warning: CPU contention on 8 processes could not be resolved.
+         CPU affinity will be cleared on those processes.
+
+         This is a strong indication that another server is already running and on some
+         hosts there are now more processes running than there are physical CPU cores.
+
+         Over-subscribing a host can severely affect performance.
+
+         Even when within the limits of hardware multithreading (e.g., hyper-threading),
+         using more processes than CPU cores will likely negatively impact performance.
+
+         The recommended mode of operation is to use the same number of processes as
+         physical CPU cores.
+*****************************************************************************************
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 33832
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 09:53:10 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\wave_depth_20261029\W20_H16_X3\built.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\wave_depth_20261029\WaveTankDiagnose.java
+F:\ntnu\wave_depth_20261029\WaveTankDiagnose.java:16: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+   s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                          ^
+
+[NTNU_DIAG] variant=zone_none_v2 deep=false length=20.0 h=16.0 amp=0.25
+[NTNU_DIAG] initializing
+Loading/configuring connectivity (old|new partitions: 8|8)
+  fluid (index 0): 49576 cells, 124160 faces, 75735 verts.
+Configuring finished
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+Re-partitioning
+Schama FirstOrderVofWave declares property on line 124 without the corresponding define_property in the schema.
+Command: InitializeSolution
+   Recoverability: Non-recoverable
+   ServerStack: [SymInit: Symbol-SearchPath: '.', symOptions: 530, UserName: 'ThinkPad'
+, OS-Version: 6.2.9200 () 0x100-0x1
+, 00007FF866422AC9 (StarPlatform): (filename not available): StarCommandTokenizer::concatenate
+]
+   error: Server Error
+   expression: result != _propertyDescriptors.end()
+   file: DataObjectSchema.cpp
+   line: 47
+java.lang.RuntimeException: [NTNU_DIAG] Schama FirstOrderVofWave declares property on line 124 without the corresponding define_property in the schema.
+Command: InitializeSolution
+   Recoverability: Non-recoverable
+   ServerStack: [SymInit: Symbol-SearchPath: '.', symOptions: 530, UserName: 'ThinkPad'
+, OS-Version: 6.2.9200 () 0x100-0x1
+, 00007FF866422AC9 (StarPlatform): (filename not available): StarCommandTokenizer::concatenate
+]
+   command: CommandComplete
+   error: Server Error
+   expression: result != _propertyDescriptors.end()
+   file: DataObjectSchema.cpp
+   line: 47
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 32

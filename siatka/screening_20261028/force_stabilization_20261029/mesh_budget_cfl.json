@@ -1,0 +1,567 @@
+{
+  "updated_at": "2026-10-29T20:05:33.714455+01:00",
+  "cases": {
+    "M03": {
+      "cells": 123256,
+      "time_s": 1.7159999999999218,
+      "regions": [
+        {
+          "region": "Foil refinement box",
+          "cells": 44336,
+          "share_pct": 35.97066268579217
+        },
+        {
+          "region": "Free-surface band",
+          "cells": 25568,
+          "share_pct": 20.743817745180763
+        },
+        {
+          "region": "Downstream corridor",
+          "cells": 853,
+          "share_pct": 0.6920555591614201
+        },
+        {
+          "region": "Deep water",
+          "cells": 26956,
+          "share_pct": 21.869929252936977
+        },
+        {
+          "region": "Upper air",
+          "cells": 12159,
+          "share_pct": 9.86483416628805
+        },
+        {
+          "region": "Remaining outer cells",
+          "cells": 13384,
+          "share_pct": 10.858700590640618
+        }
+      ],
+      "cfl": {
+        "dt_s": 0.001,
+        "snapshot_time_s": 1.7159999999999218,
+        "all_cells": {
+          "n": 123256,
+          "p50": 0.596070052466246,
+          "p95": 3.4154331237933704,
+          "p99": 6.106905085630583,
+          "max": 45.255037650756584,
+          "cells_above1_pct": 38.11498020380347
+        },
+        "interface_cells": {
+          "n": 1763,
+          "p50": 0.6077750690815235,
+          "p95": 0.8162538914874172,
+          "p99": 0.8821975089132444,
+          "max": 1.4018722242596617,
+          "cells_above1_pct": 0.11344299489506524
+        },
+        "global_max_location": {
+          "x_m": -0.0003499327231672955,
+          "z_m": 0.0011788891214486684,
+          "water_fraction": 0.9999999999998418,
+          "speed_m_s": 7.7530394609392514,
+          "CFL": 45.255037650756584
+        },
+        "interface_max_location": {
+          "x_m": -11.893398067594774,
+          "z_m": 1.9888764741840657,
+          "water_fraction": 0.8597368978841861,
+          "speed_m_s": 18.00000930056682,
+          "CFL": 1.4018722242596617
+        },
+        "history_global_max": 45.255037650756584,
+        "history_interface_max": 1.4018722242596617,
+        "field_report_global_abs_difference": 0.0,
+        "field_report_interface_abs_difference": 0.0,
+        "dt_for_interface_CFL1_frozen_field_s": 0.0007133317735345722,
+        "dt_for_interface_CFL05_frozen_field_s": 0.0003566658867672861,
+        "review": "Check VOF substepping and time-step sensitivity before final validation; convective CFL>1 is not by itself an implicit-solver instability proof."
+      },
+      "cells_within_0p1m_of_calm_surface": 6390,
+      "cells_in_FS_band_outside_0p1m": 19178
+    },
+    "M02": {
+      "cells": 66707,
+      "time_s": 1.3999999999999566,
+      "regions": [
+        {
+          "region": "Foil refinement box",
+          "cells": 24348,
+          "share_pct": 36.49991754988232
+        },
+        {
+          "region": "Free-surface band",
+          "cells": 12689,
+          "share_pct": 19.02199169502451
+        },
+        {
+          "region": "Downstream corridor",
+          "cells": 543,
+          "share_pct": 0.8140075254471045
+        },
+        {
+          "region": "Deep water",
+          "cells": 13413,
+          "share_pct": 20.107335062287316
+        },
+        {
+          "region": "Upper air",
+          "cells": 7183,
+          "share_pct": 10.767985368851845
+        },
+        {
+          "region": "Remaining outer cells",
+          "cells": 8531,
+          "share_pct": 12.788762798506903
+        }
+      ],
+      "cfl": {
+        "dt_s": 0.001,
+        "snapshot_time_s": 1.3999999999999566,
+        "all_cells": {
+          "n": 66707,
+          "p50": 0.42341393668374233,
+          "p95": 2.8856434290835633,
+          "p99": 4.903587199155958,
+          "max": 48.644170444451866,
+          "cells_above1_pct": 36.98412460461421
+        },
+        "interface_cells": {
+          "n": 1259,
+          "p50": 0.41901979623234437,
+          "p95": 0.5606132373115815,
+          "p99": 0.6129957872613557,
+          "max": 1.2304275054850728,
+          "cells_above1_pct": 0.07942811755361398
+        },
+        "global_max_location": {
+          "x_m": -0.0004465879256976289,
+          "z_m": 0.002557487293585038,
+          "water_fraction": 0.9999999999999889,
+          "speed_m_s": 8.561123709972337,
+          "CFL": 48.644170444451866
+        },
+        "interface_max_location": {
+          "x_m": 30.93219485047635,
+          "z_m": 2.072812572816133,
+          "water_fraction": 0.21763675416963996,
+          "speed_m_s": 18.029820763888626,
+          "CFL": 1.2304275054850728
+        },
+        "history_global_max": 48.644170444451866,
+        "history_interface_max": 1.2304275054850728,
+        "field_report_global_abs_difference": 0.0,
+        "field_report_interface_abs_difference": 0.0,
+        "dt_for_interface_CFL1_frozen_field_s": 0.0008127256547355619,
+        "dt_for_interface_CFL05_frozen_field_s": 0.00040636282736778096,
+        "review": "Check VOF substepping and time-step sensitivity before final validation; convective CFL>1 is not by itself an implicit-solver instability proof."
+      },
+      "cells_within_0p1m_of_calm_surface": 3182,
+      "cells_in_FS_band_outside_0p1m": 9507
+    },
+    "M04": {
+      "cells": 138468,
+      "time_s": 1.64199999999993,
+      "regions": [
+        {
+          "region": "Foil refinement box",
+          "cells": 59548,
+          "share_pct": 43.00488199439582
+        },
+        {
+          "region": "Free-surface band",
+          "cells": 25568,
+          "share_pct": 18.464916081693964
+        },
+        {
+          "region": "Downstream corridor",
+          "cells": 853,
+          "share_pct": 0.6160268076378658
+        },
+        {
+          "region": "Deep water",
+          "cells": 26956,
+          "share_pct": 19.46731374758067
+        },
+        {
+          "region": "Upper air",
+          "cells": 12159,
+          "share_pct": 8.78109021578993
+        },
+        {
+          "region": "Remaining outer cells",
+          "cells": 13384,
+          "share_pct": 9.665771152901753
+        }
+      ],
+      "cfl": {
+        "dt_s": 0.001,
+        "snapshot_time_s": 1.64199999999993,
+        "all_cells": {
+          "n": 138468,
+          "p50": 0.6674087230814341,
+          "p95": 4.652421146013952,
+          "p99": 6.234799194709028,
+          "max": 27.074769378297315,
+          "cells_above1_pct": 43.61368691683277
+        },
+        "interface_cells": {
+          "n": 1760,
+          "p50": 0.6080647832811117,
+          "p95": 0.8173576243261503,
+          "p99": 0.8823750847266385,
+          "max": 1.4011854829931611,
+          "cells_above1_pct": 0.11363636363636363
+        },
+        "global_max_location": {
+          "x_m": -0.01604084738658353,
+          "z_m": 0.0030792035672607054,
+          "water_fraction": 0.9999999999997449,
+          "speed_m_s": 10.63602623363803,
+          "CFL": 27.074769378297315
+        },
+        "interface_max_location": {
+          "x_m": -11.89339495152954,
+          "z_m": 1.9888764964167764,
+          "water_fraction": 0.8597386806726374,
+          "speed_m_s": 18.0000098010209,
+          "CFL": 1.4011854829931611
+        },
+        "history_global_max": 27.074769378297315,
+        "history_interface_max": 1.4011854829931611,
+        "field_report_global_abs_difference": 0.0,
+        "field_report_interface_abs_difference": 0.0,
+        "dt_for_interface_CFL1_frozen_field_s": 0.000713681387751632,
+        "dt_for_interface_CFL05_frozen_field_s": 0.000356840693875816,
+        "review": "Check VOF substepping and time-step sensitivity before final validation; convective CFL>1 is not by itself an implicit-solver instability proof."
+      },
+      "cells_within_0p1m_of_calm_surface": 6390,
+      "cells_in_FS_band_outside_0p1m": 19178
+    },
+    "M05": {
+      "cells": 182527,
+      "time_s": 1.3399999999999632,
+      "regions": [
+        {
+          "region": "Foil refinement box",
+          "cells": 62358,
+          "share_pct": 34.1637127657826
+        },
+        {
+          "region": "Free-surface band",
+          "cells": 41477,
+          "share_pct": 22.72376141611926
+        },
+        {
+          "region": "Downstream corridor",
+          "cells": 1117,
+          "share_pct": 0.6119642573427493
+        },
+        {
+          "region": "Deep water",
+          "cells": 41468,
+          "share_pct": 22.718830638754813
+        },
+        {
+          "region": "Upper air",
+          "cells": 17901,
+          "share_pct": 9.807316177880534
+        },
+        {
+          "region": "Remaining outer cells",
+          "cells": 18206,
+          "share_pct": 9.974414744120049
+        }
+      ],
+      "cfl": {
+        "dt_s": 0.001,
+        "snapshot_time_s": 1.3399999999999632,
+        "all_cells": {
+          "n": 182527,
+          "p50": 0.7305667035318912,
+          "p95": 3.985474996615341,
+          "p99": 7.01673091865317,
+          "max": 43.94331734089171,
+          "cells_above1_pct": 37.786190536194646
+        },
+        "interface_cells": {
+          "n": 2232,
+          "p50": 0.7606516098159899,
+          "p95": 1.0412958600592948,
+          "p99": 1.089232666806711,
+          "max": 1.4399860758128178,
+          "cells_above1_pct": 7.661290322580645
+        },
+        "global_max_location": {
+          "x_m": -0.00043900129125750526,
+          "z_m": 0.002633452974907456,
+          "water_fraction": 0.9999999999997128,
+          "speed_m_s": 7.819620824073354,
+          "CFL": 43.94331734089171
+        },
+        "interface_max_location": {
+          "x_m": -11.893529068360648,
+          "z_m": 1.9889348681085677,
+          "water_fraction": 0.881656469611171,
+          "speed_m_s": 18.000866905160425,
+          "CFL": 1.4399860758128178
+        },
+        "history_global_max": 43.94331734089171,
+        "history_interface_max": 1.4399860758128178,
+        "field_report_global_abs_difference": 0.0,
+        "field_report_interface_abs_difference": 0.0,
+        "dt_for_interface_CFL1_frozen_field_s": 0.0006944511594916207,
+        "dt_for_interface_CFL05_frozen_field_s": 0.00034722557974581033,
+        "review": "Check VOF substepping and time-step sensitivity before final validation; convective CFL>1 is not by itself an implicit-solver instability proof."
+      },
+      "cells_within_0p1m_of_calm_surface": 10387,
+      "cells_in_FS_band_outside_0p1m": 31090
+    },
+    "M06": {
+      "cells": 251605,
+      "time_s": 1.5999999999999346,
+      "regions": [
+        {
+          "region": "Foil refinement box",
+          "cells": 105052,
+          "share_pct": 41.75274736193637
+        },
+        {
+          "region": "Free-surface band",
+          "cells": 50449,
+          "share_pct": 20.050873392818108
+        },
+        {
+          "region": "Downstream corridor",
+          "cells": 1340,
+          "share_pct": 0.5325808310645654
+        },
+        {
+          "region": "Deep water",
+          "cells": 51672,
+          "share_pct": 20.536952763259873
+        },
+        {
+          "region": "Upper air",
+          "cells": 21801,
+          "share_pct": 8.664772162715368
+        },
+        {
+          "region": "Remaining outer cells",
+          "cells": 21291,
+          "share_pct": 8.46207348820572
+        }
+      ],
+      "cfl": {
+        "dt_s": 0.001,
+        "snapshot_time_s": 1.5999999999999346,
+        "all_cells": {
+          "n": 251605,
+          "p50": 0.9059957171312295,
+          "p95": 6.0019737523147585,
+          "p99": 7.791967156378751,
+          "max": 43.76903700187169,
+          "cells_above1_pct": 46.14455197631207
+        },
+        "interface_cells": {
+          "n": 2481,
+          "p50": 0.8519126413866346,
+          "p95": 1.1470560019189497,
+          "p99": 1.2394117481333473,
+          "max": 2.7251539834007796,
+          "cells_above1_pct": 19.50826279725917
+        },
+        "global_max_location": {
+          "x_m": 0.3527692831828622,
+          "z_m": -0.06764516112675724,
+          "water_fraction": 0.9999999999995729,
+          "speed_m_s": 18.66325474524065,
+          "CFL": 43.76903700187169
+        },
+        "interface_max_location": {
+          "x_m": -11.896539845073796,
+          "z_m": 2.001884908060524,
+          "water_fraction": 0.41385372891315286,
+          "speed_m_s": 17.999715219186648,
+          "CFL": 2.7251539834007796
+        },
+        "history_global_max": 43.76903700187169,
+        "history_interface_max": 2.7251539834007796,
+        "field_report_global_abs_difference": 0.0,
+        "field_report_interface_abs_difference": 0.0,
+        "dt_for_interface_CFL1_frozen_field_s": 0.00036695174147630295,
+        "dt_for_interface_CFL05_frozen_field_s": 0.00018347587073815148,
+        "review": "Check VOF substepping and time-step sensitivity before final validation; convective CFL>1 is not by itself an implicit-solver instability proof."
+      },
+      "cells_within_0p1m_of_calm_surface": 12604,
+      "cells_in_FS_band_outside_0p1m": 37845
+    },
+    "M07": {
+      "cells": 481635,
+      "time_s": 1.6399999999999302,
+      "regions": [
+        {
+          "region": "Foil refinement box",
+          "cells": 187989,
+          "share_pct": 39.031424211280324
+        },
+        {
+          "region": "Free-surface band",
+          "cells": 98684,
+          "share_pct": 20.48937473397905
+        },
+        {
+          "region": "Downstream corridor",
+          "cells": 2067,
+          "share_pct": 0.4291631629761126
+        },
+        {
+          "region": "Deep water",
+          "cells": 119196,
+          "share_pct": 24.74820143884892
+        },
+        {
+          "region": "Upper air",
+          "cells": 37971,
+          "share_pct": 7.883770905353639
+        },
+        {
+          "region": "Remaining outer cells",
+          "cells": 35728,
+          "share_pct": 7.418065547561951
+        }
+      ],
+      "cfl": {
+        "dt_s": 0.001,
+        "snapshot_time_s": 1.6399999999999302,
+        "all_cells": {
+          "n": 481635,
+          "p50": 1.1837930250240782,
+          "p95": 7.404389397346678,
+          "p99": 10.573769138124723,
+          "max": 47.69499653195611,
+          "cells_above1_pct": 56.958692786030916
+        },
+        "interface_cells": {
+          "n": 3633,
+          "p50": 1.2148659487722806,
+          "p95": 1.58265645381241,
+          "p99": 1.7344281621002084,
+          "max": 4.098086310422287,
+          "cells_above1_pct": 81.47536471235894
+        },
+        "global_max_location": {
+          "x_m": 1.1881998038756838,
+          "z_m": 0.0001279509816400614,
+          "water_fraction": 0.9999999999991332,
+          "speed_m_s": 0.26248159794518844,
+          "CFL": 47.69499653195611
+        },
+        "interface_max_location": {
+          "x_m": -11.897715724000923,
+          "z_m": 1.9951539914866274,
+          "water_fraction": 0.7724533241148375,
+          "speed_m_s": 17.99993351565991,
+          "CFL": 4.098086310422287
+        },
+        "history_global_max": 47.69499653195611,
+        "history_interface_max": 4.098086310422287,
+        "field_report_global_abs_difference": 0.0,
+        "field_report_interface_abs_difference": 0.0,
+        "dt_for_interface_CFL1_frozen_field_s": 0.00024401633451613542,
+        "dt_for_interface_CFL05_frozen_field_s": 0.00012200816725806771,
+        "review": "Check VOF substepping and time-step sensitivity before final validation; convective CFL>1 is not by itself an implicit-solver instability proof."
+      },
+      "cells_within_0p1m_of_calm_surface": 24980,
+      "cells_in_FS_band_outside_0p1m": 73704
+    },
+    "M08": {
+      "cells": 254989,
+      "time_s": 1.5999999999999346,
+      "regions": [
+        {
+          "region": "Foil refinement box",
+          "cells": 108436,
+          "share_pct": 42.52575601300448
+        },
+        {
+          "region": "Free-surface band",
+          "cells": 50449,
+          "share_pct": 19.784775029511078
+        },
+        {
+          "region": "Downstream corridor",
+          "cells": 1340,
+          "share_pct": 0.5255128652608544
+        },
+        {
+          "region": "Deep water",
+          "cells": 51672,
+          "share_pct": 20.26440356250662
+        },
+        {
+          "region": "Upper air",
+          "cells": 21801,
+          "share_pct": 8.549780578770065
+        },
+        {
+          "region": "Remaining outer cells",
+          "cells": 21291,
+          "share_pct": 8.349771950946904
+        }
+      ],
+      "cfl": {
+        "dt_s": 0.001,
+        "snapshot_time_s": 1.5999999999999346,
+        "all_cells": {
+          "n": 254989,
+          "p50": 0.9169588319427764,
+          "p95": 6.049897256780041,
+          "p99": 7.816395431535002,
+          "max": 43.77362049378784,
+          "cells_above1_pct": 46.598872892556145
+        },
+        "interface_cells": {
+          "n": 2483,
+          "p50": 0.8515950107941869,
+          "p95": 1.1471776977750872,
+          "p99": 1.2418266107628444,
+          "max": 2.725153989681232,
+          "cells_above1_pct": 19.492549335481275
+        },
+        "global_max_location": {
+          "x_m": 0.3527692831828622,
+          "z_m": -0.06764516112675724,
+          "water_fraction": 0.9999999999996095,
+          "speed_m_s": 18.664945608866546,
+          "CFL": 43.77362049378784
+        },
+        "interface_max_location": {
+          "x_m": -11.896539845073796,
+          "z_m": 2.001884908060524,
+          "water_fraction": 0.4138514945445343,
+          "speed_m_s": 17.999715307256157,
+          "CFL": 2.725153989681232
+        },
+        "history_global_max": 43.77362049378784,
+        "history_interface_max": 2.725153989681232,
+        "field_report_global_abs_difference": 0.0,
+        "field_report_interface_abs_difference": 0.0,
+        "dt_for_interface_CFL1_frozen_field_s": 0.00036695174063061756,
+        "dt_for_interface_CFL05_frozen_field_s": 0.00018347587031530878,
+        "review": "Check VOF substepping and time-step sensitivity before final validation; convective CFL>1 is not by itself an implicit-solver instability proof."
+      },
+      "cells_within_0p1m_of_calm_surface": 12604,
+      "cells_in_FS_band_outside_0p1m": 37845
+    }
+  },
+  "regions": "Mutually exclusive cell-centroid bins. Foil control x[-0.6,3],z[-0.6,0.6]m; full-width FS control z[1.6,2.4]m. Downstream diagnostic corridor x(3,10],|z|<=0.6m; deep water z<-2m; upper air z>2.4m; remainder. Foil and FS bounds come from the mesh-creation macro; other bins are diagnostic partitions, not existing controls.",
+  "limits": [
+    "Counts indicate mesh cost, not removable cells or measured runtime savings.",
+    "CFL statistics count cells without volume weighting.",
+    "Interface uses0.01<water fraction<0.99, matching Stab_InterfaceCFL report.",
+    "Frozen-field dt estimates require recomputation after any mesh/velocity change.",
+    "VOF dynamic target0.5/max20 is configured in M07; reported step count is1. Verify active strategy and effective behavior; configuration alone does not prove substepping is active.",
+    "Wave meshes need separate propagation/interface resolution and matched calm validation."
+  ]
+}

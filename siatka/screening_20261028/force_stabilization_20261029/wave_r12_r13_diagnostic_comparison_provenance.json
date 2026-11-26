@@ -1,0 +1,93 @@
+{
+  "status": "rendered_pending_visual_inspection",
+  "generated_at": "2026-10-30T02:02:30.947583+01:00",
+  "files": {
+    "wave_r12_r13_diagnostic_comparison": {
+      "png": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_r13_diagnostic_comparison.png",
+      "svg": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_r13_diagnostic_comparison.svg",
+      "inches": [
+        11.2,
+        5.9
+      ]
+    },
+    "wave_r12_r13_diagnostic_comparison_mobile": {
+      "png": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_r13_diagnostic_comparison_mobile.png",
+      "svg": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_r13_diagnostic_comparison_mobile.svg",
+      "inches": [
+        4.9,
+        11.4
+      ]
+    }
+  },
+  "source_sha256": {
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_linear_trace_r12_review.json": "731e0640d397b961e46c00c15fc404f516106f05b425c655b4d0db3b03a782ca",
+    "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12\\native_inner_trace_analysis.json": "dc98e29d0f6bcc3db7e8a6b01929108450fc080745998da2e5febac45b1c15ec",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_vof_tolerance_r13_review.json": "90320807b1bc0c42af59222f039215ed6897f2d47470e02bdff069d994d4f082",
+    "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_vofTol001_dt1ms_r13\\native_inner_trace_analysis.json": "e13fb6abdf881f45ced0563cbe1787156a56d266ad938e62fc07eb05930016fc"
+  },
+  "sources_unchanged_after_plotting": true,
+  "case_settings": {
+    "R12": "SO1ms10inner; VOF AMGtol0.1; pressure0.1",
+    "R13": "SO1ms10inner; only VOF AMGtol0.001; pressure0.1"
+  },
+  "run_intervals_s": {
+    "R12": [
+      0.5,
+      0.65
+    ],
+    "R13": [
+      0.5,
+      0.75
+    ]
+  },
+  "plotted_native_time_s": 0.618,
+  "plotted_inner_iterations": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "native_full_traces": {
+    "R12": [
+      0.08391187316975189,
+      0.021350286501717986,
+      0.009955151179689262,
+      0.013932380007327707,
+      0.013840117293047093,
+      0.014062921702236896,
+      0.01419701445285668,
+      0.014291796189042185,
+      0.01436041242826144,
+      0.014386459896882217
+    ],
+    "R13": [
+      0.08178666158582809,
+      0.021189517836143756,
+      0.010128231827353064,
+      0.014192610482267052,
+      0.01412303896878208,
+      0.014351027005052601,
+      0.014479066394512855,
+      0.014562792430262017,
+      0.014617031624338889,
+      0.014624571762862835
+    ]
+  },
+  "AMG_log_window_s": [
+    0.605,
+    0.635
+  ],
+  "AMG_samples_per_equation_per_case": 310,
+  "AMG_plot": "Actual min\u2013max and median residual ratio; no inferred points or uncertainty intervals.",
+  "mass_criterion_pct": 0.01,
+  "short_mass_gate_pass": {
+    "R12": false,
+    "R13": false
+  },
+  "interpretation": "Tighter VOF solve met the lower requested linear target with2cycles, but did not remove the native phase-error peak. This does not identify the cause or admit wave-force results.",
+  "native_normalization": "100*(abs(native water error perstep)+abs(native air error perstep))/(dt*inwardmixturemassflux)"
+}

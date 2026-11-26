@@ -1,0 +1,21 @@
+from pathlib import Path
+import sys
+d=Path(sys.argv[1])
+s=(d.parent/"MiniVofStokes.java").read_text(encoding="utf-8-sig")
+s=s.replace("import star.motion.*;","import star.motion.*;import star.meshing.*;")
+s=s.replace(" void configure()throws Exception{",(d/"mesh_audit.inc").read_text(encoding="utf-8-sig")+" void configure()throws Exception{")
+s=s.replace('long nc=((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount();if(nc!=i("expected_cells",foil?44442:41280)||s.getNumberOfGpgpus()!=0)','long nc=((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount();if((!b("native_remesh_initialize")&&nc!=i("expected_cells",foil?44442:41280))||s.getNumberOfGpgpus()!=0)')
+s=s.replace('if(b("fresh")||moving||start!=0||!b("clean_calm")||nc!=24515)','if(b("fresh")||moving||start!=0||!b("clean_calm"))')
+s=s.replace('throw new IllegalStateException("Native remesh CALM initialization identity");','throw new IllegalStateException("Native remesh CALM initialization identity");\n   auditCorrectedNativeMesh();')
+(d/"MiniVofStokes.java").write_text(s,encoding="utf-8")
+s=(d.parent/"smoke.py").read_text(encoding="utf-8-sig")
+s=s.replace("P=D.parents[1]","P=D.parents[2]")
+s=s.replace("6f5251c7af1f1fa36750f8ec98749e99e79d5e4f40cf5359bfe6dfb73f4e1a9a","f8f9d30841b48a96e4c9334f9077d1f328a180c7197f3496decef8aab706edec")
+s=s.replace("CALM_VOF_NATIVE_SHARP_SEALED_FIXED_SMOKE30","CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30")
+s=s.replace("User requests native VOF mesh first. Graceful stop of owned fixed VOF only.","Extend native VOF free-surface refinement across the full domain before flow.")
+s=s.replace("import sys","import sys\nimport time")
+s=s.replace('    day=c.read(P/"DAY_STATUS.json")','    deadline=time.monotonic()+240\n    while c.LOCK.exists() or c.filtered_query(c.OWNER):\n        if time.monotonic()>deadline:\n            raise RuntimeError("Previous setup still owns the Mini solver")\n        time.sleep(3)\n    day=c.read(P/"DAY_STATUS.json")')
+s=s.replace('c.STOP.exists() or (D/"OLD_IMPORTED_MESH_PAUSE_ARCHIVED.txt").read_text().strip()!=MARKER','not c.STOP.exists() or c.STOP.read_text().strip()!=MARKER')
+s=s.replace('        mask=sum(1<<cpu for cpu in CPUS)','        c.STOP.rename(D/"SUPERSEDED_MESH_STOP_ARCHIVED.txt")\n        mask=sum(1<<cpu for cpu in CPUS)')
+(d/"smoke.py").write_text(s,encoding="utf-8")
+

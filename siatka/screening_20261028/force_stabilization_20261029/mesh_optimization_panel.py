@@ -1,0 +1,23 @@
+"""Engineering evidence for mesh-cost optimization; measured data separated from estimates."""
+import json,base64,html
+from pathlib import Path
+R=Path(__file__).resolve().parent
+def panel():
+ p=R/'mesh_optimization_evidence.json'
+ if not p.exists():return ''
+ d=json.loads(p.read_text());g=d['geometry']['M08'];c=next(x for x in d['outer_size_screen'] if x['outer_target_m']==.25)
+ s='<details id="mesh-optimization"><summary>Mesh optimization: measured cost and next candidate</summary><p>M08 has <b>254,989 cells</b>. Remote water below z = −3 m and air above z = 3.2 m contain <b>62,073 cells (24.3%)</b>. Moderate coarsening there is the first candidate. The physical domain, foil, prisms, near-foil box, wake and free-surface band remain protected.</p>'
+ s+='<figure><img alt="M08 cell size and accepted M07 flow disturbance, with proposed protected middle region" src="data:image/png;base64,'+base64.b64encode((R/'mesh_optimization_regions.png').read_bytes()).decode()+'"><figcaption>Left: actual M08 projected cell extent. Right: accepted M07 velocity disturbance relative to U = 18 m/s, averaged in 0.5 m bins. Dashed lines bound the proposed protected middle region. Small disturbance suggests where to test coarsening; it is not an accuracy guarantee.</figcaption></figure>'
+ state=json.loads((R/'M09_build_controller.json').read_text()) if (R/'M09_build_controller.json').exists() else {}
+ status={'waiting_for_small_wave_audit':'CPU build scheduled after the small wave-reference audit','building_on_two_CPU':'Building and auditing on two CPU workers','verified_ready_pending_temporal_review':'Mesh generated and audited; flow admission awaits temporal review'}.get(state.get('status'),'Prepared for a controlled mesh test')
+ s+='<h3>Next candidate: M09</h3><p>Accepted M08 agrees with M07: CD +0.508%, CL −0.192%. <b>'+html.escape(status)+'.</b> GPU time-order comparisons retain priority. This candidate has no force result yet.</p><div class="table-wrap"><table><thead><tr><th>Parameter</th><th>M08</th><th>Candidate M09</th></tr></thead><tbody>'
+ for a,b,cval in [('Outer base size','142.9 mm','250 mm'),('Middle band, z = −3…3.2 m','Existing controls','142.9 mm protection + existing finer controls'),('Foil target / minimum','2.857 / 0.286 mm','Unchanged'),('First layer / layers / total','1.531 μm / 48 / 15.46 mm','Unchanged'),('Near-foil / surface-band targets','8.929 / 28.571 mm','Unchanged'),('Domain and source foil','Current verified geometry','Unchanged')]:
+  s+='<tr><th>'+a+'</th><td>'+b+'</td><td>'+cval+'</td></tr>'
+ s+='</tbody></table></div><h3>Estimated savings — not a measured new-mesh result</h3><div class="table-wrap"><table><thead><tr><th>Outer target</th><th>Ideal cell estimate</th><th>Cell reduction</th><th>Indicative step-time reduction</th></tr></thead><tbody>'
+ for a in d['outer_size_screen']:
+  s+='<tr><td>'+str(round(a['outer_target_m']*1000))+' mm</td><td>'+f"{a['ideal_cells']:,}"+'</td><td>'+f"{a['ideal_cell_reduction_pct']:.1f}%"+'</td><td>'+f"{a['descriptive_runtime_reduction_pct']:.1f}%"+'</td></tr>'
+ s+='</tbody></table></div><p class="muted">Cell estimates use two-dimensional area scaling only in the remote zones; mesh transitions may reduce savings. Time estimates use a descriptive fit to three measured cases (M04/M06/M07), with shared-machine load and different cell shapes. Confirm actual cells, quality, runtime and both mean coefficients before acceptance.</p>'
+ s+='<h3>Free-surface mesh for waves</h3><p>The current M08 surface band contains 50,452 cells; median projected dimensions are 31.0 × 31.4 mm. The requested wave starting resolution is about <b>200 × 25 mm</b>: 100/150 cells per 20/30 m wavelength and 20 per 0.5 m wave height. This requires directional refinement, not simply increasing the existing isotropic size to 200 mm. It needs a compatible mesh construction and a propagation/CFL check.</p>'
+ s+='<p>Keep prism height and layer count fixed during the outer-region test because the M06/M07 difference is mainly in viscous drag. Test 10 versus 20 inner iterations separately; reducing cells alone is unlikely to halve runtime.</p>'
+ s+='<p class="muted">Basis: actual CGNS cell polygons, accepted M06/M07 velocity exports and measured timing. General guidance: <a href="https://doc.cfd.direct/notes/cfd-general-principles/external-flows">CFD Direct: external-flow refinement</a>; <a href="https://blogs.sw.siemens.com/simcenter/why-anisotropic-meshing-increases-your-happiness/">Siemens: anisotropic meshing capabilities</a>. The Siemens page does not establish a drop-in anisotropic option for our current directed polygon source mesher.</p></details>'
+ return s

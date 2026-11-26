@@ -1,0 +1,105 @@
+{
+  "residual_monitor_strategy": "Reuse exact sample counts; recheck every 25 steps",
+  "residual_cached_macro_sha256": "f3336d5c83c2d91a85b8ee71d76f396916ca17ef7fdd96864beb7c96c6cba696",
+  "operation": "NIGHT_INDEPENDENT_REVIEW",
+  "waits_for_pid": 16288,
+  "window": "2026-11-05 21:00 to 2026-11-06 07:00 CET",
+  "cases": [
+    "N01_WAVE_FIXED_H010",
+    "N02_WAVE_ACTIVE_H010_TWO_PULSES"
+  ],
+  "dt_s": 0.0002,
+  "cpu_indices": [
+    22,
+    23
+  ],
+  "U_m_s": 18,
+  "wavelength_m": 10,
+  "wave_height_m": 0.1,
+  "training_approved": false,
+  "observed_at": "2026-11-06T00:00:19.799479+01:00",
+  "live_stage": "CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE",
+  "live_operation": "SOLVING",
+  "physical_time_s": 1.1907999999999015,
+  "last_gate": {
+    "CL_drift_fraction": 0.002119131792346123,
+    "CL_range_fraction": 0.0019962539472105374,
+    "CL": 0.32429673648108953,
+    "CD_drift_fraction": 0.007713721427802804,
+    "CD_range_fraction": 0.007344377488488819,
+    "CD": 0.004555074100029277,
+    "time_s": 1.1559999999999053,
+    "stable_windows": 0
+  },
+  "last_checkpoint": {
+    "path": "F:/ntnu/flap_control/exploration_lab/MINI_POC_2D_20261103/mini_vof_20261103/COMEBACK_20261104/runs/CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_191547/CP_003000_t1.178800.sim",
+    "complete_write": true,
+    "step_in_job": 3000,
+    "time_s": 1.1787999999999028,
+    "solver_seconds": 5303.604662900002,
+    "bytes": 168026671
+  },
+  "extension_source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_191547\\FINAL.sim",
+  "extension_steps": 2000,
+  "reason": "[Errno 2] No such file or directory: 'F:\\\\ntnu\\\\flap_control\\\\exploration_lab\\\\MINI_POC_2D_20261103\\\\mini_vof_20261103\\\\COMEBACK_20261104\\\\runs\\\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261106_000919\\\\SOLVE_STATUS.json'",
+  "primary_wave_status": "HOLD",
+  "independent_case": "NIGHT_SP_SEALED_SLOW_PULSE",
+  "independent_results": {
+    "NIGHT_SP_SEALED_I12": {
+      "status": "DIAGNOSTIC_COMPLETE",
+      "result": {
+        "status": "PASS_DIAGNOSTIC_SMOKE",
+        "samples": 800,
+        "startup_s": 128.76450320000004,
+        "solver_step_median_s": 0.2083504,
+        "solver_step_mean_s": 0.21764562264150944,
+        "end_to_end_s": 2588.3246309999995,
+        "dt_s": 0.00025,
+        "checkpoint_sha256_input": "f509fe6f7d70b61b9d53177ce7d4cd1cb2cc1b2fc11b23fcc57fae136a06e527",
+        "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\NIGHT_SP_SEALED_I12_20261106_002324\\FINAL.sim",
+        "checkpoint_sha256": "846b6ac09ecae6c68e30c0243219f915e1bf91d2d285658505649b18a3e4cae7",
+        "state": {
+          "status": "PASS_DIAGNOSTIC_SMOKE",
+          "training_approved": false,
+          "steps": 800,
+          "VOF": false,
+          "time_s": 1.250000000000001,
+          "normalized_max_final25": 22.459908907205417,
+          "U_m_s": 18.0
+        },
+        "transport_ok": true,
+        "training_approved": false,
+        "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\STABILIZE_FIRST\\NIGHT_SP_SEALED_I12_20261106_002324"
+      },
+      "training_approved": false
+    },
+    "NIGHT_SP_SEALED_SLOW_PULSE": {
+      "status": "DIAGNOSTIC_COMPLETE",
+      "result": {
+        "status": "PASS_DIAGNOSTIC_SMOKE",
+        "samples": 1120,
+        "startup_s": 128.69490769999902,
+        "solver_step_median_s": 0.3109444,
+        "solver_step_mean_s": 0.33780952251121077,
+        "end_to_end_s": 4647.395040899995,
+        "dt_s": 0.00025,
+        "checkpoint_sha256_input": "f509fe6f7d70b61b9d53177ce7d4cd1cb2cc1b2fc11b23fcc57fae136a06e527",
+        "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\NIGHT_SP_SEALED_SLOW_PULSE_20261106_010634\\FINAL.sim",
+        "checkpoint_sha256": "eaa4edc1b24c4c434bac2cb0ae364e1984a20ab6af2072a73c26144733e9090f",
+        "state": {
+          "steps": 1120,
+          "VOF": false,
+          "time_s": 1.3300000000000278,
+          "normalized_max_final25": 3.0222382231756075,
+          "U_m_s": 18.0,
+          "status": "PASS_DIAGNOSTIC_SMOKE",
+          "training_approved": false
+        },
+        "transport_ok": true,
+        "training_approved": false,
+        "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\STABILIZE_FIRST\\NIGHT_SP_SEALED_SLOW_PULSE_20261106_010634"
+      },
+      "training_approved": false
+    }
+  }
+}

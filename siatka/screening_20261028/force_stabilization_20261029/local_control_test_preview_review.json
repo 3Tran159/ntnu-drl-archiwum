@@ -1,0 +1,291 @@
+{
+  "status": "passed",
+  "created_at": "2026-10-30T14:47:25.589314+01:00",
+  "source_sha256": {
+    "local_control_model.py": "1f1a197d4ef0976dc8260422f44fced960389612b7844bb19a172f3f7ed27b91",
+    "local_control_worker.py": "2da7d5318e54917311cc418065e4af9e19ae4ed30b1c78ebb150c054b4a324e3",
+    "local_domain_preparation.py": "8e4e72d8f431752377f138ac9eb9b6e7154c83e55ccfd07fd5648c152df79d92",
+    "local_mesh_inputs.py": "8ecf6c62993c030c5b0811f7f2af40fb9e2af96842e66cd51f63b94b80b85bd5",
+    "LocalCalmWave.java": "799e2ea2f2b0e91d84703fec9b46b4322b9d4f4b45ba89abc02388363e86f0f9",
+    "local_wave_arrival.py": "e248d3b7886e0c026ef8426d3e996baeca90e7f98dbd40398aaf0357fd8fef1d",
+    "wave_cycle_repeatability.py": "d18617807caa01c5c28cf55121016b7bee295d72d001a5a5892a3f6b683b76a7",
+    "PrepareLocalMeshCalm.java": "21f12966fa5cf528477c403646bd67f60275364ec361546301004b4a6c677f72",
+    "audit_selected_mesh_domain.py": "57f23d05c505c762c9a08cedd570fa9cbeb558bcff408eb28cd1e82fe8cddade",
+    "local_recipe_validation.py": "8e11271e26085933a7dd3b0651d840ad453204bcb59ba0a6cd9ea6a22f610035"
+  },
+  "sources_unchanged_during_test": true,
+  "source_sha256_after": {
+    "local_control_model.py": "1f1a197d4ef0976dc8260422f44fced960389612b7844bb19a172f3f7ed27b91",
+    "local_control_worker.py": "2da7d5318e54917311cc418065e4af9e19ae4ed30b1c78ebb150c054b4a324e3",
+    "local_domain_preparation.py": "8e4e72d8f431752377f138ac9eb9b6e7154c83e55ccfd07fd5648c152df79d92",
+    "local_mesh_inputs.py": "8ecf6c62993c030c5b0811f7f2af40fb9e2af96842e66cd51f63b94b80b85bd5",
+    "LocalCalmWave.java": "799e2ea2f2b0e91d84703fec9b46b4322b9d4f4b45ba89abc02388363e86f0f9",
+    "local_wave_arrival.py": "e248d3b7886e0c026ef8426d3e996baeca90e7f98dbd40398aaf0357fd8fef1d",
+    "wave_cycle_repeatability.py": "d18617807caa01c5c28cf55121016b7bee295d72d001a5a5892a3f6b683b76a7",
+    "PrepareLocalMeshCalm.java": "21f12966fa5cf528477c403646bd67f60275364ec361546301004b4a6c677f72",
+    "audit_selected_mesh_domain.py": "57f23d05c505c762c9a08cedd570fa9cbeb558bcff408eb28cd1e82fe8cddade",
+    "local_recipe_validation.py": "8e11271e26085933a7dd3b0651d840ad453204bcb59ba0a6cd9ea6a22f610035"
+  },
+  "test_count": 64,
+  "failures": 0,
+  "errors": 0,
+  "tests": [
+    {
+      "test": "__main__.Contracts.test_acknowledge_preserves_attempt_and_blocks_unreviewed_restart",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_automated_start_preserves_pause_arriving_during_preflight",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_automated_start_refuses_existing_pause_without_clearing",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_calm_coverage_sample_floor_gap_and_zero_mean",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_calm_key_is_height_independent_but_domain_specific",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_calm_screen_matches_profile_dt_and_latest_mean",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_cancel_marker_survives_stale_status",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_cancel_transition_and_active_job_are_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_cancellation_while_waiting_stops_before_next_phase",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_cancelled_job_cannot_be_revived_or_launched",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_changed_calm_source_is_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_continue_is_queue_only_and_retains_original_clock",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_continue_rejects_failure_changed_file_and_changed_domain",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_domain_pause_before_and_after_atomic_cpu_phase",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_enqueue_creates_distinct_preserved_jobs",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_failed_job_halts_queue_before_second_job",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_hold_does_not_masquerade_as_recipe_failure",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_hold_keeps_enqueue_only_and_blocks_all_solver_start_paths",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_invalid_selected_dt_and_checkpoint_cadence_are_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_invalid_wave_clock_and_history_lineage_refused_before_launch",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_latest_mean_denominator_and_signed_change",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_lock_release_respects_pid_and_token",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_mismatched_saved_time_or_incomplete_guard_cannot_continue",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_normal_guarded_stop_creates_safe_paused_manifest",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_pause_after_domain_preparation_prevents_calm_launch",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_pause_rejects_solver_before_claim",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_paused_result_halts_queue_normally_before_next_job",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_physical_guard_never_becomes_success_or_settled",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_preparation_pause_wrapper_honours_campaign_hold",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_preparation_uses_unique_copies_and_does_not_mutate_source",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_process_inventory_is_scoped_to_owned_absolute_paths",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_profile_dt_cells_and_checkpoint_interval_reach_mock_setup",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_queue_rejects_changed_selected_mesh_before_launch",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_readiness_requires_matching_tested_source_hashes",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_registered_calm_rejects_invalid_source_time",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_registered_calm_requires_matching_pass_and_source",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_release_hold_is_explicit_and_keeps_queue_paused",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_resume_calm_pause_does_not_advance_to_wave",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_resume_rejects_invalid_profile_and_guard_before_launch",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_resuming_wave_keeps_activation_and_avoids_new_calm_phase",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_selected_mesh_identity_and_dt_change_calm_key",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_solver_inventory_fails_closed",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_source_path_hash_and_settled_status_fail_closed",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_source_time_rejected_before_any_solver",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_unsafe_file_open_is_rejected_and_valid_open_is_mocked",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_validation_all_presets_and_actions",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.Contracts.test_validation_rejects_nonfinite_boolean_and_unsupported",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_allpairs_amplitude_catches_small_accumulating_drift",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_allpairs_phase_catches_three_degree_per_cycle",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_bad_period_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_coarse_gauges_fail",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_flat_calm_cannot_pass",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_incomplete_third_cycle_waits",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_internal_gap_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_late_start_skips_uncovered_first_cycle",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_mean_drift_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_missing_csv_fails_closed",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_missing_station_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_nonfinite_sample_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_noninteger_endpoints_use_bracketing_interpolation",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_origin_does_not_slide_when_more_data_arrive",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_stable_sine_establishes_at_end_earliest_three",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_weak_signal_cannot_pass",
+      "status": "passed"
+    },
+    {
+      "test": "test_local_wave_arrival.ArrivalTests.test_wrong_period_fails",
+      "status": "passed"
+    }
+  ],
+  "scope": "Mocked Python model/worker and existing synthetic arrival suite only. Temporary R/W/D tree; all process launch/control and file-opening APIs blocked globally or replaced by explicit mocks. No production queue, source .sim, solver, GPU, or service actions. Does not validate STAR API execution, CFD propagation, mesh/time accuracy, or wave forces."
+}

@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-10-29T21:51:35.893299+01:00",
+  "outputs": [
+    "professor_fields.png",
+    "professor_fields.svg",
+    "professor_fields_M04.png",
+    "professor_fields_M04.svg",
+    "professor_fields_M07.png",
+    "professor_fields_M07.svg",
+    "professor_fields_M08.png",
+    "professor_fields_M08.svg"
+  ],
+  "meshes": {
+    "M04": {
+      "mesh": "M04",
+      "status": "Settled",
+      "time_s": 1.64199999999993,
+      "source_cells": 138468,
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r2\\velocity_vectors.csv",
+      "source_sha256": "a157f9285e56b47c5854360e18d4289af10baeec14fb8a7bcf8694b262b22897",
+      "mesh_file": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M04\\mesh.CGNS",
+      "mesh_sha256": "a7034b6289b42ca9222dcf587425d0470a8f061b18a40fa5cda5054a6067e2b7",
+      "history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r2\\history.csv",
+      "max_abs_spanwise_velocity_m_s": 1.720634280190415e-14,
+      "display_grid_clipping": {
+        "speed": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        },
+        "Cp": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        }
+      }
+    },
+    "M07": {
+      "mesh": "M07",
+      "status": "Settled",
+      "time_s": 1.6399999999999302,
+      "source_cells": 481635,
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M07_until_settled_r1\\velocity_vectors.csv",
+      "source_sha256": "e6d10c08524cb0e1fece6d945f18de6e5bf54c1ec543b33bbba1c707c50c4979",
+      "mesh_file": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M07\\mesh.CGNS",
+      "mesh_sha256": "b1a19f2bb6e47911a1225259f59b91edc2610053810314851a4dd615b994c030",
+      "history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M07_until_settled_r1\\history.csv",
+      "max_abs_spanwise_velocity_m_s": 1.4605525185987266e-14,
+      "display_grid_clipping": {
+        "speed": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        },
+        "Cp": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        }
+      }
+    },
+    "M08": {
+      "mesh": "M08",
+      "status": "Settled",
+      "time_s": 1.5999999999999346,
+      "source_cells": 254989,
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M08_until_settled_r3\\velocity_vectors.csv",
+      "source_sha256": "d8c12bc39efad05250ba901a0e0fb7a4f3c57adb9f2fdbbdb2f9f479bb4d5e3f",
+      "mesh_file": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M08\\mesh.CGNS",
+      "mesh_sha256": "03d34e803622db1d4069f95cbac6cc409e41c558288100bef9cebd77f3cdac38",
+      "history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M08_until_settled_r3\\history.csv",
+      "max_abs_spanwise_velocity_m_s": 1.961673106995359e-14,
+      "display_grid_clipping": {
+        "speed": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        },
+        "Cp": {
+          "below_percent": 0.0,
+          "above_percent": 0.0
+        }
+      }
+    }
+  },
+  "method": "Same display method as audited plot_flow_fields.py. Zero solver steps. Delaunay interpolation of saved cell-centred x-z fields; triangles sampled in solid interior masked and foil polygon overlaid from CGNS connectivity. Instantaneous 2D streamlines, not particle paths.",
+  "field_type": "Instantaneous accepted saved states, not time-averaged fields. Force tables use separate final-window means.",
+  "pressure_definition": "Cp = [p - rho*g*(waterline_z-z)]/(0.5*rho*U^2), with rho=1000 kg/m^3, g=9.81 m/s^2, waterline_z=2 m, U=18 m/s. Nominal hydrostatic pressure is subtracted.",
+  "common_colour_limits": {
+    "speed_m_s": [
+      0,
+      23
+    ],
+    "Cp": [
+      -0.8,
+      2.5
+    ]
+  },
+  "view_m": {
+    "x": [
+      -0.35,
+      2.7
+    ],
+    "z": [
+      -0.42,
+      0.44
+    ]
+  },
+  "font_pt": {
+    "body": 12.5,
+    "ticks": 12,
+    "titles": 14
+  }
+}

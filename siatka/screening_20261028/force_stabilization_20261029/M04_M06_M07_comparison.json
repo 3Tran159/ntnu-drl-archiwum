@@ -1,0 +1,229 @@
+{
+  "verified_at": "2026-10-29T18:42:54.796560+01:00",
+  "method": "200 samples in each accepted final0.2s window; relative difference denominator is finer result",
+  "cases": [
+    {
+      "id": "M04",
+      "cells": 138468,
+      "family": "low_yplus",
+      "CD": 0.007307661327439915,
+      "CL_total": 0.31790137645391037,
+      "CL_dynamic": 0.31200911866992154,
+      "time_s": 1.64199999999993,
+      "window_start_s": 1.44199999999993,
+      "Fx_pressure_N": 8.175658228081103,
+      "Fx_viscous_N": 19.999760785996234,
+      "Fx_total_N": 28.175419014077335,
+      "force_balance_error_N": -3.552713678800501e-15,
+      "yplus": {
+        "snapshot_time_s": 1.64199999999993,
+        "status": "Settled",
+        "min": 0.17513777767624453,
+        "area_mean": 1.408875059858929,
+        "max": 293.9153297749471,
+        "max_at_x_over_c": 0.9991650721933112,
+        "max_at_z_m": 0.00011696321171818061,
+        "max_at_continuous_layers": 1.0,
+        "area_fraction_pct": {
+          "<1": 55.6571391329303,
+          "1\u20135": 44.18229347463391,
+          "5\u201330": 0.0,
+          "30\u2013100": 0.0,
+          "100\u2013300": 0.16056739243578455,
+          ">300": 0.0
+        },
+        "area_weighted_p50": 0.9752285258477664,
+        "area_weighted_p95": 1.1745241049001447,
+        "area_weighted_p99": 1.2460806547160983,
+        "first_full_layer_um_for_yplus1_frozen_shear": {
+          "p05": 2.55422815838,
+          "p50": 3.066685934447806,
+          "p95": 4.5802351613967405
+        },
+        "latest_time_s": 1.64199999999993,
+        "latest": {
+          "time": 1.64199999999993,
+          "mean": 1.4088750598589295,
+          "min": 0.17513777767624453,
+          "max": 293.9153297749471
+        },
+        "weighted_mean_crosscheck_abs": 4.440892098500626e-16
+      },
+      "wall_s_per_step_median": 1.3098297999999886,
+      "wall_s_per_step_mean": 1.3273078585000007,
+      "solver_wall_s_per_physical_s": 1327.307858500147,
+      "timing_intervals": 200,
+      "timing_window_start_s": 1.441999999999952,
+      "timing_window_end_s": 1.64199999999993,
+      "observed_inner_iterations_per_step": 20.0
+    },
+    {
+      "id": "M06",
+      "cells": 251605,
+      "family": "low_yplus",
+      "CD": 0.007374404000688209,
+      "CL_total": 0.3135788789536546,
+      "CL_dynamic": 0.3076866211696658,
+      "time_s": 1.5999999999999346,
+      "window_start_s": 1.3999999999999346,
+      "Fx_pressure_N": 8.115318013660778,
+      "Fx_viscous_N": 20.317434051392684,
+      "Fx_total_N": 28.43275206505346,
+      "force_balance_error_N": -3.552713678800501e-15,
+      "yplus": {
+        "snapshot_time_s": 1.5999999999999346,
+        "status": "Settled",
+        "min": 0.10738773018081975,
+        "area_mean": 0.9771790768016624,
+        "max": 252.44361616881147,
+        "max_at_x_over_c": 0.9994040283560716,
+        "max_at_z_m": 8.030834374837127e-05,
+        "max_at_continuous_layers": 1.0,
+        "area_fraction_pct": {
+          "<1": 99.7701521262843,
+          "1\u20135": 0.11281391570622885,
+          "5\u201330": 0.0,
+          "30\u2013100": 0.0,
+          "100\u2013300": 0.11703395800948509,
+          ">300": 0.0
+        },
+        "area_weighted_p50": 0.7021948523022733,
+        "area_weighted_p95": 0.8462434214227607,
+        "area_weighted_p99": 0.8906336161823869,
+        "first_full_layer_um_for_yplus1_frozen_shear": {
+          "p05": 2.5320608529860222,
+          "p50": 3.041164954157525,
+          "p95": 4.5519143740462
+        },
+        "latest_time_s": 1.5999999999999346,
+        "latest": {
+          "time": 1.5999999999999346,
+          "mean": 0.9771790768016624,
+          "min": 0.10738773018081975,
+          "max": 252.44361616881147
+        },
+        "weighted_mean_crosscheck_abs": 0.0
+      },
+      "wall_s_per_step_median": 1.7560039995000807,
+      "wall_s_per_step_mean": 1.7662956249950001,
+      "solver_wall_s_per_physical_s": 1766.2956249951949,
+      "timing_intervals": 200,
+      "timing_window_start_s": 1.3999999999999566,
+      "timing_window_end_s": 1.5999999999999346,
+      "observed_inner_iterations_per_step": 20.0
+    },
+    {
+      "id": "M07",
+      "cells": 481635,
+      "family": "low_yplus",
+      "CD": 0.0074735656426907745,
+      "CL_total": 0.3136295312452199,
+      "CL_dynamic": 0.3077372734612311,
+      "time_s": 1.6399999999999302,
+      "window_start_s": 1.4399999999999302,
+      "Fx_pressure_N": 8.071747472327603,
+      "Fx_viscous_N": 20.74333221963095,
+      "Fx_total_N": 28.815079691958548,
+      "force_balance_error_N": -7.105427357601002e-15,
+      "yplus": {
+        "snapshot_time_s": 1.6399999999999302,
+        "status": "Settled",
+        "min": 0.12345463011244058,
+        "area_mean": 0.8203838103288567,
+        "max": 220.1146908877711,
+        "max_at_x_over_c": 0.99957377717756,
+        "max_at_z_m": 5.5496263676829806e-05,
+        "max_at_continuous_layers": 1.0,
+        "area_fraction_pct": {
+          "<1": 99.9208518147724,
+          "1\u20135": 0.0,
+          "5\u201330": 0.0,
+          "30\u2013100": 0.0,
+          "100\u2013300": 0.07914818522759587,
+          ">300": 0.0
+        },
+        "area_weighted_p50": 0.6624952694376942,
+        "area_weighted_p95": 0.8000586389739985,
+        "area_weighted_p99": 0.8353292207270014,
+        "first_full_layer_um_for_yplus1_frozen_shear": {
+          "p05": 1.913166926814109,
+          "p50": 2.304340090262312,
+          "p95": 3.4718311698647004
+        },
+        "latest_time_s": 1.6399999999999302,
+        "latest": {
+          "time": 1.6399999999999302,
+          "mean": 0.8203838103288568,
+          "min": 0.12345463011244058,
+          "max": 220.1146908877711
+        },
+        "weighted_mean_crosscheck_abs": 1.1102230246251565e-16
+      },
+      "wall_s_per_step_median": 2.4609719500001574,
+      "wall_s_per_step_mean": 2.4651398094999992,
+      "solver_wall_s_per_physical_s": 2465.1398095002705,
+      "timing_intervals": 200,
+      "timing_window_start_s": 1.4399999999999522,
+      "timing_window_end_s": 1.6399999999999302,
+      "observed_inner_iterations_per_step": 20.0
+    }
+  ],
+  "pairs": [
+    {
+      "coarse": "M04",
+      "fine": "M06",
+      "same_family": true,
+      "delta_pct": {
+        "CD": -0.9050585408945039,
+        "CL_total": 1.378440255504136
+      },
+      "force_component_delta_pct": {
+        "Fx_pressure_N": 0.7435348105736889,
+        "Fx_viscous_N": -1.5635501244542018
+      },
+      "force_component_delta_N": {
+        "Fx_pressure_N": 0.06034021442032511,
+        "Fx_viscous_N": -0.3176732653964507
+      },
+      "within_1pct": false
+    },
+    {
+      "coarse": "M04",
+      "fine": "M07",
+      "same_family": true,
+      "delta_pct": {
+        "CD": -2.2198816894465363,
+        "CL_total": 1.362067274637601
+      },
+      "force_component_delta_pct": {
+        "Fx_pressure_N": 1.2873390317243856,
+        "Fx_viscous_N": -3.584628668922441
+      },
+      "force_component_delta_N": {
+        "Fx_pressure_N": 0.10391075575349973,
+        "Fx_viscous_N": -0.7435714336347168
+      },
+      "within_1pct": false
+    },
+    {
+      "coarse": "M06",
+      "fine": "M07",
+      "same_family": true,
+      "delta_pct": {
+        "CD": -1.3268317526527158,
+        "CL_total": -0.01615035783276031
+      },
+      "force_component_delta_pct": {
+        "Fx_pressure_N": 0.5397906894702497,
+        "Fx_viscous_N": -2.053181059478993
+      },
+      "force_component_delta_N": {
+        "Fx_pressure_N": 0.04357054133317462,
+        "Fx_viscous_N": -0.4258981682382661
+      },
+      "within_1pct": false
+    }
+  ],
+  "selected": null,
+  "next": "M08 controlled wall-normal test"
+}

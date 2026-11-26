@@ -1,0 +1,22 @@
+{
+  "wall_samples": 856,
+  "sample_weighted_yplus_quantiles": {
+    "0.5": 0.6632530645384658,
+    "0.9": 0.7899412220624751,
+    "0.95": 0.8077980204225683,
+    "0.99": 0.8543465737427564,
+    "1": 254.9314449219623
+  },
+  "fraction_samples_yplus_gt5": 0.002336448598130841,
+  "max_yplus_sample": {
+    "Absolute Pressure (Pa)": 154563.73103945164,
+    "Pressure (Pa)": 33619.5180251041,
+    "Wall Y+": 254.9314449219623,
+    "X (m)": 1.1892907937437251,
+    "Y (m)": 0.02,
+    "Z (m)": 8.03083437483754e-05,
+    "x_over_c": 0.9994040283560716,
+    "Cp_piezometric": 0.20752788904385247
+  },
+  "interpretation": "Quantiles are sample-weighted, not surface-area-weighted. Native AreaAverageReport supplies area-weighted mean."
+}

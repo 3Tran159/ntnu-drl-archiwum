@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "updated_at": "2026-10-30T10:21:18.942Z",
+  "case": "W01_W20L4_M10_FS020_cycles_r2",
+  "first_checked_field_s": 0.618,
+  "automatic_refresh_verified_field_s": 0.668,
+  "data_checks": {
+    "complete_cell_rows": 317277,
+    "finite_coordinates_and_alpha": true,
+    "alpha_range": [
+      0,
+      1
+    ],
+    "span_cell_centres_y_m": 0.02,
+    "foil_edges": 856,
+    "actual_foil_connectivity_used": true,
+    "source_unchanged_during_read": true
+  },
+  "visual_checks": {
+    "png_viewed": true,
+    "side_view_x_m": [
+      -8,
+      12
+    ],
+    "side_view_z_m": [
+      -1,
+      4
+    ],
+    "equal_axis_scale": true,
+    "footer_legend_collision_resolved": true,
+    "field_time_explicit": true,
+    "cell_centre_contour_limitation_explicit": true,
+    "no_analytic_wave_substitution": true
+  },
+  "automation": {
+    "server_pid": 584,
+    "separate_refresh_thread": true,
+    "status_builder_interval_unchanged_s": 25,
+    "renderer_check_interval_s": 120,
+    "priority": "BelowNormal",
+    "numeric_threads": 1,
+    "minimum_free_memory_gib": 4,
+    "timeout_s": 180,
+    "exclusive_lock_smoke_test": "passed",
+    "duplicate_lock_rejected": true,
+    "atomic_image_and_manifest_publish": true,
+    "last_renderer_status_file": "wave_side_view_renderer_state.json"
+  },
+  "changes": [
+    "plot_wave_side_view.py",
+    "wave_side_view_refresh.py",
+    "manual_control_server.py: one import and one separate thread start"
+  ],
+  "runtime_checked": {
+    "http_status": 200,
+    "calculation_controller_pid": 37216,
+    "calculation_controller_unchanged": true
+  },
+  "limitations": [
+    "This picture is the latest completed field export, not instantaneous live solver time.",
+    "Interpolated cell-centre alpha=0.5 contour, not cell-face VOF reconstruction.",
+    "No physical wave/force validation conclusion."
+  ],
+  "safety": "No STAR API, solver launch, solver stop, solver scheduling, or CFD source edits. Only the explicitly authorized local HTTP service was restarted."
+}

@@ -1,0 +1,329 @@
+{
+  "scope": "Read-only review of running no-foil FifthOrder24m pilot; no solver or process actions",
+  "attempt": "W20_H24_X4_CPUprop_dt1ms_r2",
+  "history_until_s": 0.6520000000000005,
+  "recommendation": "Continue the already bounded pilot with unchangedguards; no evidence currentlyrequiresintervention. Do not autoextend or admit foil-waveforcecomparison before checkpoint spatialdiagnostics andmultiperiodgauges.",
+  "evidence": {
+    "end": {
+      "time_s": 0.6520000000000005,
+      "step": 652,
+      "wall_s": 1912.9201112,
+      "max_speed_m_s": 23.31594204016499,
+      "max_CFL": 0.4316672753208872,
+      "interface_CFL": 0.10884167889903232,
+      "alpha_min": 0,
+      "alpha_max": 1,
+      "mass_kg": 38408.18128258721,
+      "water_volume_m3": 38.396657271305806,
+      "net_outward_mass_kg_s": 36.66480963631952,
+      "inward_mass_kg_s": 8531.217988127115,
+      "vof_substeps": 1
+    },
+    "all_finite": true,
+    "windows": [
+      {
+        "range": [
+          0,
+          0.25
+        ],
+        "n": 250,
+        "speed_first": 18.474260570158002,
+        "speed_last": 18.472151322522453,
+        "speed_max": 18.575365709468024,
+        "CFLmax": 0.11433307632942889,
+        "interfaceCFLmax": 0.11152537390060568
+      },
+      {
+        "range": [
+          0.25,
+          0.5
+        ],
+        "n": 250,
+        "speed_first": 18.472152330303047,
+        "speed_last": 18.475348559892744,
+        "speed_max": 18.47591706957173,
+        "CFLmax": 0.11346795781452959,
+        "interfaceCFLmax": 0.11046656441632653
+      },
+      {
+        "range": [
+          0.5,
+          0.65
+        ],
+        "n": 150,
+        "speed_first": 18.47539994356157,
+        "speed_last": 23.330921256529226,
+        "speed_max": 23.336957038985865,
+        "CFLmax": 0.45433902807662857,
+        "interfaceCFLmax": 0.11006121604152024
+      },
+      {
+        "range": [
+          0.6,
+          1
+        ],
+        "n": 53,
+        "speed_first": 19.940305446310113,
+        "speed_last": 23.31594204016499,
+        "speed_max": 23.336957038985865,
+        "CFLmax": 0.45433902807662857,
+        "interfaceCFLmax": 0.10993644604101069
+      }
+    ],
+    "gauges": [
+      {
+        "x": -10,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": -10,
+          "eta_actual_m": -0.026782799788819034,
+          "eta_analytic_m": -0.028628782100856398
+        },
+        "last_error_m": 0.0018459823120373642,
+        "max_abs_error_m": 0.007734935607849991,
+        "rms_error_m": 0.002853356739788173,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": -0.0006694822176385173
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": 0.0038558721676338337
+          }
+        ]
+      },
+      {
+        "x": -5,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": -5,
+          "eta_actual_m": 0.26539128297644865,
+          "eta_analytic_m": 0.25903661587608084
+        },
+        "last_error_m": 0.006354667100367806,
+        "max_abs_error_m": 0.006354667100367806,
+        "rms_error_m": 0.0026248332966722645,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": -0.00488176358728154
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": 0.0006027912059742846
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": 0,
+          "eta_actual_m": 0.005762613938184558,
+          "eta_analytic_m": 0.009220231934918388
+        },
+        "last_error_m": -0.0034576179967338305,
+        "max_abs_error_m": 0.007422352556456957,
+        "rms_error_m": 0.002981507572644639,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": -0.0011491207228999656
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": -0.00710772415280303
+          }
+        ]
+      },
+      {
+        "x": 2.5,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": 2.5,
+          "eta_actual_m": -0.16243095109622985,
+          "eta_analytic_m": -0.1579654009295801
+        },
+        "last_error_m": -0.004465550166649734,
+        "max_abs_error_m": 0.007980774840721239,
+        "rms_error_m": 0.003109518429972505,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": 0.0006104515834017832
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": -0.0005158096513611099
+          }
+        ]
+      },
+      {
+        "x": 5,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": 5,
+          "eta_actual_m": -0.2448421815131887,
+          "eta_analytic_m": -0.23947407209166727
+        },
+        "last_error_m": -0.005368109421521439,
+        "max_abs_error_m": 0.005727210659358661,
+        "rms_error_m": 0.0022877425033762484,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": 0.0027761901633063246
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": 0.002363365496233172
+          }
+        ]
+      },
+      {
+        "x": 10,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": 10,
+          "eta_actual_m": -0.02693089827362627,
+          "eta_analytic_m": -0.028628782100856398
+        },
+        "last_error_m": 0.0016978838272301289,
+        "max_abs_error_m": 0.007436309119199791,
+        "rms_error_m": 0.002756514356157115,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": -0.0007511967540096975
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": 0.003730825098642754
+          }
+        ]
+      },
+      {
+        "x": 15,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": 15,
+          "eta_actual_m": 0.26495498553407515,
+          "eta_analytic_m": 0.2590366158760844
+        },
+        "last_error_m": 0.005918369657990752,
+        "max_abs_error_m": 0.005918369657990752,
+        "rms_error_m": 0.002703054702585234,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": -0.005020061229632944
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": 0.00018768006895797384
+          }
+        ]
+      },
+      {
+        "x": 20,
+        "n": 66,
+        "last": {
+          "time_s": 0.6500000000000005,
+          "x_m": 20,
+          "eta_actual_m": 0.005171531954278663,
+          "eta_analytic_m": 0.00922023193492194
+        },
+        "last_error_m": -0.004048699980643278,
+        "max_abs_error_m": 0.007964737565181679,
+        "rms_error_m": 0.003289624298630615,
+        "early_errors": [
+          {
+            "t": 0.25000000000000017,
+            "error_m": -0.0014482049372119832
+          },
+          {
+            "t": 0.5000000000000003,
+            "error_m": -0.00772253456134564
+          }
+        ]
+      }
+    ],
+    "mass_budget_pct": {
+      "p95_abs": 0.000968210000404907,
+      "max_abs": 0.017736761910679487,
+      "last": -0.0003237488418657267
+    }
+  },
+  "same_phase_gauge_pairs": [
+    {
+      "x": [
+        -10,
+        10
+      ],
+      "max_difference_m": 0.0004534984728294944,
+      "last": {
+        "t": 0.6500000000000005,
+        "d": 0.0001480984848072353
+      }
+    },
+    {
+      "x": [
+        -5,
+        15
+      ],
+      "max_difference_m": 0.0005386013571424542,
+      "last": {
+        "t": 0.6500000000000005,
+        "d": 0.0004362974423735011
+      }
+    },
+    {
+      "x": [
+        0,
+        20
+      ],
+      "max_difference_m": 0.001140429867952264,
+      "last": {
+        "t": 0.6500000000000005,
+        "d": 0.0005910819839058945
+      }
+    }
+  ],
+  "configuration_evidence": {
+    "R5_geometry": "53200 orthogonalHEXA_8; everycelltouchesbothspanplanes; boundsx[-35,45],y[20,20.02],z[-22,8]; volume48m3; sixcorrectmappedboundaries.",
+    "R5_gauge": "Area/span30m andcalmreferenceeta≈1e−14m; actualinitialalpha equalsanalytic; Hcresttrough≈0.49975m.",
+    "physics": "FifthOrderVofWave,H0.5m,lambda20m,waterdepth24m,current18m/s; SECOND_ORDERdt1ms10inner; CPU-only; period0.8472673s.",
+    "bindings_audited": "Initialvelocity/inletvelocity/initialalpha/inletalpha/outletpressure/forcingwave explicit.",
+    "bindings_not_yet_explicitly_audited": "Topstaticpressure/backflowphaseandoutletbackflowphase,directionandallboundaryforcing/dampingflags; buildmacrocopyPropertiespreservesunspecifiedbaselineproperties."
+  },
+  "interpretation": [
+    "GlobalCFLmax0.454>interfaceCFL~0.109 provesCFLmaximumisoutside0.01<alpha<0.99 selection; doesnotlocatevelocitymaximumoridentifyphase.",
+    "Speedriseaboveanalyticinitial18.47m/s needslocalization; do not inferair/water orboundarycoordinatesfromscalarmonitoralone.",
+    "Noabruptcentralgaugefailure: maximumtheorydifference7.98mmthrough0.65s; incompleteperiodcannotestablishamplitude,phaseorreflectionaccuracy.",
+    "LargestBDF2massresidual0.0177368%occursat0.002s; subsequentphysicalmass+fluxbudgetsmall. Endpointnetfluxisnotconservationerror.",
+    "2400swallbudgetat~2.93wallseconds/stepmayterminatearound0.8s,shortofoneencounterperiod; wall_budgetisnotastabilityfailure."
+  ],
+  "checkpoint_diagnostics": [
+    "Zero-stepownedcheckpointaudit: independentargmaxcoordinatesforvelocityandCFL; atthosecellsrecordalpha,density,pressure,velocitycomponents,cellsizeandnearestboundary.",
+    "Separatemaxspeed/CFLforalpha<0.01,0.01<alpha<0.99,alpha>0.99andforforcingzone[-35,-15],interior[-15,25],damping[25,45].",
+    "Exportvelocity/pressure/alpha2Dfieldplusactualandanalyticvelocityerroratmatchingtime; identifyisolatedhotspotvsphysicalglobalacceleration.",
+    "Auditallboundaryconditionsandbackflowprofiles,top/outletpressureandforcing/dampingflagsandzoneextent; donotassumecopyPropertieshasdesiredvalues.",
+    "Assesspressureinitializationandoutletwavepressurecompatibilitywithdampingonlyifspatialdataimplicatesboundary/airzone; thisisahypothesis,notdiagnosis.",
+    "Keepcheckpoints0.25,0.5andfinal/guardstate;sourcesunchanged."
+  ],
+  "continuation_gates": [
+    "Finiteindependenthistoryandphasebounds; original50m/s/phase/timeguardsretained.",
+    "Explainorboundvelocityhotspotbeforelongerpropagation; no persistentgrowthortop/backflowmismatchleftunreviewed.",
+    "Comparegaugesovercompletecycles,actualvsanalyticamplitude/phase/mean,spatialattenuationandreflections; existing<1periodpilotinsufficient.",
+    "Nextcontrolledcontinuationusescheckpointandnewattemptwithoutreinitialization,afterspatialaudit; timestep/meshcomparisonifwaveerrorsgrow.",
+    "Calmfoilsettingsandselectedmeshagreementdonotcertifylongerwave-domainresolution."
+  ]
+}

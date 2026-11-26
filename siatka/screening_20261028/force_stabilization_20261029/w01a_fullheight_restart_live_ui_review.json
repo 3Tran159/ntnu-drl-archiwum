@@ -1,0 +1,40 @@
+{
+  "status": "PASS_BOUNDED_LIVE_PANEL_QA",
+  "case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "scope": "Read-only live panel review; not physical wave acceptance.",
+  "surfaces": [
+    "operational",
+    "professor"
+  ],
+  "widths": [
+    1920,
+    1360,
+    390
+  ],
+  "evidence": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/w01a_fullheight_restart_live_qa_20261030/qa.json",
+  "sticky_evidence": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/w01a_fullheight_restart_live_qa_20261030/sticky_viewport_review.json",
+  "checks": {
+    "case_isolation": "Exact fresh r3 case; data start=0, 33 startup samples from .0005 to .0165 s; no older case history or images.",
+    "old_restart_test_note": "The raw qa.json old_restart substring flag is a false positive from coefficient/axis numbers. Structural case/start/history checks pass.",
+    "full_height": "Evaluated inlet target H=.5; analytic reference period .8472673 s. No height ramp or calm-force wait.",
+    "stage": "Analysis origin remains null, no accepted cycle overlays or wave-force claims before measured arrival.",
+    "progress": "Rich startup, full-height and post-arrival bars retained. Timing estimates use measured current-attempt cost and are labeled planning rather than completion.",
+    "source_checkpoint": "Fresh zero-time input is identified as template. Completed checkpoint_startup_t0.020.sim is offered only after guarded_startup_completed acceptance.",
+    "layout": "Both surfaces at all widths: no page overflow or JS errors. Actual viewport test at all widths: no sticky navigation collision with heading/cards.",
+    "text": "Current full-height branch uses Initial-transient/pre-arrival, not ramp-phase language.",
+    "print": "First-six-page PDFs captured for both surfaces; existing dedicated print layout retained.",
+    "actions": "No CFD launch, stop, schedule, lock change or manual mutation endpoint invoked.",
+    "catalog": "Fixed: scoped wrapping and mobile cards. Six-view text Range containment checks and desktop/mobile/print visual review pass."
+  },
+  "screenshots": {
+    "desktop": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/w01a_fullheight_restart_live_qa_20261030/operational_1920_actual_viewport.png",
+    "mobile": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/w01a_fullheight_restart_live_qa_20261030/operational_390_actual_viewport.png",
+    "reviewed": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/w01a_fullheight_restart_live_qa_20261030/operational_1360_actual_viewport.png"
+  },
+  "latest_actual_viewport_time_s": 0.189,
+  "remaining": "None; catalog collision fixed and integrated wrapping visually verified in wave_arrival_ui_review_20261030.json.",
+  "final_original_copy_sha256": {
+    "professor": "26E18CE6E2FB17000325A322DDA84A1AED66E90390D0A0DBA66C32DB47F0AB71",
+    "dashboard": "491E039C605C5E93252D3194EFF80D23BDFECF9545FA28949280E8EB79B94332"
+  }
+}

@@ -1,0 +1,377 @@
+PAGE 1450
+GPGPU Functionality
+Only certain solvers in Simcenter STAR-CCM+ are compatible with running on GPGPUs. If you select a solver
+that is not GPGPU-compatible, the entire simulation runs on the CPU instead. Simcenter STAR-CCM+ warns you
+when it takes this fallback option.
+To avoid this fallback to the CPU, the command line option -require-gpgpu-compatibility can be
+added. When non-GPGPU-compatible solvers are active, this causes an input error to be issued at solver
+execution time instead of falling back to running on the CPU. In batch execution, this effectively stops the job.
+Although Simcenter STAR-CCM+ provides a warning when you select a solver that is not compatible with
+GPGPU, you are advised to check the following tables for solvers and models that are compatible, and only
+choose from those.
+Supported Solvers and Models
+There are two categories of GPGPU-compatible solvers and models:
+GPGPU-enabled solvers
+These solvers are fully ported to the GPGPU and perform all heavy computations on the GPGPU when a
+simulation runs in GPGPU mode.
+Hybrid GPGPU-compatible solvers
+For these solvers or models, although they are not yet ported to GPGPU operation, choosing them for a
+simulation does not negatively impact the overall performance of Simcenter STAR-CCM+ in GPGPU mode—
+nor do they detract from the utilization of the GPGPU. These solvers and models continue to run using the
+CPUs available to the simulation.
+Solver/Model GPGPU Enabled Hybrid GPGPU Compatible
+Boundary Interface Intersector ✓
+Gradients Model ✓
+Meshers ✓
+Passive Scalar Solver ✓
+Space/Metrics Models
+(for example, Three Dimensional model)
+✓
+Solid models
+Solid ✓
+Coupled Solid Energy ✓
+Segregated Solid Energy ✓
+Multi-Part Solid ✓
+Solid Shell Region ✓
+Time Solvers
+ Steady ✓
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1447
+
+PAGE 1451
+Solver/Model GPGPU Enabled Hybrid GPGPU Compatible
+ Implicit Unsteady ✓
+ PISO Unsteady ✓
+Adaptive Time-Step Models
+ Free-Surface CFL ✓
+ Smoothed CFL ✓
+ Melting-Solidification ✓
+ Free Surface Implicit Multi-Step ✓
+ Volumetric Source ✓
+Aeroacoustics Solvers
+ Acoustic Wave
+(used for the Acoustic Wave model and the
+Lighthill Wave model)
+✓
+ FW-H Steady Solver ✓
+ FW-H Unsteady Solver
+(used for the On-the-Fly FW-H model)
+✓
+ Post FW-H Solver ✓
+ Perturbed Convective Wave ✓
+ Sponge Layer / PDE Sponge Layer ✓
+Partitioning Solver ✓
+Coupled Flow Solver ✓
+Segregated Flow Solver ✓
+Segregated Species Solver
+(Requires that material properties do not
+include the following methods: Gas Kinetics
+(for Specific Heat), Mathur-Saxena
+Averaging (for Dynamic Viscosity), Binary
+diffusion coefficient (for Molecular
+Diffusivity), Component Molecular
+diffusivity (for Molecular Diffusivity),
+Kinetic Theory (for Molecular Diffusivity),
+Mathur-Saxena Averaging (for Thermal
+Conductivity))
+✓
+Segregated Energy Solver
+(Requires that all material properties use one
+of the following methods: Constant,
+✓
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1448
+
+PAGE 1452
+Solver/Model GPGPU Enabled Hybrid GPGPU Compatible
+Polynomial in T, Power Law, Sutherland's
+Law, Table(T), or Table(T,P))
+Coupled Energy Solver
+(Requires that all material properties use one
+of the following methods: Constant,
+Polynomial in T, Power Law, Sutherland's
+Law, Table(T), or Table(T,P))
+✓
+Turbulence Solvers
+ Spalart-Allmaras ✓
+ K-Epsilon ✓
+ K-Omega ✓
+ Reynolds Stress ✓
+ LES
+(For the Smagorinsky Subgrid Scale model, if
+Van Driest Damping is set to Original or
+Modified, LES is hybrid GPGPU-compatible)
+✓
+ DES ✓
+Transition Solvers
+ Gamma Transition ✓
+ GammaReTheta Transition ✓
+Solution Interpolation Solver ✓
+Wall Distance Solvers ✓
+Reacting Flow Solvers
+ Flamelet ✓
+Except when the Inert
+model is used.
+Real Gas Equation of State Models
+ Equilibrium Air ✓
+ IAPWS-IF97 (Steam) ✓
+ Peng-Robinson ✓
+ Redlich-Kwong ✓
+ Soave-Redlich-Kwong ✓
+ Modified Soave-Redlich-Kwong ✓
+ Van der Waals ✓
+Polynomial Density Equation of State Model ✓
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1449
+
+PAGE 1453
+Solver/Model GPGPU Enabled Hybrid GPGPU Compatible
+Surface-to-Surface Radiation Model ✓
+Partial Slip Models
+ Maxwell Slip ✓
+ Von Smoluchowski Slip ✓
+Participating Media Radiation (DOM) ✓
+Smoothed Particle Hydrodynamics (SPH)
+Solver
+✓
+Meshfree DEM ✓
+DEM Boundary Forces ✓
+DEM Particle Shape Models
+Spherical Particles ✓
+Coarse Grain Particles ✓
+Parcel Contact Coarse Grain ✓
+Composite Particles ✓
+Particle Clumps ✓
+DEM Contact Models
+Hertz Mindlin ✓
+Walton Braun ✓
+Linear Spring ✓
+User-Defined Contact Force ✓
+Rolling Resistance ✓
+Linear Cohesion ✓
+Artificial Viscosity ✓
+Particle Agglomeration ✓
+Simple Failure ✓
+Constant Rate Damage ✓
+Bonded Particles ✓
+Passive Scalar Transfer ✓
+Lagrangian Phase Models
+Erosion ✓
+User-Defined Body Force ✓
+Parcel Depletion ✓
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1450
+
+PAGE 1454
+Solver/Model GPGPU Enabled Hybrid GPGPU Compatible
+Passive Scalar ✓
+Residence Time ✓
+Lagrangian Phase Materials (only Gas, Liquid,
+Solid)
+✓
+Dispersed Multiphase (DMP) Model ✓
+DMP Phase Models
+ Segregated Fluid Temperature ✓
+ Flow Model ✓
+DMP Phase Interaction Models
+ Non-Equilibrium Condensation ✓
+ Drag Force ✓
+ Heat Transfer ✓
+ Interaction Length Scale ✓
+ Impingement (with Volume of Fluid (VOF)
+only)
+✓
+Segregated Multiphase Temperature ✓
+Mixture Multiphase (MMP) Model
+ Adaptive Interface Sharpening ✓
+ Large-Scale Interface Detection ✓
+MMP Phase Materials (Gas, Liquid, Multi-
+Component Gas, Multi-Component Liquid)
+✓
+Segregated MMP Solver ✓
+Phase Slip Velocity Solver ✓
+MMP Phase Interaction Models
+ Interphase Reaction ✓
+ Heat-Transfer Based Boiling/Condensation ✓
+ Wall Nucleate Boiling ✓
+MMP/VOF Phase Interaction Models
+ Interaction Area Density ✓
+ Interaction Length Scale ✓
+ Interface Turbulence Damping ✓
+ Schrage Boiling/Condensation ✓
+ Slip Velocity ✓
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1451
+
+PAGE 1455
+Solver/Model GPGPU Enabled Hybrid GPGPU Compatible
+ Surface Tension Force ✓
+ Phase Replacement ✓
+Two-Phase Equilibrium Interaction Models
+ Algebraic Slip ✓
+ Drift Flux ✓
+ Wall Boiling ✓
+VOF Waves Model ✓
+Volume of Fluid (VOF) Model
+Segregated VOF Solver ✓
+VOF Phase Materials (Gas, Liquid, Multi-
+Component Gas, Multi-Component Liquid)
+✓
+VOF Phase Models
+ Mass Error Rate ✓
+ Melting-Solidification ✓
+VOF Phase Interaction Models
+ Macro Porosity (fully coupled) ✓
+ VOF Boiling ✓
+ Rohsenow Boiling ✓
+ Transition Boiling ✓
+ Evaporation/Condensation Model ✓
+ Gas Dissolution ✓
+ Interface Momentum Dissipation
+Cavitation Models
+ Schnerr-Sauer (for single-component
+phases) or Multi-component Schnerr-Sauer
+(for multi-component phases)
+✓
+ Full Rayleigh–Plesset (for single-
+component phases)
+✓
+Virtual Disk Model
+ Body Force Propeller Method ✓
+ Blade Element Method ✓
+ 1D Momentum Method ✓
+ User Defined Method ✓
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1452
+
+PAGE 1456
+Note: Solution Initialization for SPH remain unsupported on the GPGPU and are processed on the CPU
+only.
+Note: For a simulation using Meshfree DEM, all GPGPU simulations are supported on a single GPU, and all
+boundaries within the simulation must be a Wall type. As injectors are unsupported for GPGPU, it is
+recommended to inject all particles within the first few time steps to avoid a drop in performance.
+Motion
+For motion models, the GPGPU functionality is as follows:
+Model GPGPU Enabled Hybrid GPGPU Compatible
+DFBI Motions:
+DFBI Meshfree ✓
+DFBI Body Couplings (Except for
+body coupling type Contact)
+✓
+Rigid Motions :
+Rotation/ Direct Rotation ✓
+Translation ✓
+Rotation and Translation ✓
+Reports
+A certain set of reports is enabled on the GPGPU when those reports are monitored during solution iteration.
+These reports are GPGPU-enabled only on regions, boundaries, and parts, but not on derived parts. Reports
+that are not GPGPU-enabled are evaluated on the CPU (such as reports based on user-defined field functions).
+The following reports are GPGPU-enabled or can be evaluated on the CPU in GPGPU runs without significant
+performance penalty:
+Force/Moment
+Force/Moment Coefficient
+Free Surface Quality
+Min/Max
+Solver Elapsed Time
+Sum
+Surface/Volume Integral
+Surface/Volume Average
+Surface/Volume Standard Deviation
+Surface/Volume Uniformity
+Mass Averaged
+Mass Flow
+Mass Flow Averaged
+Minimum
+Maximum
+Element Count
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1453
+
+PAGE 1457
+Particle Average
+DEM Force
+DEM Moment
+For SPH simulations, ensure that each part requiring Force/Moment reports has its own dedicated boundary.
+Avoid using a single boundary that includes all parts, as this method is computationally demanding when
+using GPGPU.
+For meshfree DEM simulations, reports with a multiphase interaction input are not supported.
+Interfaces
+The following interface types are GPGPU-enabled and perform all heavy computations on the GPGPU when a
+simulation runs in GPGPU mode, with either in-place or periodic topology:
+Baffle
+Blower
+Contact
+Contact-Mode Direct Region Interface
+Explicit Mapped Contact
+Fan
+Fully-Developed
+Implicit Mapped Contact
+Internal
+Mixing-Plane: Implicit
+Porous Baffle
+Region-Mode Direct Region Interface
+Sliding Mesh Application
+A sliding mesh application indicates a moving object application where a relative movement happens between
+two sides of the interface. This relative movement causes a change of interface connectivity and requires an
+interface intersection after each time step.
+The sliding mesh application is hybrid GPGPU-compatible. Boundary interface intersector runs on CPU. The
+time spent running the intersector on the CPU is amortized by the full GPGPU utilization over the full course of
+the simulation.
+To improve the speed of boundary interface intersector in GPGPU mode, you are advised to use the fastest
+connectivity type—metrics-based method. See Adjusting the Interface Settings (Metrics-Based Method).
+Field Functions
+Primitive, derived (for example, Velocity Magnitude), and user-defined field functions are enabled for GPGPU
+computing. Additionally, any field monitors and field histories in the simulation are evaluated on the GPU
+given that the field function inputs are GPGPU-enabled. While almost all user-defined field functions are
+evaluated on the GPU, some user-defined field functions (such as those that contain table interpolation) are
+still evaluated on the CPU. However, unlike solvers, they are not a cause for full CPU fallback for the entire
+simulation run. Evaluating field functions on a CPU in a GPGPU simulation run can cause a performance
+penalty.
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1454
+
+PAGE 1458
+Running Simulations with GPGPU
+Running Simcenter STAR-CCM+ simulations with GPGPU requires that you activate this option when launching
+the server. In general, you assign at least the same number of CPU cores as the number of GPGPU cards you
+intend to use.
+Ensure that the GPGPU hardware is supported for use by Simcenter STAR-CCM+.
+Some general principles to observe are:
+• To use GPGPU in simulations with algebraic multigrid (AMG), it is advised not to use F Cycle or W Cycle
+as Cycle Type as this can impact performance. For details about the AMG cycle types, see AMG Linear
+Solver Reference.
+• For optimal performance, it is important to allocate a reasonable amount of work to the GPGPU in order
+to achieve high occupancy without exceeding its memory limits. A typical estimate for a suitable problem
+size is 1.3 GB of GPGPU memory per 1,000,000 cells for trimmed single precision runs.
+• Meaningful error messages are not always generated when exceeding the GPGPU memory, hence
+caution is advised. On Windows, an error message may not be shown at all as GPGPU memory can
+overflow into system RAM. The simulation continues running, but with severely degraded performance.
+• To monitor the GPGPU memory usage during the course of a simulation run, you can create a GPGPU
+Resident Memory Report. For more information, see Memory Report.
+• The number of CPU processes must be at least equal to the number of GPGPU cards selected for use on
+the host machine. Otherwise, the number of GPGPUs utilized is restricted to the number of CPU processes
+assigned.
+• Some GPGPU cards consist of multiple logical GPGPUs. For purposes of Simcenter STAR-CCM+, each
+logical GPGPU is treated as an independent GPGPU card.
+• If all operations in the simulation are GPGPU enabled, assign the same number of CPUs as the number of
+GPGPU cards. This helps to avoid the performance penalties associated with GPGPU oversubscription.
+• If some operations present run on the CPU, consider assigning a greater number of CPUs than the
+number GPGPU cards to avoid poor performance when running those operations. In this case, you are
+advised to set the number of CPU processes to a multiple of the number of GPGPU cards being used.
+Otherwise, performance issues can occur due to GPGPU load imbalance. When this occurs,
+Simcenter STAR-CCM+ issues a warning on the command line.
+• If you are using NVIDIA GPUs and the number of CPU processes specified exceeds the number of GPGPU
+cards being used on a host, you must employ the CUDA Multi-Process Service (MPS). This service is
+invoked by default. For more information, see Using MPS.
+The following table shows the memory usage for a 5-million-cell, constant-density pipe flow simulation with a
+two-equation turbulence model on a single GPU card:
+Type of Simulation Precision Polyhedral Mesh (GB/
+million cells)
+Trimmed Mesh (GB/
+million cells)
+Segregated Flow Mixed 1.5 1.25
+Segregated Flow & Energy Mixed 1.75 1.5
+Coupled Flow Mixed 3 2.5
+Coupled Flow & Energy Mixed 3.75 3
+Simcenter STAR-CCM+ 2602  |  User Guide
+SIEMENS DIGITAL INDUSTRIES SOFTWARE 1455

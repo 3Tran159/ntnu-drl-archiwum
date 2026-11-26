@@ -1,0 +1,55 @@
+LATEST VERIFIED STATE - 2026-10-30T01:41:59.184868+01:00
+R12is theonlycurrentGPUcampaign; allR11andCPUaudits/inputpreparationsfinished. Earlierhandoverpreserved inhandover_history_20261030_014159.txt. Inspectactualstate.
+
+CURRENT HANDOVER - 2026-10-30T01:20:43.483365+01:00
+Read actual files/processes/locks before every launch. Preserve every source and attempt; no duplicate or restarted completed controllers. Prior handover history: handover_history_20261030_012043.txt
+
+PRIORITIES AND SCOPE
+1. Numerical configuration, 2. supported lightest mesh, 3. original calm/wave cases, 4. bounded extras.
+Maximum mesh M15. Current vertical domain is fixed z=-22..8m, waterline2m: water depth24m andair6m. U18m/s,foilsubmergence2m,geometry/angle retained. Every wave uses FifthOrderVofWave. Historical16m instructions are superseded.
+Own GPU campaign sequential under root queue.lock. Modest CPU preparation may coexist after resource checks. New large files onE. Do not touch separateHF_012_C003_regular_waves. Never expose licensing/service credentials.
+
+CALM TEMPLATE SUPPORTED
+M09,214908cells,SO1ms10inner. selected_mesh_decision.json and matched_endpoint_results.json hold accepted evidence. M09 vsM07: CD+0.466698%,CL-0.164252%; vsM08:-0.025574%,+0.016736%,common1.840-2.040s. Selected halfdt changesCD-0.00242319%,CL+0.00145333%. Practical mesh/time support, notformalGCI. HistoricalFO,first-settledSO,matchedSO remain separate.
+Force settling adjacent nonoverlapping0.2s means bothchange<0.5%,stopfirstpass; newsettingshistory>=0.4s. Meshagreement bothwithin1% againsttwo component-wise finercomparablemeshes. P95y+~.800,>99.88%area<1,localizedTEmax~253.6; distinguishp95/max. Calm10innerdoesnotestablishwave10inner.
+No finalwave-force admission.
+
+WAVE NUMERICS
+R4 ENVIRONMENTALoutlet+SLIPbed completed1.2s SO1ms10inner; finite shortpilot,sourceunchanged. OldSTATICoutletCPU r2/GPU r3 guardfailures preserved; nevercontinuefailedfields. R4maxspeed24.373m/s,gaugesRMS3.61-4.34mm. FourBDF2budgetspikes max0.01451936%inlet exceed unchanged0.01%reviewgate.
+R6 20inner peak0.0113353% fails. R8 halfdt10inner peak0.0166372% across ALLhalfsteps fails. Smallgaugechanges do notclearbalancegate. Completedcontrollers15556,36724,29860 mustnotrestart. R5/R7/R9 longerprototypes UNLAUNCHED/BLOCKED.
+
+Zero-step reportaudit33140 FINISHED. wave_report_definition_review.json proves unsmoothedphysicalreports,idealizationoff,independentvaluesexactlyequaloriginalhistory. InstalledSiemens theory retainsBDF2 VOF accumulation; waveforcingmomentumonly,no phasesource. FaceDensityRecon FIRST_ORDER isinternal-faceoption,notproof ofbudgetcause.
+R10reporter-only replay35120 FINISHED250steps to0.750. Nativephaseerrors agreewithBDF2+FaceFlux to5.78e-9percentagepoints; phaseboundaryfluxsum agreeswithmixture to1.64e-11kg/s. Nativeabsolutephasepeak0.01438646%,legacy0.01435556%,bothfail. R4replaygaugemaxdifference0.0479mm. This supports actualphase iterationresidual, NOTareportingartifact. No needtoredefinebudget orrelaxgate.
+Primary evidence professor_vof_temporal_budget_review.json,professor_phase_flux_budget_review.json,wave_phase_budget_probe_r10_review.json. NativeMassConservationError iskg/step; dividebydt. MassFlowRatephase kg/s positiveoutflow; noarea multiplication. MassFluxphase usesoppositesign andareaunits,donotmix.
+
+CURRENT GPU - R12, REPORTING ONLY
+run_wave_linear_trace_r12.py controller39344 owns rootqueue.lock andwave_linear_trace_r12.lock.
+Case E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12.
+R4checkpoint_t0.500 source, SO1ms10inner UNCHANGED,150steps to0.650. Nativephase reports explicitlymonitored at everyinneriteration (frequency1), exportCSVandverify~1500samples. VOF/pressureAMG LOWverbosity onlyforupcomingtimes0.605-0.635, otherwiseNONE. No numerical/physicschange. ReadsbaselineAMGtol.1,maxcycles30,epsilon0; phase/speed/time/resourceguards retained. Inspectactualprogress/process beforelaunchinganything, no duplicates.
+Aftercompletionchecknative_inner_sampling_audit.json, native_water/air_per_inner.csv, amg_cycle_counts.csv andredactedstar.log. DetermineVOF/pressureactiveAMGstoppingcondition: relative.1tol,30cyclecap,orabsoluteepsilon0. Tightenonlydemonstratedlimitingcontrol inmatchednewattempt; do not changeURF/CFL/AMGsimultaneously. FIRSTread professor_wave_mass_plateau_review.json andwave_solver_controls_review.json. Clippingnotproved; highCFLnotseen; no automaticbudgetredefinition.
+
+COMPLETED R11 / SOLVER AUDIT
+R11controller36136 FINISHED250steps0.750,sourceunchanged. Actual logcountersprove40innerEVERYstep. Nativeabsphasepeak0.0111712387%,legacy0.0111449892%,native/BDF2agreement4.85e-9percentagepoints;short_mass_gate_passfalse. Gauge40minus10maxdifference0.346148mm. Analyze_wave_inner40_phase_probe_r11.py alreadyran; resultwave_inner40_phase_probe_r11_review.json. No40innerlongertrial.
+CPUzero-step solveraudit41084 FINISHED,sourceunchanged. VOF/pressure/velocityAMG relative tolerance0.1,maxcycles30,epsilon0; VOFURF.9,pressureURF.2,velocityURF.5,SIMPLE,0nonorthogonalcorrectors. Native reportdiagnosticconfirmed; no needtochangeguard.
+DocsdescribeVOFcorrections atinneriterations. Nonconvectiveterms onceperglobalstep doNOTimplyonce-per-step VOFsolve. CumulativeAMGcounts aloneareinsufficient. R12tracesactualsequencing.
+R10reporter-only35120 andM10CPU39192/36760/33444 allFINISHED. Do notrestart.
+
+M10 WAVE GRID
+M10_FS020_r1 shortdomain build33444 FINISHED282379cells (+31.395%vsM09),zeroFlowSteps,sourceunchanged. professor_m10_wavegrid_review.json:856foiledges/prisms preservedtonumericalprecision; nominalFS28.5714->20mm refinesBOTHx/zincore; actualmediandx30.689->21.812mm,dz31.508->19.966mm,dzp9539.264->27.420mm. PriorM10LE/TEidea unbuilt.
+run_wave_fs_extension_r2.py36760 FINISHED317277cells on80m domain,all282379sourcepolygons/coordinatespreserved,geometry/single-span/qualitypass. Result wave_fs_extension_result.json. Case E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2.
+Remotehorizontalspacing<=.2m retained,verticalrows~.020m inherited: anisotropicremote strips,not20mmisotropicremotegrid.
+R1extension40708failedbeforemesh/STAR onwrongfilename,folder/resultpreserved; r2usedverifiedmesh.CGNS. Do notrerun either.
+
+M10 INPUT PREPARATION FINISHED
+run_foil_wave_m10_setup_r1.py --run controller39192 FINISHED both copies at01:21:19; CPUlockreleased. Previouslockpurpose 'Paired M10 foil calm/W01 zero-step CPU1 preparation'.
+BothC01_W20L4_M10_FS020_env_setup_r1 andW01_W20L4_M10_FS020_env_setup_r1 are prepared,317277cells,zeroFlowSteps,sourceunchanged. Source unchanged,explicitmatchedENVIRONMENTALoutlet,SLIPbed,STATICtop,20minletforcing/outletdamping,allotherwaveflagsNO. W01FifthOrderH.5,L20,H24,firstfrontfalse. InputSO1ms10inneronly; actualwavechoicepending. Inspect wave_fs_case_preparation_state/results.json andactualprocess; do notduplicate.
+OriginalM09longdomain246885cellpairedinputs also remainpreserved. TheseareINPUTS,notvalidatedforcecases.
+
+WAVE ACCEPTANCE / NEXT
+No-foilR5geometry53200cells,dx.2,dz.025FS,20mmspan,4lambda80m. WaveT~.84726732s,forcing-35..-15,core-15..25,damping25..45.1.2s<coretraversal1.695s: notreflectionvalidation.
+R4whole-domain+9.53mmequivalentinventory versusundampedwave includesdampingzonemismatch,notcoreleveldrift/provedmassleak. Needzonalactual/undamped/flat references andequalphasecyclecomparison. Corefirstcyclemeanerrors-1.44..+1.18mm; startupincluded.
+After configuration/propagation/FS/dtgates: matchedC01,W01H.5L20,W02H.5L30,requestedW01 3lambda/4lambda sensitivity.8-10encounterperiods,whole settledcycleaverages,checkpoints. Horizontal4lambda domains,newgeometry/settings requirematchedcalm. ThenboundedW03.25/20,W04.75/20,W05.25/30,W06.75/30,W07.5/10,W08.5/40. LowerHgridchanges needmatchedH.5baseline.
+
+PRESENTATION
+English main dashboard.html andprofessor_dashboard.html inparentfolder shareJSONthroughupdate_status.py. Keepcurrentcases/reviews visible; noacceptanceclaims untilgatespass. SeparatehistoricalFO,firstsettledSO,matchedSO,originalM04 vscontinuations. Show actualmeshchanges,pressure/viscousFx,costs,simlinks,acceptedfields+provenance,experimenttree. LatestcompleteQA m10_native_lineage_ui_review.json:1920/1360/390,19pageprint. Read currentagentQA fornewM10/R11 panels. Test1920/1360/390andprintafterUIedits. Privatemonitorstaysprivate.
+Keepthishandover/plans/automationcurrent. Userauthorizedindependentdecisions; nooptionalquestions. Stayquietunlessmeaningfulcompletion/supportedresult/failure requiringuseraction.

@@ -1,0 +1,9 @@
+# Evening decision — 2026-11-03T17:25:08.642551+01:00
+
+1. Actual localstate: HOLD / DAY_CONTINUATION.
+2. SEALED0: ACCEPTED_FOR_SEALED_EXPLORATION_ONLY; CL=0.34706935133271744,CD=0.005073290890123012,Mh=-562.0368838314254Nm/m. OldHOLDs preserved. Explicit native-normalizationreview is separate from gridvalidation.
+3. SEALED+2: NUMERICAL_POC_STABILIZED_NOT_VALIDATED; kinematics: HOLD; active-flow smoke: NOT_RUN. Orbitalfield has analytic tests only; W0/WA2forcecomparison is NOT available.
+4. Main hypothesis: reliable localphase andmesh motion first; force optimization afterwards. Gap2.5mm staysHOLD after a single boundedexisting-dataaudit.
+5. Recommended nextsafeoption is N0 only ifkinematics andflow smoke pass and theirresiduals are reviewed. N1requiresnativefielddiagnostic;N2requiresW0+WA2readiness. VOFhasno ready model and is not an overnightcandidate.
+
+Night is NOT authorized. User selects direction around20:30–20:45. No overnightjob is started automatically. W04priority remains even atnight. Source oftruth:DAY_STATUS.json andEVENING_DECISION.json. Runtimeestimates remain unavailable untilactualURANSsmoke.

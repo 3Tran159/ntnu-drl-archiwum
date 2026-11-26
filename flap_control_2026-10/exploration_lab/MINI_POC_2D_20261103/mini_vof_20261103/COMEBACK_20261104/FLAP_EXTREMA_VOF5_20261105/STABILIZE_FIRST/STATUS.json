@@ -1,0 +1,53 @@
+{
+  "status": "HOLD",
+  "stage": null,
+  "source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_144455\\AF_FIRST_STEP.sim",
+  "start_s": 0.10620000000000099,
+  "motion_authorized": false,
+  "checkpoint_sha256": "e64b8facf3d5fc5fad8fffe0132a962490d2b39edf73f38fba24a494a7b283cb",
+  "checkpoint_interval_s": 0.005,
+  "initial_checkpoint_interval_s": 0.002,
+  "cpu_indices": [
+    22,
+    23
+  ],
+  "operation": "FIXED_GATE_NOT_PASSED",
+  "completed_fixed_steps": 501,
+  "seeded_samples": 251,
+  "fixed_result": {
+    "status": "HOLD_STOP_OR_DEADLINE",
+    "samples": 1580,
+    "startup_s": 123.82080989999668,
+    "solver_step_median_s": 1.7577515,
+    "solver_step_mean_s": 1.890367245015873,
+    "end_to_end_s": 5765.063903399998,
+    "dt_s": 0.0002,
+    "checkpoint_sha256_input": "e64b8facf3d5fc5fad8fffe0132a962490d2b39edf73f38fba24a494a7b283cb",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_151256\\FINAL.sim",
+    "checkpoint_sha256": "23aa5fe5ef977701e6e9cbd929fb0c71062aa0eed0a598ce247c83a301a2299f",
+    "state": {
+      "foil": true,
+      "steps": 1580,
+      "time_s": 0.42219999999998614,
+      "solver_seconds": 2987.089878899998,
+      "residual_pass": true,
+      "reason": "",
+      "training_approved": false,
+      "amplitude_target": 0.0,
+      "status": "HOLD_STOP_OR_DEADLINE"
+    },
+    "transport_ok": true,
+    "training_approved": false,
+    "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\STABILIZE_FIRST\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_151256",
+    "stabilization": {
+      "CL_drift_fraction": 0.02063610259441066,
+      "stable_windows": 0,
+      "time_s": 0.4059999999999879,
+      "CD": 0.006081425926570334,
+      "CD_range_fraction": 0.03180782900052084,
+      "CD_drift_fraction": 0.03210685320063559,
+      "CL": 0.28950956547242135,
+      "CL_range_fraction": 0.01864809491239092
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "synthetic_fixture_only": true,
+  "pass": true,
+  "checks": {
+    "one_complete_with_no_deviation": true,
+    "two_complete_before_four": true,
+    "original_cycle_numbers": true,
+    "four_latest_complete": true,
+    "current_partial_excluded": true,
+    "fixed_phase_raw_CD_delta": true,
+    "fixed_phase_raw_CL_delta": true,
+    "raw_CD_RMS_and_max": true,
+    "raw_CL_RMS_and_max": true,
+    "phase_drift_not_realigned": true,
+    "gap_excludes_full_cycle": true,
+    "acceptance_not_synthesized_before_four": true
+  },
+  "two_cycle_raw": {
+    "CD": {
+      "rms": 0.00010000000000000015,
+      "max_abs": 0.0001000000000000046
+    },
+    "CL_total": {
+      "rms": 0.0030000000000000014,
+      "max_abs": 0.003000000000000058
+    }
+  },
+  "phase_drift_raw_CD_RMS": 0.00011378411341006933
+}

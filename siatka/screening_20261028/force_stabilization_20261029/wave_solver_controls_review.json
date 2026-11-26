@@ -1,0 +1,66 @@
+{
+  "updated_at": "2026-10-30T01:41:59.184868+01:00",
+  "source": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_R4_t0p750_solver_controls_audit_r1",
+  "zero_steps": true,
+  "source_unchanged": true,
+  "VOF_AMG": {
+    "class": "star.common.AMGLinearSolver",
+    "getEpsilon": 0.0,
+    "getTotalNumberCycles": 2633,
+    "getTotalSolveElapsedTime": 0.0,
+    "getSelectedSmootherOption": {
+      "class": "star.common.EnumeratedOptionInput",
+      "getSelected": "GAUSS_SEIDEL"
+    },
+    "getSelectedCycleOption": {
+      "class": "star.common.EnumeratedOptionInput",
+      "getSelected": "V_CYCLE"
+    },
+    "getMaxCycles": 30,
+    "getConvergeTol": 0.1,
+    "getVerbosityEnum": "NONE",
+    "getPresentationName": "AMG Linear Solver"
+  },
+  "pressure_AMG": {
+    "class": "star.common.AMGLinearSolver",
+    "getEpsilon": 0.0,
+    "getTotalNumberCycles": 10674,
+    "getTotalSolveElapsedTime": 0.0,
+    "getSelectedSmootherOption": {
+      "class": "star.common.EnumeratedOptionInput",
+      "getSelected": "GAUSS_SEIDEL"
+    },
+    "getSelectedCycleOption": {
+      "class": "star.common.EnumeratedOptionInput",
+      "getSelected": "V_CYCLE"
+    },
+    "getMaxCycles": 30,
+    "getConvergeTol": 0.1,
+    "getVerbosityEnum": "NONE",
+    "getPresentationName": "AMG Linear Solver"
+  },
+  "velocity_AMG": {
+    "class": "star.common.AMGLinearSolver",
+    "getEpsilon": 0.0,
+    "getTotalNumberCycles": 7899,
+    "getTotalSolveElapsedTime": 0.0,
+    "getSelectedSmootherOption": {
+      "class": "star.common.EnumeratedOptionInput",
+      "getSelected": "GAUSS_SEIDEL"
+    },
+    "getSelectedCycleOption": {
+      "class": "star.common.EnumeratedOptionInput",
+      "getSelected": "FLEX_CYCLE"
+    },
+    "getMaxCycles": 30,
+    "getConvergeTol": 0.1,
+    "getVerbosityEnum": "NONE",
+    "getPresentationName": "AMG Linear Solver"
+  },
+  "VOF_URF": 0.9,
+  "pressure_URF": 0.2,
+  "velocity_URF": 0.5,
+  "scheme": "SIMPLE",
+  "nonorthogonal_correctors": 0,
+  "next": "Read R12nativeperinner/AMGcycletrace before selectingone numericallysupportedcontrolchange."
+}

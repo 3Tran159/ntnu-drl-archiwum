@@ -1,0 +1,69 @@
+[
+  {
+    "id": "M04_until_settled_r2",
+    "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r1\\final.sim",
+    "start": 0.102,
+    "cells": 138468,
+    "initialize": false,
+    "prior_history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M04_until_settled_r1\\history.csv",
+    "dt": 0.001,
+    "inner": 20,
+    "order": "FIRST_ORDER",
+    "target": 10,
+    "wall_budget_s": 10800,
+    "termination": "First evaluation with both adjacent 0.2 s mean changes below 0.5%; no extra hold window"
+  },
+  {
+    "id": "M05_until_settled_r1",
+    "source": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M05\\mesh.sim",
+    "start": 0,
+    "cells": 182527,
+    "initialize": true,
+    "dt": 0.001,
+    "inner": 20,
+    "order": "FIRST_ORDER",
+    "target": 10,
+    "wall_budget_s": 10800,
+    "termination": "First evaluation with both adjacent 0.2 s mean changes below 0.5%; no extra hold window"
+  },
+  {
+    "id": "M06_until_settled_r1",
+    "source": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M06\\mesh.sim",
+    "start": 0,
+    "cells": 251605,
+    "initialize": true,
+    "dt": 0.001,
+    "inner": 20,
+    "order": "FIRST_ORDER",
+    "target": 10,
+    "wall_budget_s": 10800,
+    "termination": "First evaluation with both mean changes below 0.5%"
+  },
+  {
+    "id": "M07_until_settled_r1",
+    "source": "F:\\ntnu\\mesh_screening_20261028\\quasi2d_012_20261029\\M07\\mesh.sim",
+    "start": 0,
+    "cells": 481635,
+    "initialize": true,
+    "dt": 0.001,
+    "inner": 20,
+    "order": "FIRST_ORDER",
+    "target": 10,
+    "wall_budget_s": 10800,
+    "termination": "First passing evaluation of both mean changes below 0.5%"
+  },
+  {
+    "id": "M08_until_settled_r3",
+    "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M08_startup_r2\\final.sim",
+    "start": 0.020000000000000014,
+    "initialize": false,
+    "cells": 254989,
+    "dt": 0.001,
+    "inner": 20,
+    "order": "FIRST_ORDER",
+    "target": 10,
+    "wall_budget_s": 10800,
+    "prior_history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\M08_startup_r2\\history.csv",
+    "termination": "First passing adjacent 0.2 s means below0.5%"
+  }
+]

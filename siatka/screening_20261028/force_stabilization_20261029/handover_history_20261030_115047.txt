@@ -1,0 +1,12 @@
+CURRENT HANDOVER - 2026-10-30T11:12:46.273350+01:00
+User returned from meeting and explicitly resumed W01 from saved0.168s; dashboard publication freeze is lifted.
+Actual owned continuation: W01_W20L4_M10_FS020_cycles_r2, controller37216, server36856, launcher23564.
+Inspect actual processes, root queue.lock, wave_cycle_continuation_r2.lock and wave_foil_run_state.json before acting. Never duplicate or restart completed controllers. No reinitialization was used. Source checkpoint and native force fingerprint verified.
+Latest progress at this handover: 0.6880000000000005s. The active controller remains running.
+Period T=0.8472673206891129s. User says stop as soon as cycles repeat;10 is typical, NOT a minimum. Diagnostic cap20T. Authoritative early policy: wave_cycle_policy_current.json, wave_periodicity_current.json, watcher22748/watch_wave_periodicity_early.py. Last4 complete cycles are compared; missing initial partialcycle excluded. The already-running controller's legacy min10 assessment is superseded by watcher STOP markers. Do not silently restore10minimum.
+User accepts previously observed mass residual for exploratory waves. Historical0.01% remains diagnostic; all physical/resource/source guards retained. Repeatability is not force accuracy or final grid/time/reflection acceptance.
+Own STAR server stays open after normal saved stop. Existing37216 controller holds rootlock until server exits. Separate HF_012_C003_regular_waves must remain untouched.
+Both original dashboards and dashboard_work_20261030 copies now update via build_manual_dashboard_copy.py and local service36724 at http://127.0.0.1:8771/. Meeting versions archived. Do NOT restart old update_status/watch_dashboard_status writers; they would overwrite integrated panels.
+New requests in progress: defaultCD/CL, ETA to10T from measured recentcost, real saved-field sideview, followlatesttime unlessmanualpan. Autonomous all-wave controller+HTML+rescue handover requested but NOT yet ready/armed. Read autonomous_campaign_preparation_review.json for exact domain dependencies; L10 cannot use append-only extender. Never claim unprepared domainsready.
+Heartbeat automation remains paused. Local W01 controller/watchers operate independently of Work.
+Prior handover preserved in handover_history_20261030_111246.txt.

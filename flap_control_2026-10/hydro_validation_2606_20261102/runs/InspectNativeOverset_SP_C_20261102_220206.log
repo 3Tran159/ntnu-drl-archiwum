@@ -1,0 +1,31 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcbW90aW9uXzIwMjYxMTAyXzE5NDExOVxzdGVhZHlfaW5pdF8yMDI2MTEwMl8yMDA4MzRcc3RlYWR5X2luaXRfMjAyNjExMDJfMjAyNTMwXHN0ZWFkeV9pbml0XzIwMjYxMTAyXzIwMzA0Nlx1cmFuc19mcm9tX3N0ZWFkeV8yMDI2MTEwMl8yMDM2NTBcc3RhYmlsaXplXzIwMjYxMTAyXzIwMzY1MFxjaGVja3BvaW50LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 2988
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+Asked for 1 license of ccmppower and got 0
+Asked for 1 license of ccmppowerplus and got 0
+Failed to get all licenses needed for this job. Asked for 1 license of ccmppower|ccmppowerplus
+
+job aborted:
+[ranks] message
+
+[0] application aborted
+aborting MPI_COMM_WORLD (comm=0x44000000), error 8, comm rank 0
+
+---- error analysis -----
+
+[0] on THINKPAD-LUCJAN
+cmd aborted the job. abort code 8
+
+---- error analysis -----
+error: Design Simcenter STAR-CCM+ simulation completed
+Server process ended unexpectedly (return code 8)
+ Failed to get all licenses needed for this job. Asked for 1 license of ccmppower|ccmppowerplus
+

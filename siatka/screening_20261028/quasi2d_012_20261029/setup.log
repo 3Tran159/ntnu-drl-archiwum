@@ -1,0 +1,57 @@
+Starting local server: starccm+.bat -server -power -cpubind off -np 8 -podkey REDACTED -licpath 1999@flex.cd-adapco.com  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxxdWFzaTJkXzAxMl8yMDI2MTAyOVxzb3VyY2VfY29weS5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 2248
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 11:06:54 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\mesh_screening_20261028\quasi2d_012_20261029\source_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\mesh_screening_20261028\quasi2d_012_20261029\SetupQ2D.java
+F:\ntnu\mesh_screening_20261028\quasi2d_012_20261029\SetupQ2D.java:15: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);
+                                       ^
+
+Reading CAD model from Parasolid Transmit file: HF_012_constant_section.x_t
+Done importing surface: CPU Time: 0.06, Wall Time: 0.06, Memory: 227.39 MB
+Imported 1 CAD Parts 
+Tessellating part Q2D_foil using user-defined density.
+Mesh Operation Q2D_fluid complete. CPU Time: 0.56, Wall Time: 0.56, Memory: 238.36 MB
+Exporting surface to STL file: F:\ntnu\mesh_screening_20261028\quasi2d_012_20261029\q2d_boolean_m.stl in coded format.
+...done exporting.
+[Q2D] surface Q2D_foil.Faces
+[Q2D] surface Q2D_domain.top
+[Q2D] surface Q2D_domain.inlet
+[Q2D] surface Q2D_domain.outlet
+[Q2D] surface Q2D_domain.span_source
+[Q2D] surface Q2D_domain.span_target
+[Q2D] surface Q2D_domain.bottom
+java.lang.RuntimeException: ClientServerObjectManager: star.common.BoundaryManager_5454
+   ObjectName: DOMAIN.bottom
+   error: Named object "DOMAIN.bottom" does not exist in manager
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

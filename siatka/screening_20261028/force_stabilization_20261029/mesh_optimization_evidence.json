@@ -1,0 +1,721 @@
+{
+  "created_at": "2026-10-29T19:42:05.307903+01:00",
+  "geometry": {
+    "M06": {
+      "cells": 251605,
+      "total_source_area_m2": 1285.0842115912972,
+      "regions": [
+        {
+          "region": "Foil control",
+          "cells": 105057,
+          "cell_share_pct": 41.754734603843325,
+          "area_m2": 4.204752311570787,
+          "dx_extent_m": {
+            "p05": 0.0028052829653052004,
+            "p50": 0.008143451755915798,
+            "p95": 0.011688541421161958,
+            "max": 0.014701447482613775
+          },
+          "dz_extent_m": {
+            "p05": 0.00013504583350975875,
+            "p50": 0.008262367928965175,
+            "p95": 0.011829270109008416,
+            "max": 0.014822329768405917
+          },
+          "sqrt_area_m": {
+            "p05": 0.000127125860146709,
+            "p50": 0.007171517112934124,
+            "p95": 0.009312689833469326,
+            "max": 0.011364618528923577
+          }
+        },
+        {
+          "region": "Free-surface control",
+          "cells": 50452,
+          "cell_share_pct": 20.052065737962284,
+          "area_m2": 34.26947054858341,
+          "dx_extent_m": {
+            "p05": 0.023271922698431702,
+            "p50": 0.031041992112637473,
+            "p95": 0.03961836791187001,
+            "max": 0.045593668522204034
+          },
+          "dz_extent_m": {
+            "p05": 0.023726654591286988,
+            "p50": 0.031389267144006805,
+            "p95": 0.03919046939718718,
+            "max": 0.04681855373971522
+          },
+          "sqrt_area_m": {
+            "p05": 0.021106425935543554,
+            "p50": 0.025848049338531083,
+            "p95": 0.030948236063492767,
+            "max": 0.036417258186883524
+          }
+        },
+        {
+          "region": "Protected wake corridor",
+          "cells": 1339,
+          "cell_share_pct": 0.532183382683174,
+          "area_m2": 8.444021725328753,
+          "dx_extent_m": {
+            "p05": 0.010626071531059988,
+            "p50": 0.03448653525629064,
+            "p95": 0.1686708985565099,
+            "max": 0.20822387646712937
+          },
+          "dz_extent_m": {
+            "p05": 0.009776959401608085,
+            "p50": 0.0344904976284684,
+            "p95": 0.1779396207704509,
+            "max": 0.2117143915741903
+          },
+          "sqrt_area_m": {
+            "p05": 0.008693281151181596,
+            "p50": 0.02882567813192785,
+            "p95": 0.1408102940245993,
+            "max": 0.16083088051888478
+          }
+        },
+        {
+          "region": "Remote water z < -3m",
+          "cells": 49064,
+          "cell_share_pct": 19.500407384590925,
+          "area_m2": 814.027374970741,
+          "dx_extent_m": {
+            "p05": 0.11156250000000156,
+            "p50": 0.1539411749408104,
+            "p95": 0.21430390891149287,
+            "max": 0.24018797068309894
+          },
+          "dz_extent_m": {
+            "p05": 0.11490472196152393,
+            "p50": 0.15132698416843482,
+            "p95": 0.19252682136801527,
+            "max": 0.23387602372836724
+          },
+          "sqrt_area_m": {
+            "p05": 0.10088055958685918,
+            "p50": 0.12614194913528815,
+            "p95": 0.1612054220921251,
+            "max": 0.18145300835335795
+          }
+        },
+        {
+          "region": "Remote air z >3.2m",
+          "cells": 13009,
+          "cell_share_pct": 5.170405993521592,
+          "area_m2": 205.61215193008704,
+          "dx_extent_m": {
+            "p05": 0.11715059587830404,
+            "p50": 0.15425075352388973,
+            "p95": 0.19290387607153675,
+            "max": 0.22101658126562995
+          },
+          "dz_extent_m": {
+            "p05": 0.11480044191296078,
+            "p50": 0.14634658910083065,
+            "p95": 0.18647841439172916,
+            "max": 0.23576850378807546
+          },
+          "sqrt_area_m": {
+            "p05": 0.09888564610366575,
+            "p50": 0.12492835628158527,
+            "p95": 0.14922588313428617,
+            "max": 0.17622756635759354
+          }
+        },
+        {
+          "region": "Other middle / transition",
+          "cells": 32684,
+          "cell_share_pct": 12.990202897398701,
+          "area_m2": 218.52644010498625,
+          "dx_extent_m": {
+            "p05": 0.012845364152417726,
+            "p50": 0.06282992671538401,
+            "p95": 0.1910174760372341,
+            "max": 0.23232182856690287
+          },
+          "dz_extent_m": {
+            "p05": 0.012934929176955734,
+            "p50": 0.06240675221028069,
+            "p95": 0.17008536212405842,
+            "max": 0.21975074021197205
+          },
+          "sqrt_area_m": {
+            "p05": 0.010754585427935828,
+            "p50": 0.052263710136965874,
+            "p95": 0.13901599310217838,
+            "max": 0.1792666194012125
+          }
+        }
+      ]
+    },
+    "M07": {
+      "cells": 481635,
+      "total_source_area_m2": 1285.084210310068,
+      "regions": [
+        {
+          "region": "Foil control",
+          "cells": 187989,
+          "cell_share_pct": 39.031424211280324,
+          "area_m2": 4.204902007778731,
+          "dx_extent_m": {
+            "p05": 0.0020115435939258323,
+            "p50": 0.006134034050330861,
+            "p95": 0.008455612481159225,
+            "max": 0.01075650912691728
+          },
+          "dz_extent_m": {
+            "p05": 0.00011547478351839335,
+            "p50": 0.006044590964709884,
+            "p95": 0.00846612313004926,
+            "max": 0.01055726976872906
+          },
+          "sqrt_area_m": {
+            "p05": 9.622586573351134e-05,
+            "p50": 0.005284703987896888,
+            "p95": 0.0066549131494979315,
+            "max": 0.008194269666145426
+          }
+        },
+        {
+          "region": "Free-surface control",
+          "cells": 98686,
+          "cell_share_pct": 20.489789986192864,
+          "area_m2": 34.27629337943603,
+          "dx_extent_m": {
+            "p05": 0.016493509023187997,
+            "p50": 0.023019671593464075,
+            "p95": 0.02862742445862132,
+            "max": 0.0346528363460985
+          },
+          "dz_extent_m": {
+            "p05": 0.01689294173635769,
+            "p50": 0.022309906814539038,
+            "p95": 0.0283119060384045,
+            "max": 0.03402494666417821
+          },
+          "sqrt_area_m": {
+            "p05": 0.015294368279186506,
+            "p50": 0.018452585378771223,
+            "p95": 0.022064918776522023,
+            "max": 0.026090465667025754
+          }
+        },
+        {
+          "region": "Protected wake corridor",
+          "cells": 2067,
+          "cell_share_pct": 0.42916316297611257,
+          "area_m2": 8.331704188898984,
+          "dx_extent_m": {
+            "p05": 0.007519416504861853,
+            "p50": 0.0320864362779516,
+            "p95": 0.13448601470647323,
+            "max": 0.1561642714943341
+          },
+          "dz_extent_m": {
+            "p05": 0.006989152342896659,
+            "p50": 0.03528084535075143,
+            "p95": 0.13658770244463964,
+            "max": 0.1531682470317733
+          },
+          "sqrt_area_m": {
+            "p05": 0.00606744740128349,
+            "p50": 0.027969389826957364,
+            "p95": 0.10885559685744264,
+            "max": 0.12484789102261842
+          }
+        },
+        {
+          "region": "Remote water z < -3m",
+          "cells": 113510,
+          "cell_share_pct": 23.567639394977526,
+          "area_m2": 814.0532329505166,
+          "dx_extent_m": {
+            "p05": 0.07876776490028857,
+            "p50": 0.09691512132704094,
+            "p95": 0.13356500789648276,
+            "max": 0.1683618458579943
+          },
+          "dz_extent_m": {
+            "p05": 0.078125,
+            "p50": 0.09868358061094007,
+            "p95": 0.1340697948519216,
+            "max": 0.16973078174198086
+          },
+          "sqrt_area_m": {
+            "p05": 0.07001891834186098,
+            "p50": 0.08479724800314857,
+            "p95": 0.10417365047570949,
+            "max": 0.12795089908731283
+          }
+        },
+        {
+          "region": "Remote air z >3.2m",
+          "cells": 24593,
+          "cell_share_pct": 5.1061488471560414,
+          "area_m2": 205.6226976244294,
+          "dx_extent_m": {
+            "p05": 0.08463621622182661,
+            "p50": 0.10903784017205709,
+            "p95": 0.13775300288893283,
+            "max": 0.16894939996188896
+          },
+          "dz_extent_m": {
+            "p05": 0.08165317306089719,
+            "p50": 0.10838038328799149,
+            "p95": 0.14191318555170723,
+            "max": 0.16307598650359
+          },
+          "sqrt_area_m": {
+            "p05": 0.07242153875460806,
+            "p50": 0.09052900560184195,
+            "p95": 0.10973865028836174,
+            "max": 0.13061383052028494
+          }
+        },
+        {
+          "region": "Other middle / transition",
+          "cells": 54790,
+          "cell_share_pct": 11.375834397417131,
+          "area_m2": 218.59538015900836,
+          "dx_extent_m": {
+            "p05": 0.009792949644692716,
+            "p50": 0.06436795753373392,
+            "p95": 0.12587302992273214,
+            "max": 0.16736157234820181
+          },
+          "dz_extent_m": {
+            "p05": 0.009958186542310205,
+            "p50": 0.06420587912925746,
+            "p95": 0.1246849567781726,
+            "max": 0.16419510475203136
+          },
+          "sqrt_area_m": {
+            "p05": 0.008227015564444768,
+            "p50": 0.05400582770048537,
+            "p95": 0.09987873839325145,
+            "max": 0.1262633127541748
+          }
+        }
+      ]
+    },
+    "M08": {
+      "cells": 254989,
+      "total_source_area_m2": 1285.0842115912972,
+      "regions": [
+        {
+          "region": "Foil control",
+          "cells": 108441,
+          "cell_share_pct": 42.52771688190471,
+          "area_m2": 4.204752311570787,
+          "dx_extent_m": {
+            "p05": 0.0028002733453751094,
+            "p50": 0.008035451988167575,
+            "p95": 0.011661587445936428,
+            "max": 0.014701447482613775
+          },
+          "dz_extent_m": {
+            "p05": 0.0001226534869135168,
+            "p50": 0.008121395287197797,
+            "p95": 0.011803151915994126,
+            "max": 0.014822329768405917
+          },
+          "sqrt_area_m": {
+            "p05": 0.00010520315732931505,
+            "p50": 0.007060581194334895,
+            "p95": 0.009295591629970132,
+            "max": 0.011364618528923577
+          }
+        },
+        {
+          "region": "Free-surface control",
+          "cells": 50452,
+          "cell_share_pct": 19.785951550851212,
+          "area_m2": 34.269470548583406,
+          "dx_extent_m": {
+            "p05": 0.023271922698431702,
+            "p50": 0.031041992112637473,
+            "p95": 0.03961836791187001,
+            "max": 0.045593668522204034
+          },
+          "dz_extent_m": {
+            "p05": 0.023726654591286988,
+            "p50": 0.031389267144006805,
+            "p95": 0.03919046939718718,
+            "max": 0.04681855373971522
+          },
+          "sqrt_area_m": {
+            "p05": 0.021106425935543554,
+            "p50": 0.025848049338531083,
+            "p95": 0.030948236063492767,
+            "max": 0.036417258186883524
+          }
+        },
+        {
+          "region": "Protected wake corridor",
+          "cells": 1339,
+          "cell_share_pct": 0.525120691480809,
+          "area_m2": 8.444021725328755,
+          "dx_extent_m": {
+            "p05": 0.010626071531059988,
+            "p50": 0.03448653525629064,
+            "p95": 0.1686708985565099,
+            "max": 0.20822387646712937
+          },
+          "dz_extent_m": {
+            "p05": 0.009776959401608085,
+            "p50": 0.0344904976284684,
+            "p95": 0.1779396207704509,
+            "max": 0.2117143915741903
+          },
+          "sqrt_area_m": {
+            "p05": 0.008693281151181596,
+            "p50": 0.02882567813192785,
+            "p95": 0.1408102940245993,
+            "max": 0.16083088051888478
+          }
+        },
+        {
+          "region": "Remote water z < -3m",
+          "cells": 49064,
+          "cell_share_pct": 19.24161434414818,
+          "area_m2": 814.027374970741,
+          "dx_extent_m": {
+            "p05": 0.11156250000000156,
+            "p50": 0.1539411749408104,
+            "p95": 0.21430390891149287,
+            "max": 0.24018797068309894
+          },
+          "dz_extent_m": {
+            "p05": 0.11490472196152393,
+            "p50": 0.15132698416843482,
+            "p95": 0.19252682136801527,
+            "max": 0.23387602372836724
+          },
+          "sqrt_area_m": {
+            "p05": 0.10088055958685918,
+            "p50": 0.12614194913528815,
+            "p95": 0.1612054220921251,
+            "max": 0.18145300835335795
+          }
+        },
+        {
+          "region": "Remote air z >3.2m",
+          "cells": 13009,
+          "cell_share_pct": 5.1017887046107875,
+          "area_m2": 205.61215193008704,
+          "dx_extent_m": {
+            "p05": 0.11715059587830404,
+            "p50": 0.15425075352388973,
+            "p95": 0.19290387607153675,
+            "max": 0.22101658126562995
+          },
+          "dz_extent_m": {
+            "p05": 0.11480044191296078,
+            "p50": 0.14634658910083065,
+            "p95": 0.18647841439172916,
+            "max": 0.23576850378807546
+          },
+          "sqrt_area_m": {
+            "p05": 0.09888564610366575,
+            "p50": 0.12492835628158527,
+            "p95": 0.14922588313428617,
+            "max": 0.17622756635759354
+          }
+        },
+        {
+          "region": "Other middle / transition",
+          "cells": 32684,
+          "cell_share_pct": 12.817807827004302,
+          "area_m2": 218.52644010498625,
+          "dx_extent_m": {
+            "p05": 0.012845364152417726,
+            "p50": 0.06282992671538401,
+            "p95": 0.1910174760372341,
+            "max": 0.23232182856690287
+          },
+          "dz_extent_m": {
+            "p05": 0.012934929176955734,
+            "p50": 0.06240675221028069,
+            "p95": 0.17008536212405842,
+            "max": 0.21975074021197205
+          },
+          "sqrt_area_m": {
+            "p05": 0.010754585427935828,
+            "p50": 0.052263710136965874,
+            "p95": 0.13901599310217838,
+            "max": 0.1792666194012125
+          }
+        }
+      ]
+    }
+  },
+  "fields": {
+    "M06": {
+      "time_s": 1.5999999999999346,
+      "definition": "100*norm(U_vector-[18,0,0])/18. Cell-count weighted; a smooth small disturbance is a coarsening clue, not an error bound.",
+      "regions": [
+        {
+          "region": "Foil control",
+          "n": 105052,
+          "velocity_disturbance_pct_U": {
+            "p05": 2.1325047062551747,
+            "p50": 6.785798770396653,
+            "p95": 70.60002770613042,
+            "max": 99.99445021831636
+          },
+          "fraction_cells_below_0p5pct_disturbance": 0.23892929216007308,
+          "fraction_cells_below_1pct_disturbance": 1.0099760118798309
+        },
+        {
+          "region": "Free-surface control",
+          "n": 50449,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.184129709929461,
+            "p50": 0.9933459207246191,
+            "p95": 2.271408601638794,
+            "max": 3.4645765067062544
+          },
+          "fraction_cells_below_0p5pct_disturbance": 14.172728894527145,
+          "fraction_cells_below_1pct_disturbance": 51.037681619060834
+        },
+        {
+          "region": "Protected wake corridor",
+          "n": 1340,
+          "velocity_disturbance_pct_U": {
+            "p05": 1.0105853292080207,
+            "p50": 1.9868106061929964,
+            "p95": 3.0495732111844,
+            "max": 6.212923210494183
+          },
+          "fraction_cells_below_0p5pct_disturbance": 0.0,
+          "fraction_cells_below_1pct_disturbance": 4.328358208955224
+        },
+        {
+          "region": "Remote water z < -3m",
+          "n": 49064,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.006097671837924354,
+            "p50": 0.33919977224516473,
+            "p95": 0.6508053057675107,
+            "max": 1.0145816694260341
+          },
+          "fraction_cells_below_0p5pct_disturbance": 82.1355780205446,
+          "fraction_cells_below_1pct_disturbance": 99.98777107451492
+        },
+        {
+          "region": "Remote air z >3.2m",
+          "n": 13009,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.11525522565089463,
+            "p50": 0.5101373595902714,
+            "p95": 1.3110104379900869,
+            "max": 2.1965270850171867
+          },
+          "fraction_cells_below_0p5pct_disturbance": 49.05065723729726,
+          "fraction_cells_below_1pct_disturbance": 82.4198631716504
+        },
+        {
+          "region": "Other middle / transition",
+          "n": 32691,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.1901511899048588,
+            "p50": 0.9714740460131772,
+            "p95": 3.62842866521013,
+            "max": 7.1493436705993885
+          },
+          "fraction_cells_below_0p5pct_disturbance": 12.38873084335138,
+          "fraction_cells_below_1pct_disturbance": 51.72371600746383
+        }
+      ],
+      "interface_centroid_z_range_m": [
+        1.7993335826773635,
+        2.118493862854536
+      ],
+      "interface_cell_count": 2481
+    },
+    "M07": {
+      "time_s": 1.6399999999999302,
+      "definition": "100*norm(U_vector-[18,0,0])/18. Cell-count weighted; a smooth small disturbance is a coarsening clue, not an error bound.",
+      "regions": [
+        {
+          "region": "Foil control",
+          "n": 187989,
+          "velocity_disturbance_pct_U": {
+            "p05": 2.0951280216659747,
+            "p50": 5.748820097144355,
+            "p95": 68.78954853478947,
+            "max": 99.9924494570206
+          },
+          "fraction_cells_below_0p5pct_disturbance": 0.23352430195383772,
+          "fraction_cells_below_1pct_disturbance": 1.1091074477761995
+        },
+        {
+          "region": "Free-surface control",
+          "n": 98684,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.18530669220095544,
+            "p50": 1.0151721871011299,
+            "p95": 2.290794103934839,
+            "max": 3.5255278123248592
+          },
+          "fraction_cells_below_0p5pct_disturbance": 13.481415427019577,
+          "fraction_cells_below_1pct_disturbance": 47.42004782943537
+        },
+        {
+          "region": "Protected wake corridor",
+          "n": 2067,
+          "velocity_disturbance_pct_U": {
+            "p05": 1.0195710247686571,
+            "p50": 1.972686837363327,
+            "p95": 2.710297963679593,
+            "max": 7.2883450087590855
+          },
+          "fraction_cells_below_0p5pct_disturbance": 0.0,
+          "fraction_cells_below_1pct_disturbance": 3.6768263183357526
+        },
+        {
+          "region": "Remote water z < -3m",
+          "n": 113510,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.00931073467696301,
+            "p50": 0.3746881305934491,
+            "p95": 0.6469714964222866,
+            "max": 1.0181530401494059
+          },
+          "fraction_cells_below_0p5pct_disturbance": 81.7883886882213,
+          "fraction_cells_below_1pct_disturbance": 99.98766628490881
+        },
+        {
+          "region": "Remote air z >3.2m",
+          "n": 24593,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.11629650914953675,
+            "p50": 0.5059396954631058,
+            "p95": 1.3130596622396948,
+            "max": 2.2239697481199237
+          },
+          "fraction_cells_below_0p5pct_disturbance": 49.33924287398853,
+          "fraction_cells_below_1pct_disturbance": 83.34078802911398
+        },
+        {
+          "region": "Other middle / transition",
+          "n": 54792,
+          "velocity_disturbance_pct_U": {
+            "p05": 0.20684321524460467,
+            "p50": 0.9329228555987099,
+            "p95": 3.4637706438905154,
+            "max": 7.153245960602357
+          },
+          "fraction_cells_below_0p5pct_disturbance": 13.10410278872828,
+          "fraction_cells_below_1pct_disturbance": 56.500949043656014
+        }
+      ],
+      "interface_centroid_z_range_m": [
+        1.8075730316892533,
+        2.111778887794491
+      ],
+      "interface_cell_count": 3633
+    }
+  },
+  "runtime_fit": {
+    "cases": [
+      {
+        "mesh": "M04",
+        "cells": 138468,
+        "median_s_per_step": 1.3098297999999886
+      },
+      {
+        "mesh": "M06",
+        "cells": 251605,
+        "median_s_per_step": 1.7560039995000807
+      },
+      {
+        "mesh": "M07",
+        "cells": 481635,
+        "median_s_per_step": 2.4609719500001574
+      }
+    ],
+    "descriptive_intercept_s": 0.8799036928807921,
+    "slope_s_per_cell": 3.311997447376701e-06,
+    "limits": "Three-case descriptive fit atdt1ms/20inner, shared-machine load and mesh shapes differ. Intercept is not a measured fixed solver overhead. Predictions require actual benchmarks."
+  },
+  "outer_size_screen": [
+    {
+      "outer_target_m": 0.2,
+      "protected_middle_z_m": [
+        -3,
+        3.2
+      ],
+      "ideal_cells": 224586,
+      "ideal_cell_reduction_pct": 11.923299452453373,
+      "descriptive_step_s": 1.6237316136384126,
+      "descriptive_runtime_reduction_pct": 5.839332086861335,
+      "limits": "Geometric2D area scaling of remote cells only; transition and remeshing may reduce savings. No new mesh/flow run."
+    },
+    {
+      "outer_target_m": 0.25,
+      "protected_middle_z_m": [
+        -3,
+        3.2
+      ],
+      "ideal_cells": 213185,
+      "ideal_cell_reduction_pct": 16.394536747123375,
+      "descriptive_step_s": 1.5859709900065937,
+      "descriptive_runtime_reduction_pct": 8.029081619434333,
+      "limits": "Geometric2D area scaling of remote cells only; transition and remeshing may reduce savings. No new mesh/flow run."
+    },
+    {
+      "outer_target_m": 0.3,
+      "protected_middle_z_m": [
+        -3,
+        3.2
+      ],
+      "ideal_cells": 206992,
+      "ideal_cell_reduction_pct": 18.82335700595648,
+      "descriptive_step_s": 1.5654590463053588,
+      "descriptive_runtime_reduction_pct": 9.218575192683858,
+      "limits": "Geometric2D area scaling of remote cells only; transition and remeshing may reduce savings. No new mesh/flow run."
+    }
+  ],
+  "wave_surface_opportunity": {
+    "current_M08_nominal_isotropic_target_m": 0.028571428571428574,
+    "current_FS_cells": 50452,
+    "wave_start_dx_m": 0.2,
+    "wave_start_dz_m": 0.025,
+    "intended_cells_per_wavelength": [
+      100,
+      150
+    ],
+    "cells_per_height": 20,
+    "limits": "Anisotropic surface band is a separate meshing strategy, not a scalar size increase. Current directed polygon source uses one isotropic volume size. Need compatible anisotropic source/structured partition and mesh/VOF propagation checks. Do not use isotropic0.20m atsurface."
+  },
+  "proposed_next_design": {
+    "id": "M09",
+    "status": "conditional_design_only_not_built_or_admitted",
+    "base_reference": "M08 if accepted and consistent withM07; otherwise revisit refinement need first",
+    "change": "Outer base0.142857m to0.25m; add middle-domain protection atold0.142857m acrossx[-11.9,30.94],z[-3,3.2]. Existing finer foil andFScontrols remain.",
+    "preserved": {
+      "foil_target_m": 0.0028571428571428576,
+      "foil_min_m": 0.00028571428571428574,
+      "global_min_m": 0.0003571428571428572,
+      "near_foil_m": 0.00892857142857143,
+      "free_surface_m": 0.028571428571428574,
+      "first_layer_m": 1.5306122448979595e-06,
+      "layers": 48,
+      "total_prism_m": 0.01546,
+      "domain": "unchanged",
+      "surface_growth": 1.2
+    },
+    "admission": "Reaudit source geometry,exactspan,layercoverage,zero invalidcells, transitions; then same force screen and1%comparison. Final time/order settings must match."
+  },
+  "protected_features": [
+    "Foil contour, LE/TE surface resolution and prism wall settings",
+    "Near-foil refinement box and wake corridor",
+    "Existing free-surface band and interface transport",
+    "Physical domain,boundaries,depth and submergence",
+    "One spanwise cell; no further spanwise coarsening is possible"
+  ]
+}

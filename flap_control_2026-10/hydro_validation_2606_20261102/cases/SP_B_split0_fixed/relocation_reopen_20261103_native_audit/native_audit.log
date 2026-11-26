@@ -1,0 +1,97 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Jfc3BsaXQwX2ZpeGVkXHJlbG9jYXRpb25fcmVvcGVuXzIwMjYxMTAzX25hdGl2ZV9hdWRpdFxCMF9yZWNvdmVyZWRfdDA1MC5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 32716
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 08:33:21 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\relocation_reopen_20261103_native_audit\B0_recovered_t050.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=8 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:10: warning: [deprecation] star.common.EnumeratedOption in star.common has been deprecated
+ if(o instanceof EnumeratedOption)b.append(" selected="+((EnumeratedOption)o).getSelected());
+                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:10: warning: [deprecation] star.common.EnumeratedOption in star.common has been deprecated
+ if(o instanceof EnumeratedOption)b.append(" selected="+((EnumeratedOption)o).getSelected());
+                                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:10: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof EnumeratedOption)b.append(" selected="+((EnumeratedOption)o).getSelected());
+                                                                             ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:11: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof BackflowSpecification){BackflowSpecification v=(BackflowSpecification)o;b.append(" direction="+v.getBackflowVelocityDirectionOption().getSelected()+" pressure="+v.getReversedFlowPressureOption().getSelected()+" scalar="+v.getReversedFlowScalarOption().getSelected());}
+                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:11: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof BackflowSpecification){BackflowSpecification v=(BackflowSpecification)o;b.append(" direction="+v.getBackflowVelocityDirectionOption().getSelected()+" pressure="+v.getReversedFlowPressureOption().getSelected()+" scalar="+v.getReversedFlowScalarOption().getSelected());}
+                                                                                                                                                                                                                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:11: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ if(o instanceof BackflowSpecification){BackflowSpecification v=(BackflowSpecification)o;b.append(" direction="+v.getBackflowVelocityDirectionOption().getSelected()+" pressure="+v.getReversedFlowPressureOption().getSelected()+" scalar="+v.getReversedFlowScalarOption().getSelected());}
+                                                                                                                                                                                                                                                                            ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:13: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+  if(p.getMethod() instanceof ConstantScalarProfileMethod)b.append(" value="+p.getMethod(ConstantScalarProfileMethod.class).getQuantity().getValue());
+                                                                                                                                         ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:15: warning: [deprecation] getVector() in star.common.VectorPhysicalQuantity has been deprecated
+ if(o instanceof VectorProfile){VectorProfile p=(VectorProfile)o;b.append(" method="+p.getMethod().getClass().getName());if(p.getMethod() instanceof ConstantVectorProfileMethod)b.append(" value="+p.getMethod(ConstantVectorProfileMethod.class).getQuantity().getVector());}
+                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:23: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:37: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+for(Region r:regions){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(r);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(fields);tab.extract();tab.export(out.resolve(r.getPresentationName()+"_"+label+"_volume.csv").toString());s.getTableManager().removeObjects(tab);}
+                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:40: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(walls);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve(group+"_"+label+"_wall.csv").toString());s.getTableManager().removeObjects(tab);}
+                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:58: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+ s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);
+                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:66: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+ b.append("density="+((ConstantMaterialPropertyMethod)water.getMaterialProperties().getMaterialProperty(ConstantDensityProperty.class).getMethod()).getQuantity().getValue()+"\n");
+                                                                                                                                                                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:67: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+ b.append("viscosity="+((ConstantMaterialPropertyMethod)water.getMaterialProperties().getMaterialProperty(DynamicViscosityProperty.class).getMethod()).getQuantity().getValue()+"\n");
+                                                                                                                                                                    ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:69: warning: [deprecation] getUrf() in star.segregatedflow.VelocitySolver has been deprecated
+ b.append("velocity_urf="+flow.getVelocitySolver().getUrf()+"\npressure_urf="+flow.getPressureSolver().getUrf()+"\ndynamic_urf="+flow.getVelocitySolver().getUseDynamicLocalUrf()+"\ncontinuity_initialization="+flow.getContinuityInitialization()+"\n");
+                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:69: warning: [deprecation] getUrf() in star.segregatedflow.PressureSolver has been deprecated
+ b.append("velocity_urf="+flow.getVelocitySolver().getUrf()+"\npressure_urf="+flow.getPressureSolver().getUrf()+"\ndynamic_urf="+flow.getVelocitySolver().getUseDynamicLocalUrf()+"\ncontinuity_initialization="+flow.getContinuityInitialization()+"\n");
+                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:70: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:70: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                                                                                                                               ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:70: warning: [deprecation] getValue() in star.common.ScalarPhysicalQuantity has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\RelocationNativeAudit.java:70: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+ b.append("flow_convection="+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().getSelected()+"\nSST_convection="+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().getSelected()+"\ndt="+us.getTimeStep().getValue()+"\ntime_order="+us.getTimeDiscretizationOption().getSelected()+"\n");
+                                                                                                                                                                                                                                                                                                                  ^
+
+Loading/configuring connectivity (old|new partitions: 8|1)
+  Background (index 1): 256750 cells, 707402 faces, 906624 verts.
+Configuring finished
+RELOCATION_NATIVE_READBACK_COMPLETE B0
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

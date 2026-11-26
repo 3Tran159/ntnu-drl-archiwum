@@ -1,0 +1,76 @@
+{
+  "B0": {
+    "report_readback_matches_history": true,
+    "reports": {
+      "HF_CL_hydro": 0.3265643858133681,
+      "HF_CD": 0.007193173920424497,
+      "HF_Mh_Nm": -12.159737996002615,
+      "HF_Fx_N": 27.73400136758869,
+      "HF_Fz_N": 1281.7686094808307,
+      "HF_pabs_liquid_all": 30088.519667482673
+    },
+    "field_readback": {
+      "Background": {
+        "cells": 256750,
+        "compared_fields": [
+          "Pressure (Pa)",
+          "Absolute Pressure (Pa)",
+          "Volume (m^3)",
+          "Cell Quality",
+          "Wall Distance (m)",
+          "Turbulent Kinetic Energy (J/kg)",
+          "Specific Dissipation Rate (/s)",
+          "Velocity[i] (m/s)",
+          "Velocity[j] (m/s)",
+          "Velocity[k] (m/s)"
+        ],
+        "max_scaled_field_difference": 4.257816321739938e-12
+      }
+    }
+  },
+  "C0": {
+    "report_readback_matches_history": true,
+    "reports": {
+      "HF_CL_hydro": 0.3256530206195925,
+      "HF_CD": 0.007244510839521137,
+      "HF_Mh_Nm": -12.040420268556348,
+      "HF_Fx_N": 27.931935992857692,
+      "HF_Fz_N": 1278.2547498397096,
+      "HF_pabs_liquid_all": 30097.694577269285
+    },
+    "field_readback": {
+      "Background": {
+        "cells": 227270,
+        "compared_fields": [
+          "Pressure (Pa)",
+          "Absolute Pressure (Pa)",
+          "Volume (m^3)",
+          "Cell Quality",
+          "Wall Distance (m)",
+          "Turbulent Kinetic Energy (J/kg)",
+          "Specific Dissipation Rate (/s)",
+          "Velocity[i] (m/s)",
+          "Velocity[j] (m/s)",
+          "Velocity[k] (m/s)"
+        ],
+        "max_scaled_field_difference": 0.0
+      },
+      "FlapOverset": {
+        "cells": 28502,
+        "compared_fields": [
+          "Pressure (Pa)",
+          "Absolute Pressure (Pa)",
+          "Volume (m^3)",
+          "Cell Quality",
+          "Wall Distance (m)",
+          "Turbulent Kinetic Energy (J/kg)",
+          "Specific Dissipation Rate (/s)",
+          "Velocity[i] (m/s)",
+          "Velocity[j] (m/s)",
+          "Velocity[k] (m/s)"
+        ],
+        "max_scaled_field_difference": 0.0
+      }
+    }
+  }
+}

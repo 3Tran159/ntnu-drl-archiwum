@@ -1,0 +1,13 @@
+GPU PHYSICAL PROGRESS VERIFIED 2026-10-30T12:20:59.737629+01:00: W01a inletwave controller11916, caseW01a_W20L4_M10_inlet_wave_r1, t=0.644, maxspeed22.160807, alpha[0.0,1.0]. RuntimeH=0.0013956123347307482, period=0.8478873385044985, rampactive. Sourceforcefingerprint exact; noinit; inletonlyforcing/outletonlydamping. Audit w01a_inlet_wave_launch_review.json. Neverduplicateactivecontroller.
+
+CURRENT W01a INLET WAVE LAUNCHED - 2026-10-30T12:18:31.133009+01:00
+Controller11916 owns rootqueue.lock andw01a_inlet_wave_r1.lock, launcher33412. Inspect actualprocesses/state before acting. Do NOT launchduplicate.
+Case E:/ntnu/quasi2d_waves_20261029/W01a_W20L4_M10_inlet_wave_r1. run_w01a_inlet_wave_r1.py --run launched after CPU three-step audit passed/finished and preplock released; current initialstate GPUloading. Need firstGPUphysicalprogress confirmation.
+Computedcalmsource t=.587 SHA bb2f9004ba8993ed6a7c8401be27b15be56d54d04c7743b15013a8925d9a131d. Source/input copiedhashverified. CPUaudit36264 complete0.590, no reinit,3finite steps and exactexpression/setteranalyticreferences atnearzeroH. Full-height ramp validity still monitored, notclaimed.
+Wave beginsimmediately atphysical.587; H1e-6->.5 over1.6945346414s cosine. No calmforcesettlingwait. Onlyinlet/upstreamforcing bindingschanged; initialphysicalfields retained; no initializeSolution/clear. SO1ms10inner pressureAMG.01; fixeddepth24, M10 317277cells80m. Native signedvorticity componentVorticityVector[1] added toviews/CSV. 50m/s,phase,resource/sourceguards retained. .01%massflagdiagnostic/userexploratoryexception.
+Observecasewave_runtime.csv, wave_activation.json,history/gauges/native_phase_budget.csv,computedcheckpoints. AnalyticloadcachemayNaN butmustfiniteafterfirststep. Stageinlet_wave_ramp/full_amplitude; analysis_origin_snullpendingactualarrival. Newcyclehistoryonly;4repeatedcompleteeligiblecyclesstop,10indicative,20reviewcap. Currentmacrobounded20123stepsfrom.587to20.710; arrival-awareearliercyclescreenstillneedsbinding, do nottreatcalm/rampaswavecycles.
+OriginalW01failed1.064preserved, neverrestartitsfields. BriefW01acalmcontroller30672 finishednormally. Autonomousbatch/manuallegacyfull-domainpresetsstillblockeduntilnewrecipevalidated. HF_012_C003_regular_waves untouched. Automationpaused.
+Exportfortheothermeshagent: E:/ntnu/handoffs/W01a_domain_settings_20261030_120423.zip. LatestUIagentupdatingnewinletstagewithrichprogress/ETA; nooldW01history.
+Previoushandoverbelowisarchival; currentPIDandno-forcesettlingruleaboveoverrideit.
+
+Read actual lock/process/history before every action. This local controller works independently of Work. Stop via case STOP marker for save at physicalstep; neverrestartcompletedattempt.

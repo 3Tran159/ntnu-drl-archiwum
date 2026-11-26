@@ -1,0 +1,11 @@
+source=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\motion_20261102_194119\steady_init_20261102_200834\steady_init_20261102_202530\steady_init_20261102_203046\steady_checkpoint.sim
+time=0.0
+conservation=2
+Background | Volume Mesh | Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin | area=0.03837946838791919
+Background | Volume Mesh | Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc | area=0.0020041009073895506
+Background | Overset Mesh | Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin | area=0.0
+Background | Overset Mesh | Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc | area=0.0
+FlapOverset | Volume Mesh | FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin | area=0.00966572068765237
+FlapOverset | Volume Mesh | FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc | area=0.0022053243738271123
+FlapOverset | Overset Mesh | FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin | area=0.0
+FlapOverset | Overset Mesh | FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc | area=0.0

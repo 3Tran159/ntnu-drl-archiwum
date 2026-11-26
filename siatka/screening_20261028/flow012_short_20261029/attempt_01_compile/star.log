@@ -1,0 +1,94 @@
+Starting local server: starccm+.bat -server -power -cpubind off -np 24 -podkey REDACTED -licpath 1999@flex.cd-adapco.com  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxmbG93MDEyX3Nob3J0XzIwMjYxMDI5XHdvcmtpbmdfY29weS5zaW0=
+*****************************************************************************************
+Warning: The host machine [THINKPAD-LUCJAN] has been over-subscribed.
+         The host is running 16 more process(es) than high-performance physical CPU cores.
+
+         Over-subscribing a host can severely affect performance.
+
+         Even when within the limits of hardware multithreading (e.g., hyper-threading, efficiency cores),
+         using more processes than high-performance CPU cores may negatively impact performance.
+
+         The recommended mode of operation is to use the same number of processes as
+         physical high-performance CPU cores. Nevertheless, using additional processes to
+         also occupy the efficiency CPU cores may be beneficial on some systems.
+*****************************************************************************************
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-23
+Process rank 0 THINKPAD-LUCJAN 3292
+Total number of processes : 24
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 10:22:27 2026
+
+Server::start -host THINKPAD-LUCJAN:47829
+Loading: F:\ntnu\mesh_screening_20261028\flow012_short_20261029\working_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:20: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+      s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                                                                                             ^
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:58: warning: [deprecation] clearSolutionWithoutMeshReset() in star.common.Solution has been deprecated
+    s.getSolution().clearSolutionWithoutMeshReset();
+                   ^
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:94: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    XyzInternalTable wall=s.getTableManager().createTable(XyzInternalTable.class);wall.getParts().setObjects(foil);wall.setRepresentation(fv);wall.setExtractVertexData(false);
+                                             ^
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:98: error: cannot find symbol
+    ThresholdPart high=s.getPartManager().createThresholdPart();high.getInputParts().setObjects(fluid);high.setFieldFunction(s.getFieldFunctionManager().getFunction("CourantNumber"));high.setRange(new DoubleVector(new double[]{5,5}));high.setMode(ThresholdMode.ABOVE_TAG);
+    ^
+  symbol:   class ThresholdPart
+  location: class macro.ShortFlow012
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:98: error: cannot find symbol
+    ThresholdPart high=s.getPartManager().createThresholdPart();high.getInputParts().setObjects(fluid);high.setFieldFunction(s.getFieldFunctionManager().getFunction("CourantNumber"));high.setRange(new DoubleVector(new double[]{5,5}));high.setMode(ThresholdMode.ABOVE_TAG);
+                                                                                                                                                                                                                                                       ^
+  symbol:   variable ThresholdMode
+  location: class macro.ShortFlow012
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:101: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    if(n>0&&n<100000){XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.getParts().setObjects(high);table.setRepresentation(fv);table.setExtractVertexData(false);fields=new ArrayList<>();for(String name:List.of("CourantNumber","CellQuality","SkewnessAngle","VolumeChange","PrismLayerNumber"))fields.add(s.getFieldFunctionManager().getFunction(name));table.setFieldFunctions(fields);table.extract();table.export(out.resolve("cfl_above_5_locations.csv").toString());}
+                                                                ^
+
+error: F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:20: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+      s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                                                                                             ^
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:58: warning: [deprecation] clearSolutionWithoutMeshReset() in star.common.Solution has been deprecated
+    s.getSolution().clearSolutionWithoutMeshReset();
+                   ^
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:94: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    XyzInternalTable wall=s.getTableManager().createTable(XyzInternalTable.class);wall.getParts().setObjects(foil);wall.setRepresentation(fv);wall.setExtractVertexData(false);
+                                             ^
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:98: error: cannot find symbol
+    ThresholdPart high=s.getPartManager().createThresholdPart();high.getInputParts().setObjects(fluid);high.setFieldFunction(s.getFieldFunctionManager().getFunction("CourantNumber"));high.setRange(new DoubleVector(new double[]{5,5}));high.setMode(ThresholdMode.ABOVE_TAG);
+    ^
+  symbol:   class ThresholdPart
+  location: class macro.ShortFlow012
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:98: error: cannot find symbol
+    ThresholdPart high=s.getPartManager().createThresholdPart();high.getInputParts().setObjects(fluid);high.setFieldFunction(s.getFieldFunctionManager().getFunction("CourantNumber"));high.setRange(new DoubleVector(new double[]{5,5}));high.setMode(ThresholdMode.ABOVE_TAG);
+                                                                                                                                                                                                                                                       ^
+  symbol:   variable ThresholdMode
+  location: class macro.ShortFlow012
+F:\ntnu\mesh_screening_20261028\flow012_short_20261029\ShortFlow012.java:101: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+    if(n>0&&n<100000){XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.getParts().setObjects(high);table.setRepresentation(fv);table.setExtractVertexData(false);fields=new ArrayList<>();for(String name:List.of("CourantNumber","CellQuality","SkewnessAngle","VolumeChange","PrismLayerNumber"))fields.add(s.getFieldFunctionManager().getFunction(name));table.setFieldFunctions(fields);table.extract();table.export(out.resolve("cfl_above_5_locations.csv").toString());}
+                                                                ^
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

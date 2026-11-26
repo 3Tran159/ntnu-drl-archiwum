@@ -1,0 +1,40 @@
+{
+  "direction": "HEAD_SEA",
+  "water_depth": "DEEP_WATER",
+  "foil_submergence_m": 2.0,
+  "lambda_m": 10.0,
+  "amplitude_m": 0.25,
+  "U_m_s": 18.0,
+  "k_rad_m": 0.6283185307179586,
+  "omega_intrinsic_rad_s": 2.482701106928334,
+  "omega_encounter_rad_s": 13.792434659851589,
+  "period_encounter_s": 0.45555302324319263,
+  "orbital_amplitude_at_hinge_m_s": 0.17665010707068188,
+  "flow_angle_amplitude_deg": 0.5622767037928437,
+  "phase_convention": "theta=omega_e*t-k*(x-x_h); theta_h=0 crest; Mini+x follows mean fluid inflow, opposite ship forward; Mini+y verticalup",
+  "velocity": [
+    "U+a*omega*exp(k*(y-y_h-h))*cos(theta)",
+    "-a*omega*exp(k*(y-y_h-h))*sin(theta)"
+  ],
+  "pressure_perturbation_Pa": "rho*g*a*exp(k*(y-y_h-h))*cos(theta) - rho*(a*omega*exp(k*(y-y_h-h)))^2/2; second term is exact Bernoulli completion for potential-flow diagnostic",
+  "flap_law": "delta=A_delta*envelope(t)*sin(theta_h+phi); envelope=S5(t/(2*Te)); delta positive clockwise(-z); after ramp harmonic",
+  "flap_2deg_peak_rate_rad_s": 0.4814467933611888,
+  "flap_5deg_peak_rate_rad_s": 1.203616983402972,
+  "control_phase_candidates_deg": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "first_active_phase_deg": 0,
+  "domain_issue": "Existing upper boundaryy=5.95m lies above notional sea levely=y_h+2m; do NOT impose Airy exponential throughout that domain. New fully submerged local diagnostic domain and open/matched topbottom BC required.",
+  "inlet_only_phase_error_at_hinge_deg": 54.54431853359178,
+  "CFD_field_verified": false,
+  "VOF": false,
+  "motion_native_verified": false,
+  "night_authorized": false,
+  "sources": [
+    "https://www.usna.edu/NAOE/_files/documents/Courses/EN455/EN455_Chapter4.pdf",
+    "https://oivarn.folk.ntnu.no/hercules_ntnu/LWTcourse/lwt_new_2000_Part_A.pdf"
+  ]
+}

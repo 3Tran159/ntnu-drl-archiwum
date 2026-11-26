@@ -1,0 +1,1567 @@
+Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVx3YXZlX2RlcHRoXzIwMjYxMDI5XGZpZnRoX2Nhc2VzXFcyMF9IMTZfWDNcYnVpbHQuc2lt
+*****************************************************************************************
+Warning: CPU contention on 8 processes could not be resolved.
+         CPU affinity will be cleared on those processes.
+
+         This is a strong indication that another server is already running and on some
+         hosts there are now more processes running than there are physical CPU cores.
+
+         Over-subscribing a host can severely affect performance.
+
+         Even when within the limits of hardware multithreading (e.g., hyper-threading),
+         using more processes than CPU cores will likely negatively impact performance.
+
+         The recommended mode of operation is to use the same number of processes as
+         physical CPU cores.
+*****************************************************************************************
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 34168
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 10:06:14 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\built.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\wave_depth_20261029\WaveGaugeRun.java
+F:\ntnu\wave_depth_20261029\WaveGaugeRun.java:28: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+     s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                            ^
+
+Loading/configuring connectivity (old|new partitions: 8|8)
+  fluid (index 0): 49576 cells, 124160 faces, 75735 verts.
+Configuring finished
+[NTNU_GAUGE] step=0 t=0.0 eta0=-4.796163466380676E-14 etaHalf=-7.460698725481052E-14 CFL=0.21028821732541333 vmax=18.473537728992188
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00            nan            nan                      1.160000e-01           1.848503e+01 
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             2   1.000000e+00   9.251827e-01   1.000000e+00   8.724375e-01   2.007712e-01   2.070007e-01   2.223875e-01            nan            nan                      2.600000e-02           1.848266e+01 
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             3   1.000000e+00   7.934388e-01   1.000000e+00   7.823512e-01   4.052168e-02   4.675969e-02   6.477039e-02            nan            nan                      3.200000e-02           1.856364e+01 
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             4   1.000000e+00   6.877849e-01   9.506655e-01   7.002955e-01   9.051208e-03   2.353120e-02   2.922216e-02            nan            nan                      3.100000e-02           1.854985e+01 
+Reversed flow on  6 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             5   9.159214e-01   6.033315e-01   1.000000e+00   6.284347e-01   2.197606e-03   6.537302e-03   1.863670e-02            nan            nan                      3.600000e-02           1.848989e+01 
+Reversed flow on  10 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             6   7.863616e-01   5.167338e-01   7.261014e-01   5.595431e-01   8.106834e-04   6.236007e-03   4.953780e-03            nan            nan                      3.200000e-02           1.848958e+01 
+Reversed flow on  12 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             7   6.590637e-01   4.480058e-01   6.817939e-01   5.001790e-01   1.360189e-03   1.095784e-02   8.253859e-03            nan            nan                      3.300000e-02           1.848808e+01 
+Reversed flow on  16 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             8   5.490578e-01   3.880679e-01   6.723209e-01   4.501305e-01   1.659250e-03   1.017760e-02   5.186565e-03            nan            nan                      3.300000e-02           1.848581e+01 
+Reversed flow on  16 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+             9   4.600438e-01   3.411315e-01   4.612501e-01   3.990498e-01   1.577519e-03   7.500678e-03   5.645775e-03            nan            nan                      3.400000e-02           1.848326e+01 
+Reversed flow on  18 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            10   3.978782e-01   2.978008e-01   5.513567e-01   3.574766e-01   1.335643e-03   4.941962e-03   1.605180e-03            nan            nan                      3.400000e-02           1.848058e+01 
+Reversed flow on  18 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            11   3.541972e-01   2.622565e-01   5.271110e-01   3.182486e-01   1.050343e-03   2.984047e-03   9.805371e-04            nan            nan                      3.500000e-02           1.847803e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            12   3.236804e-01   2.333962e-01   4.619089e-01   2.830659e-01   8.233865e-04   1.671862e-03   8.670697e-04            nan            nan                      3.400000e-02           1.847567e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            13   3.029791e-01   2.083808e-01   3.932657e-01   2.517480e-01   6.150695e-04   9.203417e-04   8.093866e-04            nan            nan                      3.800000e-02           1.847430e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            14   2.877882e-01   1.863575e-01   3.265558e-01   2.239447e-01   4.532903e-04   6.331566e-04   6.746421e-04            nan            nan                      3.900000e-02           1.847436e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            15   2.751581e-01   1.670742e-01   2.652036e-01   1.993487e-01   3.018030e-04   4.880211e-04   5.872951e-04            nan            nan                      3.500000e-02           1.847440e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            16   2.634291e-01   1.501813e-01   2.118120e-01   1.775605e-01   2.259890e-04   3.984121e-04   5.297768e-04            nan            nan                      3.300000e-02           1.847445e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            17   2.519621e-01   1.350490e-01   1.687393e-01   1.582327e-01   1.757453e-04   3.892278e-04   5.011763e-04            nan            nan                      3.400000e-02           1.847449e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            18   2.407593e-01   1.214159e-01   1.355813e-01   1.410889e-01   1.351358e-04   3.713096e-04   4.741727e-04            nan            nan                      3.500000e-02           1.847452e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            19   2.299425e-01   1.091214e-01   1.153195e-01   1.258465e-01   1.772865e-04   3.094281e-04   4.072674e-03            nan            nan                      3.500000e-02           1.847454e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.044
+Done.
+TimeStep    1: Time  2.000000e-03
+            20   2.191119e-01   9.830263e-02   2.389346e-01   1.114027e-01   1.688164e-04   2.207014e-04   1.447254e-03            nan            nan                      4.400000e-02           1.847454e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=1 t=0.002 eta0=-0.003474684911317638 etaHalf=8.212479123415051E-7 CFL=0.21430014200435993 vmax=18.474543334356735
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            21   3.125604e-01   1.210507e+00   1.849489e+00   2.763704e-01   1.474884e+00   1.475898e+00   1.442675e+00            nan            nan                      4.100000e-02           1.853488e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            22   3.147944e-01   1.042340e+00   1.362362e+00   2.338973e-01   2.957393e-01   3.020895e-01   2.686682e-01            nan            nan                      4.300000e-02           1.853830e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            23   2.862087e-01   9.307929e-01   1.159619e+00   2.065759e-01   5.927974e-02   6.182859e-02   5.913504e-02            nan            nan                      3.900000e-02           1.854129e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            24   2.565177e-01   8.311844e-01   1.050990e+00   1.839306e-01   1.187835e-02   1.265551e-02   1.714024e-02            nan            nan                      4.900000e-02           1.853897e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            25   2.323110e-01   7.438414e-01   9.355164e-01   1.643579e-01   2.380676e-03   2.591460e-03   5.113621e-03            nan            nan                      4.700000e-02           1.853500e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            26   2.174886e-01   6.658674e-01   8.119219e-01   1.469971e-01   4.870678e-04   5.354061e-04   1.745135e-03            nan            nan                      4.700000e-02           1.853052e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            27   2.092714e-01   5.960887e-01   6.883327e-01   1.314933e-01   1.451943e-04   1.363746e-04   7.358664e-04            nan            nan                      5.200000e-02           1.852637e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            28   2.040301e-01   5.336297e-01   5.730605e-01   1.176238e-01   1.053966e-04   8.644712e-05   5.093617e-04            nan            nan                      5.100000e-02           1.852267e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            29   2.002704e-01   4.777253e-01   4.719807e-01   1.052152e-01   1.005994e-04   8.008438e-05   2.979777e-03            nan            nan                      5.000000e-02           1.851940e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            30   1.974573e-01   4.277664e-01   4.150232e-01   9.404974e-02   6.420375e-05   6.328902e-05   7.813260e-04            nan            nan                      4.900000e-02           1.851538e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            31   1.941668e-01   3.830442e-01   3.718220e-01   8.415811e-02   6.955349e-05   6.067640e-05   4.101022e-04            nan            nan                      4.400000e-02           1.851214e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            32   1.902641e-01   3.429886e-01   3.183673e-01   7.530784e-02   6.454794e-05   5.672316e-05   3.249223e-04            nan            nan                      4.400000e-02           1.850866e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            33   1.854563e-01   3.070712e-01   2.687570e-01   6.738461e-02   5.797034e-05   5.595754e-05   2.772236e-04            nan            nan                      4.200000e-02           1.850628e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            34   1.791190e-01   2.748840e-01   2.256388e-01   6.029222e-02   5.865976e-05   5.755820e-05   2.292625e-04            nan            nan                      4.400000e-02           1.850534e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            35   1.718868e-01   2.460648e-01   1.894189e-01   5.394591e-02   5.917669e-05   6.084285e-05   1.869580e-04            nan            nan                      4.400000e-02           1.850388e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            36   1.640992e-01   2.202735e-01   1.596433e-01   4.826894e-02   6.515453e-05   6.515003e-05   1.500578e-04            nan            nan                      4.100000e-02           1.850239e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            37   1.564041e-01   1.971949e-01   1.353125e-01   4.319119e-02   6.672977e-05   6.546568e-05   1.235119e-04            nan            nan                      3.500000e-02           1.850100e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            38   1.491925e-01   1.765429e-01   1.156922e-01   3.864978e-02   6.515324e-05   6.193576e-05   1.058580e-04            nan            nan                      4.500000e-02           1.849975e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            39   1.422498e-01   1.580603e-01   1.000566e-01   3.458830e-02   6.042782e-05   5.477904e-05   2.309671e-03            nan            nan                      4.600000e-02           1.849924e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.025
+Done.
+TimeStep    2: Time  4.000000e-03
+            40   1.355279e-01   1.415457e-01   1.508676e-01   3.102562e-02   4.909615e-05   3.930172e-05   4.764781e-04            nan            nan                      4.400000e-02           1.849840e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=2 t=0.004 eta0=-0.006320692104727854 etaHalf=1.745054809987323E-6 CFL=0.2137557732950102 vmax=18.498402983415758
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            41   2.651658e-01   3.764922e-01   9.740967e-01   1.114107e-01   1.452969e+00   1.454857e+00   1.391669e+00            nan            nan                      4.000000e-02           1.848560e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            42   3.315349e-01   2.763548e-01   7.174539e-01   7.047638e-02   2.914086e-01   2.977975e-01   2.519720e-01            nan            nan                      4.400000e-02           1.847477e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            43   3.445943e-01   2.352813e-01   5.547026e-01   5.286161e-02   5.842675e-02   6.095498e-02   5.540840e-02            nan            nan                      3.700000e-02           1.847956e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            44   3.289993e-01   2.041342e-01   5.004677e-01   4.384781e-02   1.171065e-02   1.247774e-02   1.657800e-02            nan            nan                      4.600000e-02           1.847964e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            45   3.012364e-01   1.809206e-01   4.501122e-01   3.800610e-02   2.346817e-03   2.554806e-03   4.967839e-03            nan            nan                      4.300000e-02           1.847986e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            46   2.715178e-01   1.614496e-01   3.935992e-01   3.361525e-02   4.707978e-04   5.234019e-04   1.812755e-03            nan            nan                      4.400000e-02           1.848024e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            47   2.439845e-01   1.442728e-01   3.380722e-01   2.991168e-02   9.739877e-05   1.090278e-04   6.205404e-04            nan            nan                      4.300000e-02           1.848071e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            48   2.198302e-01   1.289508e-01   2.875558e-01   2.666495e-02   3.418650e-05   3.449740e-05   2.717847e-04            nan            nan                      4.400000e-02           1.848112e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            49   1.977582e-01   1.152540e-01   2.434559e-01   2.378258e-02   3.458612e-05   2.964929e-05   1.610856e-04            nan            nan                      3.700000e-02           1.848145e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            50   1.778422e-01   1.030042e-01   2.060482e-01   2.121406e-02   3.397954e-05   2.842753e-05   1.343825e-04            nan            nan                      3.700000e-02           1.848169e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            51   1.602816e-01   9.205217e-02   1.749728e-01   1.892416e-02   3.021488e-05   2.587369e-05   1.210641e-04            nan            nan                      4.500000e-02           1.848186e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            52   1.451133e-01   8.226062e-02   1.494044e-01   1.688206e-02   2.545012e-05   2.271148e-05   1.084614e-04            nan            nan                      4.100000e-02           1.848198e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            53   1.324432e-01   7.351189e-02   1.285767e-01   1.506146e-02   2.043795e-05   1.913545e-05   9.857523e-05            nan            nan                      4.700000e-02           1.848208e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            54   1.215828e-01   6.569197e-02   1.118362e-01   1.343726e-02   1.719036e-05   1.649819e-05   8.858874e-05            nan            nan                      4.600000e-02           1.848214e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            55   1.119983e-01   5.869421e-02   9.828043e-02   1.198678e-02   1.543792e-05   1.476329e-05   8.210988e-05            nan            nan                      4.900000e-02           1.848219e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            56   1.037185e-01   5.242897e-02   8.725417e-02   1.068998e-02   1.595467e-05   1.522301e-05   8.006186e-05            nan            nan                      4.200000e-02           1.848221e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            57   9.665638e-02   4.681718e-02   7.815883e-02   9.529763e-03   1.659914e-05   1.577322e-05   8.013454e-05            nan            nan                      5.100000e-02           1.848222e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            58   9.066865e-02   4.178972e-02   7.062896e-02   8.491806e-03   2.393444e-05   1.492122e-05   8.167889e-05            nan            nan                      5.000000e-02           1.848225e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            59   8.559448e-02   3.728561e-02   6.432484e-02   7.563692e-03   2.280113e-05   1.329254e-05   8.353233e-05            nan            nan                      4.000000e-02           1.848229e+01 
+Reversed flow on  22 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.034
+Done.
+TimeStep    3: Time  6.000000e-03
+            60   8.124604e-02   3.325134e-02   5.885800e-02   6.734014e-03   1.800518e-05   1.069516e-05   8.288606e-05            nan            nan                      4.200000e-02           1.848232e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=3 t=0.006 eta0=-0.008402367575436998 etaHalf=2.743551721806625E-6 CFL=0.21376431362901654 vmax=18.482317323030337
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            61   9.620590e-02   2.373067e-01   2.481336e-01   9.439803e-02   1.429751e+00   1.432551e+00   1.340247e+00            nan            nan                      4.300000e-02           1.847492e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            62   1.237757e-01   1.258320e-01   1.645520e-01   4.853085e-02   2.868226e-01   2.932559e-01   2.246629e-01            nan            nan                      3.800000e-02           1.847497e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            63   1.335897e-01   6.794262e-02   1.388716e-01   2.515054e-02   5.752285e-02   6.003195e-02   4.011658e-02            nan            nan                      3.800000e-02           1.847500e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            64   1.318025e-01   4.053120e-02   1.250642e-01   1.352425e-02   1.153321e-02   1.229043e-02   9.760327e-03            nan            nan                      4.200000e-02           1.847503e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            65   1.244769e-01   2.766461e-02   1.138983e-01   7.878209e-03   2.312137e-03   2.516781e-03   2.915245e-03            nan            nan                      5.000000e-02           1.847504e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            66   1.159158e-01   2.272432e-02   8.990527e-02   5.564154e-03   4.712659e-04   5.171682e-04   1.378262e-03            nan            nan                      4.200000e-02           1.847505e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            67   1.066409e-01   1.815455e-02   8.246154e-02   4.097206e-03   9.806880e-05   1.069429e-04   1.075223e-03            nan            nan                      4.100000e-02           1.847506e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            68   9.853441e-02   1.688755e-02   6.738546e-02   3.696429e-03   5.501667e-05   3.362349e-05   1.017159e-03            nan            nan                      3.900000e-02           1.847507e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            69   9.094566e-02   1.405987e-02   6.092416e-02   3.041215e-03   3.094711e-05   1.721268e-05   9.887091e-04            nan            nan                      4.000000e-02           1.847508e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            70   8.457739e-02   1.330573e-02   4.961367e-02   2.878547e-03   5.287754e-05   2.606558e-05   9.656588e-04            nan            nan                      4.400000e-02           1.847508e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            71   7.902060e-02   1.111777e-02   4.499849e-02   2.395620e-03   2.421493e-05   1.283094e-05   9.423635e-04            nan            nan                      4.600000e-02           1.847509e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            72   7.427458e-02   1.056766e-02   3.581940e-02   2.284255e-03   4.761710e-05   2.321619e-05   9.167233e-04            nan            nan                      4.300000e-02           1.847509e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            73   7.046187e-02   8.817779e-03   3.312213e-02   1.898061e-03   1.972930e-05   1.013830e-05   8.959919e-04            nan            nan                      4.500000e-02           1.847510e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            74   6.705943e-02   8.402192e-03   2.624389e-02   1.815641e-03   3.865276e-05   1.874571e-05   8.723604e-04            nan            nan                      4.300000e-02           1.847511e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            75   6.430945e-02   6.996327e-03   2.483018e-02   1.504857e-03   1.468654e-05   7.332668e-06   8.539859e-04            nan            nan                      4.000000e-02           1.847511e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            76   6.172828e-02   6.683413e-03   1.932895e-02   1.443942e-03   2.937435e-05   1.427099e-05   8.352962e-04            nan            nan                      4.400000e-02           1.847512e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            77   5.974009e-02   5.552951e-03   1.857163e-02   1.194246e-03   1.146386e-05   5.808442e-06   8.206362e-04            nan            nan                      5.100000e-02           1.847567e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            78   5.812548e-02   5.317079e-03   1.440919e-02   1.149739e-03   2.194952e-05   1.068530e-05   8.086377e-04            nan            nan                      4.600000e-02           1.847513e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            79   5.681979e-02   4.406909e-03   1.408010e-02   9.486574e-04   9.663128e-06   4.752804e-06   7.965390e-04            nan            nan                      4.500000e-02           1.847610e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.032
+Done.
+TimeStep    4: Time  8.000000e-03
+            80   5.565218e-02   4.232123e-03   1.092881e-02   9.161918e-04   1.661971e-05   9.114075e-06   7.893753e-04            nan            nan                      3.900000e-02           1.847514e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=4 t=0.008 eta0=-0.009323107358516936 etaHalf=3.8065825478383886E-6 CFL=0.21326109101926846 vmax=18.47513689660001
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            81   6.941472e-02   2.325054e-01   1.603551e-01   9.420229e-02   1.406507e+00   1.410208e+00   1.273177e+00            nan            nan                      3.900000e-02           1.847528e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            82   8.705239e-02   1.203686e-01   1.117901e-01   4.817439e-02   2.822234e-01   2.887019e-01   2.117886e-01            nan            nan                      4.500000e-02           1.847536e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            83   9.047310e-02   6.128687e-02   8.112316e-02   2.460444e-02   5.661453e-02   5.910464e-02   4.271068e-02            nan            nan                      4.900000e-02           1.847541e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            84   9.136985e-02   3.153154e-02   7.461095e-02   1.264394e-02   1.135415e-02   1.210188e-02   1.325062e-02            nan            nan                      4.300000e-02           1.847545e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            85   8.642803e-02   1.621469e-02   6.065734e-02   6.465584e-03   2.276728e-03   2.478506e-03   5.723048e-03            nan            nan                      4.200000e-02           1.847547e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            86   8.329201e-02   8.855701e-03   5.617321e-02   3.359014e-03   4.566779e-04   5.080872e-04   4.992312e-03            nan            nan                      4.000000e-02           1.847549e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            87   7.693276e-02   4.923787e-03   4.488466e-02   1.761019e-03   9.204243e-05   1.057883e-04   4.896695e-03            nan            nan                      4.600000e-02           1.847550e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            88   7.339520e-02   3.847346e-03   4.111226e-02   1.034476e-03   2.144723e-05   2.935787e-05   4.872675e-03            nan            nan                      4.700000e-02           1.847551e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            89   6.933585e-02   3.052219e-03   3.485754e-02   6.692624e-04   9.617865e-06   2.117999e-05   4.886263e-03            nan            nan                      4.200000e-02           1.847552e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            90   6.447958e-02   2.190063e-03   2.686533e-02   4.733734e-04   9.637491e-06   2.158535e-05   4.885779e-03            nan            nan                      4.800000e-02           1.847553e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+            91   6.204264e-02   2.515419e-03   2.481951e-02   4.626068e-04   1.138778e-05   2.228387e-05   4.872554e-03            nan            nan                      4.700000e-02           1.847553e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            92   5.940955e-02   2.168962e-03   2.095767e-02   3.955483e-04   1.155801e-05   2.250480e-05   4.884104e-03            nan            nan                      4.600000e-02           1.847554e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            93   5.619522e-02   1.569213e-03   1.589080e-02   3.135984e-04   1.569360e-05   2.306519e-05   4.883073e-03            nan            nan                      4.400000e-02           1.847554e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            94   5.455111e-02   1.834308e-03   1.501913e-02   3.300027e-04   1.633784e-05   2.304329e-05   4.872494e-03            nan            nan                      4.500000e-02           1.847555e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            95   5.253595e-02   1.586200e-03   1.270155e-02   2.918855e-04   1.597533e-05   2.312684e-05   4.881696e-03            nan            nan                      4.200000e-02           1.847555e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            96   4.996796e-02   1.136885e-03   9.484405e-03   2.337024e-04   1.871304e-05   2.356745e-05   4.880206e-03            nan            nan                      4.400000e-02           1.847555e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            97   4.864163e-02   1.335430e-03   9.146028e-03   2.448902e-04   1.863915e-05   2.343761e-05   4.880047e-03            nan            nan                      4.700000e-02           1.847555e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            98   4.661182e-02   9.236871e-04   6.965990e-03   1.951722e-04   1.878481e-05   2.354232e-05   4.879904e-03            nan            nan                      4.200000e-02           1.847555e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+            99   4.550559e-02   1.084612e-03   6.901032e-03   2.031201e-04   1.938192e-05   2.361714e-05   4.879075e-03            nan            nan                      4.700000e-02           1.847556e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.025
+Done.
+TimeStep    5: Time  1.000000e-02
+           100   4.373448e-02   7.505001e-04   5.320611e-03   1.661135e-04   1.828057e-05   2.368451e-05   4.878856e-03            nan            nan                      4.900000e-02           1.847584e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=5 t=0.01 eta0=-0.009196974792388346 etaHalf=4.943241147969957E-6 CFL=0.21286543208697808 vmax=18.47583917092918
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+           101   4.117607e-02   2.323932e-01   7.869220e-02   9.404896e-02   1.383637e+00   1.388210e+00   1.112654e+00            nan            nan                      3.900000e-02           1.847676e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           102   4.733504e-02   1.205986e-01   4.214507e-02   4.804653e-02   2.776940e-01   2.842150e-01   4.262976e-01            nan            nan                      4.900000e-02           1.847696e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           103   4.656214e-02   6.125468e-02   2.329827e-02   2.454017e-02   5.571905e-02   5.819030e-02   7.293120e-02            nan            nan                      4.900000e-02           1.847689e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           104   4.622390e-02   3.116795e-02   1.579630e-02   1.253469e-02   1.117751e-02   1.191571e-02   3.404458e-02            nan            nan                      4.700000e-02           1.847692e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           105   4.463067e-02   1.580191e-02   1.237216e-02   6.402661e-03   2.242132e-03   2.440647e-03   9.033254e-03            nan            nan                      5.100000e-02           1.847693e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           106   4.270139e-02   7.918272e-03   1.133561e-02   3.274743e-03   4.500821e-04   5.002410e-04   4.034058e-03            nan            nan                      4.600000e-02           1.847694e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           107   4.029428e-02   3.972485e-03   9.024893e-03   1.675267e-03   9.075221e-05   1.031537e-04   1.617482e-03            nan            nan                      5.000000e-02           1.847695e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           108   3.815716e-02   1.902282e-03   8.425847e-03   8.667726e-04   1.895329e-05   2.364693e-05   1.163139e-03            nan            nan                      4.700000e-02           1.847697e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           109   3.595551e-02   9.760038e-04   6.604388e-03   4.686471e-04   4.545563e-06   1.137185e-05   1.052049e-03            nan            nan                      5.100000e-02           1.847697e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           110   3.408981e-02   6.268749e-04   6.196238e-03   3.090257e-04   2.247314e-06   1.049949e-05   1.037103e-03            nan            nan                      4.600000e-02           1.847698e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+           111   3.210662e-02   4.358614e-04   4.798210e-03   2.126255e-04   2.172833e-06   1.044301e-05   1.034358e-03            nan            nan                      4.400000e-02           1.847699e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           112   3.052626e-02   5.157312e-04   4.479789e-03   2.125116e-04   2.447732e-06   1.043810e-05   1.010409e-03            nan            nan                      4.100000e-02           1.847699e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           113   2.919802e-02   4.996338e-04   3.785177e-03   1.986214e-04   2.559568e-06   1.043407e-05   1.035422e-03            nan            nan                      4.500000e-02           1.847700e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           114   2.780455e-02   3.642627e-04   2.971229e-03   1.534025e-04   2.176853e-06   1.040747e-05   1.030249e-03            nan            nan                      4.300000e-02           1.847701e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           115   2.670454e-02   4.328539e-04   2.825644e-03   1.681643e-04   2.526495e-06   1.041083e-05   1.010217e-03            nan            nan                      4.400000e-02           1.847701e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           116   2.572678e-02   4.090752e-04   2.438491e-03   1.600320e-04   2.556715e-06   1.040813e-05   1.034279e-03            nan            nan                      4.200000e-02           1.847703e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           117   2.452642e-02   2.899927e-04   2.004079e-03   1.234262e-04   2.416204e-06   1.039954e-05   1.028859e-03            nan            nan                      4.600000e-02           1.847703e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           118   2.355776e-02   3.422972e-04   1.953813e-03   1.364450e-04   2.351957e-06   1.038744e-05   1.010273e-03            nan            nan                      5.000000e-02           1.847704e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           119   2.269867e-02   3.262305e-04   1.783000e-03   1.315800e-04   2.048948e-06   1.037032e-05   1.009778e-03            nan            nan                      4.400000e-02           1.847705e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.032
+Done.
+TimeStep    6: Time  1.200000e-02
+           120   2.193281e-02   3.053327e-04   1.657048e-03   1.243391e-04   1.654088e-06   1.035142e-05   1.030642e-03            nan            nan                      5.200000e-02           1.847706e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=6 t=0.012 eta0=-0.00863663379753632 etaHalf=6.1416575825035125E-6 CFL=0.21669879965347713 vmax=18.477061730461926
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+           121   3.181906e-02   2.319917e-01   7.333912e-02   9.379340e-02   1.361255e+00   1.366670e+00   1.099846e+00            nan            nan                      4.900000e-02           1.847746e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           122   4.960751e-02   1.194200e-01   3.888855e-02   4.774088e-02   2.732579e-01   2.798188e-01   3.875910e-01            nan            nan                      5.400000e-02           1.847763e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           123   4.954881e-02   6.084621e-02   1.996536e-02   2.434336e-02   5.484082e-02   5.729353e-02   6.826198e-02            nan            nan                      4.800000e-02           1.847753e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           124   4.745592e-02   3.098989e-02   1.022942e-02   1.242042e-02   1.100375e-02   1.173281e-02   3.578619e-02            nan            nan                      4.100000e-02           1.847753e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           125   4.405073e-02   1.575068e-02   6.466824e-03   6.341009e-03   2.207598e-03   2.403315e-03   1.022265e-02            nan            nan                      5.100000e-02           1.847753e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           126   4.086569e-02   7.949899e-03   4.827992e-03   3.253100e-03   4.428916e-04   4.924701e-04   4.655083e-03            nan            nan                      4.200000e-02           1.847754e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           127   3.796427e-02   3.979901e-03   4.262742e-03   1.670153e-03   8.897622e-05   1.010029e-04   1.564502e-03            nan            nan                      4.300000e-02           1.847754e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           128   3.548122e-02   1.973591e-03   3.788430e-03   8.633357e-04   1.809605e-05   2.078429e-05   6.773155e-04            nan            nan                      4.200000e-02           1.847754e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           129   3.341421e-02   9.880448e-04   3.315150e-03   4.567439e-04   4.239941e-06   4.414070e-06   2.443597e-04            nan            nan                      4.400000e-02           1.847755e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           130   3.165511e-02   5.502438e-04   2.865041e-03   2.578767e-04   2.018461e-06   1.294442e-06   1.043252e-04            nan            nan                      4.700000e-02           1.847759e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+           131   3.009665e-02   3.994793e-04   2.461183e-03   1.663842e-04   1.652584e-06   8.360840e-07   3.994551e-05            nan            nan                      4.900000e-02           1.847763e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           132   2.869347e-02   3.592642e-04   2.110095e-03   1.267392e-04   1.430102e-06   6.995442e-07   1.811231e-05            nan            nan                      4.900000e-02           1.847767e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           133   2.743352e-02   3.418858e-04   1.819401e-03   1.086286e-04   1.146898e-06   5.548907e-07   9.606055e-06            nan            nan                      5.100000e-02           1.847770e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           134   2.630570e-02   3.247404e-04   1.590787e-03   9.797281e-05   1.011691e-06   4.839109e-07   7.280164e-06            nan            nan                      6.700000e-02           1.847774e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           135   2.530459e-02   3.055780e-04   1.414093e-03   9.008078e-05   1.779711e-06   8.270340e-07   6.669825e-06            nan            nan                      6.300000e-02           1.847778e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           136   2.441303e-02   2.856451e-04   1.284047e-03   8.374058e-05   2.455473e-06   1.142550e-06   6.501033e-06            nan            nan                      6.800000e-02           1.847781e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           137   2.358980e-02   2.660913e-04   1.198470e-03   7.890607e-05   2.809431e-06   1.315977e-06   6.536401e-06            nan            nan                      4.700000e-02           1.847785e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           138   2.280096e-02   2.475833e-04   1.158803e-03   7.548336e-05   3.024533e-06   1.417444e-06   6.564419e-06            nan            nan                      5.000000e-02           1.847788e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           139   2.199015e-02   2.304197e-04   1.186458e-03   7.191244e-05   3.113777e-06   1.456830e-06   6.199745e-06            nan            nan                      4.800000e-02           1.847791e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.029
+Done.
+TimeStep    7: Time  1.400000e-02
+           140   2.120971e-02   2.146541e-04   1.313355e-03   6.857650e-05   3.124536e-06   1.462890e-06   5.780748e-06            nan            nan                      4.500000e-02           1.847795e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=7 t=0.014 eta0=-0.00786094558000272 etaHalf=7.3904134794133824E-6 CFL=0.21746118879316745 vmax=18.477947385251944
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+           141   2.127524e-02   2.316592e-01   6.861045e-02   9.349816e-02   1.339385e+00   1.345608e+00   1.215248e+00            nan            nan                      4.200000e-02           1.847863e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           142   2.540794e-02   1.203340e-01   3.581260e-02   4.767318e-02   2.689189e-01   2.755172e-01   2.649940e-01            nan            nan                      4.100000e-02           1.847896e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           143   2.729260e-02   6.115340e-02   1.756548e-02   2.432874e-02   5.398181e-02   5.641520e-02   5.038174e-02            nan            nan                      3.800000e-02           1.847911e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           144   2.876733e-02   3.106469e-02   9.140111e-03   1.241768e-02   1.085390e-02   1.155522e-02   2.143783e-02            nan            nan                      4.400000e-02           1.847920e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           145   2.916230e-02   1.570914e-02   5.781367e-03   6.337047e-03   2.380765e-03   2.377424e-03   1.490745e-02            nan            nan                      3.400000e-02           1.847926e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           146   2.894844e-02   7.869864e-03   4.744110e-03   3.233034e-03   1.798934e-03   5.424788e-04   1.446682e-02            nan            nan                      4.000000e-02           1.847930e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           147   2.836254e-02   3.882011e-03   4.425543e-03   1.650257e-03   4.924740e-03   2.757667e-04   1.438979e-02            nan            nan                      4.700000e-02           1.847932e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           148   2.757499e-02   1.879549e-03   4.495683e-03   8.470823e-04   1.509866e-02   2.697124e-04   1.438844e-02            nan            nan                      4.500000e-02           1.847934e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           149   2.668970e-02   9.215709e-04   4.207006e-03   4.464519e-04   4.654013e-02   2.785666e-04   1.438971e-02            nan            nan                      4.000000e-02           1.847935e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           150   2.574364e-02   5.462646e-04   3.988780e-03   2.575760e-04   1.426809e-01   2.863082e-04   1.439044e-02            nan            nan                      3.900000e-02           1.847936e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr          water    Fx_half (N)    Fz_half (N) Solver Iteration Elapsed Time (s) Maximum Velocity (m/s) 
+           151   2.482850e-02   4.592953e-04   3.782337e-03   1.760162e-04   4.345625e-01   2.925274e-04   1.439076e-02            nan            nan                      3.700000e-02           1.847937e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           152   2.395593e-02   4.490503e-04   3.566258e-03   1.429193e-04   1.312745e+00   2.973433e-04   1.439087e-02            nan            nan                      3.800000e-02           1.847937e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 2 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           153   2.313644e-02   4.407358e-04   3.271285e-03   1.272175e-04   3.883194e+00   3.005705e-04   1.439094e-02            nan            nan                      4.600000e-02           1.847938e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 2 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           154   2.264522e-02   4.248066e-04   2.956498e-03   1.182788e-04   1.047605e+01   3.011725e-04   1.439103e-02            nan            nan                      4.200000e-02           1.847939e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 2 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           155   2.265944e-02   4.094024e-04   2.612400e-03   1.102450e-04   1.841980e+01   3.800708e-04   1.439101e-02            nan            nan                      4.300000e-02           1.847940e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 5 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           156   2.297566e-02   4.176632e-04   2.542540e-03   1.079668e-04   5.528723e+01   1.682604e-03   1.439087e-02            nan            nan                      3.700000e-02           1.847940e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 6 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           157   2.245900e-02   3.860942e-04   2.579915e-03   1.012329e-04   5.153387e+01   2.813259e-03   1.439076e-02            nan            nan                      4.500000e-02           1.847941e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 6 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           158   2.122250e-02   3.529362e-04   2.594459e-03   9.475872e-05   3.421418e+01   1.204064e-03   1.439070e-02            nan            nan                      4.000000e-02           1.847942e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 6 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+           159   2.071881e-02   3.348842e-04   2.468693e-03   9.289468e-05   3.951733e+01   9.235332e-04   1.439071e-02            nan            nan                      3.900000e-02           1.847942e+01 
+Reversed flow on  20 faces on fluid: DOMAIN.top
+Turbulent viscosity limited on 8 cells in fluid
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fx_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+A floating point error has occurred. The following error has been logged:
+  Non-finite value detected while computing values for Monitor Fz_half Monitor. Typical causes are overflow, underflow, or a division by zero.
+Please check your usage and inputs.
+
+
+Exporting F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\HF_foil_rans_stability.simh
+Export fields to state Velocity
+Export fields to state Convective Courant Number
+Export fields to state Pressure
+Export fields to state Velocity: Magnitude
+Export fields to state Volume Fraction of air
+Export fields to state Volume Fraction of water
+Export fields to state Wall Y+
+Export fields to state Density
+Export fields to state Static Pressure
+Export fields to state Wall Shear Stress
+Export fields to state Mass Flow Rate
+Export fields to state Cell Relative Velocity
+Export fields to state Relative Velocity
+Export fields to state Periodic Index
+Export fields to state Hydrostatic Pressure of Heavy Fluid of Calm
+Export fields to state Hydrostatic Pressure of Heavy Fluid of NTNU_WaveTank 1
+
+ Time to export (s): 0.021
+Done.
+TimeStep    8: Time  1.600000e-02
+           160   2.137404e-02   3.174859e-04   2.150110e-03   9.075067e-05   5.858895e+01   2.752845e-03   1.439080e-02            nan            nan                      4.000000e-02           1.847943e+01 
+ Representation : HF_foil_rans_stability, Import Mesh  : FvMesh 1.
+ Representation : HF_foil_rans_stability, Import State : State 1.
+[NTNU_GAUGE] step=8 t=0.016 eta0=-0.006924274771815675 etaHalf=8.69579793061348E-6 CFL=0.21296677102448497 vmax=18.47942724722592
+Saving: F:\ntnu\wave_depth_20261029\fifth_cases\W20_H16_X3\gauge_checkpoint.sim... complete (49.595MB in 0.153s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

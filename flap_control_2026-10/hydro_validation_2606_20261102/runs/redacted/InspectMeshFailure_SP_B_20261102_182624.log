@@ -1,0 +1,48 @@
+Starting local server: starserver.bat -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -cpubind off -np 1 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Jfc3BsaXQwX2ZpeGVkXFNQX0JfYnVpbGRfZXJyb3JfMjAyNjExMDJfMTgxMjU5LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 8904
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 18:28:36 2026
+
+Server::start -host THINKPAD-LUCJAN:47829
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_build_error_20261102_181259.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=4 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_182624\InspectMeshFailure.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_182624\InspectMeshFailure.java:6: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);List<Region> rs=new ArrayList<>(s.getRegionManager().getRegions());FvRepresentation rep=(FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh");
+                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_182624\InspectMeshFailure.java:9: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(rs);tab.setRepresentation(rep);tab.setExtractVertexData(false);List<FieldFunction> ff=new ArrayList<>();for(String n:List.of("Volume","CellQuality","FaceValidity","PrismLayerNumber","PrismCellThickness"))if(s.getFieldFunctionManager().hasFunction(n))ff.add(s.getFieldFunctionManager().getFunction(n));tab.setFieldFunctions(ff);tab.extract();tab.export(out.resolve("all_mesh_cells.csv").toString());
+                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_182624\InspectMeshFailure.java:11: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("Mesh failure diagnosis");sc.initializeAndWait();PlaneSection plane=s.getPartManager().createImplicitPart(rs,List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));PartDisplayer m=sc.getDisplayerManager().createPartDisplayer("midspan mesh",-1,1);m.getInputParts().setObjects(plane);m.setRepresentation(rep);m.setMesh(true);m.setSurface(false);m.setOutline(false);m.setDisplayerColor(new DoubleVector(new double[]{.35,.4,.45}));PartDisplayer d=sc.getDisplayerManager().createPartDisplayer("invalid cells",-1,1);d.getInputParts().setObjects(bad);d.setRepresentation(rep);d.setSurface(true);d.setOutline(true);d.setDisplayerColor(new DoubleVector(new double[]{1,.05,.05}));
+                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_182624\InspectMeshFailure.java:13: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+double[][] views={{.60,.025,.68},{.952,.02128173276776986,.065},{1.18,0,.045}};String[] names={"foil","hinge","trailing_edge"};for(int i=0;i<views.length;i++){double[] v=views[i];sc.getCurrentView().setInput(new DoubleVector(new double[]{v[0],.02,v[1]}),new DoubleVector(new double[]{v[0],-3,v[1]}),new DoubleVector(new double[]{0,0,1}),v[2],1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve(names[i]+".png").toString(),1,1200,800);}
+                                                                                                                                                                                                      ^
+
+Loading/configuring connectivity (old|new partitions: 4|1)
+  Background (index 0): 256750 cells, 707402 faces, 906624 verts.
+Configuring finished
+MESH_DIAGNOSTIC_EXPORTED_NO_SOLVER_STEPS_NO_SIM_SAVE F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\mesh_diagnostic_20261102_182624
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

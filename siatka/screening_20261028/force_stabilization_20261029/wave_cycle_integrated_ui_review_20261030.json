@@ -1,0 +1,57 @@
+﻿{
+    "updated_at":  "2026-10-30T10:03:21.670Z",
+    "status":  "PASS",
+    "case":  "W01_W20L4_M10_FS020_cycles_r2",
+    "widths":  [
+                   1920,
+                   1360,
+                   390
+               ],
+    "surfaces":  [
+                     "dashboard.html",
+                     "professor_dashboard.html"
+                 ],
+    "checks":  {
+                   "javascript_errors":  0,
+                   "page_horizontal_overflow":  false,
+                   "duplicate_ids":  0,
+                   "broken_visible_images":  0,
+                   "force_plots_default_visible":  true,
+                   "force_plot_units":  "Fx and Fz [N] on 20 mm slice",
+                   "finite_nonempty_force_polylines":  true,
+                   "correct_four_full_cycle_policy":  true,
+                   "ten_is_typical_not_minimum":  true,
+                   "twenty_cycle_cap":  true,
+                   "partial_first_cycle_not_accepted":  true,
+                   "cycle_metrics_pending":  true,
+                   "history_update":  {
+                                          "earlier_time_s":  0.363,
+                                          "earlier_points":  344,
+                                          "later_time_s":  0.432,
+                                          "later_points":  413
+                                      },
+                   "mobile_plots_and_table_scroll_internally":  true
+               },
+    "file_parity":  {
+                        "verified":  true,
+                        "method":  "SHA256",
+                        "original_directory":  "F:/ntnu/mesh_screening_20261028",
+                        "copy_directory":  "F:/ntnu/mesh_screening_20261028/dashboard_work_20261030",
+                        "dashboard_sha256":  "3EFA378FB2B24F8BD46C7AC46D542640E17CC9FFEC21190FABBC0DA7D11E025D",
+                        "professor_sha256":  "D34C32093029B3B34D065324DB14752E7E5B13EE99E237DBA164BA420F3A3DCC",
+                        "note":  "Hashes reflect one simultaneous snapshot; live files subsequently refresh."
+                    },
+    "print":  {
+                  "operational_pages":  43,
+                  "professor_pages":  22,
+                  "professor_cycle_section":  "readable on two pages; whole criteria table",
+                  "operational_refinement":  "Move wave-cycle section onto new page and keep criteria table together; current title/status are orphaned on page2 and table splits pages3/4."
+              },
+    "limits":  [
+                   "Actual four-cycle overlay cannot yet populate: live record has no complete cycles. No hypothetical cycles were inserted into production.",
+                   "This UI review does not validate CFD accuracy or controller stop behavior."
+               ],
+    "safety":  "Read-only browser. No Start, Stop or Schedule controls pressed; non-GET/HEAD requests blocked. No builders, sources or solver processes edited.",
+    "artifacts":  "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_cycle_integrated_qa_20261030",
+    "superseded_by":  "wave_live_final_ui_review_20261030.json"
+}

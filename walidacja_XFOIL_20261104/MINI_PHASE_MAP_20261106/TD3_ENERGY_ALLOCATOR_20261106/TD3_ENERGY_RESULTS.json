@@ -1,0 +1,306 @@
+{
+  "status": "XFOIL_DIAGNOSTIC_ONLY",
+  "target_CL": 0.6455953834031652,
+  "instantaneous_CL_band_pct": 10,
+  "rates_deg_s": {
+    "pitch": 90,
+    "flap": 15
+  },
+  "load_balance_bias_calibration": "separate initial phases",
+  "mean_lift_reward_multiplier": 0.0021857923497268076,
+  "interactions_per_policy": 12000,
+  "observations": [
+    "(preview_Ux-18)/.20",
+    "preview_Uy/.20",
+    "(amplitude_scale-3)/2",
+    "(pitch-trim)/1.25",
+    "flap/1.5",
+    "(CL-target)/(.1*target)"
+  ],
+  "actuator_work_evaluated": false,
+  "heading": "same nominal regular wave; H=0.50 uses scaled orbital kinematics",
+  "mode_results": {
+    "pitch_only": {
+      "selected_step": 7000,
+      "calm_CD_x": 0.007260700291591617,
+      "calm_pitch_deg": 2.8779178816317414,
+      "calm_flap_deg": 0.0,
+      "cases": {
+        "0.1": {
+          "policy": {
+            "CL_mean": 0.6455895267436138,
+            "CL_mean_error_pct": -0.0009071718450881505,
+            "CL_min": 0.5810358450628486,
+            "CL_max": 0.6961832430892961,
+            "CL_in_band_10_pct": 94.23076923076923,
+            "CD_x_mean": 0.007197304464170959,
+            "delta_CD_vs_calm_pct": -0.8731365415822867,
+            "pitch_range_deg": [
+              2.3321146411037694,
+              3.291296335628298
+            ],
+            "flap_range_deg": [
+              0.0,
+              0.0
+            ],
+            "CL_Uy_covariance": 0.0011986599500978918,
+            "reward_mean": 0.06329341280765312,
+            "delta_CD_vs_same_wave_fixed_pct": -0.6972356810380553
+          },
+          "fixed": {
+            "CL_mean": 0.6455963552166548,
+            "CL_mean_error_pct": 0.00015052980777419123,
+            "CL_min": 0.6325543370317592,
+            "CL_max": 0.6586494288188309,
+            "CL_in_band_10_pct": 100.0,
+            "CD_x_mean": 0.007247838983669288,
+            "delta_CD_vs_calm_pct": -0.17713591534997963,
+            "pitch_range_deg": [
+              2.8779178816317414,
+              2.8779178816317414
+            ],
+            "flap_range_deg": [
+              0.0,
+              0.0
+            ],
+            "CL_Uy_covariance": 0.0002333982525167051,
+            "reward_mean": 0.012863432104820532
+          },
+          "normalized_lift_bias": -0.178955078125,
+          "mean_lift_comparable": true
+        },
+        "0.5": {
+          "policy": {
+            "CL_mean": 0.6455710673688168,
+            "CL_mean_error_pct": -0.003766451088960121,
+            "CL_min": 0.5841725278023788,
+            "CL_max": 0.7101549217434819,
+            "CL_in_band_10_pct": 90.93406593406593,
+            "CD_x_mean": 0.006862537589368077,
+            "delta_CD_vs_calm_pct": -5.483805779514683,
+            "pitch_range_deg": [
+              2.4073661440692056,
+              3.434460965469927
+            ],
+            "flap_range_deg": [
+              0.0,
+              0.0
+            ],
+            "CL_Uy_covariance": 0.007262319864773467,
+            "reward_mean": 0.397999986634911,
+            "delta_CD_vs_same_wave_fixed_pct": -1.1131877221337017
+          },
+          "fixed": {
+            "CL_mean": 0.6455491393977972,
+            "CL_mean_error_pct": -0.007163001247656453,
+            "CL_min": 0.5804422544967336,
+            "CL_max": 0.7107313610209658,
+            "CL_in_band_10_pct": 91.30036630036629,
+            "CD_x_mean": 0.006939790484988775,
+            "delta_CD_vs_calm_pct": -4.419818939152154,
+            "pitch_range_deg": [
+              2.8779178816317414,
+              2.8779178816317414
+            ],
+            "flap_range_deg": [
+              0.0,
+              0.0
+            ],
+            "CL_Uy_covariance": 0.005825833942625896,
+            "reward_mean": 0.32080122552605145
+          },
+          "normalized_lift_bias": 0.048583984375,
+          "mean_lift_comparable": true
+        }
+      }
+    },
+    "flap_only": {
+      "selected_step": 3000,
+      "calm_CD_x": 0.007260700291591617,
+      "calm_pitch_deg": 2.8779178816317414,
+      "calm_flap_deg": 0.0,
+      "cases": {
+        "0.1": {
+          "policy": {
+            "CL_mean": 0.6755059521003238,
+            "CL_mean_error_pct": 4.633020846507496,
+            "CL_min": 0.6737096556270339,
+            "CL_max": 0.6767249940099072,
+            "CL_in_band_10_pct": 100.0,
+            "CD_x_mean": 0.007324973325965901,
+            "delta_CD_vs_calm_pct": 0.8852181166149498,
+            "pitch_range_deg": [
+              2.8779178816317414,
+              2.8779178816317414
+            ],
+            "flap_range_deg": [
+              0.3090709570785763,
+              0.7578069608161594
+            ],
+            "CL_Uy_covariance": 4.361199081461889e-06,
+            "reward_mean": 0.0009975837168014821,
+            "delta_CD_vs_same_wave_fixed_pct": 1.0642391817810903
+          },
+          "fixed": {
+            "CL_mean": 0.6455963552166548,
+            "CL_mean_error_pct": 0.00015052980777419123,
+            "CL_min": 0.6325543370317592,
+            "CL_max": 0.6586494288188309,
+            "CL_in_band_10_pct": 100.0,
+            "CD_x_mean": 0.007247838983669288,
+            "delta_CD_vs_calm_pct": -0.17713591534997963,
+            "pitch_range_deg": [
+              2.8779178816317414,
+              2.8779178816317414
+            ],
+            "flap_range_deg": [
+              0.0,
+              0.0
+            ],
+            "CL_Uy_covariance": 0.0002333982525167051,
+            "reward_mean": 0.012863432104820532
+          },
+          "normalized_lift_bias": -0.499755859375,
+          "mean_lift_comparable": false
+        },
+        "0.5": {
+          "policy": {
+            "CL_mean": 0.67628874057006,
+            "CL_mean_error_pct": 4.754271476524363,
+            "CL_min": 0.6650204661393171,
+            "CL_max": 0.6805054649137707,
+            "CL_in_band_10_pct": 100.0,
+            "CD_x_mean": 0.007312067804665443,
+            "delta_CD_vs_calm_pct": 0.7074732603040035,
+            "pitch_range_deg": [
+              2.8779178816317414,
+              2.8779178816317414
+            ],
+            "flap_range_deg": [
+              -0.5802397196493716,
+              1.5
+            ],
+            "CL_Uy_covariance": 0.000332134479791671,
+            "reward_mean": 0.013063149590108613,
+            "delta_CD_vs_same_wave_fixed_pct": 5.3643884564228195
+          },
+          "fixed": {
+            "CL_mean": 0.6455491393977972,
+            "CL_mean_error_pct": -0.007163001247656453,
+            "CL_min": 0.5804422544967336,
+            "CL_max": 0.7107313610209658,
+            "CL_in_band_10_pct": 91.30036630036629,
+            "CD_x_mean": 0.006939790484988775,
+            "delta_CD_vs_calm_pct": -4.419818939152154,
+            "pitch_range_deg": [
+              2.8779178816317414,
+              2.8779178816317414
+            ],
+            "flap_range_deg": [
+              0.0,
+              0.0
+            ],
+            "CL_Uy_covariance": 0.005825833942625896,
+            "reward_mean": 0.32080122552605145
+          },
+          "normalized_lift_bias": -0.499755859375,
+          "mean_lift_comparable": false
+        }
+      }
+    },
+    "combined": {
+      "selected_step": 6000,
+      "calm_CD_x": 0.0072554003627497525,
+      "calm_pitch_deg": 3.136155241345203,
+      "calm_flap_deg": -0.5,
+      "cases": {
+        "0.1": {
+          "policy": {
+            "CL_mean": 0.6454077210504696,
+            "CL_mean_error_pct": -0.029068106358876022,
+            "CL_min": 0.5999241569704526,
+            "CL_max": 0.6707393143975376,
+            "CL_in_band_10_pct": 100.0,
+            "CD_x_mean": 0.0072436769243261435,
+            "delta_CD_vs_calm_pct": -0.16158223995189624,
+            "pitch_range_deg": [
+              2.7210457539634976,
+              3.4287246499863735
+            ],
+            "flap_range_deg": [
+              -0.8546591699123383,
+              -0.11920362263917923
+            ],
+            "CL_Uy_covariance": 0.00029208198100580407,
+            "reward_mean": 0.007615973341246113,
+            "delta_CD_vs_same_wave_fixed_pct": 0.015061346086686633
+          },
+          "fixed": {
+            "CL_mean": 0.6455963601681157,
+            "CL_mean_error_pct": 0.0001512967681582822,
+            "CL_min": 0.6325999108428633,
+            "CL_max": 0.6586038110160383,
+            "CL_in_band_10_pct": 100.0,
+            "CD_x_mean": 0.0072425860933689945,
+            "delta_CD_vs_calm_pct": -0.17661698514320756,
+            "pitch_range_deg": [
+              3.136155241345203,
+              3.136155241345203
+            ],
+            "flap_range_deg": [
+              -0.5,
+              -0.5
+            ],
+            "CL_Uy_covariance": 0.00023254878470907475,
+            "reward_mean": 0.012816404386114593
+          },
+          "normalized_lift_bias": 0.000732421875,
+          "mean_lift_comparable": true
+        },
+        "0.5": {
+          "policy": {
+            "CL_mean": 0.6462135413827951,
+            "CL_mean_error_pct": 0.09575006196160807,
+            "CL_min": 0.5441376590371225,
+            "CL_max": 0.7119481190998794,
+            "CL_in_band_10_pct": 85.25641025641025,
+            "CD_x_mean": 0.006936827791313239,
+            "delta_CD_vs_calm_pct": -4.390833799773608,
+            "pitch_range_deg": [
+              1.9936052208715858,
+              3.552948130612708
+            ],
+            "flap_range_deg": [
+              -0.8912093639373779,
+              1.482942670583725
+            ],
+            "CL_Uy_covariance": 0.005995976379957867,
+            "reward_mean": 0.30658706985335493,
+            "delta_CD_vs_same_wave_fixed_pct": -0.015321322352035427
+          },
+          "fixed": {
+            "CL_mean": 0.6455268146508757,
+            "CL_mean_error_pct": -0.010621010318889734,
+            "CL_min": 0.5804002500393329,
+            "CL_max": 0.7106901331229345,
+            "CL_in_band_10_pct": 91.39194139194139,
+            "CD_x_mean": 0.0069378907679222244,
+            "delta_CD_vs_calm_pct": -4.376182966520592,
+            "pitch_range_deg": [
+              3.136155241345203,
+              3.136155241345203
+            ],
+            "flap_range_deg": [
+              -0.5,
+              -0.5
+            ],
+            "CL_Uy_covariance": 0.005826014953850404,
+            "reward_mean": 0.31735209095949973
+          },
+          "normalized_lift_bias": -0.007080078125,
+          "mean_lift_comparable": true
+        }
+      }
+    }
+  }
+}

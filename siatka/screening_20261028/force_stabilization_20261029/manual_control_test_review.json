@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "tests": [
+    "Reject unprepared, nonfinite, boolean, fractional-step and arbitrary-source requests",
+    "Reject missing token and foreign origin",
+    "One start request only; repeat start blocked (mock process)",
+    "Saved paused server cannot receive a new stop action",
+    "Owned stop, combined schedule and cancellation work in isolated folder; wrong-case stop rejected"
+  ],
+  "solver_processes_started": 0,
+  "real_case_stop_markers_written": 0,
+  "scope": "Isolated mocked launch + temporary stop files; actual CFD macro compiled, not flow-tested in new manual presets"
+}

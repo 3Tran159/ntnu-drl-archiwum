@@ -1,0 +1,53 @@
+SYNTHETIC SOFTWARE TESTS ONLY — NO STAR MESH RESULTS
+
+test_baseline_hash_guard (test_meshflow.ControllerTests.test_baseline_hash_guard) ... ok
+test_campaign_lock_prevents_second_launcher (test_meshflow.ControllerTests.test_campaign_lock_prevents_second_launcher) ... ok
+test_changed_case_refuses_resume (test_meshflow.ControllerTests.test_changed_case_refuses_resume) ... A001 completed acceptable
+ok
+test_control_readback_change_rejected (test_meshflow.ControllerTests.test_control_readback_change_rejected) ... A001 completed acceptable
+ok
+test_crash_stops_after_failure_limit (test_meshflow.ControllerTests.test_crash_stops_after_failure_limit) ... A001 failed not_eligible
+A002 failed not_eligible
+ok
+test_duplicate_case_rejected (test_meshflow.ControllerTests.test_duplicate_case_rejected) ... ok
+test_empty_summary_has_no_invented_rows (test_meshflow.ControllerTests.test_empty_summary_has_no_invented_rows) ... ok
+test_exact_version_required (test_meshflow.ControllerTests.test_exact_version_required) ... ok
+test_failed_generation_never_passes (test_meshflow.ControllerTests.test_failed_generation_never_passes) ... A001 completed acceptable
+ok
+test_large_batch_blocked (test_meshflow.ControllerTests.test_large_batch_blocked) ... ok
+test_lhs_reproducible_strata (test_meshflow.ControllerTests.test_lhs_reproducible_strata) ... ok
+test_measured_evidence_required (test_meshflow.ControllerTests.test_measured_evidence_required) ... A001 completed acceptable
+ok
+test_missing_prism_review_never_passes (test_meshflow.ControllerTests.test_missing_prism_review_never_passes) ... A001 completed acceptable
+ok
+test_missing_volume_metric_never_passes (test_meshflow.ControllerTests.test_missing_volume_metric_never_passes) ... A001 completed acceptable
+ok
+test_nan_case_rejected (test_meshflow.ControllerTests.test_nan_case_rejected) ... ok
+test_nonpositive_volume_rejected (test_meshflow.ControllerTests.test_nonpositive_volume_rejected) ... A001 completed acceptable
+ok
+test_pareto_and_missing_objective (test_meshflow.ControllerTests.test_pareto_and_missing_objective) ... A001 completed acceptable
+ok
+test_path_traversal_rejected (test_meshflow.ControllerTests.test_path_traversal_rejected) ... ok
+test_prism_lock_change_rejected (test_meshflow.ControllerTests.test_prism_lock_change_rejected) ... A001 completed acceptable
+ok
+test_retry_preserves_attempts (test_meshflow.ControllerTests.test_retry_preserves_attempts) ... A001 failed not_eligible
+A002 failed not_eligible
+A001 failed not_eligible
+ok
+test_stop_file_prevents_launch (test_meshflow.ControllerTests.test_stop_file_prevents_launch) ... ok
+test_success_exit_without_result_is_failure (test_meshflow.ControllerTests.test_success_exit_without_result_is_failure) ... A001 failed not_eligible
+ok
+test_three_independent_processes_and_resume (test_meshflow.ControllerTests.test_three_independent_processes_and_resume) ... A001 completed acceptable
+A002 completed acceptable
+A003 completed acceptable
+ok
+test_timeout_recorded (test_meshflow.ControllerTests.test_timeout_recorded) ... A001 timeout not_eligible
+ok
+test_uninspected_model_blocked (test_meshflow.ControllerTests.test_uninspected_model_blocked) ... ok
+test_wrong_export_version_quarantined (test_meshflow.ControllerTests.test_wrong_export_version_quarantined) ... A001 failed not_eligible
+ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.530s
+
+OK

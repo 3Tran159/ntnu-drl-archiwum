@@ -1,0 +1,144 @@
+<html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:16px system-ui;max-width:1100px;margin:20px auto;padding:16px}td,th{padding:8px;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><h1>MINI_POC_2D</h1><section id="labs-split" style="margin:16px;padding:16px;border:1px solid #48798a;border-radius:10px"><h2>DAY · EXPLORATION LAB / NIGHT · VALIDATION LAB</h2><p>Aktualny projekt: Mini-CFD 2D ze szczeliną2,5mm — HOLD rozruchu ciśnienia. Oddzielna kontrola kosztu:sealed0°. Stary sweep333939 pozostaje w archiwalnymHOLD. W04 ma priorytet także nocą.</p><div style="overflow-x:auto"><table><thead><tr><th>Run</th><th>Fizyka</th><th>Komórki</th><th>Status</th><th>CL / CD</th></tr></thead><tbody><tr><td style="padding:6px">gap_delta_0_gentle_start</td><td style="padding:6px">L1_GAP</td><td style="padding:6px">89750</td><td style="padding:6px">HOLD_PHYSICAL</td><td style="padding:6px">0.034214608137601056 / 0.48482873469362814</td></tr><tr><td style="padding:6px">gap_delta_0</td><td style="padding:6px">L1_GAP</td><td style="padding:6px">89750</td><td style="padding:6px">HOLD_PHYSICAL</td><td style="padding:6px">0.19844114926886247 / -1.4337031832406792</td></tr><tr><td style="padding:6px">gap_delta_2</td><td style="padding:6px">L1_GAP</td><td style="padding:6px">90198</td><td style="padding:6px">BUILT_NOT_SOLVED</td><td style="padding:6px">— / —</td></tr><tr><td style="padding:6px">sealed_demo_delta_0</td><td style="padding:6px">L1_SEALED_ALGORITHM_DEMONSTRATOR</td><td style="padding:6px">14776</td><td style="padding:6px">HOLD_LIMIT</td><td style="padding:6px">0.3238441283144926 / 0.005389185969011046</td></tr></tbody></table></div><p>Sealed: wyłącznie demonstrator algorytmów; osobna fizyka i koszty. Brak zaakceptowanych danych treningowych. Dalsze kąty i dynamiczne±5° wymagają oceny poprzedniego przypadku.</p><small>2026-11-03T15:53:10.621227+01:00</small></section><pre>{
+  &quot;at&quot;: &quot;2026-11-03T15:53:10.621227+01:00&quot;,
+  &quot;current_lab&quot;: &quot;EXPLORATION LAB&quot;,
+  &quot;current_run&quot;: &quot;sealed_demo_delta_0&quot;,
+  &quot;main_model&quot;: &quot;L1_GAP_true2D_steady_SST&quot;,
+  &quot;runs&quot;: [
+    {
+      &quot;run_id&quot;: &quot;gap_delta_0_gentle_start&quot;,
+      &quot;fidelity&quot;: &quot;L1_GAP&quot;,
+      &quot;cells&quot;: 89750,
+      &quot;mesh_seconds&quot;: 3.4751007000013487,
+      &quot;min_SICN&quot;: 0.015974386910192533,
+      &quot;gap_mm&quot;: 2.5,
+      &quot;delta_deg&quot;: 0,
+      &quot;native_sim&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0_gentle_start\\MINI_prepared.sim&quot;,
+      &quot;state&quot;: {
+        &quot;status&quot;: &quot;HOLD_PHYSICAL&quot;,
+        &quot;iterations_this_run&quot;: 1,
+        &quot;elapsed_s&quot;: 2.4922302,
+        &quot;validation&quot;: false,
+        &quot;DRL_allowed&quot;: false
+      },
+      &quot;samples&quot;: 1,
+      &quot;latest&quot;: {
+        &quot;iteration&quot;: &quot;1&quot;,
+        &quot;solver_s&quot;: &quot;0.2657398&quot;,
+        &quot;elapsed_s&quot;: &quot;1.1989829&quot;,
+        &quot;CL&quot;: &quot;0.034214608137601056&quot;,
+        &quot;CD&quot;: &quot;0.48482873469362814&quot;,
+        &quot;Mh&quot;: &quot;-2930.017753182507&quot;,
+        &quot;Fx&quot;: &quot;93465.28347423763&quot;,
+        &quot;Fy&quot;: &quot;6595.892156766731&quot;,
+        &quot;pABSmin&quot;: &quot;-4322943.101565355&quot;,
+        &quot;mass_relative&quot;: &quot;1.1757828635346217E-4&quot;,
+        &quot;min_quality&quot;: &quot;0.15517515669441467&quot;
+      },
+      &quot;solver_mean_s_per_iteration_after10&quot;: null,
+      &quot;W04_max_slowdown&quot;: 0.006926399210102296
+    },
+    {
+      &quot;run_id&quot;: &quot;gap_delta_0&quot;,
+      &quot;fidelity&quot;: &quot;L1_GAP&quot;,
+      &quot;cells&quot;: 89750,
+      &quot;mesh_seconds&quot;: 3.4751007000013487,
+      &quot;min_SICN&quot;: 0.015974386910192533,
+      &quot;gap_mm&quot;: 2.5,
+      &quot;delta_deg&quot;: 0,
+      &quot;native_sim&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0\\MINI_prepared.sim&quot;,
+      &quot;state&quot;: {
+        &quot;status&quot;: &quot;HOLD_PHYSICAL&quot;,
+        &quot;iterations_this_run&quot;: 1,
+        &quot;elapsed_s&quot;: 2.980074,
+        &quot;validation&quot;: false,
+        &quot;DRL_allowed&quot;: false
+      },
+      &quot;samples&quot;: 1,
+      &quot;latest&quot;: {
+        &quot;iteration&quot;: &quot;3&quot;,
+        &quot;solver_s&quot;: &quot;0.3684991&quot;,
+        &quot;elapsed_s&quot;: &quot;2.557408&quot;,
+        &quot;CL&quot;: &quot;0.19844114926886247&quot;,
+        &quot;CD&quot;: &quot;-1.4337031832406792&quot;,
+        &quot;Mh&quot;: &quot;-3404.3504273490685&quot;,
+        &quot;Fx&quot;: &quot;-276389.2996651381&quot;,
+        &quot;Fy&quot;: &quot;38255.48475605131&quot;,
+        &quot;pABSmin&quot;: &quot;-1799624.1811583072&quot;,
+        &quot;mass_relative&quot;: &quot;9.419109203491728E-4&quot;,
+        &quot;min_quality&quot;: &quot;0.15517515669441467&quot;
+      },
+      &quot;solver_mean_s_per_iteration_after10&quot;: null,
+      &quot;W04_max_slowdown&quot;: 0.0
+    },
+    {
+      &quot;run_id&quot;: &quot;gap_delta_2&quot;,
+      &quot;fidelity&quot;: &quot;L1_GAP&quot;,
+      &quot;cells&quot;: 90198,
+      &quot;mesh_seconds&quot;: 3.231044000000111,
+      &quot;min_SICN&quot;: 0.015974386910192533,
+      &quot;gap_mm&quot;: 2.5,
+      &quot;delta_deg&quot;: 2,
+      &quot;native_sim&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_2\\MINI_prepared.sim&quot;,
+      &quot;state&quot;: {
+        &quot;status&quot;: &quot;BUILT_NOT_SOLVED&quot;,
+        &quot;cells&quot;: 90198,
+        &quot;true_2D&quot;: true,
+        &quot;SST&quot;: true,
+        &quot;VOF&quot;: false,
+        &quot;Overset&quot;: false,
+        &quot;fields_initialized&quot;: false,
+        &quot;solver_iterations&quot;: 0
+      },
+      &quot;samples&quot;: 0,
+      &quot;latest&quot;: null
+    },
+    {
+      &quot;run_id&quot;: &quot;sealed_demo_delta_0&quot;,
+      &quot;fidelity&quot;: &quot;L1_SEALED_ALGORITHM_DEMONSTRATOR&quot;,
+      &quot;cells&quot;: 14776,
+      &quot;mesh_seconds&quot;: 0.6448042999982135,
+      &quot;min_SICN&quot;: 0.004401745677350322,
+      &quot;gap_mm&quot;: 0,
+      &quot;delta_deg&quot;: 0,
+      &quot;native_sim&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\sealed_demo_delta_0\\MINI_prepared.sim&quot;,
+      &quot;state&quot;: {
+        &quot;status&quot;: &quot;HOLD_LIMIT&quot;,
+        &quot;iterations_this_run&quot;: 900,
+        &quot;elapsed_s&quot;: 63.1693086,
+        &quot;validation&quot;: false,
+        &quot;DRL_allowed&quot;: false
+      },
+      &quot;samples&quot;: 900,
+      &quot;latest&quot;: {
+        &quot;iteration&quot;: &quot;900&quot;,
+        &quot;solver_s&quot;: &quot;0.0247569&quot;,
+        &quot;elapsed_s&quot;: &quot;63.0223075&quot;,
+        &quot;CL&quot;: &quot;0.3238441283144926&quot;,
+        &quot;CD&quot;: &quot;0.005389185969011046&quot;,
+        &quot;Mh&quot;: &quot;-560.383443382757&quot;,
+        &quot;Fx&quot;: &quot;1038.9272711059496&quot;,
+        &quot;Fy&quot;: &quot;62430.67105646788&quot;,
+        &quot;pABSmin&quot;: &quot;26892.71426325821&quot;,
+        &quot;mass_relative&quot;: &quot;3.25992198020305E-7&quot;,
+        &quot;min_quality&quot;: &quot;0.06964124789458148&quot;
+      },
+      &quot;solver_mean_s_per_iteration_after10&quot;: 0.04159562876404494,
+      &quot;W04_max_slowdown&quot;: 0.022465445228162517
+    }
+  ],
+  &quot;validation_lab&quot;: &quot;ARCHIVED HOLD; production t1.212 preserved; W04 priority&quot;,
+  &quot;static_plan_deg&quot;: [
+    -5,
+    -2,
+    0,
+    2,
+    5
+  ],
+  &quot;dynamic_plan_amplitudes_deg&quot;: [
+    2,
+    5
+  ],
+  &quot;DRL_5deg_allowed&quot;: false,
+  &quot;sealed_equivalence&quot;: false,
+  &quot;no_wave_or_DRL_started&quot;: true
+}</pre></html>

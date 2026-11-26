@@ -1,0 +1,72 @@
+{
+  "updated_at": "2026-10-30T01:49:18.316638+01:00",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12",
+  "status": "reporting_trace_completed",
+  "source_unchanged": true,
+  "settings": "unchanged SO1ms10inner; native monitoring and LOW AMG logging only",
+  "completed_time_s": 0.6500000000000005,
+  "expected_inner_samples": 1500,
+  "water_samples": 1500,
+  "air_samples": 1500,
+  "native_inner_endpoints_match_physical_history": true,
+  "AMG": {
+    "VOF": {
+      "solves": 310,
+      "cycles_min": 1,
+      "cycles_max": 1,
+      "ratio_min": 0.001342295,
+      "ratio_median": 0.002177942,
+      "ratio_max": 0.004043318,
+      "all_below_relative_tolerance": true,
+      "cycle_cap_hits": 0,
+      "nonzero_final_residuals": 310,
+      "inferred_active_stop": "relative convergence tolerance 0.1; cap 30 not reached; epsilon 0 not reached"
+    },
+    "pressure": {
+      "solves": 310,
+      "cycles_min": 2,
+      "cycles_max": 2,
+      "ratio_min": 0.04017767,
+      "ratio_median": 0.047581794999999996,
+      "ratio_max": 0.08008076,
+      "all_below_relative_tolerance": true,
+      "cycle_cap_hits": 0,
+      "nonzero_final_residuals": 310,
+      "inferred_active_stop": "relative convergence tolerance 0.1; cap 30 not reached; epsilon 0 not reached"
+    }
+  },
+  "AMG_API_counters_constant": true,
+  "AMG_counter_limitation": "API total cycles remained unchanged; use actual LOW log solves, not this getter, for sequencing or cost",
+  "metrics": {
+    "native_abs_sum_pct_inward_mass": {
+      "max_abs": 0.014386459896882217,
+      "mean_abs": 0.0014640050632381762
+    },
+    "bdf2_plus_faceflux_pct_inward_mass": {
+      "max_abs": 0.014355557232231862,
+      "mean_abs": 0.0014598174940665988
+    }
+  },
+  "peak_time_s": 0.6180000000000004,
+  "peak_inner_trace": {
+    "time_s": 0.6180000000000004,
+    "native_abs_phase_error_pct_by_inner": [
+      0.08391187316975189,
+      0.021350286501717986,
+      0.009955151179689262,
+      0.013932380007327707,
+      0.013840117293047093,
+      0.014062921702236896,
+      0.01419701445285668,
+      0.014291796189042185,
+      0.01436041242826144,
+      0.014386459896882217
+    ]
+  },
+  "native_vs_BDF2_max_difference_percentage_points": 6.031773464379442e-09,
+  "gauge_difference_vs_R10_max_mm": 6.465938895416912e-10,
+  "gauge_difference_vs_R10_RMS_mm": 6.59440826412373e-11,
+  "short_mass_gate_pass": false,
+  "original_threshold_pct": 0.01,
+  "scope": "Diagnostic trace; relative tolerance is observed linear stopping condition but causation of mass plateau remains unproven. No wave force admission."
+}

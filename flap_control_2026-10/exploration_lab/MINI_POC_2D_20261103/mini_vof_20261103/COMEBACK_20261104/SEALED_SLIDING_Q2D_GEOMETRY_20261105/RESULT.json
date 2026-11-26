@@ -1,0 +1,50 @@
+{
+  "status": "HOLD_SLIDING_INTERFACE",
+  "stage": "geometric_precheck_no_vof",
+  "source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\WALL_FUNCTIONS_AUDIT\\ACTIVE_GAP25_PRISM_20261104\\SEALED_SHARP_MATCHED_OUTER\\plot_mesh.npz",
+  "foil_vertices": 590,
+  "span_m": 0.02,
+  "hinge_x_m": 0.952,
+  "hinge_z_m": 0.02128173276777,
+  "rotor_interface_radius_m": 0.25,
+  "minimum_radius_to_enclose_flap_m": 0.2389496016937437,
+  "joint_collar_radius_m": 0.03520193110854431,
+  "contact_arc_verified_m": 0.02816154488683545,
+  "stationary_fluid_interface_area_m2": 0.028716883714871348,
+  "max_allowed_unpaired_arc_m": 1e-06,
+  "tests": [
+    {
+      "angle_deg": -2,
+      "direct_cut_gap_mm": 1.2250397289899617,
+      "direct_cut_overlap_mm": 1.2250118474330511,
+      "zero_clearance_collar_contact": true,
+      "unpaired_arc_on_each_side_mm": 8.726646259971659,
+      "unpaired_area_on_each_side_m2": 0.0001745329251994332,
+      "common_open_area_pct": 99.39222888203204,
+      "interface_pass": false
+    },
+    {
+      "angle_deg": 0,
+      "direct_cut_gap_mm": 0.0,
+      "direct_cut_overlap_mm": 0.0,
+      "zero_clearance_collar_contact": true,
+      "unpaired_arc_on_each_side_mm": 0.0,
+      "unpaired_area_on_each_side_m2": 0.0,
+      "common_open_area_pct": 100.0,
+      "interface_pass": true
+    },
+    {
+      "angle_deg": 2,
+      "direct_cut_gap_mm": 1.2250118474330511,
+      "direct_cut_overlap_mm": 1.2250397289899617,
+      "zero_clearance_collar_contact": true,
+      "unpaired_arc_on_each_side_mm": 8.726646259971659,
+      "unpaired_area_on_each_side_m2": 0.0001745329251994332,
+      "common_open_area_pct": 99.39222888203204,
+      "interface_pass": false
+    }
+  ],
+  "native_star_solver_steps": 0,
+  "gpu_test_started": false,
+  "result_scope": "Geometric screen for concentric rigid rotation of a body-fitted local rotor zone; no claim about STAR face intersections"
+}

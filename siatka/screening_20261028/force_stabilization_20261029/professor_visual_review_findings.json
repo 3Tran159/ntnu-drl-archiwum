@@ -1,0 +1,65 @@
+{
+  "reviewed_at": "2026-10-29T22:00:00+01:00",
+  "reviewer": "dashboard_readability",
+  "browser_status": "desktop_and_projector_pass; mobile_field_figure_improvement_requested",
+  "viewports": [
+    1360,
+    1920,
+    390
+  ],
+  "automated": {
+    "document_overflow": false,
+    "javascript_errors": [],
+    "invalid_template_values": [],
+    "unloaded_images": [],
+    "anchor_coverage_failures": [],
+    "desktop_tables_fit": true,
+    "minimum_text_css_px": 12
+  },
+  "visually_reviewed": [
+    "overview",
+    "lineage",
+    "numerics",
+    "meshes",
+    "definitions",
+    "cost",
+    "drag",
+    "fields",
+    "main_configured_mesh_panel"
+  ],
+  "issues": [
+    {
+      "id": "mobile_fields",
+      "severity": "readability",
+      "description": "Individual paired field PNGs shrink to346px wide on mobile; axes approximately4px. Add horizontal pan minwidth1100px or an obvious full-size view/lightbox.",
+      "status": "resolved"
+    },
+    {
+      "id": "print_fragmentation",
+      "severity": "print",
+      "description": "First print QA export21pages. Lineage splitsacross4pages with detached M10note; needs compact print-only lineage. Parent is implementing.",
+      "status": "resolved"
+    },
+    {
+      "id": "empty_progress_age",
+      "severity": "minor",
+      "description": "Mainpanel before first record says Last saved progress \u2014 s ago; replace with waiting-for-first-progress text.",
+      "status": "resolved"
+    }
+  ],
+  "positive": [
+    "Clear distinction between historical first-order cohort and matched second-order work.",
+    "Pressure/viscous Fx is shown as final-window means; saved-field captions explicitly instantaneous.",
+    "Mesh directional refinement is not implied by cellcount connecting lines.",
+    "M06/M08 labels separated cleanly in both mean-force and cost plots.",
+    "Desktop one-mesh field rows readable, same colour limits and actual times present."
+  ],
+  "files": {
+    "automated": "professor_readability_review.json",
+    "main_panel": "main_configured_panel_qa.json",
+    "print_initial": "professor_review_qa.pdf"
+  },
+  "pending": [],
+  "status": "resolved_passed",
+  "final_report": "professor_final_qa.json"
+}

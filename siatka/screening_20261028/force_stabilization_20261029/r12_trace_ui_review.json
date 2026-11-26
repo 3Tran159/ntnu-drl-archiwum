@@ -1,0 +1,45 @@
+{
+  "updated_at": "2026-10-30T00:53:00.165Z",
+  "status": "passed",
+  "scope": "Reporting-only R12 trace evidence in both English dashboards; no runtime/science edits",
+  "qa_file": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_dashboard_qa.json",
+  "screenshots": [
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_main_1920.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_main_1360.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_main_390.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_1920.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_1360.png",
+    "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_390.png"
+  ],
+  "viewports": [
+    1920,
+    1360,
+    390
+  ],
+  "all_six_views_pass": true,
+  "checks": {
+    "js_errors": 0,
+    "page_overflow": false,
+    "duplicate_ids": false,
+    "trace_table_fits_mobile": true,
+    "print_actual_pages": 19,
+    "print_intentional_pages": 19,
+    "print_pages_17_18_visually_checked": true,
+    "print_clipping_or_orphans": false
+  },
+  "pdf": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/r12_trace_professor_qa.pdf",
+  "content": [
+    "R12 shown separately because its record ends at 0.650 s rather than the earlier 0.750 s comparison endpoint.",
+    "Complete 1500 water and 1500 air inner samples with matching physical-step endpoints.",
+    "Actual VOF one-cycle residual ratios 0.001342–0.004043; pressure two-cycle ratios 0.040178–0.080081.",
+    "Relative stopping at 0.1 observed; constant API cycle getters explicitly unreliable for sequencing/cost.",
+    "Native mass-budget peak 0.01438646% above unchanged 0.01% gate; no numerical or physics changes and no causal claim.",
+    "R11 completed failed outcome populated dynamically; M10 prepared inputs and all calm/historical cohorts preserved.",
+    "R13 became active during QA, correctly sourced from wave_propagation_state.json; first transient progress was still pending in the captured snapshot."
+  ],
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py"
+  ],
+  "runtime_or_science_files_modified": false
+}

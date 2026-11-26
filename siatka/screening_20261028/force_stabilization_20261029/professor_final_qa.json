@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-29T22:08:59.875007+01:00",
+  "browser_viewports_px": [
+    1360,
+    1920,
+    390
+  ],
+  "main_dashboard_viewports_px": [
+    1360,
+    390
+  ],
+  "print_pdf_pages": 13,
+  "visual_review": "All thirteen release PDF pages visually inspected. No clipped tables, overlapping labels, split nodes, orphaned continuation notes or blank continuation pages. Final spacing-only revision rechecked on overview and numerical-comparison pages.",
+  "browser_checks": [
+    "No document overflow or JavaScript errors",
+    "Desktop/projector tables fit at16/17px",
+    "All section anchors clear sticky navigation",
+    "Mobile field figures pan at1100px and Expand/Close/Escape work",
+    "Main dashboard M09 link resolves; historical force explorer excludes empty M09 history",
+    "Force hover dimming, pinning, Escape and alltime ranges work",
+    "Print-only report hidden on screen; main/navigation hidden in print; no duplicate IDs"
+  ],
+  "previous_findings_resolved": [
+    "Mobile field figures too small",
+    "Print fragmentation from21/20pages into13 intentional pages",
+    "Missing first progress record displayed as a waiting message"
+  ],
+  "scientific_scope": "Readability and presentation QA only; scientific interpretation remains governed by saved experiment evidence.",
+  "files": {
+    "html": "F:\\ntnu\\mesh_screening_20261028\\professor_dashboard.html",
+    "html_sha256": "a04284be47d5f0cac630c6a6ad9ac3617d366b72adc7c75d6b7b5b00b25bcbae",
+    "qa_pdf": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\professor_review_qa_release.pdf",
+    "qa_pdf_sha256": "5ce281c6f81f1decf8f13ab4b8dc1b68d00af47a1eeaba9a62cf87212e11771e",
+    "browser": "professor_readability_review.json",
+    "main": "main_configured_force_qa.json",
+    "print": "professor_print_release_qa.json"
+  }
+}

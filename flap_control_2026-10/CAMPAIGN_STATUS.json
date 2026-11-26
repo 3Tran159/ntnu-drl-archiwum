@@ -1,0 +1,129 @@
+{
+  "at": "2026-11-02T20:28:57+01:00",
+  "status": "active_campaign",
+  "version": "2606.0002 / 21.04.009-R8",
+  "jobs": [
+    {
+      "pid": 29672,
+      "owned": false,
+      "macro": "PreW04GlobalRamp.java",
+      "cases": [
+        "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\PRE_W04_20261102\\calm_global_resume_20261102_195752\\input.sim"
+      ]
+    },
+    {
+      "pid": 11872,
+      "owned": true,
+      "macro": "RunHydroStatic.java",
+      "cases": [
+        "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_checkpoint.sim"
+      ]
+    }
+  ],
+  "accepted_force_stabilization": [
+    {
+      "case": "SP_A_original_singlephase",
+      "status": "force_stabilization_passed",
+      "static_angle_deg": 0,
+      "cells": 309441,
+      "saved_time_s": 0.36440000000000006,
+      "saved_dt_s": 0.002,
+      "accepted_physical_steps": 311,
+      "last_window_seconds": 0.05,
+      "CL_mean": 0.33845873967668005,
+      "CL_std": 3.78051070043162e-06,
+      "CD_mean": 0.006765959079171601,
+      "CD_std": 1.7578568717558145e-07,
+      "Fx_mean_N": 26.086831825648,
+      "Fz_mean_N": 1327.6797058088,
+      "moment_mean_Nm": 494.76040831648004,
+      "moment_surface": "whole intact foil; not flap-only",
+      "pabs_min_all_accepted_Pa": 28428.1579911,
+      "pabs_min_last_window_Pa": 28473.2501255,
+      "cavitation_margin_min_Pa": 26088.9432243,
+      "safety_reserve_min_Pa": 16088.9432243,
+      "mass_imbalance_max_last_window": 3.261655831018381e-10,
+      "yplus_mean_last": 0.945611949242,
+      "yplus_max_last": 257.33268667,
+      "CL_vs_C01_percent": 7.222730305232905,
+      "CD_vs_C01_percent": -3.3754232423213404,
+      "checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\SP_A_singlephase_stabilized_2606.sim",
+      "checkpoint_sha256": "3aed985653ad4bd2ebffbf286261ae387403b9b701be2a7f75bf54cb04ac7cf7",
+      "source_result": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\stabilize_20261102_190626\\stabilize_20261102_191755\\stabilize_20261102_192904",
+      "history": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\SP_A_complete_accepted_history.csv",
+      "grid_independence_verified": false,
+      "time_step_independence_verified": false,
+      "force_stabilization_verified": true,
+      "training_approved": false,
+      "at": "2026-11-02T19:53:44.681924+01:00"
+    },
+    {
+      "case": "SP_B",
+      "static_angle_deg": 0.0,
+      "status": "force_stabilization_passed",
+      "cells": 256750,
+      "saved_time_s": 0.3000000000000002,
+      "saved_dt_s": 0.002,
+      "physical_steps": 150,
+      "last_window_seconds": 0.05,
+      "CL_mean": 0.32729653634048,
+      "CL_std": 8.30746844985817e-05,
+      "CD_mean": 0.007163580556642399,
+      "CD_std": 4.017390951077881e-06,
+      "Fx_mean_N": 27.619901194196,
+      "Fz_mean_N": 1284.591489054,
+      "moment_mean_Nm": -12.166083200211999,
+      "moment_surface": "flap only, +y, total static pressure includes buoyancy",
+      "pabs_min_all_accepted_Pa": 25351.6848088,
+      "pabs_min_last_window_Pa": 25351.6848088,
+      "cavitation_margin_min_Pa": 23012.4700421,
+      "safety_reserve_min_Pa": 13012.4700421,
+      "mass_imbalance_max_last_window": 2.715775814859053e-05,
+      "yplus_mean_last": 2.82827847185,
+      "yplus_max_last": 271.746993738,
+      "CL_vs_A_percent": -3.2979509841769783,
+      "CD_vs_A_percent": 5.87679400389578,
+      "checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "checkpoint_sha256": "5f9a86e51f8eb96cc1adb0fd36a61ae48e015600512598517b6ec2f6c9190ff1",
+      "source_result": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\steady_init_20261102_195203\\stabilize_20261102_195203",
+      "history": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\steady_init_20261102_195203\\stabilize_20261102_195203\\history.csv",
+      "grid_independence_verified": false,
+      "time_step_independence_verified": false,
+      "force_stabilization_verified": true,
+      "training_approved": false,
+      "at": "2026-11-02T20:10:18.113540+01:00",
+      "max_overset_error_cells": 0.0,
+      "max_difficult_interpolation_cells": 0.0
+    }
+  ],
+  "progress": [
+    {
+      "case": "SP_A_original_singlephase",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_A_original_singlephase\\stabilize_20261102_190626\\stabilize_20261102_191755\\stabilize_20261102_192904\\progress.txt",
+      "progress": "force_stabilization_passed"
+    },
+    {
+      "case": "SP_B_split0_fixed",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\steady_init_20261102_195203\\stabilize_20261102_195203\\progress.txt",
+      "progress": "force_stabilization_passed"
+    },
+    {
+      "case": "SP_C_split0_overset",
+      "path": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_init_20261102_202530\\progress.txt",
+      "progress": "Steady initialization 150/1500 CL=0.3749065078415146 CD=0.006543991083541972 pabs_min=21496.903294039177 mass=9.385415458618135E-5"
+    }
+  ],
+  "mesh_B_and_C": "verified",
+  "motion_C": "passed_100_steps_plus_minus5_deg",
+  "static_angles_pending": [
+    2,
+    -2,
+    5,
+    -5
+  ],
+  "dynamic": "pending_static_gates",
+  "W04_authorized": false,
+  "waves_started": false,
+  "DRL_started": false,
+  "training_approved": false
+}

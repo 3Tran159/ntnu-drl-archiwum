@@ -1,0 +1,22 @@
+DASHBOARD LIVE ARRIVAL AND READABILITY UPDATE — 2026-10-30T12:53:47.005708+01:00
+GPU campaign is unchanged: fresh W01a full-height restart controller2896, launcher228. Inspect current state/locks before any solver action.
+Both dashboards now show the case-specific first-inlet-crest forecast: target t=1.690354445s, observed near-inlet crest x=-34m at t=.250s, phase-speed extrapolation23.6053m/s. This is NOT measured arrival or cycle admission.
+wave_arrival_dashboard_panel.py computes remaining physical time from actual saved history and wall ETA from the latest50 regular1ms steps. Local /api/status now includes this read-only forecast; browser polls every5s. Paused/stale/guard-failed states suspend wall ETA. Passing predicted time explicitly remains unconfirmed; do not set an analysis origin from the countdown.
+Only the local HTTP service was restarted39700→7240 after process/listener identity checks. No CFD process or numerical setting was changed.
+Current CL/CD DISPLAY begins at t=.200s and rescales to visible data; interactive payload/view storage updated. Full CSV history and scientific analysis remain intact.
+Shared wave-case catalog has scoped wrapping/fixed desktop columns and mobile labeled cards to prevent Definition/Current-record text overlap. Final integrated screenshot QA is being recorded separately.
+
+FRESH FULL-H HEIGHT GPU PROGRESS VERIFIED 2026-10-30T12:32:44.433084+01:00: caseW01a_W20L4_M10_inlet_fullheight_restart_r3, controller2896/launcher228, physicalt=0.0100s. Allrecordedstartupsteps haveH=.5exactly,T=.8472673206891129,noheight ramp. Speed23.177913,alpha[0,1]. Inletonlyforcing/outletonlydamping verified; no globalinit. Revieww01a_fullheight_restart_launch_review.json. Dashboardonlynewhistory. First40steps.5ms50inner WITHFULLWAVE, thenSO1ms10inner. Keepactive,neverduplicate.
+
+CURRENT FRESH W01a FULL HEIGHT RESTART - 2026-10-30T12:30:18.924221+01:00
+Latest user explicitly rejects the ramp and requests W01a from t=0 with full inlet H=.5 from FIRSTstep, plus clear active dashboard. This overrides .587restart and ramp instructions below.
+ACTIVE controller2896, launcher228, rootqueue.lock+w01a_fullheight_restart_r3.lock. Case E:/ntnu/quasi2d_waves_20261029/W01a_W20L4_M10_inlet_fullheight_restart_r3. run_w01a_fullheight_restart_r3.py --run launched after actualpriorprocess/lock/source/resourcechecks. CurrentstatusGPUloading; verifyfirstphysicalprogress. Neverduplicate/restartcompletedcontrollers.
+Source C01_W20L4_M10_FS020_env_setup_r1/prepared.sim, initializedcalm0flowsteps,317277cells, SHA8cab371c1f4bd000283877b4e28811c978814cc30a57c9fb7701cce85fc235ce. Newcopyhashverified. No globalwaveinit. Onlyinlet/upstreamforcing nowconstantFifthOrderH.5L20depth24. No height ramp. First40steps.5ms50inner withwavealreadyactive; thenSO1ms10innerpressureAMG.01. First-stepanalytic/native/physicalguards,50m/s,alpha/source/resourceguards retained. Runtime H mustequal.5 every step. Startup native/BDF2budget recorded separately; mainstreambudgetretained. Usermass-explorationexceptiononly.
+Macro W01aFullHeightRestartR3.java compiledandfrozen. Newnativeomega_y views/scalars/streamlines/isofree-surface savedwithcomputedcheckpoints. Inputsim iszerotime template; calculatedcheckpointsseparate.
+Old inlet_wave_r1 normalSTOP at.793/206stepsreturn0sourceunchanged. Filesarchiveonly; nooldcurve/image/ETA/cyclehistory innewlive dashboard. .587calm source remainsarchive too. UIagent implementsfresh0fullheightbar,no29minramp.
+Fourcompletearrivedwavecycles maystopifrepeatable;10indicative,20reviewcap. analysis_origin_snotestablishedyet. No unsupportedpropagation/forceaccuracyclaim.
+Autonomouscampaign and legacywavepresets remainunarmed/blockedpendingnewrecipevalidation. HF_012_C003_regular_waves untouched. Automationpaused. Currentdomainunchanged80m×30m×.02m,depth24; geometryexportstillvalid, dynamicwavepolicyoverride inw01a_fresh_fullheight_authorization.json.
+
+Earlierhandoverarchival; newestinstructionaboveoverridesmutableoldstates:
+
+Read actualstate/history/process/lock before acting. Localcontroller runs independently ofWork. STOP marker saves afterphysicalstep. Preserveallattempts andcreate newID for recovery.

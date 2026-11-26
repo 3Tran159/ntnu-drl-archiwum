@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-10-30T01:59:23.167647+01:00",
+  "status": "rendered_pending_visual_inspection",
+  "case": "W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12",
+  "scope": "Completed R12 only; reporting figure, not a new validation result. No source or solver changes.",
+  "source_hashes": {
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_linear_trace_r12_review.json": "731e0640d397b961e46c00c15fc404f516106f05b425c655b4d0db3b03a782ca",
+    "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12\\native_inner_trace_analysis.json": "dc98e29d0f6bcc3db7e8a6b01929108450fc080745998da2e5febac45b1c15ec"
+  },
+  "source_unchanged_after_plotting": true,
+  "input_review_source_unchanged_flag": true,
+  "phase_error_definition": "100 * (abs(water native error per step) + abs(air native error per step)) / (dt * inward mixture mass flux at that physical step).",
+  "phase_error_units": "percent",
+  "selected_time_s": 0.6180000000000004,
+  "selected_inner_values": [
+    0.08391187316975189,
+    0.021350286501717986,
+    0.009955151179689262,
+    0.013932380007327707,
+    0.013840117293047093,
+    0.014062921702236896,
+    0.01419701445285668,
+    0.014291796189042185,
+    0.01436041242826144,
+    0.014386459896882217
+  ],
+  "mass_criterion_pct": 0.01,
+  "early_crossing_iteration": 3,
+  "final_iteration_exceeds_mass_criterion": true,
+  "amg_ratio_source": "Actual equation-labelled LOW AMG log summaries stored in native_inner_trace_analysis.json; not the unchanging API cumulative getters.",
+  "amg_solves_per_equation": 310,
+  "amg_linear_target": 0.1,
+  "amg_cycles": {
+    "VOF": [
+      1
+    ],
+    "pressure": [
+      2
+    ]
+  },
+  "amg_ratios": {
+    "VOF": {
+      "min": 0.001342295,
+      "median": 0.002177942,
+      "max": 0.004043318
+    },
+    "pressure": {
+      "min": 0.04017767,
+      "median": 0.047581794999999996,
+      "max": 0.08008076
+    }
+  },
+  "figure_files": {
+    "wave_r12_diagnostic_figure": {
+      "png": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_diagnostic_figure.png",
+      "svg": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_diagnostic_figure.svg",
+      "figure_inches": [
+        11.2,
+        5.8
+      ],
+      "pixel_dimensions": [
+        2016,
+        1044
+      ],
+      "source_case": "W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12",
+      "actual_data_points": {
+        "phase_trace": 10,
+        "VOF_ratios": 310,
+        "pressure_ratios": 310
+      }
+    },
+    "wave_r12_diagnostic_figure_mobile": {
+      "png": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_diagnostic_figure_mobile.png",
+      "svg": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_r12_diagnostic_figure_mobile.svg",
+      "figure_inches": [
+        4.9,
+        11.4
+      ],
+      "pixel_dimensions": [
+        882,
+        2052
+      ],
+      "source_case": "W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12",
+      "actual_data_points": {
+        "phase_trace": 10,
+        "VOF_ratios": 310,
+        "pressure_ratios": 310
+      }
+    }
+  },
+  "r13_included": false,
+  "interpretation_limits": [
+    "A below-threshold value at inner3 is followed by an above-threshold rebound; it cannot establish accepted convergence.",
+    "Meeting each linear solver target does not demonstrate nonlinear phase mass conservation.",
+    "The native mass plateau's cause is not established by the traces.",
+    "The AMG log covers0.605\u20130.635s; chart index orders solves within each equation and is not a physical-time axis."
+  ]
+}

@@ -1,0 +1,86 @@
+time=4.699199999999548
+cells=309441
+CONTINUUM water+air
+initial star.flow.InitialPressureProfile Pressure method=star.common.FunctionScalarProfileMethod value=0.0
+initial star.flow.VelocityProfile Velocity method=star.common.FunctionVectorProfileMethod
+initial star.kwturb.KwTurbSpecOption Turbulence Specification getSelectedElement=INTENSITY_VISCOSITY_RATIO
+initial star.flow.VolumeFractionProfile Volume Fraction
+initial star.turbulence.TurbulenceIntensityProfile Turbulence Intensity method=star.common.ConstantScalarProfileMethod value=0.001
+initial star.turbulence.TurbulentViscosityRatioProfile Turbulent Viscosity Ratio method=star.common.ConstantScalarProfileMethod value=10.0
+initial star.turbulence.TurbulentVelocityScaleOption Turbulent Velocity Scale Specification getSelectedElement=USE_INITIAL_VELOCITY
+REGION fluid
+BOUNDARY DOMAIN.bottom type=Wall
+condition star.flow.WallShearStressOption Shear Stress Specification getSelectedElement=SLIP
+condition star.vof.VofWaveDampingBoundaryOption VOF Wave Damping Boundary Option getSelectedElement=NO
+condition star.vof.VofWaveForcingBoundaryOption VOF Wave Forcing Boundary Option getSelectedElement=NO
+bounds 0 -34.900431034482764 44.90098591549296
+bounds 1 0.02 0.02
+bounds 2 -22.0 -22.0
+BOUNDARY DOMAIN.inlet type=Velocity Inlet
+condition star.flow.InletVelocityOption Velocity Specification getSelectedElement=COMPONENTS
+condition star.motion.ReferenceFrameOption Reference Frame Specification getSelectedElement=LAB_FRAME
+condition star.flow.FlowBoundaryDiffusionOption Flow Boundary Diffusion getSelectedElement=ON
+condition star.vof.VofWaveDampingBoundaryOption VOF Wave Damping Boundary Option getSelectedElement=NO
+condition star.vof.VofWaveForcingBoundaryOption VOF Wave Forcing Boundary Option getSelectedElement=YES
+condition star.kwturb.KwTurbSpecOption Turbulence Specification getSelectedElement=INTENSITY_VISCOSITY_RATIO
+value star.flow.VolumeFractionProfile Volume Fraction
+value star.flow.VelocityProfile Velocity method=star.common.FunctionVectorProfileMethod
+value star.vof.VofWaveForcingLength VOF Wave Forcing Length method=star.common.ConstantScalarProfileMethod value=20.0
+value star.turbulence.TurbulenceIntensityProfile Turbulence Intensity method=star.common.ConstantScalarProfileMethod value=0.001
+value star.turbulence.TurbulentViscosityRatioProfile Turbulent Viscosity Ratio method=star.common.ConstantScalarProfileMethod value=10.0
+bounds 0 -35.0 -35.0
+bounds 1 0.02 0.02
+bounds 2 -21.928243171593696 7.928243171593699
+BOUNDARY DOMAIN.outlet type=Pressure Outlet
+condition star.flow.BackflowSpecification Backflow Specification
+condition star.flow.PressureOutletBoundaryOption Pressure Outlet Option getSelectedElement=NONE
+condition star.vof.VofWaveDampingBoundaryOption VOF Wave Damping Boundary Option getSelectedElement=YES
+condition star.vof.VofWaveForcingBoundaryOption VOF Wave Forcing Boundary Option getSelectedElement=NO
+condition star.motion.ReferenceFrameOption Reference Frame Specification getSelectedElement=LAB_FRAME
+condition star.flow.FlowBoundaryDiffusionOption Flow Boundary Diffusion getSelectedElement=ON
+condition star.kwturb.KwTurbSpecOption Turbulence Specification getSelectedElement=INTENSITY_VISCOSITY_RATIO
+value star.flow.VolumeFractionProfile Volume Fraction
+value star.flow.StaticPressureProfile Pressure method=star.common.FunctionScalarProfileMethod value=0.0
+value star.vof.VofWaveDampingLength VOF Wave Damping Length method=star.common.ConstantScalarProfileMethod value=20.0
+value star.turbulence.TurbulenceIntensityProfile Turbulence Intensity method=star.common.ConstantScalarProfileMethod value=0.001
+value star.turbulence.TurbulentViscosityRatioProfile Turbulent Viscosity Ratio method=star.common.ConstantScalarProfileMethod value=10.0
+bounds 0 45.0 45.0
+bounds 1 0.02 0.02
+bounds 2 -21.9280709316003 7.9280709316003035
+BOUNDARY DOMAIN.top type=Pressure Outlet
+condition star.flow.BackflowSpecification Backflow Specification
+condition star.flow.PressureOutletBoundaryOption Pressure Outlet Option getSelectedElement=NONE
+condition star.vof.VofWaveDampingBoundaryOption VOF Wave Damping Boundary Option getSelectedElement=NO
+condition star.vof.VofWaveForcingBoundaryOption VOF Wave Forcing Boundary Option getSelectedElement=NO
+condition star.flow.FlowBoundaryDiffusionOption Flow Boundary Diffusion getSelectedElement=ON
+condition star.kwturb.KwTurbSpecOption Turbulence Specification getSelectedElement=INTENSITY_VISCOSITY_RATIO
+value star.flow.VolumeFractionProfile Volume Fraction
+value star.flow.StaticPressureProfile Pressure method=star.common.FunctionScalarProfileMethod value=0.0
+value star.turbulence.TurbulenceIntensityProfile Turbulence Intensity method=star.common.ConstantScalarProfileMethod value=0.001
+value star.turbulence.TurbulentViscosityRatioProfile Turbulent Viscosity Ratio method=star.common.ConstantScalarProfileMethod value=10.0
+bounds 0 -34.900431034482764 44.90098591549296
+bounds 1 0.02 0.02
+bounds 2 8.0 8.0
+BOUNDARY HF_012_wall type=Wall
+condition star.flow.WallShearStressOption Shear Stress Specification getSelectedElement=NO_SLIP
+condition star.vof.VofWaveDampingBoundaryOption VOF Wave Damping Boundary Option getSelectedElement=NO
+condition star.vof.VofWaveForcingBoundaryOption VOF Wave Forcing Boundary Option getSelectedElement=NO
+condition star.flow.WallSlidingOption Tangential Velocity Specification getSelectedElement=FIXED
+condition star.motion.WallReferenceFrameOption Reference Frame Specification getSelectedElement=REGION_FRAME
+condition star.turbulence.WallSurfaceOption Wall Surface Specification getSelectedElement=SMOOTH
+value star.turbulence.BlendedWallFunctionCondition Blended Wall Function
+bounds 0 -3.569562957110425E-4 1.1892992359417522
+bounds 1 0.02 0.02
+bounds 2 -0.042144754466420506 0.10091353622319259
+BOUNDARY Q2D_span_source type=Symmetry Plane
+condition star.vof.VofWaveDampingBoundaryOption VOF Wave Damping Boundary Option getSelectedElement=NO
+condition star.vof.VofWaveForcingBoundaryOption VOF Wave Forcing Boundary Option getSelectedElement=NO
+bounds 0 -34.900431034482764 44.90098591549296
+bounds 1 0.01 0.01
+bounds 2 -21.97046101399777 7.970530347208443
+BOUNDARY Q2D_span_target type=Symmetry Plane
+condition star.vof.VofWaveDampingBoundaryOption VOF Wave Damping Boundary Option getSelectedElement=NO
+condition star.vof.VofWaveForcingBoundaryOption VOF Wave Forcing Boundary Option getSelectedElement=NO
+bounds 0 -34.900431034482764 44.90098591549296
+bounds 1 0.03 0.03
+bounds 2 -21.97046101399777 7.970530347208443

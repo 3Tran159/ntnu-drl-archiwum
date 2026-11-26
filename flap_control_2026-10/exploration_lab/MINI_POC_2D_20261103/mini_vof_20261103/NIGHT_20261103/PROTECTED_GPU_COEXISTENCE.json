@@ -1,0 +1,51 @@
+{
+  "at": 1793737611.52777,
+  "scope": "Read-only resource audit: permit our1E CPU alongside identity-pinned existing1MPI/1GPU STAR2602; stop OUR solver if>15% slowdown or identity/affinity changes",
+  "processes": [
+    {
+      "pid": 31368,
+      "ppid": 20484,
+      "name": "starccm+.exe",
+      "exe": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\starccm+.exe",
+      "birth": 134382107810797250,
+      "affinity": 12598275
+    },
+    {
+      "pid": 3992,
+      "ppid": 600,
+      "name": "starccm+.exe",
+      "exe": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\starccm+.exe",
+      "birth": 134382107852792180,
+      "affinity": 12598275
+    },
+    {
+      "pid": 16908,
+      "ppid": 16444,
+      "name": "starccm+.exe",
+      "exe": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\starccm+.exe",
+      "birth": 134382108881767450,
+      "affinity": 12598275
+    },
+    {
+      "pid": 17612,
+      "ppid": 16908,
+      "name": "star-ccm+.exe",
+      "exe": "E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\star-ccm+.exe",
+      "birth": 134382108934494230,
+      "affinity": 12598275
+    }
+  ],
+  "performance": {
+    "at": 1793737611.526265,
+    "history": "E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\runs\\W03_20261103_211415_b752ad\\history.csv",
+    "baseline_median_step_s": 0.9545455005000036,
+    "maximum_slowdown_fraction": 0.15,
+    "protected_case": "IndependentW03GPU",
+    "verified_MPI": 1,
+    "verified_GPU": "auto:1",
+    "own_MPI": 1,
+    "own_E_mask": 16,
+    "independent_affinity_unchanged": true,
+    "baseline_measured_without_our_solver": true
+  }
+}

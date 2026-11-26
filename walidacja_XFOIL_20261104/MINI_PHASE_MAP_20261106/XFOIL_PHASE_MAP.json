@@ -1,0 +1,38 @@
+{
+  "status": "QUASI_STEADY_DIAGNOSTIC",
+  "geometry_mesh": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\WALL_FUNCTIONS_AUDIT\\ACTIVE_GAP25_PRISM_20261104\\SEALED_SHARP_MATCHED_OUTER\\plot_mesh.npz",
+  "reynolds": 21300000,
+  "transition_xc": [
+    0.01,
+    0.01
+  ],
+  "phase_origin": "Measured crest at x=-3 m, phase increases with time",
+  "orbital_velocities": "STAR native wave probe at x=-1.19 m shifted to hinge x=0.952 m at fixed depth",
+  "target_CL_vertical": 0.33154168774977827,
+  "pitch_limits_deg": [
+    -1,
+    1
+  ],
+  "flap_limits_deg": [
+    -1,
+    1
+  ],
+  "pitch_only_range_deg": [
+    -0.0684102983795058,
+    0.16561955714651888
+  ],
+  "flap_only_range_deg": [
+    -0.12983101475964,
+    0.3155997788770754
+  ],
+  "mean_CD_x": {
+    "foil_only": 0.006775864165271053,
+    "flap_only": 0.006779480257852313,
+    "combined": 0.006768405659676308
+  },
+  "combined_vs_best_single_mean_pct": -0.11007460322143281,
+  "foil_lower_drag_phase_samples": 360,
+  "flap_lower_drag_phase_samples": 0,
+  "max_uy_m_s": 0.03652827559994463,
+  "actuator_work_evaluated": false
+}

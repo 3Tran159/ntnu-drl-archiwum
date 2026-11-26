@@ -1,0 +1,23 @@
+[
+  {
+    "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\steady_init_20261102_195203\\fields_before_steady.txt",
+    "fields": "time=0.0 initialized=true\nDensity min=1000.0 max=1000.0\nPressure min=-1.2417963748859381E7 max=6006613.821030158\nAbsolutePressure min=-1.2297265413204838E7 max=6127583.348186199\nVelocity min=0.07259447816983551 max=23.49644071214344\nTurbulentKineticEnergy min=4.860000000000001E-4 max=4.860000000000001E-4\nSpecificDissipationRate min=48.60000000000001 max=48.60000000000001\n",
+    "initialization_status.json": "{\"status\":\"steady_force_windows_passed\",\"iterations\":830,\"steady_initialization_only\":true,\"converged_by_force_and_mass_windows\":true,\"max_pressure_identity_error_Pa\":1.1641532182693481E-10,\"CL_window_relative_tolerance\":0.005,\"CD_window_relative_tolerance\":0.01,\"mass_imbalance_tolerance\":0.0001,\"training_approved\":false}"
+  },
+  {
+    "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\fields_before_steady.txt",
+    "fields": "time=0.0 initialized=true\nDensity min=1000.0 max=1000.0\nPressure min=-2427598.2877559573 max=1.5499562294427913E7\nAbsolutePressure min=-2307131.160026335 max=1.5620310571730867E7\nVelocity min=0.15739087426350964 max=39.68129566718307\nTurbulentKineticEnergy min=4.859999999999999E-4 max=4.860000000000003E-4\nSpecificDissipationRate min=48.59999999999998 max=48.60000000000003\n",
+    "initialization_status.json": "{\"status\":\"steady_initialization_incomplete\",\"iterations\":1500,\"steady_initialization_only\":true,\"converged_by_force_and_mass_windows\":false,\"max_pressure_identity_error_Pa\":8.731149137020111E-11,\"CL_window_relative_tolerance\":0.005,\"CD_window_relative_tolerance\":0.01,\"mass_imbalance_tolerance\":0.0001,\"training_approved\":false}"
+  },
+  {
+    "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_init_20261102_202530\\fields_before_steady.txt",
+    "fields": "time=0.0 initialized=true\nDensity min=1000.0 max=1000.0\nPressure min=-98521.95724882369 max=162233.4690733978\nAbsolutePressure min=21492.172979954237 max=337790.8777327393\nVelocity min=0.021563603270544976 max=30.502336701658187\nTurbulentKineticEnergy min=1.0000000000000002E-10 max=15.917599021401108\nSpecificDissipationRate min=9.999999999999999E-11 max=8.086538324976268E7\n",
+    "initialization_status.json": "{\"status\":\"steady_initialization_incomplete\",\"iterations\":390,\"steady_initialization_only\":true,\"converged_by_force_and_mass_windows\":false,\"max_pressure_identity_error_Pa\":1.1641532182693481E-10,\"CL_window_relative_tolerance\":0.005,\"CD_window_relative_tolerance\":0.01,\"mass_imbalance_tolerance\":0.0001,\"training_approved\":false}"
+  },
+  {
+    "file": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\motion_20261102_194119\\steady_init_20261102_200834\\steady_init_20261102_202530\\steady_init_20261102_203046\\fields_before_steady.txt",
+    "fields": "time=0.0 initialized=true\nDensity min=1000.0 max=1000.0\nPressure min=-98517.60949938619 max=162232.8254221889\nAbsolutePressure min=21496.520729391734 max=337789.1888720186\nVelocity min=0.0215408034192506 max=30.55553481576124\nTurbulentKineticEnergy min=1.0000000000000002E-10 max=15.919387908525186\nSpecificDissipationRate min=9.999999999999999E-11 max=8.086503772225434E7\n",
+    "overset_conservation.json": "{\"before\":\"0\",\"after\":\"2\",\"reference\":\"2606 User Guide GUID-5A48E78B-7FE7-4EA7-AD91-598925DD785D and GUID-ECBF5B9A-743B-458D-8FCA-861E65651EAB\",\"mesh_changed\":false}",
+    "initialization_status.json": "{\"status\":\"steady_initialization_incomplete\",\"iterations\":530,\"steady_initialization_only\":true,\"converged_by_force_and_mass_windows\":false,\"max_pressure_identity_error_Pa\":1.1641532182693481E-10,\"CL_window_relative_tolerance\":0.005,\"CD_window_relative_tolerance\":0.01,\"mass_imbalance_tolerance\":0.0001,\"training_approved\":false}"
+  }
+]

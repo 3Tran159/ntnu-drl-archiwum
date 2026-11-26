@@ -1,0 +1,116 @@
+{
+  "at": "2026-11-03T05:33:49.931694+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+  "samples": 100,
+  "time_s": 0.65,
+  "native_iteration": 11560,
+  "scientific_approved": false,
+  "notes": "Top direction only: BOUNDARY_NORMAL to EXTRAPOLATED. URF0.8/0.2 and40inner retained. Branch startsC40t0.45. OldB reference is not matched to the revised boundary; deltas are descriptive only.",
+  "strict_guards": {
+    "pressure": true,
+    "mass": true,
+    "omega_floor": true,
+    "k_floor": true,
+    "overset": true,
+    "volume": true,
+    "quality": true,
+    "face": true,
+    "visc": true,
+    "finite": true
+  },
+  "last": {
+    "step": 100.0,
+    "time_s": 0.65,
+    "elapsed_s": 0.2,
+    "flap_angle_deg": 0.0,
+    "flap_angular_velocity_deg_s": 0.0,
+    "Fx_N": 27.9319359929,
+    "Fz_N": 1278.25474984,
+    "CL_hydro": 0.32565302062,
+    "CD": 0.00724451083952,
+    "Mh_Nm": -12.0404202686,
+    "p_absolute_min_Pa": 30097.6945773,
+    "cavitation_margin_Pa": 27758.4798105,
+    "safety_reserve_Pa": 17758.4798105,
+    "dt_s": 0.002,
+    "mass_imbalance_relative": 2.98365817057e-09,
+    "net_mass_flow_kg_s": -3.22235082422e-05,
+    "omega_floor_cells": 0.0,
+    "k_floor_cells": 0.0,
+    "max_turbulent_viscosity_ratio": 1242.70551402,
+    "overset_error_cells": 0.0,
+    "min_volume_m3": 9.128750119090001e-12,
+    "min_cell_quality": 0.0610481862402,
+    "min_face_validity": 1.0,
+    "max_speed_m_s": 22.3358792374,
+    "yplus_mean": 2.88239259431,
+    "yplus_max": 265.043274072,
+    "native_iteration": 11560.0,
+    "wall_clock_s": 1434.476936
+  },
+  "last25_means": {
+    "CL_hydro": 0.32561948776312,
+    "CD": 0.0072459371243424,
+    "Fx_N": 27.937435176616,
+    "Fz_N": 1278.1254605592,
+    "Mh_Nm": -12.040069616323999
+  },
+  "last25_pressure": {
+    "min_global_Pa": 30097.6945773,
+    "max_global_Pa": 30103.303058,
+    "std_global_Pa": 1.7873990852751014,
+    "min_near_Pa": 30097.6945773,
+    "top_minimum_steps": 0,
+    "all_minimum_steps": 25
+  },
+  "last25_mass_max": 4.97449070314e-09,
+  "far_first": {
+    "step": 1.0,
+    "time_s": 0.452,
+    "vx_volume_mean_m_s": 16.8745414251,
+    "vx_min_m_s": 8.29325604487,
+    "vx_max_m_s": 18.0062296971,
+    "vz_min_m_s": -0.493866585879,
+    "vz_max_m_s": 0.806603589801
+  },
+  "far_last": {
+    "step": 100.0,
+    "time_s": 0.65,
+    "vx_volume_mean_m_s": 17.0495408659,
+    "vx_min_m_s": 11.9773717039,
+    "vx_max_m_s": 17.9965466803,
+    "vz_min_m_s": -0.672745818815,
+    "vz_max_m_s": 0.979457172442
+  },
+  "far_last25_means": {
+    "vx_volume_mean_m_s": 17.020715849875998,
+    "vx_min_m_s": 11.784197078024,
+    "vx_max_m_s": 17.997451324592003,
+    "vz_min_m_s": -0.6289889847088,
+    "vz_max_m_s": 0.92296770922864
+  },
+  "last25_force_relative_range": {
+    "CL_hydro": 0.0002111628344862755,
+    "CD": 0.0004029538995295545,
+    "Mh_Nm": 5.9598052408892744e-05
+  },
+  "delta_oldB_percent_diagnostic_only": {
+    "CL_hydro": -0.5123942331046849,
+    "CD": 1.149656474842553,
+    "Mh_Nm": -1.0357777569365956
+  },
+  "native_status": {
+    "status": "urans_diagnostic_ready",
+    "steps": 100,
+    "saved_time_s": 0.6500000000000005,
+    "dt_s": 0.002,
+    "native_iteration": 11560,
+    "force_windows_stable": true,
+    "solution_reset": false,
+    "mesh_regenerated": false,
+    "scientific_approved": false,
+    "hydrodynamic_convergence_verified": false,
+    "training_approved": false
+  },
+  "queue_job_state": "active"
+}

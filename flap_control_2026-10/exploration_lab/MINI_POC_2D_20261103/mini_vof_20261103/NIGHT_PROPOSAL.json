@@ -1,0 +1,79 @@
+{
+  "status": "HOLD_LONG_CAMPAIGN_PENDING_CONTINUITY_AND_WAVE_VALIDATION",
+  "experiment": "SEALED_MINI_URANS_VOF_FIXED0",
+  "night_window": "2026-11-03T21:00:00+01:00/2026-11-04T07:00:00+01:00",
+  "night_approved": false,
+  "models": [
+    "true2D",
+    "water+air VOF",
+    "gravity",
+    "URANS SST",
+    "native FirstOrderWave"
+  ],
+  "density_water": 1000,
+  "density_air": 1.2,
+  "reference_pressure_Pa": 101325,
+  "reference_density": 1.2,
+  "reference_altitude_y": 2.02128173276777,
+  "hinge_submergence_m": 2,
+  "lambda_m": 10,
+  "U_m_s": 18,
+  "delta_deg": 0,
+  "gap_m": 0,
+  "fidelity": "Sealed algorithm demonstrator; not equivalent to real 2.5mm gap",
+  "amplitude_steps_m": [
+    0.05,
+    0.25
+  ],
+  "initial_dt_s": 0.001,
+  "initial_MPI": 1,
+  "GPU": false,
+  "affinity_mask": 16,
+  "empty_cells": 41280,
+  "foil_cells": 44442,
+  "encounter_period_estimate_s": 0.45555302324319263,
+  "actual_step_cost_s": null,
+  "wave_result": "50STEP_PHYSICAL_SMOKE_PASS_NOT_PROPAGATION_VALIDATED",
+  "night_cycles_target": {
+    "startup_excluded": true,
+    "retained_repeatable_cycles": [
+      3,
+      5
+    ],
+    "final_count_requires_measured_cost": true
+  },
+  "safety": {
+    "pABS_min_Pa": 12339.214766776897,
+    "interface_CFL": 0.5,
+    "global_CFL": 25,
+    "mass_relative": 0.0001,
+    "nonpositive_cells": 0,
+    "FaceValidity_min": 0.5,
+    "alpha_range": [
+      -1e-05,
+      1.00001
+    ],
+    "residual_final_window_max": 0.01,
+    "W04_slowdown_max": 0.15,
+    "disk_floor_GiB": 7
+  },
+  "required_before_night": [
+    "Close normalized continuity residual window without changing .01 threshold",
+    "Configure forcing/damping with ForcingLengthSpecificationOption/DampingLengthSpecificationOption:Boundary (native2606 defaultRegion caused missing boundary length)",
+    "Validate actual encounter period and reflections over sufficient wave cycles",
+    "Native calm foil0 and foil-wave short pilot on same mesh",
+    "Explicit user acceptance of concrete case and time budget"
+  ],
+  "W04_modified": false,
+  "wave_active_authorized": false,
+  "true_2D": false,
+  "quasi_2D": true,
+  "span_layers": 1,
+  "span_m": 0.02,
+  "native_wave_model": true,
+  "actual_empty_mean_s_step": 2.2328781422222224,
+  "actual_empty_median_s_step": 2.034961,
+  "actual_empty_max_s_step": 5.5706162,
+  "estimated_empty_s_per_cycle": 1017.1943882229768,
+  "residual_continuity_final25_max": 0.07763175996231722
+}

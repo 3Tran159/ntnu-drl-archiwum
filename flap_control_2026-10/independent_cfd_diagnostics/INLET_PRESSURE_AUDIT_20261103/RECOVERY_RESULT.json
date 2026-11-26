@@ -1,0 +1,166 @@
+{
+  "test_id": "INLET_PRESSURE_RECOVERY_20261103_TEST",
+  "status": "PASS",
+  "checks": {
+    "steps_50": true,
+    "correct_times": true,
+    "native_iterations": true,
+    "pressure": true,
+    "mass": true,
+    "turbulence": true,
+    "overset": true,
+    "mesh": true,
+    "pose": true,
+    "speed": true,
+    "finite": true,
+    "all_residual_windows_50": true,
+    "last25_residuals": true,
+    "native_full_overset": true,
+    "saved_fields_match": true,
+    "checkpoint_hash": true,
+    "pressure_identity": true
+  },
+  "native_status": {
+    "status": "pressure_recovery_complete",
+    "steps": 50,
+    "saved_time_s": 0.7900000000000006,
+    "iteration": 14860,
+    "stage": 0,
+    "scientific_approved": false,
+    "numerical_points_complete": false,
+    "physical_safety_pass": true,
+    "requires_scientific_review": true,
+    "training_approved": false
+  },
+  "checkpoint": {
+    "path": "F:/ntnu/flap_control/hydro_validation_2606_20261102/cases/INLET_PRESSURE_RECOVERY_20261103/run_20261103_120108/checkpoint.sim",
+    "bytes": 1525998405,
+    "sha256": "78b729a0413047f01a271bc28e7575be9e9456518102ff25a816870f75ccbbc5",
+    "time_s": 0.7900000000000006,
+    "iteration": 14860,
+    "stage": 0,
+    "stage_start_s": 0.65,
+    "U_m_s": 17.796725172035938,
+    "angle_deg": 0.0,
+    "native_save_returned": true
+  },
+  "last_step": {
+    "step": 50,
+    "time_s": 0.7900000000000006,
+    "U_m_s": 17.796725172035938,
+    "flap_angle_deg": 0.0,
+    "flap_angular_velocity_deg_s": 0.0,
+    "phase": "INLET_PRESSURE_REPAIR_DIAGNOSTIC",
+    "stage": 0,
+    "Fx_N": 29.450444658494312,
+    "Fz_N": 1238.1008257809574,
+    "CL_hydro": 0.3224810376808079,
+    "CD": 0.0078138434748828,
+    "Mh_Nm": -11.867038707149351,
+    "p_absolute_min_Pa": 29264.055845617186,
+    "cavitation_margin_Pa": 26924.84107884029,
+    "mass_imbalance_relative": 1.0939908871089736e-08,
+    "omega_floor_cells": 0.0,
+    "k_floor_cells": 0.0,
+    "max_turbulent_viscosity_ratio": 1233.491995774196,
+    "overset_error_cells": 0.0,
+    "min_volume_m3": 9.12875011908794e-12,
+    "min_cell_quality": 0.0610481862401823,
+    "min_face_validity": 1.0,
+    "max_speed_m_s": 22.306584283407243,
+    "yplus_max": 265.2707425816075,
+    "native_iteration": 14860,
+    "solver_step_seconds": 21.1793807,
+    "measured_angle_deg": -0.0,
+    "center_error_m": 0.0,
+    "qS_N": 3769.008779502833,
+    "Re": 21178102.95472277,
+    "residual_gate": true,
+    "measurement_eligible": false,
+    "dU_dt_m_s2": -0.9486894398437516
+  },
+  "minima": {
+    "fixed": {
+      "min": 22443.413077363133,
+      "max": 29365.859178606057,
+      "last": 29264.059385480214
+    },
+    "flap": {
+      "min": 41238.13290813859,
+      "max": 47979.24890430394,
+      "last": 47720.14012223961
+    },
+    "gap": {
+      "min": 45555.53299139736,
+      "max": 52318.21561518081,
+      "last": 52060.18377001416
+    },
+    "inlet": {
+      "min": 34567.07589463504,
+      "max": 42686.48803736209,
+      "last": 42603.908118733845
+    },
+    "liquid_all": {
+      "min": 22443.4092827625,
+      "max": 29365.85549717814,
+      "last": 29264.055845617186
+    },
+    "near": {
+      "min": 22443.4092827625,
+      "max": 29365.85549717814,
+      "last": 29264.055845617186
+    }
+  },
+  "max_mass_relative": 1.742140448290849e-07,
+  "all_test_residuals_pass": true,
+  "last25_max_residual_ratios": {
+    "Continuity": 0.00011392748823435348,
+    "Sdr": 0.003902063262969819,
+    "Tke": 9.521051384290391e-05,
+    "X-momentum": 2.7044651344236197e-05,
+    "Z-momentum": 5.827977358047868e-05
+  },
+  "residual_nonpass_steps": 0,
+  "first_bad_residual_times": [],
+  "old_failure_location_pressure_now_Pa": 94211.08191677585,
+  "pressure_identity_error_Pa": 1.7462298274040222e-10,
+  "initial_native_readback": {
+    "time_s": 0.6900000000000005,
+    "iteration": 12360,
+    "CL": 0.3206861558619269,
+    "CD": 0.007155867131695475,
+    "Mh": -11.778200215235007,
+    "initial_angle": -0.0,
+    "inner_iterations": 50,
+    "fields_reset": false
+  },
+  "full_overset": "time=0.7900000000000006 total=333939 active=255350 inactive=77108 acceptors=1481 errors=0 difficult_interpolation=0 min_volume=9.128750119087941E-12 min_quality=0.06104818624018239 max_acceptor_size_ratio=1.6850690629553493 methods={0=1481}",
+  "scientific_validation": false,
+  "static_measurement_eligible": false,
+  "full_campaign_started": false,
+  "force_relative_first_step_change": {
+    "CL": -0.0013706446160377007,
+    "CD": 0.0004944985538862074,
+    "Mh": 0.0021604123271801853
+  },
+  "velocity_field": {
+    "first_inlet_layer": {
+      "cells": 105,
+      "mean_u_m_s": 17.79677810736156,
+      "min_u_m_s": 17.796426858237037,
+      "max_u_m_s": 17.799016215896916
+    },
+    "inlet_5m": {
+      "cells": 2636,
+      "mean_u_m_s": 17.81589038697358,
+      "min_u_m_s": 17.796426858237037,
+      "max_u_m_s": 17.995662345341323
+    },
+    "upstream_near_foil": {
+      "cells": 743,
+      "mean_u_m_s": 17.92529129408803,
+      "min_u_m_s": 17.721623702611197,
+      "max_u_m_s": 18.127854879614784
+    }
+  }
+}

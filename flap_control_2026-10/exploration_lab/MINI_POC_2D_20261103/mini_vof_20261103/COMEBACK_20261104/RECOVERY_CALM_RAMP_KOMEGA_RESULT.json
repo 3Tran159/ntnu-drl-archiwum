@@ -1,0 +1,49 @@
+{
+  "result": {
+    "status": "HOLD_RESIDUAL_WINDOW",
+    "samples": 40,
+    "startup_s": 121.69740960000127,
+    "solver_step_median_s": 3.2328107,
+    "solver_step_mean_s": 3.2841813085714286,
+    "end_to_end_s": 301.44533030000093,
+    "dt_s": 0.0001,
+    "checkpoint_sha256_input": null,
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\RECOVERY_CALM_RAMP_KOMEGA_DT100US_20261104_103402\\FINAL.sim",
+    "checkpoint_sha256": "ff5211fbfd893067548877ca266b27efa7029f557fdf1e5b7899c79cd1d246bd",
+    "state": {
+      "steps": 40,
+      "time_s": 0.0039999999999999975,
+      "solver_seconds": 132.9319655,
+      "residual_pass": false,
+      "reason": "",
+      "training_approved": false,
+      "amplitude_target": 0.0,
+      "status": "HOLD_RESIDUAL_WINDOW",
+      "foil": true
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "wall_s": 3.3448693,
+  "next": "REVIEW_RAMP_ONLY_BELOW_TARGET_SPEED",
+  "night_approved": false,
+  "window_force_means": {
+    "CL": [
+      0.03800710738616869,
+      0.06991411033949557
+    ],
+    "CD": [
+      0.0010753497993898325,
+      0.0021469295513947676
+    ],
+    "Mh_per_m": [
+      -94.56623749604277,
+      -170.3710492295459
+    ]
+  },
+  "W06": {
+    "baseline_s": 1.635149399999932,
+    "peak_slowdown": 0.08898783193758675,
+    "stop": null
+  }
+}

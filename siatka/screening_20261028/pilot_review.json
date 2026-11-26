@@ -1,0 +1,35 @@
+{
+  "decision": "stop",
+  "baseline_sha256": "7dfb04a68e1df202d5039ce140976c0fb04929db8bdb22af41b9f925d6801787",
+  "locked_settings_sha256": "e5ec1f9ba0cf44ba4f40532f502f303e11e129334b2a0e2c87b8b125d1646e84",
+  "adapter_sha256": "276a81b2e00ea55c58e4f609a43fb8aae5bd61f3e0ec2cc5f413b6581df6a6a8",
+  "all_parameter_bindings_verified": true,
+  "restart_and_failure_test_verified": true,
+  "pilot_results": [
+    {
+      "path": "F:/ntnu/mesh_screening_20261028/pilot_v3/A001/latest.json",
+      "sha256": "35b1c10b42bf3ce6663ad762273ba7521f42ecd93924842fbb66feba190594ab"
+    },
+    {
+      "path": "F:/ntnu/mesh_screening_20261028/pilot_v3/A002/latest.json",
+      "sha256": "800c191d58686aca95b6ee0890514a4c6a90a4236f8b811a23ff7f6db47c48da"
+    },
+    {
+      "path": "F:/ntnu/mesh_screening_20261028/pilot_v3/A003/latest.json",
+      "sha256": "0a91295f6e0b90665ffbac4d7bcc0b42c9d54d35de8419801b4046620299ad29"
+    }
+  ],
+  "reason": "Further surface-target-only sampling has no demonstrated quality/cell-count benefit. Coarsening increases cell count and low-quality-cell count while the same worst cell and reduced-prism edge bands persist.",
+  "next_actions": [
+    "Confirm geometric prism detection with sections near y=0.5, 2.75, 4.25 and 5.4 m, including the downstream edge band.",
+    "Inspect the fixed curve control and local surface/core interaction around the coordinate (0.120927, 4.250387, -0.013646) m. Separate LE/TE selections only after verifying actual geometry identifiers.",
+    "Consider one targeted curve-control perturbation after localization, keeping h1, N, total prism thickness and physics fixed. Do not launch a broad LHS yet.",
+    "Resolve the zero-current Calm/inlet velocity versus the workbook 18 m/s operating condition before CFD."
+  ],
+  "limits": [
+    "No full-stack adequacy or local hydrodynamic-resolution approval. All three remain incomplete for quality eligibility.",
+    "Windows synthetic timeout tests passed; forced MPI-job teardown was not exercised on a production mesh.",
+    "The three varied targets are not a grid-convergence sequence."
+  ],
+  "restart_evidence": "Measured campaign resume returned RESUME_NEW_CASES=0; failed named-representation integration attempt was isolated and followed by fresh-copy runs."
+}

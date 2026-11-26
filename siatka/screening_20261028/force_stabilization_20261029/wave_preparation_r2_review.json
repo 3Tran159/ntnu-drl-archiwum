@@ -1,0 +1,11 @@
+{
+  "status": "not_admitted_to_transient",
+  "case": "W20_H24_X4_Q2D_r2",
+  "reason": "Independent CGNS has no inlet boundary, only four outlet faces, unintended wall/span topology. Rebuild fresh named six-face block; no transient steps were taken.",
+  "cells": 37633,
+  "single_span": false,
+  "cells_touching_both_span_planes": 32874,
+  "geometry_audit": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_Q2D_r2\\independent_geometry_audit.json",
+  "r2_preserved": true,
+  "recovery_case": "W20_H24_X4_Q2D_r3"
+}

@@ -1,0 +1,52 @@
+Starting local server: starserver.bat -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -cpubind off -np 1 -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZmxhcF9kcmxfMjAyNjExMDJcMDFfcmVmZXJlbmNlXEMwMV9vcmlnaW5hbF9jb3B5LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 41152
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 15:58:18 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\flap_drl_20261102\01_reference\C01_original_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.1.151
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Loading module: StarSweptMesher
+Loading module: CaeIOCgns
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=1 
+Warning: The requested SolutionHistory file does not exist, F:\ntnu\flap_control\flap_drl_20261102\01_reference\HF_foil.simh
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\InspectHydroReference.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\macros\InspectHydroReference.java:13: warning: [deprecation] getVector() in star.common.VectorPhysicalQuantity has been deprecated
+   b.append("gravity="+pc.getReferenceValues().get(Gravity.class).getVector()+"\n");
+                                                                 ^
+
+Loading/configuring connectivity (old|new partitions: 1|1)
+  fluid (index 2): 309441 cells, 853329 faces, 1091534 verts.
+Configuring finished
+Minimum 37 Report: Unable to generate report - Field function is not set.
+Command: ExecuteReport
+   error: Server Error
+java.lang.RuntimeException: Minimum 37 Report: Unable to generate report - Field function is not set.
+Command: ExecuteReport
+   error: Server Error
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

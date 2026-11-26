@@ -1,0 +1,10 @@
+Compiled from "DirectedMeshDistributionManager.java"
+public class star.sweptmesher.DirectedMeshDistributionManager extends star.base.neo.ClientServerObjectManager {
+  public star.sweptmesher.DirectedMeshDistributionManager(star.base.neo.ClientServerObjectKey);
+  public star.common.Simulation getSimulation();
+  public star.sweptmesher.DirectedMeshOperation getOperation();
+  public star.sweptmesher.DirectedMeshDistribution createDirectedMeshDistribution(java.util.List<star.sweptmesher.DirectedMeshPartCollection>);
+  public star.sweptmesher.DirectedMeshDistribution createDirectedMeshDistribution(java.util.List<star.sweptmesher.DirectedMeshPartCollection>, java.lang.String);
+  public java.lang.Class<? extends star.base.neo.ClientServerObject> getManagedType();
+  public java.util.Collection<java.lang.Object> getChildren();
+}

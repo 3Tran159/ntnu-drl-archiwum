@@ -1,0 +1,25 @@
+{
+ "case": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\PI_LP_KP05_20261109_135212",
+ "mode": "pi",
+ "steps": 1100,
+ "cpus": [
+  14,
+  15
+ ],
+ "star": "2606.0002",
+ "properties": {
+  "mode": "pi",
+  "steps": 1100,
+  "tick_steps": 10,
+  "expected_time_s": 3.9230000000004543,
+  "cl_target": 0.33154336603961815,
+  "plant_gain_per_deg": 0.0356,
+  "kp": "0.5",
+  "ti_s": 0.15,
+  "delta_max_deg": 2.0,
+  "rate_max_deg_s": 30.0,
+  "wall_budget_s": "20000",
+  "stop_file": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\PI_LP_KP05_20261109_135212\\STOP",
+  "cl_filter_tau_s": "0.03"
+ }
+}

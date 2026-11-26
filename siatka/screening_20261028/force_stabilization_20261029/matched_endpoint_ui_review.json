@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-29T23:12:06.866Z",
+  "scope": "Bounded dashboard/UI update; no controller, plan, solver, simulation or field-renderer changes.",
+  "latest_review": true,
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py",
+    "build_dashboard_en.py"
+  ],
+  "current_science_display": {
+    "calm_mesh": {
+      "mesh": "M09",
+      "status": "supported_calm_mesh_template",
+      "time_order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner": 10,
+      "time_step_difference_pct": {
+        "CD": -0.002423192674722394,
+        "CL_total": 0.0014533340171437937
+      },
+      "display_verified": true
+    },
+    "wave_previous": {
+      "case": "W20_H24_X4_GPUprop_flatOutlet_dt1ms_r3",
+      "status": "stability_guard",
+      "stop_s": 0.85,
+      "steps": 850,
+      "maximum_speed_m_s": 50.09167376978524,
+      "maximum_phase": "water",
+      "position_m": {
+        "x": 44.9,
+        "z": 1.9125
+      },
+      "ux_m_s": -50.08876098601088,
+      "pressure_Pa": 59676.63475539558,
+      "accepted": false,
+      "evidence": "Preserved controller_result.json/source_unchanged + finite case/time-matched spatial diagnostic"
+    },
+    "wave_current": {
+      "case": "W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+      "status_at_capture": "propagation_GPU_running",
+      "saved_time_at_capture_s": 0.26,
+      "validated": false,
+      "note": "R4 began during this UI review; display follows the saved live state, not a hard-coded attempt.",
+      "plot_admission": "Finite current-case manifest only"
+    },
+    "foil_domain_preparation": {
+      "case": "C01_W20L4_M09_mesh_r1",
+      "cells": 246885,
+      "status": "mesh_prepared_pending_boundary_and_flow_setup",
+      "single_span_topology_passed": true,
+      "invalid_geometry_cells": 0,
+      "flow_steps": 0,
+      "separate_from_mesh_selection_and_wave_flow_acceptance": true
+    }
+  },
+  "browser_qa": {
+    "dashboards": [
+      "main",
+      "professor"
+    ],
+    "widths": [
+      1920,
+      1360,
+      390
+    ],
+    "javascript_errors": 0,
+    "duplicate_ids": 0,
+    "document_overflow": false,
+    "visual_review": [
+      "Professor desktop wave panel",
+      "Main mobile wave panel",
+      "Professor mobile foil preparation",
+      "Professor print wave page17"
+    ]
+  },
+  "print_qa": {
+    "path": "wave_guard_professor_qa.pdf",
+    "intentional_pages": 18,
+    "actual_pages": 18,
+    "changed_page": 17,
+    "no_clipping_or_orphans_on_changed_page": true,
+    "note": "Previously verified common-endpoint figure pages unchanged."
+  },
+  "fixes": [
+    "Terminal result time takes precedence over last progress sample; stability-guard stop explicit; resources marked run ended for completed attempt.",
+    "Previous failed attempt is selected from preserved finite case/time-matched diagnostics and completed source-unchanged records; no assumption that maximum belongs to air.",
+    "Completed foil mesh displays actual cells/topology/zero flow steps.",
+    "Long active case wraps on mobile; removed 14 px overflow and clarified that 0.5% force settling applies to calm cases."
+  ],
+  "artifacts": [
+    "wave_guard_completed_dashboard_qa.json",
+    "wave_guard_professor_qa.pdf",
+    "wave_guard_print17.png",
+    "wave_guard_completed_professor_1360.png",
+    "wave_guard_completed_main_390.png",
+    "foil_mesh_prepared_professor_390.png"
+  ],
+  "previous_full_review": "calm_support_wave_trial_dashboard_qa.json (historical common-endpoint image hash verification)"
+}

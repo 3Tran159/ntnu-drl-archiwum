@@ -1,0 +1,228 @@
+{
+  "title": "Wave-pilot mass-error plateau: primary-document review and bounded next diagnostic",
+  "date": "2026-10-30",
+  "status": "Read-only scientific review complete; no solver, controller or physics changes made",
+  "decision": "Keep the 0.01% criterion and longer propagation block. R10/R11 exclude the proposed generic-versus-phase-flux mismatch at the measured tolerance. Instrument the phase and pressure linear/nonlinear convergence around the spikes before another numerical change.",
+  "observed_evidence": {
+    "R10": {
+      "steps": 250,
+      "last_time_s": 0.7500000000000006,
+      "peak_legacy_pct": 0.014355556933924065,
+      "peak_native_abs_sum_pct": 0.014386459846692946,
+      "max_native_signed_vs_legacy_difference_percentage_points": 5.783544539117447e-9,
+      "max_phase_vs_mixture_faceflux_difference_kg_s": 1.6370904631912708e-11
+    },
+    "R11": {
+      "steps": 250,
+      "last_time_s": 0.7500000000000006,
+      "peak_legacy_pct": 0.011144989242869793,
+      "peak_native_abs_sum_pct": 0.011171238745202133,
+      "max_native_signed_vs_legacy_difference_percentage_points": 4.849334389286138e-9,
+      "max_phase_vs_mixture_faceflux_difference_kg_s": 1.4551915228366852e-11
+    },
+    "actual_R11_iterations": {
+      "steps": 250,
+      "minimum": 40,
+      "maximum": 40,
+      "steps_not_40": 0,
+      "source": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/wave_inner40_actual_iterations_audit.json",
+      "method": "Differences of final cumulative solver counters between consecutive physical steps; not nominal configuration"
+    },
+    "comparison": "The 40-inner peak remains above 0.01%; improvement over the prior 20-inner peak (~0.0113353%) is small. This supports investigating a convergence plateau but does not identify its cause.",
+    "peak_R11": {
+      "time_s": 0.612,
+      "water_error_kg_s": 0.9520108816859312,
+      "air_error_kg_s": -0.0011199166334850293,
+      "global_CFL": 0.2702218959849544,
+      "interface_CFL": 0.13526037706291258,
+      "alpha_min": 0,
+      "alpha_max": 1
+    },
+    "phase_error_interpretation": "The opposing water/air error signs and ratio about -0.00118 are consistent with a volume-fraction error in two constant-density complementary phases. They do not alone prove the spatial origin or eliminate local pressure/VOF coupling error. The density-ratio interpretation requires actual density values; no density value is assumed as a proved runtime getter here.",
+    "source_state": "R10 native_phase_report_setup.json verifies phase source term disabled and ConstantDensityModel for both water and air."
+  },
+  "actual_controls": {
+    "source": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_R4_t0p750_solver_controls_audit_r1/model_solver_source_settings.json",
+    "VOF": {
+      "urf": 0.9,
+      "AMG_relative_reduction_tolerance": 0.1,
+      "AMG_max_cycles": 30,
+      "AMG_epsilon": 0,
+      "AMG_cycle": "V_CYCLE",
+      "AMG_smoother": "GAUSS_SEIDEL",
+      "temporary_storage": false,
+      "dynamic_substeps_actual": 1,
+      "target_CFL": 0.5
+    },
+    "pressure": {
+      "urf": 0.2,
+      "AMG_relative_reduction_tolerance": 0.1,
+      "AMG_max_cycles": 30,
+      "AMG_epsilon": 0,
+      "AMG_cycle": "V_CYCLE",
+      "AMG_smoother": "GAUSS_SEIDEL",
+      "nonorthogonal_correctors": 0
+    },
+    "velocity": {
+      "urf": 0.5,
+      "AMG_relative_reduction_tolerance": 0.1,
+      "AMG_max_cycles": 30,
+      "AMG_epsilon": 0,
+      "AMG_cycle": "FLEX_CYCLE",
+      "AMG_smoother": "GAUSS_SEIDEL",
+      "dynamic_local_urf": false
+    },
+    "flow": {
+      "scheme": "SIMPLE",
+      "freeze_flow": false,
+      "freeze_reconstruction": false,
+      "zero_reconstruction": false,
+      "enhanced_bad_cell_stability_treatment": false
+    }
+  },
+  "primary_findings": [
+    {
+      "topic": "AMG tolerance semantics",
+      "finding": "Convergence Tolerance is a reduction factor within each linear solve. 0.1 asks for one order of residual reduction; 0.001 asks for three. Epsilon is an absolute stopping floor, and Max Cycles can stop the solve before the reduction target. Current Epsilon is 0, so an assumed positive absolute floor is not the demonstrated explanation. Cumulative cycle counts alone do not show why individual solves stopped.",
+      "source": "GUID-800CB29E-32C2-4DA1-8023-5C44E3E657EE"
+    },
+    {
+      "topic": "AMG diagnostic",
+      "finding": "LOW verbosity prints residuals at completion of each multigrid cycle. DIAGNOSTICS provides more detail but has extra cost. The official troubleshooting sequence first identifies the problematic equation/linear solve from diagnostics; algorithm changes such as ILU or disabling coarsening are subsequent conditional tests, not first-line guesses.",
+      "sources": [
+        "GUID-800CB29E-32C2-4DA1-8023-5C44E3E657EE",
+        "GUID-596EF24F-2C07-47D4-91DD-E95E8B2A5BED"
+      ]
+    },
+    {
+      "topic": "HRIC boundedness and CFL",
+      "finding": "HRIC's NVD construction and availability correction concern convective transport. Default CFL limits are 0.5 and 1; high CFL blends toward spatial FOU. The VOF solver guide explicitly permits smearing above the HRIC substep limit without an adverse conservation effect. Low measured CFL does not prove inner convergence, and adding substeps is not a supported generic cure for the current mass residual.",
+      "sources": [
+        "GUID-1DBFB921-ED1F-48AD-8B54-58798045AC6A",
+        "GUID-66449995-ADD3-46C3-A852-0AD61778FA4C"
+      ]
+    },
+    {
+      "topic": "BDF2 and clipping",
+      "finding": "The documented VOF second-order equation has the BDF2 historical combination 2*alpha(n)-0.5*alpha(n-1). Spatial convective boundedness alone is not a proof of boundedness of the full transient update. No inspected primary document establishes that this campaign's residual spikes are caused by clipping, nor exposes a verified VOF clipping counter/getter. Saved alpha exactly in [0,1] cannot show whether or how an intermediate update was limited.",
+      "sources": [
+        "GUID-CD31C597-AB0E-4C11-9441-DA7021F16CB5",
+        "GUID-A806D14C-6833-458E-89B7-8B273EE048B7"
+      ],
+      "classification": "BDF2 equation is documented; limitation about inferring transient boundedness is analysis; clipping cause remains unproved"
+    },
+    {
+      "topic": "Two-phase normalization",
+      "finding": "For two VOF phases STAR solves transport for the first phase only and adjusts the second so their volume fractions sum to one. For three or more it solves all then normalizes. Do not import a three-phase renormalization explanation into this two-phase case.",
+      "source": "GUID-11CD4B05-2045-4FFB-9BCA-F31DD3C59599"
+    },
+    {
+      "topic": "Native phase error",
+      "finding": "The dedicated report is a phase transport-equation iteration-error measure multiplied by dt. The Mass Error Rate reference explicitly relates phase mass error to incomplete inner convergence. A low residual for a different linear equation is not a substitute for phase conservation.",
+      "sources": [
+        "GUID-187276CC-89DA-4F69-B1AE-500038C45DE8",
+        "GUID-66A41A28-FB5B-473B-9BC8-1C749B0EB0EC"
+      ]
+    },
+    {
+      "topic": "Pressure coupling",
+      "finding": "Pressure correction enforces the continuity constraint in the segregated pressure/velocity algorithm. Current SIMPLE is supported. SIMPLEC/PISOC are explicitly not fully compatible with multiphase simulations and are advised for single-phase only; do not switch to them to cure this result.",
+      "sources": [
+        "GUID-123AF9A5-D46F-4EE6-8206-4959152911D4",
+        "GUID-3034290A-4D64-46D4-9750-B027F39D4E6F"
+      ]
+    },
+    {
+      "topic": "Retained local diagnostic fields",
+      "finding": "Temporary Storage Retained exposes each solved variable's residual, correction, limiter and reconstruction fields. Common Residual fields are dimensionless; do not integrate them as kg/s. Discover actual field names from the live field-function inventory rather than inventing them. A sum of local MassImbalance[phase] must first be cross-checked against the native conservation report/dt before interpreting it as that report's spatial decomposition.",
+      "source": "GUID-D3A9AF77-8D76-41F7-89F4-25C0C95A5B1E"
+    },
+    {
+      "topic": "Avoid mass correction as a diagnostic shortcut",
+      "finding": "Mass Imbalance Correction explicitly redistributes excess phase mass through an additional VOF source. It changes the problem being tested and is not a substitute for identifying the present residual source. Phase Replacement also changes phase volume and is incompatible with second-order time.",
+      "sources": [
+        "GUID-5D5E5BDE-15D5-4A9A-9EF9-015A04FD3F23",
+        "GUID-77EA5758-D375-4701-A90F-13DD7AB4DA09"
+      ]
+    },
+    {
+      "topic": "VOF solve sequencing versus substeps",
+      "finding": "The temporal-subcycling theory explicitly discusses updates at each inner iteration. Its second-order Eq2585 starts from the solution of the previous inner iteration, while the nonconvective terms are evaluated once per global physical step. This is not evidence that the full VOF transport correction runs only once per physical step. The solver guide says relaxation acts at each iteration/substep; selectable update frequency is PISO-only, whereas the audited case uses Implicit Unsteady/SIMPLE.",
+      "sources": [
+        "GUID-CD31C597-AB0E-4C11-9441-DA7021F16CB5",
+        "GUID-66449995-ADD3-46C3-A852-0AD61778FA4C"
+      ],
+      "limitation": "The cumulative AMG cycle totals do not reveal solve invocation counts or skip conditions. R12 inner native-error samples and equation-labelled AMG output must verify the actual execution sequence; do not infer a 1:4 phase/pressure invocation ratio from cumulative cycles."
+    }
+  ],
+  "next_diagnostic": {
+    "priority": 1,
+    "scope": "Reporter-only R12 planned by parent, source R4 t=0.500; SO1ms10inner unchanged; 150 steps to0.650",
+    "record": "Native water/air conservation reports every inner iteration; original physical-step history; VOF and pressure AMG LOW output for upcoming step times 0.605–0.635. Record before/after total cycle counters and actual iteration indices.",
+    "assertions": [
+      "Every newly completed physical step contributes the expected 10 native report samples (allow separately identified initial/cache sample).",
+      "No native NaN after the first solved iteration.",
+      "No changes to dt, temporal order, URFs, AMG tolerances, maximum cycles, HRIC settings, physics, boundary conditions or existing 0.01% guard."
+    ],
+    "discriminate": [
+      "Does phase-native error decay to near zero within a step, oscillate, or reach a nonzero fixed floor?",
+      "Does the VOF linear solve achieve the 0.1 reduction or hit 30 cycles? Repeat for pressure.",
+      "Do phase-error jumps correlate with pressure correction residuals or with nonlinear phase-transport changes while pressure is converged?",
+      "Confirm the phase/generic budget equivalence remains true in the instrumented replay.",
+      "Determine whether VOF errors and linear solves update at each inner iteration or only selected iterations; distinguish zero-cycle/early-converged linear solves from absent equation updates."
+    ]
+  },
+  "bounded_followup_options": [
+    {
+      "condition": "VOF AMG stops at the loose relative target while native phase error remains materially nonzero",
+      "test": "One matched short probe reducing only VOF AMG ConvergeTol from0.1 to0.001; keep MaxCycles30, Epsilon0, dt1ms,10inner and all other controls unchanged. Record whether the target is achieved and actual extra cycles/time.",
+      "limit": "This is a targeted numerical test, not a documented guarantee. A failed MaxCycles condition must be reported, not hidden by calling the tolerance converged."
+    },
+    {
+      "condition": "Pressure solve, rather than VOF, is demonstrated to limit conservation/coupling",
+      "test": "Separate matched pressure-only AMG tolerance test, with phase/pressure traces. Do not combine it with the VOF change in the first comparison."
+    },
+    {
+      "condition": "Linear systems are well solved but phase error persists or oscillates",
+      "test": "Retain temporary diagnostic fields in a new copy and localize calibrated phase imbalance contributions near the spike. Compare alpha, correction, limiter, velocity divergence and forcing/damping zone positions. Only then choose a single HRIC/URF/mesh control.",
+      "limit": "Do not label clipping or a boundary location without spatial evidence."
+    },
+    {
+      "condition": "A controlled temporal-order comparison is later justified by localized BDF2/interface evidence",
+      "test": "A short first-order branch can separate temporal-history behavior from spatial/interface behavior, preserving original results. It cannot replace the required final second-order configuration or prove second-order accuracy."
+    }
+  ],
+  "exact_API": {
+    "native_monitor": [
+      "ReportMonitor m=report.createMonitor();",
+      "m.setEnabled(true);",
+      "StarUpdate u=m.getStarUpdate(); u.setEnabled(true);",
+      "u.getUpdateModeOption().setSelected(StarUpdateModeOption.Type.ITERATION);",
+      "u.getIterationUpdateFrequency().setIterationFrequencyDefinition(\"1\");",
+      "u.getIterationUpdateFrequency().setStartIterationDefinition(\"0\");",
+      "u.getIterationUpdateFrequency().setStopEnabled(false);",
+      "m.export(path);"
+    ],
+    "AMG": [
+      "SegregatedVofSolver.getAMGLinearSolver()",
+      "SegregatedFlowSolver.getPressureSolver().getAMGLinearSolver()",
+      "AMGLinearSolver.setVerbosity(AMGVerbosity.LOW)",
+      "AMGLinearSolver.setVerbosity(AMGVerbosity.NONE)",
+      "getConvergeTol(), getMaxCycles(), getEpsilon(), getTotalNumberCycles(), getVerbosityEnum()"
+    ],
+    "caveat": "API signatures verified in installed Java docs; the parent controls compilation and execution. Read back trigger and sample count rather than relying only on setter success."
+  },
+  "source_directory": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP",
+  "API_sources": [
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/base/report/Monitor.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/base/report/PlotableMonitor.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/common/StarUpdate.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/common/IterationUpdateFrequency.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/common/StarUpdateModeOption.Type.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/common/AMGLinearSolver.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/common/AMGVerbosity.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/segregatedflow/SegregatedFlowSolver.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/segregatedflow/PressureSolver.html",
+    "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/segregatedflow/VelocitySolver.html"
+  ]
+}

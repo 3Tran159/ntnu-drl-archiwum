@@ -1,0 +1,390 @@
+Starting local server: starserver.bat -power -cpubind off -np 8 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcU1BfQ19tZXNoX3JlYWR5LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 25116
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 00:02:40 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\SP_C_mesh_ready.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:80: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:94: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+for(Region r:regions){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(r);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(fields);tab.extract();tab.export(out.resolve(r.getPresentationName()+"_"+label+"_volume.csv").toString());s.getTableManager().removeObjects(tab);}
+                                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:97: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(walls);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve(group+"_"+label+"_wall.csv").toString());s.getTableManager().removeObjects(tab);}
+                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:123: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+String before=String.valueOf(conservation.getOversetConservationOption().getSelected());
+                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:124: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+if(conservation.getOversetConservationOption().getSelected()==OversetConservationOption.Type.NONE.getValue())conservation.getOversetConservationOption().setSelected(OversetConservationOption.Type.FLUX_CORRECTION);
+                                              ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:125: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+String after=String.valueOf(conservation.getOversetConservationOption().getSelected());
+                                                                       ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:130: warning: [deprecation] getTreatErrorAsWarning() in star.common.IndirectRegionInterface has been deprecated
+if(in.getTreatErrorAsWarning()||!in.getConditions().get(OversetHoleCuttingOptions.class).getBoolean("ZeroDonorCheckOption"))throw new IllegalStateException("Strict Overset guards required");
+     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:136: warning: [deprecation] star.common.MonitorTriggerOption in star.common has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:136: warning: [deprecation] getTriggerOption() in star.base.report.Monitor has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:136: warning: [deprecation] ITERATION in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                                                 ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:136: warning: [deprecation] setUpdateMode(int) in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:136: warning: [deprecation] setUpdateFrequency(int) in star.common.StarUpdate has been deprecated
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+                                                                                                                                                                                                                                                                                                ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_000031\FreshC0DistanceInit.java:179: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+for(String group:List.of("fixed","flap")){List<Boundary> parts=group.equals("fixed")?fixed:flap;if(!parts.isEmpty()){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(parts);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve("wall_"+group+".csv").toString());}}
+                                                                                                                                                             ^
+
+Loading/configuring connectivity (old|new partitions: 2|8)
+  Background (index 3): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 4): 56722 cells, 150363 faces, 189362 verts.
+Configuring finished
+HYDRO_STAGE Temporarily stationary at existing pose for steady initialization; source unchanged
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+Flap overset connectivity 1 needs update 
+
+Updating two-level indirect region interface Flap overset connectivity 1 between FlapOverset and Background.
+
+Re-partitioning
+Wall distance limited to 1e-06 on 874 cells in Background
+Wall distance limited to 1e-06 on 410 cells in FlapOverset
+Continuity Initialization: Iteration 1
+Reversed flow on  55 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 2
+Continuity Initialization: Iteration 3
+Reversed flow on  52 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 4
+Reversed flow on  106 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 5
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 6
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 7
+Reversed flow on  156 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 8
+Reversed flow on  156 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 9
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 10
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 11
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 12
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 13
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 14
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 15
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 16
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 17
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 18
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 19
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 20
+Reversed flow on  154 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 21
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 22
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 23
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 24
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 25
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 26
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 27
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 28
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 29
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 30
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 31
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 32
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 33
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 34
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 35
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 36
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 37
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 38
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 39
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 40
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 41
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 42
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 43
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 44
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 45
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 46
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 47
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 48
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 49
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 50
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 51
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 52
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 53
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 54
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 55
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 56
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 57
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 58
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 59
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 60
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 61
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 62
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 63
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 64
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 65
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 66
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 67
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 68
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 69
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 70
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 71
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 72
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 73
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 74
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 75
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 76
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 77
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 78
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 79
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 80
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 81
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 82
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 83
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 84
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 85
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 86
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 87
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 88
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 89
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 90
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 91
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 92
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 93
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 94
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 95
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 96
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 97
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 98
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 99
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+Continuity Initialization: Iteration 100
+Reversed flow on  155 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+FULL_OVERSET_AUDIT time=0.0 total=361532 active=252161 inactive=106812 acceptors=2559 errors=0 difficult_interpolation=0 min_volume=9.026037388590407E-12 min_quality=0.05077428743976946 max_acceptor_size_ratio=9.320108589417428 methods={0=2559}
+
+HYDRO_STAGE Numerical steady initialization/continuation; CSV iterations are additional iterations; preserve source and mesh
+Reversed flow on  154 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  159 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             2   1.000000e+00   7.172786e-01   4.837424e-01   6.557385e-01   4.754334e-02   1.000000e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  168 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             3   7.780573e-01   4.421163e-01   6.412165e-01   3.955860e-01   5.353258e-02   5.644688e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  214 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             4   6.503464e-01   2.818527e-01   5.163106e-01   2.207406e-01   5.196346e-02   3.213156e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  250 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             5   5.751175e-01   2.729390e-01   4.439652e-01   1.697481e-01   5.210948e-02   1.980665e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  273 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             6   7.903119e-01   3.619482e-01   6.851509e-01   2.117579e-01   5.048194e-02   1.330439e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  272 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             7   4.286418e-01   1.248059e+00   8.984697e-01   5.084026e-01   4.898639e-02   5.218729e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  274 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             8   2.375306e-01   7.722281e-01   5.835704e-01   3.499864e-01   4.683982e-02   8.988097e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  261 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+             9   3.136022e-01   5.011777e-01   1.626921e-01   2.621340e-01   4.432728e-02   6.020247e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  156 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            10   4.156641e-01   3.779543e-01   1.282354e-01   2.109031e-01   4.171410e-02   3.976907e-01   4.694199e+02   2.304569e+02  -1.838857e+01   5.389303e-02   1.217502e-01      -5.029895e+06     -5.036010e+06           -5.033703e+06     -5.033703e+06    -5.033703e+06        9.026037e-12   5.077429e-02         1.000000e+00   6.080106e+00   2.233792e+02                 1.000000e+03 
+FULL_OVERSET_AUDIT time=0.0 total=361532 active=252161 inactive=106812 acceptors=2559 errors=0 difficult_interpolation=0 min_volume=9.026037388590407E-12 min_quality=0.05077428743976946 max_acceptor_size_ratio=9.320108589417428 methods={0=2559}
+
+Reversed flow on  120 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) 
+            11   2.955411e-01   5.200794e-01   4.856803e-01   2.156273e-01   3.903970e-02   1.888907e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  100 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            12   2.268547e-01   4.220873e-01   5.021398e-01   1.622918e-01   3.635724e-02   1.367620e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  95 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            13   1.820659e-01   6.216495e-01   2.242192e-01   2.402093e-01   3.326037e-02   1.237990e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  83 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            14   6.706216e-01   7.480158e-01   1.305424e-01   2.936498e-01   3.470462e-02   1.641611e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  86 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            15   4.147651e-01   1.144431e+00   1.325429e+00   4.412853e-01   3.099721e-02   2.303278e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  97 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            16   1.721137e-01   1.088209e+00   3.548545e-01   4.315674e-01   2.761702e-02   1.200713e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  117 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            17   2.973459e+00   6.971543e-01   9.531187e-02   2.791536e-01   9.547753e-02   6.572865e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  135 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            18   1.527571e+00   2.446077e+01   1.561399e+01   9.625097e+00   6.327282e-01   5.882989e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  139 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            19   9.857130e-01   1.426281e+01   1.377757e+01   5.490777e+00   1.156603e+00   2.611508e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  143 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            20   9.526448e-01   2.449482e+01   3.729619e+00   9.688528e+00   2.017506e+00   3.207332e+00  -1.514483e+04  -6.626891e+03  -1.243513e+01  -1.724649e+00  -3.928008e+00      -5.413140e+08     -2.339004e+05           -5.411795e+08     -5.411795e+08    -3.928447e+05        9.026037e-12   5.077429e-02         1.000000e+00   5.392469e+00   2.285121e+02                 1.000000e+03 
+Reversed flow on  148 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) 
+            21   2.618991e+00   2.810953e+01   6.706598e+00   1.124146e+01   3.757219e+00   2.940426e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  138 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            22   1.940647e+00   1.166554e+01   1.559079e+01   4.695742e+00   3.324484e+00   1.610463e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  140 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            23   3.358807e-01   1.084241e+01   5.950066e+00   4.322743e+00   1.772124e+00   6.553493e-01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  135 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            24   3.481685e+00   7.239446e+00   9.832778e-01   2.906931e+00   3.043702e+00   1.784183e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  129 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            25   2.218114e+00   4.308647e+01   3.863185e+01   1.760754e+01   3.892706e+00   3.040235e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  118 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            26   1.103102e+00   1.733762e+01   1.093730e+01   6.736995e+00   8.877924e-01   1.205574e+00                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  121 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            27   1.076364e+01   2.829588e+01   3.005702e+00   1.124682e+01   2.513416e+00   1.234748e+01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  119 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            28   6.404834e+00   6.335120e+02   4.226991e+02   2.485442e+02   5.569765e+00   6.521411e+01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  114 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            29   2.769443e+00   4.842422e+02   1.397765e+02   1.913163e+02   1.971894e+00   1.937056e+01                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  109 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            30   4.212232e+01   3.149857e+02   2.950268e+01   1.252452e+02   3.246642e+01   1.998280e+02   1.507323e+05   7.399773e+04  -9.896740e+00   1.918639e+01   3.909438e+01      -1.092334e+06     -1.100938e+06           -1.101448e+06     -1.101448e+06    -1.101448e+06        9.026037e-12   5.077429e-02         1.000000e+00   5.700764e+00   2.667972e+02                 1.000000e+03 
+Reversed flow on  109 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+     Iteration     Continuity     X-momentum     Y-momentum     Z-momentum            Tke            Sdr    HF_Fx_N (N)    HF_Fz_N (N) HF_Mh_Nm (N-m)    HF_CL_hydro          HF_CD HF_pabs_fixed (Pa) HF_pabs_flap (Pa) HF_pabs_liquid_all (Pa) HF_pabs_near (Pa) HF_pabs_gap (Pa) HF_min_volume (m^3) HF_min_quality HF_min_face_validity  HF_yplus_mean   HF_yplus_max HF_density_min_init (kg/m^3) 
+            31   2.505704e+01   6.964531e+03   4.350140e+03   2.757455e+03   1.181428e+02   4.664218e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  110 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            32   1.645782e+01   4.200078e+03   3.014837e+03   1.663181e+03   4.012846e+02   3.421448e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  114 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            33   6.410813e+01   7.044818e+03   4.378226e+02   2.803916e+03   2.196866e+03   5.767379e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  112 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            34   7.326649e+01   1.889105e+04   1.256940e+04   7.472418e+03   3.163403e+03   1.994472e+03                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  105 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            35   2.661066e+01   1.430519e+04   6.939906e+03   5.618311e+03   2.344295e+03   8.575863e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  111 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            36   3.495891e+01   1.089838e+04   1.109732e+03   4.328244e+03   3.255032e+03   4.788284e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  117 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            37   2.860823e+01   7.305422e+03   2.436872e+03   2.923361e+03   3.033521e+03   5.222754e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  119 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            38   1.765023e+01   3.024918e+03   3.890318e+03   1.215097e+03   4.215240e+03   4.787318e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  117 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            39   1.918512e+01   3.712782e+03   1.986659e+03   1.449285e+03   2.609384e+03   5.581815e+02                                                                                                                                                                                                                                                                   1.000000e+03 
+Reversed flow on  117 faces on Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top
+            40   1.099425e+02   5.158568e+03   6.671807e+02   2.057937e+03   4.143513e+03   1.173663e+03  -3.139728e+06  -1.531543e+06  -8.741407e+00  -3.972314e+02  -8.143294e+02      -1.098159e+11     -1.117151e+06           -1.097984e+11     -1.097984e+11    -1.116792e+06        9.026037e-12   5.077429e-02         1.000000e+00   5.953074e+00   4.605699e+02                 1.000000e+03 
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_distance_fresh_20261103_000031\initialization_error.sim... complete (411.16MB in 0.42245s).
+java.lang.RuntimeException: java.lang.IllegalStateException: Initialization diverged
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

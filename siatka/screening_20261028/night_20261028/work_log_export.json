@@ -1,0 +1,668 @@
+[
+  {
+    "id": "coarse012-completed-20261029",
+    "time": "2026-10-29T09:09:28.218225+00:00",
+    "kind": "finding",
+    "work": "Geometria 012: gotowa siatka diagnostyczna 1,165 mln komórek",
+    "finding": "C001: 9 534 590; C002: 6 037 861; C003: 1 165 391 komórek. C003: 19,2 s samego siatkowania, zero komórek o ujemnej objętości, otwartych i zdegenerowanych. Zapis: F:\\ntnu\\mesh_screening_20261028\\coarse012_C003\\HF_012_C003_mesh.sim. Solver nieuruchomiony.",
+    "challenge": "C003: dowolne pryzmy pokrywają 100% pola płata; pełne 15 warstw tylko 94,560%. 187 komórek z quality <0,01 i 283 ze skewness >80°. Przydatność produkcyjna NWAR pozostaje niepotwierdzona.",
+    "next_step": "Lokalna kontrola pryzm i krótki test hydrostatyczny (0 m/s), następnie 18 m/s: koszt kroku, CFL, y+ i historia sił. Dopiero potem decyzja o długim przebiegu."
+  },
+  {
+    "id": "geometry-012-corrected-20261029",
+    "time": "2026-10-29T08:50:53.772233+00:00",
+    "kind": "finding",
+    "work": "Naprawa geometrii w NX i weryfikacja importu STAR",
+    "finding": "HF_v2.prt oraz HF_v2.x_t zawieraly profil 010. Zapisano HF_012_v3.prt i .x_t; nowy profil ma 11.9979% grubosci i 2.5003% wygiecia. 7 przekrojow sprawdzonych, zamknieta bryla, odchylki sprawdzonych punktow DAT <0.01 mm. STAR: S_full=10.900869 m2, S_half=5.450434 m2. Oryginaly zachowane.",
+    "challenge": "Aktualizacja starego obiektu 3D-CAD w STAR zakonczyla probe bledem; niezalezny import nowego Parasolidu i ponowne przypisanie Boolean/wall/mesh controls zostaly wykonane i zweryfikowane. Nocne wyniki nadal dotycza 010.",
+    "next_step": "C001_012: uruchomiono zgrubne siatkowanie nowej geometrii. Cel ok. 1 mln komorek do diagnostyki; solver nieuruchomiony. Pozniej ocena jakosci, pryzm i kosztu."
+  },
+  {
+    "id": "profile-identity-20261029",
+    "time": "2026-10-29T08:15:38.768054+00:00",
+    "kind": "problem",
+    "work": "Weryfikacja profilu CAD wzgledem obu plikow DAT",
+    "finding": "Aktualny CAD odpowiada starszemu profilowi 010: RMS roznicy powierzchni 0.194 mm wobec 9.090 mm dla 012 (x/c 0.02-0.98). Maks. grubosc root z teselacji 118.50 mm; referencja 012: 142.77 mm. Config i metadane v02 wskazuja 012.",
+    "challenge": "Brak weryfikacji geometrii przed nocnymi testami. Dokladny etap wyboru/importu starszego profilu nieustalony. Wyniki nocne nie waliduja docelowego plata 12%.",
+    "next_step": "WSTRZYMANE nowe siatki/CFD do odtworzenia CAD z referencji 012 i pomiaru przekrojow. Zachowac camber 2.5%; nie skalowac calego Z razy 1.2. Potem dopiero siatka diagnostyczna ok. 1 mln."
+  },
+  {
+    "id": "block1-geometry-20261029",
+    "time": "2026-10-29T07:56:38.482370+00:00",
+    "kind": "finding",
+    "work": "Blok 1: geometria i normalizacja sil",
+    "finding": "Rzut CAD: S_full=10.90002 m2, S_half=5.45001 m2; span=11 m. Wspolczynniki skorygowane o -9.8809%; D002 przy t=0.0002 s: CD=0.0236408, CL_total=0.1459600. Fx +X, Fz +Z, pressure+shear, No Correction (z wyporem).",
+    "challenge": "Przekroj ma ok. 9.96% grubosci i 2.51% wygiecia; raport zakladal profil 12%. Dokladne oznaczenie profilu niepotwierdzone. Sily nadal rozruchowe.",
+    "next_step": "Pozostawic geometrie do diagnostyki; wykorzystac poprawne S_ref. Zweryfikowac tozsamosc profilu przed porownaniem z publikacja."
+  },
+  {
+    "id": "block1-scaling-20261029",
+    "time": "2026-10-29T07:56:38.482370+00:00",
+    "kind": "finding",
+    "work": "Blok 1: ocena skalowania i celu 1 mln komorek",
+    "finding": "Samo skalowanie nie zmniejsza liczby komorek przy stalej rozdzielczosci wzglednej. Przy skali 1:10 i tym samym Fr predkosc=5.692 m/s, Re_root spada z 21.42 mln do 0.677 mln w tej samej wodzie.",
+    "challenge": "Cel obliczen: wiarygodna roznica oporu fala-calm. 20 dni to ekstrapolowany czas jednego c/U, nie prognoza zbieznosci. Wariant 1 mln jeszcze niewygenerowany.",
+    "next_step": "Zgrubny wariant ok. 1 mln w obecnej skali do diagnostyki solvera; kalibracja fal. Propozycja W1: H=0.5 m, T0=3 s, head waves; Te ok. 0.619 s. Nie uruchamiac produkcji przed sprawdzeniem stabilnosci i kosztu."
+  },
+  {
+    "id": "morning-review-20261029",
+    "kind": "review",
+    "work": "Poranna kontrola nocnej kolejki",
+    "finding": "Wszystkie cztery przypadki zakończyły limit czasu; kolejka skończyła o 06:03. Checkpointy i eksporty diagnostyczne istnieją. Przy wspólnym t=0,0002 s maks. CFL: D001 14,27; D002 14,27; D003 31,87; D004 38,99. Średnie y+ około 86,2.",
+    "challenge": "20–22 kroki czasowe oznaczają tylko 0,00020–0,00022 s czasu fizycznego. Nie jest to potwierdzenie zbieżności sił ani niezależności od siatki. Plik zbiorczego podsumowania nie powstał w nocy; odtworzono go rano z kompletnych historii.",
+    "next_step": "D002 jest wstępnym kandydatem do dalszych testów. Przed kolejną długą serią sprawdzić lokalizacje wysokiego CFL oraz rozruch i dobór kroku czasowego; nie zwiększać dt bez oceny.",
+    "time": "2026-10-29T06:22:39.301989+00:00"
+  },
+  {
+    "id": "progress:D004:8",
+    "time": "2026-10-29T05:03:33.673744+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 440; czas fizyczny 2.2E-4 s; max prędkość 47.65669485666771 m/s; max CFL 39.07357906283873.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "overnight-ended",
+    "time": "2026-10-29T05:03:20.780582+00:00",
+    "kind": "queue",
+    "work": "Proces kolejki nocnej zakończony",
+    "finding": "Kod zakończenia procesu: 0. Szczegółowe statusy w tabeli CFD oraz queue_finished.json.",
+    "challenge": "Zakończenie procesu nie oznacza zaliczenia wszystkich przypadków.",
+    "next_step": "Porównać historię, RAM i checkpointy przy wspólnym czasie fizycznym."
+  },
+  {
+    "id": "end:D004",
+    "time": "2026-10-29T05:03:20.764776+00:00",
+    "kind": "cfd",
+    "work": "Zakończono próbę D004",
+    "finding": "Status: completed; minimum wolnego RAM 18.37 GiB. Czas fizyczny: 0.00022 s.",
+    "challenge": "",
+    "next_step": "Porównać ten sam czas fizyczny między siatkami; wynik nie oznacza zbieżności."
+  },
+  {
+    "id": "queue:overnight_queue",
+    "time": "2026-10-29T05:03:20.764776+00:00",
+    "kind": "queue",
+    "work": "Kolejka zakończona: overnight_queue",
+    "finding": "Zapisano 4 wyników prób.",
+    "challenge": "",
+    "next_step": "Sprawdzić status każdego przypadku, checkpointy i historię."
+  },
+  {
+    "id": "progress:D004:7",
+    "time": "2026-10-29T04:52:30.724580+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 400; czas fizyczny 2.0E-4 s; max prędkość 47.93176793333045 m/s; max CFL 38.98633043955089.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D004:6",
+    "time": "2026-10-29T04:36:57.507580+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 340; czas fizyczny 1.7E-4 s; max prędkość 48.380007167998265 m/s; max CFL 31.968190261883198.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D004:5",
+    "time": "2026-10-29T04:20:53.877851+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 280; czas fizyczny 1.4000000000000001E-4 s; max prędkość 48.876749389788976 m/s; max CFL 32.08893104458496.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D004:4",
+    "time": "2026-10-29T04:05:20.268990+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 220; czas fizyczny 1.1E-4 s; max prędkość 49.43951812836463 m/s; max CFL 45.03314052381595.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D004:3",
+    "time": "2026-10-29T03:49:16.409206+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 160; czas fizyczny 8.0E-5 s; max prędkość 50.12294286993241 m/s; max CFL 32.39912027539119.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D004:2",
+    "time": "2026-10-29T03:33:12.706925+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 100; czas fizyczny 5.0E-5 s; max prędkość 51.047662727405445 m/s; max CFL 32.57312658252177.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D004:1",
+    "time": "2026-10-29T03:22:10.469171+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 60; czas fizyczny 3.0000000000000004E-5 s; max prędkość 51.76919509776462 m/s; max CFL 34.509674849911356.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D004:0",
+    "time": "2026-10-29T03:09:07.389840+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D004",
+    "finding": "Iteracja 20; czas fizyczny 1.0E-5 s; max prędkość 52.865305990179316 m/s; max CFL 32.38661300843348.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "start:D004",
+    "time": "2026-10-29T02:59:48.809803+00:00",
+    "kind": "cfd",
+    "work": "Uruchomiono D004",
+    "finding": "CPU: 24 procesy; 18 m/s; Double.",
+    "challenge": "",
+    "next_step": "Inicjalizacja, pomiar RAM i kontrola postępu."
+  },
+  {
+    "id": "end:D003",
+    "time": "2026-10-29T02:59:46.942513+00:00",
+    "kind": "cfd",
+    "work": "Zakończono próbę D003",
+    "finding": "Status: completed; minimum wolnego RAM 16.23 GiB. Czas fizyczny: 0.00021 s.",
+    "challenge": "",
+    "next_step": "Porównać ten sam czas fizyczny między siatkami; wynik nie oznacza zbieżności."
+  },
+  {
+    "id": "progress:D003:8",
+    "time": "2026-10-29T02:59:35.746013+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 420; czas fizyczny 2.1E-4 s; max prędkość 47.79704637590848 m/s; max CFL 31.825166155042037.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:7",
+    "time": "2026-10-29T02:42:31.916250+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 360; czas fizyczny 1.8E-4 s; max prędkość 48.23106226645014 m/s; max CFL 40.01683284294612.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:6",
+    "time": "2026-10-29T02:25:28.131091+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 300; czas fizyczny 1.5000000000000001E-4 s; max prędkość 48.711169045262174 m/s; max CFL 32.05347066365176.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:5",
+    "time": "2026-10-29T02:14:25.778218+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 260; czas fizyczny 1.3000000000000002E-4 s; max prędkość 49.06039318745028 m/s; max CFL 35.31178524452898.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:4",
+    "time": "2026-10-29T01:57:21.475577+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 200; czas fizyczny 1.0E-4 s; max prędkość 49.65992673806708 m/s; max CFL 43.497105212148945.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:3",
+    "time": "2026-10-29T01:40:17.353693+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 140; czas fizyczny 7.000000000000001E-5 s; max prędkość 50.40152132499523 m/s; max CFL 32.44453838876908.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:2",
+    "time": "2026-10-29T01:28:14.946813+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 100; czas fizyczny 5.0E-5 s; max prędkość 51.05455360154982 m/s; max CFL 32.5736777391728.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:1",
+    "time": "2026-10-29T01:16:12.189519+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 60; czas fizyczny 3.0000000000000004E-5 s; max prędkość 51.79139897438503 m/s; max CFL 34.725786633521636.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D003:0",
+    "time": "2026-10-29T01:01:38.824885+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D003",
+    "finding": "Iteracja 20; czas fizyczny 1.0E-5 s; max prędkość 52.90965781138895 m/s; max CFL 32.40469682471838.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "start:D003",
+    "time": "2026-10-29T00:52:00.531878+00:00",
+    "kind": "cfd",
+    "work": "Uruchomiono D003",
+    "finding": "CPU: 24 procesy; 18 m/s; Double.",
+    "challenge": "",
+    "next_step": "Inicjalizacja, pomiar RAM i kontrola postępu."
+  },
+  {
+    "id": "end:D002",
+    "time": "2026-10-29T00:51:58.740279+00:00",
+    "kind": "cfd",
+    "work": "Zakończono próbę D002",
+    "finding": "Status: completed; minimum wolnego RAM 17.54 GiB. Czas fizyczny: 0.00021 s.",
+    "challenge": "",
+    "next_step": "Porównać ten sam czas fizyczny między siatkami; wynik nie oznacza zbieżności."
+  },
+  {
+    "id": "progress:D002:8",
+    "time": "2026-10-29T00:51:37.369898+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 420; czas fizyczny 2.1E-4 s; max prędkość 47.692240527453286 m/s; max CFL 14.20288929572812.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:7",
+    "time": "2026-10-29T00:40:34.668650+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 380; czas fizyczny 1.9E-4 s; max prędkość 47.99239716555516 m/s; max CFL 14.332330605466241.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:6",
+    "time": "2026-10-29T00:24:01.238421+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 320; czas fizyczny 1.6E-4 s; max prędkość 48.48408525577943 m/s; max CFL 14.552759246951613.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:5",
+    "time": "2026-10-29T00:07:27.965388+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 260; czas fizyczny 1.3000000000000002E-4 s; max prędkość 49.01824200634987 m/s; max CFL 14.809198810339979.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:4",
+    "time": "2026-10-28T23:50:54.897250+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 200; czas fizyczny 1.0E-4 s; max prędkość 49.63571662725434 m/s; max CFL 15.125443813777725.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:3",
+    "time": "2026-10-28T23:39:52.458464+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 160; czas fizyczny 8.0E-5 s; max prędkość 50.11657289579731 m/s; max CFL 15.388137258431664.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:2",
+    "time": "2026-10-28T23:22:49.165995+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 100; czas fizyczny 5.0E-5 s; max prędkość 51.05074765647226 m/s; max CFL 15.93216629603633.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:1",
+    "time": "2026-10-28T23:10:46.439189+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 60; czas fizyczny 3.0000000000000004E-5 s; max prędkość 51.7943481966453 m/s; max CFL 16.50175717084474.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D002:0",
+    "time": "2026-10-28T22:57:13.778662+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D002",
+    "finding": "Iteracja 20; czas fizyczny 1.0E-5 s; max prędkość 52.851212083820045 m/s; max CFL 16.454076532589944.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "start:D002",
+    "time": "2026-10-28T22:47:42.991203+00:00",
+    "kind": "cfd",
+    "work": "Uruchomiono D002",
+    "finding": "CPU: 24 procesy; 18 m/s; Double.",
+    "challenge": "",
+    "next_step": "Inicjalizacja, pomiar RAM i kontrola postępu."
+  },
+  {
+    "id": "progress:D001:8",
+    "time": "2026-10-28T22:47:42.434687+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 400; czas fizyczny 2.0E-4 s; max prędkość 47.84742593938678 m/s; max CFL 14.267768223091162.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "end:D001",
+    "time": "2026-10-28T22:47:41.187685+00:00",
+    "kind": "cfd",
+    "work": "Zakończono próbę D001",
+    "finding": "Status: completed; minimum wolnego RAM 15.48 GiB. Czas fizyczny: 0.0002 s.",
+    "challenge": "",
+    "next_step": "Porównać ten sam czas fizyczny między siatkami; wynik nie oznacza zbieżności."
+  },
+  {
+    "id": "progress:D001:7",
+    "time": "2026-10-28T22:29:38.548137+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 340; czas fizyczny 1.7E-4 s; max prędkość 48.32282411242354 m/s; max CFL 14.477500329606993.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D001:6",
+    "time": "2026-10-28T22:18:06.462471+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 300; czas fizyczny 1.5000000000000001E-4 s; max prędkość 48.66458520498084 m/s; max CFL 14.635113093299694.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D001:5",
+    "time": "2026-10-28T22:00:02.937491+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 240; czas fizyczny 1.2E-4 s; max prędkość 49.22162022235027 m/s; max CFL 14.908724919169153.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D001:4",
+    "time": "2026-10-28T21:48:30.723001+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 200; czas fizyczny 1.0E-4 s; max prędkość 49.6441228917577 m/s; max CFL 15.126909754695046.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D001:3",
+    "time": "2026-10-28T21:30:57.502215+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 140; czas fizyczny 7.000000000000001E-5 s; max prędkość 50.3994761853491 m/s; max CFL 15.543811982523831.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D001:2",
+    "time": "2026-10-28T21:18:54.731032+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 100; czas fizyczny 5.0E-5 s; max prędkość 51.05975054549651 m/s; max CFL 15.93180900200033.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D001:1",
+    "time": "2026-10-28T21:05:51.647242+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 60; czas fizyczny 3.0000000000000004E-5 s; max prędkość 51.794267794693496 m/s; max CFL 16.498129615745945.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "progress:D001:0",
+    "time": "2026-10-28T20:51:19.234231+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: D001",
+    "finding": "Iteracja 20; czas fizyczny 1.0E-5 s; max prędkość 52.90017938263739 m/s; max CFL 16.435609562000618.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "start:D001",
+    "time": "2026-10-28T20:41:09.253687+00:00",
+    "kind": "cfd",
+    "work": "Uruchomiono D001",
+    "finding": "CPU: 24 procesy; 18 m/s; Double.",
+    "challenge": "",
+    "next_step": "Inicjalizacja, pomiar RAM i kontrola postępu."
+  },
+  {
+    "id": "overnight-started",
+    "time": "2026-10-28T20:41:07.014444+00:00",
+    "kind": "queue",
+    "work": "Start nocnej kolejki D001 → D002 → D003 → D004",
+    "finding": "Po 2 h czasu solvera na przypadek, 24 procesy CPU, 18 m/s, Double, dt=1e-5 s. Checkpoint co około 15 min między krokami.",
+    "challenge": "Początkowa stabilność i koszt obliczeń; pełne pokrycie pryzmów nadal około 98,76%, dokładność CFD niepotwierdzona.",
+    "next_step": "Automatycznie przechodzić do następnego przypadku; przerwać kolejkę przy braku RAM lub przekroczeniu limitu wykonania."
+  },
+  {
+    "id": "end:probe_D001_np24",
+    "time": "2026-10-28T20:40:58.229161+00:00",
+    "kind": "cfd",
+    "work": "Zakończono próbę probe_D001_np24",
+    "finding": "Status: completed; minimum wolnego RAM 15.39 GiB. Czas fizyczny: 2e-05 s.",
+    "challenge": "",
+    "next_step": "Porównać ten sam czas fizyczny między siatkami; wynik nie oznacza zbieżności."
+  },
+  {
+    "id": "queue:probe_D001_queue",
+    "time": "2026-10-28T20:40:58.229161+00:00",
+    "kind": "queue",
+    "work": "Kolejka zakończona: probe_D001_queue",
+    "finding": "Zapisano 1 wyników prób.",
+    "challenge": "",
+    "next_step": "Sprawdzić status każdego przypadku, checkpointy i historię."
+  },
+  {
+    "id": "progress:probe_D001_np24:0",
+    "time": "2026-10-28T20:33:15.602544+00:00",
+    "kind": "progress",
+    "work": "Odczyt postępu: probe_D001_np24",
+    "finding": "Iteracja 20; czas fizyczny 1.0E-5 s; max prędkość 52.90017938263739 m/s; max CFL 16.435609562000618.",
+    "challenge": "To rozruch / test stabilności; nie potwierdza zbieżności sił.",
+    "next_step": "Kontynuować do limitu czasu lub zadziałania zabezpieczenia."
+  },
+  {
+    "id": "finding-prisms",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "finding",
+    "work": "Ocena lokalnych problemów pryzm",
+    "finding": "Na A001 najsłabsza komórka leży w warstwie 15; niska Cell Quality nie pokrywa się automatycznie z wysokim skewness. Tylko 2 ze 115 komórek o Q < 0,01 mają skewness > 80°.",
+    "challenge": "Redukcja warstw przy krawędzi spływu i przejściu do rdzenia; liczba warstw nie zastępuje oceny rzeczywistej grubości.",
+    "next_step": "Kontynuować ocenę lokalizacji i grubości, a w CFD obserwować y+, siły i CFL."
+  },
+  {
+    "id": "finding-eqp",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "problem",
+    "work": "Wniosek z B001–B003: dobór ustawień pryzm",
+    "finding": "Enhanced Quality Prisms obniżył pełne pokrycie do 94,24%. Legacy z Near Core AR 2 zwiększył je do 98,76%; AR 4 nie przyniósł istotnego dalszego wzrostu.",
+    "challenge": "Żaden wariant nie osiągnął celu 99,9%. AR 4 zwiększa liczbę komórek o Q < 0,01.",
+    "next_step": "B001 wyłączony z wyboru nocnego. Porównać AR 2 i AR 4 przy dwóch rozmiarach HF_fine."
+  },
+  {
+    "id": "finding-memory",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "problem",
+    "work": "Zmiana planu po nieudanej inicjalizacji A001",
+    "finding": "Próba 25,19 mln komórek przy 18 m/s wyczerpała RAM i została przerwana przed ukończeniem kroku solvera.",
+    "challenge": "64 GB RAM nie wystarczyło dla tego przypadku. GPU ma 12 GB VRAM i nie mieści planowanych dużych przypadków Double według oszacowania z dokumentacji.",
+    "next_step": "Cztery przypadki 14,3–15,9 mln komórek; obliczenia sekwencyjne. Najpierw test RAM na największym D001."
+  },
+  {
+    "id": "dashboard-log",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "dashboard",
+    "work": "Dodano dziennik pracy do HTML",
+    "finding": "Dashboard zawiera godziny, pracę, wnioski, wyzwania i następne kroki. Zakończenia meshowania i prób CFD dopisują się automatycznie.",
+    "challenge": "Wpis nie jest dowodem zbieżności; status wykonania i zatwierdzenie siatki są oddzielne.",
+    "next_step": "Odświeżanie danych co 30 s, strony co 60 s."
+  },
+  {
+    "id": "start:probe_D001_np24",
+    "time": "2026-10-28T20:23:28.766836+00:00",
+    "kind": "cfd",
+    "work": "Uruchomiono probe_D001_np24",
+    "finding": "CPU: 24 procesy; 18 m/s; Double.",
+    "challenge": "",
+    "next_step": "Inicjalizacja, pomiar RAM i kontrola postępu."
+  },
+  {
+    "id": "mesh:D004",
+    "time": "2026-10-28T20:23:23.352677+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki D004",
+    "finding": "14,261,528 komórek; pełne 15 warstw na 98.765% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:D003",
+    "time": "2026-10-28T20:22:59.049232+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki D003",
+    "finding": "15,225,539 komórek; pełne 15 warstw na 98.765% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:D001",
+    "time": "2026-10-28T20:17:02.212045+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki D001",
+    "finding": "15,866,740 komórek; pełne 15 warstw na 98.763% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:D002",
+    "time": "2026-10-28T20:16:52.112178+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki D002",
+    "finding": "14,902,626 komórek; pełne 15 warstw na 98.763% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:B003",
+    "time": "2026-10-28T20:13:03.131876+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki B003",
+    "finding": "24,727,133 komórek; pełne 15 warstw na 98.765% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "end:probe_A001",
+    "time": "2026-10-28T20:05:56.622007+00:00",
+    "kind": "problem",
+    "work": "Zakończono próbę probe_A001",
+    "finding": "Status: memory_emergency_stop; minimum wolnego RAM 0.59 GiB.",
+    "challenge": "Próba nie zaliczyła kryteriów wykonania.",
+    "next_step": "Weryfikacja przyczyny przed powtórzeniem."
+  },
+  {
+    "id": "queue:probe_queue",
+    "time": "2026-10-28T20:05:56.622007+00:00",
+    "kind": "queue",
+    "work": "Kolejka zakończona: probe_queue",
+    "finding": "Zapisano 1 wyników prób.",
+    "challenge": "",
+    "next_step": "Sprawdzić status każdego przypadku, checkpointy i historię."
+  },
+  {
+    "id": "start:probe_A001",
+    "time": "2026-10-28T20:02:15.753693+00:00",
+    "kind": "cfd",
+    "work": "Uruchomiono probe_A001",
+    "finding": "CPU: 8 procesy; 18 m/s; Double.",
+    "challenge": "",
+    "next_step": "Inicjalizacja, pomiar RAM i kontrola postępu."
+  },
+  {
+    "id": "mesh:B001",
+    "time": "2026-10-28T20:02:05.453686+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki B001",
+    "finding": "23,853,446 komórek; pełne 15 warstw na 94.237% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:B002",
+    "time": "2026-10-28T20:00:58.179389+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki B002",
+    "finding": "25,374,127 komórek; pełne 15 warstw na 98.763% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:A003",
+    "time": "2026-10-28T19:08:19.191554+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki A003",
+    "finding": "25,452,235 komórek; pełne 15 warstw na 97.299% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:A002",
+    "time": "2026-10-28T19:01:45.253463+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki A002",
+    "finding": "25,317,631 komórek; pełne 15 warstw na 97.212% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  },
+  {
+    "id": "mesh:A001",
+    "time": "2026-10-28T18:54:56.743087+00:00",
+    "kind": "mesh",
+    "work": "Zapisano pomiar siatki A001",
+    "finding": "25,188,874 komórek; pełne 15 warstw na 97.158% powierzchni foila.",
+    "challenge": "Cel 99,9% nieosiągnięty.",
+    "next_step": "Ocena lokalnych warstw i test CFD; sam pomiar siatki nie potwierdza dokładności."
+  }
+]

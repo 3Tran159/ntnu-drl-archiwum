@@ -1,0 +1,58 @@
+{
+  "status": "XFOIL_DIAGNOSTIC_ONLY",
+  "CL_target": 0.6455953834031652,
+  "band_1pct": [
+    0.6391394295691336,
+    0.6520513372371969
+  ],
+  "godo_mass_kg": 12500,
+  "godo_mean_chord_m": 0.312,
+  "godo_aspect_ratio": 25.6,
+  "godo_area_m2_inferred": 2.4920064,
+  "godo_speed_m_s": 12.346666666666666,
+  "assumed_density_kg_m3": 1000,
+  "weight_balance_ignores_buoyancy": true,
+  "training_interactions": 18000,
+  "selected_checkpoint_step": 8000,
+  "seed": 27,
+  "trim_deg": 2.8779178816317414,
+  "action_residual_limit_deg": 0.6,
+  "pitch_rate_limit_deg_s": 90.0,
+  "flap_deg": 0,
+  "controller_dt_s": 0.005,
+  "wave_period_s": 0.4555125731921526,
+  "observation": [
+    "(preview_Ux-18)/0.06",
+    "preview_Uy/0.06",
+    "(pitch-trim)/0.6",
+    "clip((CL-target)/(4*band),-3,3)"
+  ],
+  "evaluation": "Three held-out initial phases of the same nominal wave, four periods after one discarded period",
+  "evaluation_results": {
+    "fixed_trim": {
+      "cl_mean": 0.64559632101183,
+      "in_band_pct": 32.967032967032964,
+      "cl_rms_pct": 1.4289411420481617,
+      "cl_max_abs_pct": 2.0219980410938185,
+      "cd_x_mean": 0.007247840437968966,
+      "reward_mean": -2.0790488531332496
+    },
+    "xfoil_inverse": {
+      "cl_mean": 0.6455953834031654,
+      "in_band_pct": 100.0,
+      "cl_rms_pct": 1.2325936474486773e-14,
+      "cl_max_abs_pct": 3.4393772110722726e-14,
+      "cd_x_mean": 0.007260805085288873,
+      "reward_mean": -0.03912242076388468
+    },
+    "td3_pitch": {
+      "cl_mean": 0.6461201991269798,
+      "in_band_pct": 100.0,
+      "cl_rms_pct": 0.14086852786553797,
+      "cl_max_abs_pct": 0.24922999171784402,
+      "cd_x_mean": 0.0072617425621257494,
+      "reward_mean": -0.05910712339137682
+    }
+  },
+  "urans_validation": false
+}

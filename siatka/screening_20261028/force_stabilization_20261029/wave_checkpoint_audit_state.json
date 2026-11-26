@@ -1,0 +1,299 @@
+{
+  "status": "fields_ready_for_spatial_review",
+  "updated_at": "2026-10-29T23:30:33.269399+01:00",
+  "controller_pid": 28100,
+  "case": "W20_H24_X4_CPUprop_dt1ms_r2",
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_CPUprop_r2_field_audit_r1",
+  "result": {
+    "returncode": 0,
+    "source_unchanged": true,
+    "audit": {
+      "steps_taken": 0,
+      "boundaries": [
+        {
+          "name": "DOMAIN.bottom",
+          "type": "SymmetryBoundary",
+          "mass_outward_kg_s": 0.0,
+          "values": [],
+          "conditions": [
+            {
+              "class": "star.vof.VofWaveDampingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Damping Boundary Option"
+            },
+            {
+              "class": "star.vof.VofWaveForcingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Forcing Boundary Option"
+            }
+          ]
+        },
+        {
+          "name": "DOMAIN.inlet",
+          "type": "InletBoundary",
+          "mass_outward_kg_s": -8543.364891690102,
+          "values": [
+            {
+              "class": "star.flow.VolumeFractionProfile",
+              "getMethod": {
+                "class": "star.common.CompositeNMinus1ArrayProfileMethod",
+                "getProfiles": [
+                  {
+                    "class": "star.common.ScalarProfile",
+                    "getMethod": "Field Function",
+                    "getPresentationName": "water"
+                  }
+                ],
+                "getPresentationName": "Composite N-1"
+              },
+              "getPresentationName": "Volume Fraction"
+            },
+            {
+              "class": "star.flow.VelocityProfile",
+              "getMethod": {
+                "class": "star.common.FunctionVectorProfileMethod",
+                "getFieldFunction": {
+                  "class": "star.common.PrimitiveFieldFunction",
+                  "getValue": "READ_ERROR",
+                  "getFunctionName": "VelocityWave1",
+                  "getPresentationName": "Velocity of NTNU_W20_H24_X4_Q2D_r5 1"
+                },
+                "getPresentationName": "Field Function"
+              },
+              "getPresentationName": "Velocity"
+            },
+            {
+              "class": "star.vof.VofWaveForcingLength",
+              "getMethod": {
+                "class": "star.common.ConstantScalarProfileMethod",
+                "getQuantity": {
+                  "class": "star.common.ScalarPhysicalQuantity",
+                  "getValue": 20.0,
+                  "getSIValue": 20.0,
+                  "getPresentationName": "Scalar Physical Quantity"
+                },
+                "getPresentationName": "Constant"
+              },
+              "getPresentationName": "VOF Wave Forcing Length"
+            },
+            {
+              "class": "star.turbulence.TurbulenceIntensityProfile",
+              "getMethod": {
+                "class": "star.common.ConstantScalarProfileMethod",
+                "getQuantity": {
+                  "class": "star.common.ScalarPhysicalQuantity",
+                  "getValue": 0.001,
+                  "getSIValue": 0.001,
+                  "getPresentationName": "Scalar Physical Quantity"
+                },
+                "getPresentationName": "Constant"
+              },
+              "getPresentationName": "Turbulence Intensity"
+            }
+          ],
+          "conditions": [
+            {
+              "class": "star.vof.VofWaveDampingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Damping Boundary Option"
+            },
+            {
+              "class": "star.vof.VofWaveForcingBoundaryOption",
+              "getSelected": 1,
+              "getPresentationName": "VOF Wave Forcing Boundary Option"
+            }
+          ]
+        },
+        {
+          "name": "DOMAIN.outlet",
+          "type": "PressureBoundary",
+          "mass_outward_kg_s": 8567.974972374564,
+          "values": [
+            {
+              "class": "star.flow.VolumeFractionProfile",
+              "getMethod": {
+                "class": "star.common.ConstantArrayProfileMethod",
+                "getQuantity": {
+                  "class": "star.common.ArrayPhysicalQuantity",
+                  "getPresentationName": "Array Physical Quantity"
+                },
+                "getPresentationName": "Constant"
+              },
+              "getPresentationName": "Volume Fraction"
+            },
+            {
+              "class": "star.flow.StaticPressureProfile",
+              "getMethod": {
+                "class": "star.common.FunctionScalarProfileMethod",
+                "getFieldFunction": {
+                  "class": "star.common.PrimitiveFieldFunction",
+                  "getValue": "READ_ERROR",
+                  "getFunctionName": "HydrostaticPressureWave1",
+                  "getPresentationName": "Hydrostatic Pressure of Heavy Fluid of NTNU_W20_H24_X4_Q2D_r5 1"
+                },
+                "getPresentationName": "Field Function"
+              },
+              "getPresentationName": "Pressure"
+            },
+            {
+              "class": "star.vof.VofWaveDampingLength",
+              "getMethod": {
+                "class": "star.common.ConstantScalarProfileMethod",
+                "getQuantity": {
+                  "class": "star.common.ScalarPhysicalQuantity",
+                  "getValue": 20.0,
+                  "getSIValue": 20.0,
+                  "getPresentationName": "Scalar Physical Quantity"
+                },
+                "getPresentationName": "Constant"
+              },
+              "getPresentationName": "VOF Wave Damping Length"
+            },
+            {
+              "class": "star.turbulence.TurbulenceIntensityProfile",
+              "getMethod": {
+                "class": "star.common.ConstantScalarProfileMethod",
+                "getQuantity": {
+                  "class": "star.common.ScalarPhysicalQuantity",
+                  "getValue": 0.001,
+                  "getSIValue": 0.001,
+                  "getPresentationName": "Scalar Physical Quantity"
+                },
+                "getPresentationName": "Constant"
+              },
+              "getPresentationName": "Turbulence Intensity"
+            }
+          ],
+          "conditions": [
+            {
+              "class": "star.flow.BackflowSpecification",
+              "getSelected": 1,
+              "getPresentationName": "Backflow Specification"
+            },
+            {
+              "class": "star.vof.VofWaveDampingBoundaryOption",
+              "getSelected": 1,
+              "getPresentationName": "VOF Wave Damping Boundary Option"
+            },
+            {
+              "class": "star.vof.VofWaveForcingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Forcing Boundary Option"
+            }
+          ]
+        },
+        {
+          "name": "DOMAIN.span_source",
+          "type": "SymmetryBoundary",
+          "mass_outward_kg_s": 0.0,
+          "values": [],
+          "conditions": [
+            {
+              "class": "star.vof.VofWaveDampingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Damping Boundary Option"
+            },
+            {
+              "class": "star.vof.VofWaveForcingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Forcing Boundary Option"
+            }
+          ]
+        },
+        {
+          "name": "DOMAIN.span_target",
+          "type": "SymmetryBoundary",
+          "mass_outward_kg_s": 0.0,
+          "values": [],
+          "conditions": [
+            {
+              "class": "star.vof.VofWaveDampingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Damping Boundary Option"
+            },
+            {
+              "class": "star.vof.VofWaveForcingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Forcing Boundary Option"
+            }
+          ]
+        },
+        {
+          "name": "DOMAIN.top",
+          "type": "PressureBoundary",
+          "mass_outward_kg_s": 0.07716052330122665,
+          "values": [
+            {
+              "class": "star.flow.VolumeFractionProfile",
+              "getMethod": {
+                "class": "star.common.CompositeNMinus1ArrayProfileMethod",
+                "getProfiles": [
+                  {
+                    "class": "star.common.ScalarProfile",
+                    "getMethod": "Field Function",
+                    "getPresentationName": "water"
+                  }
+                ],
+                "getPresentationName": "Composite N-1"
+              },
+              "getPresentationName": "Volume Fraction"
+            },
+            {
+              "class": "star.flow.StaticPressureProfile",
+              "getMethod": {
+                "class": "star.common.FunctionScalarProfileMethod",
+                "getFieldFunction": {
+                  "class": "star.common.PrimitiveFieldFunction",
+                  "getValue": "READ_ERROR",
+                  "getFunctionName": "HydrostaticPressureWave0",
+                  "getPresentationName": "Hydrostatic Pressure of Heavy Fluid of Calm"
+                },
+                "getPresentationName": "Field Function"
+              },
+              "getPresentationName": "Pressure"
+            },
+            {
+              "class": "star.turbulence.TurbulenceIntensityProfile",
+              "getMethod": {
+                "class": "star.common.ConstantScalarProfileMethod",
+                "getQuantity": {
+                  "class": "star.common.ScalarPhysicalQuantity",
+                  "getValue": 0.001,
+                  "getSIValue": 0.001,
+                  "getPresentationName": "Scalar Physical Quantity"
+                },
+                "getPresentationName": "Constant"
+              },
+              "getPresentationName": "Turbulence Intensity"
+            }
+          ],
+          "conditions": [
+            {
+              "class": "star.flow.BackflowSpecification",
+              "getSelected": 0,
+              "getPresentationName": "Backflow Specification"
+            },
+            {
+              "class": "star.vof.VofWaveDampingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Damping Boundary Option"
+            },
+            {
+              "class": "star.vof.VofWaveForcingBoundaryOption",
+              "getSelected": 0,
+              "getPresentationName": "VOF Wave Forcing Boundary Option"
+            }
+          ]
+        }
+      ],
+      "scope": "Spatial diagnostic of saved no-foil wave state; not wave acceptance",
+      "status": "fields_exported_zero_steps",
+      "gpu_count": 0,
+      "cells": 53200,
+      "time_s": 0.7040000000000005
+    },
+    "source": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_CPUprop_dt1ms_r2\\final.sim",
+    "fields": "E:\\ntnu\\quasi2d_waves_20261029\\W20_H24_X4_CPUprop_r2_field_audit_r1\\checkpoint_fields.csv"
+  },
+  "next": "Locate velocity maximum, phase and boundary proximity; review water/interface separately before any longer continuation"
+}

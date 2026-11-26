@@ -1,0 +1,38 @@
+[
+  {
+    "ProcessId": 17668,
+    "ParentProcessId": 3392,
+    "Name": "starccm+.exe",
+    "CommandLine": "\"E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\starccm+.exe\" -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -np 1 -cpubind off -gpgpu auto:1 -batch E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\PRE_W04_20261102\\calm_global_resume_20261102_171550\\PreW04GlobalRamp.java E:\\ntnu_mesh_optimization_20261030\\nwar_automation_20261102\\PRE_W04_20261102\\calm_global_resume_20261102_171550\\input.sim"
+  },
+  {
+    "ProcessId": 26124,
+    "ParentProcessId": 6452,
+    "Name": "starccm+.exe",
+    "CommandLine": "\"E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\starccm+.exe\"  -server -power -cpubind off -gpgpu auto:1 -np 1 -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -xencoded-session RTpcbnRudV9tZXNoX29wdGltaXphdGlvbl8yMDI2MTAzMFxud2FyX2F1dG9tYXRpb25fMjAyNjExMDJcUFJFX1cwNF8yMDI2MTEwMlxjYWxtX2dsb2JhbF9yZXN1bWVfMjAyNjExMDJfMTcxNTUwXGlucHV0LnNpbQ=="
+  },
+  {
+    "ProcessId": 6204,
+    "ParentProcessId": 27404,
+    "Name": "mpiexec.exe",
+    "CommandLine": "\"E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\mpi\\msmpi\\10.1.12498.16-cda-001\\win64\\vc14.2\\bin\\mpiexec.exe\" -np 1 \"E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\starccm+.exe\" -xmpidriver ms -xtmpdir C:\\Users\\ThinkPad\\AppData\\Local\\Temp\\star-02ec345c-ce55-49d1-9ca8-e7b192c1eb73 -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -rgraphics native -power -cpubind disable -gpgpu auto:1 -xencoded-session RTpcbnRudV9tZXNoX29wdGltaXphdGlvbl8yMDI2MTAzMFxud2FyX2F1dG9tYXRpb25fMjAyNjExMDJcUFJFX1cwNF8yMDI2MTEwMlxjYWxtX2dsb2JhbF9yZXN1bWVfMjAyNjExMDJfMTcxNTUwXGlucHV0LnNpbQ== -xmpiversion 10.1.12498.16-cda-001 -node"
+  },
+  {
+    "ProcessId": 5024,
+    "ParentProcessId": 6204,
+    "Name": "smpd.exe",
+    "CommandLine": "\"E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\mpi\\msmpi\\10.1.12498.16-cda-001\\win64\\vc14.2\\bin\\smpd.exe\" -p 8677 -d 0 -mgr 336 \"job\" -localonly"
+  },
+  {
+    "ProcessId": 14200,
+    "ParentProcessId": 5024,
+    "Name": "starccm+.exe",
+    "CommandLine": "\"E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\starccm+.exe\" -xmpidriver ms -xtmpdir C:\\Users\\ThinkPad\\AppData\\Local\\Temp\\star-02ec345c-ce55-49d1-9ca8-e7b192c1eb73 -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -rgraphics native -power -cpubind disable -gpgpu auto:1 -xencoded-session RTpcbnRudV9tZXNoX29wdGltaXphdGlvbl8yMDI2MTAzMFxud2FyX2F1dG9tYXRpb25fMjAyNjExMDJcUFJFX1cwNF8yMDI2MTEwMlxjYWxtX2dsb2JhbF9yZXN1bWVfMjAyNjExMDJfMTcxNTUwXGlucHV0LnNpbQ== -xmpiversion 10.1.12498.16-cda-001 -node"
+  },
+  {
+    "ProcessId": 3304,
+    "ParentProcessId": 14200,
+    "Name": "star-ccm+.exe",
+    "CommandLine": "\"E:\\Program Files\\Siemens\\21.02.007-R8\\STAR-CCM+21.02.007-R8\\star\\lib\\win64\\clang20.1vc14.2-r8\\lib\\star-ccm+.exe\"  -xmpidriver \"ms\" -tmpdir \"C:\\Users\\ThinkPad\\AppData\\Local\\Temp\\star-02ec345c-ce55-49d1-9ca8-e7b192c1eb73\" -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -xmpiversion 10.1.12498.16-cda-001 -rgraphics native  -power  -cpubind  disable  -gpgpu 0  -encoded-session RTpcbnRudV9tZXNoX29wdGltaXphdGlvbl8yMDI2MTAzMFxud2FyX2F1dG9tYXRpb25fMjAyNjExMDJcUFJFX1cwNF8yMDI2MTEwMlxjYWxtX2dsb2JhbF9yZXN1bWVfMjAyNjExMDJfMTcxNTUwXGlucHV0LnNpbQ== -tmpdir \"C:\\Users\\ThinkPad\\AppData\\Local\\Temp\\star-02ec345c-ce55-49d1-9ca8-e7b192c1eb73\""
+  }
+]

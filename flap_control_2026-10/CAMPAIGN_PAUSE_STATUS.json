@@ -1,0 +1,66 @@
+{
+  "at": "2026-11-02T16:19:26.084090+01:00",
+  "status": "paused_awaiting_explicit_user_resume",
+  "checkpoint": "F:\\ntnu\\flap_control\\checkpoints\\Flap_CFD_HOME_RESUME_20261102.sim",
+  "checkpoint_sha256": "3c32632e41c8e14f04dfde542abf7195e03a354c7c8886abf6566d087499ab29",
+  "physical_time_s": 0.26,
+  "time_step_s": 0.002,
+  "step": 130,
+  "iteration": 1040,
+  "cells": 44763,
+  "version": "2606.0002 / 21.04.009-R8",
+  "cpu_processes": 4,
+  "mpi": "ms",
+  "gpu_compute": false,
+  "current_model": {
+    "purpose": "completed mechanics PoC",
+    "U_m_s": 1,
+    "rho_kg_m3": 1000,
+    "mu_Pa_s": 0.001,
+    "Re_chord_1p19m": 1190000,
+    "turbulence": "Laminar",
+    "span_m": 0.02,
+    "hinge_x_m": 0.95183764,
+    "hinge_z_m": 0.021292732432526423,
+    "gap_m": 0.017854002,
+    "amplitude_deg": 5,
+    "period_s": 0.2,
+    "solution_reset": false
+  },
+  "new_hydro_stage": {
+    "status": "preprocessing only; no 18 m/s mesh or physical run generated",
+    "target_Re": 21420000,
+    "target_turbulence": "URANS SST k-omega",
+    "geometry_gap_m": 0.0025,
+    "min_clearance_m": 0.0024971687561083033,
+    "temperature_C": 20,
+    "p_vapor_Pa": 2339.214766776897,
+    "safety_margin_Pa": 10000,
+    "clearance_envelope_validated": false
+  },
+  "completed": [
+    "PoC 100-step full +/-5deg cycle",
+    "PoC 30-step 0.06s transient",
+    "Move from C to F with hashes verified",
+    "C01 read-only pressure and normalization audit",
+    "2.5mm native geometry with 0.1deg collision sweep"
+  ],
+  "pending": [
+    "SP-A intact original on C01 mesh in single-phase physics",
+    "SP-B split fixed 0deg without overset",
+    "SP-C split fixed 0deg with proven overset",
+    "SP-A/C01 VOF bridge without forcing equal CL/CD",
+    "Mesh/prism/gap/overset and timestep checks"
+  ],
+  "not_started": [
+    "wave campaign",
+    "DRL training",
+    "surrogate training"
+  ],
+  "datasets": {
+    "POC_saved": true,
+    "POC_not_hydrodynamically_validated": true,
+    "hydrodynamic_18m_s_dataset_exists": false,
+    "new_per_timestep_pressure_history_exists": false
+  }
+}

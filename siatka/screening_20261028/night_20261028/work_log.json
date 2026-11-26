@@ -1,0 +1,110 @@
+[
+  {
+    "id": "finding-prisms",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "finding",
+    "work": "Ocena lokalnych problemów pryzm",
+    "finding": "Na A001 najsłabsza komórka leży w warstwie 15; niska Cell Quality nie pokrywa się automatycznie z wysokim skewness. Tylko 2 ze 115 komórek o Q < 0,01 mają skewness > 80°.",
+    "challenge": "Redukcja warstw przy krawędzi spływu i przejściu do rdzenia; liczba warstw nie zastępuje oceny rzeczywistej grubości.",
+    "next_step": "Kontynuować ocenę lokalizacji i grubości, a w CFD obserwować y+, siły i CFL."
+  },
+  {
+    "id": "finding-eqp",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "problem",
+    "work": "Wniosek z B001–B003: dobór ustawień pryzm",
+    "finding": "Enhanced Quality Prisms obniżył pełne pokrycie do 94,24%. Legacy z Near Core AR 2 zwiększył je do 98,76%; AR 4 nie przyniósł istotnego dalszego wzrostu.",
+    "challenge": "Żaden wariant nie osiągnął celu 99,9%. AR 4 zwiększa liczbę komórek o Q < 0,01.",
+    "next_step": "B001 wyłączony z wyboru nocnego. Porównać AR 2 i AR 4 przy dwóch rozmiarach HF_fine."
+  },
+  {
+    "id": "finding-memory",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "problem",
+    "work": "Zmiana planu po nieudanej inicjalizacji A001",
+    "finding": "Próba 25,19 mln komórek przy 18 m/s wyczerpała RAM i została przerwana przed ukończeniem kroku solvera.",
+    "challenge": "64 GB RAM nie wystarczyło dla tego przypadku. GPU ma 12 GB VRAM i nie mieści planowanych dużych przypadków Double według oszacowania z dokumentacji.",
+    "next_step": "Cztery przypadki 14,3–15,9 mln komórek; obliczenia sekwencyjne. Najpierw test RAM na największym D001."
+  },
+  {
+    "id": "dashboard-log",
+    "time": "2026-10-28T20:27:43.718Z",
+    "kind": "dashboard",
+    "work": "Dodano dziennik pracy do HTML",
+    "finding": "Dashboard zawiera godziny, pracę, wnioski, wyzwania i następne kroki. Zakończenia meshowania i prób CFD dopisują się automatycznie.",
+    "challenge": "Wpis nie jest dowodem zbieżności; status wykonania i zatwierdzenie siatki są oddzielne.",
+    "next_step": "Odświeżanie danych co 30 s, strony co 60 s."
+  },
+  {
+    "id": "overnight-started",
+    "time": "2026-10-28T20:41:07.014444+00:00",
+    "kind": "queue",
+    "work": "Start nocnej kolejki D001 → D002 → D003 → D004",
+    "finding": "Po 2 h czasu solvera na przypadek, 24 procesy CPU, 18 m/s, Double, dt=1e-5 s. Checkpoint co około 15 min między krokami.",
+    "challenge": "Początkowa stabilność i koszt obliczeń; pełne pokrycie pryzmów nadal około 98,76%, dokładność CFD niepotwierdzona.",
+    "next_step": "Automatycznie przechodzić do następnego przypadku; przerwać kolejkę przy braku RAM lub przekroczeniu limitu wykonania."
+  },
+  {
+    "id": "overnight-ended",
+    "time": "2026-10-29T05:03:20.780582+00:00",
+    "kind": "queue",
+    "work": "Proces kolejki nocnej zakończony",
+    "finding": "Kod zakończenia procesu: 0. Szczegółowe statusy w tabeli CFD oraz queue_finished.json.",
+    "challenge": "Zakończenie procesu nie oznacza zaliczenia wszystkich przypadków.",
+    "next_step": "Porównać historię, RAM i checkpointy przy wspólnym czasie fizycznym."
+  },
+  {
+    "id": "morning-review-20261029",
+    "kind": "review",
+    "work": "Poranna kontrola nocnej kolejki",
+    "finding": "Wszystkie cztery przypadki zakończyły limit czasu; kolejka skończyła o 06:03. Checkpointy i eksporty diagnostyczne istnieją. Przy wspólnym t=0,0002 s maks. CFL: D001 14,27; D002 14,27; D003 31,87; D004 38,99. Średnie y+ około 86,2.",
+    "challenge": "20–22 kroki czasowe oznaczają tylko 0,00020–0,00022 s czasu fizycznego. Nie jest to potwierdzenie zbieżności sił ani niezależności od siatki. Plik zbiorczego podsumowania nie powstał w nocy; odtworzono go rano z kompletnych historii.",
+    "next_step": "D002 jest wstępnym kandydatem do dalszych testów. Przed kolejną długą serią sprawdzić lokalizacje wysokiego CFL oraz rozruch i dobór kroku czasowego; nie zwiększać dt bez oceny.",
+    "time": "2026-10-29T06:22:39.301989+00:00"
+  },
+  {
+    "id": "block1-geometry-20261029",
+    "time": "2026-10-29T07:56:38.482370+00:00",
+    "kind": "finding",
+    "work": "Blok 1: geometria i normalizacja sil",
+    "finding": "Rzut CAD: S_full=10.90002 m2, S_half=5.45001 m2; span=11 m. Wspolczynniki skorygowane o -9.8809%; D002 przy t=0.0002 s: CD=0.0236408, CL_total=0.1459600. Fx +X, Fz +Z, pressure+shear, No Correction (z wyporem).",
+    "challenge": "Przekroj ma ok. 9.96% grubosci i 2.51% wygiecia; raport zakladal profil 12%. Dokladne oznaczenie profilu niepotwierdzone. Sily nadal rozruchowe.",
+    "next_step": "Pozostawic geometrie do diagnostyki; wykorzystac poprawne S_ref. Zweryfikowac tozsamosc profilu przed porownaniem z publikacja."
+  },
+  {
+    "id": "block1-scaling-20261029",
+    "time": "2026-10-29T07:56:38.482370+00:00",
+    "kind": "finding",
+    "work": "Blok 1: ocena skalowania i celu 1 mln komorek",
+    "finding": "Samo skalowanie nie zmniejsza liczby komorek przy stalej rozdzielczosci wzglednej. Przy skali 1:10 i tym samym Fr predkosc=5.692 m/s, Re_root spada z 21.42 mln do 0.677 mln w tej samej wodzie.",
+    "challenge": "Cel obliczen: wiarygodna roznica oporu fala-calm. 20 dni to ekstrapolowany czas jednego c/U, nie prognoza zbieznosci. Wariant 1 mln jeszcze niewygenerowany.",
+    "next_step": "Zgrubny wariant ok. 1 mln w obecnej skali do diagnostyki solvera; kalibracja fal. Propozycja W1: H=0.5 m, T0=3 s, head waves; Te ok. 0.619 s. Nie uruchamiac produkcji przed sprawdzeniem stabilnosci i kosztu."
+  },
+  {
+    "id": "profile-identity-20261029",
+    "time": "2026-10-29T08:15:38.768054+00:00",
+    "kind": "problem",
+    "work": "Weryfikacja profilu CAD wzgledem obu plikow DAT",
+    "finding": "Aktualny CAD odpowiada starszemu profilowi 010: RMS roznicy powierzchni 0.194 mm wobec 9.090 mm dla 012 (x/c 0.02-0.98). Maks. grubosc root z teselacji 118.50 mm; referencja 012: 142.77 mm. Config i metadane v02 wskazuja 012.",
+    "challenge": "Brak weryfikacji geometrii przed nocnymi testami. Dokladny etap wyboru/importu starszego profilu nieustalony. Wyniki nocne nie waliduja docelowego plata 12%.",
+    "next_step": "WSTRZYMANE nowe siatki/CFD do odtworzenia CAD z referencji 012 i pomiaru przekrojow. Zachowac camber 2.5%; nie skalowac calego Z razy 1.2. Potem dopiero siatka diagnostyczna ok. 1 mln."
+  },
+  {
+    "id": "geometry-012-corrected-20261029",
+    "time": "2026-10-29T08:50:53.772233+00:00",
+    "kind": "finding",
+    "work": "Naprawa geometrii w NX i weryfikacja importu STAR",
+    "finding": "HF_v2.prt oraz HF_v2.x_t zawieraly profil 010. Zapisano HF_012_v3.prt i .x_t; nowy profil ma 11.9979% grubosci i 2.5003% wygiecia. 7 przekrojow sprawdzonych, zamknieta bryla, odchylki sprawdzonych punktow DAT <0.01 mm. STAR: S_full=10.900869 m2, S_half=5.450434 m2. Oryginaly zachowane.",
+    "challenge": "Aktualizacja starego obiektu 3D-CAD w STAR zakonczyla probe bledem; niezalezny import nowego Parasolidu i ponowne przypisanie Boolean/wall/mesh controls zostaly wykonane i zweryfikowane. Nocne wyniki nadal dotycza 010.",
+    "next_step": "C001_012: uruchomiono zgrubne siatkowanie nowej geometrii. Cel ok. 1 mln komorek do diagnostyki; solver nieuruchomiony. Pozniej ocena jakosci, pryzm i kosztu."
+  },
+  {
+    "id": "coarse012-completed-20261029",
+    "time": "2026-10-29T09:09:28.218225+00:00",
+    "kind": "finding",
+    "work": "Geometria 012: gotowa siatka diagnostyczna 1,165 mln komórek",
+    "finding": "C001: 9 534 590; C002: 6 037 861; C003: 1 165 391 komórek. C003: 19,2 s samego siatkowania, zero komórek o ujemnej objętości, otwartych i zdegenerowanych. Zapis: F:\\ntnu\\mesh_screening_20261028\\coarse012_C003\\HF_012_C003_mesh.sim. Solver nieuruchomiony.",
+    "challenge": "C003: dowolne pryzmy pokrywają 100% pola płata; pełne 15 warstw tylko 94,560%. 187 komórek z quality <0,01 i 283 ze skewness >80°. Przydatność produkcyjna NWAR pozostaje niepotwierdzona.",
+    "next_step": "Lokalna kontrola pryzm i krótki test hydrostatyczny (0 m/s), następnie 18 m/s: koszt kroku, CFL, y+ i historia sił. Dopiero potem decyzja o długim przebiegu."
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "result": {
+    "status": "HOLD_PRESSURE",
+    "samples": 1,
+    "startup_s": 120.31260070000008,
+    "solver_step_median_s": null,
+    "solver_step_mean_s": null,
+    "end_to_end_s": 174.50120340000012,
+    "dt_s": 0.0001,
+    "checkpoint_sha256_input": null,
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\RECOVERY_CALM_FIXED_DT100US_20261104_102409\\FINAL.sim",
+    "checkpoint_sha256": "0bcb6156cb665e2993503564e55739456b9ed7413c840698d1e490898c5c971f",
+    "state": {
+      "steps": 1,
+      "time_s": 0.0001,
+      "solver_seconds": 3.2919052,
+      "residual_pass": false,
+      "reason": "PRESSURE",
+      "training_approved": false,
+      "amplitude_target": 0.0,
+      "status": "HOLD_PRESSURE",
+      "foil": true
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "wall_s": null,
+  "next": "HOLD",
+  "night_approved": false,
+  "W06": {
+    "baseline_s": 1.6526809000000071,
+    "peak_slowdown": 0.07464151125605478,
+    "stop": null
+  }
+}

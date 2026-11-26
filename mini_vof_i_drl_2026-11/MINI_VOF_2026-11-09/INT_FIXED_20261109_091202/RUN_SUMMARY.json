@@ -1,0 +1,121 @@
+{
+ "case": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\INT_FIXED_20261109_091202",
+ "mode": "fixed",
+ "steps": 400,
+ "cpus": [
+  4,
+  5
+ ],
+ "star": "2606.0002",
+ "properties": {
+  "mode": "fixed",
+  "steps": 400,
+  "tick_steps": 10,
+  "expected_time_s": 3.9230000000004543,
+  "cl_target": 0.33154336603961815,
+  "plant_gain_per_deg": 0.0356,
+  "kp": 0.8,
+  "ti_s": 0.15,
+  "delta_max_deg": 2.0,
+  "rate_max_deg_s": 30.0,
+  "wall_budget_s": 20000,
+  "stop_file": "T:\\NTNU_GODO_CONTROL_20261109\\30_runs\\INT_FIXED_20261109_091202\\STOP"
+ },
+ "launch": {
+  "returncode": 0,
+  "seconds": 1422.5,
+  "bound": [
+   [
+    "5124",
+    "cmd"
+   ],
+   [
+    "9012",
+    "mpiexec"
+   ],
+   [
+    "13636",
+    "python"
+   ],
+   [
+    "13944",
+    "conhost"
+   ],
+   [
+    "19088",
+    "cmd"
+   ],
+   [
+    "27572",
+    "cmd"
+   ],
+   [
+    "29220",
+    "conhost"
+   ],
+   [
+    "29640",
+    "cmd"
+   ],
+   [
+    "30144",
+    "star-ccm+"
+   ],
+   [
+    "30904",
+    "conhost"
+   ],
+   [
+    "31248",
+    "cmd"
+   ],
+   [
+    "32356",
+    "python"
+   ],
+   [
+    "33740",
+    "conhost"
+   ],
+   [
+    "34276",
+    "python"
+   ],
+   [
+    "34996",
+    "starccm+"
+   ],
+   [
+    "35652",
+    "smpd"
+   ],
+   [
+    "35716",
+    "star-ccm+"
+   ],
+   [
+    "35724",
+    "cmd"
+   ],
+   [
+    "36388",
+    "python"
+   ]
+  ],
+  "cpus": [
+   4,
+   5
+  ],
+  "np": 2,
+  "gpu": false
+ },
+ "FC_RESULT.json": {
+  "final_cmd_deg": 0.0,
+  "mode": "fixed",
+  "end_time_s": 4.1230000000004114,
+  "integrator": 0.0,
+  "result": "DONE",
+  "wall_s": 1319.1153392
+ },
+ "final_sim": true
+}

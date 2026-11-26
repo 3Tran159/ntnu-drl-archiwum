@@ -1,0 +1,23 @@
+Compiled from "PrismAutoMesher.java"
+public class star.prismmesher.PrismAutoMesher extends star.prismmesher.BoundaryLayerBaseAutoMesher implements star.meshing.OrderableAutoMesher {
+  public static final java.lang.String Enhanced_Prism_Layers;
+  public star.prismmesher.PrismAutoMesher(star.base.neo.ClientServerObjectKey);
+  public int getOrder();
+  public boolean getEnhancedPrismLayers();
+  public void setEnhancedPrismLayers(boolean);
+  public double getBoundaryMarchAngle();
+  public void setBoundaryMarchAngle(double);
+  public double getGapFillPercentage();
+  public void setGapFillPercentage(double);
+  public double getMinimumThickness();
+  public void setMinimumThickness(double);
+  public double getLayerChoppingPercentage();
+  public void setLayerChoppingPercentage(double);
+  public double getConcaveAngleLimit();
+  public void setConcaveAngleLimit(double);
+  public double getConvexAngleLimit();
+  public void setConvexAngleLimit(double);
+  public double getNearCoreLayerAspectRatio();
+  public void setNearCoreLayerAspectRatio(double);
+  public void setWriteStandaloneInput(boolean);
+}

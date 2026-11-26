@@ -1,0 +1,17 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent;A=Path('E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M09_mesh_r1')
+for name in ['FinalizeC01W20L4.java','AuditC01W20L4.java']:
+ if (A/name).exists():raise RuntimeError('Prepared macro exists; preserve')
+s=(R/'FinalizeM09.java').read_text().replace('FinalizeM09','FinalizeC01W20L4')
+s=s.replace('F:/ntnu/mesh_screening_20261028/quasi2d_012_20261029/M09_build/mesh_exact.CGNS',(A/'mesh.CGNS').as_posix())
+s=s.replace('F:/ntnu/mesh_screening_20261028/quasi2d_012_20261029/M09',A.as_posix())
+s=s.replace('fv.getCellCount()!=214908','fv.getCellCount()!=246885')
+s=s.replace('F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/AuditFinalM09.java',(A/'AuditC01W20L4.java').as_posix())
+s=s.replace('original warped region removed','original short-domain region removed')
+(A/'FinalizeC01W20L4.java').write_text(s)
+a=(R/'AuditFinalM09.java').read_text().replace('AuditFinalM09','AuditC01W20L4').replace('F:/ntnu/mesh_screening_20261028/quasi2d_012_20261029/M09',A.as_posix()).replace('"case_id","M09"','"case_id","C01_W20L4_M09"')
+a=a.replace('out.resolve("mesh.CGNS")','out.resolve("mesh_star_export.CGNS")')
+(A/'AuditC01W20L4.java').write_text(a)
+t=(R/'audit_refinement_topology.py').read_text().replace('folder/"mesh.CGNS"','folder/"mesh_star_export.CGNS"')
+(A/'audit_imported_topology.py').write_text(t)
+print('C01/W01 long-domain mesh import and zero-step quality audit prepared.')

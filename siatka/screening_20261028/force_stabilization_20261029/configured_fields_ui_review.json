@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-29T22:55:00+01:00",
+  "scope": "Dashboard UI only; no CFD controllers, plans, solvers or field renderer modified.",
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py"
+  ],
+  "accepted_configured_fields": [
+    {
+      "mesh": "M08",
+      "time_s": 2,
+      "configuration": "SECOND_ORDER / 1 ms / 10 inner"
+    },
+    {
+      "mesh": "M09",
+      "time_s": 1.64,
+      "configuration": "SECOND_ORDER / 1 ms / 10 inner"
+    }
+  ],
+  "acceptance_filter": "Fields require finite unchanged accepted configured result, matching saved time/source directory/order/dt/inner and manifest output.",
+  "browser_checks": {
+    "viewports": [
+      1360,
+      390
+    ],
+    "dashboards": [
+      "main",
+      "professor"
+    ],
+    "javascript_errors": 0,
+    "duplicate_ids": 0,
+    "document_overflow": false,
+    "enlarge_close": true,
+    "professor_escape": true,
+    "historical_field_cohort_preserved": true,
+    "mobile_pan_min_width_px": 1100
+  },
+  "visual_review": "Desktop figures have readable axes and captions without overlap. Mobile deliberately pans each figure horizontally; captions wrap inside viewport and enlargement works. Separate historical and configured cohorts remain explicit.",
+  "print": {
+    "pdf": "configured_fields_professor_qa.pdf",
+    "actual_pages": 15,
+    "intentional_pages": 15,
+    "rendered_review_pages": [
+      9,
+      10,
+      14,
+      15
+    ],
+    "status": "No clipping, split figures or orphaned fragments. Each configured field occupies its own intentional page."
+  },
+  "wave_panel": {
+    "classification": "Propagation identified by status, scope or case, preserving correct wording during needs_review.",
+    "state_at_qa": "W20_H24_X4_CPUprop_dt1ms_r2 / propagation_CPU_running / saved t 0.000 s",
+    "validation": "No propagation or foil-force validation claimed; next gate remains wave gauges/time resolution."
+  },
+  "artifacts": [
+    "configured_fields_dashboard_qa.json",
+    "configured_fields_ui_main_1360.png",
+    "configured_fields_ui_main_390.png",
+    "configured_fields_ui_professor_1360.png",
+    "configured_fields_ui_professor_390.png",
+    "configured_fields_professor_qa.pdf",
+    "configured_fields_print-09.png",
+    "configured_fields_print-10.png",
+    "configured_fields_print-14.png",
+    "configured_fields_print-15.png"
+  ]
+}

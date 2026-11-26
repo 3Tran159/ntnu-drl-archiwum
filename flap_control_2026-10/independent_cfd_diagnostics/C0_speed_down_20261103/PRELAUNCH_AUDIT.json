@@ -1,0 +1,41 @@
+{
+  "status": "COMPILE_PASS_PRELAUNCH_AUDIT_PASS_NOT_EXECUTED",
+  "checks": {
+    "Original macro unchanged": true,
+    "New macro unchanged": true,
+    "Compiled bytecode present": true,
+    "Only original verified C0 allowed": true,
+    "No field reset in execute": true,
+    "Flap fixed at zero": true,
+    "Explicit authorization environment required": true,
+    "20-step limit": true,
+    "Guard unchanged": true,
+    "Speed history recorded": true
+  },
+  "speed_profile": [
+    {
+      "time_s": 0.65,
+      "speed_m_s": 18.0
+    },
+    {
+      "time_s": 0.69,
+      "speed_m_s": 17.93152
+    },
+    {
+      "time_s": 0.75,
+      "speed_m_s": 17.171875
+    },
+    {
+      "time_s": 0.85,
+      "speed_m_s": 14.0
+    },
+    {
+      "time_s": 1.05,
+      "speed_m_s": 10.0
+    }
+  ],
+  "approved_job_registered": false,
+  "star_solver_launched": false,
+  "scientific_validation": false,
+  "source_untouched": true
+}

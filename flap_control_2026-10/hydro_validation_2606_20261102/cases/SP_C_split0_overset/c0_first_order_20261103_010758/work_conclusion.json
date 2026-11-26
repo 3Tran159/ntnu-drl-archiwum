@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-03T01:22:45.395559+01:00",
+  "status": "numerical_recovery_only",
+  "native_iteration": 1260,
+  "additional_iterations": 830,
+  "time_s": 0,
+  "CL": 0.261506484756,
+  "CD": 0.0142107769723,
+  "Mh_Nm": -14.1849565328,
+  "pabs_min_Pa": 29583.6730581,
+  "omega_floor_cells": 0.0,
+  "k_floor_cells": 0.0,
+  "scientific_approved": false,
+  "force_stabilized": false,
+  "conclusion": "First-order transport removes clipping and reduces abnormal mean-flow head on unchanged mesh. This demonstrates sensitivity to transport/initialization, not a validated explanation of the original B/C bias. No quantitative attribution to the next flux change is possible from this drifting first-order state alone.",
+  "next_stage": "c0_flux_continuation"
+}

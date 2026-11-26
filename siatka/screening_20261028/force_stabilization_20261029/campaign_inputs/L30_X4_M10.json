@@ -1,0 +1,93 @@
+{
+  "status": "paired_inputs_audited_zero_steps",
+  "at": "2026-10-30T11:34:50.229410+01:00",
+  "domain": {
+    "id": "L30_X4_M10",
+    "xmin_m": -52.5,
+    "xmax_m": 67.5,
+    "wavelength_m": 30,
+    "zone_m": 30,
+    "gauges_m": [
+      -19.5,
+      -3.0,
+      2.5,
+      5.0,
+      31.5,
+      34.5
+    ],
+    "mesh": "M10_FS020",
+    "wave_depth_m": 24
+  },
+  "cells": 354378,
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\CAMPAIGN_INPUT_L30_X4_M10_r1",
+  "inputs": {
+    "CALM": {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\CAMPAIGN_INPUT_L30_X4_M10_r1\\CALM\\prepared.sim",
+      "sha256": "15ea9f7cc78daa51f34375b873dc99a125f848f92489375ead5a420fd36f5fa3",
+      "cells": 354378,
+      "audit": "E:\\ntnu\\quasi2d_waves_20261029\\CAMPAIGN_INPUT_L30_X4_M10_r1\\CALM\\initial_audit.json",
+      "wave_period_s": 0.0,
+      "height_m": 0
+    },
+    "H050": {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\CAMPAIGN_INPUT_L30_X4_M10_r1\\H050\\prepared.sim",
+      "sha256": "fcb140366bc987f3d46e039feed0f5bb3ce060a4e235c80b5ef84ca2ee22a287",
+      "cells": 354378,
+      "audit": "E:\\ntnu\\quasi2d_waves_20261029\\CAMPAIGN_INPUT_L30_X4_M10_r1\\H050\\initial_audit.json",
+      "wave_period_s": 0.0,
+      "height_m": 0.5
+    }
+  },
+  "source_unchanged": true,
+  "flow_steps": 0,
+  "quality": {
+    "cell_count": 354378,
+    "mesh_time_s": 0,
+    "NegativeVolumeCells": 0,
+    "UnclosedCells": 0,
+    "DegeneratedFeCells": 0,
+    "min_cell_quality": 0.07094186540769823,
+    "min_volume_change": 0.004255828981421002,
+    "min_face_validity": 1.0,
+    "max_skewness_angle_deg": 45.04069652540024,
+    "diagnostic_CellQuality_below_0.01": 0.0,
+    "diagnostic_VolumeChange_below_0.01": 2.0,
+    "diagnostic_SkewnessAngle_above_80.0": 0.0,
+    "centroid_y_min_m": 0.01999999999999999,
+    "centroid_y_max_m": 0.020000000000000014,
+    "centroid_y_range_m": 2.42861286636753e-17
+  },
+  "topology": {
+    "cells": 354378,
+    "cells_with_one_source_and_target_face": 354378,
+    "invalid_cells": [],
+    "single_layer_topology": true,
+    "node_y_min_m": 0.01,
+    "node_y_max_m": 0.03,
+    "source_nodes": 596495,
+    "paired_nodes": 596495,
+    "max_target_source_xz_displacement_m": 0.0,
+    "y_plane_error_m": 0.0,
+    "foil_edges": 856,
+    "foil_perimeter_m": 2.420247199693756,
+    "area_fraction_any_quad_layers": 0.9988296604199051,
+    "area_fraction_at_least_15_quad_layers": 0.987039181807564,
+    "layer_histogram": {
+      "48": 835,
+      "49": 9,
+      "3": 2,
+      "2": 2,
+      "1": 6,
+      "0": 2
+    },
+    "first_thickness_min_m": 1.5260233597707663e-06,
+    "first_thickness_max_m": 1.5307210708864613e-06,
+    "method": "CGNS connectivity: every volume cell must touch both span planes; prism coverage inferred by following consecutive quadrilateral cells normal to each foil edge, area weighted."
+  },
+  "pending": [
+    "Wave propagation",
+    "Wave-specific timestep",
+    "Grid sensitivity",
+    "Cycle force repeatability and matched calm"
+  ]
+}

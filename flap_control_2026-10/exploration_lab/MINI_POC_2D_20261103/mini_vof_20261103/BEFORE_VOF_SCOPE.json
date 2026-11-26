@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-03T15:32:32.949710+01:00",
+  "active_lab": "EXPLORATION_SEALED_ACTIVE_WAVE",
+  "main_fidelity": "L1_GAP_TRUE_2D_STEADY_SST",
+  "gap_m": 0.0025,
+  "current_pair": [
+    0,
+    2
+  ],
+  "static_planned_deg": [
+    -5,
+    -2,
+    0,
+    2,
+    5
+  ],
+  "next_angles": "Only after review of previous accepted point; not launched",
+  "dynamic_planned_amplitudes_deg": [
+    2,
+    5
+  ],
+  "dynamic_phases": "To select after static safety review; no waves or DRL launched",
+  "DRL_5deg_allowed": false,
+  "sealed_role": "Algorithm demonstrator only; compare cost independently; no physical equivalence",
+  "validation_lab": {
+    "status": "ARCHIVED_HOLD",
+    "old_sweep_auto_resume": false,
+    "checkpoint_time_s": 1.212,
+    "W04_priority": true,
+    "hours": "22:00–07:00 Europe/Oslo; time alone does not authorize launch"
+  },
+  "solver_budget_s": 300,
+  "MPI": 1,
+  "GPU": false,
+  "W04_sustained_slowdown_limit": 0.15,
+  "main_model_status": "HOLD_STARTUP_PRESSURE",
+  "main_plus2_hydrodynamics": "PENDING: no solve until0 passes",
+  "current_control": "COMPLETED_SEALED_DIAGNOSTIC",
+  "sealed_control": "Separate cost/startup diagnostic; not a main-model successor or valid replacement",
+  "static_other_angles": "PENDING",
+  "no_more_pressure_repair_variants_this_stage": true,
+  "decision": "GO_ARCHITECTURE; HOLD_GAP_HYDRODYNAMICS",
+  "current_status_source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\active_wave_20261103\\DAY_STATUS.json",
+  "night_authorized": false,
+  "decision_window": "20:30–20:45 Europe/Oslo",
+  "night_window": "21:00–07:00 Europe/Oslo;explicit approval required",
+  "gap_track": "HOLD;one limited read-only audit completed",
+  "residual_protocol": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\active_wave_20261103\\PROPOSED_RESIDUAL_PROTOCOL.json"
+}

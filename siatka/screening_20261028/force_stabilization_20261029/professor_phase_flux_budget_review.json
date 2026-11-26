@@ -1,0 +1,100 @@
+{
+  "title": "VOF phase transport versus mixture FaceFlux: diagnostic review",
+  "date": "2026-10-30",
+  "status": "Reporter-only R10 prepared; no new solver run or physical change by reviewer",
+  "conclusion": "The observed BDF2 density-inventory plus mixture FaceFlux residual remains above its 0.01% threshold. Existing evidence does not yet distinguish transport iteration error from a difference between native phase boundary fluxes and mixture FaceFlux. A reporter-only matched replay is justified before changing solver settings.",
+  "confirmed_settings": {
+    "time": "SECOND_ORDER",
+    "dt_s": 0.001,
+    "inner_iterations": 10,
+    "vof": "HRIC",
+    "actual_substeps": 1,
+    "flow_model": "SegregatedVolumeFluxBasedFlowModel",
+    "face_density_reconstruction": "FIRST_ORDER",
+    "mixture_density_gradient": false,
+    "original_massflow_field": "FaceFlux",
+    "existing_and_fresh_report_smoothing": false
+  },
+  "confirmed": {
+    "temporal": "Second-order VOF is documented as BDF2. Substeps=1 does not imply first-order transport. Spatial HRIC/face-density order is separate from temporal integration.",
+    "forcing": "VOF wave forcing and damping are momentum-source mechanisms; forcing explicitly has no phase or turbulence sources. Their mere presence is not evidence of an omitted phase mass source.",
+    "reports": "At the saved t=0.750 checkpoint, original and fresh unsmoothed density/volume and boundary MassFlowReport values match. Smoothing and idealization are not the demonstrated explanation there.",
+    "native_mass_error": "The phase-native MassConservationErrorReport sums the phase mass imbalance calculated when solving transport equations over cells and multiplies it by the current physical time step. It is an iteration-error measure in kg per step; divide by dt for kg/s.",
+    "phase_flow_field": "MassFlowRate[phase] represents phase kg/s through a boundary face, with positive outflow. Sum face values without multiplying by area. MassFlux[phase] instead has kg/(m2 s) units and positive inflow; it must not be substituted without sign and area handling."
+  },
+  "unresolved": [
+    "No inspected primary text explicitly establishes that generic FaceFlux equals the sum of HRIC-discretized phase mass fluxes at every boundary and every inner-iteration state.",
+    "The phase MassFlowRate field definition does not explicitly identify its temporal/subcycling evaluation stage. Compare it with native equation errors rather than assuming exact discrete equivalence.",
+    "The MMP field catalog gives a simplified face-sum definition for MassImbalance[phase], whereas the dedicated native report is explicitly documented as a transport-equation error. Prefer the native report to an inferred volume-integral residual.",
+    "FIRST_ORDER face density reconstruction applies to internal faces. It can affect consistency, but it is not alone proof of the origin of a global boundary-budget discrepancy.",
+    "The actual boolean getUserSourceOption() of MmpUserSourceOption was missing in the prior reflection audit. R10 reads it explicitly and refuses a source-enabled case."
+  ],
+  "discrete_comparison": {
+    "same_spacing_bdf2": "A_n=(1.5*M_n-2*M_(n-1)+0.5*M_(n-2))/dt",
+    "generic_residual": "R_face=A_n+sum_boundary FaceFlux",
+    "phase_residual": "R_phase=A_n+sum_boundary(MassFlowRatewater+MassFlowRateair)",
+    "native_residual": "R_native=(native_water_error_kg_step+native_air_error_kg_step)/dt",
+    "normalized_metric": "100*residual/inward_mixture_mass_kg_s; preserve signed values and report absolute maxima separately",
+    "cancellation_check": "Also record sum of absolute native water/air errors divided by dt and inlet mass, so cancellation between phases is visible.",
+    "inference": "For fixed cell volumes and constant phase densities, mixture inventory is the density-weighted sum of phase volume inventories. A matching discrete budget must use the corresponding phase transport fluxes and source terms. This mathematical identity does not prove which exposed field is the solver-consistent flux.",
+    "start_handling": "Keep checkpoint-load cache separate. Require finite native errors after first physical step. Compute BDF2 only from step 2 of a replay that retains the same dt; do not include a mixed-dt stencil without variable-step coefficients."
+  },
+  "recommendation": {
+    "probe": "R10: existing R4 t=0.500 checkpoint, same SO1ms10inner settings, 250 steps to0.750; add reports only.",
+    "no_change": "Do not alter the 0.01% guard, old history, reconstruction, source settings, solver relaxation or physics as part of this diagnostic.",
+    "readouts": [
+      "original raw history and boundary mixture flux",
+      "native phase kg/step and kg/s",
+      "per-boundary phase flow sums",
+      "BDF2 inventory with mixture and phase boundary flux variants",
+      "phase-source boolean, phase model inventory, report units/parts/representation",
+      "native report cache and error logs"
+    ],
+    "decision_rules": [
+      "If phase-flux inventory balance agrees with native equation error while generic FaceFlux differs, quantify the difference boundary by boundary. Document the diagnostic-definition distinction before proposing a revised acceptance metric.",
+      "If both phase-flux and generic budgets reproduce the native phase error peaks, investigate actual phase/continuity coupling and local residuals; do not declare reporting mismatch.",
+      "If native reports are invalid or inconsistent after a guarded step, the diagnostic is incomplete; retain the existing block.",
+      "A small native iteration error alone does not certify global mass conservation or long-wave propagation accuracy. Keep inventory and gauge/cycle diagnostics."
+    ]
+  },
+  "evidence": [
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-CD31C597-AB0E-4C11-9441-DA7021F16CB5.html",
+      "title": "Interface Sharpening Using Temporal Subcycling",
+      "supports": "BDF2 VOF equations2584/2585; subcycling and temporal order"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-187276CC-89DA-4F69-B1AE-500038C45DE8.html",
+      "title": "Assessing Mass Conservation Errors",
+      "supports": "Native phase transport equation error, dt scaling, cumulative monitor and limitations"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-363F7990-9882-4C25-87CE-7EB75385CE18.html",
+      "title": "Mixture Multiphase Properties",
+      "supports": "MassFlowRate[phase] and MassFlux[phase] signs/units; phase field descriptions"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-56DFC39E-B937-4661-88FD-A28C94E1A8AB.html",
+      "title": "Volume of Fluid Model Reference",
+      "supports": "Internal face density reconstruction and phase source option"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-1B0F4A55-8246-4503-BF77-AED752CAC424.html",
+      "title": "VOF Wave Forcing and Wave Damping",
+      "supports": "Momentum forcing; no phase sources from forcing"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/flow/MassConservationErrorReport.html",
+      "supports": "setPhase(Continuum), getPhase, report API"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/mixturemultiphase/MmpUserSourceOption.html",
+      "supports": "getUserSourceOption():boolean"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/base/report/Report.html",
+      "supports": "getReportMonitorValue in report units; monitoredValue in SI"
+    }
+  ],
+  "prepared_macro": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/WavePhaseBudgetProbeR10.java"
+}

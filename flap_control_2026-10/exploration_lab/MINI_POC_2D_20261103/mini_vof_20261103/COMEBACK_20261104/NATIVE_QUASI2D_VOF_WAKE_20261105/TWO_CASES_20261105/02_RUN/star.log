@@ -1,0 +1,67 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -printpids -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XE5BVElWRV9RVUFTSTJEX1ZPRl9XQUtFXzIwMjYxMTA1XFRXT19DQVNFU18yMDI2MTEwNVwwMl9SVU5cU09VUkNFX0NPUFkuc2lt
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 45752
+Total number of processes : 1
+
+Host ID 0 Rank 0 on THINKPAD-LUCJAN with process ID 45752
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 8 days
+Thu Nov  5 14:04:39 2026
+
+Server::start -host THINKPAD-LUCJAN:47836
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\02_RUN\SOURCE_COPY.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: StarSweptMesher
+Loading module: ConservativeMapping
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=2 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\PackageNativeVof.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\PackageNativeVof.java:54: warning: [deprecation] TIMESTEP in star.common.StarUpdate has been deprecated
+  active.getStarUpdateStageable().getStarUpdate().setUpdateMode(StarUpdate.TIMESTEP);
+                                                                          ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\PackageNativeVof.java:54: warning: [deprecation] setUpdateMode(int) in star.common.StarUpdate has been deprecated
+  active.getStarUpdateStageable().getStarUpdate().setUpdateMode(StarUpdate.TIMESTEP);
+                                                 ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\PackageNativeVof.java:55: warning: [deprecation] setUpdateFrequency(int) in star.common.StarUpdate has been deprecated
+  active.getStarUpdateStageable().getStarUpdate().setUpdateFrequency(25);
+                                                 ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\PackageNativeVof.java:76: warning: [deprecation] removeSolutionViews(java.util.List<star.common.SolutionView>) in star.post.SolutionViewManager has been deprecated
+  views.removeSolutionViews(obsoleteViews);
+       ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\PackageNativeVof.java:79: warning: [deprecation] removeSolutionHistories(java.util.List<star.post.SolutionHistory>) in star.post.SolutionHistoryManager has been deprecated
+  histories.removeSolutionHistories(old);
+           ^
+
+Loading/configuring connectivity (old|new partitions: 2|1)
+  MINI_water_air (index 0): 25617 cells, 75473 faces, 100772 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+  MINI_water_air (index 0): 17462 cells, 31070 faces, 29144 verts.
+  MINI_water_air (index 0): 25617 cells, 75473 faces, 100772 verts.
+  MINI_water_air (index 0): 25617 cells, 75473 faces, 100772 verts.
+Configuring finished
+ Representation : CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919_AF_Fixed, Import Mesh  : FvMesh 1.
+ Representation : CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919_AF_Fixed, Import State : AF_fixed_checkpoint.
+ Representation : AF - Fixed VOF playback CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919, Import Mesh  : FvMesh 1.
+ Representation : AF - Fixed VOF playback CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919, Import State : AF_fixed_final_00030.
+ Representation : AF - Playback, Import State : AF_fixed_final_00030.
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\TWO_CASES_20261105\02_RUN\Sharp_Sealed_VOF_RUN.sim... complete (73.027MB in 0.3355s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

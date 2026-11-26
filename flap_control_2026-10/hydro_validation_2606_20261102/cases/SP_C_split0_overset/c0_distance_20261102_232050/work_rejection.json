@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-02T23:40:35.415150+01:00",
+  "kind": "work_rejected_remedy",
+  "case": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050",
+  "reason": "Distance interpolation preserves valid connectivity but does not cure anomalous fields: at step50 omega-floor1368 versus1087 control; local mean-flow energy screen425kPa versus164kPa B. Last25 CL+15.08%,CD-10.84% relative B. Do not continue for a formal force-window pass.",
+  "decision": "Graceful stop after current physical step with final full audit, field exports, and unique checkpoint. Mark diagnostic unsuccessful/incomplete qualification, never approved.",
+  "next": "Read-only native solver frozen/model/motion/wall-status audit; then decide between clean-state control and overlap-resolution repair.",
+  "scientific_gate": false
+}

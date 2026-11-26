@@ -1,0 +1,19 @@
+{
+  "status": "design proposal, not meshed or run",
+  "reference": "M03",
+  "target_wall_yplus": "approximately 1 or below over the resolved foil surface",
+  "first_layer_thickness_m": 3e-06,
+  "layer_count": 40,
+  "total_prism_thickness_m": 0.01546,
+  "equivalent_geometric_growth_ratio": 1.1875157536,
+  "last_layer_thickness_m": 0.0024437516,
+  "rationale": "Measured M03 first-layer scaling gives approximately 3.23 to 5.86 micrometres for y+=1 over the central 90% of fully layered surface area. 3 micrometres provides a modest starting margin. Actual y+ must be remeasured.",
+  "controls": [
+    "Keep M03 tangential and outer mesh settings for the first wall-normal comparison.",
+    "Inspect and repair local layer collapse at the sharp trailing edge without changing foil geometry.",
+    "Retain SST and All y+ for the first comparison; the low-y+ branch is recovered on a sufficiently fine mesh.",
+    "Recheck mesh quality, achieved layer thickness and coverage, CFL and inner convergence before extending the solver.",
+    "Separate a later leading-edge refinement experiment from the wall-normal refinement test."
+  ],
+  "cost": "Cell count and runtime are unknown until meshed and benchmarked; do not multiply whole mesh cell count by the 60x first-layer reduction."
+}

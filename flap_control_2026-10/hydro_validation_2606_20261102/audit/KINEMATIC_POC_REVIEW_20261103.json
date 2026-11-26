@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-03T08:49:47.990050+01:00",
+  "accepted": true,
+  "scope": "rigid-body kinematics and discrete native Overset connectivity only",
+  "hydrodynamic_validation": false,
+  "training_approved": false,
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855",
+  "checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\motion_verified.sim",
+  "checkpoint_bytes": 1528160790,
+  "checkpoint_sha256": "821f2a5702f69ed7cefc218eb0c75a2ba5f2ff1330b3d410380c3db7944959dd",
+  "steps": 100,
+  "saved_time_s": 0.85,
+  "angle_range_deg": [
+    -5.0,
+    5.0
+  ],
+  "max_angle_error_deg": 2.4868995751599998e-14,
+  "max_mesh_centroid_error_m": 2.22044604925e-15,
+  "full_mesh_audits": 100,
+  "all_cell_count": 333939,
+  "minimum_full_cell_volume_m3": 2.126329711684968e-12,
+  "minimum_full_cell_quality": 0.05510420273780264,
+  "minimum_active_face_validity": 1.0,
+  "overset_error_cells": 0,
+  "difficult_interpolation_cells": 0,
+  "acceptor_count_range": [
+    1456,
+    1492
+  ],
+  "active_count_range": [
+    255268,
+    255708
+  ],
+  "maximum_acceptor_size_ratio": 1.694343955296059,
+  "donor_check": "All acceptors have valid native interpolation and zero Overset Error Status at all100 solver positions; unique donor-cell count not separately exported.",
+  "geometry_clearance_lower_bound_m": 0.002288645891314022,
+  "remaining_limits": [
+    "Overset connectivity sampled at100 solver positions,not a mathematical continuous-angle guarantee.",
+    "Geometry clearance bound covers continuous angle range; retained STL discretization.",
+    "No force/moment/cavitation conclusions from frozen-flow sweep.",
+    "Original C0t0.650 remains hydrodynamic restart; this file keeps flow solvers frozen."
+  ],
+  "animation": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\kinematic_poc_20261103_083855\\flap_motion_plusminus5.gif",
+  "animation_frames": 21,
+  "animation_duration_s": 3.15,
+  "physical_cycle_s": 0.2
+}

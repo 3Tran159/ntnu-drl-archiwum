@@ -1,0 +1,61 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Nfc3BsaXQwX292ZXJzZXRcYzBfbGF5ZXJzMzZfemVyb19zdG9yYWdlXzIwMjYxMTAzXzAyMTU0OFxsYXllcl9hdWRpdF9lcnJvci5zaW0=
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 31300
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 02:23:38 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_layers36_zero_storage_20261103_021548\layer_audit_error.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: ConservativeMapping
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java:9: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+Files.createDirectories(out);s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);
+                                                                    ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java:14: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(p);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(fields);t.extract();t.export(out.resolve(name+"_failed_full_plane.csv").toString());
+                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java:15: warning: [deprecation] getSelected() in star.common.EnumeratedOption has been deprecated
+for(Boundary b:r.getBoundaryManager().getBoundaries())if(b.getBoundaryType() instanceof WallBoundary&&!b.getPresentationName().endsWith("bottom")){info.append(name+" wall="+b.getPresentationName()+" dynamic="+b.getConditions().get(DynamicOversetBehaviour.class).getSelected());try{info.append(" activeLayers="+b.getValues().get(NumActiveLayers.class).getNumLayers());}catch(Exception e){info.append(" no_activeLayers");}info.append("\n");}}
+                                                                                                                                                                                                                                                                     ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java:16: warning: [deprecation] getUseAlternateHoleCutting() in star.common.IndirectRegionInterface has been deprecated
+for(Interface iface:s.getInterfaceManager().getObjects())if(iface instanceof IndirectRegionInterface){IndirectRegionInterface i=(IndirectRegionInterface)iface;info.append("interface="+i.getPresentationName()+" alternate="+i.getUseAlternateHoleCutting()+" close="+i.getCloseProximity()+" prism_shrink="+i.getPrismLayerShrinkage()+" errors_as_warning="+i.getTreatErrorAsWarning()+"\n");}
+                                                                                                                                                                                                                               ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java:16: warning: [deprecation] getCloseProximity() in star.common.IndirectRegionInterface has been deprecated
+for(Interface iface:s.getInterfaceManager().getObjects())if(iface instanceof IndirectRegionInterface){IndirectRegionInterface i=(IndirectRegionInterface)iface;info.append("interface="+i.getPresentationName()+" alternate="+i.getUseAlternateHoleCutting()+" close="+i.getCloseProximity()+" prism_shrink="+i.getPrismLayerShrinkage()+" errors_as_warning="+i.getTreatErrorAsWarning()+"\n");}
+                                                                                                                                                                                                                                                                        ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java:16: warning: [deprecation] getPrismLayerShrinkage() in star.common.IndirectRegionInterface has been deprecated
+for(Interface iface:s.getInterfaceManager().getObjects())if(iface instanceof IndirectRegionInterface){IndirectRegionInterface i=(IndirectRegionInterface)iface;info.append("interface="+i.getPresentationName()+" alternate="+i.getUseAlternateHoleCutting()+" close="+i.getCloseProximity()+" prism_shrink="+i.getPrismLayerShrinkage()+" errors_as_warning="+i.getTreatErrorAsWarning()+"\n");}
+                                                                                                                                                                                                                                                                                                               ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261103_022130\InspectC0LayerFailure.java:16: warning: [deprecation] getTreatErrorAsWarning() in star.common.IndirectRegionInterface has been deprecated
+for(Interface iface:s.getInterfaceManager().getObjects())if(iface instanceof IndirectRegionInterface){IndirectRegionInterface i=(IndirectRegionInterface)iface;info.append("interface="+i.getPresentationName()+" alternate="+i.getUseAlternateHoleCutting()+" close="+i.getCloseProximity()+" prism_shrink="+i.getPrismLayerShrinkage()+" errors_as_warning="+i.getTreatErrorAsWarning()+"\n");}
+                                                                                                                                                                                                                                                                                                                                                                ^
+
+Loading/configuring connectivity (old|new partitions: 1|1)
+  Background (index 3): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 4): 274658 cells, 803931 faces, 1061098 verts.
+Configuring finished
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

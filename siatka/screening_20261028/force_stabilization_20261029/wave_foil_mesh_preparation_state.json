@@ -1,0 +1,62 @@
+{
+  "status": "mesh_prepared_pending_boundary_and_flow_setup",
+  "updated_at": "2026-10-29T23:46:18.445986+01:00",
+  "controller_pid": 14348,
+  "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M09_mesh_r1",
+  "scope": "M09-derived matched C01/W01 4lambda domain; zero flow steps",
+  "result": {
+    "status": "mesh_prepared_pending_boundary_and_flow_setup",
+    "source_unchanged": true,
+    "metrics": {
+      "cell_count": 246885,
+      "mesh_time_s": 0,
+      "NegativeVolumeCells": 0,
+      "UnclosedCells": 0,
+      "DegeneratedFeCells": 0,
+      "min_cell_quality": 0.07094186540770887,
+      "min_volume_change": 0.0042558289814469295,
+      "min_face_validity": 1.0,
+      "max_skewness_angle_deg": 43.24629812294611,
+      "diagnostic_CellQuality_below_0.01": 0.0,
+      "diagnostic_VolumeChange_below_0.01": 2.0,
+      "diagnostic_SkewnessAngle_above_80.0": 0.0,
+      "centroid_y_min_m": 0.019999999999999987,
+      "centroid_y_max_m": 0.02000000000000001,
+      "centroid_y_range_m": 2.42861286636753e-17
+    },
+    "topology": {
+      "cells": 246885,
+      "cells_with_one_source_and_target_face": 246885,
+      "invalid_cells": [],
+      "single_layer_topology": true,
+      "node_y_min_m": 0.01,
+      "node_y_max_m": 0.03,
+      "source_nodes": 421332,
+      "paired_nodes": 421332,
+      "max_target_source_xz_displacement_m": 0.0,
+      "y_plane_error_m": 0.0,
+      "foil_edges": 856,
+      "foil_perimeter_m": 2.420247199693753,
+      "area_fraction_any_quad_layers": 0.9988296604199051,
+      "area_fraction_at_least_15_quad_layers": 0.9870391818075642,
+      "layer_histogram": {
+        "48": 835,
+        "49": 9,
+        "3": 2,
+        "2": 2,
+        "1": 6,
+        "0": 2
+      },
+      "first_thickness_min_m": 1.5260233597707663e-06,
+      "first_thickness_max_m": 1.5307210708848237e-06,
+      "method": "CGNS connectivity: every volume cell must touch both span planes; prism coverage inferred by following consecutive quadrilateral cells normal to each foil edge, area weighted."
+    },
+    "flow_steps": 0,
+    "source_sim": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M09_mesh_r1\\mesh.sim",
+    "pending": [
+      "Audit actual boundary areas/bounds and wave-zone length settings",
+      "Set matched calm and FifthOrder cases explicitly",
+      "Short startup/propagation and wave timestep/domain checks"
+    ]
+  }
+}

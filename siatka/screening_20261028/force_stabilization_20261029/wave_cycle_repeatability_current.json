@@ -1,0 +1,76 @@
+{
+  "case": "W01_W20L4_M10_FS020_cycles_r2",
+  "updated_at": "2026-10-30T11:26:22.064027+01:00",
+  "schema_version": 1,
+  "method": "Practical four-cycle force-repeatability screen; not force-accuracy validation",
+  "period_s": 0.8472673206891129,
+  "wave_clock_origin_s": 0.0,
+  "min_cycles": 10,
+  "max_cycles": 20,
+  "earliest_review_time_s": 8.472673206891129,
+  "review_cap_time_s": 16.945346413782257,
+  "observed_time_s": 1.0549999999999946,
+  "elapsed_wave_periods": 1.2451796195112603,
+  "complete_cycle_count_on_wave_clock": 1,
+  "valid_complete_cycles": [],
+  "excluded_cycles": [
+    {
+      "cycle": 1,
+      "start_s": 0.0,
+      "end_s": 0.8472673206891129,
+      "complete": false,
+      "reason": "Incomplete interval; no extrapolation"
+    }
+  ],
+  "minimum_elapsed": false,
+  "cap_reached": false,
+  "latest_four_complete": false,
+  "history_quality_pass": true,
+  "repeatable_last_four": false,
+  "stop_for_repeatability": false,
+  "stop_recommended": false,
+  "stop_reason": null,
+  "status": "awaiting_minimum_10_cycles",
+  "accuracy_validated": false,
+  "point_count_per_cycle": 256,
+  "nominal_history_interval_s": 0.0010000000000000009,
+  "thresholds": {
+    "mean_pct": 0.5,
+    "amplitude_pct": 2.0,
+    "waveform_rms_pct": 3.0,
+    "phase_deg": 2.0
+  },
+  "comparisons": {},
+  "last_four_cycles": [
+    {
+      "cycle": 1,
+      "start_s": 0.0,
+      "end_s": 0.8472673206891129,
+      "complete": false,
+      "reason": "Incomplete interval; no extrapolation"
+    }
+  ],
+  "history_sources": [
+    {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_diagnostic_r1\\history.csv",
+      "rows": 149,
+      "valid_force_rows": 149
+    },
+    {
+      "path": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2\\history.csv",
+      "rows": 888,
+      "valid_force_rows": 888
+    }
+  ],
+  "invalid_force_rows": [],
+  "duplicate_conflicts": [],
+  "read_errors": [],
+  "limitations": [
+    "Practical thresholds proposed for this exploratory campaign, not a universal CFD standard or formal uncertainty estimate.",
+    "Force repeatability does not establish grid/time accuracy, conservation, input-wave quality or reflection independence.",
+    "The existing 0.01% inlet mass residual remains reported separately; the user's exploratory exception is not altered by this screen.",
+    "Reaching the cycle cap without repeatability requests setup/flow diagnosis; it does not prove the setup is wrong or that a physical unsteady solution should be periodic.",
+    "Merge only verified continuations with unchanged wave clock/settings. This function checks overlap values but cannot establish source identity.",
+    "Arithmetic quadrature and harmonic analysis use the common 256-point phase grid. No phase alignment or detrending beyond subtracting each cycle mean is applied."
+  ]
+}

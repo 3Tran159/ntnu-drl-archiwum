@@ -1,0 +1,74 @@
+Starting local server: starserver.bat -new -power -podkey [REDACTED] -licpath 1999@flex.cd-adapco.com -cpubind off -np 1 
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 4696
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 14:54:15 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Playing macro: C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:85: warning: [deprecation] setUseAlternateHoleCutting(boolean) in star.common.IndirectRegionInterface has been deprecated
+   IndirectRegionInterface inter=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");inter.setInterfaceType(OversetMeshInterface.class);inter.setUseAlternateHoleCutting(true);inter.setEnabledZeroDonorCheck(true);
+                                                                                                                                                                                  ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:85: warning: [deprecation] setEnabledZeroDonorCheck(boolean) in star.common.IndirectRegionInterface has been deprecated
+   IndirectRegionInterface inter=s.getInterfaceManager().createIndirectRegionInterface(bg,ov,"Flap overset connectivity");inter.setInterfaceType(OversetMeshInterface.class);inter.setUseAlternateHoleCutting(true);inter.setEnabledZeroDonorCheck(true);
+                                                                                                                                                                                                                         ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:87: warning: [deprecation] getAxisOrigin() in star.motion.RotatingMotion has been deprecated
+   rot.getAxisOrigin().setComponents(xh,0,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);
+      ^
+C:\Users\ThinkPad\Documents\ChatGPT\ntnu science\flap_poc_2606_20261102\macros\BuildFlapPOC.java:87: warning: [deprecation] getAxisDirection() in star.motion.RotatingMotion has been deprecated
+   rot.getAxisOrigin().setComponents(xh,0,zh);rot.getAxisDirection().setComponents(0,1,0);rot.getRotationSpecificationOption().setSelected(RotationSpecificationOption.Type.RotationAngle);
+                                                 ^
+
+POC_STAGE importing rounded native-profile parts
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Reading surface from .stl file: POC_Main.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.02, Wall Time: 0.03, Memory: 147.40 MB
+Imported surface statistics:
+  # Faces:         916
+  # Vertices:      460
+  # Special Edges: 0
+
+Reading surface from .stl file: POC_Flap.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.00, Wall Time: 0.00, Memory: 147.63 MB
+Imported surface statistics:
+  # Faces:         392
+  # Vertices:      198
+  # Special Edges: 0
+
+Started Parasolid modeler version 38.1.151
+Part surface "Block Surface" was split into 6 part surfaces.
+Part surface "Block Surface" was split into 6 part surfaces.
+Mesh Operation POC_Background_Boolean complete. CPU Time: 0.11, Wall Time: 0.12, Memory: 159.41 MB
+Mesh Operation POC_Overset_Boolean complete. CPU Time: 0.03, Wall Time: 0.03, Memory: 159.48 MB
+ Only 1 part was assigned to a region
+7 part surfaces were assigned to 7 boundaries
+No Interfaces were created
+ Only 1 part was assigned to a region
+7 part surfaces were assigned to 7 boundaries
+No Interfaces were created
+Loading module: MotionModel
+Loading module: MaterialModel
+Reading material property database "E:\Program Files\Siemens\21.04.009-R8\STAR-CCM+21.04.009-R8\star\data\props.mdb"...
+Loading module: SegregatedFlowModel
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Part surface "Block Surface" was split into 6 part surfaces.
+java.lang.RuntimeException: Class: class star.meshing.VolumeControlSize
+   ConditionManager: star.meshing.CustomMeshControlValueManager_12875
+   error: Condition not found in ConditionManager
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

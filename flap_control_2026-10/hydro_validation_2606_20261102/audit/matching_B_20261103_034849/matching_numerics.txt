@@ -1,0 +1,39 @@
+source=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_split0_stabilized_2606.sim
+physical_time_s=0.3000000000000002
+native_iteration=2250
+velocity_urf=0.8
+pressure_urf=0.2
+dynamic_velocity_urf=false
+continuity_initialization=false
+flow_convection=1
+flow_SECOND_ORDER=1
+SST_convection=1
+SST_SECOND_ORDER=1
+dt_s=0.002
+time_discretization=1
+time_SECOND_ORDER=1
+inner_iterations=15 used=true
+residual=Continuity normalized=true factor=0.00646765971878114
+residual=X-momentum normalized=true factor=0.40319565994769185
+residual=Y-momentum normalized=true factor=5.404753337132646E-16
+residual=Z-momentum normalized=true factor=0.07102377228355822
+residual=Tke normalized=true factor=1.2677488967724278E-4
+residual=Sdr normalized=true factor=14.126596919287994
+HF_Fx_N=27.632154081817486
+HF_Fz_N=1284.0911469558032
+HF_CL_hydro=0.3271667661108503
+HF_CD=0.007166758502390675
+HF_Mh_Nm=-12.16478634822516
+HF_pabs_liquid_all=29089.903374335045
+HF_min_volume=9.12155774116863E-12
+HF_min_quality=0.05635124078805398
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.top
+ option=PressureOutletBoundaryOption selected=0
+ option=ReferenceFrameOption selected=0
+ option=FlowBoundaryDiffusionOption selected=1
+ option=KwTurbSpecOption selected=2
+boundary=Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.outlet
+ option=PressureOutletBoundaryOption selected=0
+ option=ReferenceFrameOption selected=0
+ option=FlowBoundaryDiffusionOption selected=1
+ option=KwTurbSpecOption selected=2

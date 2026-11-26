@@ -1,0 +1,73 @@
+def _render_inlet_wave(state):
+ """Production-only history; activation and analysis clocks remain separate."""
+ folder=Path(state.get('directory',''));case=state.get('case','')
+ activation=_read(folder/'wave_activation.json') or state.get('activation',{})
+ points,errors=_history([{'path':str(folder/'history.csv')}])
+ progress=_read(folder/'progress.json') or state.get('progress',{})
+ t=_n(progress.get('time_s',state.get('source_time_s')))
+ if points:t=max(t or 0,points[-1][0])
+ start=_n(activation.get('activation_time_s',state.get('source_time_s')))
+ duration=_n(activation.get('ramp_duration_s'));ramp_end=_n(activation.get('ramp_end_time_s'))
+ planning=_n(activation.get('planning_full_height_period_s'))
+ actual=_n(activation.get('wave_period_s'));height=_n(activation.get('height_m'))
+ origin=_n(activation.get('analysis_origin_s'))
+ assessment=_read(ROOT/'wave_periodicity_current.json')
+ if assessment.get('case')!=case:assessment={}
+ documented_origin=_n(assessment.get('wave_clock_origin_s'))
+ if origin is None and documented_origin is not None and ramp_end is not None and documented_origin>=ramp_end:origin=documented_origin
+ stage=state.get('computation_stage','inlet_wave_loading')
+ done=_read(folder/'completed.json')
+ failed=done.get('status')=='stability_guard' or progress.get('status')=='stability_guard' or 'guard_failed' in state.get('status','')
+ active=state.get('computation_active') is True and not failed
+ if failed:headline='Stopped by physical stability guard · diagnostic state only'
+ elif stage=='inlet_wave_loading':headline='Loading saved startup state · inlet-wave activation pending'
+ elif stage=='inlet_wave_ramp':headline='Inlet wave ramp active · wave travelling toward the foil'
+ elif origin is None:headline='Full inlet-wave amplitude · measuring arrival at the foil'
+ else:headline='Post-arrival wave cycles · repeatability review in progress'
+ s=STYLE+'<style>.wcp-inlet-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:18px 0}.wcp-inlet-stages>div{border:1px solid #cedce4;background:#f3f7f9;padding:12px;font-size:13px}.wcp-inlet-stages .current{background:#e7f3fa;border-color:#0072b2}.wcp-inlet-stages small{display:block;font-size:11px;color:#526772}.wcp-inlet-meters{display:grid;grid-template-columns:1fr 1fr;gap:14px}.wcp-inlet-meters>div{padding:14px;border:1px solid #dbe4ea;min-width:0}.wcp-inlet-planned{opacity:.65}@media(max-width:700px){.wcp-inlet-stages{grid-template-columns:1fr 1fr}.wcp-inlet-meters{grid-template-columns:1fr}}@media print{.wcp-inlet-stages,.wcp-inlet-meters{break-inside:avoid}}</style>'
+ s+='<section class="wave-cycle-panel" aria-label="W01a inlet-generated wave"><h2>W01a — inlet-generated wave</h2><p class="wcp-status">'+_e(headline)+'</p><p>Computed startup state preserved from t = '+_f(start)+' s. The wave is introduced at the inlet with a smooth ramp; the interior flow was not globally reinitialized. Calm-force convergence is not required before activation.</p>'
+ s+='<p class="wcp-meta">'+('GPU calculation active' if active else 'Saved / inactive · '+_e(state.get('status','')))+' · '+_e(_stamp(state.get('updated_at')))+'</p>'
+ if failed:s+='<p class="wcp-failure"><b>Diagnostic fields only; wave forces are not accepted.</b> Do not continue the failed final state.</p>'
+ stats=[(_f(t)+' s','Latest physical time'),(_f(height,6)+' m','Actual inlet wave height'),(_f(actual,7)+' s','Actual STAR period'),(_f(origin)+' s' if origin is not None else 'Pending arrival','Analysis clock origin')]
+ s+='<div class="wcp-stats">'+''.join('<div class="wcp-stat"><b>'+v+'</b><span>'+_e(k)+'</span></div>' for v,k in stats)+'</div>'
+ current=0 if stage=='inlet_wave_loading' else 1 if stage=='inlet_wave_ramp' else 2 if origin is None else 3
+ s+='<div class="wcp-inlet-stages">'
+ for i,name in enumerate(('Startup','Inlet wave ramp','Wave arrival','Repeating cycles')):
+  label='Saved source' if i==0 and current>0 else 'Current stage' if i==current else 'Complete' if i<current else 'Pending'
+  s+='<div'+(' class="current"' if i==current else '')+'>'+str(i+1)+'. '+name+'<small>'+label+'</small></div>'
+ s+='</div><div class="wcp-inlet-meters">'
+ fraction=max(0,min(100,100*((t or start)-start)/duration)) if t is not None and start is not None and duration else 0
+ s+='<div><h3>Inlet-height ramp</h3><div class="wcp-progress"><span style="width:'+str(fraction)+'%"></span></div><div class="wcp-progress-labels"><span>Activation '+_f(start)+' s</span><span>'+_f(fraction,1)+'%</span><span>Ramp end '+_f(ramp_end)+' s</span></div><p class="wcp-meta">Ramp duration '+_f(duration,6)+' s. Height and period above come from current runtime getters.</p></div>'
+ period=_n(assessment.get('period_s')) if origin is not None else None
+ elapsed=max(0,(t-origin)/period) if t is not None and origin is not None and period else None
+ fill=min(100,100*elapsed/20) if elapsed is not None else 0
+ s+='<div'+(' class="wcp-inlet-planned"' if origin is None else '')+'><h3>Post-arrival wave response</h3><div class="wcp-progress"><span style="width:'+str(fill)+'%"></span><i></i></div><div class="wcp-progress-labels"><span>'+(_f(elapsed,2)+' T' if elapsed is not None else 'Awaiting measured arrival')+'</span><span>10 T · indicative</span><span>20 T · review cap</span></div><p class="wcp-meta">Calm, ramp and pre-arrival samples are excluded. Four complete repeating cycles can stop the run early;10 periods is not a minimum.</p></div></div>'
+ cost=_recent_cost(str(folder),.001)
+ if active:
+  s+='<div class="wcp-eta"><b>Planning time estimate</b>'
+  if cost.get('available') and planning:
+   unit=cost['median_s_per_step']/.001
+   if ramp_end is not None and t is not None and t<ramp_end:s+='<p>About '+_duration((ramp_end-t)*unit)+' to the end of the inlet ramp.</p>'
+   s+='<p>Ten additional full-height periods cost about '+_duration(10*planning*unit)+' at the recent rate. Planning T = '+_f(planning,7)+' s; this is not a completion ETA or an accepted-cycle count.</p><p class="wcp-meta">Measured '+_f(cost['median_s_per_step'],3)+' s/step from '+str(cost['samples'])+' current-case steps. The arrival-based analysis clock is separate.</p>'
+  else:s+='<p>Collecting current-case step timings. The full-height planning period is '+_f(planning,7)+' s when published; no timing is inherited from the earlier run.</p>'
+  s+='</div>'
+ s+='<h3>Current inlet-wave case · force coefficient history</h3><div class="wcp-nav" role="group" aria-label="Force history time window"><button type="button" data-wcp-action="left" aria-label="Pan earlier">← Earlier</button><button type="button" data-wcp-action="right" aria-label="Pan later">Later →</button><button type="button" data-wcp-action="in">Zoom in</button><button type="button" data-wcp-action="out">Zoom out</button><button type="button" data-wcp-action="follow" aria-pressed="true">Follow live</button><span class="wcp-view-state">Latest saved data</span></div><div class="wcp-plots">'
+ for key,label,i in [('CD','CD',1),('CL_total','CL, total',2)]:
+  s+='<div class="wcp-history-plot" data-key="'+key+'">'+_svg([{'name':label,'color':COLORS[i-1],'points':[(p[0],p[i]) for p in points]}],label,'Physical time [s]',restart=start)+'</div>'
+ s+='</div><p class="wcp-meta">Only this production case is plotted. The saved calm trace and separate three-step CPU audit are not merged into this history.</p>'
+ s+=_side_view(state) or '<div class="wcp-empty"><h3>Foil and wave · current-case preview</h3><p>Waiting for a complete actual field export from this inlet-wave case. Earlier saved views are preserved in the case archives.</p></div>'
+ s+=_vorticity_view(state)
+ if origin is not None and period:
+  a=dict(assessment,wave_clock_origin_s=origin);s+=_cycle_overlay_html(points,a,period)
+  s+='<p class="wcp-meta">Authoritative repeatability status: '+_e(assessment.get('status','Pending'))+'. Analysis origin t = '+_f(origin)+' s. '+_link(ROOT/'wave_periodicity_current.json','Saved cycle assessment')+'.</p>'
+ else:s+='<p class="wcp-empty">Cycle overlaps and acceptance metrics are waiting for measured arrival and a documented analysis origin. Current startup/ramp oscillations are not accepted wave cycles.</p>'
+ s+='<details><summary>Current case, activation metadata and saved states</summary><p class="wcp-path">'+_link(folder)+'</p><p>'+_link(folder/'wave_activation.json','Current inlet-wave activation record')+'</p><p>'+_link(folder/'history.csv','Production force history')+'</p>'
+ identity=_read(folder/'source_identity.json')
+ if identity.get('source'):s+='<p class="wcp-path"><b>Computed startup source:</b> '+_link(identity['source'])+'</p>'
+ cp=_read(folder/'latest_checkpoint.json')
+ if cp.get('completed_save'):s+='<p class="wcp-path"><b>Completed checkpoint:</b> '+_link(cp.get('file',''))+'</p>'
+ if done.get('time_s') is not None and (folder/'final.sim').is_file():s+='<p class="wcp-path"><b>Saved final state:</b> '+_link(folder/'final.sim')+'</p>'
+ s+='</details>'
+ payload={'case':case,'view_epoch':'inlet-wave-production-v1','period':period,'origin':origin,'start':start,'series':{'CD':[(p[0],p[1]) for p in points],'CL_total':[(p[0],p[2]) for p in points]}}
+ return s+'<script type="application/json" class="wcp-history-data">'+json.dumps(payload,allow_nan=False).replace('</','<\\/')+'</script></section>'+INTERACTIVE
+

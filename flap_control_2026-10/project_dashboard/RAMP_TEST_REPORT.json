@@ -1,0 +1,240 @@
+{
+  "at": "2026-11-03T10:10:53+0100",
+  "passed": 46,
+  "total": 46,
+  "overall_pass": true,
+  "tests": [
+    {
+      "name": "Real experiment auto-discovered",
+      "passed": true,
+      "detail": "RAMP_C0_PLUS2_S5_20261103"
+    },
+    {
+      "name": "Auto-selected real active run",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Multiple saved controller segments",
+      "passed": true,
+      "detail": "2"
+    },
+    {
+      "name": "Output remains confined to authorized cases",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Path traversal rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No checkpoint binary read",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual samples available",
+      "passed": true,
+      "detail": "78"
+    },
+    {
+      "name": "Physical time monotonic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Original time source retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Original row recoverable at timestamp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Native CSV CL",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV CD",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV Mh",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV Fx",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV Fz",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV angle",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV actual_angle",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV rate",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV pabs",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV mass",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Native CSV overset",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "Mechanical power uses rad/s",
+      "passed": true,
+      "detail": "-2.581024373635105"
+    },
+    {
+      "name": "Native ramp targets supplied",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Pressure limit correct",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Pressure reserve",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No fictitious waveform before ramp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Active source freshness conservative",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "STALE simulated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "HOLD simulated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FAILED simulated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "COMPLETE simulated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No false RUNNING without PID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No false RUNNING without fresh CSV",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No false RUNNING with no samples",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Restart segment deduplication",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Latest segment wins overlap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "HTTP /api/ramp",
+      "passed": true,
+      "detail": "139185"
+    },
+    {
+      "name": "API preserves experiment identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "HTTP /ramp_live.js",
+      "passed": true,
+      "detail": "18750"
+    },
+    {
+      "name": "HTTP /ramp_live.css",
+      "passed": true,
+      "detail": "9386"
+    },
+    {
+      "name": "HTTP /",
+      "passed": true,
+      "detail": "29987"
+    },
+    {
+      "name": "HTTP /api/series?id=B0",
+      "passed": true,
+      "detail": "127642"
+    },
+    {
+      "name": "HTTP /api/series?id=C0",
+      "passed": true,
+      "detail": "127213"
+    },
+    {
+      "name": "HTTP /api/series?id=W02",
+      "passed": true,
+      "detail": "567747"
+    },
+    {
+      "name": "HTTP /api/snapshot",
+      "passed": true,
+      "detail": "20302"
+    },
+    {
+      "name": "No campaign source writes",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "read_only": true,
+  "note": "Concurrent CFD source writes could change mtime independently."
+}

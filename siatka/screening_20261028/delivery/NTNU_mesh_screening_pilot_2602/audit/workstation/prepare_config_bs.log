@@ -1,0 +1,247 @@
+﻿Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxpbnNwZWN0aW9uXHNvdXJjZV9jb3B5LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 16828
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 16 days
+Wed Oct 28 19:18:47 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\mesh_screening_20261028\inspection\source_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\mesh_screening_20261028\inspection\InspectAndPrepare.java
+F:\ntnu\mesh_screening_20261028\inspection\InspectAndPrepare.java:27: warning: [deprecation] getEnabled() in star.common.AutoSaveBase has been deprecated
+      meta.put("auto_save_enabled_original",s.getSimulationIterator().getAutoSave().getEnabled());
+                                                                                   ^
+F:\ntnu\mesh_screening_20261028\inspection\InspectAndPrepare.java:29: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+      s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                             ^
+
+Loading/configuring connectivity (old|new partitions: 8|8)
+  fluid (index 0): 25188874 cells, 75511897 faces, 25910209 verts.
+Configuring finished
+
+Boundaries of region fluid:
+Boundary HF_v2 2.ColoredFace1: 706522 faces (72288 triangular, 607251 quadrilateral, 26983 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-2.8153980800e-04, 1.1900000000e+00] m
+  y: [0.0000000000e+00, 5.5000000000e+00] m
+  z: [-3.0310105053e-02, 8.8989994903e-02] m
+ surface area: 1.1049196953e+01 m^2
+ maximum boundary skewness angle = 7.9378340006e+01 deg
+Boundary DOMAIN.top: 1802 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [1.3000000000e+01, 1.3000000000e+01] m
+ surface area: 1.1781000000e+03 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.symetry: 59866 faces (77 triangular, 58411 quadrilateral, 1378 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [-2.2204460493e-16, 1.1102230246e-16] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 1.4993038296e+03 m^2
+ maximum boundary skewness angle = 2.7263572385e+01 deg
+Boundary DOMAIN.inlet: 7892 faces (7826 quadrilateral, 66 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, -1.1900000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 9.6250000000e+02 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.wall: 19098 faces (18786 quadrilateral, 312 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [2.7500000000e+01, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 1.4994000000e+03 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.bottm: 1802 quadrilateral faces
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, -2.2000000000e+01] m
+ surface area: 1.1781000000e+03 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+Boundary DOMAIN.outlet: 11258 faces (11044 quadrilateral, 214 polygonal)
+ Face partition distribution : 
+   -------------------------
+   |Worker rank |No. Faces |
+   -------------------------
+   -------------------------
+   Average number of faces :         0
+
+
+ Extents:
+  x: [3.0940000000e+01, 3.0940000000e+01] m
+  y: [0.0000000000e+00, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ surface area: 9.6250000000e+02 m^2
+ maximum boundary skewness angle = 0.0000000000e+00 deg
+
+Region fluid: 
+   42303 tetrahedral cells
+22856155 hexahedral cells
+ 1070404 wedge cells
+    7743 pyramid cells
+ 1212269 polyhedral cells
+25188874 cells total
+  343740 halo cells
+75511897 interior faces (1302116 triangular, 73020721 quadrilateral, 1411898 polygonal) (222838 halo faces)
+25910209 vertices (228451 halo vertices)
+ Cell/Face partition distribution : 
+   --------------------------------------------------------------------------------------------------------
+   |Worker rank |No. Non Halo Cells |No. Halo Cells |% Halo Cells |No. Total Cells |No. Faces |No. BFaces |
+   --------------------------------------------------------------------------------------------------------
+   |          0 |           2700466 |         28646 |        1.06 |        2729112 |  8105454 |    112299 |
+   |          1 |           3208465 |         48909 |        1.52 |        3257374 |  9695597 |     38779 |
+   |          2 |           3271933 |         47210 |        1.44 |        3319143 |  9799327 |    137562 |
+   |          3 |           3042299 |         36513 |        1.20 |        3078812 |  9148819 |     87970 |
+   |          4 |           3245003 |         33096 |        1.02 |        3278099 |  9714970 |    131710 |
+   |          5 |           3191077 |         60355 |        1.89 |        3251432 |  9636077 |     79495 |
+   |          6 |           3265462 |         47405 |        1.45 |        3312867 |  9795252 |    117987 |
+   |          7 |           3264169 |         41606 |        1.27 |        3305775 |  9839239 |    102438 |
+   --------------------------------------------------------------------------------------------------------
+   Average number of non-halo cells :   3148609 STDDEV % :  5.82 IMBALANCE % :  3.92
+       Average number of halo cells :     42967 STDDEV % : 22.10 IMBALANCE % : 40.47
+      Average number of total cells :   3191576 STDDEV % :  5.92 IMBALANCE % :  4.00
+            Average number of faces :   9466841 STDDEV % :  5.85 IMBALANCE % :  3.93
+   Average number of boundary faces :    101030 STDDEV % : 29.70 IMBALANCE % : 36.16
+   Maximum number of partition neighbours : 7
+
+
+
+ Extents:
+  x: [-1.1900000000e+01, 3.0940000000e+01] m
+  y: [-2.2204460493e-16, 2.7500000000e+01] m
+  z: [-2.2000000000e+01, 1.3000000000e+01] m
+ Maximum interior cell index delta: 76408, average: 1.8393180616e+04
+ Maximum cell face index delta: 9836592, average: 1.4185696091e+05
+ Volume range: [5.4346735312e-13, 5.4975581389e-01] m^3
+ Minimum distance between centroids of neighbor cells = 3.7138721785e-05
+ Maximum skewness angle = 8.4553012617e+01 deg
+
+Face validity: 
+Minimum Face Validity: 1.0000000000e+00
+Maximum Face Validity: 1.0000000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity            25188874   100.000%
+
+Volume Change: 
+Minimum Volume Change: 1.100059e-02
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           0    0.000%
+1e-02 <= Volume Change <  1e-01      125642    0.499%
+1e-01 <= Volume Change <= 1e+00    25063232   99.501%
+ Maximum boundary skewness angle in region = 7.937834e+01 deg
+
+Overall Face Validity: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity            25188874   100.000%
+
+Overall Volume Change: 
+Minimum Volume Change: 1.100059e-02
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           0    0.000%
+1e-02 <= Volume Change <  1e-01      125642    0.499%
+1e-01 <= Volume Change <= 1e+00    25063232   99.501%
+[NTNU] INVENTORY_EXPORTED nodes=373
+Clearing all generated representations.
+Saving: F:\ntnu\mesh_screening_20261028\inspection\baseline_clean.sim... complete (2.7311MB in 0.114s).
+[NTNU] CLEAN_BASELINE_SAVED
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

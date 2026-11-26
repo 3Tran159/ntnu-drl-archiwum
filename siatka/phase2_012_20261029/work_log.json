@@ -1,0 +1,42 @@
+[
+  {
+    "time": "2026-10-29T09:43:33.159902+00:00",
+    "work": "Start etapu 2.0",
+    "finding": "Zweryfikowana geometria 012 i C003; wnioski ze starej geometrii zachowane jako historia."
+  },
+  {
+    "time": "2026-10-29T09:42:10.836215+00:00",
+    "work": "Lokalna kontrola końcowego pola",
+    "finding": "8 komórek z prędkością >36 m/s przy y≈4,06 m; CFL >2: 6 komórek tam i 2 przy y≈5,50 m. Bez kolejnych kroków solvera."
+  },
+  {
+    "time": "2026-10-29T09:35:58.573294+00:00",
+    "work": "Zakończono F18_18ms",
+    "finding": "Zakończony test diagnostyczny; historia, diagnostyka i checkpoint zapisane."
+  },
+  {
+    "time": "2026-10-29T09:30:54.520868+00:00",
+    "work": "Przygotowano F18_18ms",
+    "finding": "Hydrostatyczna inicjalizacja, płaska powierzchnia Calm; dt=1e-05 s."
+  },
+  {
+    "time": "2026-10-29T09:30:54.466793+00:00",
+    "work": "Zakończono H0_0ms",
+    "finding": "Zakończony test diagnostyczny; historia, diagnostyka i checkpoint zapisane."
+  },
+  {
+    "time": "2026-10-29T09:27:46.884518+00:00",
+    "work": "Przygotowano H0_0ms",
+    "finding": "Hydrostatyczna inicjalizacja, płaska powierzchnia Calm; dt=0.0001 s."
+  },
+  {
+    "time": "2026-10-29T09:25:41.203852+00:00",
+    "work": "Uruchomienie sekwencji 0 → 18 m/s",
+    "finding": "24 procesy CPU, osobna inicjalizacja każdego przypadku, zapis danych po każdym kroku."
+  },
+  {
+    "time": "2026-10-29T09:22:35.677666+00:00",
+    "work": "Poprawka makra przed solverem",
+    "finding": "Dodano brakujący import klas diagnostycznych. Pierwsza próba zakończyła się przed wykonaniem kroków CFD."
+  }
+]

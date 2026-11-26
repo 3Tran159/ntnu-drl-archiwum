@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "F:\ntnu\XFOIL_validation_20261104\MINI_PHASE_MAP_20261106\TD3_ENERGY_ALLOCATOR_20261106\W04_WAVE_H150_L39\train_energy_td3.py", line 316, in <module>
+    main()
+  File "F:\ntnu\XFOIL_validation_20261104\MINI_PHASE_MAP_20261106\TD3_ENERGY_ALLOCATOR_20261106\W04_WAVE_H150_L39\train_energy_td3.py", line 292, in main
+    results=[(*train(mode,seed),seed) for seed in seeds]
+               ^^^^^^^^^^^^^^^^
+  File "F:\ntnu\XFOIL_validation_20261104\MINI_PHASE_MAP_20261106\TD3_ENERGY_ALLOCATOR_20261106\W04_WAVE_H150_L39\train_energy_td3.py", line 221, in train
+    obs=env.reset(rng.uniform(0,2*np.pi),rng.uniform(*TRAIN_SCALE))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\XFOIL_validation_20261104\MINI_PHASE_MAP_20261106\TD3_ENERGY_ALLOCATOR_20261106\W04_WAVE_H150_L39\train_energy_td3.py", line 128, in reset
+    self.cl,self.cd=forces(*self.angles,flow(phi,amplitude))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\XFOIL_validation_20261104\MINI_PHASE_MAP_20261106\TD3_ENERGY_ALLOCATOR_20261106\W04_WAVE_H150_L39\train_energy_td3.py", line 77, in forces
+    raise RuntimeError(f"Angle outside qualified map: {a}")
+RuntimeError: Angle outside qualified map: 5.12540492653606

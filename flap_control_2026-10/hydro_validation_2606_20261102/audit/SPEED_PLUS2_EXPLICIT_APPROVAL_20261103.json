@@ -1,0 +1,20 @@
+{
+  "approved_by_user": true,
+  "experiment_id": "SPEED_SWEEP_PLUS2_20261103",
+  "previous_case_remains_failed": true,
+  "previous_blocked_job": "RAMP_C0_PLUS2_S5_20261103_RUN",
+  "approved_job_ids": [
+    "SPEED_SWEEP_PLUS2_20261103_SMOKE"
+  ],
+  "source": "User request NTNU CFD AUTONOMOUS VELOCITY SWEEP FIXED FLAP +2, 2026-11-03",
+  "scope": "Fixed+2 at 10/12/14/16/18m/s, serial gated stages,8CPU,noGPU; full run prepared only after short native smoke. No other angles/waves.",
+  "pabs_threshold_Pa": 12339.214766776897,
+  "source_checkpoint": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\static_plus2_prepared_20261103_085250\\SP_C_plus2_prepared_NOT_SOLVED_2606.sim",
+  "source_sha256": "4f5fd71acc76a75f21fbacdaa8d6e2e0c3b4145d34fd3480b0a19429fbeba22a",
+  "new_initialization": "Fresh10m/s fields/history in independent working state; geometry/mesh/SST/Overset unchanged; source never overwritten",
+  "full_run_macro_sha256": "f0f28ef8d2653412a7404f24a956d1eea760a8c2ae216e2d6fb8ce2e6fc93f9d",
+  "smoke_passed": false,
+  "full_run_launch_permitted": false,
+  "blocking_job": "SPEED_SWEEP_PLUS2_20261103_SMOKE",
+  "infrastructure_tests": "audit/SPEED_WORKFLOW_TESTS_20261103.txt"
+}

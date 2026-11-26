@@ -1,0 +1,44 @@
+BOUNDARY main type=Wall
+ C star.flow.WallShearStressOption
+ C star.morpher.MorpherSpecification
+ C star.flow.WallSlidingOption
+ C star.motion.WallReferenceFrameOption
+ C star.turbulence.WallSurfaceOption
+ V star.turbulence.BlendedWallFunctionCondition
+ V star.morpher.RigidPrismLayerMorphing
+ V star.morpher.MorpherThinoutFactor
+BOUNDARY flap type=Wall
+ C star.flow.WallShearStressOption
+ C star.morpher.MorpherSpecification
+ C star.flow.WallSlidingOption
+ C star.motion.WallReferenceFrameOption
+ C star.turbulence.WallSurfaceOption
+ V star.turbulence.BlendedWallFunctionCondition
+ V star.morpher.RigidPrismLayerMorphing
+ V star.morpher.MorpherThinoutFactor
+BOUNDARY inlet type=Velocity Inlet
+ C star.flow.InletVelocityOption
+ C star.motion.ReferenceFrameOption
+ C star.flow.FlowBoundaryDiffusionOption
+ C star.morpher.MorpherSpecification
+ C star.kwturb.KwTurbSpecOption
+ V star.flow.VelocityProfile
+ V star.morpher.RigidPrismLayerMorphing
+ V star.morpher.MorpherThinoutFactor
+ V star.turbulence.TurbulenceIntensityProfile
+ V star.turbulence.TurbulentViscosityRatioProfile
+BOUNDARY outlet type=Pressure Outlet
+ C star.flow.BackflowSpecification
+ C star.flow.PressureOutletBoundaryOption
+ C star.morpher.MorpherSpecification
+ C star.motion.ReferenceFrameOption
+ C star.flow.FlowBoundaryDiffusionOption
+ C star.kwturb.KwTurbSpecOption
+ V star.flow.StaticPressureProfile
+ V star.morpher.RigidPrismLayerMorphing
+ V star.morpher.MorpherThinoutFactor
+ V star.turbulence.TurbulenceIntensityProfile
+ V star.turbulence.TurbulentViscosityRatioProfile
+BOUNDARY farfield type=Symmetry Plane
+ C star.morpher.PlaneConstraintSpecification
+ V star.morpher.MorpherPlaneOptions

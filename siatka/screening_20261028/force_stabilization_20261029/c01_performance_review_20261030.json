@@ -1,0 +1,71 @@
+{
+  "updated_at": "2026-10-30T13:41:40.122616+01:00",
+  "case": "C01_W20L4_M10_calm_settle_r2",
+  "stage": "C01 calm settling",
+  "windows": [
+    {
+      "window": [
+        0.7,
+        1
+      ],
+      "n": 300,
+      "median_solver_s": 1.0325487500000001,
+      "median_diagnostics_s": 0.03847335,
+      "median_total_s": 1.0744916
+    },
+    {
+      "window": [
+        1.3,
+        1.6
+      ],
+      "n": 300,
+      "median_solver_s": 1.0675639000000001,
+      "median_diagnostics_s": 0.03888825,
+      "median_total_s": 1.1087627
+    },
+    {
+      "window": [
+        1.72,
+        1.9
+      ],
+      "n": 180,
+      "median_solver_s": 1.7722521500000001,
+      "median_diagnostics_s": 0.10509565000000001,
+      "median_total_s": 1.90177935
+    },
+    {
+      "window": [
+        1.94,
+        2.1099999999998786
+      ],
+      "n": 170,
+      "median_solver_s": 1.0756703,
+      "median_diagnostics_s": 0.03878625,
+      "median_total_s": 1.1173098500000003
+    }
+  ],
+  "gpu_sample_columns": "timestamp,utilization.gpu,utilization.memory,temperature.gpu,power.draw,clocks.current.sm,clocks_event_reasons.sw_thermal_slowdown,clocks_event_reasons.sw_power_cap,clocks_event_reasons.hw_thermal_slowdown",
+  "gpu_samples": [
+    "2026/10/30 13:41:14.678, 44, 26, 72, 43.69, 1620, Active, Not Active, Not Active",
+    "2026/10/30 13:41:16.774, 42, 24, 71, 44.06, 1732, Active, Not Active, Not Active",
+    "2026/10/30 13:41:18.854, 44, 25, 71, 40.66, 1687, Active, Not Active, Not Active",
+    "2026/10/30 13:41:20.956, 46, 25, 69, 35.25, 690, Active, Not Active, Not Active",
+    "2026/10/30 13:41:23.076, 34, 22, 72, 34.94, 1852, Active, Not Active, Not Active",
+    "2026/10/30 13:41:25.222, 31, 21, 77, 50.28, 1777, Not Active, Not Active, Not Active",
+    "2026/10/30 13:41:27.364, 14, 8, 73, 37.42, 1567, Not Active, Active, Not Active",
+    "2026/10/30 13:41:29.499, 24, 14, 78, 53.45, 1822, Not Active, Active, Not Active",
+    "2026/10/30 13:41:31.648, 39, 23, 72, 44.35, 1560, Active, Not Active, Not Active",
+    "2026/10/30 13:41:33.783, 40, 25, 76, 67.57, 1710, Not Active, Active, Not Active",
+    "2026/10/30 13:41:35.935, 22, 15, 72, 49.24, 1222, Not Active, Active, Not Active",
+    "2026/10/30 13:41:38.096, 22, 13, 76, 54.25, 1875, Not Active, Active, Not Active"
+  ],
+  "cpu_observation": "Solver PID10168 on affinity3 used0.93 CPU core over20s; controller/launcher also on0/1. Other processes not saturated in this sample.",
+  "disk_and_ram": "About38GiB RAM free; disk idle in sampled interval.",
+  "power_plan": "Balanced; AC connected at sample",
+  "cautions": [
+    "Thermal limiter reported active; CPU temperature not measured",
+    "No causal attribution for past transient without simultaneous telemetry",
+    "GPU utilization is not a performance target; step time governs",
+    "No solver parameters or other processes changed"
+  ]
+}

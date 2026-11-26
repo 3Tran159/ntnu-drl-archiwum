@@ -1,0 +1,13 @@
+from pathlib import Path
+h=Path(r'F:\ntnu\flap_control\hydro_validation_2606_20261102')
+p=h/'macros/StabilizeHydro.java';t=p.read_text(encoding='utf8')
+t=t.replace('double dt=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class).getTimeStep().getSIValue();','double dt=.002;s.getSolverManager().getSolver(ImplicitUnsteadySolver.class).getTimeStep().setValue(dt);int window=25,minSteps=100,maxSteps=500;')
+t=t.replace('minimum 500 steps, maximum 2000; 100-step windows','dt=0.002 s; minimum 0.2 s, maximum 1 s; 0.05 s force windows')
+t=t.replace('minimum 500 and maximum 2000 physical steps','minimum 0.2 s and maximum 1 s; 0.05 s windows; dt=0.002 s')
+t=t.replace('k<=2000','k<=maxSteps').replace('"/2000 t="','"/"+maxSteps+" t="')
+t=t.replace('if(k%100==0){','if(k%window==0){')
+t=t.replace('if(k>=500){','if(k>=minSteps){')
+t=t.replace('n-200,n-100','n-2*window,n-window').replace('n-100,n','n-window,n').replace('j=n-100','j=n-window')
+t=t.replace('if(k==2000)','if(k==maxSteps)')
+p.write_text(t,encoding='utf8')
+print('Static URANS 2 ms trial, >=0.2 s and 3 consecutive 0.05 s stable windows; physical guards unchanged')

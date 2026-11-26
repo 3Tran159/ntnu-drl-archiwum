@@ -1,0 +1,204 @@
+<html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:17px system-ui;max-width:1100px;margin:24px auto;padding:12px}table{border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid #aaa;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere}.scroll{overflow-x:auto}</style><h1>MINI2D — BUILT / HOLD modelu ze szczeliną</h1><p>Główny model zachowuje2.5mm szczelinę; sealed jest odrębnym demonstratorem. Wszystkie wartości sił poniżej są diagnostyczne; brak zaakceptowanej pary0°/+2°.</p><div class="scroll"><table><tr><th>Przypadek</th><th>Komórki</th><th>Iteracje</th><th>Czas solvera</th><th>Status</th></tr><tr><td>gap_delta_0</td><td>89750</td><td>1</td><td>2.980074</td><td>HOLD_PHYSICAL</td></tr><tr><td>gap_delta_0_gentle_start</td><td>89750</td><td>1</td><td>2.4922302</td><td>HOLD_PHYSICAL</td></tr><tr><td>gap_delta_2</td><td>90198</td><td>0</td><td>—</td><td>BUILT_NOT_RUN</td></tr><tr><td>sealed_demo_delta_0</td><td>14776</td><td>900</td><td>63.1693086</td><td>HOLD_LIMIT</td></tr></table></div><p>Sealed0°: średnieostatnich25 iteracji CL0.3233191,CD0.00540279,Mh−561.0577Nm na1m rozpiętości. Nie zastępuje wyniku ze szczeliną. +2° nie uruchomiono po niezaliczonym0°.</p><p>Następny krok: spójna inicjalizacja prędkości/ciśnienia w szczelinie na tej samej siatce; bez dalszych MPIbenchmarków i bez rozszerzania kątów.</p><img src="geometry_gap_0_plus2.png" style="max-width:100%"><pre>{
+  &quot;at&quot;: &quot;2026-11-03T15:53:10.496904+01:00&quot;,
+  &quot;mini_built&quot;: true,
+  &quot;decision&quot;: &quot;GO_ARCHITECTURE; HOLD_GAP_HYDRODYNAMICS&quot;,
+  &quot;main_blocker&quot;: &quot;Unphysical initial pressure in hinge gap; gentle URF0.3/0.05 did not resolve; no further angle solve&quot;,
+  &quot;cost_comparison&quot;: &quot;Real gap89.75k/90.198k cells vs sealed14.776k; main has only cold startup-step timings, not a converged-cost measurement. Sealed900iterations in63.1693s solver; no equivalent physics claim.&quot;,
+  &quot;next_scientific_step&quot;: &quot;Test physically consistent near-gap initialization on the unchanged mesh before+2; first locate globalpmin and compare Cp/velocity in cavity. Candidate quiescent cavity with smooth outer velocity or potential-flow initialization. Not executed. Full residual reference-window definition also needs review; no threshold changes.&quot;,
+  &quot;simulation_results&quot;: [
+    {
+      &quot;case&quot;: &quot;gap_delta_0&quot;,
+      &quot;fidelity&quot;: &quot;L1_GAP&quot;,
+      &quot;cells&quot;: 89750,
+      &quot;gap_mm&quot;: 2.5,
+      &quot;status&quot;: {
+        &quot;status&quot;: &quot;HOLD_PHYSICAL&quot;,
+        &quot;iterations_this_run&quot;: 1,
+        &quot;elapsed_s&quot;: 2.980074,
+        &quot;validation&quot;: false,
+        &quot;DRL_allowed&quot;: false
+      },
+      &quot;measured_iterations&quot;: 1,
+      &quot;validation_accepted&quot;: false,
+      &quot;training_eligible&quot;: false,
+      &quot;solver_mean_s_per_iteration&quot;: 0.3684991,
+      &quot;runtime_window&quot;: &quot;single cold iteration; not representative benchmark&quot;,
+      &quot;pABSmin_Pa&quot;: -1799624.1811583072,
+      &quot;last25_means&quot;: {
+        &quot;CL&quot;: 0.19844114926886247,
+        &quot;CD&quot;: -1.4337031832406792,
+        &quot;Mh&quot;: -3404.3504273490685
+      },
+      &quot;last_native_iteration&quot;: &quot;3&quot;,
+      &quot;W04_max_slowdown_percent&quot;: 0.0,
+      &quot;W04_baseline&quot;: {
+        &quot;at&quot;: 1793716718.6551712,
+        &quot;step&quot;: 7629,
+        &quot;median_s&quot;: 1.6589067000004434
+      },
+      &quot;full_run_elapsed_s&quot;: 111.09908747673035,
+      &quot;MINI_prepared.sim&quot;: {
+        &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0\\MINI_prepared.sim&quot;,
+        &quot;bytes&quot;: 5615030,
+        &quot;sha256&quot;: &quot;6178cb0c101a0b8292b9b11da94d5a0f3bbcf2250d8012cb09ec94fcaca730f6&quot;
+      },
+      &quot;MINI_result.sim&quot;: {
+        &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0\\MINI_result.sim&quot;,
+        &quot;bytes&quot;: 20334663,
+        &quot;sha256&quot;: &quot;a7d576103ec03169e29448e19ab892d316e4c3f2b7df76c87eebecdfd9c69f59&quot;
+      }
+    },
+    {
+      &quot;case&quot;: &quot;gap_delta_0_gentle_start&quot;,
+      &quot;fidelity&quot;: &quot;L1_GAP&quot;,
+      &quot;cells&quot;: 89750,
+      &quot;gap_mm&quot;: 2.5,
+      &quot;status&quot;: {
+        &quot;status&quot;: &quot;HOLD_PHYSICAL&quot;,
+        &quot;iterations_this_run&quot;: 1,
+        &quot;elapsed_s&quot;: 2.4922302,
+        &quot;validation&quot;: false,
+        &quot;DRL_allowed&quot;: false
+      },
+      &quot;measured_iterations&quot;: 1,
+      &quot;validation_accepted&quot;: false,
+      &quot;training_eligible&quot;: false,
+      &quot;solver_mean_s_per_iteration&quot;: 0.2657398,
+      &quot;runtime_window&quot;: &quot;single cold iteration; not representative benchmark&quot;,
+      &quot;pABSmin_Pa&quot;: -4322943.101565355,
+      &quot;last25_means&quot;: {
+        &quot;CL&quot;: 0.034214608137601056,
+        &quot;CD&quot;: 0.48482873469362814,
+        &quot;Mh&quot;: -2930.017753182507
+      },
+      &quot;last_native_iteration&quot;: &quot;1&quot;,
+      &quot;W04_max_slowdown_percent&quot;: 0.6926399210102296,
+      &quot;W04_baseline&quot;: {
+        &quot;at&quot;: 1793716981.9093044,
+        &quot;step&quot;: 7789,
+        &quot;median_s&quot;: 1.6100934500000221
+      },
+      &quot;full_run_elapsed_s&quot;: 112.20054650306702,
+      &quot;MINI_prepared.sim&quot;: {
+        &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0_gentle_start\\MINI_prepared.sim&quot;,
+        &quot;bytes&quot;: 5615030,
+        &quot;sha256&quot;: &quot;6178cb0c101a0b8292b9b11da94d5a0f3bbcf2250d8012cb09ec94fcaca730f6&quot;
+      },
+      &quot;MINI_result.sim&quot;: {
+        &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_0_gentle_start\\MINI_result.sim&quot;,
+        &quot;bytes&quot;: 20283834,
+        &quot;sha256&quot;: &quot;29aefa37e4f00806b909e36e0b7c8ad277f4c4f76c74198fa4af814c3645eaec&quot;
+      }
+    },
+    {
+      &quot;case&quot;: &quot;gap_delta_2&quot;,
+      &quot;fidelity&quot;: &quot;L1_GAP&quot;,
+      &quot;cells&quot;: 90198,
+      &quot;gap_mm&quot;: 2.5,
+      &quot;status&quot;: {
+        &quot;status&quot;: &quot;BUILT_NOT_RUN&quot;
+      },
+      &quot;measured_iterations&quot;: 0,
+      &quot;validation_accepted&quot;: false,
+      &quot;training_eligible&quot;: false,
+      &quot;MINI_prepared.sim&quot;: {
+        &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\gap_delta_2\\MINI_prepared.sim&quot;,
+        &quot;bytes&quot;: 5633846,
+        &quot;sha256&quot;: &quot;3a92b5356b609218465d5de8d4822ec3dcf30f1399cef8578d009a4940f33d36&quot;
+      }
+    },
+    {
+      &quot;case&quot;: &quot;sealed_demo_delta_0&quot;,
+      &quot;fidelity&quot;: &quot;L1_SEALED_ALGORITHM_DEMONSTRATOR&quot;,
+      &quot;cells&quot;: 14776,
+      &quot;gap_mm&quot;: 0,
+      &quot;status&quot;: {
+        &quot;status&quot;: &quot;HOLD_LIMIT&quot;,
+        &quot;iterations_this_run&quot;: 900,
+        &quot;elapsed_s&quot;: 63.1693086,
+        &quot;validation&quot;: false,
+        &quot;DRL_allowed&quot;: false
+      },
+      &quot;measured_iterations&quot;: 900,
+      &quot;validation_accepted&quot;: false,
+      &quot;training_eligible&quot;: false,
+      &quot;solver_mean_s_per_iteration&quot;: 0.04159562876404494,
+      &quot;runtime_window&quot;: &quot;after10 warmup iterations&quot;,
+      &quot;pABSmin_Pa&quot;: 26892.71426325821,
+      &quot;last25_means&quot;: {
+        &quot;CL&quot;: 0.32331911653609774,
+        &quot;CD&quot;: 0.005402793371022261,
+        &quot;Mh&quot;: -561.05768152643
+      },
+      &quot;last_native_iteration&quot;: &quot;900&quot;,
+      &quot;force_windows&quot;: {
+        &quot;CL&quot;: {
+          &quot;drift_percent&quot;: 0.31856968806628944,
+          &quot;range_percent&quot;: 0.3226187260218081
+        },
+        &quot;CD&quot;: {
+          &quot;drift_percent&quot;: 0.4900093594059536,
+          &quot;range_percent&quot;: 0.5390887549167812
+        },
+        &quot;Mh&quot;: {
+          &quot;drift_percent&quot;: 0.39373433762758686,
+          &quot;range_percent&quot;: 0.2767772058007108
+        }
+      },
+      &quot;residual_evidence&quot;: {
+        &quot;residual_Continuity&quot;: {
+          &quot;first&quot;: 1.0,
+          &quot;last&quot;: 0.007124485852777424,
+          &quot;ratio&quot;: 0.007124485852777424,
+          &quot;pass_ratio_001&quot;: true
+        },
+        &quot;residual_Sdr&quot;: {
+          &quot;first&quot;: 0.038882116575810095,
+          &quot;last&quot;: 0.00028410694850164946,
+          &quot;ratio&quot;: 0.007306879705165078,
+          &quot;pass_ratio_001&quot;: true
+        },
+        &quot;residual_Tke&quot;: {
+          &quot;first&quot;: 0.9999999999999999,
+          &quot;last&quot;: 0.00016018310456080603,
+          &quot;ratio&quot;: 0.00016018310456080605,
+          &quot;pass_ratio_001&quot;: true
+        },
+        &quot;residual_X_momentum&quot;: {
+          &quot;first&quot;: 0.016787146038353237,
+          &quot;last&quot;: 0.0035941562122876274,
+          &quot;ratio&quot;: 0.21410168256570444,
+          &quot;pass_ratio_001&quot;: false
+        },
+        &quot;residual_Y_momentum&quot;: {
+          &quot;first&quot;: 0.0019102543321696454,
+          &quot;last&quot;: 0.002682801962737591,
+          &quot;ratio&quot;: 1.4044213472299756,
+          &quot;pass_ratio_001&quot;: false
+        }
+      },
+      &quot;residual_note&quot;: &quot;Normalized residuals are all&lt;0.01 at900, but actual unchanged macro criterion last/first&lt;=0.01 fails X andY due small initial seeds. Do not relabel recorded HOLD asPASS or silently change the reference window.&quot;,
+      &quot;W04_max_slowdown_percent&quot;: 2.2465445228162517,
+      &quot;W04_baseline&quot;: {
+        &quot;at&quot;: 1793717184.7592764,
+        &quot;step&quot;: 7913,
+        &quot;median_s&quot;: 1.6335443000007217
+      },
+      &quot;full_run_elapsed_s&quot;: 178.89626502990723,
+      &quot;MINI_prepared.sim&quot;: {
+        &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\sealed_demo_delta_0\\MINI_prepared.sim&quot;,
+        &quot;bytes&quot;: 1750385,
+        &quot;sha256&quot;: &quot;e32f08a5e9c447b09e745b6c1b596d9a3ec3a0f6ba75cc12cc10ce88a9e8c702&quot;
+      },
+      &quot;MINI_result.sim&quot;: {
+        &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\sealed_demo_delta_0\\MINI_result.sim&quot;,
+        &quot;bytes&quot;: 4412175,
+        &quot;sha256&quot;: &quot;db975909033e369470615db5be80dd3c874917234888e21b1b5af0768874a49c&quot;
+      }
+    }
+  ],
+  &quot;protected_high_fidelity&quot;: &quot;t1.212 SHA unchanged; old failures archived; speed/MPI benchmarks stopped&quot;,
+  &quot;W04&quot;: &quot;unchanged; all Mini monitor samples below15% slowdown&quot;,
+  &quot;larger_angles&quot;: &quot;Static[-5,-2,0,+2,+5] staged;dynamic±2/±5 later;±5 DRLblocked&quot;,
+  &quot;night&quot;: &quot;Existing validation queue stays HOLD; no automatic night starts&quot;
+}</pre></html>

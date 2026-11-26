@@ -1,0 +1,29 @@
+test_conflicting_overlap_blocks_repeatability (__main__.RepeatabilityTests.test_conflicting_overlap_blocks_repeatability) ... ok
+test_constant_offset_changes_mean_not_amplitude_or_phase (__main__.RepeatabilityTests.test_constant_offset_changes_mean_not_amplitude_or_phase) ... ok
+test_corrected_analysis_origin_excludes_prior_calm (__main__.RepeatabilityTests.test_corrected_analysis_origin_excludes_prior_calm) ... ok
+test_corrected_conflicting_overlap_blocks_repeatability (__main__.RepeatabilityTests.test_corrected_conflicting_overlap_blocks_repeatability) ... ok
+test_corrected_near_zero_mean_still_has_finite_metrics (__main__.RepeatabilityTests.test_corrected_near_zero_mean_still_has_finite_metrics) ... ok
+test_historical_basis_is_explicit (__main__.RepeatabilityTests.test_historical_basis_is_explicit) ... ok
+test_histories_and_reference_remain_immutable (__main__.RepeatabilityTests.test_histories_and_reference_remain_immutable) ... ok
+test_incomplete_first_cycle_excluded (__main__.RepeatabilityTests.test_incomplete_first_cycle_excluded) ... ok
+test_mean_drift_rejected (__main__.RepeatabilityTests.test_mean_drift_rejected) ... ok
+test_missing_file_not_treated_as_clean_history (__main__.RepeatabilityTests.test_missing_file_not_treated_as_clean_history) ... ok
+test_missing_interval_in_recent_cycle_rejected (__main__.RepeatabilityTests.test_missing_interval_in_recent_cycle_rejected) ... ok
+test_near_zero_finite_and_phase_not_applicable (__main__.RepeatabilityTests.test_near_zero_finite_and_phase_not_applicable) ... ok
+test_no_early_stop_before_ten_periods (__main__.RepeatabilityTests.test_no_early_stop_before_ten_periods) ... ok
+test_nonfinite_corrected_lift_blocks_cycle (__main__.RepeatabilityTests.test_nonfinite_corrected_lift_blocks_cycle) ... ok
+test_nonfinite_recent_force_sample_rejected (__main__.RepeatabilityTests.test_nonfinite_recent_force_sample_rejected) ... ok
+test_nonfinite_reference_rejected (__main__.RepeatabilityTests.test_nonfinite_reference_rejected) ... ok
+test_offset_changes_mean_normalization_and_drift_percentage (__main__.RepeatabilityTests.test_offset_changes_mean_normalization_and_drift_percentage) ... ok
+test_phase_drift_rejected_without_realigning (__main__.RepeatabilityTests.test_phase_drift_rejected_without_realigning) ... ok
+test_reference_force_must_be_positive_and_offset_consistent (__main__.RepeatabilityTests.test_reference_force_must_be_positive_and_offset_consistent) ... ok
+test_stable_sine_with_harmonics (__main__.RepeatabilityTests.test_stable_sine_with_harmonics) ... ok
+test_twenty_cycle_cap_is_review_not_failure_proof (__main__.RepeatabilityTests.test_twenty_cycle_cap_is_review_not_failure_proof) ... ok
+test_unavailable_reference_rejected_before_history_read (__main__.RepeatabilityTests.test_unavailable_reference_rejected_before_history_read) ... ok
+test_unavailable_row_correction_never_falls_back_to_raw_lift (__main__.RepeatabilityTests.test_unavailable_row_correction_never_falls_back_to_raw_lift) ... ok
+test_verified_continuation_overlap (__main__.RepeatabilityTests.test_verified_continuation_overlap) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.203s
+
+OK

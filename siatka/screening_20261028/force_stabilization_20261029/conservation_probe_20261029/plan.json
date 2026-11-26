@@ -1,0 +1,31 @@
+{
+  "purpose": "Forty-step matched diagnostic continuations; record accumulation and boundary mass flux together. No mesh admission or wave launch.",
+  "jobs": [
+    {
+      "id": "Cmass_SO1ms_inner20_r1",
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\temporal_order_20261029\\T02_M04_SO_dt1ms_r1\\final.sim",
+      "start": 2.241999999999864,
+      "target": 2.281999999999864,
+      "dt": 0.001,
+      "inner": 20,
+      "order": "SECOND_ORDER",
+      "initialize": false,
+      "cells": 138468,
+      "wall_budget_s": 600
+    },
+    {
+      "id": "Cmass_SO1ms_inner10_r1",
+      "source": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\temporal_order_20261029\\T02_M04_SO_dt1ms_r1\\final.sim",
+      "start": 2.241999999999864,
+      "target": 2.281999999999864,
+      "dt": 0.001,
+      "inner": 10,
+      "order": "SECOND_ORDER",
+      "initialize": false,
+      "cells": 138468,
+      "wall_budget_s": 600
+    }
+  ],
+  "gate": "Wait for T01\u2013T04 completion and released GPU lock; both adjacent force windows pass0.5%, T03/T02 and T04/T02 coefficient differences <=0.25%. Otherwise review without launching.",
+  "interpretation": "Report BE and BDF2 accumulation residuals; confirm solver conservation formulation before treating a residual as exact. Diagnostic continuation does not replace the original settling criterion."
+}

@@ -1,0 +1,463 @@
+[
+  {
+    "kind": "main",
+    "width": 1920,
+    "text": "Same-window mesh comparison · Common-window results ready for review\n\nAll three meshes are compared over 1.840–2.040 s at identical solver settings. The common window removes residual time drift.\n\nTarget: 2.040 s\nMean window: 1.840–2.040 s\nSaved update: 29 Oct · 23:14:56 local\n\nCommon settings: Second-order time · 1.000 ms · 10 inner iterations.\n\nMesh\tEndpoint stage\tSaved physical time\tFirst-settled time\nM07\tReused accepted endpoint\t2.040 s\t2.040 s\nM08\tEndpoint recorded\t2.040 s\t2.000 s\nM09\tEndpoint recorded\t2.040 s\t1.640 s\nMeans over the common window\nMesh\tMean CD\tMean CL\tFx pressure [N]\tFx viscous [N]\nM09\t0.0074652\t0.3139593\t8.0319\t20.7508\nM08\t0.0074671\t0.3139068\t8.0396\t20.7505\nM07\t0.0074305\t0.3144759\t7.9089\t20.7401\nCandidate minus finer reference\nCandidate / reference\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\tCoefficient test\nM09 / M07\t+0.4667%\t-0.1643%\t+1.5552%\t+0.0516%\tWithin 1%\nM09 / M08\t-0.0256%\t+0.0167%\t-0.0955%\t+0.0015%\tWithin 1%\nM08 / M07\t+0.4924%\t-0.1810%\t+1.6522%\t+0.0501%\tWithin 1%\n\nSeparate from the first-settled second-order results and historical first-order results. Δ = 100 × (candidate − reference) / |reference|. Fx refers to the 20 mm slice. A coefficient comparison does not by itself select a mesh or admit wave-force runs.",
+    "overflow": false,
+    "duplicateIds": [],
+    "tables": [
+      {
+        "rows": 4,
+        "width": 1192,
+        "containerWidth": 1192,
+        "headers": [
+          "Mesh",
+          "Endpoint stage",
+          "Saved physical time",
+          "First-settled time"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1192,
+        "containerWidth": 1192,
+        "headers": [
+          "Mesh",
+          "Mean CD",
+          "Mean CL",
+          "Fx pressure [N]",
+          "Fx viscous [N]"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1192,
+        "containerWidth": 1192,
+        "headers": [
+          "Candidate / reference",
+          "Δ CD",
+          "Δ CL",
+          "Δ Fx pressure",
+          "Δ Fx viscous",
+          "Coefficient test"
+        ]
+      }
+    ],
+    "originalConfiguredPresent": true,
+    "renderedPairRows": [
+      [
+        "M09 / M07",
+        "+0.4667%",
+        "-0.1643%",
+        "+1.5552%",
+        "+0.0516%",
+        "Within 1%"
+      ],
+      [
+        "M09 / M08",
+        "-0.0256%",
+        "+0.0167%",
+        "-0.0955%",
+        "+0.0015%",
+        "Within 1%"
+      ],
+      [
+        "M08 / M07",
+        "+0.4924%",
+        "-0.1810%",
+        "+1.6522%",
+        "+0.0501%",
+        "Within 1%"
+      ]
+    ],
+    "commonWindowValuesMatchSource": true,
+    "nextStageText": "Candidate mesh time-step check\n\nTime-step check running\n\nCase: M09_SO_dt05ms_common_t2040_r1\n\nSaved physical time: 1.750 s · Target: 2.040 s · Mean window: 1.840–2.040 s\n\n0.500 ms branch from the same t = 1.640 s checkpoint; reuse the recorded 1.000 ms baseline. Only Δt changes.\n\nTime-step acceptance pending. Wave propagation and domain checks remain separate.\n\nSaved update: 29 Oct · 23:22:07 local. Two-step sensitivity is a practical check, not a formal temporal-order estimate.",
+    "waveCaption": "W20_H24_X4_CPUprop_dt1ms_r2 · partial gauge traces through 0.420 s · plot saved 29 Oct · 23:14:04 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated.",
+    "errors": []
+  },
+  {
+    "kind": "main",
+    "width": 1360,
+    "text": "Same-window mesh comparison · Common-window results ready for review\n\nAll three meshes are compared over 1.840–2.040 s at identical solver settings. The common window removes residual time drift.\n\nTarget: 2.040 s\nMean window: 1.840–2.040 s\nSaved update: 29 Oct · 23:14:56 local\n\nCommon settings: Second-order time · 1.000 ms · 10 inner iterations.\n\nMesh\tEndpoint stage\tSaved physical time\tFirst-settled time\nM07\tReused accepted endpoint\t2.040 s\t2.040 s\nM08\tEndpoint recorded\t2.040 s\t2.000 s\nM09\tEndpoint recorded\t2.040 s\t1.640 s\nMeans over the common window\nMesh\tMean CD\tMean CL\tFx pressure [N]\tFx viscous [N]\nM09\t0.0074652\t0.3139593\t8.0319\t20.7508\nM08\t0.0074671\t0.3139068\t8.0396\t20.7505\nM07\t0.0074305\t0.3144759\t7.9089\t20.7401\nCandidate minus finer reference\nCandidate / reference\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\tCoefficient test\nM09 / M07\t+0.4667%\t-0.1643%\t+1.5552%\t+0.0516%\tWithin 1%\nM09 / M08\t-0.0256%\t+0.0167%\t-0.0955%\t+0.0015%\tWithin 1%\nM08 / M07\t+0.4924%\t-0.1810%\t+1.6522%\t+0.0501%\tWithin 1%\n\nSeparate from the first-settled second-order results and historical first-order results. Δ = 100 × (candidate − reference) / |reference|. Fx refers to the 20 mm slice. A coefficient comparison does not by itself select a mesh or admit wave-force runs.",
+    "overflow": false,
+    "duplicateIds": [],
+    "tables": [
+      {
+        "rows": 4,
+        "width": 1192,
+        "containerWidth": 1192,
+        "headers": [
+          "Mesh",
+          "Endpoint stage",
+          "Saved physical time",
+          "First-settled time"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1192,
+        "containerWidth": 1192,
+        "headers": [
+          "Mesh",
+          "Mean CD",
+          "Mean CL",
+          "Fx pressure [N]",
+          "Fx viscous [N]"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1192,
+        "containerWidth": 1192,
+        "headers": [
+          "Candidate / reference",
+          "Δ CD",
+          "Δ CL",
+          "Δ Fx pressure",
+          "Δ Fx viscous",
+          "Coefficient test"
+        ]
+      }
+    ],
+    "originalConfiguredPresent": true,
+    "renderedPairRows": [
+      [
+        "M09 / M07",
+        "+0.4667%",
+        "-0.1643%",
+        "+1.5552%",
+        "+0.0516%",
+        "Within 1%"
+      ],
+      [
+        "M09 / M08",
+        "-0.0256%",
+        "+0.0167%",
+        "-0.0955%",
+        "+0.0015%",
+        "Within 1%"
+      ],
+      [
+        "M08 / M07",
+        "+0.4924%",
+        "-0.1810%",
+        "+1.6522%",
+        "+0.0501%",
+        "Within 1%"
+      ]
+    ],
+    "commonWindowValuesMatchSource": true,
+    "nextStageText": "Candidate mesh time-step check\n\nTime-step check running\n\nCase: M09_SO_dt05ms_common_t2040_r1\n\nSaved physical time: 1.750 s · Target: 2.040 s · Mean window: 1.840–2.040 s\n\n0.500 ms branch from the same t = 1.640 s checkpoint; reuse the recorded 1.000 ms baseline. Only Δt changes.\n\nTime-step acceptance pending. Wave propagation and domain checks remain separate.\n\nSaved update: 29 Oct · 23:22:07 local. Two-step sensitivity is a practical check, not a formal temporal-order estimate.",
+    "waveCaption": "W20_H24_X4_CPUprop_dt1ms_r2 · partial gauge traces through 0.420 s · plot saved 29 Oct · 23:14:04 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated.",
+    "errors": []
+  },
+  {
+    "kind": "main",
+    "width": 390,
+    "text": "Same-window mesh comparison · Common-window results ready for review\n\nAll three meshes are compared over 1.840–2.040 s at identical solver settings. The common window removes residual time drift.\n\nTarget: 2.040 s\nMean window: 1.840–2.040 s\nSaved update: 29 Oct · 23:14:56 local\n\nCommon settings: Second-order time · 1.000 ms · 10 inner iterations.\n\nScroll tables horizontally to view all columns.\n\nMesh\tEndpoint stage\tSaved physical time\tFirst-settled time\nM07\tReused accepted endpoint\t2.040 s\t2.040 s\nM08\tEndpoint recorded\t2.040 s\t2.000 s\nM09\tEndpoint recorded\t2.040 s\t1.640 s\nMeans over the common window\nMesh\tMean CD\tMean CL\tFx pressure [N]\tFx viscous [N]\nM09\t0.0074652\t0.3139593\t8.0319\t20.7508\nM08\t0.0074671\t0.3139068\t8.0396\t20.7505\nM07\t0.0074305\t0.3144759\t7.9089\t20.7401\nCandidate minus finer reference\nCandidate / reference\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\tCoefficient test\nM09 / M07\t+0.4667%\t-0.1643%\t+1.5552%\t+0.0516%\tWithin 1%\nM09 / M08\t-0.0256%\t+0.0167%\t-0.0955%\t+0.0015%\tWithin 1%\nM08 / M07\t+0.4924%\t-0.1810%\t+1.6522%\t+0.0501%\tWithin 1%\n\nSeparate from the first-settled second-order results and historical first-order results. Δ = 100 × (candidate − reference) / |reference|. Fx refers to the 20 mm slice. A coefficient comparison does not by itself select a mesh or admit wave-force runs.",
+    "overflow": false,
+    "duplicateIds": [],
+    "tables": [
+      {
+        "rows": 4,
+        "width": 610,
+        "containerWidth": 318,
+        "headers": [
+          "Mesh",
+          "Endpoint stage",
+          "Saved physical time",
+          "First-settled time"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 610,
+        "containerWidth": 318,
+        "headers": [
+          "Mesh",
+          "Mean CD",
+          "Mean CL",
+          "Fx pressure [N]",
+          "Fx viscous [N]"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 637,
+        "containerWidth": 318,
+        "headers": [
+          "Candidate / reference",
+          "Δ CD",
+          "Δ CL",
+          "Δ Fx pressure",
+          "Δ Fx viscous",
+          "Coefficient test"
+        ]
+      }
+    ],
+    "originalConfiguredPresent": true,
+    "renderedPairRows": [
+      [
+        "M09 / M07",
+        "+0.4667%",
+        "-0.1643%",
+        "+1.5552%",
+        "+0.0516%",
+        "Within 1%"
+      ],
+      [
+        "M09 / M08",
+        "-0.0256%",
+        "+0.0167%",
+        "-0.0955%",
+        "+0.0015%",
+        "Within 1%"
+      ],
+      [
+        "M08 / M07",
+        "+0.4924%",
+        "-0.1810%",
+        "+1.6522%",
+        "+0.0501%",
+        "Within 1%"
+      ]
+    ],
+    "commonWindowValuesMatchSource": true,
+    "nextStageText": "Candidate mesh time-step check\n\nTime-step check running\n\nCase: M09_SO_dt05ms_common_t2040_r1\n\nSaved physical time: 1.750 s · Target: 2.040 s · Mean window: 1.840–2.040 s\n\n0.500 ms branch from the same t = 1.640 s checkpoint; reuse the recorded 1.000 ms baseline. Only Δt changes.\n\nTime-step acceptance pending. Wave propagation and domain checks remain separate.\n\nSaved update: 29 Oct · 23:22:07 local. Two-step sensitivity is a practical check, not a formal temporal-order estimate.",
+    "waveCaption": "W20_H24_X4_CPUprop_dt1ms_r2 · partial gauge traces through 0.420 s · plot saved 29 Oct · 23:14:04 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated.",
+    "errors": []
+  },
+  {
+    "kind": "professor",
+    "width": 1920,
+    "text": "Same-window mesh comparison · Common-window results ready for review\n\nAll three meshes are compared over 1.840–2.040 s at identical solver settings. The common window removes residual time drift.\n\nTarget: 2.040 s\nMean window: 1.840–2.040 s\nSaved update: 29 Oct · 23:14:56 local\n\nCommon settings: Second-order time · 1.000 ms · 10 inner iterations.\n\nMesh\tEndpoint stage\tSaved physical time\tFirst-settled time\nM07\tReused accepted endpoint\t2.040 s\t2.040 s\nM08\tEndpoint recorded\t2.040 s\t2.000 s\nM09\tEndpoint recorded\t2.040 s\t1.640 s\nMeans over the common window\nMesh\tMean CD\tMean CL\tFx pressure [N]\tFx viscous [N]\nM09\t0.0074652\t0.3139593\t8.0319\t20.7508\nM08\t0.0074671\t0.3139068\t8.0396\t20.7505\nM07\t0.0074305\t0.3144759\t7.9089\t20.7401\nCandidate minus finer reference\nCandidate / reference\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\tCoefficient test\nM09 / M07\t+0.4667%\t-0.1643%\t+1.5552%\t+0.0516%\tWithin 1%\nM09 / M08\t-0.0256%\t+0.0167%\t-0.0955%\t+0.0015%\tWithin 1%\nM08 / M07\t+0.4924%\t-0.1810%\t+1.6522%\t+0.0501%\tWithin 1%\n\nSeparate from the first-settled second-order results and historical first-order results. Δ = 100 × (candidate − reference) / |reference|. Fx refers to the 20 mm slice. A coefficient comparison does not by itself select a mesh or admit wave-force runs.",
+    "overflow": false,
+    "duplicateIds": [],
+    "tables": [
+      {
+        "rows": 4,
+        "width": 1414,
+        "containerWidth": 1414,
+        "headers": [
+          "Mesh",
+          "Endpoint stage",
+          "Saved physical time",
+          "First-settled time"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1414,
+        "containerWidth": 1414,
+        "headers": [
+          "Mesh",
+          "Mean CD",
+          "Mean CL",
+          "Fx pressure [N]",
+          "Fx viscous [N]"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1414,
+        "containerWidth": 1414,
+        "headers": [
+          "Candidate / reference",
+          "Δ CD",
+          "Δ CL",
+          "Δ Fx pressure",
+          "Δ Fx viscous",
+          "Coefficient test"
+        ]
+      }
+    ],
+    "originalConfiguredPresent": true,
+    "renderedPairRows": [
+      [
+        "M09 / M07",
+        "+0.4667%",
+        "-0.1643%",
+        "+1.5552%",
+        "+0.0516%",
+        "Within 1%"
+      ],
+      [
+        "M09 / M08",
+        "-0.0256%",
+        "+0.0167%",
+        "-0.0955%",
+        "+0.0015%",
+        "Within 1%"
+      ],
+      [
+        "M08 / M07",
+        "+0.4924%",
+        "-0.1810%",
+        "+1.6522%",
+        "+0.0501%",
+        "Within 1%"
+      ]
+    ],
+    "commonWindowValuesMatchSource": true,
+    "headline": "Current assessment\nCalculation settings\n\nHalving Δt from 1 to 0.5 ms changes both CD and CL by less than 0.001%.\n\nM04 calm-water screen, window 2.042–2.242 s. SO / 1 ms / 10 inner supported for calm mesh screening.\n\nMesh evidence\n\nM09: CD and CL are within 1% of M07, M08.\n\nCommon window 1.840–2.040 s. Time-step check running. Calm-template decision pending.\n\nWave cases\n\nFifthOrderVofWave · water depth 24 m.\n\nC01 / W01 / W02 follow configuration and mesh checks. No accepted wave-force results in this snapshot.",
+    "nextStageText": "Candidate mesh time-step check\n\nTime-step check running\n\nCase: M09_SO_dt05ms_common_t2040_r1\n\nSaved physical time: 1.750 s · Target: 2.040 s · Mean window: 1.840–2.040 s\n\n0.500 ms branch from the same t = 1.640 s checkpoint; reuse the recorded 1.000 ms baseline. Only Δt changes.\n\nTime-step acceptance pending. Wave propagation and domain checks remain separate.\n\nSaved update: 29 Oct · 23:22:07 local. Two-step sensitivity is a practical check, not a formal temporal-order estimate.",
+    "waveCaption": "W20_H24_X4_CPUprop_dt1ms_r2 · partial gauge traces through 0.420 s · plot saved 29 Oct · 23:14:04 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated.",
+    "errors": []
+  },
+  {
+    "kind": "professor",
+    "width": 1360,
+    "text": "Same-window mesh comparison · Common-window results ready for review\n\nAll three meshes are compared over 1.840–2.040 s at identical solver settings. The common window removes residual time drift.\n\nTarget: 2.040 s\nMean window: 1.840–2.040 s\nSaved update: 29 Oct · 23:14:56 local\n\nCommon settings: Second-order time · 1.000 ms · 10 inner iterations.\n\nMesh\tEndpoint stage\tSaved physical time\tFirst-settled time\nM07\tReused accepted endpoint\t2.040 s\t2.040 s\nM08\tEndpoint recorded\t2.040 s\t2.000 s\nM09\tEndpoint recorded\t2.040 s\t1.640 s\nMeans over the common window\nMesh\tMean CD\tMean CL\tFx pressure [N]\tFx viscous [N]\nM09\t0.0074652\t0.3139593\t8.0319\t20.7508\nM08\t0.0074671\t0.3139068\t8.0396\t20.7505\nM07\t0.0074305\t0.3144759\t7.9089\t20.7401\nCandidate minus finer reference\nCandidate / reference\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\tCoefficient test\nM09 / M07\t+0.4667%\t-0.1643%\t+1.5552%\t+0.0516%\tWithin 1%\nM09 / M08\t-0.0256%\t+0.0167%\t-0.0955%\t+0.0015%\tWithin 1%\nM08 / M07\t+0.4924%\t-0.1810%\t+1.6522%\t+0.0501%\tWithin 1%\n\nSeparate from the first-settled second-order results and historical first-order results. Δ = 100 × (candidate − reference) / |reference|. Fx refers to the 20 mm slice. A coefficient comparison does not by itself select a mesh or admit wave-force runs.",
+    "overflow": false,
+    "duplicateIds": [],
+    "tables": [
+      {
+        "rows": 4,
+        "width": 1224,
+        "containerWidth": 1224,
+        "headers": [
+          "Mesh",
+          "Endpoint stage",
+          "Saved physical time",
+          "First-settled time"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1224,
+        "containerWidth": 1224,
+        "headers": [
+          "Mesh",
+          "Mean CD",
+          "Mean CL",
+          "Fx pressure [N]",
+          "Fx viscous [N]"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 1224,
+        "containerWidth": 1224,
+        "headers": [
+          "Candidate / reference",
+          "Δ CD",
+          "Δ CL",
+          "Δ Fx pressure",
+          "Δ Fx viscous",
+          "Coefficient test"
+        ]
+      }
+    ],
+    "originalConfiguredPresent": true,
+    "renderedPairRows": [
+      [
+        "M09 / M07",
+        "+0.4667%",
+        "-0.1643%",
+        "+1.5552%",
+        "+0.0516%",
+        "Within 1%"
+      ],
+      [
+        "M09 / M08",
+        "-0.0256%",
+        "+0.0167%",
+        "-0.0955%",
+        "+0.0015%",
+        "Within 1%"
+      ],
+      [
+        "M08 / M07",
+        "+0.4924%",
+        "-0.1810%",
+        "+1.6522%",
+        "+0.0501%",
+        "Within 1%"
+      ]
+    ],
+    "commonWindowValuesMatchSource": true,
+    "headline": "Current assessment\nCalculation settings\n\nHalving Δt from 1 to 0.5 ms changes both CD and CL by less than 0.001%.\n\nM04 calm-water screen, window 2.042–2.242 s. SO / 1 ms / 10 inner supported for calm mesh screening.\n\nMesh evidence\n\nM09: CD and CL are within 1% of M07, M08.\n\nCommon window 1.840–2.040 s. Time-step check running. Calm-template decision pending.\n\nWave cases\n\nFifthOrderVofWave · water depth 24 m.\n\nC01 / W01 / W02 follow configuration and mesh checks. No accepted wave-force results in this snapshot.",
+    "nextStageText": "Candidate mesh time-step check\n\nTime-step check running\n\nCase: M09_SO_dt05ms_common_t2040_r1\n\nSaved physical time: 1.750 s · Target: 2.040 s · Mean window: 1.840–2.040 s\n\n0.500 ms branch from the same t = 1.640 s checkpoint; reuse the recorded 1.000 ms baseline. Only Δt changes.\n\nTime-step acceptance pending. Wave propagation and domain checks remain separate.\n\nSaved update: 29 Oct · 23:22:07 local. Two-step sensitivity is a practical check, not a formal temporal-order estimate.",
+    "waveCaption": "W20_H24_X4_CPUprop_dt1ms_r2 · partial gauge traces through 0.420 s · plot saved 29 Oct · 23:14:04 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated.",
+    "intentionalPrintPages": 18,
+    "printEndpointPage": 6,
+    "errors": []
+  },
+  {
+    "kind": "professor",
+    "width": 390,
+    "text": "Same-window mesh comparison · Common-window results ready for review\n\nAll three meshes are compared over 1.840–2.040 s at identical solver settings. The common window removes residual time drift.\n\nTarget: 2.040 s\nMean window: 1.840–2.040 s\nSaved update: 29 Oct · 23:14:56 local\n\nCommon settings: Second-order time · 1.000 ms · 10 inner iterations.\n\nScroll tables horizontally to view all columns.\n\nMesh\tEndpoint stage\tSaved physical time\tFirst-settled time\nM07\tReused accepted endpoint\t2.040 s\t2.040 s\nM08\tEndpoint recorded\t2.040 s\t2.000 s\nM09\tEndpoint recorded\t2.040 s\t1.640 s\nMeans over the common window\nMesh\tMean CD\tMean CL\tFx pressure [N]\tFx viscous [N]\nM09\t0.0074652\t0.3139593\t8.0319\t20.7508\nM08\t0.0074671\t0.3139068\t8.0396\t20.7505\nM07\t0.0074305\t0.3144759\t7.9089\t20.7401\nCandidate minus finer reference\nCandidate / reference\tΔ CD\tΔ CL\tΔ Fx pressure\tΔ Fx viscous\tCoefficient test\nM09 / M07\t+0.4667%\t-0.1643%\t+1.5552%\t+0.0516%\tWithin 1%\nM09 / M08\t-0.0256%\t+0.0167%\t-0.0955%\t+0.0015%\tWithin 1%\nM08 / M07\t+0.4924%\t-0.1810%\t+1.6522%\t+0.0501%\tWithin 1%\n\nSeparate from the first-settled second-order results and historical first-order results. Δ = 100 × (candidate − reference) / |reference|. Fx refers to the 20 mm slice. A coefficient comparison does not by itself select a mesh or admit wave-force runs.",
+    "overflow": false,
+    "duplicateIds": [],
+    "tables": [
+      {
+        "rows": 4,
+        "width": 610,
+        "containerWidth": 314,
+        "headers": [
+          "Mesh",
+          "Endpoint stage",
+          "Saved physical time",
+          "First-settled time"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 610,
+        "containerWidth": 314,
+        "headers": [
+          "Mesh",
+          "Mean CD",
+          "Mean CL",
+          "Fx pressure [N]",
+          "Fx viscous [N]"
+        ]
+      },
+      {
+        "rows": 4,
+        "width": 610,
+        "containerWidth": 314,
+        "headers": [
+          "Candidate / reference",
+          "Δ CD",
+          "Δ CL",
+          "Δ Fx pressure",
+          "Δ Fx viscous",
+          "Coefficient test"
+        ]
+      }
+    ],
+    "originalConfiguredPresent": true,
+    "renderedPairRows": [
+      [
+        "M09 / M07",
+        "+0.4667%",
+        "-0.1643%",
+        "+1.5552%",
+        "+0.0516%",
+        "Within 1%"
+      ],
+      [
+        "M09 / M08",
+        "-0.0256%",
+        "+0.0167%",
+        "-0.0955%",
+        "+0.0015%",
+        "Within 1%"
+      ],
+      [
+        "M08 / M07",
+        "+0.4924%",
+        "-0.1810%",
+        "+1.6522%",
+        "+0.0501%",
+        "Within 1%"
+      ]
+    ],
+    "commonWindowValuesMatchSource": true,
+    "headline": "Current assessment\nCalculation settings\n\nHalving Δt from 1 to 0.5 ms changes both CD and CL by less than 0.001%.\n\nM04 calm-water screen, window 2.042–2.242 s. SO / 1 ms / 10 inner supported for calm mesh screening.\n\nMesh evidence\n\nM09: CD and CL are within 1% of M07, M08.\n\nCommon window 1.840–2.040 s. Time-step check running. Calm-template decision pending.\n\nWave cases\n\nFifthOrderVofWave · water depth 24 m.\n\nC01 / W01 / W02 follow configuration and mesh checks. No accepted wave-force results in this snapshot.",
+    "nextStageText": "Candidate mesh time-step check\n\nTime-step check running\n\nCase: M09_SO_dt05ms_common_t2040_r1\n\nSaved physical time: 1.750 s · Target: 2.040 s · Mean window: 1.840–2.040 s\n\n0.500 ms branch from the same t = 1.640 s checkpoint; reuse the recorded 1.000 ms baseline. Only Δt changes.\n\nTime-step acceptance pending. Wave propagation and domain checks remain separate.\n\nSaved update: 29 Oct · 23:22:07 local. Two-step sensitivity is a practical check, not a formal temporal-order estimate.",
+    "waveCaption": "W20_H24_X4_CPUprop_dt1ms_r2 · partial gauge traces through 0.420 s · plot saved 29 Oct · 23:14:04 local. Computed elevation and fifth-order reference; wave height, phase and reflections are not yet validated.",
+    "errors": []
+  }
+]

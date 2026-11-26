@@ -1,0 +1,1460 @@
+{
+  "updated_at": "2026-10-30T09:48:37.766621+01:00",
+  "queue": {
+    "status": "running",
+    "active": "W01_W20L4_M10_FS020_diagnostic_r1",
+    "updated_at": "2026-10-30T09:48:37.497338+01:00",
+    "purpose": "Exploratory W01 with outlet diagnosis and saved inspection scenes"
+  },
+  "jobs": {
+    "M03_FO1_dt1ms_to1p2_r1": {
+      "rows": 1000,
+      "last": {
+        "wall_seconds": 1254.5641827000002,
+        "step": 1000.0,
+        "iteration": 24000.0,
+        "physical_time_s": 1.1999999999999786,
+        "dt_s": 0.001,
+        "Fx_slice_N": 64.29026615524839,
+        "Fz_slice_N": 1140.2347595059246,
+        "pressure_drag_N": 53.2799520160546,
+        "viscous_drag_N": 11.010314139193795,
+        "CD": 0.016674516587625372,
+        "CL_total": 0.29573471301637216,
+        "max_velocity_m_s": 21.969567609151493,
+        "max_CFL": 45.236498923721975,
+        "interface_max_CFL": 1.4018722790077984,
+        "mean_yplus": 42.63610197447189
+      },
+      "windows": [
+        {
+          "start": 0.7999999999999786,
+          "end": 0.9999999999999787,
+          "n": 200,
+          "CD": {
+            "mean": 0.016777313077677564,
+            "rms_fluctuation": 2.893521696843198e-05,
+            "range": 9.960463526034052e-05,
+            "drift_endpoints_pct": -0.5936864550311444
+          },
+          "CL_total": {
+            "mean": 0.2931808277209592,
+            "rms_fluctuation": 0.000747972425319601,
+            "range": 0.0025967239742188397,
+            "drift_endpoints_pct": 0.885707293483162
+          },
+          "pressure_drag_N": {
+            "mean": 53.60491020484133,
+            "rms_fluctuation": 0.09064037948056393,
+            "range": 0.31094292254378786,
+            "drift_endpoints_pct": -0.5800642541057834
+          },
+          "viscous_drag_N": {
+            "mean": 11.081698097452291,
+            "rms_fluctuation": 0.020930484224798984,
+            "range": 0.07309270916598187,
+            "drift_endpoints_pct": -0.659580404764736
+          }
+        },
+        {
+          "start": 0.9999999999999787,
+          "end": 1.1999999999999786,
+          "n": 200,
+          "CD": {
+            "mean": 0.016700208227045567,
+            "rms_fluctuation": 1.6420672237827628e-05,
+            "range": 5.6773003353792484e-05,
+            "drift_endpoints_pct": -0.3399538651371426
+          },
+          "CL_total": {
+            "mean": 0.29511062574283514,
+            "rms_fluctuation": 0.0004027019845880738,
+            "range": 0.0013893741879653088,
+            "drift_endpoints_pct": 0.47079775066318186
+          },
+          "pressure_drag_N": {
+            "mean": 53.361216713433855,
+            "rms_fluctuation": 0.051979856504585774,
+            "range": 0.17991258952678635,
+            "drift_endpoints_pct": -0.33715983369152225
+          },
+          "viscous_drag_N": {
+            "mean": 11.028106126763038,
+            "rms_fluctuation": 0.011333072348562684,
+            "range": 0.038981402204086635,
+            "drift_endpoints_pct": -0.3534732233804539
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4595780639903887,
+        "CL_total": 0.6582279055820978
+      },
+      "settling_screen_pass": false,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M02_FO1_dt1ms_to1p2": {
+      "rows": 1000,
+      "last": {
+        "wall_seconds": 1023.2579546000001,
+        "step": 1000.0,
+        "iteration": 24000.0,
+        "physical_time_s": 1.1999999999999786,
+        "dt_s": 0.001,
+        "Fx_slice_N": 93.88841278505328,
+        "Fz_slice_N": 1069.950744607812,
+        "pressure_drag_N": 82.33529372600634,
+        "viscous_drag_N": 11.553119059046935,
+        "CD": 0.024351180824010082,
+        "CL_total": 0.27750563974681297,
+        "max_velocity_m_s": 22.137392494681276,
+        "max_CFL": 48.68525830656792,
+        "interface_max_CFL": 1.2310795812303659,
+        "mean_yplus": 44.19849860592676
+      },
+      "windows": [
+        {
+          "start": 0.7999999999999786,
+          "end": 0.9999999999999787,
+          "n": 200,
+          "CD": {
+            "mean": 0.024649651838885785,
+            "rms_fluctuation": 8.706422050408661e-05,
+            "range": 0.0003017813213741921,
+            "drift_endpoints_pct": -1.2242822874200614
+          },
+          "CL_total": {
+            "mean": 0.27500097781345445,
+            "rms_fluctuation": 0.0007224694679826412,
+            "range": 0.0024896290175543956,
+            "drift_endpoints_pct": 0.9053164237267632
+          },
+          "pressure_drag_N": {
+            "mean": 83.40917595723757,
+            "rms_fluctuation": 0.31038979015489876,
+            "range": 1.0787137139417666,
+            "drift_endpoints_pct": -1.2932794282667466
+          },
+          "viscous_drag_N": {
+            "mean": 11.630021672770479,
+            "rms_fluctuation": 0.025375529382649812,
+            "range": 0.0848343487485721,
+            "drift_endpoints_pct": -0.7294427399666491
+          }
+        },
+        {
+          "start": 0.9999999999999787,
+          "end": 1.1999999999999786,
+          "n": 200,
+          "CD": {
+            "mean": 0.024424670093651155,
+            "rms_fluctuation": 4.68284332579965e-05,
+            "range": 0.00016281337017235234,
+            "drift_endpoints_pct": -0.6665939378017366
+          },
+          "CL_total": {
+            "mean": 0.2768824562772315,
+            "rms_fluctuation": 0.000400368220814078,
+            "range": 0.0013741138195076386,
+            "drift_endpoints_pct": 0.49528320104995227
+          },
+          "pressure_drag_N": {
+            "mean": 82.60185633034281,
+            "rms_fluctuation": 0.16975006611731697,
+            "range": 0.5902594501797296,
+            "drift_endpoints_pct": -0.7145837592549416
+          },
+          "viscous_drag_N": {
+            "mean": 11.569901682738594,
+            "rms_fluctuation": 0.01080200692922221,
+            "range": 0.037483779856804844,
+            "drift_endpoints_pct": -0.3239766497992612
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.9127177402145397,
+        "CL_total": 0.6841715541292933
+      },
+      "settling_screen_pass": false,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M03_until_settled_r1": {
+      "rows": 516,
+      "last": {
+        "wall_seconds": 680.7247458,
+        "step": 516.0,
+        "iteration": 34320.0,
+        "physical_time_s": 1.7159999999999218,
+        "dt_s": 0.001,
+        "Fx_slice_N": 64.06349750503252,
+        "Fz_slice_N": 1145.6395967529074,
+        "pressure_drag_N": 53.08864688799502,
+        "viscous_drag_N": 10.9748506170375,
+        "CD": 0.016615701189187808,
+        "CL_total": 0.2971365278433726,
+        "max_velocity_m_s": 21.967737088980826,
+        "max_CFL": 45.255037650756584,
+        "interface_max_CFL": 1.4018722242596617,
+        "mean_yplus": 42.563888245502355
+      },
+      "windows": [
+        {
+          "start": 1.3159999999999217,
+          "end": 1.5159999999999219,
+          "n": 200,
+          "CD": {
+            "mean": 0.016641462389869556,
+            "rms_fluctuation": 6.749735254994135e-06,
+            "range": 2.3253042588992218e-05,
+            "drift_endpoints_pct": -0.13965273406761816
+          },
+          "CL_total": {
+            "mean": 0.29652486675922823,
+            "rms_fluctuation": 0.000157027446361901,
+            "range": 0.0005436567684192761,
+            "drift_endpoints_pct": 0.1833427241232735
+          },
+          "pressure_drag_N": {
+            "mean": 53.17267119546776,
+            "rms_fluctuation": 0.021878100611832974,
+            "range": 0.07535804053577522,
+            "drift_endpoints_pct": -0.14153425871143588
+          },
+          "viscous_drag_N": {
+            "mean": 10.990151194913315,
+            "rms_fluctuation": 0.00414635042502327,
+            "range": 0.014347589709545971,
+            "drift_endpoints_pct": -0.13054952070346962
+          }
+        },
+        {
+          "start": 1.5159999999999219,
+          "end": 1.7159999999999218,
+          "n": 200,
+          "CD": {
+            "mean": 0.016622694816706668,
+            "rms_fluctuation": 4.378874580346718e-06,
+            "range": 1.4987495784688637e-05,
+            "drift_endpoints_pct": -0.09005451720965471
+          },
+          "CL_total": {
+            "mean": 0.2969665372263258,
+            "rms_fluctuation": 0.00010406413826731829,
+            "range": 0.0003595330601267599,
+            "drift_endpoints_pct": 0.12106854310415134
+          },
+          "pressure_drag_N": {
+            "mean": 53.11155559442098,
+            "rms_fluctuation": 0.014366971983437992,
+            "range": 0.04914908476636981,
+            "drift_endpoints_pct": -0.09224900834804983
+          },
+          "viscous_drag_N": {
+            "mean": 10.97890654087326,
+            "rms_fluctuation": 0.002516358263307557,
+            "range": 0.008721472899306804,
+            "drift_endpoints_pct": -0.07943844741584893
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.11277598520616061,
+        "CL_total": 0.1489488797093752
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M02_until_settled_r1": {
+      "rows": 200,
+      "last": {
+        "wall_seconds": 209.5711881,
+        "step": 200.0,
+        "iteration": 28000.0,
+        "physical_time_s": 1.3999999999999566,
+        "dt_s": 0.001,
+        "Fx_slice_N": 93.54667334129874,
+        "Fz_slice_N": 1072.8862913374653,
+        "pressure_drag_N": 82.01403197758421,
+        "viscous_drag_N": 11.53264136371454,
+        "CD": 0.02426254625513506,
+        "CL_total": 0.2782670119663516,
+        "max_velocity_m_s": 22.1370545465903,
+        "max_CFL": 48.644170444451866,
+        "interface_max_CFL": 1.2304275054850728,
+        "mean_yplus": 44.15831544954987,
+        "min_yplus": 3.175771572478885,
+        "max_yplus": 340.2246051462262
+      },
+      "windows": [
+        {
+          "start": 1.1999999999999567,
+          "end": 1.3999999999999566,
+          "n": 200,
+          "CD": {
+            "mean": 0.02430283824615895,
+            "rms_fluctuation": 2.530983584338106e-05,
+            "range": 8.90847798563077e-05,
+            "drift_endpoints_pct": -0.3665612178873284
+          },
+          "CL_total": {
+            "mean": 0.2779324914728176,
+            "rms_fluctuation": 0.00021885905111100859,
+            "range": 0.0007626661173116833,
+            "drift_endpoints_pct": 0.26859444984285574
+          },
+          "pressure_drag_N": {
+            "mean": 82.16012825522151,
+            "rms_fluctuation": 0.09172727479329701,
+            "range": 0.3229936142380865,
+            "drift_endpoints_pct": -0.3931269596302746
+          },
+          "viscous_drag_N": {
+            "mean": 11.54189488666895,
+            "rms_fluctuation": 0.005857774777208287,
+            "range": 0.020481662975884163,
+            "drift_endpoints_pct": -0.177454942858133
+          }
+        }
+      ],
+      "window_mean_shift_pct": {},
+      "settling_screen_pass": false,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M04_until_settled_r1": {
+      "rows": 102,
+      "last": {
+        "wall_seconds": 134.6059232,
+        "step": 102.0,
+        "iteration": 2040.0,
+        "physical_time_s": 0.10200000000000008,
+        "dt_s": 0.001,
+        "Fx_slice_N": 38.402066977353286,
+        "Fz_slice_N": 897.7520417292944,
+        "pressure_drag_N": 18.014879584459564,
+        "viscous_drag_N": 20.38718739289372,
+        "CD": 0.009960075468760578,
+        "CL_total": 0.23284366680394603,
+        "max_velocity_m_s": 21.995614011435592,
+        "max_CFL": 25.19683689254371,
+        "interface_max_CFL": 1.4011867037843782,
+        "mean_yplus": 1.4099964662578441,
+        "min_yplus": 0.23714476895288078,
+        "max_yplus": 284.7693625166888
+      },
+      "windows": [],
+      "window_mean_shift_pct": {},
+      "settling_screen_pass": false,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M04_until_settled_r2": {
+      "rows": 1540,
+      "last": {
+        "wall_seconds": 2035.3541851000002,
+        "step": 1540.0,
+        "iteration": 32840.0,
+        "physical_time_s": 1.64199999999993,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.125013110252056,
+        "Fz_slice_N": 1226.6998632774228,
+        "pressure_drag_N": 8.126301817288176,
+        "viscous_drag_N": 19.99871129296388,
+        "CD": 0.007294587900781215,
+        "CL_total": 0.31816056211158383,
+        "max_velocity_m_s": 22.217849724969373,
+        "max_CFL": 27.074769378297315,
+        "interface_max_CFL": 1.4011854829931611,
+        "mean_yplus": 1.4088750598589295,
+        "min_yplus": 0.17513777767624453,
+        "max_yplus": 293.9153297749471
+      },
+      "windows": [
+        {
+          "start": 1.2419999999999298,
+          "end": 1.44199999999993,
+          "n": 200,
+          "CD": {
+            "mean": 0.007343774092855138,
+            "rms_fluctuation": 1.3281330691428458e-05,
+            "range": 4.6005809632237125e-05,
+            "drift_endpoints_pct": -0.6264600333634559
+          },
+          "CL_total": {
+            "mean": 0.31718334964944167,
+            "rms_fluctuation": 0.00026612734744118477,
+            "range": 0.0009216516058282997,
+            "drift_endpoints_pct": 0.29057376651294287
+          },
+          "pressure_drag_N": {
+            "mean": 8.311832238174732,
+            "rms_fluctuation": 0.05008064526607411,
+            "range": 0.17348273222533095,
+            "drift_endpoints_pct": -2.0871779801877657
+          },
+          "viscous_drag_N": {
+            "mean": 20.00282315423754,
+            "rms_fluctuation": 0.001126884820969357,
+            "range": 0.003897267392723336,
+            "drift_endpoints_pct": -0.01948358670509823
+          }
+        },
+        {
+          "start": 1.44199999999993,
+          "end": 1.64199999999993,
+          "n": 200,
+          "CD": {
+            "mean": 0.007307661327439915,
+            "rms_fluctuation": 8.140189596801646e-06,
+            "range": 2.8126458542490282e-05,
+            "drift_endpoints_pct": -0.3848900117589849
+          },
+          "CL_total": {
+            "mean": 0.31790137645391037,
+            "rms_fluctuation": 0.00016098677374354494,
+            "range": 0.0005569979261708657,
+            "drift_endpoints_pct": 0.17521091993498172
+          },
+          "pressure_drag_N": {
+            "mean": 8.175658228081103,
+            "rms_fluctuation": 0.030715226969972177,
+            "range": 0.1061337290687483,
+            "drift_endpoints_pct": -1.2981673904152278
+          },
+          "viscous_drag_N": {
+            "mean": 19.999760785996234,
+            "rms_fluctuation": 0.0006701838009265064,
+            "range": 0.0023106444876788146,
+            "drift_endpoints_pct": -0.011553360624676672
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.49174668172809965,
+        "CL_total": 0.2263759447847046
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M05_until_settled_r1": {
+      "rows": 1340,
+      "last": {
+        "wall_seconds": 2116.0495531,
+        "step": 1340.0,
+        "iteration": 26800.0,
+        "physical_time_s": 1.3399999999999632,
+        "dt_s": 0.001,
+        "Fx_slice_N": 50.8443366794977,
+        "Fz_slice_N": 1156.979219531108,
+        "pressure_drag_N": 38.86104048910963,
+        "viscous_drag_N": 11.983296190388078,
+        "CD": 0.013187139921023367,
+        "CL_total": 0.30007760647658155,
+        "max_velocity_m_s": 22.159196477395163,
+        "max_CFL": 43.94331734089171,
+        "interface_max_CFL": 1.4399860758128178,
+        "mean_yplus": 44.77975094160849,
+        "min_yplus": 5.339569854254071,
+        "max_yplus": 240.98908848895678
+      },
+      "windows": [
+        {
+          "start": 0.9399999999999632,
+          "end": 1.1399999999999633,
+          "n": 200,
+          "CD": {
+            "mean": 0.013271406014474907,
+            "rms_fluctuation": 2.347830685523698e-05,
+            "range": 8.097253634730024e-05,
+            "drift_endpoints_pct": -0.6101277909739542
+          },
+          "CL_total": {
+            "mean": 0.29807978776792143,
+            "rms_fluctuation": 0.0005828537165157024,
+            "range": 0.002009881898014876,
+            "drift_endpoints_pct": 0.6742764791485047
+          },
+          "pressure_drag_N": {
+            "mean": 39.14832922327112,
+            "rms_fluctuation": 0.07961854655678174,
+            "range": 0.27448093139627616,
+            "drift_endpoints_pct": -0.7011306404185321
+          },
+          "viscous_drag_N": {
+            "mean": 12.020903806138339,
+            "rms_fluctuation": 0.010905531767438387,
+            "range": 0.03771677974436649,
+            "drift_endpoints_pct": -0.3137599331350347
+          }
+        },
+        {
+          "start": 1.1399999999999633,
+          "end": 1.3399999999999632,
+          "n": 200,
+          "CD": {
+            "mean": 0.013209276026563736,
+            "rms_fluctuation": 1.3850929557637769e-05,
+            "range": 4.763631072457648e-05,
+            "drift_endpoints_pct": -0.3606277181942469
+          },
+          "CL_total": {
+            "mean": 0.2995693237381866,
+            "rms_fluctuation": 0.00031844705345875573,
+            "range": 0.0010988701953507096,
+            "drift_endpoints_pct": 0.3668166625468917
+          },
+          "pressure_drag_N": {
+            "mean": 38.93657903378014,
+            "rms_fluctuation": 0.04731907097684093,
+            "range": 0.16277332658128785,
+            "drift_endpoints_pct": -0.41804732367491987
+          },
+          "viscous_drag_N": {
+            "mean": 11.993105614239003,
+            "rms_fluctuation": 0.006085078946027337,
+            "range": 0.02089323304838686,
+            "drift_endpoints_pct": -0.17421036485813185
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4681492514312833,
+        "CL_total": 0.49971049074448104
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M06_until_settled_r1": {
+      "rows": 1600,
+      "last": {
+        "wall_seconds": 2813.532619299,
+        "step": 1600.0,
+        "iteration": 32000.0,
+        "physical_time_s": 1.5999999999999346,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.3794782376048,
+        "Fz_slice_N": 1210.0448659018227,
+        "pressure_drag_N": 8.063559002766153,
+        "viscous_drag_N": 20.31591923483865,
+        "CD": 0.007360586740741985,
+        "CL_total": 0.3138408719529574,
+        "max_velocity_m_s": 22.18913141421711,
+        "max_CFL": 43.76903700187169,
+        "interface_max_CFL": 2.7251539834007796,
+        "mean_yplus": 0.9771790768016624,
+        "min_yplus": 0.10738773018081975,
+        "max_yplus": 252.44361616881147
+      },
+      "windows": [
+        {
+          "start": 1.1999999999999345,
+          "end": 1.3999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007411188675851153,
+            "rms_fluctuation": 1.446687721693917e-05,
+            "range": 4.984216774705109e-05,
+            "drift_endpoints_pct": -0.6725259594248134
+          },
+          "CL_total": {
+            "mean": 0.31282487516159185,
+            "rms_fluctuation": 0.0003049272188568615,
+            "range": 0.0010494477458895535,
+            "drift_endpoints_pct": 0.3354745192010239
+          },
+          "pressure_drag_N": {
+            "mean": 8.253883443287343,
+            "rms_fluctuation": 0.05467596802092323,
+            "range": 0.1883304900027145,
+            "drift_endpoints_pct": -2.2817197661771993
+          },
+          "viscous_drag_N": {
+            "mean": 20.320695615324365,
+            "rms_fluctuation": 0.0011025735847653307,
+            "range": 0.0038409719628127448,
+            "drift_endpoints_pct": -0.018901774011693614
+          }
+        },
+        {
+          "start": 1.3999999999999346,
+          "end": 1.5999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007374404000688209,
+            "rms_fluctuation": 8.249956966377691e-06,
+            "range": 2.8545167922991097e-05,
+            "drift_endpoints_pct": -0.3870844060120268
+          },
+          "CL_total": {
+            "mean": 0.3135788789536546,
+            "rms_fluctuation": 0.0001579928603312348,
+            "range": 0.0005514045526541222,
+            "drift_endpoints_pct": 0.1758423764043168
+          },
+          "pressure_drag_N": {
+            "mean": 8.115318013660778,
+            "rms_fluctuation": 0.03090223282752739,
+            "range": 0.10700417066437318,
+            "drift_endpoints_pct": -1.318545625497973
+          },
+          "viscous_drag_N": {
+            "mean": 20.317434051392684,
+            "rms_fluctuation": 0.000906613808611136,
+            "range": 0.0030545787795084323,
+            "drift_endpoints_pct": -0.01503427436644763
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4963397475334002,
+        "CL_total": 0.24103063788430057
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M07_until_settled_r1": {
+      "rows": 1640,
+      "last": {
+        "wall_seconds": 4057.6871178,
+        "step": 1640.0,
+        "iteration": 32800.0,
+        "physical_time_s": 1.6399999999999302,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.759971892034574,
+        "Fz_slice_N": 1210.3173383263609,
+        "pressure_drag_N": 8.017838186265369,
+        "viscous_drag_N": 20.742133705769206,
+        "CD": 0.007459272718133254,
+        "CL_total": 0.3139115412196184,
+        "max_velocity_m_s": 22.189518122009268,
+        "max_CFL": 47.69499653195611,
+        "interface_max_CFL": 4.098086310422287,
+        "mean_yplus": 0.8203838103288568,
+        "min_yplus": 0.12345463011244058,
+        "max_yplus": 220.1146908877711
+      },
+      "windows": [
+        {
+          "start": 1.23999999999993,
+          "end": 1.4399999999999302,
+          "n": 200,
+          "CD": {
+            "mean": 0.00751089979031031,
+            "rms_fluctuation": 1.3722864452881185e-05,
+            "range": 4.7745048025469965e-05,
+            "drift_endpoints_pct": -0.6356768078182201
+          },
+          "CL_total": {
+            "mean": 0.31287144406104617,
+            "rms_fluctuation": 0.00028076682051489784,
+            "range": 0.0009701730881896409,
+            "drift_endpoints_pct": 0.31008681252493747
+          },
+          "pressure_drag_N": {
+            "mean": 8.212199762017681,
+            "rms_fluctuation": 0.051594015447181125,
+            "range": 0.17949846244210121,
+            "drift_endpoints_pct": -2.1857537279146713
+          },
+          "viscous_drag_N": {
+            "mean": 20.746825469502753,
+            "rms_fluctuation": 0.001315876701725209,
+            "range": 0.004587344724900078,
+            "drift_endpoints_pct": -0.022111068180736108
+          }
+        },
+        {
+          "start": 1.4399999999999302,
+          "end": 1.6399999999999302,
+          "n": 200,
+          "CD": {
+            "mean": 0.0074735656426907745,
+            "rms_fluctuation": 8.79914993558607e-06,
+            "range": 3.024057501342138e-05,
+            "drift_endpoints_pct": -0.40463383154996413
+          },
+          "CL_total": {
+            "mean": 0.3136295312452199,
+            "rms_fluctuation": 0.00017386796957545193,
+            "range": 0.0005999029932338695,
+            "drift_endpoints_pct": 0.19127758500675715
+          },
+          "pressure_drag_N": {
+            "mean": 8.071747472327603,
+            "rms_fluctuation": 0.03315436392365493,
+            "range": 0.1139434491002671,
+            "drift_endpoints_pct": -1.4116329765134474
+          },
+          "viscous_drag_N": {
+            "mean": 20.74333221963095,
+            "rms_fluctuation": 0.0007721550867033694,
+            "range": 0.0026521119214812927,
+            "drift_endpoints_pct": -0.012785370708045658
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.49706624588041604,
+        "CL_total": 0.2422998961918159
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M08_until_settled_r1": {
+      "rows": 1,
+      "last": {
+        "wall_seconds": 3.4097510000000004,
+        "step": 1.0,
+        "iteration": 20.0,
+        "physical_time_s": 0.001,
+        "dt_s": 0.001,
+        "Fx_slice_N": 5524.022672776746,
+        "Fz_slice_N": 1004.2812773699673,
+        "pressure_drag_N": 5435.352970453205,
+        "viscous_drag_N": 88.66970232354076,
+        "CD": 1.4327271171223015,
+        "CL_total": 0.26047340942264946,
+        "max_velocity_m_s": 114.13460510335455,
+        "max_CFL": 33959.780968527426,
+        "interface_max_CFL": 2.72490976812169,
+        "mean_yplus": 1.3546154399166348,
+        "min_yplus": 0.46177411695378257,
+        "max_yplus": 46.49103639596585
+      },
+      "windows": [],
+      "window_mean_shift_pct": {},
+      "settling_screen_pass": false,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M08_startup_r2": {
+      "rows": 40,
+      "last": {
+        "wall_seconds": 152.8931245,
+        "step": 40.0,
+        "iteration": 2000.0,
+        "physical_time_s": 0.020000000000000014,
+        "dt_s": 0.0005,
+        "Fx_slice_N": 42.14490761487812,
+        "Fz_slice_N": 686.3593312248812,
+        "pressure_drag_N": 17.968737795613833,
+        "viscous_drag_N": 24.176169819264288,
+        "CD": 0.010930829861727907,
+        "CL_total": 0.1780162182863578,
+        "max_velocity_m_s": 22.937167534562448,
+        "max_CFL": 30.307212226804527,
+        "interface_max_CFL": 1.3625779540865581,
+        "mean_yplus": 0.9563483267234028,
+        "min_yplus": 0.16166100320986454,
+        "max_yplus": 215.38763286202197
+      },
+      "windows": [],
+      "window_mean_shift_pct": {},
+      "settling_screen_pass": false,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M08_until_settled_r3": {
+      "rows": 1580,
+      "last": {
+        "wall_seconds": 2617.3674203,
+        "step": 1580.0,
+        "iteration": 33600.0,
+        "physical_time_s": 1.5999999999999346,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.899910500169746,
+        "Fz_slice_N": 1208.088431396578,
+        "pressure_drag_N": 8.147484260926136,
+        "viscous_drag_N": 20.75242623924361,
+        "CD": 0.007495567615979288,
+        "CL_total": 0.3133334452216459,
+        "max_velocity_m_s": 22.190117299182003,
+        "max_CFL": 43.77362049378784,
+        "interface_max_CFL": 2.725153989681232,
+        "mean_yplus": 0.9393405028621643,
+        "min_yplus": 0.10584371480568558,
+        "max_yplus": 253.60708336933433
+      },
+      "windows": [
+        {
+          "start": 1.1999999999999345,
+          "end": 1.3999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007548585249999513,
+            "rms_fluctuation": 1.374754602044231e-05,
+            "range": 4.7702076584524473e-05,
+            "drift_endpoints_pct": -0.6319339982883223
+          },
+          "CL_total": {
+            "mean": 0.31228751088454293,
+            "rms_fluctuation": 0.0002899900424262146,
+            "range": 0.0010027131083578666,
+            "drift_endpoints_pct": 0.3210865223260829
+          },
+          "pressure_drag_N": {
+            "mean": 8.346485485130952,
+            "rms_fluctuation": 0.05191064532741366,
+            "range": 0.18001794219234313,
+            "drift_endpoints_pct": -2.1568113011523287
+          },
+          "viscous_drag_N": {
+            "mean": 20.757839804767173,
+            "rms_fluctuation": 0.0010957444547579109,
+            "range": 0.0039021842869537693,
+            "drift_endpoints_pct": -0.018798604882082227
+          }
+        },
+        {
+          "start": 1.3999999999999346,
+          "end": 1.5999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007511566547681655,
+            "rms_fluctuation": 9.387776734070036e-06,
+            "range": 3.215066786697515e-05,
+            "drift_endpoints_pct": -0.4280154833600992
+          },
+          "CL_total": {
+            "mean": 0.3130286438806646,
+            "rms_fluctuation": 0.00017616232889964946,
+            "range": 0.0006103131629332514,
+            "drift_endpoints_pct": 0.19497038844979317
+          },
+          "pressure_drag_N": {
+            "mean": 8.207497798040137,
+            "rms_fluctuation": 0.03511299727419811,
+            "range": 0.12037187969586505,
+            "drift_endpoints_pct": -1.4666087357904447
+          },
+          "viscous_drag_N": {
+            "mean": 20.754098183201254,
+            "rms_fluctuation": 0.0010842144550478065,
+            "range": 0.0035882353320424443,
+            "drift_endpoints_pct": -0.017289285712962597
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4904058322433405,
+        "CL_total": 0.23732393076573277
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    }
+  },
+  "meshes": {
+    "M03": {
+      "rows": 1716,
+      "last": {
+        "wall_seconds": 680.7247458,
+        "step": 516.0,
+        "iteration": 34320.0,
+        "physical_time_s": 1.7159999999999218,
+        "dt_s": 0.001,
+        "Fx_slice_N": 64.06349750503252,
+        "Fz_slice_N": 1145.6395967529074,
+        "pressure_drag_N": 53.08864688799502,
+        "viscous_drag_N": 10.9748506170375,
+        "CD": 0.016615701189187808,
+        "CL_total": 0.2971365278433726,
+        "max_velocity_m_s": 21.967737088980826,
+        "max_CFL": 45.255037650756584,
+        "interface_max_CFL": 1.4018722242596617,
+        "mean_yplus": 42.563888245502355
+      },
+      "windows": [
+        {
+          "start": 1.3159999999999217,
+          "end": 1.5159999999999219,
+          "n": 200,
+          "CD": {
+            "mean": 0.016641462389869556,
+            "rms_fluctuation": 6.749735254994135e-06,
+            "range": 2.3253042588992218e-05,
+            "drift_endpoints_pct": -0.13965273406761816
+          },
+          "CL_total": {
+            "mean": 0.29652486675922823,
+            "rms_fluctuation": 0.000157027446361901,
+            "range": 0.0005436567684192761,
+            "drift_endpoints_pct": 0.1833427241232735
+          },
+          "pressure_drag_N": {
+            "mean": 53.17267119546776,
+            "rms_fluctuation": 0.021878100611832974,
+            "range": 0.07535804053577522,
+            "drift_endpoints_pct": -0.14153425871143588
+          },
+          "viscous_drag_N": {
+            "mean": 10.990151194913315,
+            "rms_fluctuation": 0.00414635042502327,
+            "range": 0.014347589709545971,
+            "drift_endpoints_pct": -0.13054952070346962
+          }
+        },
+        {
+          "start": 1.5159999999999219,
+          "end": 1.7159999999999218,
+          "n": 200,
+          "CD": {
+            "mean": 0.016622694816706668,
+            "rms_fluctuation": 4.378874580346718e-06,
+            "range": 1.4987495784688637e-05,
+            "drift_endpoints_pct": -0.09005451720965471
+          },
+          "CL_total": {
+            "mean": 0.2969665372263258,
+            "rms_fluctuation": 0.00010406413826731829,
+            "range": 0.0003595330601267599,
+            "drift_endpoints_pct": 0.12106854310415134
+          },
+          "pressure_drag_N": {
+            "mean": 53.11155559442098,
+            "rms_fluctuation": 0.014366971983437992,
+            "range": 0.04914908476636981,
+            "drift_endpoints_pct": -0.09224900834804983
+          },
+          "viscous_drag_N": {
+            "mean": 10.97890654087326,
+            "rms_fluctuation": 0.002516358263307557,
+            "range": 0.008721472899306804,
+            "drift_endpoints_pct": -0.07943844741584893
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.11277598520616061,
+        "CL_total": 0.1489488797093752
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M02": {
+      "rows": 1400,
+      "last": {
+        "wall_seconds": 209.5711881,
+        "step": 200.0,
+        "iteration": 28000.0,
+        "physical_time_s": 1.3999999999999566,
+        "dt_s": 0.001,
+        "Fx_slice_N": 93.54667334129874,
+        "Fz_slice_N": 1072.8862913374653,
+        "pressure_drag_N": 82.01403197758421,
+        "viscous_drag_N": 11.53264136371454,
+        "CD": 0.02426254625513506,
+        "CL_total": 0.2782670119663516,
+        "max_velocity_m_s": 22.1370545465903,
+        "max_CFL": 48.644170444451866,
+        "interface_max_CFL": 1.2304275054850728,
+        "mean_yplus": 44.15831544954987,
+        "min_yplus": 3.175771572478885,
+        "max_yplus": 340.2246051462262
+      },
+      "windows": [
+        {
+          "start": 0.9999999999999566,
+          "end": 1.1999999999999567,
+          "n": 200,
+          "CD": {
+            "mean": 0.024424670093651155,
+            "rms_fluctuation": 4.68284332579965e-05,
+            "range": 0.00016281337017235234,
+            "drift_endpoints_pct": -0.6665939378017366
+          },
+          "CL_total": {
+            "mean": 0.2768824562772315,
+            "rms_fluctuation": 0.000400368220814078,
+            "range": 0.0013741138195076386,
+            "drift_endpoints_pct": 0.49528320104995227
+          },
+          "pressure_drag_N": {
+            "mean": 82.60185633034281,
+            "rms_fluctuation": 0.16975006611731697,
+            "range": 0.5902594501797296,
+            "drift_endpoints_pct": -0.7145837592549416
+          },
+          "viscous_drag_N": {
+            "mean": 11.569901682738594,
+            "rms_fluctuation": 0.01080200692922221,
+            "range": 0.037483779856804844,
+            "drift_endpoints_pct": -0.3239766497992612
+          }
+        },
+        {
+          "start": 1.1999999999999567,
+          "end": 1.3999999999999566,
+          "n": 200,
+          "CD": {
+            "mean": 0.02430283824615895,
+            "rms_fluctuation": 2.530983584338106e-05,
+            "range": 8.90847798563077e-05,
+            "drift_endpoints_pct": -0.3665612178873284
+          },
+          "CL_total": {
+            "mean": 0.2779324914728176,
+            "rms_fluctuation": 0.00021885905111100859,
+            "range": 0.0007626661173116833,
+            "drift_endpoints_pct": 0.26859444984285574
+          },
+          "pressure_drag_N": {
+            "mean": 82.16012825522151,
+            "rms_fluctuation": 0.09172727479329701,
+            "range": 0.3229936142380865,
+            "drift_endpoints_pct": -0.3931269596302746
+          },
+          "viscous_drag_N": {
+            "mean": 11.54189488666895,
+            "rms_fluctuation": 0.005857774777208287,
+            "range": 0.020481662975884163,
+            "drift_endpoints_pct": -0.177454942858133
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4988065223606548,
+        "CL_total": 0.3792350045229116
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M04": {
+      "rows": 1642,
+      "last": {
+        "wall_seconds": 2035.3541851000002,
+        "step": 1540.0,
+        "iteration": 32840.0,
+        "physical_time_s": 1.64199999999993,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.125013110252056,
+        "Fz_slice_N": 1226.6998632774228,
+        "pressure_drag_N": 8.126301817288176,
+        "viscous_drag_N": 19.99871129296388,
+        "CD": 0.007294587900781215,
+        "CL_total": 0.31816056211158383,
+        "max_velocity_m_s": 22.217849724969373,
+        "max_CFL": 27.074769378297315,
+        "interface_max_CFL": 1.4011854829931611,
+        "mean_yplus": 1.4088750598589295,
+        "min_yplus": 0.17513777767624453,
+        "max_yplus": 293.9153297749471
+      },
+      "windows": [
+        {
+          "start": 1.2419999999999298,
+          "end": 1.44199999999993,
+          "n": 200,
+          "CD": {
+            "mean": 0.007343774092855138,
+            "rms_fluctuation": 1.3281330691428458e-05,
+            "range": 4.6005809632237125e-05,
+            "drift_endpoints_pct": -0.6264600333634559
+          },
+          "CL_total": {
+            "mean": 0.31718334964944167,
+            "rms_fluctuation": 0.00026612734744118477,
+            "range": 0.0009216516058282997,
+            "drift_endpoints_pct": 0.29057376651294287
+          },
+          "pressure_drag_N": {
+            "mean": 8.311832238174732,
+            "rms_fluctuation": 0.05008064526607411,
+            "range": 0.17348273222533095,
+            "drift_endpoints_pct": -2.0871779801877657
+          },
+          "viscous_drag_N": {
+            "mean": 20.00282315423754,
+            "rms_fluctuation": 0.001126884820969357,
+            "range": 0.003897267392723336,
+            "drift_endpoints_pct": -0.01948358670509823
+          }
+        },
+        {
+          "start": 1.44199999999993,
+          "end": 1.64199999999993,
+          "n": 200,
+          "CD": {
+            "mean": 0.007307661327439915,
+            "rms_fluctuation": 8.140189596801646e-06,
+            "range": 2.8126458542490282e-05,
+            "drift_endpoints_pct": -0.3848900117589849
+          },
+          "CL_total": {
+            "mean": 0.31790137645391037,
+            "rms_fluctuation": 0.00016098677374354494,
+            "range": 0.0005569979261708657,
+            "drift_endpoints_pct": 0.17521091993498172
+          },
+          "pressure_drag_N": {
+            "mean": 8.175658228081103,
+            "rms_fluctuation": 0.030715226969972177,
+            "range": 0.1061337290687483,
+            "drift_endpoints_pct": -1.2981673904152278
+          },
+          "viscous_drag_N": {
+            "mean": 19.999760785996234,
+            "rms_fluctuation": 0.0006701838009265064,
+            "range": 0.0023106444876788146,
+            "drift_endpoints_pct": -0.011553360624676672
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.49174668172809965,
+        "CL_total": 0.2263759447847046
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M05": {
+      "rows": 1340,
+      "last": {
+        "wall_seconds": 2116.0495531,
+        "step": 1340.0,
+        "iteration": 26800.0,
+        "physical_time_s": 1.3399999999999632,
+        "dt_s": 0.001,
+        "Fx_slice_N": 50.8443366794977,
+        "Fz_slice_N": 1156.979219531108,
+        "pressure_drag_N": 38.86104048910963,
+        "viscous_drag_N": 11.983296190388078,
+        "CD": 0.013187139921023367,
+        "CL_total": 0.30007760647658155,
+        "max_velocity_m_s": 22.159196477395163,
+        "max_CFL": 43.94331734089171,
+        "interface_max_CFL": 1.4399860758128178,
+        "mean_yplus": 44.77975094160849,
+        "min_yplus": 5.339569854254071,
+        "max_yplus": 240.98908848895678
+      },
+      "windows": [
+        {
+          "start": 0.9399999999999632,
+          "end": 1.1399999999999633,
+          "n": 200,
+          "CD": {
+            "mean": 0.013271406014474907,
+            "rms_fluctuation": 2.347830685523698e-05,
+            "range": 8.097253634730024e-05,
+            "drift_endpoints_pct": -0.6101277909739542
+          },
+          "CL_total": {
+            "mean": 0.29807978776792143,
+            "rms_fluctuation": 0.0005828537165157024,
+            "range": 0.002009881898014876,
+            "drift_endpoints_pct": 0.6742764791485047
+          },
+          "pressure_drag_N": {
+            "mean": 39.14832922327112,
+            "rms_fluctuation": 0.07961854655678174,
+            "range": 0.27448093139627616,
+            "drift_endpoints_pct": -0.7011306404185321
+          },
+          "viscous_drag_N": {
+            "mean": 12.020903806138339,
+            "rms_fluctuation": 0.010905531767438387,
+            "range": 0.03771677974436649,
+            "drift_endpoints_pct": -0.3137599331350347
+          }
+        },
+        {
+          "start": 1.1399999999999633,
+          "end": 1.3399999999999632,
+          "n": 200,
+          "CD": {
+            "mean": 0.013209276026563736,
+            "rms_fluctuation": 1.3850929557637769e-05,
+            "range": 4.763631072457648e-05,
+            "drift_endpoints_pct": -0.3606277181942469
+          },
+          "CL_total": {
+            "mean": 0.2995693237381866,
+            "rms_fluctuation": 0.00031844705345875573,
+            "range": 0.0010988701953507096,
+            "drift_endpoints_pct": 0.3668166625468917
+          },
+          "pressure_drag_N": {
+            "mean": 38.93657903378014,
+            "rms_fluctuation": 0.04731907097684093,
+            "range": 0.16277332658128785,
+            "drift_endpoints_pct": -0.41804732367491987
+          },
+          "viscous_drag_N": {
+            "mean": 11.993105614239003,
+            "rms_fluctuation": 0.006085078946027337,
+            "range": 0.02089323304838686,
+            "drift_endpoints_pct": -0.17421036485813185
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4681492514312833,
+        "CL_total": 0.49971049074448104
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M06": {
+      "rows": 1600,
+      "last": {
+        "wall_seconds": 2813.532619299,
+        "step": 1600.0,
+        "iteration": 32000.0,
+        "physical_time_s": 1.5999999999999346,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.3794782376048,
+        "Fz_slice_N": 1210.0448659018227,
+        "pressure_drag_N": 8.063559002766153,
+        "viscous_drag_N": 20.31591923483865,
+        "CD": 0.007360586740741985,
+        "CL_total": 0.3138408719529574,
+        "max_velocity_m_s": 22.18913141421711,
+        "max_CFL": 43.76903700187169,
+        "interface_max_CFL": 2.7251539834007796,
+        "mean_yplus": 0.9771790768016624,
+        "min_yplus": 0.10738773018081975,
+        "max_yplus": 252.44361616881147
+      },
+      "windows": [
+        {
+          "start": 1.1999999999999345,
+          "end": 1.3999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007411188675851153,
+            "rms_fluctuation": 1.446687721693917e-05,
+            "range": 4.984216774705109e-05,
+            "drift_endpoints_pct": -0.6725259594248134
+          },
+          "CL_total": {
+            "mean": 0.31282487516159185,
+            "rms_fluctuation": 0.0003049272188568615,
+            "range": 0.0010494477458895535,
+            "drift_endpoints_pct": 0.3354745192010239
+          },
+          "pressure_drag_N": {
+            "mean": 8.253883443287343,
+            "rms_fluctuation": 0.05467596802092323,
+            "range": 0.1883304900027145,
+            "drift_endpoints_pct": -2.2817197661771993
+          },
+          "viscous_drag_N": {
+            "mean": 20.320695615324365,
+            "rms_fluctuation": 0.0011025735847653307,
+            "range": 0.0038409719628127448,
+            "drift_endpoints_pct": -0.018901774011693614
+          }
+        },
+        {
+          "start": 1.3999999999999346,
+          "end": 1.5999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007374404000688209,
+            "rms_fluctuation": 8.249956966377691e-06,
+            "range": 2.8545167922991097e-05,
+            "drift_endpoints_pct": -0.3870844060120268
+          },
+          "CL_total": {
+            "mean": 0.3135788789536546,
+            "rms_fluctuation": 0.0001579928603312348,
+            "range": 0.0005514045526541222,
+            "drift_endpoints_pct": 0.1758423764043168
+          },
+          "pressure_drag_N": {
+            "mean": 8.115318013660778,
+            "rms_fluctuation": 0.03090223282752739,
+            "range": 0.10700417066437318,
+            "drift_endpoints_pct": -1.318545625497973
+          },
+          "viscous_drag_N": {
+            "mean": 20.317434051392684,
+            "rms_fluctuation": 0.000906613808611136,
+            "range": 0.0030545787795084323,
+            "drift_endpoints_pct": -0.01503427436644763
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4963397475334002,
+        "CL_total": 0.24103063788430057
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M07": {
+      "rows": 1640,
+      "last": {
+        "wall_seconds": 4057.6871178,
+        "step": 1640.0,
+        "iteration": 32800.0,
+        "physical_time_s": 1.6399999999999302,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.759971892034574,
+        "Fz_slice_N": 1210.3173383263609,
+        "pressure_drag_N": 8.017838186265369,
+        "viscous_drag_N": 20.742133705769206,
+        "CD": 0.007459272718133254,
+        "CL_total": 0.3139115412196184,
+        "max_velocity_m_s": 22.189518122009268,
+        "max_CFL": 47.69499653195611,
+        "interface_max_CFL": 4.098086310422287,
+        "mean_yplus": 0.8203838103288568,
+        "min_yplus": 0.12345463011244058,
+        "max_yplus": 220.1146908877711
+      },
+      "windows": [
+        {
+          "start": 1.23999999999993,
+          "end": 1.4399999999999302,
+          "n": 200,
+          "CD": {
+            "mean": 0.00751089979031031,
+            "rms_fluctuation": 1.3722864452881185e-05,
+            "range": 4.7745048025469965e-05,
+            "drift_endpoints_pct": -0.6356768078182201
+          },
+          "CL_total": {
+            "mean": 0.31287144406104617,
+            "rms_fluctuation": 0.00028076682051489784,
+            "range": 0.0009701730881896409,
+            "drift_endpoints_pct": 0.31008681252493747
+          },
+          "pressure_drag_N": {
+            "mean": 8.212199762017681,
+            "rms_fluctuation": 0.051594015447181125,
+            "range": 0.17949846244210121,
+            "drift_endpoints_pct": -2.1857537279146713
+          },
+          "viscous_drag_N": {
+            "mean": 20.746825469502753,
+            "rms_fluctuation": 0.001315876701725209,
+            "range": 0.004587344724900078,
+            "drift_endpoints_pct": -0.022111068180736108
+          }
+        },
+        {
+          "start": 1.4399999999999302,
+          "end": 1.6399999999999302,
+          "n": 200,
+          "CD": {
+            "mean": 0.0074735656426907745,
+            "rms_fluctuation": 8.79914993558607e-06,
+            "range": 3.024057501342138e-05,
+            "drift_endpoints_pct": -0.40463383154996413
+          },
+          "CL_total": {
+            "mean": 0.3136295312452199,
+            "rms_fluctuation": 0.00017386796957545193,
+            "range": 0.0005999029932338695,
+            "drift_endpoints_pct": 0.19127758500675715
+          },
+          "pressure_drag_N": {
+            "mean": 8.071747472327603,
+            "rms_fluctuation": 0.03315436392365493,
+            "range": 0.1139434491002671,
+            "drift_endpoints_pct": -1.4116329765134474
+          },
+          "viscous_drag_N": {
+            "mean": 20.74333221963095,
+            "rms_fluctuation": 0.0007721550867033694,
+            "range": 0.0026521119214812927,
+            "drift_endpoints_pct": -0.012785370708045658
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.49706624588041604,
+        "CL_total": 0.2422998961918159
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M08": {
+      "rows": 1620,
+      "last": {
+        "wall_seconds": 2617.3674203,
+        "step": 1580.0,
+        "iteration": 33600.0,
+        "physical_time_s": 1.5999999999999346,
+        "dt_s": 0.001,
+        "Fx_slice_N": 28.899910500169746,
+        "Fz_slice_N": 1208.088431396578,
+        "pressure_drag_N": 8.147484260926136,
+        "viscous_drag_N": 20.75242623924361,
+        "CD": 0.007495567615979288,
+        "CL_total": 0.3133334452216459,
+        "max_velocity_m_s": 22.190117299182003,
+        "max_CFL": 43.77362049378784,
+        "interface_max_CFL": 2.725153989681232,
+        "mean_yplus": 0.9393405028621643,
+        "min_yplus": 0.10584371480568558,
+        "max_yplus": 253.60708336933433
+      },
+      "windows": [
+        {
+          "start": 1.1999999999999345,
+          "end": 1.3999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007548585249999513,
+            "rms_fluctuation": 1.374754602044231e-05,
+            "range": 4.7702076584524473e-05,
+            "drift_endpoints_pct": -0.6319339982883223
+          },
+          "CL_total": {
+            "mean": 0.31228751088454293,
+            "rms_fluctuation": 0.0002899900424262146,
+            "range": 0.0010027131083578666,
+            "drift_endpoints_pct": 0.3210865223260829
+          },
+          "pressure_drag_N": {
+            "mean": 8.346485485130952,
+            "rms_fluctuation": 0.05191064532741366,
+            "range": 0.18001794219234313,
+            "drift_endpoints_pct": -2.1568113011523287
+          },
+          "viscous_drag_N": {
+            "mean": 20.757839804767173,
+            "rms_fluctuation": 0.0010957444547579109,
+            "range": 0.0039021842869537693,
+            "drift_endpoints_pct": -0.018798604882082227
+          }
+        },
+        {
+          "start": 1.3999999999999346,
+          "end": 1.5999999999999346,
+          "n": 200,
+          "CD": {
+            "mean": 0.007511566547681655,
+            "rms_fluctuation": 9.387776734070036e-06,
+            "range": 3.215066786697515e-05,
+            "drift_endpoints_pct": -0.4280154833600992
+          },
+          "CL_total": {
+            "mean": 0.3130286438806646,
+            "rms_fluctuation": 0.00017616232889964946,
+            "range": 0.0006103131629332514,
+            "drift_endpoints_pct": 0.19497038844979317
+          },
+          "pressure_drag_N": {
+            "mean": 8.207497798040137,
+            "rms_fluctuation": 0.03511299727419811,
+            "range": 0.12037187969586505,
+            "drift_endpoints_pct": -1.4666087357904447
+          },
+          "viscous_drag_N": {
+            "mean": 20.754098183201254,
+            "rms_fluctuation": 0.0010842144550478065,
+            "range": 0.0035882353320424443,
+            "drift_endpoints_pct": -0.017289285712962597
+          }
+        }
+      ],
+      "window_mean_shift_pct": {
+        "CD": -0.4904058322433405,
+        "CL_total": 0.23732393076573277
+      },
+      "settling_screen_pass": true,
+      "note": "Adjacent non-overlapping 0.2 s windows; mean changes <0.5%. RMS and endpoint drift are diagnostics; no extra confirmation window."
+    },
+    "M09": {}
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-02T23:08:20.350727+01:00",
+  "kind": "work_scientific_decision",
+  "case": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940",
+  "decision": "Conclude inner-iteration diagnostic at next completed physical timestep; preserve native paused_by_marker status, full final audit and checkpoint. Not a completed hydrodynamic qualification.",
+  "evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\work_review.json",
+  "reason": "At least 100 physical steps and three stable force windows at steps50/75/100; CL/CD bias persists. More inner iterations do not explain dominant B/C discrepancy. Omega/viscosity pathology remains.",
+  "next": "Only separate C0 distance-weighted interpolation diagnostic from saved 40-inner control after checkpoint/native-process verification.",
+  "scientific_gate": false
+}

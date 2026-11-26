@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-03",
+  "existing_controller_extended": true,
+  "active_controller_pid_at_verification": 15380,
+  "duplicate_start_test": "PASS: controller PID32220 unchanged after second START",
+  "stop_idle_queue_test": "PASS: controller exited and released lock without terminating STAR",
+  "restart_controller_test": "PASS: PID15380; existing campaign adopted; no solver launch",
+  "resume_failure_gate_test": "PASS: refused unresolved plus2_benchmark_8cpu_20261103",
+  "isolated_tests_passed": 8,
+  "native_physical_guard_test": "PASS: pressure gate stopped owned +2 at0.672s and saved checkpoint; later jobs not launched",
+  "scientific_result": "FAIL: +2 not validated; no valid CPU timing comparison",
+  "pending_approved_jobs": 0,
+  "gpu": false,
+  "maximum_cpu_processes": 16,
+  "other_campaigns_modified": false,
+  "windows_autostart_installed": false,
+  "scheduler_created": false,
+  "unverified": [
+    "Manual STOP during a running STAR timestep was not deliberately tested in this hardening stage.",
+    "No power-loss or interrupted native-save test.",
+    "No new accepted checkpoint-to-solver continuation was executed after the pressure failure.",
+    "Temperature and direct thermal/power throttling cause were not measurable with available permissions."
+  ],
+  "instructions": "F:\\ntnu\\flap_control\\CFD_LOCAL_CONTROL.md"
+}

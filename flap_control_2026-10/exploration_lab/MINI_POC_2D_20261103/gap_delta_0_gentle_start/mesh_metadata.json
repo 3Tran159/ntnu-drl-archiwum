@@ -1,0 +1,33 @@
+{
+  "run_id": "gap_delta_0",
+  "variant": "gap",
+  "delta_deg": 0,
+  "cells": 89750,
+  "min_area_m2": 9.952473499396839e-11,
+  "min_SICN": 0.015974386910192533,
+  "mesh_seconds": 3.4751007000013487,
+  "gap_m": 0.0025,
+  "true_2D": true,
+  "overset": false,
+  "VOF": false,
+  "first_layer_m": 2e-05,
+  "layer_thickness_m": 0.0009,
+  "gap_target_size_m": 0.00025,
+  "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\geometry\\gap_002500um\\geometry.json",
+  "source_sha256": "e3c0cf9fff60a647921c7f4832abce6a9a3ab27db96d62cd488d12d23cce81fa",
+  "status": "MESH_PREPARED_NATIVE_IMPORT_PENDING",
+  "fidelity": "L1_GAP",
+  "static_next": [
+    -5,
+    -2,
+    0,
+    2,
+    5
+  ],
+  "next_angles_require_previous_case_review": true,
+  "dynamic_planned_amplitudes": [
+    2,
+    5
+  ],
+  "DRL_5deg_approved": false
+}

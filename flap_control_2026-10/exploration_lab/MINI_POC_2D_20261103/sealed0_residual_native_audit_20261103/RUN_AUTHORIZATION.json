@@ -1,0 +1,14 @@
+{
+  "stage": "SEALED0_NATIVE_RESIDUAL_AUDIT",
+  "approved_by_user": true,
+  "input": {
+    "path": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\sealed0_residual_native_audit_20261103\\input.sim",
+    "sha256": "8433d57823ea06cb602675b82dea179241c59ed0b354ddac7e9c040e6a24c309"
+  },
+  "macro": "AuditMiniResiduals.java",
+  "macro_sha256": "64b384254dfdf5b2d7e3b4a5645e6d84a56aec0ada50fc0dc59ed9145c7a27bd",
+  "scope": "Bounded daytime exploration only; gates unchanged; previous HOLD/FAIL untouched",
+  "CPU": 1,
+  "GPU": false,
+  "pre_execution_compile_correction": "AddedmissingMonitor import only; no runtime/criteria change"
+}

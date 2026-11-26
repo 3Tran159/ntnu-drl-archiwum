@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\night_native_queue.py", line 178, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\night_native_queue.py", line 102, in main
+    cal=call('N1_CALIBRATION_1',cp,t,40,inner=20);nr=V.numerical(cal);plot_partial(cal)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\night_native_queue.py", line 68, in call
+    M.launch(stage,'MiniVofNight.java',out,source,build=fresh,max_runtime_s=wall_budget+180)
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\day_chain.py", line 32, in launch
+    assert p.returncode==0,'Native stage failed; inspect log, no next stage'
+           ^^^^^^^^^^^^^^^
+AssertionError: Native stage failed; inspect log, no next stage

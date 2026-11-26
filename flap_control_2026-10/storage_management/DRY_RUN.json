@@ -1,0 +1,407 @@
+{
+  "status": "DRY_RUN",
+  "pid": 25692,
+  "process_birth": 1794232173.6901722,
+  "at": "2026-11-09T14:49:47.785391+01:00",
+  "policy": {
+    "active_keep": 3,
+    "completed_keep": 1,
+    "interrupted_keep": 2
+  },
+  "deleted_files": 0,
+  "freed_bytes": 0,
+  "cumulative_freed_bytes": 0,
+  "candidate_files": 39,
+  "candidate_bytes": 5257517647,
+  "archive_copied_bytes": 0,
+  "warnings": [],
+  "case_plans": [
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_GAP_DT020_20261105_051303",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_GAP_DT020_20261105_051303\\FINAL.sim",
+      "anchor_sha256": "0bf3a0733174f30f6bd61893d25ec7e697dded39f61f3149397cf16d15d4bdbb",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_SEALED_DT020_WMI_RESUME_20261105_033403",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_FIXED_SEALED_DT020_WMI_RESUME_20261105_033403\\FINAL.sim",
+      "anchor_sha256": "d330aa91faee6da20c34d1e9a1553d2472f64309853a2f4535638e47a9068273",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919",
+      "class": "COMPLETED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919\\FINAL.sim",
+      "anchor_sha256": "422d6a21752377008293c52d37b5190b9a8b1c202340abed010833ffa4c2cf1b",
+      "keep_count": 1,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_151256",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_151256\\FINAL.sim",
+      "anchor_sha256": "23aa5fe5ef977701e6e9cbd929fb0c71062aa0eed0a598ce247c83a301a2299f",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_175018",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_175018\\FINAL.sim",
+      "anchor_sha256": "49ae80633b7c3b22f5d6a6adf64d2b42925f1f684050f3f4adcc9b410d99327b",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_180821",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_180821\\FINAL.sim",
+      "anchor_sha256": "e98cad7ce062353d68d0052f71d16726808b7f759b9767574df145fc43647b9d",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_191547",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261105_191547\\FINAL.sim",
+      "anchor_sha256": "3a4ecaa62a7d14f4e65bff1b3e142b3b66e5149934b0dfff49fd3cd08ae8c4e8",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261106_045259",
+      "class": "COMPLETED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261106_045259\\FINAL.sim",
+      "anchor_sha256": "77e8e26814572f2c2f2d398b8c4cd4b1cb05039f8555928567c8200327fc9bb2",
+      "keep_count": 1,
+      "delete": [
+        {
+          "path": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_STABILIZE_20261106_045259\\CP_000120_t1.502000.sim",
+          "bytes": 188547712,
+          "mtime_ns": 1793937673436958500
+        }
+      ]
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_SHARP_SEALED_0_STABILIZE_FIRST_20261105_104721",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_SHARP_SEALED_0_STABILIZE_FIRST_20261105_104721\\FINAL.sim",
+      "anchor_sha256": "870768ebc2ee4d13d7b5529f7f2ef93d1acf25df3676d355ca6c8d4557e386a0",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_SHARP_SEALED_0_STABILIZE_FIRST_20261105_130636",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_SHARP_SEALED_0_STABILIZE_FIRST_20261105_130636\\FINAL.sim",
+      "anchor_sha256": "e9467516b387e7e5f58a1020ef46ffb0159f4e38db0d8acd6803b2c13c4c5a34",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\N01_WAVE_FIXED_H010_RESUME_20261106_054507",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\N01_WAVE_FIXED_H010_RESUME_20261106_054507\\FINAL.sim",
+      "anchor_sha256": "ceb48ded5cb9efa4f3ad60a890436a1ac527ab768edafe7a7440cbef5ee3d058",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\PHASE_MAP_WAVE_ACTIVE_I1DEG_20261106_160720",
+      "class": "INTERRUPTED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\PHASE_MAP_WAVE_ACTIVE_I1DEG_20261106_160720\\FINAL.sim",
+      "anchor_sha256": "c428209863a465665fd47665873c91ffc1c730936e3749534e3e9337b2c1490e",
+      "keep_count": 2,
+      "delete": []
+    },
+    {
+      "folder": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\PHASE_MAP_WAVE_ACTIVE_I1DEG_20261106_180616",
+      "class": "COMPLETED",
+      "anchor": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\PHASE_MAP_WAVE_ACTIVE_I1DEG_20261106_180616\\FINAL.sim",
+      "anchor_sha256": "2f363c9fa65ba6ee96dbba02ad8b52d0695c3093a2f295393e86213ecc23b811",
+      "keep_count": 1,
+      "delete": []
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_A0p5_PHASE0_20261107_193240",
+      "class": "COMPLETED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_A0p5_PHASE0_20261107_193240\\FINAL.sim",
+      "anchor_sha256": "9ee4d2cf8974ef9128c0aaca2332e2f4b52a13eaa00ebc2b18378208445b3659",
+      "keep_count": 1,
+      "delete": []
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_A2p0_PHASE0_20261107_235230",
+      "class": "COMPLETED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_A2p0_PHASE0_20261107_235230\\FINAL.sim",
+      "anchor_sha256": "c59da5f4d86422315a2694775cd22d15a55ee1b83dd892d6898678376f6b8b42",
+      "keep_count": 1,
+      "delete": []
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_A2p0_PHASE90_R1_20261108_195240",
+      "class": "COMPLETED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_A2p0_PHASE90_R1_20261108_195240\\FINAL.sim",
+      "anchor_sha256": "a1aa6bd6bea7aa25830de15dc37ead51bdf52dddbfccc69600646235ba5e3a2c",
+      "keep_count": 1,
+      "delete": []
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_HOME_RESUME_R1_20261109_113919",
+      "class": "INTERRUPTED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_HOME_RESUME_R1_20261109_113919\\FINAL.sim",
+      "anchor_sha256": "3598b9e89ac68bbcdafe8d16a86dd658acb4df9992d7d3cc67c2000897c15e36",
+      "keep_count": 2,
+      "delete": [
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_HOME_RESUME_R1_20261109_113919\\CP_000200_t1.859000.sim",
+          "bytes": 158647673,
+          "mtime_ns": 1794221344230537800
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_HOME_RESUME_R1_20261109_113919\\CP_000100_t1.809000.sim",
+          "bytes": 158477645,
+          "mtime_ns": 1794221152355498300
+        }
+      ]
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959",
+      "class": "INTERRUPTED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\FINAL.sim",
+      "anchor_sha256": "783eefa6602608382889bd8c0faa756eaf3c2290577c33cd3f6c0643eec28369",
+      "keep_count": 2,
+      "delete": [
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_003000_t1.500000.sim",
+          "bytes": 125775209,
+          "mtime_ns": 1794218992877787800
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_002800_t1.400000.sim",
+          "bytes": 125435390,
+          "mtime_ns": 1794218615325969600
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_002600_t1.300000.sim",
+          "bytes": 125095571,
+          "mtime_ns": 1794218241037512600
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_002400_t1.200000.sim",
+          "bytes": 124755674,
+          "mtime_ns": 1794217849441810900
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_002200_t1.100000.sim",
+          "bytes": 124415860,
+          "mtime_ns": 1794217528044593200
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_002000_t1.000000.sim",
+          "bytes": 124076054,
+          "mtime_ns": 1794217199528080900
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_001800_t0.900000.sim",
+          "bytes": 123736237,
+          "mtime_ns": 1794216857143610500
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_001600_t0.800000.sim",
+          "bytes": 123396415,
+          "mtime_ns": 1794216513896775500
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_001400_t0.700000.sim",
+          "bytes": 123056595,
+          "mtime_ns": 1794216172247459200
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_001200_t0.600000.sim",
+          "bytes": 122716769,
+          "mtime_ns": 1794215826456644300
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_001000_t0.500000.sim",
+          "bytes": 122376938,
+          "mtime_ns": 1794215485636776300
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_000800_t0.400000.sim",
+          "bytes": 122036987,
+          "mtime_ns": 1794215151818611100
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_000600_t0.300000.sim",
+          "bytes": 121697182,
+          "mtime_ns": 1794214811377080700
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_000400_t0.200000.sim",
+          "bytes": 121357374,
+          "mtime_ns": 1794214476657830200
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_INITFIX_R2_20261109_093959\\CP_000200_t0.100000.sim",
+          "bytes": 121017558,
+          "mtime_ns": 1794214140861346800
+        }
+      ]
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_STATUS_IOFIX_R1_20261109_141922",
+      "class": "ACTIVE",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_STATUS_IOFIX_R1_20261109_141922\\CP_000600_t2.522500.sim",
+      "anchor_sha256": "e67dadc8329dbae9a0cac1476fae2175c365ae9cd17d06a57e3957bc357e0f9e",
+      "keep_count": 3,
+      "delete": [
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_STATUS_IOFIX_R1_20261109_141922\\CP_000300_t2.372500.sim",
+          "bytes": 223701033,
+          "mtime_ns": 1794231339414419400
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_STATUS_IOFIX_R1_20261109_141922\\CP_000200_t2.322500.sim",
+          "bytes": 223531001,
+          "mtime_ns": 1794231068362919700
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U14_STATUS_IOFIX_R1_20261109_141922\\CP_000100_t2.272500.sim",
+          "bytes": 223360974,
+          "mtime_ns": 1794230809723164700
+        }
+      ]
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910",
+      "class": "INTERRUPTED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\FINAL.sim",
+      "anchor_sha256": "d0ca7661f35762a8ee8fa71a822784853a9cae1f73c455eae5525521bfb94f92",
+      "keep_count": 2,
+      "delete": [
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_003600_t1.800000.sim",
+          "bytes": 126794416,
+          "mtime_ns": 1794182796264977700
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_003400_t1.700000.sim",
+          "bytes": 126454596,
+          "mtime_ns": 1794182475382345000
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_003200_t1.600000.sim",
+          "bytes": 126114775,
+          "mtime_ns": 1794182186674096100
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_003000_t1.500000.sim",
+          "bytes": 125774955,
+          "mtime_ns": 1794181911208350900
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_002800_t1.400000.sim",
+          "bytes": 125435136,
+          "mtime_ns": 1794181593434864300
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_002600_t1.300000.sim",
+          "bytes": 125095317,
+          "mtime_ns": 1794181306218919900
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_002400_t1.200000.sim",
+          "bytes": 124755420,
+          "mtime_ns": 1794181016558880700
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_002200_t1.100000.sim",
+          "bytes": 124415606,
+          "mtime_ns": 1794180749220763500
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_002000_t1.000000.sim",
+          "bytes": 124075801,
+          "mtime_ns": 1794180466335679300
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_001800_t0.900000.sim",
+          "bytes": 123735983,
+          "mtime_ns": 1794180195078045200
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_001600_t0.800000.sim",
+          "bytes": 123396162,
+          "mtime_ns": 1794179929889170200
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_001400_t0.700000.sim",
+          "bytes": 123056342,
+          "mtime_ns": 1794179646893985600
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_001200_t0.600000.sim",
+          "bytes": 122716516,
+          "mtime_ns": 1794179354326523400
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_001000_t0.500000.sim",
+          "bytes": 122376684,
+          "mtime_ns": 1794179078555990100
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_000800_t0.400000.sim",
+          "bytes": 122036734,
+          "mtime_ns": 1794178803468001400
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_000600_t0.300000.sim",
+          "bytes": 121696928,
+          "mtime_ns": 1794178535652683600
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_000400_t0.200000.sim",
+          "bytes": 121357121,
+          "mtime_ns": 1794178254070792800
+        },
+        {
+          "path": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_CALM_U18_20261108_233910\\CP_000200_t0.100000.sim",
+          "bytes": 121017304,
+          "mtime_ns": 1794177990273150700
+        }
+      ]
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_PHASE180_A1_20261107_133449",
+      "class": "COMPLETED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_PHASE180_A1_20261107_133449\\FINAL.sim",
+      "anchor_sha256": "021eb29c546b97d6af28899aedcc6114256b740fcff2b68eba152dc7ba0c9b70",
+      "keep_count": 1,
+      "delete": []
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_PHASE270_A1_20261107_162450",
+      "class": "COMPLETED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_PHASE270_A1_20261107_162450\\FINAL.sim",
+      "anchor_sha256": "aba46f3ddea0995add2b7db7d7e47a9a3115cb511338f11d7acd449479bbe3f7",
+      "keep_count": 1,
+      "delete": []
+    },
+    {
+      "folder": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_PHASE90_A1_20261107_095134",
+      "class": "COMPLETED",
+      "anchor": "H:\\NTNU_RESEARCH_ARCHIVE\\Active_Flaps\\URANS_XFOIL_CALIBRATION_20261107\\runs\\XFOIL_CAL_PHASE90_A1_20261107_095134\\FINAL.sim",
+      "anchor_sha256": "894a1964ffc2b307f00bf1734eb04585c6acc35d2fc2e14766ff19101e11e3f5",
+      "keep_count": 1,
+      "delete": []
+    }
+  ],
+  "scope": "Flap files only; no NWAR or Godo files",
+  "histories_deleted": false,
+  "input_or_master_files_deleted": false
+}

@@ -1,0 +1,73 @@
+{
+  "status": "REVIEW",
+  "stage": null,
+  "jobs": {
+    "GAP_MINUS2": {
+      "cells": 19502,
+      "angle_deg": -2.0,
+      "time_s": 1.0499999999999343,
+      "replay_steps": 0,
+      "source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\MATCHED_FIXED_GAP_RESUME0600_STABILIZE_THEN_ACTIVE_20261104_200827\\ACTIVE_STEP0200.sim",
+      "source_sha256": "46dbcbd8f5befea5c7b936c56091bb29d5875d2152eaa6cda829cf8020b7f45d",
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\GAP_MINUS2",
+      "status": "SAVED"
+    },
+    "GAP_PLUS2": {
+      "cells": 19502,
+      "replay_steps": 68,
+      "time_s": 1.1499999999999677,
+      "angle_deg": 2.0,
+      "source": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\GAP_MATCHED_STABILIZE_THEN_ACTIVE_RESUME0600\\FINAL.sim",
+      "source_sha256": "3a46d58d0a5bf23221309580e5cbfa1d5a05bc3943b72976b48b33a69125bdfa",
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\GAP_PLUS2",
+      "status": "SAVED"
+    },
+    "SEALED_MINUS2": {
+      "replay_steps": 144,
+      "time_s": 1.099999999999951,
+      "angle_deg": -2.0,
+      "cells": 17462,
+      "source": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\SHARP_SEALED_ACTIVE_PAUSE_1P064S.sim",
+      "source_sha256": "a6ad8e0f7dee04c543256ae10ff99ceb905fad6513ee02c0006283823d2bd7b2",
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\SEALED_MINUS2",
+      "status": "SAVED"
+    },
+    "SEALED_PLUS2": {
+      "cells": 17462,
+      "angle_deg": 2.0,
+      "time_s": 1.1999999999999844,
+      "replay_steps": 144,
+      "source": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\MATCHED_FIXED_SHARP_SEALED_ACTIVE_RESUME_1064_20261104_173950\\ACTIVE_STEP0400.sim",
+      "source_sha256": "e4d0194245e6f7f01f8469caf5cace857e1cab37775bb92cd0b03c29e30b53bf",
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\SEALED_PLUS2",
+      "status": "SAVED"
+    },
+    "CALM_VOF_SHARP_SEALED_PLUS_MINUS_5": {
+      "status": "HOLD_STOP_OR_DEADLINE",
+      "samples": 69,
+      "startup_s": 122.62320460000001,
+      "solver_step_median_s": 0.8959623,
+      "solver_step_mean_s": 0.912559840625,
+      "end_to_end_s": 618.4544265999998,
+      "dt_s": 0.0002,
+      "checkpoint_sha256_input": "d330aa91faee6da20c34d1e9a1553d2472f64309853a2f4535638e47a9068273",
+      "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_SHARP_SEALED_PLUS_MINUS_5_20261105_103534\\FINAL.sim",
+      "checkpoint_sha256": "2dda05e749b42a42cc9a4df066d43908b4a05688d43580891d65fb09d422e518",
+      "state": {
+        "residual_pass": false,
+        "reason": "",
+        "training_approved": false,
+        "amplitude_target": 0.0,
+        "status": "HOLD_STOP_OR_DEADLINE",
+        "foil": true,
+        "steps": 69,
+        "time_s": 0.5367999999999735,
+        "solver_seconds": 63.239864700000005
+      },
+      "transport_ok": true,
+      "training_approved": false,
+      "archive": "T:\\FLAPS_ARCHIVE\\SEALED_GAP_2D_U18_20261104\\FLAP_EXTREMA_VOF5_20261105\\CALM_VOF_SHARP_SEALED_PLUS_MINUS_5",
+      "classification": "EXPLORATORY_FROM_NONSTABILIZED_CALM"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+Starting local server: starserver.bat -power -podkey K78jNQHAbKB2rMxqOvW0ow -licpath 1999@flex.cd-adapco.com -cpubind off -np 4 -mpi ms -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcaHlkcm9fdmFsaWRhdGlvbl8yNjA2XzIwMjYxMTAyXGNhc2VzXFNQX0Jfc3BsaXQwX2ZpeGVkXFNQX0JfYnVpbGRfZXJyb3JfMjAyNjExMDJfMTgxMjU5LnNpbQ==
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-3
+Process rank 0 THINKPAD-LUCJAN 29124
+Total number of processes : 4
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 11 days
+Mon Nov  2 18:54:40 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_build_error_20261102_181259.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=4 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java:7: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+                                                                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java:45: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+                                                                  ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java:47: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java:48: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+                   ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java:55: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("HYDRO mesh cell audit");table.getParts().setObjects(regions);table.setRepresentation(fv);table.setExtractVertexData(false);table.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("FaceValidity"),s.getFieldFunctionManager().getFunction("CellQuality"),s.getFieldFunctionManager().getFunction("PrismLayerNumber"),s.getFieldFunctionManager().getFunction("PrismCellThickness")));table.extract();table.export(out.resolve("mesh_cells.csv").toString());
+                                          ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java:64: warning: [deprecation] setComponents(double,double,double) in star.common.Coordinate has been deprecated
+SurfaceExtruderDirection dir=se.getSurfaceExtruderControls().get(SurfaceExtruderDirection.class);dir.setDirectionMode(SurfaceExtruderDirection.DirectionMode.SPECIFIED);dir.getUserSpecifiedDirection().getDirection().setComponents(0,.02,0);note("Extruding existing source cap by exactly +0.02 m in y");se.execute();
+                                                                                                                                                                                                                      ^
+F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\macro_snapshots\20261102_185231\RepairExtrudedMesh.java:69: warning: [removal] removeRegion(star.common.Region) in star.common.RegionManager has been deprecated and marked for removal
+s.getRegionManager().removeRegion(old);fresh.setPresentationName("Background");regions.clear();regions.add(fresh);fixed.clear();flap.clear();info=new StringBuilder();
+                    ^
+
+Loading module: StarExtruder
+HYDRO_STAGE Extruding existing source cap by exactly +0.02 m in y
+Mesh Operation Exact quasi2D surface extrusion complete. CPU Time: 0.06, Wall Time: 0.06, Memory: 212.73 MB
+ Only 1 part was assigned to a region
+10 part surfaces were assigned to 10 boundaries
+No Interfaces were created
+HYDRO_STAGE Generating one extruded span layer
+----------------------------------------
+Executing Mesh Operation Exact quasi2D one-cell volume
+----------------------------------------
+Meshing Parts : Hydro_ExactQuasi2D_fluid
+Loading/configuring connectivity (old|new partitions: 4|4)
+  Background (index 0): 256750 cells, 707402 faces, 906624 verts.
+Configuring finished
+Volume extruder have been executed without checking intersection. If mesh is not valid or low quality try to enable the option.
+Converting mesh into finite volume representation in Region Region 1
+Converting mesh into finite volume representation completed: CPU Time: 10.92, Wall Time: 11.86, Memory: 988.12 MB
+	Cells: 2310750	Faces: 8163868	Vertices: 4986432
+----------------------------------------
+Mesh Operation Exact quasi2D one-cell volume complete. CPU Time: 21.58, Wall Time: 23.39, Memory: 340.36 MB
+----------------------------------------
+Saving: F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_extrusion_error_20261102_185231.sim... complete (425.55MB in 0.36531s).
+java.lang.RuntimeException: error: HF_Fx_N is being used by PrimitiveFieldFunction Report: HF_Fx_N and cannot be deleted.
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

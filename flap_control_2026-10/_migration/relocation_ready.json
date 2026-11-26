@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-02T15:43:55.964304+01:00",
+  "state": "destination_ready_for_source_deletion",
+  "new_work_root": "F:\\ntnu\\flap_control",
+  "patched_files": [
+    "flap_poc_2606_20261102\\prepare_geometry.py",
+    "flap_poc_2606_20261102\\macros\\BuildFlapPOC.java",
+    "flap_poc_2606_20261102\\macros\\RecoverFlapPOC.java",
+    "flap_poc_2606_20261102\\macros\\TestFlapPOC.java",
+    "flap_drl_20261102\\build_support.py",
+    "flap_drl_20261102\\inspect_poc_environment.py",
+    "flap_drl_20261102\\05_macros\\ExportReferenceGeometry.java",
+    "flap_drl_20261102\\05_macros\\InspectFlapSeed.java"
+  ],
+  "java_compilation": [
+    {
+      "folder": "flap_poc_2606_20261102/macros",
+      "ok": true,
+      "messages": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n"
+    },
+    {
+      "folder": "flap_drl_20261102/05_macros",
+      "ok": true,
+      "messages": ""
+    }
+  ],
+  "unchanged_simulations": [
+    "F:\\ntnu\\flap_control\\flap_poc_2606_20261102\\FlapPOC_2606_mesh_ready.sim",
+    "F:\\ntnu\\flap_control\\flap_poc_2606_20261102\\FlapPOC_2606_mesh_ready.sim~",
+    "F:\\ntnu\\flap_control\\flap_poc_2606_20261102\\FlapPOC_2606_motion_passed.sim",
+    "F:\\ntnu\\flap_control\\flap_poc_2606_20261102\\FlapPOC_2606_test_error.sim",
+    "F:\\ntnu\\flap_control\\flap_poc_2606_20261102\\FlapPOC_2606_working.sim",
+    "F:\\ntnu\\flap_control\\flap_poc_2606_20261102\\input_copy.sim",
+    "F:\\ntnu\\flap_control\\flap_drl_20261102\\01_reference\\C01_original_copy.sim",
+    "F:\\ntnu\\flap_control\\flap_drl_20261102\\04_cases\\calm\\FLAP_C00_seed.sim"
+  ],
+  "all_sim_hashes_match": true,
+  "artifact_checks_passed": true
+}

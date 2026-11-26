@@ -1,0 +1,34 @@
+NTNU MINI-VOF NIGHT REPORT 03/04.11.2026
+2026-11-03T21:34:33.983917+01:00
+
+N1: HOLD. N2/N3: NOT STARTED. No long propagation or foil run accepted.
+Reason: local STAR client/server connection reset twice. No root cause proven.
+First calibration completed20timesteps (.050->.070s); disconnect occurred during next inner loop.
+Second numerical correction(inner40) disconnected before a new physical step.
+Original .050s checkpoint is unchanged. Interrupted-inner .071s state saved for diagnosis only.
+Owned STAR/MPI processes stopped normally; no force termination.
+IndependentW03GPU run untouched.
+
+{
+  "complete_steps": 20,
+  "physical_start_s": 0.05,
+  "last_complete_sample_s": 0.07000000000000005,
+  "solver_s_total": 48.6367946,
+  "mean_s_step": 2.48263604,
+  "interface_CFL_max": 0.15505164473692162,
+  "pABS_min_Pa": 101302.13072906628,
+  "mass_relative_max_after_first5": 6.102601900922957e-07,
+  "continuity_end_range": [
+    0.01899394043273544,
+    0.060262052121761285
+  ],
+  "continuity_limit_unchanged": 0.01,
+  "eta_Airy_rmse_m": 0.0015124948762560801,
+  "eta_record_too_short_for_period_reflections_or_periodic_validation": true,
+  "max_abs_spanwise_velocity": 2.0469871472888578e-14
+}
+
+The short record is NOT an amplitude/frequency/reflection or periodic-response validation.
+No foil forces/cycle cost exist; no surrogate/DRL training.
+Next: diagnose local STAR transport, then resumeN1 under unchanged gates.
+Files: DIAGNOSTIC_ETA.png, DIAGNOSTIC_SAFETY_RESIDUAL.png, original CSV/logs and checkpoint manifests.

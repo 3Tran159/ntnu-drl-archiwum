@@ -1,0 +1,12 @@
+source=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_B_split0_fixed\SP_B_split0_stabilized_2606.sim
+time=0.3000000000000002
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.span_source|Symmetry Plane
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Domain.span_source|Symmetry Plane
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Main.NativeSkin|Wall
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Main.HingeArc|Wall
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Flap.NativeSkin|Wall
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Flap.HingeArc|Wall
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.top|Pressure Outlet
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.inlet|Velocity Inlet
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.outlet|Pressure Outlet
+boundary=Background|Background: Hydro_ExactQuasi2D_fluid.Hydro_Background_fluid.Hydro_Domain.bottom|Wall

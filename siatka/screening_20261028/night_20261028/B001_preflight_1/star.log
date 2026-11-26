@@ -1,0 +1,48 @@
+Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxuaWdodF8yMDI2MTAyOFxCMDAxXGJhc2VsaW5lX2NvcHkuc2lt
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 21368
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 16 days
+Wed Oct 28 20:51:56 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\mesh_screening_20261028\night_20261028\B001\baseline_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\mesh_screening_20261028\night_20261028\TargetedMeshCase.java
+F:\ntnu\mesh_screening_20261028\night_20261028\TargetedMeshCase.java:58: warning: [deprecation] getAbsoluteSize() in star.meshing.PartsRelativeOrAbsoluteSize has been deprecated
+      edge.getCustomValues().get(PartsTargetSurfaceSize.class).getAbsoluteSize().getValue().setValue(curveTarget);
+                                                              ^
+F:\ntnu\mesh_screening_20261028\night_20261028\TargetedMeshCase.java:168: warning: [deprecation] <T>createTable(java.lang.Class<T>) in star.common.TableManager has been deprecated
+        XyzInternalTable table=s.getTableManager().createTable(XyzInternalTable.class);table.setPresentationName("NTNU_cells_"+name);
+                                                  ^
+F:\ntnu\mesh_screening_20261028\night_20261028\TargetedMeshCase.java:179: warning: [deprecation] getAbsoluteSize() in star.meshing.PartsRelativeOrAbsoluteSize has been deprecated
+    Map<String,Object> p=new LinkedHashMap<>();p.put("foil_target_m",base*size.getRelativeSizeScalar().getRawValue()/100.0);p.put("curve_target_m",edge.getCustomValues().get(PartsTargetSurfaceSize.class).getAbsoluteSize().getValue().getSIValue());p.put("enhanced_prisms",enhanced);
+                                                                                                                                                                                                           ^
+Note: F:\ntnu\mesh_screening_20261028\night_20261028\TargetedMeshCase.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+java.lang.RuntimeException: java.lang.IllegalStateException: Locked setting changed: locked_applied.json
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

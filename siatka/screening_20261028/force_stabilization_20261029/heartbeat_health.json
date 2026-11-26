@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-29T17:49:00+01:00",
+  "active_attempt": "M07_until_settled_r1",
+  "queue_controller_pid": 13092,
+  "publisher_pid": 7540,
+  "progress_check": {
+    "observed_physical_time_s": 0.536,
+    "previous_observed_time_s": 0.298,
+    "finite_coefficients": true,
+    "CD": 0.008327758166356048,
+    "CL_total": 0.29477446019697384,
+    "accepted": false,
+    "checkpoint_time_s": 0.5
+  },
+  "dashboard": "fresh",
+  "private_sync": "ok, no report_error",
+  "resources": {
+    "free_ram_gib": 39.26,
+    "E_free_gib": 294.62,
+    "F_free_gib": 3.25,
+    "gpu_utilization_pct": 19,
+    "gpu_memory_mib": 2978,
+    "gpu_temperature_C": 86
+  },
+  "independent_work": "Accepted M04/M06 trailing-edge force and layer audit saved; matching and full-pressure reconstruction passed. Local viscous force not available; no error bound claimed.",
+  "decision": "Continue M07; preserve M08–M10 for adaptation after its accepted comparison. Large future builds on E.",
+  "user_action_required": false
+}

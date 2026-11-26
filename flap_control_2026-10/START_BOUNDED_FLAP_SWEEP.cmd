@@ -1,0 +1,2 @@
+@echo off
+powershell -NoProfile -Command "Start-Process -WindowStyle Hidden -FilePath 'C:\Users\ThinkPad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -ArgumentList '-X','utf8','-u','F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\bounded_sweep_control.py','start' -RedirectStandardOutput 'F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\bounded_start_console.log' -RedirectStandardError 'F:\ntnu\flap_control\hydro_validation_2606_20261102\runs\bounded_start_error.log'"

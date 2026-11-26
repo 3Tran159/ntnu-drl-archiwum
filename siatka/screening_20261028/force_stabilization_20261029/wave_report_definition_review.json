@@ -1,0 +1,26 @@
+{
+  "updated_at": "2026-10-30T01:02:57.004263+01:00",
+  "status": "definitions_and_saved_values_verified_next_phase_flux_consistency",
+  "source_unchanged": true,
+  "steps_taken": 0,
+  "physical_reports": 8,
+  "all_physical_reports_unsmoothed": true,
+  "all_boundary_mass_reports_idealization_off": true,
+  "all_physical_report_errors_empty": true,
+  "difference_vs_original_history": {
+    "mass_kg": 0.0,
+    "water_volume_m3": 0.0,
+    "net_mass_kg_s": 0.0
+  },
+  "native_mixture_flux_function": "FaceFlux",
+  "VOF": {
+    "scheme": "HRIC",
+    "face_density_reconstruction": "FIRST_ORDER",
+    "temporal_order": "SECOND_ORDER",
+    "actual_substeps": 1
+  },
+  "interpretation": "Smoothing does not explain residual. Inspect volume-flux-based VOF phase-flux consistency before attributing global FaceFlux budget to discrete phase conservation. Do not change physics or relax gate without evidence.",
+  "note": "Reflective bare FieldFunction.getValue errors are not report evaluation failures; actual report error logs empty. Analytic wave inventory remains unavailable at zero-step checkpoint load and is excluded.",
+  "mass_gate_pct": 0.01,
+  "R8_short_mass_gate_pass": false
+}

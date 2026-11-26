@@ -1,0 +1,1421 @@
+Solution Interpolation Model Reference
+E:\Program Files\Siemens\21.02.007-R8\STAR-CCM+21.02.007-R8\doc\en\online\STARCCMP\GUID-1786BD70-103D-4C6D-8601-23733B3CFBD1.html
+
+ Solution Interpolation Model Reference
+ Jump to main content
+Simcenter STAR-CCM+ 2602
+User Guide
+Search
+Home
+Physics Simulation
+ Simcenter STAR-CCM+ can model a wide range of physics phenomena including fluid mechanics, solid mechanics, heat transfer, electromagnetism, and chemical reactions. Scenarios with multiple time scales can be solved within the same simulation.
+Running Physics Simulations
+This part of the documentation describes preparation and procedures for running a Simcenter STAR-CCM+ simulation. 
+Solution Data Interpolation
+When the mesh changes during the simulation, for example due to remeshing or mesh replacement, Simcenter STAR-CCM+ automatically interpolates any solution data that was computed on the old mesh to the new mesh representation. 
+Solution Interpolation Model Reference
+The Solution Interpolation model allows you to choose the interpolation method that is used for mapping the solution data when remeshing occurs. 
+Share
+Email
+Link: copied
+ Copy
+Breadcrumb: copied
+ Copy
+Physics Simulation
+ Simcenter STAR-CCM+ can model a wide range of physics phenomena including fluid mechanics, solid mechanics, heat transfer, electromagnetism, and chemical reactions. Scenarios with multiple time scales can be solved within the same simulation.
+Defining Physics Workflow
+Simcenter STAR-CCM+ contains a wide range of physics models and methods for the simulation of single- and multi-phase fluid flow, heat transfer, turbulence, solid stress, dynamic fluid body interaction, aeroacoustics, and related phenomena. These physics models are all selected using a physics continuum. 
+Setting Up Physics
+This section provides information on how to set up physics models in STAR-CCM+. 
+Running Physics Simulations
+This part of the documentation describes preparation and procedures for running a Simcenter STAR-CCM+ simulation. 
+Using Initial Conditions
+Initial conditions in a physics continuum specify the initial field data for the simulation. 
+Using Solvers
+In Simcenter STAR-CCM+, solvers compute the solution during the simulation run. Each solver performs a specific task. Some solvers assemble the system of equations that describe the phenomenon of interest; some solvers simply provide source terms to other solvers. 
+Controlling Domain Decomposition
+To make use of parallel processing, Simcenter STAR-CCM+ breaks the computational domain into separate sections (called sub-domains) and assigns each to a separate process. This approach is called domain decomposition. Once the domain is decomposed, the processes work in parallel on their individual sub-domains, periodically communicating with each other. 
+Setting Up Stopping Criteria
+Stopping criteria allow you to specify how long the solution runs for and under what conditions it stops iterating and/or marching in time. 
+Obtaining a Solution Interactively
+This section explains how to use the interactive features of Simcenter STAR-CCM+ to obtain a solution. 
+Troubleshooting the Solution
+Some problems that can occur when running a Simcenter STAR-CCM+ simulation are solution divergence and signal segmentation violations or memory errors. Solution divergence is likely to occur when a simulation is not well-posed. SIGSEGV or memory errors are generally unexpected and can require assistance from your support representative.
+Solution Data Interpolation
+When the mesh changes during the simulation, for example due to remeshing or mesh replacement, Simcenter STAR-CCM+ automatically interpolates any solution data that was computed on the old mesh to the new mesh representation. 
+Solution Interpolation Model Reference
+The Solution Interpolation model allows you to choose the interpolation method that is used for mapping the solution data when remeshing occurs. 
+Verification and Validation of Results
+Verification and validation are independent procedures that are used together to ensure that a code meets requirements and specifications, and that it fulfills its intended purpose. In simple terms, validation can be expressed by the query ”Are you building the right thing?” and verification by the query ”Are you building it right?” 
+Detailed Differences in Simulation Results
+Motion
+In general, motion can be defined as the change in position of a body with respect to a certain reference frame. 
+Space
+The primary function of the Space models in Simcenter STAR-CCM+ is to provide methods for computing and accessing mesh metrics. Examples of mesh metrics include cell volume and centroid, face area and centroid, cell and face indexes, and skewness angle. 
+Time
+The primary function of the time models in Simcenter STAR-CCM+ is to provide solvers that control the iteration and/or unsteady time-stepping. 
+Mesh Motion and Adaption
+Many simulations that involve motion or geometry change require you to move or deform the mesh. Other simulations require localized mesh adaption in order to achieve an accurate solution.
+Materials
+Material models simulate substances, including various mixtures. 
+Fluid Flow
+Many engineering design projects require you to predict the effect of flowing fluids on containing structures or immersed objects. While you can analyse simple scenarios with hand calculations, complex scenarios require you to apply numerical methods for accurate solutions. 
+Viscous Flow
+Viscous Flow is a finite element approach for use with viscoelastic materials and other highly viscous non-Newtonian fluids, such as liquid plastics and rubber, dough and similar foodstuffs, molten glass, and mud. Viscoelastic materials resemble elastic materials, but also exhibit viscous effects, rebounding slowly from deformations. 
+Passive Scalars
+Passive scalars are user-defined variables of arbitrary value, assigned to fluid phases or individual particles. They are passive because they do not affect the physical properties of the simulation. An intuitive way to think of passive scalars is as tracer dye in a fluid, but with numerical values instead of colors, and with no appreciable mass or volume. 
+Heat Transfer
+Heat transfer is the study of energy in transit due to a temperature difference in a medium or between media. Heat transfer extends thermodynamic analysis through the study of the modes of energy transfer and through development of relations to calculate energy transfer rates. 
+Species
+This chapter provides information about the chemical species models in Simcenter STAR-CCM+. A species model is activated whenever a multi-component liquid or multi-component gas is chosen from the Material model section of the Physics Model Selection dialog. 
+Porous Media
+Simcenter STAR-CCM+ allows you to simulate the transport of a fluid or energy (e.g. heat, electrical charge) through porous materials using the concept that the action of the porous media can be represented using appropriate loss (or 'diffusion') coefficients. 
+Adjoint
+The adjoint method is an efficient means to predict the influence of many design parameters and physical inputs on some engineering quantity of interest, that is, on the engineering objective of the simulation. In other words, it provides the sensitivity of the objective (output) with respect to the design variables (input). 
+Fans and Blowers
+Simcenter STAR-CCM+ provides models for axial and radial fans where classical fan laws apply. 
+Virtual Disk Model
+The virtual disk model is based upon the principle of representing propellers, turbines, rotors, fans, and so on, as an actuator disk. The actuator disk treatment is practical when you are concerned about the influence of the rotor/propeller behavior on the flow rather than knowing about the detailed interactions between the flow and the blades of the rotating device.
+Turbulence
+Most fluid flows of engineering interest are characterized by irregularly fluctuating flow quantities. 
+Transition
+The term transition refers to the phenomenon of laminar to turbulence transition in boundary layers. A transition model in combination with a turbulence model predicts the onset of transition in a turbulent boundary layer. 
+Wall Distance
+Wall distance is a parameter that represents the distance from a cell centroid to the nearest wall face with a non-slip boundary condition. Various physical models require this parameter to account for near-wall effects. 
+Radiation
+The Radiation Model is the gateway, or entry point to all of the radiation modeling capabilities of Simcenter STAR-CCM+. This section describes Simcenter STAR-CCM+’s radiation modeling. 
+Aeroacoustics
+Aeroacoustics investigates the aerodynamic generation of sound. 
+Reacting Flow
+Simcenter STAR-CCM+ provides a selection of models that you can use to simulate a wide range of reacting flow applications. 
+Internal Combustion Engines
+In an internal combustion engine (ICE), for example a gasoline engine, the process of combustion takes place in a cylinder (or cylinders) within the engine. The working fluid is a fuel and oxidizer mixture (usually air), which reacts to form combustion products.
+Multiphase Flow
+Multiphase flow is a term which refers to the flow and interaction of several phases within the same system where distinct interfaces exist between the phases. Simcenter STAR-CCM+ considers flow options where phases coexist as: gas bubbles in liquid, liquid droplets in gas, and/or solid particles in gas or liquid, and/or (large scale) free surface flows.
+Dynamic Fluid Body Interaction
+Dynamic Fluid Body Interaction (DFBI) in Simcenter STAR-CCM+ allows you to simulate the motion of one or more 6-DOF bodies, with the displacement and rotation resulting from the defined mechanical and multiphysics interaction (flow, DEM, solid stress, EMAG).
+Harmonic Balance
+Some unsteady flows have a regularly repeating flow pattern, that is, they are time-periodic. Consider the flow from a fan blade passing across the entrance to a duct. Measurements of the instantaneous flow just within the duct would show a regularly repeating pattern. If the flow disturbances are sufficiently large, and propagate to the end of the duct, measurements of the unsteady flow at any point within the duct show repeating patterns. Such time-periodic patterns can be expressed using Fourier series. 
+Solid Stress
+Simcenter STAR-CCM+ allows you to model the response of a solid continuum to applied loads, including mechanical loads and thermal loads that result from changes in the solid temperature. 
+Electromagnetism
+Simcenter STAR-CCM+ allows you to model engineering applications involving electromagnetic phenomena. Example applications are electric motors, electric switches, and transformers, which can be modeled based on the classical theory of Electromagnetism. 
+Electrochemistry
+Electrochemistry is the study of chemical reactions which occur due to an imposed electrical charge, or a difference in electrical potential at a boundary between a conductor–such as a metal–and an electrolyte. Simcenter STAR-CCM+ provides models that allow you to simulate batteries, corrosion, etching, and other electrochemical reactions. 
+Electric Circuits
+Electrical circuits are conducting loops of interconnected electrical components, such as batteries, power sources, resistors, and inductors. 
+Plasma
+Plasma is a state of matter similar to a gas that is composed partially or completely of charged particles such as ions and electrons which are not bound to each other.
+Batteries
+You can simulate batteries in Simcenter STAR-CCM+ using battery cells and battery cycling procedures that are defined either directly in Simcenter STAR-CCM+, or in the external software package Simcenter Battery Design Studio.
+Casting
+Casting simulations are performed using transient multiphase simulations using the VOF model with solidification. Conjugate heat transfer is applied between the solidifying melt and the solid mold. 
+Region Sources
+This section provides some guidelines on how to use region sources for some common problems. 
+Cell Quality Remediation
+The Cell Quality Remediation model helps you get solutions on a poor-quality mesh. This model identifies poor-quality cells, using a set of predefined criteria, such as Skewness Angle exceeding a certain threshold. Once these cells and their neighbors have been marked, the computed gradients in these cells are modified in such a way as to improve the robustness of the solution. 
+Guidelines for Applying Simcenter STAR-CCM+
+This part of the documentation provides guidelines on applying Simcenter STAR-CCM+ models to your applications. 
+Common Solvers Reference
+In Simcenter STAR-CCM+, solvers compute the solution during the simulation run. 
+Solution Interpolation Model Reference
+The Solution Interpolation model allows you to choose the interpolation method that is used for mapping the solution data when remeshing occurs. 
+ Model Name 
+ Solution Interpolation 
+ Provided By 
+ [physics continuum] > Models > Optional Models 
+ Example Node Path 
+ Continua > Physics 1 > Models > Solution Interpolation 
+ Requires 
+Physics Models: 
+Space: any 
+Time: any 
+Material: any 
+ Properties 
+ Per Part Mapping, Interpolation Method, Conservative Correction 
+ Theory
+ Solution Data Interpolation
+Solution Interpolation Model Properties
+ Per Part Mapping 
+Determines whether Simcenter STAR-CCM+ interpolates the data on a region basis or on a part basis. When activated, the solution is interpolated from each part on the original mesh to each part on the new mesh. Per part mapping improves solution interpolation near part contacts. 
+ Interpolation Method 
+ Determines the method that is used to
+ interpolate the solution from an existing volume mesh to a newly generated
+ volume mesh. These options are the same as the options provided for Mesh
+ Replacement
+Nearest
+ neighbor—maps the solution data from
+ one mesh to another by comparing the cell centroids in each mesh.
+ That is, the new cell gets the solution data from an old cell whose
+ cell centroid is closest to its own. This option is quick, but does
+ not provide a smooth interpolation of results. 
+Higher-order
+ stencil—maps the solution data from
+ one mesh to another by using a stencil of cells and faces on the
+ original mesh. A smooth interpolation is achieved by using a
+ distance-weighted, least-square interpolation. This option is
+ recommended for transient analyses. 
+ Legacy Method
+ For interpolation, Simcenter STAR-CCM+ matches each cell in the new mesh to
+ corresponding cells in the old mesh. 
+From Simcenter STAR-CCM+ 2019.3, for a target
+ cell in the new mesh, the matching algorithm finds the cell in the old
+ mesh that contains the centroid of the target cell, rather than the cell
+ with the closest centroid. When you activate the Legacy Method property, Simcenter STAR-CCM+ falls back to the
+ legacy closest-centroid search method. 
+For shell regions, the
+ Legacy Method
+ is the only compatible option and is activated automatically. In all
+ other cases, you are recommended to leave the Legacy Method
+ deactivated.
+ Conservative Correction 
+ Currently, conservative interpolation is
+ supported for flow and energy models (segregated and coupled) as well as
+ some turbulence models. This option is inactive (greyed-out) if any
+ unsupported models are selected in the continuum.
+When set to
+ Enable, Simcenter STAR-CCM+ enforces the conservation of mass, momentum and
+ energy during the interpolation process.
+When you activate
+ Per Part
+ Mapping, these quantities are conserved for each
+ part; otherwise conservation is enforced on a region basis.
+ Unpublished work © Siemens 2026 
+ Corporate Information
+ Privacy Policy
+ Cookies Policy 
+ Terms of Use 
+ Digital ID
+Need Support?
+ Support Center
+Follow Us
+
+
+Solution Data Interpolation
+E:\Program Files\Siemens\21.02.007-R8\STAR-CCM+21.02.007-R8\doc\en\online\STARCCMP\GUID-232B553A-E01F-4EEF-9020-557A591A10D3.html
+
+ Solution Data Interpolation
+ Jump to main content
+Simcenter STAR-CCM+ 2602
+User Guide
+Search
+Home
+Theory
+Simcenter STAR-CCM+ simulations are built on numerical algorithms that solve relevant laws of physics according to the conditions that the simulation defines. So that you can identify the physical laws, and understand the methods by which they are solved, Simcenter STAR-CCM+ comes with a Theory Guide. 
+Solution Data Interpolation 
+Many operations require interpolation of solution data between different sets of mesh points. For example, remeshing operations require interpolation of existing solution data onto a new mesh. Data interpolation also occurs at the interface between regions, where contacting boundaries exchange data. Additionally, configurable data mappers allow you to interpolate field functions and tabular data to specified meshes. 
+Share
+Email
+Link: copied
+ Copy
+Breadcrumb: copied
+ Copy
+Theory
+Simcenter STAR-CCM+ simulations are built on numerical algorithms that solve relevant laws of physics according to the conditions that the simulation defines. So that you can identify the physical laws, and understand the methods by which they are solved, Simcenter STAR-CCM+ comes with a Theory Guide. 
+Fundamental Equations
+Simcenter STAR-CCM+ models a range of physics phenomena including fluid mechanics, solid mechanics, heat transfer, electromagnetism, and chemical reactions. On a macroscopic scale, where the typical lengths are much greater than the inter-atomic distances, the discrete structure of matter can be neglected and materials can be modeled as continua. The mathematical models that describe the physics of continua are derived from fundamental laws that express conservation principles. 
+Fluid Flow
+Simcenter STAR-CCM+ can simulate internal and external fluid flow across a wide range of flow regimes, and for a variety of fluid types. It solves the conservation equations for mass, momentum, and energy for general incompressible and compressible fluid flows. 
+Numerical Flow Solution
+ In the finite volume method, the solution domain is subdivided into a finite number of small control volumes, corresponding to the cells of a computational grid. 
+Turbulence
+Transition
+The term transition refers to the phenomenon of laminar to turbulence transition in boundary layers. A transition model in combination with a turbulence model predicts the onset of transition in a turbulent boundary layer. 
+Wall Treatment
+Walls are a source of vorticity in most flow problems of practical importance. Therefore, an accurate prediction of the flow across the wall boundary layer is essential. 
+Wall Distance
+Wall distance is a parameter that represents the distance from a cell centroid to the nearest wall face with a non-slip boundary condition. Various physical models require this parameter to account for near-wall effects. 
+Heat Transfer
+Heat transfer is the exchange of thermal energy between media at different temperatures. Heat transfers from locations of high temperature to locations of low temperature in order to reach an equilibrium state. The three main mechanisms of heat transfer are: conduction, convection, and radiation. 
+Porous Media
+Porous media are continua that contain both fluid and fine-scale solid structures, for example: packed-bed chemical reactors, filters, radiators, honeycomb structures, or fibrous materials. The solid geometrical structures are too fine to be individually meshed and fully resolved by a computational grid. 
+Species and Passive Scalars
+Simcenter STAR-CCM+ models the transport, the mixing, and the chemical reactions of multi-component liquids or multi-component gases by solving conservation equations for scalar variables that represent the mass fraction of each species in the mixture. This conservation equation allows for convection, diffusion, and optional source effects, and is solved in addition to the global mass continuity equation. 
+Multiphase—Eulerian Approach
+Multiphase flows, where several fluids flow in the domain of interest, play an important role in variety of industrial applications. In general, we associate phases with gases, liquids or solids and as such some simple examples of multiphase flows are: air bubbles rising in a glass of water, sand particles carried by wind, rain drops in air. The definition of phase can be generalized and applied to other fluid characteristics such as size, shape, density, and temperature. 
+Multiphase—Lagrangian Approach
+Multiphase flows are found in a wide variety of industrial processes, some examples of which are internal combustion engines, liquid, or solid fueled combustors, spray driers, cyclone dust separators, and chemical reactors. Multiphase in this context refers to one thermodynamic phase, be it a solid, a liquid, or a gas, interacting with another distinct phase. 
+Reacting Flow
+In reacting flows, chemical species mix with each other and react when conditions allow. To model these flows, Simcenter STAR-CCM+ couples species and energy transport equations with the chemistry solvers that compute the source terms.
+Internal Combustion Engines
+Numerical modeling of internal combustion engines plays an increasingly important role in improving engine design. CFD simulation of such engines can give a comprehensive insight into the wide-ranging physics of the device, such as turbulent mixing between fuel and air, the ignition, and combustion chemistry.
+Electrochemistry 
+Electrochemistry is the discipline investigating relationships between electrical currents and chemical composition change in general. 
+Plasma
+Plasma is a state of matter similar to a gas that is composed partially or completely of charged particles such as ions and electrons which are not bound to each other. 
+Electromagnetism
+Many engineering applications, such as electric motors, electric switches, and transformers, involve electromagnetic phenomena. Electromagnetic phenomena can be modeled based on the classical theory of Electromagnetism, which describes the interaction between electrically charged particles in terms of electric fields, magnetic fields, and their mutual interaction. 
+Batteries
+Solid Mechanics
+Solid Mechanics describes the behavior of a solid continuum in response to applied loads. Applied loads include body forces, surface loads, point forces, or thermal loads that result from changes in the solid temperature. Applied loads induce a stress field in the structure and can cause displacement of the structure—from an initial undeformed configuration to a deformed configuration. 
+Aeroacoustics
+ Computational aeroacoustics (CAA) is a branch of multiphysics modeling and simulation that involves identifying noise sources that are induced by fluid flow and propagation of the sound waves then generated. 
+Signal Processing
+Finite Element Method
+The Finite Element method is a powerful tool for finding approximate solutions to continuous problems. The methodology is similar to other numerical techniques that approximate continuous partial differential equations with discrete algebraic equations. 
+Mesh Motion
+In transient simulations, mesh motion is a numerical technique that allows you to update the position of the computational domain while the solvers run. 
+6-DOF Rigid Body Motion
+Simcenter STAR-CCM+ allows you to model the motion of a rigid body in response to applied forces and moments. In a rigid body, the relative distance between internal points does not change. Therefore, it is sufficient to solve the equations of motion for the center of mass of the body. 
+Rotating Flow
+Rotating flow usually occurs in rotating machinery such as pumps, propellers, fans, wind turbines, and so on. 
+Harmonic Balance
+Harmonic Balance equations describe periodic unsteady flows where the unsteady frequencies are known beforehand. They are suited to modeling periodically repeating flow fields that typically occur in turbomachinery such as compressors, turbines, and fans. 
+Adjoint
+The adjoint method is an efficient means to predict the influence of many input parameters on some engineering quantities of interest in a simulation. 
+Design Manager
+Design Manager provides an automated approach within Simcenter STAR-CCM+ to run design exploration studies. Design exploration covers both performance assessment and optimization.
+Scalars, Vectors, and Tensors
+Most physical quantities in Simcenter STAR-CCM+ are either scalars, vectors, or 2nd-order tensors. 
+Solution Data Interpolation 
+Many operations require interpolation of solution data between different sets of mesh points. For example, remeshing operations require interpolation of existing solution data onto a new mesh. Data interpolation also occurs at the interface between regions, where contacting boundaries exchange data. Additionally, configurable data mappers allow you to interpolate field functions and tabular data to specified meshes. 
+Idealizations
+In many simulations, it is common practice to reduce the size of the computational domain using planes of symmetry, axes of rotation, periodicity, or by reducing the 3D domain to a 2D domain. However, when you calculate physical quantities using reports you generally want to account for the whole domain. You can obtain report values for the full model using idealizations. 
+Solution Data Interpolation 
+Many operations require interpolation of solution data between different sets of mesh points. For example, remeshing operations require interpolation of existing solution data onto a new mesh. Data interpolation also occurs at the interface between regions, where contacting boundaries exchange data. Additionally, configurable data mappers allow you to interpolate field functions and tabular data to specified meshes. 
+Simcenter STAR-CCM+ interpolates solution data from a set of mesh points (source stencil) to another (target stencil). The set of points defining the source or the target stencil can include mesh vertices, cell centroids, or face centroids. For example, for a set of source surfaces with 
+ Face stencil, the source stencil comprises the centroids of all faces belonging to the source surfaces. For a set of source surfaces with 
+ Vertex stencil, the source stencil comprises all mesh vertices lying on the source surfaces. 
+For some cases, such as remeshing and manual data mapping, 
+ Simcenter STAR-CCM+ allows you to choose the interpolation scheme that is used to transfer data. The available interpolation schemes vary depending on the source and target stencil (face, cell, or vertex), as outlined in the following table: 
+ Source Stencil 
+ Vertex 
+ Face 
+ Cell 
+ Target Stencil 
+ Vertex 
+Shape Function 
+Least Squares 
+Nearest Neighbor 
+Least Squares 
+Nearest Neighbor 
+Conservative Enclosed Face
+Conservative Maximum Distance 
+Least Squares 
+Nearest Neighbor 
+ Face 
+Shape Function 
+Least Squares 
+Nearest Neighbor 
+Least Squares 
+Nearest Neighbor 
+Exact Imprinting 
+Approximate Imprinting 
+Least Squares 
+Nearest Neighbor 
+ Cell 
+Shape Function 
+Least Squares 
+Nearest Neighbor 
+Least Squares 
+Nearest Neighbor 
+Least Squares 
+Nearest Neighbor 
+The following sections illustrate the shape function scheme in the context of vertex-to-face mapping. All other schemes are illustrated in the context of face-to-face mapping. The formulation can be generalized to other stencil combinations. 
+In all diagrams, the solution field on the blue mesh (source mesh) is interpolated to the red mesh (target mesh). 
+Nearest Neighbor Interpolation 
+The nearest neighbor method sets the data on a target face to the data on the nearest source face. In the following diagram, the centroid of the source face 
+ k is the closest point to the centroid of the target face 
+ n. The data from face 
+ k is assigned to face 
+ n as the mapped value. 
+Least Squares Interpolation 
+The least square method uses a cost function to approximate the solution field distribution near a target location. In the following diagram, the solution field has known values fi at the face centroids i on the source mesh: 
+To evaluate the mapped value at the target point a, 
+ Simcenter STAR-CCM+ approximates the solution field f using a first-order Taylor series, centered in a: 
+f(x)≈f(xa)+(x−xa)⋅∇f(xa)⁢(5377) 
+Following the least square method, Simcenter STAR-CCM+ then calculates 
+ f
+ (
+ x
+ a
+ )
+ by minimizing the sum of squared residuals:
+ S
+ =
+ ∑
+ i
+ ∈
+ F
+ (
+ c
+ )
+ r
+ i
+ 2
+ (5378)
+where the residuals are the differences between the values predicted by 
+ Eqn. (5377) at the source locations i and their known values fi: 
+ri=f(xi)−fi(5379) 
+Only the neighbors of the source face that is closest to the target face contribute to the interpolation. In 
+ Eqn. (5378), the set of centroids of the contributing faces is indicated by F(c). 
+ In the diagram, face 
+ 0 is the closest to face 
+ a. Only the neighbors of face 
+ 0, that are defined as any face that shares at least one vertex with face 
+ 0, contribute to the interpolation. These neighbors are 
+ 2, 
+ 3, 
+ 4, 
+ 5, 
+ 6, and 
+ 8. The disadvantage is that some of the blue faces that imprint onto the target face (for example 
+ 1, 
+ 10, 
+ 11, 
+ 7) do not contribute. 
+Note The least squares method is applicable to all cell types, for face and vertex source stencils. 
+Exact Imprinting Interpolation 
+In the following diagram, the target face is imprinted on the source mesh. This results in several facelets that are the intersection of the source mesh (faces 
+ 0, 
+ 1, 
+ 2, 
+ 3, 
+ 4, 
+ 5, 
+ 6, 
+ 7, 
+ 8, 
+ 10, 
+ 11) with the target face 
+ a. 
+To evaluate the mapped value at the target point a, 
+ Simcenter STAR-CCM+ uses the normalized facelet areas Ai as interpolation weights: 
+faAa=∑i∈ F(c)Aifi(5380) 
+F(c) denotes the set of centroids i of faces on the source mesh that intersect the target face. fi is the solution at the face centroids i. 
+ This method is preferable when: 
+ a flux-preserving mapping is desired 
+ the source mesh is finer than the target mesh and the surface curvature is adequately resolved
+Unlike the least squares scheme, all the source faces that imprint onto the target face contribute to the interpolation. 
+Mapping with the exact imprint method can fail when surface curvature is inadequately resolved in either the source or target mesh. 
+Approximate Imprinting Interpolation 
+This method is a variation of the exact imprinting method in which the source stencil is constructed using proximity checks instead of exact intersections. Proximity checks require less intensive computation than the exact method.
+The stencil includes all source faces that lie within a circle that is centered at the target face centroid and passes through the farthest vertex of the target face. In the following diagram, the circle includes faces 
+ 0, 
+ 1, 
+ 2, 
+ 3, 
+ 4, 
+ 5, 
+ 6, 
+ 7, 
+ 8, 
+ 9, 
+ 10, 
+ 11, 
+ 12, 
+ 13 and 
+ 14 as part of the stencil. 
+Exact imprinting would eliminate faces 
+ 9, 
+ 13, and 
+ 14 from the stencil because they do not intersect the target face. As for exact imprinting, the normalized face areas are used as interpolation weights. 
+Although the approximate imprinting method is more robust than the exact imprinting method, it does not preserve flux quantities. The approximate method has comparable accuracy to the exact method when the source mesh is much finer than the target mesh. 
+Shape Function
+ Interpolation
+This interpolation method is typically
+ used when mapping data from a finite element mesh to a finite volume mesh. In the
+ following diagram, the solution field is known at the vertices
+ l
+ of the source mesh elements. The target face
+ centroid n lies within the element k.
+To evaluate the mapped value at the
+ target point 
+ n
+ , Simcenter STAR-CCM+
+ interpolates the solution at the vertices of element k using nodal shape
+ functions: 
+ f
+ n
+ =
+ ∑
+ l
+ ∈
+ N
+ (
+ k
+ )
+ f
+ l
+ N
+ l
+ (
+ ξ
+ n
+ ,
+ η
+ n
+ ,
+ χ
+ n
+ )
+ (5381)
+where 
+ N
+ l
+ is the shape function at vertex
+ l
+ , 
+ f
+ l
+ is the solution value at vertex
+ l
+ , and 
+ (
+ ξ
+ n
+ ,
+ η
+ n
+ ,
+ χ
+ n
+ )
+ denotes the local coordinates of point
+ n
+ in the element k. The sum is over the set of
+ vertices of element k, 
+ N
+ (
+ k
+ )
+ . 
+The form of the nodal shape functions
+ depends on the element type. For example, a four-node isoparametric quadrilateral in
+ 2D has the following nodal shape functions: 
+ N
+ 1
+ =
+ (
+ 1
+ −
+ ξ
+ )
+ (
+ 1
+ −
+ η
+ )
+ 4
+ (5382)
+ N
+ 2
+ =
+ (
+ 1
+ +
+ ξ
+ )
+ (
+ 1
+ −
+ η
+ )
+ 4
+ (5383)
+ N
+ 3
+ =
+ (
+ 1
+ +
+ ξ
+ )
+ (
+ 1
+ +
+ η
+ )
+ 4
+ (5384)
+ N
+ 4
+ =
+ (
+ 1
+ −
+ ξ
+ )
+ (
+ 1
+ +
+ η
+ )
+ 4
+ (5385)
+Note The shape function scheme is
+ applicable only for triangle and quadrilateral elements in 2D and tetrahedral and
+ hexahedral elements in 3D. 
+When mapping with shape functions from
+ a finite element mesh, Simcenter STAR-CCM+ recognizes the
+ element type and uses the relevant shape function for interpolation. Simcenter STAR-CCM+ supports quadratic elements with mid-side
+ vertices. When mapping to a finite element mesh, however, Simcenter STAR-CCM+ only uses corner vertex values for the parametric mapping,
+ without considering mid-side vertices. 
+Conservative Enclosed Face
+This interpolation method is typically used when mapping data from a fine finite
+ volume mesh to a coarse finite element mesh. The general requirement is the number
+ of source faces is at least three times the number of target vertices.
+This method marks for each target element (in
+ red) all the source faces (in blue) with the face centroids lying inside this
+ element. The source faces contribute to all the vertices of this element using
+ inverse of the nodal distance method. Extra conservative constraint ensures the
+ conservation of the physics quantities.
+Conservative Maximum Distance
+This interpolation method is typically used when mapping data from a fine finite
+ volume mesh to a coarse finite element mesh. The general requirement is the number
+ of source faces is at least three times the number of target vertices.
+This method searches for each source face (in blue) the influencing vertices within
+ the circle defined by Number of Influencing
+ Nodes and Maximum
+ Distance, as shown below:
+After looping on all the source faces, the mapped field on each coarse mesh vertex is
+ computed as a weighted-sum of the solution from its influencing faces. The
+ interpolation weights are based on rational functions of distance with conservative
+ constraint.
+Conservative Correction
+Conservation correction is applied to the interpolated solution to ensure that
+ extensive physical variables (for example, mass, momentum, total energy) are
+ conserved after remeshing.
+For
+ mass and mass fraction the conservation equation is defined as:
+ ∑
+ i
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ o
+ l
+ d
+ ρ
+ o
+ l
+ d
+ (
+ i
+ )
+ ⁢
+ ⋅
+ y
+ o
+ l
+ d
+ (
+ i
+ ,
+ j
+ )
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ i
+ )
+ ⁢
+ =
+ ∑
+ k
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ n
+ e
+ w
+ ρ
+ n
+ e
+ w
+ (
+ k
+ )
+ ⁢
+ ⋅
+ y
+ n
+ e
+ w
+ (
+ k
+ ,
+ j
+ )
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ k
+ )
+ (5386)
+where
+ j
+ is the species index.
+ ρ
+ o
+ l
+ d
+ (
+ i
+ )
+ is the density in the 
+ i
+ t
+ h
+ cell of the old mesh.
+ y
+ o
+ l
+ d
+ (
+ i
+ ,
+ j
+ )
+ is the mass fraction of the 
+ j
+ t
+ h
+ species in the 
+ i
+ t
+ h
+ cell of the old mesh.
+ ρ
+ n
+ e
+ w
+ (
+ k
+ )
+ is the density in the 
+ k
+ t
+ h
+ cell of the new mesh.
+ y
+ n
+ e
+ w
+ (
+ k
+ ,
+ j
+ )
+ is the mass fraction of the 
+ j
+ t
+ h
+ species in the 
+ k
+ t
+ h
+ cell of the new mesh.
+and
+ ∑
+ i
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ o
+ l
+ d
+ ρ
+ o
+ l
+ d
+ (
+ i
+ )
+ ⁢
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ i
+ )
+ ⁢
+ =
+ ∑
+ k
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ n
+ e
+ w
+ ρ
+ n
+ e
+ w
+ (
+ k
+ )
+ ⁢
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ k
+ )
+ (5387)
+For kinetic energy the
+ conservation equation is defined as:
+ ∑
+ i
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ o
+ l
+ d
+ ρ
+ o
+ l
+ d
+ (
+ i
+ )
+ ⁢
+ ⋅
+ u
+ o
+ l
+ d
+ 2
+ (
+ i
+ )
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ i
+ )
+ ⁢
+ =
+ ∑
+ k
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ n
+ e
+ w
+ ρ
+ n
+ e
+ w
+ (
+ k
+ )
+ ⁢
+ ⋅
+ u
+ n
+ e
+ w
+ 2
+ (
+ k
+ )
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ k
+ )
+ (5388)
+where
+ u
+ is the velocity component. This formula is valid for
+ all the velocity components 
+ u
+ ,
+ v
+ ,
+ w
+ .
+For total energy the conservation
+ equation is defined as:
+ ∑
+ i
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ o
+ l
+ d
+ ρ
+ o
+ l
+ d
+ (
+ i
+ )
+ ⁢
+ ⋅
+ E
+ o
+ l
+ d
+ (
+ i
+ )
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ i
+ )
+ ⁢
+ =
+ ∑
+ k
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ n
+ e
+ w
+ ρ
+ n
+ e
+ w
+ (
+ k
+ )
+ ⁢
+ ⋅
+ E
+ n
+ e
+ w
+ (
+ k
+ )
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ k
+ )
+ (5389)
+For absolute
+ pressure, the volume conservation equation is defined as:
+ ∑
+ i
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ o
+ l
+ d
+ p
+ o
+ l
+ d
+ (
+ i
+ )
+ ⁢
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ i
+ )
+ ⁢
+ =
+ ∑
+ k
+ =
+ 1
+ n
+ c
+ e
+ l
+ l
+ _
+ n
+ e
+ w
+ p
+ n
+ e
+ w
+ (
+ k
+ )
+ ⁢
+ ⋅
+ v
+ o
+ l
+ ⁢
+ (
+ k
+ )
+ (5390)
+The total Enthalpy
+ H
+ =
+ E
+ +
+ p
+ /
+ ρ
+ is conserved as a result of the conservation
+ equations Eqn. (5389) and Eqn. (5390). 
+On this page
+Nearest Neighbor Interpolation
+Least Squares Interpolation 
+Exact Imprinting Interpolation
+Approximate Imprinting Interpolation
+Shape Function
+ Interpolation
+Conservative Enclosed Face
+Conservative Maximum Distance
+Conservative Correction
+ Unpublished work © Siemens 2026 
+ Corporate Information
+ Privacy Policy
+ Cookies Policy 
+ Terms of Use 
+ Digital ID
+Need Support?
+ Support Center
+Follow Us
+
+
+Anisotropic Meshing for Lifting Surfaces
+E:\Program Files\Siemens\21.02.007-R8\STAR-CCM+21.02.007-R8\doc\en\online\STARCCMP\GUID-27E5769A-F9A3-40B0-8371-A87E546A2D85.html
+
+ Anisotropic Meshing for Lifting Surfaces
+ Jump to main content
+Simcenter STAR-CCM+ 2602
+User Guide
+Search
+Home
+Pre-Processing
+Simcenter STAR-CCM+ solves physics problems on a computational mesh. To provide this mesh, you first define geometry using internal or external tools, and then create a mesh pipeline whose operations generate the mesh in repeatable steps. 
+Meshing
+A mesh is a discretized representation of a geometric domain. This domain can include real-world geometry, its content, and its surrounding environment. 
+The Meshing Workflow
+This section contains the recommended workflow for setting up and generating the volume mesh at the parts level. 
+Anisotropic Meshing for Lifting Surfaces 
+Anisotropic meshing allows you to generate a surface mesh that contains stretched quad elements aligned with features (anisotropic faces). By using stretched elements, you can reduce the number of faces in the mesh while retaining geometrical and solution accuracy. 
+Share
+Email
+Link: copied
+ Copy
+Breadcrumb: copied
+ Copy
+Pre-Processing
+Simcenter STAR-CCM+ solves physics problems on a computational mesh. To provide this mesh, you first define geometry using internal or external tools, and then create a mesh pipeline whose operations generate the mesh in repeatable steps. 
+3D-CAD
+3D-CAD is a feature-based parametric modeler within Simcenter STAR-CCM+ that allows you to build geometries from scratch. The geometries that you create with 3D-CAD are stored as 3D-CAD models, which you can then convert to geometry parts for integration with the meshing and simulation process. 
+Modeling Geometry
+This part of the User Guide describes how to use 3D-CAD, the parametric solid modeler available within Simcenter STAR-CCM+. It also describes the features and tools available for further preparation of the geometry model and its surfaces. 
+The Surface Repair Tool
+ The Surface Repair tool diagnoses errors in, and provides repair tools for, tessellated surfaces and part curves. The same tool allows you to reorganize discretized geometry by searching for face-based features and attributes then assigning the results to new or existing part surfaces or curves. 
+Defining the Regions Layout
+An essential part of the process in setting up your simulation is to define the relationship between geometry parts and regions, boundaries, and interfaces. 
+Meshing
+A mesh is a discretized representation of a geometric domain. This domain can include real-world geometry, its content, and its surrounding environment. 
+Mesh Construction
+Within a bounding volume defined by geometrical surfaces, Simcenter STAR-CCM+ can construct meshes for finite volume and finite element solvers. 
+ Meshers in Simcenter STAR-CCM+
+The meshers in Simcenter STAR-CCM+ generate surface and volume meshes for geometry parts that are assigned to regions and make them ready for analysis.
+Parts-Based Meshing
+Parts-based meshing (PBM) is a meshing strategy in which you create one or more mesh operations that define workflows for preparing, fixing, and processing geometry. A major benefit of PBM is that every mesh operation you create forms part of a linear and repeatable process. 
+The Meshing Workflow
+This section contains the recommended workflow for setting up and generating the volume mesh at the parts level. 
+Preparing Geometry for Meshing
+Surface Wrapping the Geometry
+The Surface Wrapper generates a closed and manifold surface mesh from poor quality or complex CAD geometry. 
+Generating the Surface and Volume Mesh
+Meshing parts generates the surface and volume discretization of the imported CAD geometry. The solvers use this discretization to obtain a physical solution. 
+Local Meshing
+Local meshing speeds up the re-execution of mesh generation after changes are made to the geometry or mesh settings (and you already have an initial completed mesh). With this feature, Simcenter STAR-CCM+ remeshes surfaces or volume within a defined location without regenerating a complete mesh. 
+Creating a Parts-Based Mesh with Baffles
+Creating Shells from Parts
+Simcenter STAR-CCM+ provides support for thin-walled structures that are best represented by a two-dimensional cell layer during simulation. These single-cell layers are known as shells. 
+Anisotropic Meshing for Lifting Surfaces 
+Anisotropic meshing allows you to generate a surface mesh that contains stretched quad elements aligned with features (anisotropic faces). By using stretched elements, you can reduce the number of faces in the mesh while retaining geometrical and solution accuracy. 
+Extruding Surfaces from a Parts-Based Volume Mesh
+ Use the extruder to extend the existing volume mesh beyond the original dimensions of the starting surface, normal to the existing volume mesh, or in a specified direction. 
+Field Function Based Surface Mesh Morphing using Tables
+For the Field Function based Morph Surface Mesh operation, you can define the displacement field using tabular data from external sources. First, you import the external data into Simcenter STAR-CCM+ as a .csv file. Then, you create a vector field function that interpolates the imported data and provides the displacement field.
+Replacing a Part in a Parts-Based Volume Mesh
+Simcenter STAR-CCM+ provides a Replace Part operation that allows you to repeat the meshing pipeline with one or more different parts. When the replacement part is defined by a file input from a global parameter, you can use Design Manager to supply the list of filenames during a design study.
+Replacing a Mesh
+A region associated with a volume mesh in Simcenter STAR-CCM+ can be replaced by another topologically identical volume mesh at any point during the analysis. 
+Extracting Surface Mesh 
+The Extract Surface Mesh feature allows you to retrieve the surface mesh after the volume mesh has morphed. This feature allows the volume mesh to be reconstructed with the new shape. 
+Operations
+Operations are actions that you can perform on geometry parts in a sequential pipeline. This pipeline allows for flexible and repeatable meshing processes. Operations perform actions on geometry parts that you can easily repeat whenever their input parts or properties are changed.
+Mesh Descriptions
+A mesh description is a version of a surface or volume mesh belonging to a geometry part. Geometry parts can have more than one surface mesh description associated with them. You create and change descriptions by importing surfaces or executing operations. 
+Custom Mesh Controls
+Custom controls override any default controls for the surface and volume meshers. This facility allows you to refine or coarsen the mesh for part curves, part surfaces, geometry parts, and specified volumes. 
+Surface Meshers
+Simcenter STAR-CCM+ contains meshing tools which can be used to help prepare a high-quality surface mesh before a volume mesh can be generated. 
+Volume Meshers
+Simcenter STAR-CCM+ contains different types of meshers that can be used to generate a volume mesh starting from a suitably prepared surface mesh. 
+Mesh Refinement
+Simcenter STAR-CCM+ can refine the mesh by approximating the wake region or using solution-based approach. These features allow you to achieve efficient refinement by reducing the cell size in areas of interest. 
+Directed Meshing
+Directed meshing is a method for generating high quality swept meshes on geometries in Simcenter STAR-CCM+. The method operates by sweeping a mesh from the surfaces of a geometry through its volume onto facing target surfaces. 
+ Two Dimensional and Axisymmetric Meshes
+The use of a one-cell-thick three-dimensional mesh is much less efficient than using a real two-dimensional mesh for two-dimensional and axisymmetric simulations. When circumstances allow, use real two-dimensional meshes. 
+Turbomachinery Mesh
+Turbomachinery applications with axial blades typically require a flow-aligned, structured mesh. This type of mesh leads to a more accurate solution.
+Mesh Visualization
+You can visualize any mesh representation in Simcenter STAR-CCM+. After you have imported or generated a mesh, you visualize it to check the cell quality and mesh validity. 
+Checking the Surface Mesh
+The volume mesh quality is directly dependent on the surface mesh quality. Therefore, it is crucial to make sure that all surface meshes are of good quality. 
+Checking the Volume Mesh
+This section describes the tools available for checking the validity and quality of the volume mesh, and for diagnosing problem areas. Such problems can then be fixed, either inside Simcenter STAR-CCM+ or in the originating mesh generator. 
+ Meshing Field Functions Reference
+This section contains a list of field functions that are related to meshing. 
+Working With Representations
+This section provides information on representations as a useful part of the meshing process. 
+Scaling the Entire Mesh
+Scaling the mesh is important as the units of the model must be in meters before running an analysis. 
+Working with Baffles
+Exporting Mesh and Solution Data
+This section outlines the steps for exporting Simcenter STAR-CCM+ mesh and solution data to formats that can be used in other CAE packages. 
+Anisotropic Meshing for Lifting Surfaces 
+Anisotropic meshing allows you to generate a surface mesh that contains
+ stretched quad elements aligned with features (anisotropic faces). By using stretched
+ elements, you can reduce the number of faces in the mesh while retaining geometrical and
+ solution accuracy. 
+When meshing aerospace geometries such
+ as wings, propeller blades, or turbine blades, you are required to generate a fine
+ mesh that adequately captures the curvature of the leading and trailing edges. In
+ general, you want the mesh to be aligned to the leading and trailing edges and to be
+ stretched in the spanwise direction (with short edges in the streamwise direction).
+ To help reduce the cell count while maintaining solution accuracy, you can apply
+ anisotropic meshing to these edges. It is computationally less expensive to use
+ anisotropic mesh in comparison to isotropic.
+The example below shows the difference between two meshes: isotropic and anisotropic.
+ Both of them have the Surface Remesher, Polyhedral and Advancing Layer Mesher.
+In order to use the anisotropic
+ meshing option, your volume mesh must be based on an initial quadrilateral surface
+ mesh. Before using anisotropic meshing, make sure that you have part curves along
+ the leading and trailing edges of the wing, and that the starting geometry
+ represents the fluid. 
+ Right-click the Geometry > Operations node and select New > Automated Mesh Operation. 
+ In the Create Automated Mesh Operation
+ dialog: 
+ Set Parts to the part which represents the fluid volume.
+ Select the Surface Mesher and choose one of the
+ following core volume meshers: 
+Polyhedral Mesher
+Tetrahedral Mesher
+NoteYou can only generate anisotropic
+ quadrilateral surface meshes with the Advancing Layer
+ Mesher and Directed
+ Mesher.
+ Click OK. 
+Anisotropic layers are created only on quad surfaces. In order
+ to create anisotropic layers, you must make sure that the Meshing
+ Method is set to Quad Dominant as otherwise Simcenter STAR-CCM+ cannot create the layers and a
+ warning message is printed in the output window to inform you. 
+ Select the Meshers > Surface Remesher node and set Meshing Method to Quad
+ Dominant. 
+ Expand the Automated Mesh > Default Controls node and set the parameters that you require for the overall
+ fluid domain. 
+ Right-click the Automated Mesh > Custom Controls node and select New > Curve Control. 
+ Select the Curve Control node and in the Properties window: 
+ Ensure that Enable Control is activated. 
+ Specify the Part Curves on which the
+ anisotropic meshing should be applied. For a wing or blade, these are
+ typically the leading and trailing edges.
+ Select the Custom Controls > Curve Control > Controls > Anisotropic Surface Size node and activate Specify anisotropic surface
+ size settings. 
+ Under the Values node, set the Growth
+ Ratio, Maximum Aspect Ratio, Number of Constant
+ Layers, and First Layer Thickness to values
+ that suit your scenario. 
+For more information, see Curve Controls and Values. 
+ To generate a good quality mesh where two opposite part curves are connected
+ together in a cusp: 
+ Select the Custom Controls > Curve Control > Controls > Anisotropic Surface Size node and activate Specify anisotropic
+ mesh distribution between close Part Curves. 
+ Under the Values node, set the
+ Minimum Layer Size in Narrow Regions of Thin
+ Areas and the Minimum Number of
+ Layers to values that suit your scenario. 
+For more information, see Curve Controls and Values. 
+The image below shows two examples with the same
+ First Layer Thickness value. The first example on the
+ left displays a mesh where the Specify anisotropic mesh
+ distribution between close Part Curves option is deactivated. The
+ second example on the right shows a mesh where the option is activated and the
+ Minimum Number of Layers is set to 3 and the
+ Minimum Layer Size in Narrow Regions of Thin Areas
+ value is set to a small value. 
+Anisotropic boundary layers grow
+ from the part curve as long as the first layer thickness is smaller than the
+ target size of the surface in that specific location. The target size for the
+ surface determines the width of cell faces along the length of the part curve.
+ Hence, by choosing the target size and first layer thickness correctly, you can
+ achieve the stretched faces along the spanwise direction. For cases where the
+ target size is smaller than the anisotropic first layer thickness, the mesh does
+ not generate any anisotropic boundary layer. 
+One of the best practices is to
+ deactivate Perform Curvature Refinement and Perform Proximity Refinement. By disabling the curvature
+ and proximity controls, the mesh is refined using only the anisotropic size
+ control applied on the part curves, as shown in the image below. 
+When anisotropic meshing is
+ enabled on a curve, the surface remesher generates a number of face layers
+ (n) of fixed size, normal to the curve. Starting from n+1, the
+ anisotropic layers grow in size with a ratio equal to the growth ratio until the
+ anisotropic size of the layers are the same as the isotropic size (target size)
+ of the surface in that position.
+ Execute the Automated Mesh Operation. 
+ Create a scene to visualize the mesh. See Mesh Visualization.
+ The example below shows how anisotropic
+ meshing works. 
+Suppose we have a
+ uniform size surface with a Base Size of 0.05
+ m and a part curve CA that has
+ First Layer Thickness of 0.005 m.
+ For this example, the anisotropic layers are created on CA
+ since the first layer thickness is smaller than the base size. The image below shows
+ that anisotropic layers are created along the edge.
+In another example, suppose we
+ have a uniform size surface with a Base Size of
+ 0.05 m and a part curve CB that
+ has First Layer Thickness of 0.1 m.
+ For this example, anisotropic layers are not created for CB
+ since the base size is smaller than the first layer thickness. The image below shows
+ that anisotropic layers are not created along the edge. 
+ Unpublished work © Siemens 2026 
+ Corporate Information
+ Privacy Policy
+ Cookies Policy 
+ Terms of Use 
+ Digital ID
+Need Support?
+ Support Center
+Follow Us
+
+
+Solution Data Interpolation
+E:\Program Files\Siemens\21.02.007-R8\STAR-CCM+21.02.007-R8\doc\en\online\STARCCMP\GUID-A92ADD42-F6CE-4B3A-8714-242241E31B88.html
+
+ Solution Data Interpolation
+ Jump to main content
+Simcenter STAR-CCM+ 2602
+User Guide
+Search
+Home
+Physics Simulation
+ Simcenter STAR-CCM+ can model a wide range of physics phenomena including fluid mechanics, solid mechanics, heat transfer, electromagnetism, and chemical reactions. Scenarios with multiple time scales can be solved within the same simulation.
+Running Physics Simulations
+This part of the documentation describes preparation and procedures for running a Simcenter STAR-CCM+ simulation. 
+Solution Data Interpolation
+When the mesh changes during the simulation, for example due to remeshing or mesh replacement, Simcenter STAR-CCM+ automatically interpolates any solution data that was computed on the old mesh to the new mesh representation. 
+Share
+Email
+Link: copied
+ Copy
+Breadcrumb: copied
+ Copy
+Physics Simulation
+ Simcenter STAR-CCM+ can model a wide range of physics phenomena including fluid mechanics, solid mechanics, heat transfer, electromagnetism, and chemical reactions. Scenarios with multiple time scales can be solved within the same simulation.
+Defining Physics Workflow
+Simcenter STAR-CCM+ contains a wide range of physics models and methods for the simulation of single- and multi-phase fluid flow, heat transfer, turbulence, solid stress, dynamic fluid body interaction, aeroacoustics, and related phenomena. These physics models are all selected using a physics continuum. 
+Setting Up Physics
+This section provides information on how to set up physics models in STAR-CCM+. 
+Running Physics Simulations
+This part of the documentation describes preparation and procedures for running a Simcenter STAR-CCM+ simulation. 
+Using Initial Conditions
+Initial conditions in a physics continuum specify the initial field data for the simulation. 
+Using Solvers
+In Simcenter STAR-CCM+, solvers compute the solution during the simulation run. Each solver performs a specific task. Some solvers assemble the system of equations that describe the phenomenon of interest; some solvers simply provide source terms to other solvers. 
+Controlling Domain Decomposition
+To make use of parallel processing, Simcenter STAR-CCM+ breaks the computational domain into separate sections (called sub-domains) and assigns each to a separate process. This approach is called domain decomposition. Once the domain is decomposed, the processes work in parallel on their individual sub-domains, periodically communicating with each other. 
+Setting Up Stopping Criteria
+Stopping criteria allow you to specify how long the solution runs for and under what conditions it stops iterating and/or marching in time. 
+Obtaining a Solution Interactively
+This section explains how to use the interactive features of Simcenter STAR-CCM+ to obtain a solution. 
+Troubleshooting the Solution
+Some problems that can occur when running a Simcenter STAR-CCM+ simulation are solution divergence and signal segmentation violations or memory errors. Solution divergence is likely to occur when a simulation is not well-posed. SIGSEGV or memory errors are generally unexpected and can require assistance from your support representative.
+Solution Data Interpolation
+When the mesh changes during the simulation, for example due to remeshing or mesh replacement, Simcenter STAR-CCM+ automatically interpolates any solution data that was computed on the old mesh to the new mesh representation. 
+Solution Interpolation Model Reference
+The Solution Interpolation model allows you to choose the interpolation method that is used for mapping the solution data when remeshing occurs. 
+Verification and Validation of Results
+Verification and validation are independent procedures that are used together to ensure that a code meets requirements and specifications, and that it fulfills its intended purpose. In simple terms, validation can be expressed by the query ”Are you building the right thing?” and verification by the query ”Are you building it right?” 
+Detailed Differences in Simulation Results
+Motion
+In general, motion can be defined as the change in position of a body with respect to a certain reference frame. 
+Space
+The primary function of the Space models in Simcenter STAR-CCM+ is to provide methods for computing and accessing mesh metrics. Examples of mesh metrics include cell volume and centroid, face area and centroid, cell and face indexes, and skewness angle. 
+Time
+The primary function of the time models in Simcenter STAR-CCM+ is to provide solvers that control the iteration and/or unsteady time-stepping. 
+Mesh Motion and Adaption
+Many simulations that involve motion or geometry change require you to move or deform the mesh. Other simulations require localized mesh adaption in order to achieve an accurate solution.
+Materials
+Material models simulate substances, including various mixtures. 
+Fluid Flow
+Many engineering design projects require you to predict the effect of flowing fluids on containing structures or immersed objects. While you can analyse simple scenarios with hand calculations, complex scenarios require you to apply numerical methods for accurate solutions. 
+Viscous Flow
+Viscous Flow is a finite element approach for use with viscoelastic materials and other highly viscous non-Newtonian fluids, such as liquid plastics and rubber, dough and similar foodstuffs, molten glass, and mud. Viscoelastic materials resemble elastic materials, but also exhibit viscous effects, rebounding slowly from deformations. 
+Passive Scalars
+Passive scalars are user-defined variables of arbitrary value, assigned to fluid phases or individual particles. They are passive because they do not affect the physical properties of the simulation. An intuitive way to think of passive scalars is as tracer dye in a fluid, but with numerical values instead of colors, and with no appreciable mass or volume. 
+Heat Transfer
+Heat transfer is the study of energy in transit due to a temperature difference in a medium or between media. Heat transfer extends thermodynamic analysis through the study of the modes of energy transfer and through development of relations to calculate energy transfer rates. 
+Species
+This chapter provides information about the chemical species models in Simcenter STAR-CCM+. A species model is activated whenever a multi-component liquid or multi-component gas is chosen from the Material model section of the Physics Model Selection dialog. 
+Porous Media
+Simcenter STAR-CCM+ allows you to simulate the transport of a fluid or energy (e.g. heat, electrical charge) through porous materials using the concept that the action of the porous media can be represented using appropriate loss (or 'diffusion') coefficients. 
+Adjoint
+The adjoint method is an efficient means to predict the influence of many design parameters and physical inputs on some engineering quantity of interest, that is, on the engineering objective of the simulation. In other words, it provides the sensitivity of the objective (output) with respect to the design variables (input). 
+Fans and Blowers
+Simcenter STAR-CCM+ provides models for axial and radial fans where classical fan laws apply. 
+Virtual Disk Model
+The virtual disk model is based upon the principle of representing propellers, turbines, rotors, fans, and so on, as an actuator disk. The actuator disk treatment is practical when you are concerned about the influence of the rotor/propeller behavior on the flow rather than knowing about the detailed interactions between the flow and the blades of the rotating device.
+Turbulence
+Most fluid flows of engineering interest are characterized by irregularly fluctuating flow quantities. 
+Transition
+The term transition refers to the phenomenon of laminar to turbulence transition in boundary layers. A transition model in combination with a turbulence model predicts the onset of transition in a turbulent boundary layer. 
+Wall Distance
+Wall distance is a parameter that represents the distance from a cell centroid to the nearest wall face with a non-slip boundary condition. Various physical models require this parameter to account for near-wall effects. 
+Radiation
+The Radiation Model is the gateway, or entry point to all of the radiation modeling capabilities of Simcenter STAR-CCM+. This section describes Simcenter STAR-CCM+’s radiation modeling. 
+Aeroacoustics
+Aeroacoustics investigates the aerodynamic generation of sound. 
+Reacting Flow
+Simcenter STAR-CCM+ provides a selection of models that you can use to simulate a wide range of reacting flow applications. 
+Internal Combustion Engines
+In an internal combustion engine (ICE), for example a gasoline engine, the process of combustion takes place in a cylinder (or cylinders) within the engine. The working fluid is a fuel and oxidizer mixture (usually air), which reacts to form combustion products.
+Multiphase Flow
+Multiphase flow is a term which refers to the flow and interaction of several phases within the same system where distinct interfaces exist between the phases. Simcenter STAR-CCM+ considers flow options where phases coexist as: gas bubbles in liquid, liquid droplets in gas, and/or solid particles in gas or liquid, and/or (large scale) free surface flows.
+Dynamic Fluid Body Interaction
+Dynamic Fluid Body Interaction (DFBI) in Simcenter STAR-CCM+ allows you to simulate the motion of one or more 6-DOF bodies, with the displacement and rotation resulting from the defined mechanical and multiphysics interaction (flow, DEM, solid stress, EMAG).
+Harmonic Balance
+Some unsteady flows have a regularly repeating flow pattern, that is, they are time-periodic. Consider the flow from a fan blade passing across the entrance to a duct. Measurements of the instantaneous flow just within the duct would show a regularly repeating pattern. If the flow disturbances are sufficiently large, and propagate to the end of the duct, measurements of the unsteady flow at any point within the duct show repeating patterns. Such time-periodic patterns can be expressed using Fourier series. 
+Solid Stress
+Simcenter STAR-CCM+ allows you to model the response of a solid continuum to applied loads, including mechanical loads and thermal loads that result from changes in the solid temperature. 
+Electromagnetism
+Simcenter STAR-CCM+ allows you to model engineering applications involving electromagnetic phenomena. Example applications are electric motors, electric switches, and transformers, which can be modeled based on the classical theory of Electromagnetism. 
+Electrochemistry
+Electrochemistry is the study of chemical reactions which occur due to an imposed electrical charge, or a difference in electrical potential at a boundary between a conductor–such as a metal–and an electrolyte. Simcenter STAR-CCM+ provides models that allow you to simulate batteries, corrosion, etching, and other electrochemical reactions. 
+Electric Circuits
+Electrical circuits are conducting loops of interconnected electrical components, such as batteries, power sources, resistors, and inductors. 
+Plasma
+Plasma is a state of matter similar to a gas that is composed partially or completely of charged particles such as ions and electrons which are not bound to each other.
+Batteries
+You can simulate batteries in Simcenter STAR-CCM+ using battery cells and battery cycling procedures that are defined either directly in Simcenter STAR-CCM+, or in the external software package Simcenter Battery Design Studio.
+Casting
+Casting simulations are performed using transient multiphase simulations using the VOF model with solidification. Conjugate heat transfer is applied between the solidifying melt and the solid mold. 
+Region Sources
+This section provides some guidelines on how to use region sources for some common problems. 
+Cell Quality Remediation
+The Cell Quality Remediation model helps you get solutions on a poor-quality mesh. This model identifies poor-quality cells, using a set of predefined criteria, such as Skewness Angle exceeding a certain threshold. Once these cells and their neighbors have been marked, the computed gradients in these cells are modified in such a way as to improve the robustness of the solution. 
+Guidelines for Applying Simcenter STAR-CCM+
+This part of the documentation provides guidelines on applying Simcenter STAR-CCM+ models to your applications. 
+Common Solvers Reference
+In Simcenter STAR-CCM+, solvers compute the solution during the simulation run. 
+Solution Data Interpolation 
+When the mesh changes during the simulation, for example due to remeshing
+ or mesh replacement, Simcenter STAR-CCM+ automatically
+ interpolates any solution data that was computed on the old mesh to the new mesh
+ representation. 
+For better control over the interpolation
+ process, Simcenter STAR-CCM+ provides the
+ Solution Interpolation model. This model exposes
+ properties that allow you to choose the interpolation method and specify whether the
+ interpolation is performed on a region basis or part basis. You can enforce the
+ conservation of mass, energy, and momentum during the interpolation process. 
+To activate the 
+ Solution Interpolation model: 
+ In the relevant physics continuum, activate physics models as required. From the 
+ Optional Models group box, activate the 
+ Solution Interpolation model. 
+If you do not activate the 
+ Solution Interpolation model, 
+ Simcenter STAR-CCM+ automatically adds it to the continuum when remeshing occurs.
+To specify interpolation settings:
+ Select the 
+ Continua > [Physics Continuum] > Models > Solution Interpolation node and set the model properties as appropriate. 
+For more information on the available properties, see Solution Interpolation Model Properties. 
+In simulations that use parts-based meshing, this model ensures solution
+ interpolation on new parts. If you add a new part to a region that contains
+ solution data, or replace an existing part with a new part, the model
+ automatically interpolates the solution to the new part. 
+Solution Interpolation Model Reference
+ Unpublished work © Siemens 2026 
+ Corporate Information
+ Privacy Policy
+ Cookies Policy 
+ Terms of Use 
+ Digital ID
+Need Support?
+ Support Center
+Follow Us

@@ -1,0 +1,46 @@
+Starting local server: starserver.bat -power -cpubind off -np 1 -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXGdhcF9kZWx0YV8wX2dlbnRsZV9zdGFydFxNSU5JX3ByZXBhcmVkLnNpbQ==
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 14588
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 10 days
+Tue Nov  3 15:44:45 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\gap_delta_0_gentle_start\MINI_prepared.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\SolveMini.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\SolveMini.java:8: warning: [deprecation] setUrf(double) in star.segregatedflow.VelocitySolver has been deprecated
+PhysicsContinuum physics=regs.get(0).getPhysicsContinuum();physics.enable(CellQualityRemediationModel.class);if(!s.getSolution().isInitialized())s.getSolution().initializeSolution();StringBuilder functions=new StringBuilder();for(FieldFunction ff:s.getFieldFunctionManager().getObjects())functions.append(ff.getFunctionName()+" | "+ff.getPresentationName()+" | "+ff.getClass().getName()+"\n");Files.writeString(r.resolve("native_field_functions.txt"),functions.toString());for(String ff:List.of("AbsolutePressure","LeastSquaresQuality","FaceValidity","Volume")){MinReport m=(MinReport)s.getReportManager().getReport("MINI_min_"+ff);FieldFunction f=s.getFieldFunctionManager().getFunction(ff);if(f==null)throw new IllegalStateException("Native2D quality field unavailable: "+ff);m.setFieldFunction(f);}for(SolverStoppingCriterion c:s.getSolverStoppingCriterionManager().getObjects())c.setIsUsed(false);if(r.getFileName().toString().endsWith("gentle_start")){SegregatedFlowSolver f=s.getSolverManager().getSolver(SegregatedFlowSolver.class);f.getVelocitySolver().setUrf(.3);f.getPressureSolver().setUrf(.05);}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\SolveMini.java:8: warning: [deprecation] setUrf(double) in star.segregatedflow.PressureSolver has been deprecated
+PhysicsContinuum physics=regs.get(0).getPhysicsContinuum();physics.enable(CellQualityRemediationModel.class);if(!s.getSolution().isInitialized())s.getSolution().initializeSolution();StringBuilder functions=new StringBuilder();for(FieldFunction ff:s.getFieldFunctionManager().getObjects())functions.append(ff.getFunctionName()+" | "+ff.getPresentationName()+" | "+ff.getClass().getName()+"\n");Files.writeString(r.resolve("native_field_functions.txt"),functions.toString());for(String ff:List.of("AbsolutePressure","LeastSquaresQuality","FaceValidity","Volume")){MinReport m=(MinReport)s.getReportManager().getReport("MINI_min_"+ff);FieldFunction f=s.getFieldFunctionManager().getFunction(ff);if(f==null)throw new IllegalStateException("Native2D quality field unavailable: "+ff);m.setFieldFunction(f);}for(SolverStoppingCriterion c:s.getSolverStoppingCriterionManager().getObjects())c.setIsUsed(false);if(r.getFileName().toString().endsWith("gentle_start")){SegregatedFlowSolver f=s.getSolverManager().getSolver(SegregatedFlowSolver.class);f.getVelocitySolver().setUrf(.3);f.getPressureSolver().setUrf(.05);}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+
+Loading/configuring connectivity (old|new partitions: 1|1)
+  MINI_water (index 0): 89750 cells, 152301 faces, 65894 verts.
+Configuring finished
+Initialization of star.flow.EffectiveViscosityModel requires an additional pass...
+Initialization of star.flow.EffectiveViscositySolver requires an additional pass...
+     Iteration     Continuity     X-momentum     Y-momentum            Tke            Sdr    MINI_Fx (N)    MINI_Fy (N)  MINI_Mh (N-m)        MINI_CL        MINI_CD 
+             1   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   9.346528e+04   6.595892e+03  -2.930018e+03   3.421461e-02   4.848287e-01 
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\gap_delta_0_gentle_start\MINI_result.sim... complete (19.344MB in 0.063353s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

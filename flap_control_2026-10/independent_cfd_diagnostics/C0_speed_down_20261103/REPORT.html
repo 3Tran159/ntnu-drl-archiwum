@@ -1,0 +1,87 @@
+<html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:17px system-ui;max-width:950px;margin:25px auto;padding:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><h1>C0 speed-down — EXECUTION_PASS_CONTINUATION_HOLD</h1><p>Start:C0,0°,18m/s,t0,650s; bez resetu pól. Limit20kroków,8CPU,bez GPU. PoprzednieFAIL i pełny sweep nadal zablokowane. W04 nietknięty.</p><p>W kopii wykonawczej poprawiono normalizację bilansu masy na bieżący strumień wlotowy; próg1e-4 bez zmian. Oryginał kandydata zachowano.</p><p>Krótki test nie oznacza uzyskania ustalonego10m/s ani walidacji hydrodynamicznej.</p><pre>{
+  &quot;at&quot;: &quot;2026-11-03T11:23:09.651055+01:00&quot;,
+  &quot;experiment_id&quot;: &quot;C0_SPEED_DOWN_20261103&quot;,
+  &quot;status&quot;: &quot;EXECUTION_PASS_CONTINUATION_HOLD&quot;,
+  &quot;passed&quot;: false,
+  &quot;scope&quot;: &quot;20-step transient speed-down startup; not10m/s equilibrium or quantitative validation&quot;,
+  &quot;steps&quot;: 20,
+  &quot;time_s&quot;: 0.6900000000000005,
+  &quot;iteration&quot;: 12360,
+  &quot;U_m_s&quot;: 17.93152,
+  &quot;flap_deg&quot;: -0.0,
+  &quot;minimum_pressure_Pa&quot;: 23366.703577183856,
+  &quot;maximum_mass_relative&quot;: 1.392564895440507e-07,
+  &quot;minimum_volume_m3&quot;: 9.128750119087941e-12,
+  &quot;minimum_quality&quot;: 0.06104818624018239,
+  &quot;max_overset_errors&quot;: 0.0,
+  &quot;last_CL&quot;: 0.3206861558619269,
+  &quot;last_CD&quot;: 0.007155867131695475,
+  &quot;last_Mh_Nm&quot;: -11.778200215235007,
+  &quot;final_residuals&quot;: {
+    &quot;Continuity&quot;: {
+      &quot;first&quot;: 0.10355865657843398,
+      &quot;last&quot;: 5.442019703659213e-05,
+      &quot;ratio&quot;: 0.0005255011877773345
+    },
+    &quot;Sdr&quot;: {
+      &quot;first&quot;: 7.233807041064209e-06,
+      &quot;last&quot;: 7.233970058380734e-08,
+      &quot;ratio&quot;: 0.010000225354803632
+    },
+    &quot;Tke&quot;: {
+      &quot;first&quot;: 0.07900563212192858,
+      &quot;last&quot;: 1.9322909186739447e-05,
+      &quot;ratio&quot;: 0.0002445763506697674
+    },
+    &quot;X-momentum&quot;: {
+      &quot;first&quot;: 57.730549040451365,
+      &quot;last&quot;: 0.005989664269633348,
+      &quot;ratio&quot;: 0.00010375207527363779
+    },
+    &quot;Y-momentum&quot;: {
+      &quot;first&quot;: 46.35503954978672,
+      &quot;last&quot;: 4.93920486001685,
+      &quot;ratio&quot;: 0.10655162648954261
+    },
+    &quot;Z-momentum&quot;: {
+      &quot;first&quot;: 103.30392060176958,
+      &quot;last&quot;: 0.025156832188764532,
+      &quot;ratio&quot;: 0.00024352253082187086
+    }
+  },
+  &quot;failed_checks&quot;: [
+    &quot;final_inner_residual_Sdr&quot;
+  ],
+  &quot;checkpoint&quot;: {
+    &quot;path&quot;: &quot;F:\\ntnu\\flap_control\\independent_cfd_diagnostics\\C0_speed_down_20261103\\run_20261103_111057\\checkpoint.sim&quot;,
+    &quot;bytes&quot;: 1525645964,
+    &quot;sha256&quot;: &quot;7d140c9523f1e2eeb34875013d65424845def7d474df5a8b3562693b36e43d41&quot;,
+    &quot;saved_time_s&quot;: 0.6900000000000005,
+    &quot;native_save_complete&quot;: true,
+    &quot;hash_at&quot;: &quot;2026-11-03T11:21:03.048162+01:00&quot;,
+    &quot;native_reopen_verified&quot;: false
+  },
+  &quot;native_metadata_readable&quot;: true,
+  &quot;native_full_checkpoint_reopen_tested&quot;: false,
+  &quot;source_native_readback&quot;: {
+    &quot;time&quot;: 0.6500000000000005,
+    &quot;iteration&quot;: 11560,
+    &quot;actual_angle_deg&quot;: -0.0,
+    &quot;flow_frozen&quot;: false,
+    &quot;dt&quot;: 0.002,
+    &quot;inner&quot;: 40,
+    &quot;mesh&quot;: 333939,
+    &quot;initial_CL&quot;: 0.3256530206195925,
+    &quot;initial_CD&quot;: 0.007244510839521137,
+    &quot;initial_Mh&quot;: -12.040420268556348
+  },
+  &quot;source_fields_reset&quot;: false,
+  &quot;original_candidate_preserved&quot;: true,
+  &quot;old_failures_preserved&quot;: true,
+  &quot;full_speed_sweep_blocked&quot;: true,
+  &quot;scientific_approved&quot;: false,
+  &quot;training_approved&quot;: false,
+  &quot;native_20step_smoke_passed&quot;: true,
+  &quot;physical_safety_checks_passed&quot;: true,
+  &quot;continuation_approved&quot;: false
+}</pre></html>

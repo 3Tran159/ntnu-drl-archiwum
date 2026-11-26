@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\night_native.py", line 41, in <module>
+    env.update(authorize_environment(h,name,sim,cpu))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\hydro_validation_2606_20261102\tools\recovered_perf_auth.py", line 22, in authorize_environment
+    assert k.SetProcessAffinityMask(k.GetCurrentProcess(),mask),'Own launcher affinity failed'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Own launcher affinity failed

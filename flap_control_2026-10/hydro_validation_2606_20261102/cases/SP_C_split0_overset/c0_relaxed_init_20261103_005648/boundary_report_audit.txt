@@ -1,0 +1,34 @@
+Background motion=Stationary
+  Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.span_source type=Symmetry Plane
+  Background exact quasi2D fluid 2.Hydro_Domain.span_source type=Symmetry Plane
+  Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin type=Wall
+  Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc type=Wall
+  Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top type=Pressure Outlet
+  Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.inlet type=Velocity Inlet
+  Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.outlet type=Pressure Outlet
+  Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.bottom type=Wall
+FlapOverset motion=Stationary
+  FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.span_source type=Symmetry Plane
+  FlapOverset exact quasi2D fluid.Hydro_Cage.span_source type=Symmetry Plane
+  FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin type=Wall
+  FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc type=Wall
+  FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.top type=Overset Mesh
+  FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.inlet type=Overset Mesh
+  FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.outlet type=Overset Mesh
+  FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Cage.bottom type=Overset Mesh
+HF_Fx_N parts=[Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin, Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc] representation=Volume Mesh
+HF_Fz_N parts=[Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin, Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc] representation=Volume Mesh
+HF_Mh_Nm parts=[FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc] representation=Volume Mesh
+HF_pabs_fixed parts=[Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin, Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc] representation=Volume Mesh
+HF_pabs_flap parts=[FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc] representation=Volume Mesh
+HF_pabs_liquid_all parts=[Background, FlapOverset] representation=Volume Mesh
+HF_pabs_near parts=[HYDRO nearby liquid] representation=Volume Mesh
+HF_pabs_gap parts=[HYDRO hinge gap radial band] representation=Volume Mesh
+HF_min_volume parts=[Background, FlapOverset] representation=Volume Mesh
+HF_min_quality parts=[Background, FlapOverset] representation=Volume Mesh
+HF_min_face_validity parts=[Background, FlapOverset] representation=Volume Mesh
+HF_yplus_mean parts=[Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin, Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc] representation=Volume Mesh
+HF_yplus_max parts=[Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin, Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin, FlapOverset: FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc] representation=Volume Mesh
+HF_min_y_centroid parts=[Background, FlapOverset] representation=Volume Mesh
+HF_net_mass_flow parts=[Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.top, Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.inlet, Background: Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Domain.outlet] representation=Volume Mesh
+HF_density_min_init parts=[Background, FlapOverset] representation=Volume Mesh

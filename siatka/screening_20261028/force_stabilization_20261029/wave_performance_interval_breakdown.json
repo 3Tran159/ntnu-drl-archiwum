@@ -1,0 +1,43 @@
+{
+  "source": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2\\history.csv",
+  "timing_semantics": "wall_s difference after source row covers remaining source-row output work and next solver step; overlaps classified checkpoint > outlet > AMG trace",
+  "window_source_time_s": [
+    0.5460000000000004,
+    0.7460000000000006
+  ],
+  "all_intervals": {
+    "n": 200,
+    "mean_s": 2.660006491500001,
+    "median_s": 2.5611004999999523
+  },
+  "groups": {
+    "ordinary": {
+      "n": 166,
+      "mean_s": 2.5685365572289167,
+      "median_s": 2.532599849999883,
+      "min_s": 1.5821093999998084,
+      "max_s": 3.128272299999935
+    },
+    "outlet_export": {
+      "n": 3,
+      "mean_s": 4.112883833333323,
+      "median_s": 2.5401812999998583,
+      "min_s": 2.4095886000000064,
+      "max_s": 7.388881600000104
+    },
+    "AMG_LOW_window": {
+      "n": 30,
+      "mean_s": 2.8162774766666643,
+      "median_s": 2.700007000000028,
+      "min_s": 1.9575850999999602,
+      "max_s": 3.831948300000022
+    },
+    "checkpoint_and_export": {
+      "n": 1,
+      "mean_s": 8.797254000000066,
+      "median_s": 8.797254000000066,
+      "min_s": 8.797254000000066,
+      "max_s": 8.797254000000066
+    }
+  }
+}

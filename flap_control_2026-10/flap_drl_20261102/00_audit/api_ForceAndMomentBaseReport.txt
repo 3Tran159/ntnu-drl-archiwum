@@ -1,0 +1,23 @@
+Compiled from "ForceAndMomentBaseReport.java"
+public abstract class star.flow.ForceAndMomentBaseReport extends star.flow.FluidLoadsReport {
+  public star.common.VectorPhysicalQuantityInput getDirectionInput();
+  public void setUseIdealization(boolean);
+  public boolean getUseIdealization();
+  public star.flow.ForceAndMomentBaseReport(star.base.neo.ClientServerObjectKey);
+  protected star.base.neo.DoubleVector getTotalValue(java.lang.String);
+  protected star.base.neo.DoubleVector getPartValue(star.base.neo.ClientServerObject, java.lang.String);
+  public star.common.Vector3 getPressureValue(star.base.neo.ClientServerObject);
+  public star.common.Vector3 getShearValue(star.base.neo.ClientServerObject);
+  public star.common.Vector3 getValue(star.base.neo.ClientServerObject);
+  public star.common.Vector3 getPressureValue();
+  public star.common.Vector3 getShearValue();
+  public star.common.Vector3 getValue();
+  public star.common.Vector3[] getBandPressureValues();
+  public star.common.Vector3[] getBandShearValues();
+  public star.common.Vector3[] getBandValues();
+  public double[] getBandPositions();
+  protected abstract star.base.report.Report$ReportPrinter getReportPrinter();
+  public int getNumberOfBands();
+  public void setNumberOfBands(int);
+  static {};
+}

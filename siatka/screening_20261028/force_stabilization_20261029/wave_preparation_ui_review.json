@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "scope": "Wave preparation status in operational and professor dashboards",
+  "tested_viewports_px": [
+    1360,
+    390
+  ],
+  "current_case_observed": "W20_H24_X4_Q2D_r4",
+  "stage_observed": "Building geometry and mesh",
+  "resources_observed": "2 CPU workers; no GPU",
+  "source_records": [
+    "wave_preparation_state.json",
+    "wave_preparation_r2_review.json"
+  ],
+  "changed_sources": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py"
+  ],
+  "checks": {
+    "page_overflow": false,
+    "status_column_overflow": false,
+    "duplicate_ids": [],
+    "javascript_errors": [],
+    "explicit_no_propagation_result": true,
+    "prior_r2_excluded_and_preserved": true,
+    "all_four_status_screenshots_visually_reviewed": true,
+    "professor_pdf_pages": 13,
+    "print_wave_and_provenance_pages_visually_reviewed": true
+  },
+  "notes": [
+    "Displayed case changed automatically from R3 to R4 when the parent controller advanced; no dashboard source change was needed.",
+    "No scientific controller, plan or solver source was modified.",
+    "The preparation panel distinguishes initialised fields from transient propagation evidence."
+  ],
+  "qa_files": [
+    "wave_preparation_dashboard_qa.json",
+    "wave_prep_main_1360.png",
+    "wave_prep_main_390.png",
+    "wave_prep_professor_1360.png",
+    "wave_prep_professor_390.png",
+    "professor_wave_prep_qa.pdf",
+    "wave_prep_print-12.png",
+    "wave_prep_print-13.png"
+  ]
+}

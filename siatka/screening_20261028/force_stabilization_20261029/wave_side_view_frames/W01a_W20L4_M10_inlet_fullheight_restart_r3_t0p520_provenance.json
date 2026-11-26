@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-10-30T12:44:53.295662+01:00",
+  "case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "source_case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "field_time_s": 0.52,
+  "source_file": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3\\local_balance_t0.520.csv",
+  "source_sha256": "40e26449e1b240d6b4d28968a34028b041ab038149d972a9b5e46f59300a6e36",
+  "source_stats": {
+    "rows": 317277,
+    "view_points": 182233,
+    "alpha_min": 0.0,
+    "alpha_max": 1.0,
+    "size_bytes": 87543447,
+    "mtime_ns": 1793360609535239900
+  },
+  "source_identity_file": "E:\\ntnu\\quasi2d_waves_20261029\\W01a_W20L4_M10_inlet_fullheight_restart_r3\\source_identity.json",
+  "source_identity_sha256": "e03f54183aa58ae2072101b6f11c8ae6f9830f240b619e2e3fcef74ec0dc48e3",
+  "lineage": "Current continuation field",
+  "geometry_file": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_mesh_r2\\mesh.CGNS",
+  "geometry_sha256": "a75af7e46002cab7bea8f2d319b5f7b37afcabe3c27ffa3c5424fb4d167d1fbd",
+  "foil_boundary": "HF_012_wall, y=0.01 m",
+  "foil_edges": 856,
+  "foil_x_bounds_m": [
+    -0.0003685843239392502,
+    1.1900000000000004
+  ],
+  "foil_z_bounds_m": [
+    -0.04214490729867749,
+    0.10091477404404608
+  ],
+  "view_m": {
+    "x": [
+      -8.0,
+      12.0
+    ],
+    "z": [
+      -1.0,
+      4.0
+    ]
+  },
+  "display_grid": [
+    1201,
+    361
+  ],
+  "method": "Delaunay interpolation of saved cell-centred water fraction in x-z. Triangles sampled inside the actual foil are masked. Filled alpha field and alpha=0.5 contour; actual foil boundary overlaid.",
+  "limitations": [
+    "Interpolated cell-centre contour, not VOF cell-face reconstruction.",
+    "Image field time can lag solver progress.",
+    "Cropped view does not show the 24 m bottom or boundary forcing/damping zones.",
+    "No propagation, reflection or force-accuracy conclusion from this image."
+  ],
+  "rejected_incomplete_exports": [],
+  "outputs": [
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\W01a_W20L4_M10_inlet_fullheight_restart_r3_t0p520.png",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\wave_side_view_frames\\W01a_W20L4_M10_inlet_fullheight_restart_r3_t0p520.svg"
+  ],
+  "solver_actions": 0
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r1.py", line 51, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "F:\ntnu\mesh_screening_20261028\force_stabilization_20261029\run_wave24m_propagation_r1.py", line 46, in main
+    if rc or not preserved or done.get('status')!='target_reached' or done.get('steps')!=1000:raise RuntimeError('Pilot incomplete or guard triggered; inspect preserved attempt')
+                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Pilot incomplete or guard triggered; inspect preserved attempt

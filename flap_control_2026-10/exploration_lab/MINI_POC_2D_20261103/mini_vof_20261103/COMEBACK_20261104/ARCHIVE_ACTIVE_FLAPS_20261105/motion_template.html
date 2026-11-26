@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Active Flaps | Archived geometry motion</title>
+<style>
+body{font:16px system-ui;color:#182d3e;background:#edf2f5;margin:0 auto;padding:24px;max-width:1080px}
+h1{font-size:28px;margin-bottom:8px}
+p{line-height:1.5}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:20px 0}
+button,select{font:inherit;border:1px solid #889caa;border-radius:6px;padding:7px;background:white;color:#182d3e}
+canvas{display:block;width:100%;height:auto;background:#fff;border:1px solid #c2ced4;border-radius:8px}
+input[type=range]{width:min(95%,700px);margin:15px 0}
+.badge{background:#e2e9ee;border-radius:6px;padding:6px 9px;font-variant-numeric:tabular-nums}
+</style>
+<h1>Active Flaps | Archived geometry motion</h1>
+<p>Wall geometry reconstructed using the archived mesh motion and measured flap angle. Motion is shown in slow playback. The flow field is available in each STAR-CCM+ checkpoint.</p>
+<div class="controls">
+<label>Case <select id="case"></select></label>
+<button id="play">Play</button>
+<button id="reset">First frame</button>
+<label><input id="zoom" type="checkbox" checked> Hinge zoom</label>
+<output id="readout" class="badge" aria-live="off"></output>
+</div>
+<canvas id="view" width="1080" height="510" aria-label="Animated side view of the hydrofoil and flap"></canvas>
+<label for="frame">Time frame</label> <input id="frame" type="range" min="0" value="0">
+<p id="note"></p>
+<script>
+const data=/* CFD_DATA */;
+const get=id=>document.getElementById(id);
+const sel=get('case'), slider=get('frame'), zoom=get('zoom'), play=get('play');
+const canvas=get('view'), ctx=canvas.getContext('2d');
+data.cases.forEach((c,i)=>sel.add(new Option(c.label,i)));
+let previous=null, since=0, active=false;
+function show(){
+  const run=data.cases[+sel.value], geom=data.geometries[run.geometry];
+  const [t,angle]=run.frames[+slider.value];
+  const lim=zoom.checked?[.845,1.235,-.062,.101]:[-.045,1.24,-.11,.15];
+  const [xmin,xmax,ymin,ymax]=lim;
+  const k=Math.min(975/(xmax-xmin),385/(ymax-ymin));
+  const sx=x=>canvas.width/2+(x-(xmin+xmax)/2)*k;
+  const sy=y=>canvas.height/2-(y-(ymin+ymax)/2)*k;
+  const map=(a)=>geom.vertices.map(([x,y,w])=>{
+    const r=a*Math.PI/180*w;
+    return [sx(.952+x*Math.cos(r)+y*Math.sin(r)),sy(.02128173276777-x*Math.sin(r)+y*Math.cos(r))];
+  });
+  function lines(points,edges,color,width){
+    ctx.beginPath();ctx.strokeStyle=color;ctx.lineWidth=width;
+    for(const [a,b] of edges){ctx.moveTo(...points[a]);ctx.lineTo(...points[b]);}
+    ctx.stroke();
+  }
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.save();ctx.beginPath();ctx.rect(sx(xmin),sy(ymax),k*(xmax-xmin),k*(ymax-ymin));ctx.clip();
+  const nominal=map(0), current=map(angle);
+  ctx.setLineDash([5,5]);lines(nominal,geom.flap,'#a9b5be',1.1);ctx.setLineDash([]);
+  lines(current,geom.main,'#214963',2.3);lines(current,geom.flap,'#a34b63',2.8);
+  const hx=sx(.952), hy=sy(.02128173276777);
+  ctx.beginPath();ctx.strokeStyle='#cf793e';ctx.lineWidth=2;
+  ctx.moveTo(hx-7,hy);ctx.lineTo(hx+7,hy);ctx.moveTo(hx,hy-7);ctx.lineTo(hx,hy+7);ctx.stroke();ctx.restore();
+  ctx.font='16px system-ui';ctx.fillStyle='#214963';ctx.fillText('Main foil',30,33);
+  ctx.fillStyle='#a34b63';ctx.fillText('Flap',132,33);
+  ctx.fillStyle='#8b4a25';ctx.fillText('Hinge',194,33);
+  get('readout').textContent=(t*1000).toFixed(2)+' ms · '+angle.toFixed(3)+'°';
+  get('note').textContent=run.partial?'Archived partial run. The last frame is at +4.509°; the solver stopped at the CFL gate.':'The last frame is the end of the complete archived cycle.';
+}
+function change(){active=false;play.textContent='Play';since=0;slider.max=data.cases[+sel.value].frames.length-1;slider.value=0;show();}
+function tick(now){
+  if(active){
+    if(previous!==null)since+=(now-previous)/10000;
+    const frames=data.cases[+sel.value].frames;
+    while(+slider.value<+slider.max && frames[+slider.value+1][0]<=since)slider.value=+slider.value+1;
+    if(+slider.value===+slider.max){active=false;play.textContent='Play';}
+    show();
+  }
+  previous=now;requestAnimationFrame(tick);
+}
+sel.onchange=change;zoom.onchange=show;
+slider.oninput=()=>{since=data.cases[+sel.value].frames[+slider.value][0];show();};
+get('reset').onclick=change;
+play.onclick=()=>{
+  if(+slider.value===+slider.max){slider.value=0;since=0;}
+  active=!active;play.textContent=active?'Pause':'Play';
+};
+change();requestAnimationFrame(tick);
+</script>
+</html>

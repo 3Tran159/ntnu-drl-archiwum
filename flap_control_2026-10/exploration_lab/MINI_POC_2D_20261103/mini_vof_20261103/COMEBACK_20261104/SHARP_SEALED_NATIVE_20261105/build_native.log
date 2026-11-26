@@ -1,0 +1,618 @@
+Native mesh job pinned to logical CPU 2
+Starting local server: starserver.bat -power -cpubind off -np 1 -printpids -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XFNIQVJQX1NFQUxFRF9OQVRJVkVfMjAyNjExMDVcU2hhcnBfU2VhbGVkX09yaWdpbmFsX01lc2hfUkVGRVJFTkNFLnNpbQ==
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 3932
+Total number of processes : 1
+
+Host ID 0 Rank 0 on THINKPAD-LUCJAN with process ID 3932
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 8 days
+Thu Nov  5 12:08:56 2026
+
+Server::start -host THINKPAD-LUCJAN:47834
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\Sharp_Sealed_Original_Mesh_REFERENCE.sim
+Loading module: Mapping
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: CaeIOCgns
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=1 
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\NativeSharpSealed.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\NativeSharpSealed.java:37: warning: [deprecation] removeRegions(java.util.List<star.common.Region>) in star.common.RegionManager has been deprecated
+    regions.removeRegions(Collections.singletonList(old));
+           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\NativeSharpSealed.java:113: warning: [deprecation] initializeAndWait() in star.vis.Scene has been deprecated
+      scene.initializeAndWait();
+           ^
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\NativeSharpSealed.java:119: warning: [deprecation] setInput(star.base.neo.DoubleVector,star.base.neo.DoubleVector,star.base.neo.DoubleVector,double,int,star.common.CoordinateSystem,boolean) in star.vis.VisView has been deprecated
+      scene.getCurrentView().setInput(
+                            ^
+
+Reading surface from .stl file: SharpSealedFluidDomain.stl
+Scaling from model units: meter
+Done importing surface: CPU Time: 0.72, Wall Time: 0.78, Memory: 202.48 MB
+Imported surface statistics:
+  # Faces:         58288
+  # Vertices:      29144
+  # Special Edges: 0
+
+NATIVE_INPUT Span0
+NATIVE_INPUT Span1
+NATIVE_INPUT Main
+NATIVE_INPUT Flap
+NATIVE_INPUT Inlet
+NATIVE_INPUT Outlet
+NATIVE_INPUT Bottom
+NATIVE_INPUT Top
+ Only 1 part was assigned to a region
+6 part surfaces were assigned to 6 boundaries
+No Interfaces were created
+Mesh Operation 01 Prepare sharp sealed for 2D complete. CPU Time: 0.06, Wall Time: 0.05, Memory: 207.35 MB
+NATIVE_BOUNDARY Sharp sealed fluid domain.Main WallBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Flap WallBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Inlet InletBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Outlet PressureBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Bottom SymmetryBoundary
+NATIVE_BOUNDARY Sharp sealed fluid domain.Top SymmetryBoundary
+Loading module: StarTwodmesher
+NATIVE_2D_MESHERS [star.twodmesher.DelaunayAutoMesher2d, star.twodmesher.DualAutoMesher2d, star.twodmesher.QuadAutoMesher2d]
+NATIVE_MESH_DEFAULTS [0.27 m, Surface Growth Rate, Minimum Surface Size, Target Surface Size, Surface Curvature, Surface Proximity, CAD Projection, Prism Layer Controls]
+Loading/configuring connectivity (old|new partitions: 1|1)
+Configuring finished
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\Sharp_Sealed_Native_SETUP.sim... complete (2.9783MB in 0.070317s).
+----------------------------------------
+Executing Mesh Operation 02 Sharp sealed native 2D mesh
+----------------------------------------
+All input parts have been badged for 2D Meshing, the volume mesh will be automatically converted to 2D.
+Creating the 2.5d surface slice before remeshing...
+   Done.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 0.03, Wall Time: 0.05, Memory: 222.00 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Running in serial
+ Growth rate for Triangle meshing with Default growth is 1.3
+ Project to discrete geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.05          302       1.1
+   < 0.1          1982       7.0
+   < 0.2         13108      46.5
+   < 0.3         15114      53.6
+   < 0.4         16481      58.5
+   < 0.5         18207      64.6
+   < 0.6         19872      70.5
+   < 0.7         21442      76.1
+   < 0.8         22052      78.3
+   < 0.9         22854      81.1
+   < 1.0         27714      98.3
+ Worst Tri quality is 0.03921
+
+ initial number of faces: 58288
+
+ Phase 1: Apply Global Limits
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.05            0       0.0
+     < 0.1             0       0.0
+     < 0.2         10880      44.3
+     < 0.3         12802      52.1
+     < 0.4         14093      57.4
+     < 0.5         15395      62.7
+     < 0.6         16405      66.8
+     < 0.7         17815      72.5
+     < 0.8         18416      75.0
+     < 0.9         19261      78.4
+     < 1.0         24096      98.1
+   Worst Tri quality is 0.1794
+
+
+ Phase 2: Improve Grading
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.05            0       0.0
+     < 0.1             0       0.0
+     < 0.2             0       0.0
+     < 0.3             0       0.0
+     < 0.4             0       0.0
+     < 0.5            65       0.9
+     < 0.6           203       2.8
+     < 0.7           553       7.6
+     < 0.8          1360      18.7
+     < 0.9          3329      45.8
+     < 1.0          7210      99.2
+   Worst Tri quality is 0.4137
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0.05
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.05            0       0.0
+   < 0.1             0       0.0
+   < 0.2             0       0.0
+   < 0.3             0       0.0
+   < 0.4             0       0.0
+   < 0.5             0       0.0
+   < 0.6             1       0.0
+   < 0.7            24       0.3
+   < 0.8           470       6.1
+   < 0.9          2127      27.5
+   < 1.0          7723     100.0
+ Worst Tri quality is 0.5982
+
+ final number of faces: 7723
+                   |   Default Mesher | 
+           Patches |                8 | 
+         Triangles |             7723 | 
+ Aligned mesh not created for any patches.
+
+ Elapsed time: 1.26 secs total, 0.36 secs potentially parallelizable (29.02% of total)
+----------------------------------------
+Surface Remesher Completed: CPU Time: 1.19, Wall Time: 1.26, Memory: 232.95 MB
+----------------------------------------
+
+Executing the 2d mesher...
+
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 16808, area: 1137.67, reference location: (-11.7549 -9.77303 0)
+Total => Surfaces: 1, Faces: 16808, Area: 1137.67
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+ |Angle Range|Prism Growing Edges|High Dihedral Edges|
+ |   0 -  18 |                559|                  0|
+ |  18 -  36 |                  0|                  0|
+ |  36 -  54 |                  0|                  0|
+ |  54 -  72 |                  0|                  0|
+ |  72 -  90 |                  0|                  0|
+ |  90 - 108 |                  0|                  0|
+ | 108 - 126 |                  0|                  0|
+ | 126 - 144 |                  0|                  0|
+ | 144 - 162 |                  0|                  0|
+ | 162 - 180 |                  1|                  1|
+Total => prism growing edges: 560, high dihedral edges: 1
+
+Worst 1 prism growing facetype edges with dihedral angles greater than 46 degrees:
+ dihedral angle: 175.579545, located at: (1.1899999999999999 0.0000000000000000 0.0810721437211904)
+done Surface diagnostics.CPU Time: 0.00, Wall Time: 0.01, Memory: 230.10 MB
+
+Surface is valid for volume meshing.CPU Time: 0.06, Wall Time: 0.07, Memory: 230.11 MB
+
+  done,  CPU Time: 0.06, Wall Time: 0.08, Memory: 230.11 MB
+User set distribution function to be  GEOMETRIC PROGRESSION
+----------------------------------------
+Executing Prism Layer Subsurface
+----------------------------------------
+Global Input surface contains 16808 faces, and 8404 vertices 
+Local Property is activated
+   done, CPU Time: 0.00, Wall Time: 0.01, Memory: 234.44 MB
+ Building preprocessor done 
+Computing vertex normals
+ Exchanged the remote active status done
+Computing the normals done
+   done, CPU Time: 0.00, Wall Time: 0.01, Memory: 234.57 MB
+Computing Vertex normals done
+Computing surface proximity
+   done, CPU Time: 0.00, Wall Time: 0.01, Memory: 234.79 MB
+Constraining boundary vertices
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 234.83 MB
+
+Iteration 1:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 562 of 562 active vertices)
+Checking 562 face-based validity metrics
+   found 0 invalid faces
+Checking vertex intersections for all vertices
+
+Using edge recovery to fix prism layer boundaries...
+Recovering edges... Edges recover info:  0   0
+ Grow affected faces......
+Remeshing surface near recovered edges...
+Surface remeshed.  112 faces added to surface.
+CPU Time: 0.06, Wall Time: 0.06, Memory: 237.76 MB
+ Finished two levels of remeshing 
+Edge recovery was successful.
+CPU Time: 0.08, Wall Time: 0.10, Memory: 237.81 MB
+
+Checking true subsurface intersections for all vertices
+ no intersections 
+   found 0 intersecting vertices
+Checking subsurface orientation!!
+
+Iterations successful
+
+Combining interface maps
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 237.87 MB
+Marking zero layer regions
+   found 0 collapsed faces
+   found 1 edges bounding collapsed regions
+   found 2 vertices bounding collapsed regions
+Global Subsurface contains 16920 faces, and 8460 vertices 
+----------------------------------------
+Prism Layer Subsurface Completed: CPU Time: 0.16, Wall Time: 0.20, Memory: 237.90 MB
+----------------------------------------
+ Generating dual core mesh...
+ Created 5641 dual faces, and 10585 dual verts.
+Created 4265 cells
+   finished generating poly core mesh CPU Time: 0.03, Wall Time: 0.06, Memory: 238.23 MB
+There are 16553 faces have subsurface thickness. 
+ The default subsurface thickness is 0.000643
+Set default subsurface thickness 0.000643032
+----------------------------------------
+Executing Prism Layer Extrusion
+----------------------------------------
+Marking vertices, edges and faces to extrude
+Subsurface thickness is set by subsurface.
+ find projections withOUT VertMapper (all core mesh)!
+   found (tet) 2 zero layer subsurface vertices
+Marking zero extrusion entities (vertices/edges/faces)
+   done, CPU Time: 0.02, Wall Time: 0.00, Memory: 236.57 MB
+Modifying number of layers for cells adjacent to retracted regions
+   modified number of layers for 2 faces
+Creating extrusion layer mesh
+   default number of layers = 3
+   default stretching = 1.18
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 237.04 MB
+ Layer Reduction Percentage set to 50
+Default chopping percentage 50.000000
+There is no Local Layer Reduction 
+Correct number of layer for:  Global Layer Reduction, setting(s).
+   stitching vertical edges at variable layer interface
+   stitching vertical faces at variable layer interface
+Extrusion mesh contains:
+   848 cells
+   3677 faces
+   5095 edges
+   2266 vertices
+----------------------------------------
+Prism Layer Extrusion Completed: CPU Time: 0.02, Wall Time: 0.06, Memory: 237.50 MB
+----------------------------------------
+
+2d mesh generation completed.  CPU Time: 0.38, Wall Time: 0.47, Memory: 237.57 MB
+
+Completed 2d meshing CPU Time: 0.38, Wall Time: 0.48, Memory: 237.57 MB
+Converting mesh into finite volume representation in Region Sharp sealed water
+   Performing conversion to 2D mesh
+   Converted mesh for Sharp sealed water CPU Time: 0.02, Wall Time: 0.04, Memory: 239.09 MB
+Mesh conversion completed, CPU Time: 0.03, Wall Time: 0.04, Memory: 234.63 MB
+Converting mesh into finite volume representation completed: CPU Time: 0.03, Wall Time: 0.04, Memory: 234.65 MB
+	Cells: 5113	Faces: 13802	Vertices: 9377
+----------------------------------------
+Mesh Operation 02 Sharp sealed native 2D mesh complete. CPU Time: 2.12, Wall Time: 2.36, Memory: 225.36 MB
+----------------------------------------
+NATIVE_BASE_TUNE=0.1461014979120046 original cell count 5113
+----------------------------------------
+Executing Mesh Operation 02 Sharp sealed native 2D mesh
+----------------------------------------
+All input parts have been badged for 2D Meshing, the volume mesh will be automatically converted to 2D.
+Creating the 2.5d surface slice before remeshing...
+   Done.
+----------------------------------------
+Preparing surface for surface meshing in Parts: 
+----------------------------------------
+
+----------------------------------------
+finished preparing surface for surface meshing CPU Time: 0.05, Wall Time: 0.05, Memory: 231.73 MB
+----------------------------------------
+----------------------------------------
+Executing Surface Remesher
+----------------------------------------
+ Running in serial
+ Growth rate for Triangle meshing with Default growth is 1.3
+ Project to discrete geometry
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.05          302       1.1
+   < 0.1          1982       7.0
+   < 0.2         13108      46.5
+   < 0.3         15114      53.6
+   < 0.4         16481      58.5
+   < 0.5         18207      64.6
+   < 0.6         19872      70.5
+   < 0.7         21442      76.1
+   < 0.8         22052      78.3
+   < 0.9         22854      81.1
+   < 1.0         27714      98.3
+ Worst Tri quality is 0.03921
+
+ initial number of faces: 58288
+
+ Phase 1: Apply Global Limits
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.05            0       0.0
+     < 0.1             0       0.0
+     < 0.2         10880      44.3
+     < 0.3         12802      52.1
+     < 0.4         14093      57.4
+     < 0.5         15395      62.7
+     < 0.6         16405      66.8
+     < 0.7         17815      72.5
+     < 0.8         18416      75.0
+     < 0.9         19261      78.4
+     < 1.0         24096      98.1
+   Worst Tri quality is 0.1794
+
+
+ Phase 2: Improve Grading
+
+   Tri Quality     Faces    Percent
+     < 0.001           0       0.0
+     < 0.01            0       0.0
+     < 0.05            0       0.0
+     < 0.1             0       0.0
+     < 0.2             0       0.0
+     < 0.3             0       0.0
+     < 0.4             0       0.0
+     < 0.5           108       1.0
+     < 0.6           301       2.7
+     < 0.7           646       5.9
+     < 0.8          2002      18.2
+     < 0.9          4382      39.8
+     < 1.0         10912      99.1
+   Worst Tri quality is 0.4137
+
+
+ Phase 3: Start Improve Quality
+
+   Phase 4: Improve Quality
+
+   Phase 5: Specialized Meshing
+
+   Phase 6: Final Improve Quality
+   Phase 7: Post-processing
+         No intersections found
+      0 faces with quality below 0.05
+
+ Tri Quality     Faces    Percent
+   < 0.001           0       0.0
+   < 0.01            0       0.0
+   < 0.05            0       0.0
+   < 0.1             0       0.0
+   < 0.2             0       0.0
+   < 0.3             0       0.0
+   < 0.4             0       0.0
+   < 0.5             0       0.0
+   < 0.6             0       0.0
+   < 0.7            37       0.3
+   < 0.8           727       6.3
+   < 0.9          3050      26.6
+   < 1.0         11479     100.0
+ Worst Tri quality is 0.6151
+
+ final number of faces: 11479
+                   |   Default Mesher | 
+           Patches |                8 | 
+         Triangles |            11479 | 
+ Aligned mesh not created for any patches.
+
+ Elapsed time: 1.58 secs total, 0.48 secs potentially parallelizable (30.58% of total)
+----------------------------------------
+Surface Remesher Completed: CPU Time: 1.48, Wall Time: 1.58, Memory: 239.90 MB
+----------------------------------------
+
+Executing the 2d mesher...
+
+Surface Diagnostics: 
+Found 1 isolated surfaces from 1 parts.
+ Isolated surface index: 1, face count: 25000, area: 1131.71, reference location: (-12 -10 0)
+Total => Surfaces: 1, Faces: 25000, Area: 1131.71
+
+Dihedral diagnostics is executed for edges of prism growing surfaces only. Special edges are not reported.
+ Dihedral Diagnostics:
+ |Angle Range|Prism Growing Edges|High Dihedral Edges|
+ |   0 -  18 |                559|                  0|
+ |  18 -  36 |                  0|                  0|
+ |  36 -  54 |                  0|                  0|
+ |  54 -  72 |                  0|                  0|
+ |  72 -  90 |                  0|                  0|
+ |  90 - 108 |                  0|                  0|
+ | 108 - 126 |                  0|                  0|
+ | 126 - 144 |                  0|                  0|
+ | 144 - 162 |                  0|                  0|
+ | 162 - 180 |                  1|                  1|
+Total => prism growing edges: 560, high dihedral edges: 1
+
+Worst 1 prism growing facetype edges with dihedral angles greater than 46 degrees:
+ dihedral angle: 175.579545, located at: (1.1899999999999999 0.0000000000000000 0.0540745640295104)
+done Surface diagnostics.CPU Time: 0.02, Wall Time: 0.01, Memory: 240.38 MB
+
+Surface is valid for volume meshing.CPU Time: 0.11, Wall Time: 0.11, Memory: 240.38 MB
+
+  done,  CPU Time: 0.12, Wall Time: 0.12, Memory: 240.38 MB
+User set distribution function to be  GEOMETRIC PROGRESSION
+----------------------------------------
+Executing Prism Layer Subsurface
+----------------------------------------
+Global Input surface contains 25000 faces, and 12500 vertices 
+Local Property is activated
+   done, CPU Time: 0.02, Wall Time: 0.01, Memory: 242.87 MB
+ Building preprocessor done 
+Computing vertex normals
+ Exchanged the remote active status done
+Computing the normals done
+   done, CPU Time: 0.02, Wall Time: 0.01, Memory: 242.87 MB
+Computing Vertex normals done
+Computing surface proximity
+   done, CPU Time: 0.02, Wall Time: 0.01, Memory: 243.43 MB
+Constraining boundary vertices
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 243.43 MB
+
+Iteration 1:
+-------------
+Initializing final vertex normals
+Creating subsurface (updating 562 of 562 active vertices)
+Checking 562 face-based validity metrics
+   found 0 invalid faces
+Checking vertex intersections for all vertices
+
+Using edge recovery to fix prism layer boundaries...
+Recovering edges... Edges recover info:  0   0
+ Grow affected faces......
+Remeshing surface near recovered edges...
+Surface remeshed.  112 faces added to surface.
+CPU Time: 0.05, Wall Time: 0.06, Memory: 245.11 MB
+ Finished two levels of remeshing 
+Edge recovery was successful.
+CPU Time: 0.08, Wall Time: 0.09, Memory: 245.11 MB
+
+Checking true subsurface intersections for all vertices
+ no intersections 
+   found 0 intersecting vertices
+Checking subsurface orientation!!
+
+Iterations successful
+
+Combining interface maps
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 245.12 MB
+Marking zero layer regions
+   found 0 collapsed faces
+   found 1 edges bounding collapsed regions
+   found 2 vertices bounding collapsed regions
+Global Subsurface contains 25112 faces, and 12556 vertices 
+----------------------------------------
+Prism Layer Subsurface Completed: CPU Time: 0.19, Wall Time: 0.21, Memory: 245.12 MB
+----------------------------------------
+ Generating dual core mesh...
+ Created 8369 dual faces, and 15701 dual verts.
+Created 6313 cells
+   finished generating poly core mesh CPU Time: 0.09, Wall Time: 0.10, Memory: 246.14 MB
+There are 24819 faces have subsurface thickness. 
+ The default subsurface thickness is 0.000643
+Set default subsurface thickness 0.000643032
+----------------------------------------
+Executing Prism Layer Extrusion
+----------------------------------------
+Marking vertices, edges and faces to extrude
+Subsurface thickness is set by subsurface.
+ find projections withOUT VertMapper (all core mesh)!
+   found (tet) 2 zero layer subsurface vertices
+Marking zero extrusion entities (vertices/edges/faces)
+   done, CPU Time: 0.02, Wall Time: 0.00, Memory: 243.89 MB
+Modifying number of layers for cells adjacent to retracted regions
+   modified number of layers for 2 faces
+Creating extrusion layer mesh
+   default number of layers = 3
+   default stretching = 1.18
+   done, CPU Time: 0.00, Wall Time: 0.00, Memory: 244.46 MB
+ Layer Reduction Percentage set to 50
+Default chopping percentage 50.000000
+There is no Local Layer Reduction 
+Correct number of layer for:  Global Layer Reduction, setting(s).
+   stitching vertical edges at variable layer interface
+   stitching vertical faces at variable layer interface
+Extrusion mesh contains:
+   848 cells
+   3677 faces
+   5095 edges
+   2266 vertices
+----------------------------------------
+Prism Layer Extrusion Completed: CPU Time: 0.03, Wall Time: 0.04, Memory: 244.67 MB
+----------------------------------------
+
+2d mesh generation completed.  CPU Time: 0.48, Wall Time: 0.57, Memory: 239.14 MB
+
+Completed 2d meshing CPU Time: 0.48, Wall Time: 0.57, Memory: 239.14 MB
+Converting mesh into finite volume representation in Region Sharp sealed water
+   Performing conversion to 2D mesh
+   Converted mesh for Sharp sealed water CPU Time: 0.03, Wall Time: 0.04, Memory: 242.80 MB
+Sharp sealed water: Interpolating solution onto new mesh... 
+Loading module: ConservativeMapping
+ Interpolating cell data for Sharp sealed water
+ Interpolating  boundary data for Sharp sealed fluid domain.Main
+ Interpolating  boundary data for Sharp sealed fluid domain.Flap
+ Interpolating  boundary data for Sharp sealed fluid domain.Inlet
+ Interpolating  boundary data for Sharp sealed fluid domain.Outlet
+ Interpolating  boundary data for Sharp sealed fluid domain.Bottom
+ Interpolating  boundary data for Sharp sealed fluid domain.Top
+  Time taken to interpolate the data  = 0.030354
+Finished Interpolation.
+Mesh conversion completed, CPU Time: 0.09, Wall Time: 0.10, Memory: 238.90 MB
+Converting mesh into finite volume representation completed: CPU Time: 0.09, Wall Time: 0.10, Memory: 238.90 MB
+	Cells: 7161	Faces: 19606	Vertices: 13473
+----------------------------------------
+Mesh Operation 02 Sharp sealed native 2D mesh complete. CPU Time: 2.58, Wall Time: 2.77, Memory: 227.68 MB
+----------------------------------------
+NATIVE_CELLS=7161
+NATIVE_COMPACT_REPORT {'Sequence': 365, 'FeCellShapeQualityHistogram': {'Buckets': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'Intervals': [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], 'MaxVal': -1.7976931348623157E308, 'MinVal': 1.7976931348623157E308}, 'NumEdges': 0, 'NumInvalidFeCells': 0, 'VolumeChangeHistogram': {'Buckets': [0, 0, 0, 0, 0, 0, 257, 6904, 0], 'Intervals': [0.0, 1.0E-6, 1.0E-5, 1.0E-4, 0.001, 0.01, 0.1, 1.0], 'MaxVal': 1.0, 'MinVal': 0.026312774926523157}, 'NumInvalidVerts': 0, 'NumVerts': 13473, 'NumInvalidCells': 0, 'NumCells': 7161, 'NumUnclosedCells': 0, 'NumFeCells': 0, 'NumNegVolCells': 0, 'NumInvalidFaces': 0, 'FaceValidityHistogram': {'Buckets': [0, 0, 0, 0, 0, 0, 0, 7161], 'Intervals': [0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1.0], 'MaxVal': 1.0, 'MinVal': 1.0}, 'NumFaces': 19606}
+---------------------------------------------------
+--- Computing statistics in Region: Sharp sealed water
+---------------------------------------------------
+-> ENTITY COUNT:
+   # Cells: 7161
+   # Faces: 19606
+   # Verts: 13473
+   # Edges: 0
+-> EXTENTS:
+   x: [-1.2000e+01,  2.8000e+01] m
+   y: [-1.0000e+01,  4.0000e+00] m
+   z: [ 0.0000e+00,  0.0000e+00] m
+-> MESH VALIDITY:
+   Mesh is topologically valid and has no negative volume cells.
+-> FACE VALIDITY STATISTICS: 
+Minimum Face Validity: 1.000000e+00
+Maximum Face Validity: 1.000000e+00
+        Face Validity <  0.50           0    0.000%
+0.50 <= Face Validity <  0.60           0    0.000%
+0.60 <= Face Validity <  0.70           0    0.000%
+0.70 <= Face Validity <  0.80           0    0.000%
+0.80 <= Face Validity <  0.90           0    0.000%
+0.90 <= Face Validity <  0.95           0    0.000%
+0.95 <= Face Validity <  1.00           0    0.000%
+1.00 <= Face Validity                7161   100.000%
+-> VOLUME CHANGE STATISTICS:
+Minimum Volume Change: 2.631277e-02
+Maximum Volume Change: 1.000000e+00
+         Volume Change <  0e+00           0    0.000%
+0e+00 <= Volume Change <  1e-06           0    0.000%
+1e-06 <= Volume Change <  1e-05           0    0.000%
+1e-05 <= Volume Change <  1e-04           0    0.000%
+1e-04 <= Volume Change <  1e-03           0    0.000%
+1e-03 <= Volume Change <  1e-02           0    0.000%
+1e-02 <= Volume Change <  1e-01         257    3.589%
+1e-01 <= Volume Change <= 1e+00        6904   96.411%
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\Sharp_Sealed_Native_2D.sim... complete (3.7732MB in 0.069378s).
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\SHARP_SEALED_NATIVE_20261105\Sharp_Sealed_Native_2D.sim... complete (3.8084MB in 0.078407s).
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

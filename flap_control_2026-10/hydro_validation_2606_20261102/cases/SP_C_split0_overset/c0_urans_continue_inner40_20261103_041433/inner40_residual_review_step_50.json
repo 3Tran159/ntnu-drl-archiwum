@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-03T04:28:32.643970+01:00",
+  "scientific_approved": false,
+  "notes": "Each complete timestep residual divided by its own first inner residual. Normalization cancels. Last 25 complete timesteps of each phase. Continuations differ in physical time, so this is a numerical diagnostic, not paired-time isolation or proof of equation convergence.",
+  "cases": {
+    "B: 15 inner": {
+      "Continuity": {
+        "steps": 25,
+        "median_last_over_first": 0.6626442992166558,
+        "p90_last_over_first": 0.9405606470628368,
+        "median_last5_over_first": 0.7040993743562979
+      },
+      "X-momentum": {
+        "steps": 25,
+        "median_last_over_first": 0.19074091314054334,
+        "p90_last_over_first": 0.28644603144687625,
+        "median_last5_over_first": 0.19797809274143346
+      },
+      "Z-momentum": {
+        "steps": 25,
+        "median_last_over_first": 0.26322929640460235,
+        "p90_last_over_first": 0.3610729734461117,
+        "median_last5_over_first": 0.2808298291010172
+      },
+      "Tke": {
+        "steps": 25,
+        "median_last_over_first": 0.11970167367872893,
+        "p90_last_over_first": 0.15262084941961462,
+        "median_last5_over_first": 0.12040965169564062
+      },
+      "Sdr": {
+        "steps": 25,
+        "median_last_over_first": 0.2715968250620339,
+        "p90_last_over_first": 0.3458143328895473,
+        "median_last5_over_first": 0.27252027608119256
+      }
+    },
+    "C corrected: 15 inner": {
+      "Continuity": {
+        "steps": 25,
+        "median_last_over_first": 0.5848821030762225,
+        "p90_last_over_first": 1.0062828169801605,
+        "median_last5_over_first": 0.6599734026582805
+      },
+      "X-momentum": {
+        "steps": 25,
+        "median_last_over_first": 0.10986625350183862,
+        "p90_last_over_first": 0.15865344163991432,
+        "median_last5_over_first": 0.09877370601860705
+      },
+      "Z-momentum": {
+        "steps": 25,
+        "median_last_over_first": 0.1615548440810724,
+        "p90_last_over_first": 0.27980040120086597,
+        "median_last5_over_first": 0.18629256210871561
+      },
+      "Tke": {
+        "steps": 25,
+        "median_last_over_first": 0.08456356190027246,
+        "p90_last_over_first": 0.13308073691346864,
+        "median_last5_over_first": 0.08067696823569005
+      },
+      "Sdr": {
+        "steps": 25,
+        "median_last_over_first": 0.1692164778000755,
+        "p90_last_over_first": 0.24244695359730592,
+        "median_last5_over_first": 0.17826420799904272
+      }
+    },
+    "C corrected: 40 inner": {
+      "Continuity": {
+        "steps": 25,
+        "median_last_over_first": 0.49203420670695514,
+        "p90_last_over_first": 0.89192076134251,
+        "median_last5_over_first": 0.46592344988581297
+      },
+      "X-momentum": {
+        "steps": 25,
+        "median_last_over_first": 0.0932147108723921,
+        "p90_last_over_first": 0.1461337319235801,
+        "median_last5_over_first": 0.07839240917618676
+      },
+      "Z-momentum": {
+        "steps": 25,
+        "median_last_over_first": 0.1299419588462495,
+        "p90_last_over_first": 0.19922696307775567,
+        "median_last5_over_first": 0.11716965640440717
+      },
+      "Tke": {
+        "steps": 25,
+        "median_last_over_first": 0.06836811815101669,
+        "p90_last_over_first": 0.12204895217471083,
+        "median_last5_over_first": 0.07787496552278358
+      },
+      "Sdr": {
+        "steps": 25,
+        "median_last_over_first": 0.15935003593246577,
+        "p90_last_over_first": 0.2532623222152508,
+        "median_last5_over_first": 0.15221701152655745
+      }
+    }
+  }
+}

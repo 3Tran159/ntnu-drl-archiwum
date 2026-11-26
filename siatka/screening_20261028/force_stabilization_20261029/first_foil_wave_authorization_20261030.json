@@ -1,0 +1,51 @@
+{
+  "status": "explicit_user_authorized",
+  "updated_at": "2026-10-30T09:23:58.664317+01:00",
+  "user_instructions": [
+    "puszczaj pierwsze case z fala",
+    "uznajmy ze bilans masy jest w tolerowanym zakresie",
+    "puszczajac juz liczenie z fala tak poustawiaj symulke zeby diagnozowac te komorki; dodaj widoki scalary streamliny isosurf"
+  ],
+  "observed_mass_deviation_accepted_for_exploration": true,
+  "observed_native_peak_pct_inlet": 0.01424757587635092,
+  "previous_review_criterion_pct": 0.01,
+  "previous_criterion_disposition": "Retained as reported diagnostic flag; no longer blocks this explicitly authorized exploratory W01 trial. This is a project acceptance decision, not proof of force insensitivity. Larger deviations remain separately reviewable.",
+  "case": "W01_W20L4_M10_FS020_diagnostic_r1",
+  "source": "W01_W20L4_M10_FS020_env_setup_r1/prepared.sim",
+  "mesh": "M10_FS020",
+  "cells": 317277,
+  "wave": {
+    "height_m": 0.5,
+    "wavelength_m": 20,
+    "depth_m": 24,
+    "U_m_s": 18,
+    "theory": "FifthOrderVofWave"
+  },
+  "target_time_s": 1.2,
+  "startup": "40steps0.5ms50inner; then1ms10inner",
+  "pressure_amg_tolerance": 0.01,
+  "guards_unchanged": [
+    "speed50m/s",
+    "phase bounds and finite fields",
+    "physical-time progress",
+    "memory/disk and bounded walltime",
+    "unique attempts/source hashes/GPU queue ownership"
+  ],
+  "diagnostics": [
+    "native phase and BDF2 accumulation+flux",
+    "independent foil forces and pressure/viscous components",
+    "calibrated full-domain residual snapshots",
+    "outlet cell and boundary-face histories",
+    "per-inner last-outlet-column residual monitors",
+    "12 native saved inspection scenes"
+  ],
+  "formal_wave_force_acceptance": false,
+  "remaining_accuracy_checks": [
+    "matched calm reference",
+    "complete settled wave cycles",
+    "wavegrid/time-step sensitivity",
+    "amplitude/phase/reflections"
+  ],
+  "separate_HF_session": "Leave untouched as user instructed",
+  "automation": "Remains paused; this new bounded controller is explicitly authorized"
+}

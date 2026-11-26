@@ -1,0 +1,115 @@
+Starting local server: starccm+.bat -server -power -podkey REDACTED -licpath 1999@flex.cd-adapco.com -np 8  -xencoded-session RjpcbnRudVxtZXNoX3NjcmVlbmluZ18yMDI2MTAyOFxibG9jazFfMjAyNjEwMjlcc291cmNlX2NvcHkuc2lt
+*****************************************************************************************
+Warning: CPU contention on 8 processes could not be resolved.
+         CPU affinity will be cleared on those processes.
+
+         This is a strong indication that another server is already running and on some
+         hosts there are now more processes running than there are physical CPU cores.
+
+         Over-subscribing a host can severely affect performance.
+
+         Even when within the limits of hardware multithreading (e.g., hyper-threading),
+         using more processes than CPU cores will likely negatively impact performance.
+
+         The recommended mode of operation is to use the same number of processes as
+         physical CPU cores.
+*****************************************************************************************
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0-7
+Process rank 0 THINKPAD-LUCJAN 30476
+Total number of processes : 8
+
+Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Oct 2025
+This version of the code requires license version 2026.02 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppower checked out from 1999@flex.cd-adapco.com
+Feature ccmppower expires in 15 days
+Thu Oct 29 09:39:29 2026
+
+Server::start -host THINKPAD-LUCJAN:47828
+Loading: F:\ntnu\mesh_screening_20261028\block1_20261029\source_copy.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: PLMXmlIo
+Loading module: StarResurfacer
+Loading module: StarTrimmer
+Loading module: CadModeler
+Started Parasolid modeler version 38.0.185
+Loading module: MotionModel
+Loading module: ConservativeMapping
+Loading module: VofModel
+Loading module: WavesModel
+Loading module: MeshingGeometricSensitivity
+Saved by:
+  Simcenter STAR-CCM+ 2602 Build 21.02.007 (win64/clang20.1vc14.2-r8) Np=8 
+Playing macro: F:\ntnu\mesh_screening_20261028\block1_20261029\ApplyVerified012Model.java
+F:\ntnu\mesh_screening_20261028\block1_20261029\ApplyVerified012Model.java:15: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+  s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                         ^
+
+[NTNU] CAD_FEATURE XY star.cadmodeler.CanonicalSketchPlane
+[NTNU] CAD_FEATURE YZ star.cadmodeler.CanonicalSketchPlane
+[NTNU] CAD_FEATURE ZX star.cadmodeler.CanonicalSketchPlane
+[NTNU] CAD_FEATURE Global Origin star.cadmodeler.CanonicalReferencePoint
+[NTNU] CAD_FEATURE Lab Coordinate System star.cadmodeler.CanonicalReferenceCoordinateSystem
+[NTNU] CAD_FEATURE ImportCad 1 star.cadmodeler.ImportCadFileFeature
+Reading CAD model from Parasolid Transmit file: HF_012_v3.x_t
+Number of bodies imported: 1
+Import completed: CPU Time: 0.01, Wall Time: 0.01, Memory: 223.01 MB
+Bodies with no change: 0
+Transformed bodies : 0
+Bodies with design change: 0
+Non matching bodies in old assembly: 1
+Non matching bodies in new assembly: 1
+SIGSEGV: memory access exception
+Command: GetBodyNames
+   Recoverability: Non-recoverable
+   ServerStack: [SymInit: Symbol-SearchPath: '.', symOptions: 530, UserName: 'ThinkPad'
+, OS-Version: 6.2.9200 () 0x100-0x1
+, 00007FFFED10DEDC (CadModeler): (filename not available): CadModeler::ModelReImportHandler::getBodyNames
+, 00007FFFED124C69 (CadModeler): (filename not available): CadModeler::ModelReImportHandler::getFaceBounds
+, 00007FFFEBDB28D5 (CadModeler): (filename not available): CadModeler::SerializableUnorderedSet<CadModeler::Attribute>::restore
+, 00007FF877BE805C (StarNeo): (filename not available): Controller::executeCommand
+, 00007FF877BE71D3 (StarNeo): (filename not available): Controller::processCommands
+, 00007FF84209CF5E (StarMachine): (filename not available): CommandController::processCommands
+, 00007FF842165C7B (StarMachine): (filename not available): ServerSession::startServerHost
+, 00007FF842164246 (StarMachine): (filename not available): ServerSession::launchServer
+, 00007FF842163F95 (StarMachine): (filename not available): ServerSession::main
+, ERROR: SymGetSymFromAddr64, GetLastError: 487 (Address: 00007FF788DB2792)
+, 00007FF788DB2792 (star-ccm+): (filename not available): (function-name not available)
+, ERROR: SymGetSymFromAddr64, GetLastError: 487 (Address: 00007FF788DB9550)
+, 00007FF788DB9550 (star-ccm+): (filename not available): (function-name not available)
+, 00007FF9595ADDA7 (KERNEL32): (filename not available): BaseThreadInitThunk
+, 00007FF95B0BEE4C (ntdll): (filename not available): RtlUserThreadStart
+]
+   Signal: SIGSEGV: memory access exception
+   error: Server Error
+SIGSEGV: memory access exception
+Command: GetBodyNames
+   Recoverability: Non-recoverable
+   ServerStack: [SymInit: Symbol-SearchPath: '.', symOptions: 530, UserName: 'ThinkPad'
+, OS-Version: 6.2.9200 () 0x100-0x1
+, 00007FFFED10DEDC (CadModeler): (filename not available): CadModeler::ModelReImportHandler::getBodyNames
+, 00007FFFED124C69 (CadModeler): (filename not available): CadModeler::ModelReImportHandler::getFaceBounds
+, 00007FFFEBDB28D5 (CadModeler): (filename not available): CadModeler::SerializableUnorderedSet<CadModeler::Attribute>::restore
+, 00007FF877BE805C (StarNeo): (filename not available): Controller::executeCommand
+, 00007FF877BE71D3 (StarNeo): (filename not available): Controller::processCommands
+, 00007FF84209CF5E (StarMachine): (filename not available): CommandController::processCommands
+, 00007FF842165C7B (StarMachine): (filename not available): ServerSession::startServerHost
+, 00007FF842164246 (StarMachine): (filename not available): ServerSession::launchServer
+, 00007FF842163F95 (StarMachine): (filename not available): ServerSession::main
+, ERROR: SymGetSymFromAddr64, GetLastError: 487 (Address: 00007FF788DB2792)
+, 00007FF788DB2792 (star-ccm+): (filename not available): (function-name not available)
+, ERROR: SymGetSymFromAddr64, GetLastError: 487 (Address: 00007FF788DB9550)
+, 00007FF788DB9550 (star-ccm+): (filename not available): (function-name not available)
+, 00007FF9595ADDA7 (KERNEL32): (filename not available): BaseThreadInitThunk
+, 00007FF95B0BEE4C (ntdll): (filename not available): RtlUserThreadStart
+]
+   Signal: SIGSEGV: memory access exception
+   error: Server Error
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 32

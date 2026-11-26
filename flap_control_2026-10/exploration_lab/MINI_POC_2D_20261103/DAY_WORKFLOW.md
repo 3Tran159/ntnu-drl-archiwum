@@ -1,0 +1,11 @@
+# Day exploration —2026-11-03
+
+Local detachedcontroller:finish_day.py. NoWorksession needed for approvedfinite stages. OneCPU,E-core mask16,noGPU. ExistingW04run164532 is read-only monitored;15%guard uses freshmedian1.54994185s/step. OtherSTAR2606 prevents new launch. Inputs andmacros are hashed;sources snapshotted perrun. No oldFAIL/HOLD file is released.
+
+Sequence: verifiednative residualreview ofSEALED0 → buildSEALED+C2+2 → solve+2 → mesh-only±2morpher test →40stepcalm-flowURANS smoke. Every transition is conditional; failurestops sequence,noautoretry. Static+2startsURF.3/.05 then.6/.2after500safeiterations; this numericalchange is recorded. PhysicalSST/rho/mu/U/reportdefinitions remainfixed. The sealedC2foreblend is a demonstrator with deformableforebandxc.75–.80 and rigid aft20%;not a2.5mmgap model. Dynamicgridvelocity generates a smoothcontinuoussealedskin; forebandpose may differ slightly from simple staticweightedrotation and must not be presented as fully validatedstatic/dynamic equivalence.
+
+KINEMATICS_ONLY freezesCFD and checksactualcentroidangle andpositivevolume/facevalidity at±2. Its savedendstate isnot aflow initialcondition. URANS_MORPHER_START.sim isseparatelysaved beforehand withactiveflow,initialC0fields,t0 andtwo-periodsmoothenvelope. CFDsmoke usesdt.002,20inner,40steps (.08s),so it only checks earlyramp; it doesnot validatefullamplitude CFD. Phasecolumn is a referencecarrier; noorbitalfield isactive in thatsmoke.
+
+STATUS:STATUS_MINI_DAY.cmd. STOP:STOP_MINI_DAY.cmd writes anownedmarker checkedat safe boundaries. There isnoautomatic RESUME fromFAIL/resourceHOLD. Reviewlatestcheckpoint andcause first. Do not rerun finish_day.py whilelockexists;no completedcase isreplayed. Inputandoldhigh-fidelitycheckpointt1.212remainunchanged.
+
+Daydeadline20:30Europe/Oslo;jobtimewatchdog requests ownsafeSTOP. Night21:00–07:00requires explicituserselection andnew boundedauthorization. No night taskorstartupautomation wasinstalled. Decisionreport isactive_wave_20261103/EVENING_DECISION.md andJSON,regenerated onlocal completion orfailure. DAY_STATUS.json islive duringstages. NativeCFD orbitalfielddiagnostic remains unprepared;analyticconfig/test alone doesnot qualifyW0 orWA2. NoVOF,DRL orsurrogatewasstarted.

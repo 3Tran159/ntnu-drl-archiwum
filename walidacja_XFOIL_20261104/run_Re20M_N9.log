@@ -1,0 +1,2133 @@
+
+ ===================================================
+  XFOIL Version 6.99
+  Copyright (C) 2000   Mark Drela, Harold Youngren
+
+  This software comes with ABSOLUTELY NO WARRANTY,
+    subject to the GNU General Public License.
+
+  Caveat computor
+ ===================================================
+
+ File  xfoil.def  not found
+
+   QUIT    Exit program
+
+  .OPER    Direct operating point(s)
+  .MDES    Complex mapping design routine
+  .QDES    Surface speed design routine
+  .GDES    Geometry design routine
+
+   SAVE f  Write airfoil to labeled coordinate file
+   PSAV f  Write airfoil to plain coordinate file
+   ISAV f  Write airfoil to ISES coordinate file
+   MSAV f  Write airfoil to MSES coordinate file
+   REVE    Reverse written-airfoil node ordering
+
+   LOAD f  Read buffer airfoil from coordinate file
+   NACA i  Set NACA 4,5-digit airfoil and buffer airfoil
+   INTE    Set buffer airfoil by interpolating two airfoils
+   NORM    Buffer airfoil normalization toggle
+   XYCM rr Change CM reference location, currently  0.25000 0.00000
+
+   BEND    Display structural properties of current airfoil
+
+   PCOP    Set current-airfoil panel nodes directly from buffer airfoil points
+   PANE    Set current-airfoil panel nodes ( 160 ) based on curvature
+  .PPAR    Show/change paneling
+
+  .PLOP    Plotting options
+
+   WDEF f  Write  current-settings file
+   RDEF f  Reread current-settings file
+   NAME s  Specify new airfoil name
+   NINC    Increment name version number
+
+   Z       Zoom    | (available in all menus)
+   U       Unzoom  | 
+
+ XFOIL   c>   ...............................................
+
+  G raphics-enable flag:        T
+  S ize of plot object          10.00"
+  A spect ratio of plot object   0.5500
+  P age dimensions              11.00 x  8.50"
+  M argins from page edges       0.00",  0.00"
+  F ont size (relative)          0.0150
+  W indow/screen size fraction   0.8000
+  B lowup input method:        Cursor    
+  O rientation of plot:        Landscape 
+  C olor PostScript output?     F
+
+      Option, Value   (or <Return>)    c>   ...............................................
+
+  G raphics-enable flag:        F
+  S ize of plot object          10.00"
+  A spect ratio of plot object   0.5500
+  P age dimensions              11.00 x  8.50"
+  M argins from page edges       0.00",  0.00"
+  F ont size (relative)          0.0150
+  W indow/screen size fraction   0.8000
+  B lowup input method:        Cursor    
+  O rientation of plot:        Landscape 
+  C olor PostScript output?     F
+
+      Option, Value   (or <Return>)    c>  
+ XFOIL   c>  
+ Labeled airfoil file.  Name:  NACA66-012 + NACA a=0.8(mod) cmax=0.025 RECONSTR
+
+ Number of input coordinate points: 161
+ Counterclockwise ordering
+ Max thickness =     0.119982  at x =   0.454
+ Max camber    =     0.024124  at x =   0.528
+
+  LE  x,y  =  -0.00031   0.00183  |   Chord =   1.00031
+  TE  x,y  =   1.00000   0.00000  |
+
+ Current airfoil nodes set from buffer airfoil nodes ( 161 )
+
+ XFOIL   c>  
+ Sharp trailing edge
+
+ Paneling parameters used...
+   Number of panel nodes       160
+   Panel bunching parameter    1.000
+   TE/LE panel density ratio   0.150
+   Refined-area/LE panel density ratio    0.200
+   Top    side refined area x/c limits  1.000 1.000
+   Bottom side refined area x/c limits  1.000 1.000
+
+ XFOIL   c>  
+.OPERi   c>  
+ M  =    0.0000
+ Re =  20000000
+
+.OPERv   c>  
+.OPERv   c>  
+ Polar  1 newly created for accumulation
+ Airfoil archived with polar: NACA66-012 + NACA a=0.8(mod) cmax=0.025 RECONSTR
+
+Enter  polar save filename  OR  <return> for no file   s>  
+ New polar save file available
+
+Enter  polar dump filename  OR  <return> for no file   s>  
+ Polar dump file will NOT be written
+
+ Polar accumulation enabled
+
+.OPERva   c>   Calculating unit vorticity distributions ...
+ Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Initializing BL ...
+    side            1  ...
+    side            2  ...
+
+ Side 1  free  transition at x/c =  0.5620   51
+ Side 2  free  transition at x/c =  0.1666   24
+
+   1   rms: 0.2673E-01   max: 0.2275E+00   D at   51  1
+       a =  0.000      CL =  0.3527
+      Cm = -0.0820     CD =  0.00419   =>   CDf =  0.00369    CDp =  0.00050
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3204E-01
+ Side 1  free  transition at x/c =  0.5692   51
+ Side 2  free  transition at x/c =  0.1630   23
+
+   2   rms: 0.8564E-02   max: -.2091E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3113E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+   3   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+   4   rms: 0.7664E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+   5   rms: 0.7656E-02   max: -.1931E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+   6   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+   7   rms: 0.7662E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+   8   rms: 0.7677E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+   9   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  10   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  11   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  12   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  13   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  14   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  15   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  16   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  17   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  18   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  19   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  20   rms: 0.7664E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  21   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  22   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  23   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  24   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  25   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  26   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  27   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  28   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  29   rms: 0.7677E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  30   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  31   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  32   rms: 0.7661E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  33   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  34   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  35   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  36   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  37   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  38   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  39   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  40   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  41   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  42   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  43   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  44   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  45   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  46   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  47   rms: 0.7672E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  48   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  49   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  50   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  51   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  52   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  53   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  54   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  55   rms: 0.7676E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3110E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  56   rms: 0.7655E-02   max: -.1931E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  57   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3110E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  58   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  59   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  60   rms: 0.7676E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  61   rms: 0.7672E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  62   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  63   rms: 0.7677E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  64   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  65   rms: 0.7664E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  66   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  67   rms: 0.7664E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  68   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  69   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  70   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  71   rms: 0.7658E-02   max: -.1932E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  72   rms: 0.7672E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  73   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  74   rms: 0.7662E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  75   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  76   rms: 0.7660E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  77   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  78   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  79   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  80   rms: 0.7661E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  81   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  82   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  83   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  84   rms: 0.7678E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  85   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  86   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  87   rms: 0.7676E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  88   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  89   rms: 0.7664E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  90   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  91   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  92   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  93   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  94   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  95   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  96   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  97   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  98   rms: 0.7661E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+  99   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 100   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 101   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 102   rms: 0.7680E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 103   rms: 0.7679E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 104   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 105   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 106   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 107   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 108   rms: 0.7676E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3110E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 109   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 110   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 111   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 112   rms: 0.7662E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 113   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 114   rms: 0.7676E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 115   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 116   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 117   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 118   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 119   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 120   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 121   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 122   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 123   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3110E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 124   rms: 0.7658E-02   max: -.1932E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 125   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 126   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 127   rms: 0.7664E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 128   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 129   rms: 0.7685E-02   max: -.1939E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 130   rms: 0.7682E-02   max: -.1938E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 131   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 132   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 133   rms: 0.7660E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 134   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 135   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 136   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 137   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 138   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 139   rms: 0.7658E-02   max: -.1932E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 140   rms: 0.7679E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 141   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 142   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 143   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 144   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 145   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 146   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 147   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 148   rms: 0.7672E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 149   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 150   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 151   rms: 0.7678E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 152   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 153   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 154   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 155   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 156   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 157   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 158   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 159   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 160   rms: 0.7672E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 161   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 162   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 163   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 164   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 165   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 166   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 167   rms: 0.7672E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 168   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 169   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 170   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 171   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 172   rms: 0.7664E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 173   rms: 0.7677E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 174   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 175   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 176   rms: 0.7664E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 177   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 178   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 179   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 180   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 181   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 182   rms: 0.7676E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 183   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 184   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 185   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 186   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 187   rms: 0.7677E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 188   rms: 0.7680E-02   max: -.1938E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 189   rms: 0.7661E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 190   rms: 0.7660E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 191   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 192   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 193   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 194   rms: 0.7664E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 195   rms: 0.7676E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 196   rms: 0.7678E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 197   rms: 0.7676E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 198   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 199   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 200   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 201   rms: 0.7662E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 202   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 203   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 204   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 205   rms: 0.7659E-02   max: -.1932E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 206   rms: 0.7672E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 207   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 208   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 209   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 210   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 211   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 212   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 213   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 214   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 215   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 216   rms: 0.7672E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 217   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 218   rms: 0.7662E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 219   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 220   rms: 0.7660E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 221   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 222   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 223   rms: 0.7663E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 224   rms: 0.7676E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 225   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 226   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 227   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 228   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 229   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 230   rms: 0.7666E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3112E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 231   rms: 0.7671E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 232   rms: 0.7673E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 233   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 234   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 235   rms: 0.7668E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 236   rms: 0.7672E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 237   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 238   rms: 0.7661E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 239   rms: 0.7675E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 240   rms: 0.7665E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 241   rms: 0.7669E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 242   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 243   rms: 0.7662E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 244   rms: 0.7661E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 245   rms: 0.7678E-02   max: -.1937E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 246   rms: 0.7674E-02   max: -.1936E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 247   rms: 0.7668E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 248   rms: 0.7670E-02   max: -.1935E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 249   rms: 0.7667E-02   max: -.1934E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+
+ MRCHDU: Convergence failed at  51  side 1    Res =  0.3111E-01
+ Side 1  free  transition at x/c =  0.5694   51
+ Side 2  free  transition at x/c =  0.1626   23
+
+ 250   rms: 0.7661E-02   max: -.1933E+00   C at   51  1
+       a =  0.000      CL =  0.3524
+      Cm = -0.0819     CD =  0.00420   =>   CDf =  0.00370    CDp =  0.00051
+ VISCAL:  Convergence failed
+
+.OPERva   c>  
+.OPERva   c>  
+ Polar accumulation disabled
+
+.OPERv   c>  
+ XFOIL   c>  

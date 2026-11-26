@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\read_seeded_cfl.py", line 15, in <module>
+    result=new_job("B_CFL_NATIVE_READBACK",dict(source=src,verify=True,cfl_probe=True,steps=0,limit_seconds=540))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_day.py", line 181, in new_job
+    raise RuntimeError("Native checkpoint readback failed")
+RuntimeError: Native checkpoint readback failed

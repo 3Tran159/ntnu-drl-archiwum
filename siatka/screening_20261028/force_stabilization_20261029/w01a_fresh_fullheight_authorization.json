@@ -1,0 +1,30 @@
+{
+  "updated_at": "2026-10-30T12:30:18.924221+01:00",
+  "user_instruction": "Clear old W01a live trial and restart from t0 with the first inlet wave at full prescribed height. No height ramp.",
+  "active_case": "W01a_W20L4_M10_inlet_fullheight_restart_r3",
+  "controller_pid": 2896,
+  "launcher_pid": 228,
+  "activation_time_s": 0,
+  "height_m": 0.5,
+  "height_mode": "constant_full_height_from_activation",
+  "height_ramp_duration_s": 0,
+  "initial_interior_state": "calm initialized zero-flow-step input",
+  "initialize_full_domain_as_wave": false,
+  "require_calm_force_settling": false,
+  "numerical_startup": {
+    "steps": 40,
+    "dt_s": 0.0005,
+    "inner": 50,
+    "wave_active_from_first_step": true
+  },
+  "after_startup": {
+    "dt_s": 0.001,
+    "inner": 10,
+    "order": "SECOND_ORDER",
+    "pressure_AMG_tolerance": 0.01
+  },
+  "source": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M10_FS020_env_setup_r1\\prepared.sim",
+  "source_sha256": "8cab371c1f4bd000283877b4e28811c978814cc30a57c9fb7701cce85fc235ce",
+  "old_attempt_disposition": "Preserved archive; excluded from current dashboard histories, images, ETA and cycle count",
+  "wave_force_accuracy": "not yet admitted"
+}

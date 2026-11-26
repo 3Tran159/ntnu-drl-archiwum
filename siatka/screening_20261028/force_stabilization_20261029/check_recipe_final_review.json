@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-10-30T15:52:00.797285+01:00",
+  "status": "passed",
+  "flow_steps": 0,
+  "paths_checked": [
+    "new_wave_definition",
+    "saved_wave_definition"
+  ],
+  "macro_sha256": "799e2ea2f2b0e91d84703fec9b46b4322b9d4f4b45ba89abc02388363e86f0f9",
+  "source_unchanged": true,
+  "physical_time_before_and_after_s": 0.587,
+  "campaign_hold_retained": true,
+  "local_pause_retained": true,
+  "locks_released": true,
+  "controller_tests": 68,
+  "review_path": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\local_control_zero_step_review.json",
+  "attempt_directory": "E:\\ntnu\\quasi2d_waves_20261029\\LOCAL_RECIPE_CHECK_770086a7a84e48029e2087cf74af4110",
+  "preserved_initial_failure": "LOCAL_RECIPE_CHECK_b9a774a266624a519b0ce205630300f7",
+  "fix": "Inspection supplied steps=1 but shared macro input guard requires >=30. Check recipe now supplies30 while retaining wave_setup early return before all flow steps.",
+  "scope": "Actual STAR zero-flow wave definition and reload API audit. C01, wave integration, selected-mesh preparation and force accuracy were not run or validated."
+}

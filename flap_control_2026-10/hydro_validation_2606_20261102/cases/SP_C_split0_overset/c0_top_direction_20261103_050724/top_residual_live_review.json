@@ -1,0 +1,126 @@
+{
+  "at": "2026-11-03T05:33:51.500031+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_top_direction_20261103_050724",
+  "complete_steps": 100,
+  "last_step": 100,
+  "window_steps": [
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "cases": {
+    "normal": {
+      "Continuity": {
+        "normalization_factor": 0.003963208746565847,
+        "steps": 25,
+        "median_last": 0.967028858213358,
+        "median_last_over_first": 0.5194534015695036,
+        "p90_last_over_first": 0.793155689603274
+      },
+      "X-momentum": {
+        "normalization_factor": 0.02149720992236967,
+        "steps": 25,
+        "median_last": 5.624719821444683,
+        "median_last_over_first": 0.09580463951856111,
+        "p90_last_over_first": 0.1183467850006529
+      },
+      "Z-momentum": {
+        "normalization_factor": 0.01087764939339029,
+        "steps": 25,
+        "median_last": 4.8814014837958695,
+        "median_last_over_first": 0.11949594174286425,
+        "p90_last_over_first": 0.1778244545983488
+      },
+      "Tke": {
+        "normalization_factor": 0.003064984585937406,
+        "steps": 25,
+        "median_last": 0.0136623078976889,
+        "median_last_over_first": 0.08122882724320264,
+        "p90_last_over_first": 0.11836315028968993
+      },
+      "Sdr": {
+        "normalization_factor": 894340.9321518223,
+        "steps": 25,
+        "median_last": 5.7516097802698906e-06,
+        "median_last_over_first": 0.18438421686243656,
+        "p90_last_over_first": 0.23731887773443341
+      }
+    },
+    "extrapolated": {
+      "Continuity": {
+        "normalization_factor": 0.003963208746565847,
+        "steps": 25,
+        "median_last": 8.06464e-06,
+        "median_last_over_first": 0.0001165877272421279,
+        "p90_last_over_first": 0.00016340060891372176
+      },
+      "X-momentum": {
+        "normalization_factor": 0.02149720992236967,
+        "steps": 25,
+        "median_last": 0.0002469322,
+        "median_last_over_first": 7.687419057581192e-06,
+        "p90_last_over_first": 1.1936040740293086e-05
+      },
+      "Z-momentum": {
+        "normalization_factor": 0.01087764939339029,
+        "steps": 25,
+        "median_last": 0.0005339847,
+        "median_last_over_first": 1.4332608490069844e-05,
+        "p90_last_over_first": 2.4575275826032385e-05
+      },
+      "Tke": {
+        "normalization_factor": 0.003064984585937406,
+        "steps": 25,
+        "median_last": 2.099332e-07,
+        "median_last_over_first": 2.4485856850661387e-06,
+        "p90_last_over_first": 2.4872956428232016e-06
+      },
+      "Sdr": {
+        "normalization_factor": 894340.9321518223,
+        "steps": 25,
+        "median_last": 6.179673e-10,
+        "median_last_over_first": 6.383683052064868e-05,
+        "p90_last_over_first": 6.589314201319535e-05
+      }
+    }
+  },
+  "scientific_approved": false,
+  "source": "Current native STAR residual lines for complete40-inner blocks; baseline native exported monitors. No secret data output.",
+  "native_csv_crosscheck": {
+    "Continuity": true,
+    "X-momentum": true,
+    "Y-momentum": true,
+    "Z-momentum": true,
+    "Tke": true,
+    "Sdr": true
+  },
+  "median_last_extrapolated_over_normal": {
+    "Continuity": 8.339606343185963e-06,
+    "X-momentum": 4.390124447773412e-05,
+    "Z-momentum": 0.00010939167814255742,
+    "Tke": 1.5365866555789747e-05,
+    "Sdr": 0.0001074424941204899
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-29T23:50:55.602Z",
+  "scope": "Wave numerical diagnostics and M10 free-surface preparation UI only; no controllers, solvers, plans or scientific data changed.",
+  "sources_edited": [
+    "configured_mesh_panel.py",
+    "build_professor_dashboard.py"
+  ],
+  "display": {
+    "R6": {
+      "reference": "R4",
+      "only_change": "10 to 20 inner iterations",
+      "window_s": [
+        0.502,
+        0.75
+      ],
+      "mass_peak_reference_pct": 0.01451935956931171,
+      "mass_peak_probe_pct": 0.0113353042956708,
+      "mass_gate_pct": 0.01,
+      "mass_gate_pass": false,
+      "samples_above_gate": 4,
+      "max_gauge_difference_mm": 0.2902115581271403
+    },
+    "R8": {
+      "case": "W20_H24_X4_GPUprop_environmentalOutlet_halfdt10inner_r8",
+      "state_at_capture": "propagation_GPU_running",
+      "time_at_capture_s": 0.725,
+      "settings": "second-order / 0.5 ms / 10 inner",
+      "same_source_s": 0.5,
+      "target_s": 0.75,
+      "steps": 500,
+      "result_at_capture": "pending",
+      "future_result": "Dynamically display case-matched finite unchanged-source wave_halfdt_probe_r8_review.json when present; no wave-force acceptance claim"
+    },
+    "M10": {
+      "id": "M10_FS020_r1",
+      "state_at_capture": "building_on_two_CPU",
+      "workers": 2,
+      "gpu": false,
+      "reference": "M09",
+      "nominal_FS_mm": [
+        28.571428571428573,
+        20
+      ],
+      "foil_prism_outer_controls": "unchanged by design; actual regenerated mesh audit still required",
+      "flow_admitted": false,
+      "old_LE_TE_design": "unbuilt"
+    },
+    "calm_M09_supported": true
+  },
+  "qa": {
+    "dashboards": [
+      "main",
+      "professor"
+    ],
+    "widths": [
+      1360,
+      390
+    ],
+    "javascript_errors": 0,
+    "duplicate_ids": 0,
+    "document_overflow": false,
+    "visual_review": [
+      "wave_numerics_professor_1360.png",
+      "wave_numerics_main_390.png",
+      "wave_fs_variant_professor_390.png",
+      "wave_numerics_fs_print17.png"
+    ],
+    "print_actual_pages": 18,
+    "print_intentional_pages": 18,
+    "changed_page17_no_clipping_or_orphans": true,
+    "print_adjustment": "Earlier R3 failure detail remains on-screen; omit it from the printed wave summary when the newer numerical diagnostic is present, avoiding an orphaned note page."
+  },
+  "artifacts": [
+    "wave_numerics_fs_dashboard_qa.json",
+    "wave_numerics_fs_professor_qa.pdf",
+    "wave_numerics_fs_print17.png"
+  ],
+  "previous_review": "paired_input_preparation_ui_review.json"
+}

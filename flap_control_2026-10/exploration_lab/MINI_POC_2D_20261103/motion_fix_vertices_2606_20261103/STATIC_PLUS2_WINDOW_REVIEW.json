@@ -1,0 +1,34 @@
+{
+  "whole_window_PASS": false,
+  "residuals": {
+    "residual_Continuity": {
+      "window": 25,
+      "maximum": 0.02307039023587847,
+      "pass_all_le_001": false
+    },
+    "residual_Sdr": {
+      "window": 25,
+      "maximum": 0.0018856764449762075,
+      "pass_all_le_001": true
+    },
+    "residual_Tke": {
+      "window": 25,
+      "maximum": 0.0001919248408293616,
+      "pass_all_le_001": true
+    },
+    "residual_X_momentum": {
+      "window": 25,
+      "maximum": 0.0022517008870887984,
+      "pass_all_le_001": true
+    },
+    "residual_Y_momentum": {
+      "window": 25,
+      "maximum": 0.0026912805458745187,
+      "pass_all_le_001": true
+    }
+  },
+  "global_pABSmin": 12737.969332840803,
+  "pressure_threshold": 12339.214766776897,
+  "reserve_Pa": 398.75456606390617,
+  "limitation": "Small pressure reserve; old last-samplePOCPASS retained unchanged; whole-window review fails continuity"
+}

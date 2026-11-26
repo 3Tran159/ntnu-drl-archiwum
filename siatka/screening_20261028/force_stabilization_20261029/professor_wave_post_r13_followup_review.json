@@ -1,0 +1,139 @@
+{
+  "title": "Bounded follow-up after the VOF linear-accuracy test",
+  "date": "2026-10-30",
+  "status": "Read-only recommendation; R13 outcome must be finalized and achieved AMG target checked before applying this conditional plan.",
+  "recommendation": "If tighter VOF AMG solves reach0.001 but the phase-error plateau remains, one pressure-only0.1→0.01 replay is defensible. Add local diagnostic reports/exports to that replay so it also identifies where the remaining error resides; do not continue a blind inner-iteration/time-step sweep.",
+  "comparison_contract": {
+    "source": "Original preserved R4 checkpoint_t0.500.sim",
+    "baseline": "R12 reporting replay / R10 original1ms10inner setting",
+    "changed_numerical_control": "Pressure AMG ConvergeTol only,0.1→0.01",
+    "VOF_tolerance": 0.1,
+    "reason_for_VOF_setting": "Return to original R4 value; keeping R13's0.001 would create a combined change.",
+    "unchanged": [
+      "SO1ms",
+      "10 actual inner iterations",
+      "VOF URF0.9",
+      "pressure URF0.2",
+      "velocity URF0.5",
+      "AMG MaxCycles30 and Epsilon0",
+      "HRIC, dynamic substeps and source/BC settings",
+      "0.01% conservation gate",
+      "all finite/alpha/speed guards"
+    ],
+    "discriminating_power": "All310 baseline pressure solves achieved ratios0.04018–0.08008 after2cycles;0.01 should require additional work. Verify actual ratios/cycles rather than assuming the requested tolerance was met."
+  },
+  "local_diagnostics": {
+    "verified_native_names": [
+      "MassImbalancewater",
+      "MassImbalanceair",
+      "MassImbalance",
+      "VolumeFractionwater",
+      "Density",
+      "Pressure",
+      "Velocity",
+      "CourantNumber"
+    ],
+    "name_provenance": "Native balance inventory from preserved R4 zero-step report audit; other physical fields already exported successfully by R12.",
+    "not_confirmed": "DivVelocityImbalance was absent from the observed native inventory. Do not hard-code or rely on it.",
+    "snapshots_s": [
+      0.612,
+      0.617,
+      0.618,
+      0.625
+    ],
+    "adaptive_capture": "Also preserve the branch's actual largest phase-error spike in the investigated0.605–0.635 window if its time shifts. Use distinct filenames; preserve the attempt.",
+    "calibration": "At each snapshot compare cell SumReport(MassImbalancewater) and SumReport(MassImbalanceair) with corresponding native MassConservationErrorReport/dt. Record values, signs, units and mismatch. Only if they agree may the exported cell field be described as the native global error's spatial decomposition.",
+    "reduction": "Per-cell imbalance is a mass-rate contribution when confirmed by dimensions/calibration; sum it directly. Do not multiply by volume again. Signed sums identify net error; sums of absolute cell contributions expose cancellation.",
+    "export": "Use star.common.XyzInternalTable with setExtractVertexData(false), Volume Mesh representation and region input. Export cell coordinates, alpha, density, pressure, velocity components, CFL, the three observed imbalance fields and any discovered relevant retained fields.",
+    "retention_API": [
+      "SegregatedVofSolver.setLeaveTemporaryStorage(true)",
+      "SegregatedFlowSolver.setLeaveTemporaryStorage(true)"
+    ],
+    "retained_fields": "Enumerate actual new field function names, presentation names and dimensions after retaining storage. The common-solver documentation specifies residual, correction, limiter and reconstruction families but does not prove a particular VOF prefix. Do not invent names.",
+    "unit_warning": "Common solver [variable]Residual is documented dimensionless; do not treat its integral as kg/s. Corrections/limiters may show correlations but do not by themselves prove clipping."
+  },
+  "volume_equivalent_diagnostic": {
+    "field_evidence": {
+      "file": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_linearTrace_dt1ms_r12/checkpoint_fields.csv",
+      "cells": 53200,
+      "water_density_kg_m3": 1000,
+      "air_density_kg_m3": 1.2,
+      "maximum_rho_minus_1p2_plus_998p8alpha_error_kg_m3": 1.1368683772161603e-13
+    },
+    "definition": "Q_error = native_water_error_kg_s/1000 + native_air_error_kg_s/1.2. Also keep water_error/1000 separately.",
+    "meaning": "For the verified constant-density, fixed-volume, two-phase source-free configuration, density-weighting the signed phase residuals distinguishes net volume-equivalent residual from water transport residual. It does not rule out local pressure/VOF coupling.",
+    "baseline_examples": {
+      "0.612": {
+        "water_kg_s": 0.7152277454430632,
+        "air_kg_s": -0.0007448133070626754,
+        "water_volume_equivalent_m3_s": 0.0007152277454430632,
+        "net_volume_equivalent_m3_s": 0.00009454998955750037
+      },
+      "0.617": {
+        "water_kg_s": 1.158502214144319,
+        "air_kg_s": -0.0012516373054575604,
+        "water_volume_equivalent_m3_s": 0.001158502214144319,
+        "net_volume_equivalent_m3_s": 0.00011547112626301872
+      },
+      "0.618": {
+        "water_kg_s": 1.226036893277143,
+        "air_kg_s": -0.0013184603544396738,
+        "water_volume_equivalent_m3_s": 0.001226036893277143,
+        "net_volume_equivalent_m3_s": 0.0001273199312440815
+      },
+      "0.624": {
+        "water_kg_s": 0.5973311287200244,
+        "air_kg_s": -0.000934108130395467,
+        "water_volume_equivalent_m3_s": 0.0005973311287200243,
+        "net_volume_equivalent_m3_s": -0.00018109231327619816
+      },
+      "0.625": {
+        "water_kg_s": 0.7968934324198513,
+        "air_kg_s": -0.001170308693031186,
+        "water_volume_equivalent_m3_s": 0.0007968934324198514,
+        "net_volume_equivalent_m3_s": -0.00017836381177280367
+      }
+    }
+  },
+  "interpretation_rules": [
+    "If pressure tolerance is reached and both the native phase plateau and volume-equivalent residual materially decrease, pressure/VOF coupling sensitivity is supported; still verify gauges, phase conservation across the complete window and cost.",
+    "If volume-equivalent error decreases while the water-phase error plateau remains, global pressure-continuity improvement alone did not cure phase transport. Use the calibrated local maps before choosing another control.",
+    "If the tighter pressure solve produces essentially unchanged results, reject this pressure-linear-accuracy hypothesis. Do not try successively tighter tolerances without evidence.",
+    "If imbalance concentrates near alpha0/1 and retained corrections/limiters correlate, report that observation; it remains insufficient to claim an undocumented clipping mechanism.",
+    "Do not stop inner iterations at an isolated native threshold crossing: R12 at0.618 passed0.01% on inner3 then rebounded."
+  ],
+  "primary_sources": [
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-800CB29E-32C2-4DA1-8023-5C44E3E657EE.html",
+      "claim": "AMG reduction tolerance, max cycles and epsilon"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-123AF9A5-D46F-4EE6-8206-4959152911D4.html",
+      "claim": "Pressure correction enforces the velocity continuity constraint"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-187276CC-89DA-4F69-B1AE-500038C45DE8.html",
+      "claim": "Native phase transport mass error summed over cells and multiplied bydt"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-D3A9AF77-8D76-41F7-89F4-25C0C95A5B1E.html",
+      "claim": "Retained residual/correction/limiter/reconstruction fields and dimensions"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/en/online/STARCCMP/GUID-11CD4B05-2045-4FFB-9BCA-F31DD3C59599.html",
+      "claim": "Mixture density and two-phase complement relation"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/mixturemultiphase/VolumeFractionTransportSolver.html",
+      "claim": "VOF temporary-storage getter/setter"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/segregatedflow/SegregatedFlowSolver.html",
+      "claim": "Flow temporary-storage getter/setter"
+    },
+    {
+      "path": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/doc/client/html/star/common/XyzInternalTable.html",
+      "claim": "Cell-centred table export API"
+    }
+  ]
+}

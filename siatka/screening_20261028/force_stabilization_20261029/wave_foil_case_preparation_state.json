@@ -1,0 +1,268 @@
+{
+  "status": "paired_inputs_prepared_pending_flow_gates",
+  "updated_at": "2026-10-30T00:26:54.021249+01:00",
+  "controller_pid": 36284,
+  "workers": 1,
+  "gpu": false,
+  "scope": "Paired calm/W01 input preparation, zero flow steps; source mesh preserved",
+  "completed": [
+    {
+      "case": "C01_W20L4_M09_env_setup_r2",
+      "directory": "E:\\ntnu\\quasi2d_waves_20261029\\C01_W20L4_M09_env_setup_r2",
+      "returncode": 0,
+      "source_unchanged": true,
+      "elapsed_s": 180.36698389053345,
+      "audit": {
+        "status": "prepared_zero_steps",
+        "time_s": 0.0,
+        "flow_steps": 0,
+        "cells": 246885,
+        "gpu": false,
+        "wave": false,
+        "wave_class": "FlatVofWave",
+        "wave_name": "Calm",
+        "wave_period_s": 0.0,
+        "boundaries": [
+          {
+            "name": "DOMAIN.bottom",
+            "type": "WallBoundary",
+            "area_m2": 1.5999999999999979,
+            "z_m": -22.0
+          },
+          {
+            "name": "DOMAIN.inlet",
+            "type": "InletBoundary",
+            "area_m2": 0.6000000000000001,
+            "x_m": -35.0
+          },
+          {
+            "name": "DOMAIN.outlet",
+            "type": "PressureBoundary",
+            "area_m2": 0.5999999999999993,
+            "x_m": 45.0
+          },
+          {
+            "name": "DOMAIN.top",
+            "type": "PressureBoundary",
+            "area_m2": 1.5999999999999979,
+            "z_m": 8.0
+          },
+          {
+            "name": "HF_012_wall",
+            "type": "WallBoundary",
+            "area_m2": 0.048404943993875085
+          },
+          {
+            "name": "Q2D_span_source",
+            "type": "SymmetryBoundary",
+            "area_m2": 2399.884211590642
+          },
+          {
+            "name": "Q2D_span_target",
+            "type": "SymmetryBoundary",
+            "area_m2": 2399.884211590642
+          }
+        ],
+        "gauges": [
+          {
+            "x_m": -10.0,
+            "height_m": 29.999999999999986,
+            "eta_actual_m": -0.0015842808987294177,
+            "eta_analytic_m": -0.0015842808987294177
+          },
+          {
+            "x_m": -5.0,
+            "height_m": 29.999999999999986,
+            "eta_actual_m": -0.002309326445377735,
+            "eta_analytic_m": -0.002309326445377735
+          },
+          {
+            "x_m": 2.5,
+            "height_m": 30.000000000000004,
+            "eta_actual_m": 0.00017599783749133735,
+            "eta_analytic_m": 0.00017599783749133735
+          },
+          {
+            "x_m": 5.0,
+            "height_m": 29.999999999999986,
+            "eta_actual_m": 0.0011231578547210574,
+            "eta_analytic_m": 0.0011231578547210574
+          },
+          {
+            "x_m": 10.0,
+            "height_m": 30.000000000000004,
+            "eta_actual_m": -0.00112635836917363,
+            "eta_analytic_m": -0.00112635836917363
+          },
+          {
+            "x_m": 15.0,
+            "height_m": 29.999999999999993,
+            "eta_actual_m": -0.0016591402377805764,
+            "eta_analytic_m": -0.0016591402377805764
+          },
+          {
+            "x_m": 20.0,
+            "height_m": 30.000000000000004,
+            "eta_actual_m": -0.000869117286931953,
+            "eta_analytic_m": -0.000869117286931953
+          }
+        ],
+        "initial_alpha_min": 0.0,
+        "initial_alpha_max": 1.0,
+        "initial_max_speed_m_s": 18.000000000000007,
+        "settings": {
+          "order": "SECOND_ORDER",
+          "dt_s": 0.001,
+          "inner": 10,
+          "water_depth_m": 24,
+          "waterline_z_m": 2,
+          "U_m_s": 18,
+          "submergence_m": 2,
+          "outlet_pressure": "ENVIRONMENTAL",
+          "bottom": "SLIP",
+          "top": "STATIC",
+          "forcing_m": 20,
+          "damping_m": 20
+        },
+        "bindings": {
+          "initial_phase": "VolumeFractionHeavyFluidWave0",
+          "initial_velocity": "VelocityWave0",
+          "outlet_phase": "VolumeFractionHeavyFluidWave0",
+          "initial_pressure": "HydrostaticPressureWave0",
+          "outlet_pressure": "HydrostaticPressureWave0",
+          "forcing_wave": "Calm"
+        },
+        "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+      }
+    },
+    {
+      "case": "W01_W20L4_M09_env_setup_r2",
+      "directory": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M09_env_setup_r2",
+      "returncode": 0,
+      "source_unchanged": true,
+      "elapsed_s": 170.37721967697144,
+      "audit": {
+        "status": "prepared_zero_steps",
+        "time_s": 0.0,
+        "flow_steps": 0,
+        "cells": 246885,
+        "gpu": false,
+        "wave": true,
+        "wave_class": "FifthOrderVofWave",
+        "wave_name": "NTNU_W01_H05_L20_H24 1",
+        "wave_period_s": 0.0,
+        "boundaries": [
+          {
+            "name": "DOMAIN.bottom",
+            "type": "WallBoundary",
+            "area_m2": 1.5999999999999979,
+            "z_m": -22.0
+          },
+          {
+            "name": "DOMAIN.inlet",
+            "type": "InletBoundary",
+            "area_m2": 0.6000000000000001,
+            "x_m": -35.0
+          },
+          {
+            "name": "DOMAIN.outlet",
+            "type": "PressureBoundary",
+            "area_m2": 0.5999999999999993,
+            "x_m": 45.0
+          },
+          {
+            "name": "DOMAIN.top",
+            "type": "PressureBoundary",
+            "area_m2": 1.5999999999999979,
+            "z_m": 8.0
+          },
+          {
+            "name": "HF_012_wall",
+            "type": "WallBoundary",
+            "area_m2": 0.048404943993875085
+          },
+          {
+            "name": "Q2D_span_source",
+            "type": "SymmetryBoundary",
+            "area_m2": 2399.884211590642
+          },
+          {
+            "name": "Q2D_span_target",
+            "type": "SymmetryBoundary",
+            "area_m2": 2399.884211590642
+          }
+        ],
+        "gauges": [
+          {
+            "height_m": 29.999999999999986,
+            "x_m": -10.0,
+            "eta_analytic_m": -0.238506575613048,
+            "eta_actual_m": -0.238506575613048
+          },
+          {
+            "height_m": 29.999999999999986,
+            "x_m": -5.0,
+            "eta_analytic_m": -0.01200559232071896,
+            "eta_actual_m": -0.01200559232071896
+          },
+          {
+            "height_m": 30.000000000000004,
+            "x_m": 2.5,
+            "eta_analytic_m": 0.17487435969042764,
+            "eta_actual_m": 0.17487435969042764
+          },
+          {
+            "height_m": 29.999999999999986,
+            "x_m": 5.0,
+            "eta_analytic_m": -0.007382683280269475,
+            "eta_actual_m": -0.007382683280269475
+          },
+          {
+            "height_m": 30.000000000000004,
+            "x_m": 10.0,
+            "eta_analytic_m": -0.24001113353781633,
+            "eta_actual_m": -0.24001113353781633
+          },
+          {
+            "height_m": 29.999999999999993,
+            "x_m": 15.0,
+            "eta_analytic_m": -0.009801550382363189,
+            "eta_actual_m": -0.009801550382363189
+          },
+          {
+            "height_m": 30.000000000000004,
+            "x_m": 20.0,
+            "eta_analytic_m": 0.26308076673779723,
+            "eta_actual_m": 0.26308076673779723
+          }
+        ],
+        "initial_alpha_min": 0.0,
+        "initial_alpha_max": 1.0,
+        "initial_max_speed_m_s": 18.474525402501705,
+        "settings": {
+          "order": "SECOND_ORDER",
+          "dt_s": 0.001,
+          "inner": 10,
+          "water_depth_m": 24,
+          "waterline_z_m": 2,
+          "U_m_s": 18,
+          "submergence_m": 2,
+          "outlet_pressure": "ENVIRONMENTAL",
+          "bottom": "SLIP",
+          "top": "STATIC",
+          "forcing_m": 20,
+          "damping_m": 20
+        },
+        "bindings": {
+          "initial_velocity": "VelocityWave1",
+          "initial_phase": "VolumeFractionHeavyFluidWave1",
+          "forcing_wave": "NTNU_W01_H05_L20_H24 1",
+          "outlet_pressure": "HydrostaticPressureWave0",
+          "initial_pressure": "HydrostaticPressureWave1",
+          "outlet_phase": "VolumeFractionHeavyFluidWave0"
+        },
+        "scope": "Matched calm/wave input preparation only; neither startup nor wave-grid/time/propagation accuracy established"
+      }
+    }
+  ]
+}

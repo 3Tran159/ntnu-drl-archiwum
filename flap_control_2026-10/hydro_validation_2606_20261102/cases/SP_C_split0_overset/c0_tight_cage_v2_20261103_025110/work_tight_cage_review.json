@@ -1,0 +1,119 @@
+{
+  "at": "2026-11-03T02:54:34.911685+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110",
+  "physical_source_geometry_unchanged": true,
+  "native_contours": {
+    "main": {
+      "vertices": 1163,
+      "area_ratio": 0.9999649913650878,
+      "input_hausdorff_m": 7.170300568315298e-05,
+      "y_bounds_m": [
+        0.0099999999999999,
+        0.03
+      ],
+      "reference_vertices": 1163,
+      "unique_matches": 1163,
+      "max_vertex_shift_m": 0.0
+    },
+    "flap": {
+      "vertices": 731,
+      "area_ratio": 1.0000453013603072,
+      "input_hausdorff_m": 1.4085897949212817e-05,
+      "y_bounds_m": [
+        0.0099999999999999,
+        0.03
+      ]
+    }
+  },
+  "regions": {
+    "Background": {
+      "plane_centers_inside_native_solids": {
+        "main": 0,
+        "flap": 0
+      },
+      "acceptor_x_min_m": 0.9158404245321656,
+      "acceptor_x_max_m": 1.5472892217956773,
+      "nonactive_upstream_x_lt_0p90m": 0
+    },
+    "FlapOverset": {
+      "plane_centers_inside_native_solids": {
+        "main": 0,
+        "flap": 0
+      },
+      "acceptor_x_min_m": 0.9157104056730592,
+      "acceptor_x_max_m": 1.548817392624779,
+      "nonactive_upstream_x_lt_0p90m": 0
+    }
+  },
+  "scientific_approved": false,
+  "flow_approval": false,
+  "mesh_review": {
+    "at": "2026-11-03T02:54:26.959669+01:00",
+    "candidate": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110",
+    "background_control": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050",
+    "comparison": "same full-plane representation; not volume-cell centers",
+    "background": {
+      "control_cells": 304810,
+      "candidate_cells": 304810,
+      "unique_matches": 304810,
+      "max_center_error_m": 2.8546336281444334e-14,
+      "max_relative_volume_error": 1.0761835866901492e-11,
+      "max_quality_error": 2.605460291960071e-11,
+      "identity_pass": true
+    },
+    "regions": {
+      "Background": {
+        "cells": 304810,
+        "active": 226848,
+        "inactive": 77108,
+        "acceptors": 854,
+        "error_cells": 0,
+        "difficult_cells": 0,
+        "min_volume": 1.0079977988834268e-11,
+        "min_quality": 0.0610481862401861,
+        "quality_quantiles": {
+          "0.001": 0.26421900365008977,
+          "0.01": 0.38142350601404873,
+          "0.5": 0.5729633408000003
+        },
+        "acceptor_size_ratio_quantiles": {
+          "0.0": 0.5048203118655016,
+          "0.5": 0.9172510807014903,
+          "0.95": 1.1165686093437337,
+          "0.99": 1.1979079156564205,
+          "1.0": 1.2630175897485596
+        },
+        "ratio_above2": 0,
+        "ratio_below_half": 0
+      },
+      "FlapOverset": {
+        "cells": 29129,
+        "active": 28502,
+        "inactive": 0,
+        "acceptors": 627,
+        "error_cells": 0,
+        "difficult_cells": 0,
+        "min_volume": 9.12875011908794e-12,
+        "min_quality": 0.0620511168178739,
+        "quality_quantiles": {
+          "0.001": 0.16644079744751056,
+          "0.01": 0.38149651327453693,
+          "0.5": 0.9999334640199656
+        },
+        "acceptor_size_ratio_quantiles": {
+          "0.0": 0.4727476148008577,
+          "0.5": 0.8167612860644274,
+          "0.95": 1.3291721077710468,
+          "0.99": 1.4135644267837313,
+          "1.0": 1.6850690629553493
+        },
+        "ratio_above2": 0,
+        "ratio_below_half": 2
+      }
+    },
+    "scientific_approved": false,
+    "mesh_review_pass": true
+  },
+  "technical_screen_pass": true,
+  "limitation": "Containment uses polygon centers from midspan plane, not true volume-cell centers. Before flow, use initial active-volume export against these native polygons. Technical mesh pass does not establish force accuracy."
+}

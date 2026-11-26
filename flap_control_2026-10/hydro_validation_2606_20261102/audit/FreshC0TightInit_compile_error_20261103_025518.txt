@@ -1,0 +1,222 @@
+package macro;
+import star.common.*;import star.overset.*;import star.metrics.*;import star.base.neo.*;import star.base.report.*;import star.meshing.*;import star.material.*;import star.flow.*;import star.segregatedflow.*;import star.turbulence.*;import star.kwturb.*;import star.motion.*;import star.vis.*;import star.sweptmesher.*;import star.prismmesher.*;import java.nio.file.*;import java.io.*;import java.util.*;
+public class FreshC0TightInit extends StarMacro {
+
+Simulation s;Path root=Paths.get("F:/ntnu/flap_control/hydro_validation_2606_20261102"),out;List<Region> regions=new ArrayList<>();List<Boundary> fixed=new ArrayList<>(),flap=new ArrayList<>();double xh=.952,zh=.02128173276776986;String variant;boolean steadyResume=false;Map<Region,Motion> savedMotions=new LinkedHashMap<>();double[] savedFlapBounds;
+void note(String text)throws Exception{s.println("HYDRO_STAGE "+text);Files.writeString(out.resolve("progress.txt"),text+"\n");}
+void guard()throws Exception{if(Files.exists(root.getParent().resolve("PAUSED_FOR_HOME.json")))throw new IllegalStateException("Paused");if(s.getNumberOfGpgpus()!=0)throw new IllegalStateException("CPU-only working model");s.getSimulationIterator().getAutoSave().setEnabled(false);s.getSimulationIterator().getAutoSave().setAutoSaveBatch(false);}
+UserFieldFunction field(String name,String definition,Dimensions dimensions){UserFieldFunction f=s.getFieldFunctionManager().createFieldFunction();f.setPresentationName(name);f.setFunctionName(name);f.getTypeOption().setSelected(FieldFunctionTypeOption.Type.SCALAR);f.setDimensions(dimensions);f.setDefinition(definition);return f;}
+void constant(ScalarProfile p,double v){p.setMethod(ConstantScalarProfileMethod.class);p.getMethod(ConstantScalarProfileMethod.class).getQuantity().setValue(v);}
+void velocity(VectorProfile p){p.setMethod(ConstantVectorProfileMethod.class);p.getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponents(18,0,0);}
+void pressure(ScalarProfile p,FieldFunction f){p.setMethod(FunctionScalarProfileMethod.class);p.getMethod(FunctionScalarProfileMethod.class).setFieldFunction(f);}
+void turbulence(Boundary b){b.getConditions().get(KwTurbSpecOption.class).setSelected(KwTurbSpecOption.Type.INTENSITY_VISCOSITY_RATIO);constant(b.getValues().get(TurbulenceIntensityProfile.class),.001);constant(b.getValues().get(TurbulentViscosityRatioProfile.class),10);}
+PhysicsContinuum physics(){
+PhysicsContinuum pc=s.getContinuumManager().createContinuum(PhysicsContinuum.class);pc.setPresentationName("HYDRO water SST singlephase");
+pc.enable(ThreeDimensionalModel.class);pc.enable(ImplicitUnsteadyModel.class);pc.enable(SingleComponentLiquidModel.class);pc.enable(SegregatedFlowModel.class);pc.enable(ConstantDensityModel.class);pc.enable(TurbulentModel.class);pc.enable(RansTurbulenceModel.class);pc.enable(KOmegaTurbulence.class);pc.enable(SstKwTurbModel.class);pc.enable(KwAllYplusWallTreatment.class);pc.enable(GravityModel.class);pc.enable(CellQualityRemediationModel.class);
+Material water=pc.getModelManager().getModel(SingleComponentLiquidModel.class).getMaterial();water.getMaterialProperties().getMaterialProperty(ConstantDensityProperty.class).setConstant(1000);water.getMaterialProperties().getMaterialProperty(DynamicViscosityProperty.class).setConstant(.001);
+pc.getReferenceValues().get(ReferencePressure.class).setValue(101325);pc.getReferenceValues().get(Gravity.class).setComponents(0,0,-9.8100004196167);pc.getReferenceValues().get(ReferenceAltitude.class).setComponents(0,0,2);
+velocity(pc.getInitialConditions().get(VelocityProfile.class));pc.getInitialConditions().get(KwTurbSpecOption.class).setSelected(KwTurbSpecOption.Type.INTENSITY_VISCOSITY_RATIO);constant(pc.getInitialConditions().get(TurbulenceIntensityProfile.class),.001);constant(pc.getInitialConditions().get(TurbulentViscosityRatioProfile.class),10);
+Dimensions pd=new Dimensions();pd.setPressure(1);field("HYDRO_HydrostaticGauge","<1000 kg/m^3>*<9.8100004196167 m/s^2>*(<2 m> - $$Position[2])",pd);UserFieldFunction hp=field("HYDRO_PiezometricZero","<0 Pa>",pd);pressure(pc.getInitialConditions().get(InitialPressureProfile.class),hp);
+for(Region r:regions){r.setPhysicsContinuum(pc);for(Boundary b:r.getBoundaryManager().getBoundaries()){
+ if(b.getBoundaryType() instanceof InletBoundary){b.getConditions().get(InletVelocityOption.class).setSelected(InletVelocityOption.Type.COMPONENTS);velocity(b.getValues().get(VelocityProfile.class));turbulence(b);}
+ else if(b.getBoundaryType() instanceof PressureBoundary){pressure(b.getValues().get(StaticPressureProfile.class),hp);turbulence(b);}else if(b.getBoundaryType() instanceof WallBoundary&&b.getPresentationName().endsWith("bottom")){b.getConditions().get(WallShearStressOption.class).setSelected(WallShearStressOption.Type.SLIP);}
+}}
+ImplicitUnsteadySolver u=s.getSolverManager().getSolver(ImplicitUnsteadySolver.class);u.getTimeStep().setValue(.0004);u.getTimeDiscretizationOption().setSelected(TimeDiscretizationOption.Type.SECOND_ORDER);
+for(SolverStoppingCriterion c:s.getSolverStoppingCriterionManager().getObjects()){c.setIsUsed(false);if(c instanceof InnerIterationStoppingCriterion){c.setIsUsed(true);((InnerIterationStoppingCriterion)c).setMaximumNumberInnerIterations(15);}}
+return pc;
+}
+ForceReport force(String name,double x,double y,double z,List<Boundary> bs){ForceReport f=s.getReportManager().createReport(ForceReport.class);f.setPresentationName(name);f.setPressureOption(FluidLoadsReportPressureOption.SP_UC);f.getDirection().setComponents(x,y,z);f.getParts().setObjects(bs);f.createMonitor();return f;}
+MinReport minimum(String name,String ff,Collection<? extends NamedObject> parts,boolean coordinates){MinReport r=s.getReportManager().createReport(MinReport.class);r.setPresentationName(name);r.getParts().setObjects(parts);r.setSmooth(false);if(coordinates)r.setCollocatedFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Position").getComponentFunction(0),s.getFieldFunctionManager().getFunction("Position").getComponentFunction(1),s.getFieldFunctionManager().getFunction("Position").getComponentFunction(2)));r.setFieldFunction(s.getFieldFunctionManager().getFunction(ff));r.createMonitor();return r;}
+void reports(double buoyancy)throws Exception{
+List<Boundary> all=new ArrayList<>(fixed);all.addAll(flap);force("HF_Fx_N",1,0,0,all);force("HF_Fz_N",0,0,1,all);
+MomentReport m=s.getReportManager().createReport(MomentReport.class);m.setPresentationName("HF_Mh_Nm");m.setPressureOption(FluidLoadsReportPressureOption.SP_UC);m.getDirection().setComponents(0,1,0);m.getOrigin().setComponents(xh,.02,zh);m.getParts().setObjects(flap.isEmpty()?fixed:flap);m.createMonitor();
+ExpressionReport cl=s.getReportManager().createReport(ExpressionReport.class);cl.setPresentationName("HF_CL_hydro");cl.setDefinition("($"+"{HF_Fz_NReport} - <"+buoyancy+" N>)/<3855.6 N>");cl.createMonitor();
+ExpressionReport cd=s.getReportManager().createReport(ExpressionReport.class);cd.setPresentationName("HF_CD");cd.setDefinition("$"+"{HF_Fx_NReport}/<3855.6 N>");cd.createMonitor();
+minimum("HF_pabs_fixed","AbsolutePressure",fixed,true);if(!flap.isEmpty())minimum("HF_pabs_flap","AbsolutePressure",flap,true);minimum("HF_pabs_liquid_all","AbsolutePressure",regions,true);
+UserFieldFunction near=field("HYDRO_NearFoilMask","($$Position[0] > <-0.15 m> && $$Position[0] < <1.5 m> && $$Position[2] > <-0.3 m> && $$Position[2] < <0.35 m>) ? 1 : 0",new Dimensions());
+ThresholdPart np=s.getPartManager().createThresholdPart();np.setPresentationName("HYDRO nearby liquid");np.getInputParts().setObjects(regions);np.setFieldFunction(near);np.setRange(new DoubleVector(new double[]{.5,1.5}));np.setMode(ThresholdMode.BETWEEN_TAG);minimum("HF_pabs_near","AbsolutePressure",List.of(np),true);
+if(!flap.isEmpty()){Dimensions ld=new Dimensions();ld.setLength(1);UserFieldFunction radial=field("HYDRO_HingeRadius","sqrt(pow($$Position[0] - <"+xh+" m>,2) + pow($$Position[2] - <"+zh+" m>,2))",ld);ThresholdPart gap=s.getPartManager().createThresholdPart();gap.setPresentationName("HYDRO hinge gap radial band");gap.getInputParts().setObjects(regions);gap.setFieldFunction(radial);gap.setRange(new DoubleVector(new double[]{.03510113219921941,.03760113219921941}));gap.setMode(ThresholdMode.BETWEEN_TAG);minimum("HF_pabs_gap","AbsolutePressure",List.of(gap),true);}
+minimum("HF_min_volume","Volume",regions,false);minimum("HF_min_quality","CellQuality",regions,false);minimum("HF_min_face_validity","FaceValidity",regions,false);
+AreaAverageReport yp=s.getReportManager().createReport(AreaAverageReport.class);yp.setPresentationName("HF_yplus_mean");yp.setFieldFunction(s.getFieldFunctionManager().getFunction("WallYplus"));yp.getParts().setObjects(all);yp.createMonitor();
+MaxReport ymax=s.getReportManager().createReport(MaxReport.class);ymax.setPresentationName("HF_yplus_max");ymax.setFieldFunction(s.getFieldFunctionManager().getFunction("WallYplus"));ymax.getParts().setObjects(all);ymax.createMonitor();
+Files.writeString(out.resolve("normalization.json"),"{\"rho\":1000,\"U\":18,\"mu\":0.001,\"Re\":21420000,\"reference_area_m2\":0.0238,\"qS_N\":3855.6,\"buoyancy_N\":"+buoyancy+",\"temperature_C\":20,\"pvapor_Pa\":2339.214766776897,\"required_margin_Pa\":10000,\"pabs_threshold_Pa\":12339.214766776897,\"turbulence_intensity\":0.001,\"turbulent_viscosity_ratio\":10,\"moment_surface\":\""+(flap.isEmpty()?"intact foil":"flap only")+"\",\"moment_axis\":\"+y\",\"positive_flap\":\"trailing edge toward -z\"}");
+}
+void scene()throws Exception{
+Scene sc=s.getSceneManager().createScene("HYDRO foil and mesh");sc.initializeAndWait();int k=0;for(Region r:regions){PlaneSection p=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));p.setPresentationName("HYDRO midspan "+r.getPresentationName());PartDisplayer d=sc.getDisplayerManager().createPartDisplayer(r.getPresentationName(),-1,1);d.getInputParts().setObjects(p);d.setMesh(true);d.setSurface(false);d.setOutline(false);d.setDisplayerColor(new DoubleVector(k++==0?new double[]{.25,.35,.45}:new double[]{.95,.3,.1}));}
+PartDisplayer w=sc.getDisplayerManager().createPartDisplayer("Foil", -1,1);List<Boundary> all=new ArrayList<>(fixed);all.addAll(flap);w.getInputParts().setObjects(all);w.setSurface(true);w.setOutline(true);w.setDisplayerColor(new DoubleVector(new double[]{.1,.4,.75}));
+sc.getCurrentView().setInput(new DoubleVector(new double[]{.60,.02,.025}),new DoubleVector(new double[]{.60,-3,.025}),new DoubleVector(new double[]{0,0,1}),.68,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_foil.png").toString(),1,1300,700);
+sc.getCurrentView().setInput(new DoubleVector(new double[]{xh,.02,zh}),new DoubleVector(new double[]{xh,-3,zh}),new DoubleVector(new double[]{0,0,1}),.065,1,s.getCoordinateSystemManager().getLabCoordinateSystem(),false);sc.printAndWait(out.resolve("mesh_hinge.png").toString(),1,1100,800);
+}
+
+double rv(String n){return s.getReportManager().getReport(n).getReportMonitorValue();}
+double mean(List<double[]> a,int lo,int hi,int j){double v=0;for(int k=lo;k<hi;k++)v+=a.get(k)[j];return v/(hi-lo);}
+void captureFields(String label)throws Exception{StringBuilder b=new StringBuilder("time="+s.getSolution().getPhysicalTime()+" initialized="+s.getSolution().isInitialized()+"\n");for(String n:List.of("Density","Pressure","AbsolutePressure","Velocity","TurbulentKineticEnergy","SpecificDissipationRate")){if(!s.getFieldFunctionManager().hasFunction(n))continue;FieldFunction f=s.getFieldFunctionManager().getFunction(n);if(n.equals("Velocity"))f=f.getMagnitudeFunction();MinReport mi=s.getReportManager().createReport(MinReport.class);MaxReport ma=s.getReportManager().createReport(MaxReport.class);mi.getParts().setObjects(regions);ma.getParts().setObjects(regions);mi.setFieldFunction(f);ma.setFieldFunction(f);b.append(n+" min="+mi.getReportMonitorValue()+" max="+ma.getReportMonitorValue()+"\n");s.getReportManager().removeObjects(mi,ma);}Files.writeString(out.resolve("fields_"+label+".txt"),b.toString());}
+
+double[] flapBounds(){double[] values=new double[6];for(int j=0;j<3;j++){FieldFunction pos=s.getFieldFunctionManager().getFunction("Position").getComponentFunction(j);MinReport lo=s.getReportManager().createReport(MinReport.class);MaxReport hi=s.getReportManager().createReport(MaxReport.class);lo.getParts().setObjects(flap);hi.getParts().setObjects(flap);lo.setFieldFunction(pos);hi.setFieldFunction(pos);values[2*j]=lo.getReportMonitorValue();values[2*j+1]=hi.getReportMonitorValue();s.getReportManager().removeObjects(lo,hi);}return values;}
+void checkPose(String stage)throws Exception{if(savedFlapBounds==null)return;double[] current=flapBounds();Files.writeString(out.resolve("pose_bounds_"+stage+".txt"),Arrays.toString(current));for(int k=0;k<6;k++)if(Math.abs(current[k]-savedFlapBounds[k])>1e-8)throw new IllegalStateException("Static mesh pose changed at "+stage+": "+Arrays.toString(current));}
+void suspendMotionForSteady()throws Exception{
+if(!variant.equals("SP_C"))return;StationaryMotion stationary=null;for(Motion motion:s.get(MotionManager.class).getObjects())if(motion instanceof StationaryMotion)stationary=(StationaryMotion)motion;if(stationary==null)throw new IllegalStateException("Native stationary motion absent");
+savedFlapBounds=flapBounds();Files.writeString(out.resolve("pose_bounds_before_suspend.txt"),Arrays.toString(savedFlapBounds));
+for(Region r:regions){MotionSpecification spec=r.getValues().get(MotionSpecification.class);Motion motion=spec.getMotion();if(motion instanceof RotatingMotion){String law=((RotationAngle)((RotatingMotion)motion).getRotationSpecification()).getRotationAngle().getDefinition();if(!law.matches("<[+-]?[0-9.]+ deg>"))throw new IllegalStateException("Steady initializer requires constant prescribed angle");savedMotions.put(r,motion);spec.setMotion(stationary);}}
+if(savedMotions.isEmpty()&&steadyResume){
+RotatingMotion found=null;for(Motion m:s.get(MotionManager.class).getObjects())if(m instanceof RotatingMotion){if(found!=null)throw new IllegalStateException("Ambiguous stored rotation");found=(RotatingMotion)m;}
+if(found==null)throw new IllegalStateException("Stored rotation missing from steady checkpoint");
+String law=((RotationAngle)found.getRotationSpecification()).getRotationAngle().getDefinition();if(!law.matches("<[+-]?[0-9.]+ deg>"))throw new IllegalStateException("Constant pose required");
+savedMotions.put(s.getRegionManager().getRegion("FlapOverset"),found);
+}
+if(savedMotions.isEmpty())throw new IllegalStateException("SP_C prescribed motion not found");note("Temporarily stationary at existing pose for steady initialization; source unchanged");checkPose("after_suspend");
+}
+void restoreMotionForUnsteady()throws Exception{
+if(savedMotions.isEmpty())return;for(Map.Entry<Region,Motion> entry:savedMotions.entrySet())entry.getKey().getValues().get(MotionSpecification.class).setMotion(entry.getValue());
+List<Solver> frozen=new ArrayList<>();try{for(Solver solver:s.getSolverManager().getObjects())if(solver instanceof SegregatedFlowSolver||solver.getClass().getName().toLowerCase(Locale.ROOT).contains("turb"))if(!solver.getFrozen()){solver.setFrozen(true);frozen.add(solver);}for(SolverStoppingCriterion criterion:s.getSolverStoppingCriterionManager().getObjects())if(criterion instanceof InnerIterationStoppingCriterion)((InnerIterationStoppingCriterion)criterion).setMaximumNumberInnerIterations(1);s.getSimulationIterator().step(1);checkPose("after_restore_and_frozen_step");}
+finally{for(Solver solver:frozen)solver.setFrozen(false);for(SolverStoppingCriterion criterion:s.getSolverStoppingCriterionManager().getObjects())if(criterion instanceof InnerIterationStoppingCriterion)((InnerIterationStoppingCriterion)criterion).setMaximumNumberInnerIterations(15);}
+Files.writeString(out.resolve("motion_restored.json"),"{\"motion_suspended_for_steady\":true,\"motion_restored\":true,\"mesh_pose_preserved_tolerance_m\":1e-8,\"frozen_motion_settle_steps\":1,\"training_approved\":false}");
+}
+FieldFunction namedField(String display,String fallback){if(s.getFieldFunctionManager().hasFunction(fallback))return s.getFieldFunctionManager().getFunction(fallback);for(FieldFunction f:s.getFieldFunctionManager().getObjects())if(f.getPresentationName().equals(display))return f;throw new IllegalStateException("Required field absent: "+display);}
+ElementCountReport count(String name,FieldFunction ff,double lo,double hi,Representation rep){ThresholdPart p=s.getPartManager().createThresholdPart();p.setPresentationName(name);p.getInputParts().setObjects(regions);p.setFieldFunction(ff);p.setRange(new DoubleVector(new double[]{lo,hi}));p.setMode(ThresholdMode.BETWEEN_TAG);ElementCountReport r=s.getReportManager().createReport(ElementCountReport.class);r.setPresentationName(name);r.getParts().setObjects(p);r.setRepresentation(rep);return r;}
+void auditFull(String label,long expected)throws Exception{
+Representation full=s.getRepresentationManager().getObject("Overset Mesh");long total=0,active=0,inactive=0,acceptor=0,errors=0,fallback=0;double minV=Double.POSITIVE_INFINITY,minQ=Double.POSITIVE_INFINITY,maxRatio=0;Map<Integer,Long> methods=new TreeMap<>();
+for(Region r:regions){PlaneSection plane=s.getPartManager().createImplicitPart(List.of(r),List.of(0.,1.,0.),List.of(0.,.02,0.),0,1,new DoubleVector(new double[]{0}));
+XyzInternalTable t=s.getTableManager().createTable(XyzInternalTable.class);t.getParts().setObjects(plane);t.setRepresentation(full);t.setExtractVertexData(false);t.setFieldFunctions(List.of(namedField("Overset Cell Status","OversetCellStatus"),namedField("Overset Error Status","OversetErrorStatus"),namedField("Overset Interpolation Type","OversetInterpolationType"),namedField("Overset Interpolation Cell Size Ratio","Overset Interpolation Cell Size Ratio"),s.getFieldFunctionManager().getFunction("Volume"),s.getFieldFunctionManager().getFunction("CellQuality")));t.extract();Path file=out.resolve(r.getPresentationName()+"_"+label+"_full_plane.csv");t.export(file.toString());
+try(BufferedReader reader=Files.newBufferedReader(file)){String line=reader.readLine();if(line==null||!line.startsWith("\"Overset Cell Status\""))throw new IllegalStateException("Unexpected full-plane export schema");while((line=reader.readLine())!=null){if(line.isBlank())continue;String[] a=line.split(",");double status=Double.parseDouble(a[0]),error=Double.parseDouble(a[1]),method=Double.parseDouble(a[2]),ratio=Double.parseDouble(a[3]),v=Double.parseDouble(a[4]),q=Double.parseDouble(a[5]);if(!Double.isFinite(status+error+method+ratio+v+q)||Math.abs(status)>2.001||error<0||error>100||method < -2||method>7||v<=0||v>1||q<=0||q>1.001)throw new IllegalStateException("Invalid full-plane diagnostic values");total++;minV=Math.min(minV,v);minQ=Math.min(minQ,q);if(status==0)active++;else if(status==1)inactive++;else if(status==-2||status==-1){acceptor++;if(ratio<=0)throw new IllegalStateException("Invalid acceptor size ratio");maxRatio=Math.max(maxRatio,ratio);methods.merge((int)method,1L,Long::sum);}else throw new IllegalStateException("Invalid cell status");if(error>0)errors++;if(method>=4&&method<=6)fallback++;}}
+}
+String msg="time="+s.getSolution().getPhysicalTime()+" total="+total+" active="+active+" inactive="+inactive+" acceptors="+acceptor+" errors="+errors+" difficult_interpolation="+fallback+" min_volume="+minV+" min_quality="+minQ+" max_acceptor_size_ratio="+maxRatio+" methods="+methods+"\n";
+Files.writeString(out.resolve("full_audit_"+label+".txt"),msg);s.println("FULL_OVERSET_AUDIT "+msg);
+if(label.equals("after_first_step")&&methods.getOrDefault(2,0L)>0)throw new IllegalStateException("Distance-weighted option not reflected in native full-plane audit");
+if(total!=expected||active<1||acceptor<1||errors!=0||fallback!=0)throw new IllegalStateException("Complete Overset connectivity check failed");
+}
+
+
+void captureComparison(String label)throws Exception{
+Representation rep=s.getRepresentationManager().getObject("Volume Mesh");
+List<FieldFunction> fields=new ArrayList<>();for(String name:List.of("Pressure","AbsolutePressure","Volume","CellQuality","WallDistance","TurbulentKineticEnergy","SpecificDissipationRate","TurbulentViscosityRatio","OversetCellStatus","OversetCellType","OversetErrorStatus","OversetInterpolationType","Overset Interpolation Cell Size Ratio"))if(s.getFieldFunctionManager().hasFunction(name))fields.add(s.getFieldFunctionManager().getFunction(name));
+for(int axis=0;axis<3;axis++)fields.add(s.getFieldFunctionManager().getFunction("Velocity").getComponentFunction(axis));
+for(Region r:regions){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(r);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(fields);tab.extract();tab.export(out.resolve(r.getPresentationName()+"_"+label+"_volume.csv").toString());s.getTableManager().removeObjects(tab);}
+StringBuilder force=new StringBuilder("time="+s.getSolution().getPhysicalTime()+"\n");int j=0;
+for(List<Boundary> walls:List.of(fixed,flap)){String group=j++==0?"main":"flap";ForceReport f=s.getReportManager().createReport(ForceReport.class);f.setPressureOption(FluidLoadsReportPressureOption.SP_UC);f.getDirection().setComponents(0,0,1);f.getParts().setObjects(walls);f.getReportMonitorValue();force.append(group+"_pressure_force="+f.getPressureValue()+"\n"+group+"_shear_force="+f.getShearValue()+"\n"+group+"_total_force="+f.getValue()+"\n");s.getReportManager().removeObjects(f);
+XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(walls);tab.setRepresentation(rep);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve(group+"_"+label+"_wall.csv").toString());s.getTableManager().removeObjects(tab);}
+Files.writeString(out.resolve("forces_"+label+".txt"),force.toString());
+StringBuilder res=new StringBuilder("time="+s.getSolution().getPhysicalTime()+"\n");
+for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ResidualMonitor){ResidualMonitor rm=(ResidualMonitor)mon;try{res.append(rm.getPresentationName()+" enabled="+rm.getEnabled()+" normalized="+rm.isNormalized()+" normalization="+rm.getNormalizationType().getClass().getSimpleName()+" factor="+rm.getNormalizationType().getNormalizationFactor()+"\n");}catch(Exception metadataError){res.append("OPTIONAL_METADATA_ERROR "+rm.getPresentationName()+" "+metadataError+"\n");}try{rm.export(out.resolve("residual_"+label+"_"+rm.getPresentationName().replaceAll("[^A-Za-z0-9_-]","_")+".csv").toString());}catch(Exception exportError){res.append("RESIDUAL_EXPORT_INCOMPLETE "+rm.getPresentationName()+" "+exportError+"\n");}}
+Files.writeString(out.resolve("residual_normalization_"+label+".txt"),res.toString());
+}
+
+
+
+List<double[]> nativePolygon(Path p)throws Exception{List<double[]> a=new ArrayList<>();try(BufferedReader r=Files.newBufferedReader(p)){String line=r.readLine();if(!"x_m,z_m".equals(line))throw new IllegalStateException("Unexpected native contour schema");while((line=r.readLine())!=null){String[] q=line.split(",");a.add(new double[]{Double.parseDouble(q[0]),Double.parseDouble(q[1])});}}if(a.size()<100)throw new IllegalStateException("Native contour incomplete");return a;}
+boolean insideSolid(double x,double z,List<double[]> poly){
+double xmin=Double.POSITIVE_INFINITY,xmax=-xmin,zmin=xmin,zmax=-xmin;for(double[] v:poly){xmin=Math.min(xmin,v[0]);xmax=Math.max(xmax,v[0]);zmin=Math.min(zmin,v[1]);zmax=Math.max(zmax,v[1]);}
+if(x<xmin||x>xmax||z<zmin||z>zmax)return false;
+boolean inside=false;double dist2=Double.POSITIVE_INFINITY;
+for(int i=0,j=poly.size()-1;i<poly.size();j=i++){
+ double[] a=poly.get(i),b=poly.get(j);
+ if((a[1]>z)!=(b[1]>z)&&x<(b[0]-a[0])*(z-a[1])/(b[1]-a[1])+a[0])inside=!inside;
+ double dx=b[0]-a[0],dz=b[1]-a[1],len=dx*dx+dz*dz;if(len>0){double t=Math.max(0,Math.min(1,((x-a[0])*dx+(z-a[1])*dz)/len));double ex=x-a[0]-t*dx,ez=z-a[1]-t*dz;dist2=Math.min(dist2,ex*ex+ez*ez);}
+}return inside&&dist2>1e-18;
+}
+void verifyInitialVolumeContainment(Path base)throws Exception{
+List<double[]> main=nativePolygon(base.resolve("main_native_polygon.csv")),flapPoly=nativePolygon(base.resolve("flap_native_polygon.csv"));long active=0,inside=0;
+for(String name:List.of("main","flap"))Files.copy(base.resolve(name+"_native_polygon.csv"),out.resolve(name+"_native_polygon.csv"));
+for(Region region:regions)try(BufferedReader r=Files.newBufferedReader(out.resolve(region.getPresentationName()+"_fresh_initialized_volume.csv")))){
+ String[] headers=r.readLine().split(",");Map<String,Integer> col=new HashMap<>();for(int i=0;i<headers.length;i++)col.put(headers[i].replace("\"","").strip(),i);
+ for(String req:List.of("X (m)","Z (m)","Overset Cell Status"))if(!col.containsKey(req))throw new IllegalStateException("Missing volume export column "+req);
+ String line;while((line=r.readLine())!=null){if(line.isBlank())continue;String[] a=line.split(",");double state=Double.parseDouble(a[col.get("Overset Cell Status")]);if(state!=0)continue;active++;double x=Double.parseDouble(a[col.get("X (m)")]),z=Double.parseDouble(a[col.get("Z (m)")]);if(!Double.isFinite(x+z))throw new IllegalStateException("Invalid active volume centroid");if(insideSolid(x,z,main)||insideSolid(x,z,flapPoly))inside++;}
+}
+Files.writeString(out.resolve("initial_native_volume_containment.json"),"{\"active_centers\":"+active+",\"inside_solids_over_1nm\":"+inside+",\"native_iteration\":"+s.getSimulationIterator().getCurrentIteration()+",\"physical_time_s\":"+s.getSolution().getPhysicalTime()+"}");
+if(active<1||inside!=0||s.getSimulationIterator().getCurrentIteration()!=0||Math.abs(s.getSolution().getPhysicalTime())>1e-12)throw new IllegalStateException("Initial native active-volume geometry guard failed");
+}
+
+public void execute(){s=getActiveSimulation();variant=System.getenv("NTNU_HYDRO_VARIANT");Path input=Paths.get(System.getProperty("NTNU_HYDRO_INPUT_OVERRIDE",s.getSessionPath())).toAbsolutePath().normalize(),base=input.getParent();out=root.resolve("cases/SP_C_split0_overset/c0_tight_firstorder_"+System.getenv("NTNU_HYDRO_RUN_ID"));boolean converged=false;int iterations=0;double maxPError=Double.NaN;try{
+if(!input.equals(root.resolve("cases/SP_C_split0_overset/c0_tight_cage_v2_20261103_025110/SP_C_mesh_ready.sim"))||!"SP_C".equals(variant))throw new IllegalStateException("Only protected pre-motion mesh source allowed");
+if(Math.abs(s.getSolution().getPhysicalTime())>1e-12)throw new IllegalStateException("Fresh uninitialized mesh required; solved checkpoints protected");
+java.security.MessageDigest md=java.security.MessageDigest.getInstance("SHA-256");
+try(InputStream stream=Files.newInputStream(input)){byte[] chunk=new byte[1048576];int n;while((n=stream.read(chunk))!=-1)md.update(chunk,0,n);}
+if(!java.util.HexFormat.of().formatHex(md.digest()).equals("0db9b6252019fff169432f902f37ecdb9d4e071724b396e3c0d55cda51819643"))throw new IllegalStateException("Source mesh fingerprint changed");
+if(Files.exists(out))throw new IllegalStateException("Unique output required");Files.createDirectories(out);guard();if(s.getSimulationIterator().getCurrentIteration()!=0)throw new IllegalStateException("Only zero-step mesh source allowed; never reset resolved flow");
+PhysicsContinuum pc=(PhysicsContinuum)s.getContinuumManager().getObject("HYDRO water SST singlephase");
+for(Region r:s.getRegionManager().getRegions())if(pc.equals(r.getPhysicsContinuum())){regions.add(r);for(Boundary b:r.getBoundaryManager().getBoundaries())if(b.getBoundaryType() instanceof WallBoundary&&!b.getPresentationName().endsWith("bottom")){if(b.getPresentationName().contains("Hydro_Flap"))flap.add(b);else fixed.add(b);}}
+if(regions.isEmpty()||fixed.isEmpty())throw new IllegalStateException("Working water/foil missing");
+((UserFieldFunction)s.getFieldFunctionManager().getFunction("HYDRO_HydrostaticGauge")).setDefinition("<1000 kg/m^3>*<9.8100004196167 m/s^2>*(<2 m> - $$Position[2])");
+for(Monitor m:s.getMonitorManager().getObjects())if(m instanceof ReportMonitor&&!m.getPresentationName().startsWith("HF_"))m.setEnabled(false);
+steadyResume=input.getFileName().toString().equals("steady_checkpoint.sim");
+if(steadyResume){if(!Files.readString(base.resolve("initialization_status.json")).contains("steady_initialization_incomplete"))throw new IllegalStateException("Only incomplete steady initializer may be continued");if(pc.getModelManager().getModel(SteadyModel.class)==null)throw new IllegalStateException("Steady checkpoint expected");}
+suspendMotionForSteady();if(!steadyResume){pc.disableModel(pc.getModelManager().getModel(ImplicitUnsteadyModel.class));pc.enable(SteadyModel.class);}
+Files.writeString(out.resolve("resume_mode.json"),"{\"continuing_steady_fields_and_history\":"+steadyResume+",\"input\":\""+input.toString().replace("\\","/")+"\",\"training_approved\":false}");
+if(variant.equals("SP_C")){
+OversetConservationModel conservation=pc.getModelManager().getModel(OversetConservationModel.class);
+String before=String.valueOf(conservation.getOversetConservationOption().getSelected());
+conservation.getOversetConservationOption().setSelected(OversetConservationOption.Type.FLUX_CORRECTION);
+String after=String.valueOf(conservation.getOversetConservationOption().getSelected());
+Files.writeString(out.resolve("overset_conservation.json"),"{\"before\":\""+before+"\",\"after\":\""+after+"\",\"reference\":\"2606 User Guide GUID-5A48E78B-7FE7-4EA7-AD91-598925DD785D and GUID-ECBF5B9A-743B-458D-8FCA-861E65651EAB\",\"mesh_changed\":false}");
+}
+for(Interface iface:s.getInterfaceManager().getObjects())if(iface instanceof IndirectRegionInterface){
+IndirectRegionInterface in=(IndirectRegionInterface)iface;
+if(in.getTreatErrorAsWarning()||!in.getConditions().get(OversetHoleCuttingOptions.class).getBoolean("ZeroDonorCheckOption"))throw new IllegalStateException("Strict Overset guards required");
+in.getConditions().get(OversetMeshInterpolationOption.class).setSelected(OversetMeshInterpolationOption.Type.DISTANCE);
+s.getInterfaceManager().initializeInterfaces(List.of(iface));}
+Files.writeString(out.resolve("numerical_change.txt"),"Technical numerical startup on new tight-cage mesh (333939 cells), not a resume of the retained1850-iteration solution. Physical geometry and boundary conditions unchanged; background cell coordinates/volumes verified identical. Flow and SST FIRST_ORDER, DISTANCE, FLUX_CORRECTION, velocity/pressureURF0.3/0.1, continuity preinitialization disabled. Source nativeiteration0 only. True active volume-cell containment checked before first PDE step. Strict pressure12339.2148Pa,mass1e-4,zero turbulence floor/overset error gates from first block. No hydrodynamic approval until matched second-order URANS comparisons.");
+SegregatedFlowSolver flow=s.getSolverManager().getSolver(SegregatedFlowSolver.class);flow.setContinuityInitialization(false);flow.setContinuityInitIterations(100);flow.setContinuityInitTolerance(1e-6);
+double oldVelocityUrf=flow.getVelocitySolver().getUrf(),oldPressureUrf=flow.getPressureSolver().getUrf();
+boolean dynamicUrf=flow.getVelocitySolver().getUseDynamicLocalUrf();
+if(dynamicUrf)throw new IllegalStateException("Unexpected dynamic velocity relaxation; review before changing");
+flow.getVelocitySolver().setUrf(.3);flow.getPressureSolver().setUrf(.1);
+Files.writeString(out.resolve("relaxation_change.json"),"{\"velocity_before\":"+oldVelocityUrf+",\"pressure_before\":"+oldPressureUrf+",\"velocity_after\":"+flow.getVelocitySolver().getUrf()+",\"pressure_after\":"+flow.getPressureSolver().getUrf()+",\"dynamic_velocity_relaxation\":"+dynamicUrf+",\"physical_conditions_changed\":false}");
+
+for(SolverStoppingCriterion c:s.getSolverStoppingCriterionManager().getObjects())c.setIsUsed(false);
+s.getSimulationIterator().setVerbosity(0);for(Monitor mon:s.getMonitorManager().getObjects())if(mon instanceof ReportMonitor && mon.getEnabled()){mon.getTriggerOption().setSelected(MonitorTriggerOption.ITERATION);mon.getStarUpdate().setUpdateMode(StarUpdate.ITERATION);mon.getStarUpdate().setUpdateFrequency(10);}
+pc.getModelManager().getModel(SegregatedFlowModel.class).getUpwindOption().setSelected(FlowUpwindOption.Type.FIRST_ORDER);
+pc.getModelManager().getModel(SstKwTurbModel.class).getUpwindOption().setSelected(UpwindOption.Type.FIRST_ORDER);
+s.getSolution().initializeSolution();
+if(((FvRepresentation)s.getRepresentationManager().getObject("Volume Mesh")).getCellCount()!=333939)throw new IllegalStateException("Source mesh size changed");
+auditFull("fresh_initialized",333939);
+
+List<Boundary> boundary=new ArrayList<>();for(Region r:regions)for(Boundary b:r.getBoundaryManager().getBoundaries())if(b.getBoundaryType() instanceof InletBoundary||b.getBoundaryType() instanceof PressureBoundary)boundary.add(b);
+MassFlowReport mass=s.getReportManager().createReport(MassFlowReport.class);mass.setPresentationName("HF_net_mass_flow");mass.getParts().setObjects(boundary);
+MinReport dmin=minimum("HF_density_min_init","Density",regions,false);MaxReport dmax=s.getReportManager().createReport(MaxReport.class);dmax.setFieldFunction(s.getFieldFunctionManager().getFunction("Density"));dmax.getParts().setObjects(regions);
+Dimensions pd=new Dimensions();pd.setPressure(1);UserFieldFunction pe=field("HF_pressure_identity_init","abs($AbsolutePressure - $Pressure - <101325 Pa> - $HYDRO_HydrostaticGauge)",pd);MaxReport err=s.getReportManager().createReport(MaxReport.class);err.setFieldFunction(pe);err.getParts().setObjects(regions);
+Path normPath=base.resolve("normalization.json");if(!Files.exists(normPath)&&steadyResume)normPath=base.getParent().resolve("normalization.json");String norm=Files.readString(normPath);Files.copy(normPath,out.resolve("normalization.json"));java.util.regex.Matcher bm=java.util.regex.Pattern.compile("\\\"buoyancy_N\\\":([-+0-9.eE]+)").matcher(norm);if(!bm.find())throw new IllegalStateException("Normalization missing");double buoyancy=Double.parseDouble(bm.group(1));
+List<String> zones=new ArrayList<>(List.of("fixed","near","liquid_all"));if(!flap.isEmpty()){zones.add("flap");zones.add("gap");}
+captureFields("before_steady");captureComparison("fresh_initialized");verifyInitialVolumeContainment(base);
+UserFieldFunction omegaFloor=field("Fresh_C0_omega_floor","($OversetCellStatus == 0 && $SpecificDissipationRate <= <1.0001e-10 /s>) ? 1 : 0",new Dimensions());
+UserFieldFunction kFloor=field("Fresh_C0_k_floor","($OversetCellStatus == 0 && $TurbulentKineticEnergy <= <1.0001e-10 J/kg>) ? 1 : 0",new Dimensions());
+ElementCountReport omegaCount=count("Fresh C0 omega floor",omegaFloor,.5,1.5,s.getRepresentationManager().getObject("Volume Mesh"));
+ElementCountReport kCount=count("Fresh C0 k floor",kFloor,.5,1.5,s.getRepresentationManager().getObject("Volume Mesh"));
+ElementCountReport errorCount=count("Fresh C0 errors",namedField("Overset Error Status","OversetErrorStatus"),.5,100,s.getRepresentationManager().getObject("Volume Mesh"));
+MaxReport viscosityMax=s.getReportManager().createReport(MaxReport.class);viscosityMax.getParts().setObjects(regions);viscosityMax.setFieldFunction(s.getFieldFunctionManager().getFunction("TurbulentViscosityRatio"));
+MaxReport speedMax=s.getReportManager().createReport(MaxReport.class);speedMax.getParts().setObjects(regions);speedMax.setFieldFunction(s.getFieldFunctionManager().getFunction("Velocity").getMagnitudeFunction());
+MaxReport pressureMax=s.getReportManager().createReport(MaxReport.class);pressureMax.getParts().setObjects(regions);pressureMax.setFieldFunction(s.getFieldFunctionManager().getFunction("AbsolutePressure"));
+List<double[]> samples=new ArrayList<>();note("Numerical steady initialization/continuation; CSV iterations are additional iterations; preserve source and mesh");
+try(BufferedWriter w=Files.newBufferedWriter(out.resolve("steady_iterations.csv"))){w.write("iteration,Fx_N,Fz_N,CL_hydro,CD,Mh_Nm,p_absolute_min_Pa,safety_reserve_Pa,net_mass_flow_kg_s,mass_imbalance_relative,yplus_mean,yplus_max,min_quality,pressure_identity_error_Pa,rho_min,rho_max,omega_floor_cells,k_floor_cells,max_turbulent_viscosity_ratio,overset_error_cells,max_speed_m_s,max_absolute_pressure_Pa,native_iteration\n");w.flush();
+for(int k=10;k<=1500;k+=10){if(Files.exists(root.getParent().resolve("STOP_OWNED_CFD.json")))break;
+s.getSimulationIterator().step(10);iterations=k;if(k==10){checkPose("first_steady_block");auditFull("after_first_step",333939);}
+double fx=rv("HF_Fx_N"),fz=rv("HF_Fz_N"),cl=(fz-buoyancy)/3855.6,cd=fx/3855.6,mh=rv("HF_Mh_Nm"),p=Double.POSITIVE_INFINITY;
+for(String z:zones)p=Math.min(p,rv("HF_pabs_"+z));double net=mass.getReportMonitorValue(),bal=Math.abs(net)/10800.,q=rv("HF_min_quality"),v=rv("HF_min_volume"),rho0=dmin.getReportMonitorValue(),rho1=dmax.getReportMonitorValue();maxPError=err.getReportMonitorValue();
+w.write(String.format(Locale.ROOT,"%d,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g,%.12g\n",k,fx,fz,cl,cd,mh,p,p-12339.214766776897,net,bal,rv("HF_yplus_mean"),rv("HF_yplus_max"),q,maxPError,rho0,rho1).stripTrailing());double omega=omegaCount.getReportMonitorValue(),kfloor=kCount.getReportMonitorValue(),visc=viscosityMax.getReportMonitorValue(),oe=errorCount.getReportMonitorValue();
+double umax=speedMax.getReportMonitorValue(),pmax=pressureMax.getReportMonitorValue();w.write(","+omega+","+kfloor+","+visc+","+oe+","+umax+","+pmax+","+s.getSimulationIterator().getCurrentIteration()+"\n");w.flush();samples.add(new double[]{cl,cd,p,bal,mh,omega,kfloor,visc});
+if(!Double.isFinite(oe+omega+kfloor+visc)||oe>0)throw new IllegalStateException("Overset or field diagnostic invalid");
+if(p<=12339.214766776897||bal>=1e-4||omega>0||kfloor>0||visc>=99999)throw new IllegalStateException("Strict pressure/mass/turbulence gate violated");
+
+if(!Double.isFinite(fx+fz+mh+p+umax+pmax)||umax>180||Math.abs(pmax)>1e8||!(q>0&&v>0)||Math.abs(fx)>7711.2||Math.abs(fz)>11566.8||Math.abs(p)>1e8)throw new IllegalStateException("Initialization diverged");
+if(Math.abs(rho0-1000)>1e-5||Math.abs(rho1-1000)>1e-5||maxPError>.05)throw new IllegalStateException("Density/pressure identity inconsistent after steady iterations");
+if(k==50){captureComparison("iter_50");}
+if(k%250==0){captureComparison("iter_"+k);auditFull("iter_"+k,333939);s.saveState(out.resolve("steady_iter_"+k+".sim").toString());}
+if(k%50==0)note("Steady initialization "+k+"/1500 CL="+cl+" CD="+cd+" pabs_min="+p+" mass="+bal);
+int n=samples.size();if(k>=500&&n>=30){double c1=mean(samples,n-10,n,0),c0=mean(samples,n-20,n-10,0),cm=mean(samples,n-30,n-20,0),d1=mean(samples,n-10,n,1),d0=mean(samples,n-20,n-10,1),dm=mean(samples,n-30,n-20,1);boolean safe=true;for(int j=n-30;j<n;j++)safe&=samples.get(j)[2]>12339.214766776897&&samples.get(j)[3]<1e-4;
+double m1=mean(samples,n-10,n,4),m0=mean(samples,n-20,n-10,4),mm=mean(samples,n-30,n-20,4);boolean mhStable=Math.max(Math.abs(m1-m0),Math.abs(m0-mm))<.01*Math.max(.01,Math.abs(m1));
+if(safe&&mhStable&&Math.max(Math.abs(c1-c0),Math.abs(c0-cm))<.005*Math.max(.01,Math.abs(c1))&&Math.max(Math.abs(d1-d0),Math.abs(d0-dm))<.01*Math.max(.001,Math.abs(d1))){converged=true;break;}}
+
+}}
+checkPose("steady_completed");captureFields("steady_completed");captureComparison("final");auditFull("final",333939);
+double lastOmega=omegaCount.getReportMonitorValue(),lastK=kCount.getReportMonitorValue(),lastVisc=viscosityMax.getReportMonitorValue();
+boolean clean=lastOmega==0&&lastK==0&&lastVisc<99999;
+
+StringBuilder audit=new StringBuilder();for(Region r:regions){audit.append(r.getPresentationName()+" motion="+r.getValues().get(MotionSpecification.class).getMotion()+"\n");for(Boundary b:r.getBoundaryManager().getBoundaries())audit.append("  "+b.getPresentationName()+" type="+b.getBoundaryType()+"\n");}
+for(Report report:s.getReportManager().getObjects())if(report.getPresentationName().startsWith("HF_")&&report instanceof AnalysisReport)audit.append(report.getPresentationName()+" parts="+((AnalysisReport)report).getParts().getObjects()+" representation="+((AnalysisReport)report).getRepresentation()+"\n");
+Files.writeString(out.resolve("boundary_report_audit.txt"),audit.toString());
+for(String group:List.of("fixed","flap")){List<Boundary> parts=group.equals("fixed")?fixed:flap;if(!parts.isEmpty()){XyzInternalTable tab=s.getTableManager().createTable(XyzInternalTable.class);tab.getParts().setObjects(parts);tab.setExtractVertexData(false);tab.setFieldFunctions(List.of(s.getFieldFunctionManager().getFunction("AbsolutePressure"),s.getFieldFunctionManager().getFunction("Pressure"),s.getFieldFunctionManager().getFunction("WallYplus")));tab.extract();tab.export(out.resolve("wall_"+group+".csv").toString());}}
+s.saveState(out.resolve("steady_checkpoint.sim").toString());
+String result=Files.exists(root.getParent().resolve("STOP_OWNED_CFD.json"))?"paused_by_marker":(converged?(clean?"steady_diagnostic_ready":"steady_suspect_fields"):"steady_initialization_incomplete");
+String json="{\"status\":\""+result+"\",\"iterations\":"+iterations+",\"saved_time_s\":"+s.getSolution().getPhysicalTime()+",\"steady_initialization_only\":true,\"force_windows_stable\":"+converged+",\"omega_floor_cells\":"+lastOmega+",\"k_floor_cells\":"+lastK+",\"max_turbulent_viscosity_ratio\":"+lastVisc+",\"scientific_approved\":false,\"hydrodynamic_convergence_verified\":false,\"training_approved\":false}";
+Files.writeString(out.resolve("initialization_status.json"),json);Files.writeString(out.resolve("status.json"),json);note(result);
+}catch(Exception e){try{Files.writeString(out.resolve("initialization_error.txt"),e.toString());Files.writeString(out.resolve("status.json"),"{\"status\":\"initialization_error\",\"iterations\":"+iterations+",\"saved_time_s\":"+s.getSolution().getPhysicalTime()+",\"scientific_approved\":false,\"training_approved\":false}");try{captureFields("failure");captureComparison("failure");}catch(Exception ex){Files.writeString(out.resolve("failure_export_error.txt"),ex.toString());}s.saveState(out.resolve("initialization_error.sim").toString());}catch(Exception ignored){}throw new RuntimeException(e);}
+}}

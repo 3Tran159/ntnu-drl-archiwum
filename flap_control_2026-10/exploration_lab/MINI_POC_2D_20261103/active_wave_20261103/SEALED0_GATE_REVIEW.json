@@ -1,0 +1,82 @@
+{
+  "status": "ACCEPTED_FOR_SEALED_EXPLORATION_ONLY",
+  "protocol": "L1_SEALED_EXPLORATION_NATIVE_NORMALIZED_V2",
+  "force_gates": {
+    "CL": {
+      "mean": 0.3470699433354066,
+      "drift": 7.89803221721297e-07,
+      "range": 1.8189375083738423e-05
+    },
+    "CD": {
+      "mean": 0.005074436907467628,
+      "drift": 1.0334672080468799e-05,
+      "range": 0.0006479828690790708
+    },
+    "Mh": {
+      "mean": -562.0341147942245,
+      "drift": 2.7333756407343836e-06,
+      "range": 2.6544538838993375e-05
+    }
+  },
+  "native_audit": {
+    "iteration": 6147,
+    "solver_steps": 0,
+    "monitors": [
+      {
+        "name": "Continuity",
+        "native_normalized": true,
+        "normalization_type": "MonitorNormalizationAutoType",
+        "normalization_factor": 2.344298043976544,
+        "first": 1.0,
+        "initial10_peak": 1.0,
+        "last": 0.0009893983753352965,
+        "last_over_first": 0.0009893983753352965
+      },
+      {
+        "name": "X-momentum",
+        "native_normalized": true,
+        "normalization_type": "MonitorNormalizationAutoType",
+        "normalization_factor": 106.83521156850844,
+        "first": 0.016787146038353237,
+        "initial10_peak": 1.0,
+        "last": 0.0001473114808657636,
+        "last_over_first": 0.008775254622149838
+      },
+      {
+        "name": "Y-momentum",
+        "native_normalized": true,
+        "normalization_type": "MonitorNormalizationAutoType",
+        "normalization_factor": 119.21775977594118,
+        "first": 0.0019102543321696454,
+        "initial10_peak": 1.0,
+        "last": 0.00010339989360756107,
+        "last_over_first": 0.054128862249520786
+      },
+      {
+        "name": "Tke",
+        "native_normalized": true,
+        "normalization_type": "MonitorNormalizationAutoType",
+        "normalization_factor": 24.289437690407606,
+        "first": 0.9999999999999999,
+        "initial10_peak": 0.9999999999999999,
+        "last": 4.483287659152237e-06,
+        "last_over_first": 4.483287659152238e-06
+      },
+      {
+        "name": "Sdr",
+        "native_normalized": true,
+        "normalization_type": "MonitorNormalizationAutoType",
+        "normalization_factor": 174533.30099726803,
+        "first": 0.038882116575810095,
+        "initial10_peak": 1.0,
+        "last": 2.3446013059890028e-05,
+        "last_over_first": 0.0006030024886679292
+      }
+    ]
+  },
+  "threshold_native_residual": 0.01,
+  "old_HOLD_statuses_unchanged": true,
+  "scientific_justification": "Native normalization and initial transient peak verified. Legacylast/first is seed-dependent and retained as diagnostic; this is an explicit protocol revision for exploration, not a retroactivePASS. Physical/turbulence/mesh limits unchanged.",
+  "mesh_validation": false,
+  "training_approved": false
+}

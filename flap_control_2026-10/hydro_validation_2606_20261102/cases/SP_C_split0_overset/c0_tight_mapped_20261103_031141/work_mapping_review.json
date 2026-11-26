@@ -1,0 +1,70 @@
+{
+  "at": "2026-11-03T03:15:05.754649+01:00",
+  "run": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_mapped_20261103_031141",
+  "mapped_metrics": {
+    "pabs_min_Pa": 33388.40527076194,
+    "max_speed_m_s": 21.80608816101449,
+    "max_turbulent_viscosity_ratio": 465.0282517371919,
+    "k_min": 4.888985709781648e-08,
+    "omega_min": 2.589196258345695,
+    "mass_imbalance_relative": 7.657658440587477e-05,
+    "native_iteration": 0,
+    "physical_time_s": 0.0,
+    "source_iteration": 1850
+  },
+  "regions": {
+    "Background": {
+      "mesh_identity": true,
+      "mask_changes": 0,
+      "active_cells": 226848,
+      "solid_intrusions": {
+        "main": 0,
+        "flap": 0
+      },
+      "min_pressure_absolute_Pa": 33388.40527076194,
+      "speed_max_m_s": 21.80608816101449,
+      "k_floor_cells": 0,
+      "omega_floor_cells": 0,
+      "max_viscosity_ratio": 465.0282517371919,
+      "previously_active_same_centers": 209209,
+      "same_center_mapping_differences": {
+        "Pressure (Pa)": {
+          "max_abs": 1.4551915228366852e-11,
+          "median_abs": 0.0
+        },
+        "Velocity[i] (m/s)": {
+          "max_abs": 3.552713678800501e-15,
+          "median_abs": 0.0
+        },
+        "Velocity[k] (m/s)": {
+          "max_abs": 1.7763568394002505e-15,
+          "median_abs": 0.0
+        },
+        "Turbulent Kinetic Energy (J/kg)": {
+          "max_abs": 4.440892098500626e-16,
+          "median_abs": 0.0
+        },
+        "Specific Dissipation Rate (/s)": {
+          "max_abs": 1.4901161193847656e-08,
+          "median_abs": 0.0
+        }
+      }
+    },
+    "FlapOverset": {
+      "mesh_identity": true,
+      "mask_changes": 0,
+      "active_cells": 28502,
+      "solid_intrusions": {
+        "main": 0,
+        "flap": 0
+      },
+      "min_pressure_absolute_Pa": 50344.68998669531,
+      "speed_max_m_s": 18.74721241260762,
+      "k_floor_cells": 0,
+      "omega_floor_cells": 0,
+      "max_viscosity_ratio": 293.26453058076567
+    }
+  },
+  "scientific_approved": false,
+  "technical_mapping_review_pass": true
+}

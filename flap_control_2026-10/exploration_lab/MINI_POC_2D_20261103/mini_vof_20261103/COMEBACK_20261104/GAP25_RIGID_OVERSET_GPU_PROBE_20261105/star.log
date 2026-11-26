@@ -1,0 +1,63 @@
+Starting local server: starserver.bat -np 1 -gpgpu auto:1 -require-gpgpu-compatibility -xencoded-session RjpcbnRudVxmbGFwX2NvbnRyb2xcZXhwbG9yYXRpb25fbGFiXE1JTklfUE9DXzJEXzIwMjYxMTAzXG1pbmlfdm9mXzIwMjYxMTAzXENPTUVCQUNLXzIwMjYxMTA0XEdBUDI1X1JJR0lEX09WRVJTRVRfR1BVX1BST0JFXzIwMjYxMTA1XEMwX1JJR0lEX0dBUDI1X0lOUFVUX0NPUFkuc2lt
+2026-11-05 22:17:53,503 - star.application.gpgpu_arg_parser - WARNING - GPGPUs on THINKPAD-LUCJAN are already utilized by other processes: 0: 11%
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+The efficiency of some CPUs could not be determined. CPU binding will not exclude the slowest CPU kind.
+MPI Distribution : MS MPI-10.1.12498.16-cda-001
+Host 0 -- THINKPAD-LUCJAN -- Ranks 0
+Process rank 0 THINKPAD-LUCJAN 32480
+Total number of processes : 1
+
+Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8)
+
+License build date: 29 Jan 2026
+This version of the code requires license version 2026.06 or greater.
+Checking license file: 1999@flex.cd-adapco.com
+1 copy of ccmppowerplus checked out from 1999@flex.cd-adapco.com
+Feature ccmppowerplus expires in 8 days
+Thu Nov  5 22:18:29 2026
+
+Server::start -host THINKPAD-LUCJAN:47827
+Loading: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\GAP25_RIGID_OVERSET_GPU_PROBE_20261105\C0_RIGID_GAP25_INPUT_COPY.sim
+Loading module: StarMeshing
+Loading module: StarTMTCommands
+Loading module: MeshingSurfaceRepair
+Loading module: MotionModel
+Loading module: MaterialModel
+Loading module: SegregatedFlowModel
+Loading module: KwTurbModel
+Loading module: StarSweptMesher
+Loading module: StarExtruder
+Loading module: OversetModel
+Loading module: OversetFlowModel
+Saved by:
+  Simcenter STAR-CCM+ 2606.0002 Build 21.04.009 (win64/clang20.1vc14.2-r8) Np=8 
+Started Parasolid modeler version 38.1.151
+Playing macro: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\GAP25_RIGID_OVERSET_GPU_PROBE_20261105\Gap25RigidOversetGpuProbe.java
+F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\GAP25_RIGID_OVERSET_GPU_PROBE_20261105\Gap25RigidOversetGpuProbe.java:22: warning: [deprecation] setEnabled(boolean) in star.common.AutoSaveBase has been deprecated
+   s.getSimulationIterator().getAutoSave().setEnabled(false);
+                                          ^
+
+Loading/configuring connectivity (old|new partitions: 8|1)
+  Background (index 4): 304810 cells, 871084 faces, 1136410 verts.
+  FlapOverset (index 5): 29129 cells, 67202 faces, 78870 verts.
+Configuring finished
+Saving: F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\GAP25_RIGID_OVERSET_GPU_PROBE_20261105\GAP25_RIGID_CONFIGURED.sim... complete (1.4205GB in 2.1s).
+================================================================
+GPU device disabled: the following are incompatible with GPU execution:
+  star.overset.OversetPrismLayerShrinkageSolver
+  star.solve.IndirectRegionInterfaceSolver
+  star.solvermeshing.OversetLoadBalancingSolver
+================================================================
+Non-GPU-compatible solvers with GPU-compatibility-required mode.
+Command: StepSimulation
+   error: Server Error
+java.lang.RuntimeException: Non-GPU-compatible solvers with GPU-compatibility-required mode.
+Command: StepSimulation
+   command: CommandComplete
+   error: Server Error
+
+Design Simcenter STAR-CCM+ simulation completed
+Server process exited with code : 0

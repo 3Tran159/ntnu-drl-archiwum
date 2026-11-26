@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-03T00:14:47.662935+01:00",
+  "kind": "work_scientific_decision",
+  "previous_job": "c0_fresh_no_flux_init",
+  "conclusion": "inconclusive_pressure_screen_stopped_10_iterations",
+  "next_job": {
+    "id": "c0_overlap1mm_mesh",
+    "macro": "PrepareC0OverlapRefinement.java",
+    "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+    "initial_time_s": 0,
+    "angle_deg": 0,
+    "approved": true,
+    "purpose": "Local Overset source resolution1mm ahead of hinge, same geometry/cage/background source; original LinearQuasi2D control. Mesh-only preparation, require full connectivity and separate background mesh identity review before flow."
+  },
+  "source_sha256": "6a11e2692864a74e03c198cc90f3fc9cfb4c10ec7e3ba69fbdcf50c9e30ea2d4",
+  "scientific_gate": false
+}

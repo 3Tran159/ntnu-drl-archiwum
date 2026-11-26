@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\CALM_FIXED_SMOKE\smoke.py", line 49, in <module>
+    start()
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NATIVE_QUASI2D_VOF_WAKE_20261105\CALM_FIXED_SMOKE\smoke.py", line 27, in start
+    result=c.new_job(STAGE,dict(source=SOURCE,expected_time=0,expected_cells=24515,stokes=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\run_day.py", line 75, in new_job
+    preflight()
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NIGHT_FLAP_20261104\night_flap.py", line 78, in preflight
+    self.check_affinity(set())
+  File "F:\ntnu\flap_control\exploration_lab\MINI_POC_2D_20261103\mini_vof_20261103\COMEBACK_20261104\NIGHT_FLAP_20261104\night_flap.py", line 57, in check_affinity
+    raise RuntimeError("An independent STAR compute rank overlaps the assigned Mini CPUs")
+RuntimeError: An independent STAR compute rank overlaps the assigned Mini CPUs

@@ -1,0 +1,148 @@
+{
+  "updated_at": "2026-10-29T23:33:01.175254+01:00",
+  "status": "supported_calm_mesh_template",
+  "mesh": "M09",
+  "cells": 214908,
+  "configuration": {
+    "time_order": "SECOND_ORDER",
+    "dt_s": 0.001,
+    "inner": 10
+  },
+  "common_mesh_window": [
+    1.84,
+    2.04
+  ],
+  "finer_confirmations": [
+    {
+      "candidate": "M09",
+      "reference": "M07",
+      "difference_pct": {
+        "CD": 0.46669816039398243,
+        "CL_total": -0.16425229705644426,
+        "pressure_drag_N": 1.5551734538461741,
+        "viscous_drag_N": 0.0516249097751733
+      },
+      "both_force_coefficients_within_1pct": true
+    },
+    {
+      "candidate": "M09",
+      "reference": "M08",
+      "difference_pct": {
+        "CD": -0.02557357387804068,
+        "CL_total": 0.016736017018529083,
+        "pressure_drag_N": -0.09547267692357199,
+        "viscous_drag_N": 0.0015081970251846946
+      },
+      "both_force_coefficients_within_1pct": true
+    }
+  ],
+  "dt_sensitivity": {
+    "updated_at": "2026-10-29T23:33:01.138879+01:00",
+    "id": "M09_SO_dt05ms_common_t2040_r1",
+    "mesh": "M09",
+    "status": "time_step_screen_pass",
+    "same_start_s": 1.6399999999999302,
+    "window": [
+      1.84,
+      2.04
+    ],
+    "reference": {
+      "mesh": "M09",
+      "id": "M09_SO_common_t2040_r1",
+      "cells": 214908,
+      "order": "SECOND_ORDER",
+      "dt_s": 0.001,
+      "inner_iterations": 10,
+      "status": "matched_endpoint_review",
+      "window": [
+        1.84,
+        2.04
+      ],
+      "means": {
+        "CD": 0.0074651881466775176,
+        "CL_total": 0.31395932517814296,
+        "pressure_drag_N": 8.031930539582895,
+        "viscous_drag_N": 20.750848878746943
+      },
+      "adjacent_mean_change_pct": {
+        "CD": -0.22587556539099574,
+        "CL_total": 0.1107010140942967
+      },
+      "settling_check_pass": true,
+      "source_unchanged": true,
+      "all_saved_fields_finite": true,
+      "phase_bounds": [
+        0.0,
+        1.0
+      ],
+      "last_interface_CFL": 2.107118277760013,
+      "source_sim": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\matched_endpoint_20261029\\M09_SO_common_t2040_r1\\final.sim",
+      "history_sources": [
+        "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\configured_mesh_20261029\\M09_SO1ms_inner10_r1\\history.csv",
+        "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\matched_endpoint_20261029\\M09_SO_common_t2040_r1\\history.csv"
+      ],
+      "combined_history": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\matched_endpoint_20261029\\M09_SO_common_t2040_r1\\matched_history.csv",
+      "reused_accepted_field": false,
+      "force_component_sum_max_error_N": 3.552713678800501e-15
+    },
+    "half_step_means": {
+      "CD": 0.007465007250785193,
+      "CL_total": 0.31396388805581577,
+      "pressure_drag_N": 8.031396604245307,
+      "viscous_drag_N": 20.750685351882083
+    },
+    "half_vs_1ms_difference_pct": {
+      "CD": -0.002423192674722394,
+      "CL_total": 0.0014533340171437937,
+      "pressure_drag_N": -0.006647658803277557,
+      "viscous_drag_N": -0.000788049037489545
+    },
+    "adjacent_mean_change_pct": {
+      "CD": -0.22612732729799956,
+      "CL_total": 0.11107748696343478
+    },
+    "inner_forces": {
+      "Fx_half_Monitor": {
+        "max_half_iteration_change_pct": 0.0003089188660225347,
+        "max_independent_difference_N": 0.0
+      },
+      "Fz_half_Monitor": {
+        "max_half_iteration_change_pct": 0.0001529106961012235,
+        "max_independent_difference_N": 0.0
+      }
+    },
+    "max_BDF2_mass_budget_pct_of_inlet": 4.9036832614115914e-05,
+    "phase_bounds": [
+      0.0,
+      1.0
+    ],
+    "all_saved_fields_finite": true,
+    "source_unchanged": true,
+    "source_sim": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\selected_mesh_time_20261029\\M09_SO_dt05ms_common_t2040_r1\\final.sim",
+    "scope": "Calm selected mesh sensitivity only; not wave propagation acceptance"
+  },
+  "wall_diagnostic": {
+    "mesh": "M09",
+    "attempt": "M09_SO1ms_inner10_r1",
+    "time_s": 1.6399999999999302,
+    "wall_faces": 856,
+    "matched_surface_centroid_max_error_m": 2.2204699380978987e-16,
+    "wall_area_m2": 0.04840494399387505,
+    "area_weighted_yplus_p95": 0.7997557733001925,
+    "wall_area_yplus_below_1_pct": 99.8829660419905,
+    "max_yplus": 253.60416899924863,
+    "max_location_xz_m": [
+      1.1892907937437251,
+      8.030834374837542e-05
+    ],
+    "max_is_not_p95": true,
+    "method": "Exact accepted-wall samples matched to audited CGNS face centres; weights from face area vectors."
+  },
+  "limitations": [
+    "Practical component-wise refinement, not formal GCI",
+    "TE has localized high-y+ outlier",
+    "Pressure and viscous components remain separately reported",
+    "Longer wave-domain/free-surface mesh and wave dt/propagation/domain checks remain required"
+  ],
+  "waves_admitted": false
+}

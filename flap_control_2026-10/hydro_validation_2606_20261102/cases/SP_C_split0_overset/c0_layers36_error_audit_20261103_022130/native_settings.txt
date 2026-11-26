@@ -1,0 +1,8 @@
+source=F:\ntnu\flap_control\hydro_validation_2606_20261102\cases\SP_C_split0_overset\c0_layers36_zero_storage_20261103_021548\layer_audit_error.sim
+physical_time=0.0
+native_iteration=0
+Background wall=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.NativeSkin dynamic=2 activeLayers=36
+Background wall=Background exact quasi2D fluid 2.Hydro_Background_fluid.Hydro_Main.HingeArc dynamic=0 no_activeLayers
+FlapOverset wall=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.NativeSkin dynamic=0 no_activeLayers
+FlapOverset wall=FlapOverset exact quasi2D fluid.Hydro_Overset_fluid.Hydro_Flap.HingeArc dynamic=0 no_activeLayers
+interface=Flap overset connectivity 1 alternate=true close=true prism_shrink=true errors_as_warning=false

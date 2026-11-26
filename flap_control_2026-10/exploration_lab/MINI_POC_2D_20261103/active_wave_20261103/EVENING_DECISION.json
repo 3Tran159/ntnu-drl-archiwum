@@ -1,0 +1,90 @@
+{
+  "at": "2026-11-03T17:25:08.642551+01:00",
+  "current": {
+    "at": "2026-11-03T17:25:08.581161+01:00",
+    "state": "HOLD",
+    "stage": "DAY_CONTINUATION",
+    "night_approved": false,
+    "CPU": 1,
+    "GPU": false,
+    "reason": "Native stage failed; inspect log, no next stage"
+  },
+  "C0_gate": "ACCEPTED_FOR_SEALED_EXPLORATION_ONLY",
+  "C0_latest": {
+    "iteration": "6147",
+    "solver_s": "0.0268391",
+    "elapsed_s": "120.0029219",
+    "CL": "0.34706935133271744",
+    "CD": "0.005073290890123012",
+    "Mh": "-562.0368838314254",
+    "Fx": "978.0290177979143",
+    "Fy": "66908.02954992127",
+    "pABSmin": "24279.75298717199",
+    "mass_relative": "4.34713453370956E-9",
+    "min_quality": "0.06964124789458148"
+  },
+  "SEALED_PLUS2": {
+    "status": "NUMERICAL_POC_STABILIZED_NOT_VALIDATED",
+    "iterations_this_run": 1000,
+    "elapsed_s": 55.3422248,
+    "validation": false,
+    "DRL_allowed": false
+  },
+  "PLUS2_latest": {
+    "iteration": "1000",
+    "solver_s": "0.0310596",
+    "elapsed_s": "55.185165",
+    "CL": "0.46316467587756616",
+    "CD": "0.005542012180677761",
+    "Mh": "-736.4946161610936",
+    "Fx": "1068.3891081910588",
+    "Fy": "89288.88621567721",
+    "pABSmin": "12737.969332840803",
+    "mass_relative": "1.0918313409110495E-7",
+    "min_quality": "0.058342107760891174"
+  },
+  "kinematics": {
+    "status": "HOLD",
+    "detail": "The model star.morpher.MeshDeformationModel is incompatible with the currently enabled models in L1 true2D water steady SST:  is marked by enabled model star.common.ImplicitUnsteadyModel as incompatible. Command: EnableModel    error: Server Error ",
+    "URANS_flow_validated": false
+  },
+  "active_flow_smoke": {
+    "status": "NOT_RUN"
+  },
+  "orbital_field_CFD": "NOT_VERIFIED; analytic target only",
+  "wave_fixed_vs_active_comparison": "NOT_AVAILABLE",
+  "night_approved": false,
+  "actual_URANS_mean_step_s": null,
+  "recommended_hypothesis": "First separate mesh-motion effects from orbital-flow phase errors. Localphase and numerical convergence must be verified before phase optimization.",
+  "night_options": [
+    {
+      "id": "N0",
+      "question": "Can calm-water MiniURANS traverse ramp and full±2degree cycle safely?",
+      "recommended": true,
+      "parameters": "Same sealedmesh,C0fields,U18,ramp2Te then1fullTe,dt.002,20inner,1MPI,CPUonly",
+      "ready": false,
+      "estimated_solver_s": null,
+      "cost_basis": "MeasuredURANS smoke if available; otherwise unmeasured,not promised",
+      "risk": "Onlysmall-rampflow tested; pressure or mesh can fail atfull amplitude",
+      "automatic_stop": "OriginalpABS,mass,mesh,turbulenceguards;finite budget;no automaticretry;07:00latest"
+    },
+    {
+      "id": "N1",
+      "question": "Does a submerged empty-domain orbital field reproduce target amplitude and localphase?",
+      "parameters": "lambda10m,A.25m,h2m,U18,headseas,deepwater;matched spatialBC",
+      "ready": false,
+      "cost": "Not measured; geometry/BC nativefielddiagnostic still required",
+      "risk": "Wrong inletadvection phase,top/bottom constraints,above-waterdomain",
+      "automatic_stop": "Phase/amplitudegate,pABS,mass and numericalguards;explicit shortbudget"
+    },
+    {
+      "id": "N2",
+      "question": "Does selectedactive phase reduce mean2Ddrag compared with matched W0?",
+      "parameters": "Same domain/mesh/forcingW0 andWA2;Aflap2deg;firstphi0 only",
+      "ready": false,
+      "cost": "Unmeasured until W0 andmotionbenchmarkPASS",
+      "risk": "Phase mismatch,unsteadyconvergence,pressuremargin;no boat-powerclaim",
+      "automatic_stop": "Previousfailureblocksnextcase;same physical/numericalguards"
+    }
+  ]
+}

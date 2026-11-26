@@ -1,0 +1,26 @@
+{
+  "status": "DIAGNOSTIC",
+  "samples": 14,
+  "native_period_s": 0.4545374193129603,
+  "estimate_period_s": 0.4545374193129603,
+  "sample_span_s": 0.013000000000000005,
+  "spatial_cells_per_harmonic": [
+    80.0,
+    40.0,
+    26.666666666666668,
+    20.0,
+    16.0
+  ],
+  "temporal_steps_per_harmonic": [
+    454.5374193129603,
+    227.26870965648015,
+    151.5124731043201,
+    113.63435482824008,
+    90.90748386259206
+  ],
+  "interface_CFL_max": 0.1965511055896918,
+  "pABS_min_Pa": 57578.22759652526,
+  "residual_state": "HOLD_TURBULENCE_LIMIT",
+  "eta_vs_native_rms_m": 0.0002552485781910409,
+  "reason": "Short time span, no full-cycle harmonic or propagation gate"
+}

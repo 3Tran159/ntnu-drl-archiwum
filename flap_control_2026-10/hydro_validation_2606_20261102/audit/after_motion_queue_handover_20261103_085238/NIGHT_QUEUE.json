@@ -1,0 +1,658 @@
+{
+  "version": 1,
+  "max_cpu_processes": 8,
+  "gpu_compute": false,
+  "scientific_gates": {
+    "C0_bias_explained_and_approved": false,
+    "reason": "Original C0 rejected for near-wall Overset artifacts. Corrected C0 passes strict field/mesh and force-window guards; pressure/continuity convergence audit remains pending. Only0degree numerical diagnostic authorized; no nonzero angles.",
+    "C0_accepted_for_kinematics": true,
+    "kinematic_acceptance_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\C0_KINEMATIC_BASE_ACCEPTANCE_20261103.json"
+  },
+  "jobs": [
+    {
+      "id": "c0_native_comparison_221832",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.3024,
+      "adopt_receipt": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\night_launch_20261102_221832.json"
+    },
+    {
+      "id": "c0_native_comparison_v2",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.3024
+    },
+    {
+      "id": "b0_native_comparison",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "approved": true,
+      "initial_time_s": 0.3
+    },
+    {
+      "id": "b0_native_comparison_v2",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "approved": true,
+      "initial_time_s": 0.3
+    },
+    {
+      "id": "c0_native_comparison_v3",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.3024
+    },
+    {
+      "id": "c0_inner40_sensitivity",
+      "macro": "C0InnerIterationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_resume_20261102_221053\\error_checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.3024,
+      "angle_deg": 0,
+      "purpose": "Isolate inner-iteration convergence: 15 to 40 iterations only, dt .002, same 361532 mesh, no physics changes; 100-150 steps; scientific hold remains."
+    },
+    {
+      "id": "c0_distance_interpolation",
+      "macro": "C0DistanceInterpolationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.5184000000000004,
+      "angle_deg": 0,
+      "purpose": "Isolate interpolation only: LinearQuasi2D to distance weighted. Same 361532 mesh, U18, SST, dt.002,40inner; no time/solution reset; max150 steps. Investigate omega clipping/pressure defect; scientific gate remains false.",
+      "input_sha256": "c0f2dbd97b39f82fac4b7a8f2a517ad9cf81db0133ea7f7d1e423d7c214ac0f9"
+    },
+    {
+      "id": "c0_distance_interpolation_readback",
+      "macro": "C0DistanceInterpolationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.5184,
+      "angle_deg": 0,
+      "purpose": "Same single-change distance interpolation diagnostic; fixed field-loading guard with numerical readback verification. 8CPU, no GPU, max150 steps; no angles."
+    },
+    {
+      "id": "c0_distance_interpolation_metadata_fixed",
+      "macro": "C0DistanceInterpolationTest.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.5184,
+      "angle_deg": 0,
+      "purpose": "Single-change interpolation diagnostic with native readback verified; corrected optional residual metadata export. Max8CPU/noGPU/max150steps."
+    },
+    {
+      "id": "c0_distance_native_setup",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_distance_20261102_232050\\checkpoint.sim",
+      "approved": true,
+      "initial_time_s": 0.6644,
+      "angle_deg": 0,
+      "purpose": "Read-only frozen-solver/model/motion/wall status comparison. 1CPU, no solution steps or simulation saves."
+    },
+    {
+      "id": "b0_native_setup",
+      "macro": "InspectHydroComparison.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "approved": true,
+      "initial_time_s": 0.3,
+      "angle_deg": 0,
+      "purpose": "Read-only frozen-solver/model/motion/wall status comparison. 1CPU, no solution steps or simulation saves."
+    },
+    {
+      "id": "c0_distance_fresh_initialization",
+      "macro": "FreshC0DistanceInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Separate inherited solution from same-mesh Overset error. Fresh initialization only; no nonzero deflection; no scientific acceptance."
+    },
+    {
+      "id": "c0_fresh_no_continuity_init",
+      "macro": "FreshC0NoContinuityInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Diagnose divergent continuity initialization: disable only continuity pre-initialization on same protected uninitialized mesh; no inherited failed fields."
+    },
+    {
+      "id": "c0_fresh_no_flux_init",
+      "macro": "FreshC0NoFluxInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Startup diagnostic only: relative to no-CI control, disable Overset flux correction. Same mesh, DISTANCE, physics. Original historical C began with conservation NONE. Tighter divergence guards; no acceptance of this different numerical configuration."
+    },
+    {
+      "id": "c0_overlap1mm_mesh",
+      "macro": "PrepareC0OverlapRefinement.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Local Overset source resolution1mm ahead of hinge, same geometry/cage/background source; original LinearQuasi2D control. Mesh-only preparation, require full connectivity and separate background mesh identity review before flow."
+    },
+    {
+      "id": "c0_overlap_mesh_finalize",
+      "macro": "FinalizeC0MeshAudit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap1mm_20261103_001516\\SP_C_repair_error_20261103_001516.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Finish audit of already generated mesh: allocate field storage without continuity solve, no remeshing/no timesteps. Overset status before initialization was native unavailable sentinel DBL_MAX."
+    },
+    {
+      "id": "c0_overlap_distance_mesh_audit",
+      "macro": "FinalizeC0DistanceMeshAudit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_audit_20261103_002030\\audit_error.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Same generated mesh, no remeshing or flow; change interpolation to DISTANCE and require all3096 acceptors method0, zero errors/fallback. Compare later with saved DISTANCE control, not attribute mixed-method difference to mesh alone."
+    },
+    {
+      "id": "c0_overlap_local_patch",
+      "macro": "PrepareC0OverlapPatch.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "1mm overlap plus local0.5mm patch x[.752,.766],z[-.043,-.028] around persistent type4 acceptor; same physical geometry/background source. DISTANCE. Zero solver steps; strict full connectivity gate unchanged."
+    },
+    {
+      "id": "c0_overlap_inner_band",
+      "macro": "PrepareC0OverlapBand.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Broaden0.5mm inner-overlap region x[.74,.955],z[-.08,.13], preserving outer1mm region and background mesh. Cover both identified difficult-stencil locations and prior turbulence anomaly zone; DISTANCE, strict zero-error/fallback gate,750k cell cap, no flow."
+    },
+    {
+      "id": "c0_refined_initialization",
+      "macro": "FreshC0RefinedInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Positive native/Work mesh audit on579468 cells; steady numerical warmup only with DISTANCE, conservation NONE and continuity initialization enabled. Same geometry/U18/rho1000/mu.001/SST. Restore FLUX_CORRECTION and matched URANS before scientific acceptance. No deflections."
+    },
+    {
+      "id": "c0_relaxed_initialization",
+      "macro": "FreshC0RelaxedInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Same positive mesh and physical conditions; velocity URF0.3 and pressure URF0.1, default old native values captured at execution. No failed-field reuse. Bounded1500steady iterations; full fields/checkpoints; no scientific acceptance or deflections."
+    },
+    {
+      "id": "c0_first_order_continuation",
+      "macro": "ContinueC0FirstOrder.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_relaxed_init_20261103_005648\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Continue saved430iteration solution without reset. Change flow/SST convection to first order only for diagnostic recovery; all mesh/physics unchanged. Must restore second order plus matched URANS/FLUX before scientific acceptance.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      },
+      "guards_enabled_after_additional_iteration": 470
+    },
+    {
+      "id": "c0_flux_continuation",
+      "macro": "ContinueC0Flux.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_first_order_20261103_010758\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Continue exact saved steady fields at native iteration1260, time0. Numerical diagnostic mode flux: flow FIRST_ORDER to FIRST_ORDER, SST FIRST_ORDER to FIRST_ORDER, Overset conservation NONE to FLUX_CORRECTION. Preserve579468-cell mesh,DISTANCE,U18,rho1000,mu.001,URF0.3/0.1,0deg geometry. No reset/remeshing. Strict pressure/mass/turbulence/Overset guards from first block. No scientific approval until matched second-order URANS is evaluated. CSV iteration=additional; native_iteration=1260+iteration.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_momentum2_continuation",
+      "macro": "ContinueC0MomentumSecond.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Continue exact saved steady fields at native iteration1850, time0. Numerical diagnostic mode momentum2: flow FIRST_ORDER to SECOND_ORDER, SST FIRST_ORDER to FIRST_ORDER, Overset conservation FLUX_CORRECTION to FLUX_CORRECTION. Preserve579468-cell mesh,DISTANCE,U18,rho1000,mu.001,URF0.3/0.1,0deg geometry. No reset/remeshing. Strict pressure/mass/turbulence/Overset guards from first block. No scientific approval until matched second-order URANS is evaluated. CSV iteration=additional; native_iteration=1850+iteration.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_wall_layers36_audit",
+      "macro": "PrepareC0WallLayers36.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Mesh-connectivity-only diagnostic,1CPU,zero solver steps. Force36 active cell layers only on main NativeSkin, retaining hinge arc/flap settings and mesh coordinates. Geometric active-cell check and placement audit required before any solve. Uses retained safe first-order flux state1850, not failed momentum2 state."
+    },
+    {
+      "id": "c0_wall_layers36_recut",
+      "macro": "PrepareC0WallLayersRecut.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "1CPU zero-solver-step interface reset+initialize to actually recompute wall-layer hole cutting. Prior initialize-only audit changed zero statuses; no efficacy claim. Export native wall vertices to distinguish remeshed wall from input STL. Work geometry/connectivity review mandatory before flow."
+    },
+    {
+      "id": "c0_wall_layers36_frozen",
+      "macro": "PrepareC0WallLayersFrozen.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_flux_recovery_20261103_012140\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "1CPU single frozen-flow/turbulence iterator step to evaluate deferred connectivity update after36 main-wall active layers. Source native1850; expected1851,time0. No physical solver steps, no clear/initialization/remeshing. Native/geometry audit required before any flow recovery."
+    },
+    {
+      "id": "c0_wall_layers36_cold",
+      "macro": "PrepareC0WallLayersCold.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Connectivity-only1CPU audit on retained zero-iteration mesh source. Apply36main-wall layers before native uniform-field initialization, continuity initialization disabled. Never clears/reinitializes the solved1850 checkpoint. No PDE steps, no mesh generation; tests whether earlier unchanged statuses were a cached-assembly effect. Result is not a resumable flow solution."
+    },
+    {
+      "id": "c0_wall_layers36_zero_storage",
+      "macro": "PrepareC0WallLayersZeroStorage.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "1CPU zero-PDE-step connectivity test on exact zero-iteration mesh source only. Explicitly clear uniform initial fields/history/zero-time mesh storage and initialize with36protected main-wall layers. Repeated initialize alone retained old assembly. No progressed hydro checkpoint can pass source/time/iteration guards. Native geometry/cell identity and connectivity checked before any reuse."
+    },
+    {
+      "id": "c0_wall_layers36_failure_inspection",
+      "macro": "InspectC0LayerFailure.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_layers36_zero_storage_20261103_021548\\layer_audit_error.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Read-only1CPU localization of native Overset Error Status6 from failed36-layer actual reassembly. No initialization, no field/motion/mesh changes, no solver steps, no simulation save."
+    },
+    {
+      "id": "c0_forewall36_audit",
+      "macro": "PrepareC0ForewallLayers.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "1CPU zero-flow-step audit of36protected layers only on main wall x<0.80m, away from hinge. NativeSkin split by existing wall-face position; coordinates and mesh remain unchanged; both no-slip partitions included in force reports. Hinge staysx/c0.80,x0.952m. Native cold assembly on exact zero-step source only. Must pass full mesh identity, zero error/difficult stencil and native-solid containment before any flow proposal."
+    },
+    {
+      "id": "c0_forewall36_coverage_audit",
+      "macro": "PrepareC0ForewallCoverage.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_overlap_band05mm_20261103_003837\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "1CPU zero-flow-step audit:forewallx<0.80m36active layers; remaining main NativeSkin and HingeArc1active layer,flap unchanged. Prior nativepass had two missing active-wall vertices atx0.9416..0.9418,so not flow-approved. Exact original mesh/physical geometry must match; all physical wall vertices required plus zero errors/difficult donors/solid intrusion. Source zero-iteration only; no solved checkpoint reset."
+    },
+    {
+      "id": "c0_tight_cage_v1_mesh_audit",
+      "macro": "PrepareC0TightCage.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "8CPU mesh-only diagnostic. Replace numerical Overset outer cage; physical foil/flap parts and gap unchanged. Keep exact background source mesh and all previous numerical controls. Require zero-iteration source,positive volumes,zero donor/errors,full exported mesh and background identity before any flow. No nonzero angles, no solved checkpoint reset.",
+      "input_sha256": "6a11e2692864a74e03c198cc90f3fc9cfb4c10ec7e3ba69fbdcf50c9e30ea2d4"
+    },
+    {
+      "id": "c0_tight_cage_v2_mesh_audit",
+      "macro": "PrepareC0TightCagePatches.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\SP_C_build_error_20261102_191807.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "8CPU mesh-only diagnostic. Replace numerical Overset outer cage; physical foil/flap parts and gap unchanged. Keep exact background source mesh and all previous numerical controls. Require zero-iteration source,positive volumes,zero donor/errors,full exported mesh and background identity before any flow. No nonzero angles, no solved checkpoint reset.",
+      "input_sha256": "6a11e2692864a74e03c198cc90f3fc9cfb4c10ec7e3ba69fbdcf50c9e30ea2d4"
+    },
+    {
+      "id": "c0_tight_firstorder_initialization",
+      "macro": "FreshC0TightInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Technical numerical startup on new tight-cage mesh (333939 cells), not a resume of the retained1850-iteration solution. Physical geometry and boundary conditions unchanged; background cell coordinates/volumes verified identical. Flow and SST FIRST_ORDER, DISTANCE, FLUX_CORRECTION, velocity/pressureURF0.3/0.1, continuity preinitialization disabled. Source nativeiteration0 only. True active volume-cell containment checked before first PDE step. Strict pressure12339.2148Pa,mass1e-4,zero turbulence floor/overset error gates from first block. No hydrodynamic approval until matched second-order URANS comparisons.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_tight_continuity_initialization",
+      "macro": "FreshC0TightContinuityInit.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Initialization-only numerical remedy: true clear of initial uniform storage on exact zero-iteration mesh source; steady continuity initialization100,tolerance1e-6 enabled. Same333939-cell mesh and physical conditions,first-order flow/SST,DISTANCE,flux correction,URF.3/.1. Native counters,solid containment and full mesh audited before PDE. Strict pressure/mass/turbulence/Overset guards unchanged. Failure at10 of prior uniform start located at leading edge, not the former overlap zone.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_tight_mapped_field_audit",
+      "macro": "PrepareC0TightMappedFields.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_cage_v2_20261103_025110\\SP_C_mesh_ready.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Zero-PDE-step mapping audit: new tight-cage333939-cell mesh initialized from retained iteration1850 healthy first-order fields. Native supported XYZ-table restart maps piezometric pressure,velocity,k,omega; no clipping/rescaling. Mesh/physical geometry/BCs remain unchanged. Target native counter0/time0 because this is a new-mesh initializer; source history and original checkpoint1850 remain intact. CI disabled,flow/SST firstorder,flux correction,DISTANCE,URF.3/.1. Full mesh and true active-volume containment audited; initial pressure/mass/turbulence gate must pass before saving candidate. Work reviews native mapped fields before any PDE steps. Installed2606 guide GUID-E7FF479A-2CDC-43B6-AC75-34C44E761591."
+    },
+    {
+      "id": "c0_tight_warm_continuation",
+      "macro": "ContinueC0TightWarm.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_mapped_20261103_031141\\warm_mapped_candidate.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Continue reviewed stored mapped fields on unchanged333939-cell tight-cage mesh. Source physicaltime0/nativeiteration0; its field lineage is healthy original iteration1850. No initializeSolution,clearing,remeshing,or boundary changes. Preserve FIRST_ORDER flow/SST,DISTANCE,FLUX_CORRECTION,URF.3/.1,CIoff,U18. Native mapped pressure readback and full mesh/solid containment before first step. Strict pressure12339.2148Pa,mass1e-4,zero k/omega floors and Overset errors from first block. No hydrodynamic approval until second-order URANS comparison.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_tight_momentum2_continuation",
+      "macro": "ContinueC0TightMomentumSecond.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_warm_20261103_031654\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Continue exact saved tight-cage steady fields at native iteration1050, time0. Numerical diagnostic mode momentum2: flow FIRST_ORDER to SECOND_ORDER, SST FIRST_ORDER to FIRST_ORDER, Overset conservation FLUX_CORRECTION to FLUX_CORRECTION. Preserve333939-cell mesh,DISTANCE,U18,rho1000,mu.001,URF0.3/0.1,0deg geometry. No reset/remeshing. Strict pressure/mass/turbulence/Overset guards from first block. No scientific approval until matched second-order URANS is evaluated. CSV iteration=additional; native_iteration=1050+iteration.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_tight_turbulence2_continuation",
+      "macro": "ContinueC0TightTurbulenceSecond.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_momentum_second_20261103_033327\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Continue exact saved tight-cage steady fields at native iteration1590, time0. Numerical diagnostic mode turbulence2: flow SECOND_ORDER to SECOND_ORDER, SST FIRST_ORDER to SECOND_ORDER, Overset conservation FLUX_CORRECTION to FLUX_CORRECTION. Preserve333939-cell mesh,DISTANCE,U18,rho1000,mu.001,URF0.3/0.1,0deg geometry. No reset/remeshing. Strict pressure/mass/turbulence/Overset guards from first block. No scientific approval until matched second-order URANS is evaluated. CSV iteration=additional; native_iteration=1590+iteration.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "b0_matching_numerics_audit",
+      "macro": "InspectBMatchingNumerics.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "initial_time_s": 0.3,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Read-only native audit of B reference: actual URFs, schemes,dt,inner iterations,residual scales and reports.0solver steps,no .sim save,no changes to source. Required for an explicitly matched C0 URANS diagnostic."
+    },
+    {
+      "id": "c0_tight_urans_matching",
+      "macro": "C0TightURANS.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "0degree URANS diagnostic from exact native2310 fields, no initialize/reset/remesh. Match B native dt0.002s,15inner,SECOND_ORDER time/momentum/SST,URF0.8/0.2. Restore prescribed zero motion. Strict runtime guards; every50stepcheckpoint; minimum150steps,maximum500. Force pass remains unapproved until Work residual/field/B-C review.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_tight_urans_transition_v2",
+      "macro": "C0TightURANSV2.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_turbulence_second_20261103_034119\\steady_checkpoint.sim",
+      "initial_time_s": 0,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "0degree URANS diagnostic from exact native2310 fields, no initialize/reset/remesh. Match B native dt0.002s,15inner,SECOND_ORDER time/momentum/SST,URF0.8/0.2. Restore prescribed zero motion. Strict runtime guards; every50stepcheckpoint; minimum150steps,maximum500. Force pass remains unapproved until Work residual/field/B-C review. Transition implementation correction: validate source URFs BEFORE changing time model, record new solver defaults AFTER conversion, then explicitly match B. Prior attempt stopped with zero PDE steps, unchanged forces, time0; all strict physical guards unchanged.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_urans_continue_inner40",
+      "macro": "C0URANSContinueInner40.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_tight_urans_v2_20261103_035710\\checkpoint.sim",
+      "initial_time_s": 0.3,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Continue exact saved URANS fields at t0.3s,native4560. Source15inner,target40. dt0.002s,SECOND_ORDER time/momentum/SST,URF0.8/0.2,DISTANCE,FLUX_CORRECTION,333939cells,0degree geometry unchanged. No conversion,reset,initialization or mesh generation. Strict guards retained. Numerical sensitivity/resume only; no scientific approval.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_urans_pressure_urf01",
+      "macro": "C0URANSPressureUrf01.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+      "initial_time_s": 0.45,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Controlled0degree continuation from t0.45s,native7560. Only numerical change: pressureURF0.2to0.1. VelocityURF0.8,40inner,dt0.002s,SECOND_ORDER time/momentum/SST,DISTANCE,FLUX_CORRECTION,333939cells and physical geometry/conditions unchanged. Diagnose residual plateau and remote-top pressure oscillations. Added pressure-zone minimum coordinates each step. No reset,initialization or remesh. Maximum150steps,minimum75; strict guards unchanged; no nonzero angles or scientific approval.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "c0_pressure_outlet_readonly_audit",
+      "macro": "InspectPressureOutlets.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+      "initial_time_s": 0.45,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Read-only actual top/downstream outlet backflow direction,pressure/scalar choices and pressure field definition.0solversteps,no.sim save,1CPU,noGPU;source SHA checked before/after. No boundary or physics changes."
+    },
+    {
+      "id": "b0_pressure_outlet_readonly_audit",
+      "macro": "InspectPressureOutlets.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "initial_time_s": 0.3,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Read-only actual top/downstream outlet backflow direction,pressure/scalar choices and pressure field definition.0solversteps,no.sim save,1CPU,noGPU;source SHA checked before/after. No boundary or physics changes."
+    },
+    {
+      "id": "c0_top_backflow_extrapolated",
+      "macro": "C0URANSTopDirection.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_urans_continue_inner40_20261103_041433\\checkpoint.sim",
+      "initial_time_s": 0.45,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Controlled0degree branch from C40t0.45s,native7560. Only boundary change: TOP backflow direction BOUNDARY_NORMAL to EXTRAPOLATED, following installed manual for flow parallel to pressure boundary. Preserve environmental pressure/scalars,downstream boundary,URF0.8/0.2,40inner,dt0.002s,SECOND_ORDER all,DISTANCE,FLUX_CORRECTION,333939cells,geometry,fields and saved time. No initialization,reset or remesh. Added far-top velocity metrics. Minimum100,maximum250timesteps. Not yet comparable as pureOverset effect against oldB; matched baseline follow-up required. Strict guards unchanged; no nonzero angles.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999,
+        "maximum_overset_error_cells": 0
+      }
+    },
+    {
+      "id": "b0_matched_top_backflow",
+      "macro": "B0URANSTopDirection.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_B_split0_fixed\\SP_B_split0_stabilized_2606.sim",
+      "initial_time_s": 0.3,
+      "angle_deg": 0,
+      "approved": true,
+      "purpose": "Matched B0 continuation from original savedt0.3s,native2250. Changes:top backflow BOUNDARY_NORMAL to EXTRAPOLATED;inner iterations15to40 to match C. Preserve original256750-cell fixed mesh,physical geometry,URF0.8/0.2,dt0.002s,SECOND_ORDER time/momentum/SST,environmental pressure/scalars,downstream and all saved fields/history. No initialization/reset/remesh. Overset not present; zero error counter means not applicable. Minimum100/maximum250steps. C0 scientific gate remains closed until Work reviews both solutions.",
+      "runtime_guards": {
+        "minimum_absolute_pressure_Pa": 12339.214766776897,
+        "maximum_mass_imbalance_relative": 0.0001,
+        "maximum_omega_floor_cells": 0,
+        "maximum_k_floor_cells": 0,
+        "maximum_turbulent_viscosity_ratio": 99999
+      }
+    },
+    {
+      "id": "kinematic_poc333939_20261103",
+      "macro": "KinematicPoc333939.java",
+      "input": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\relocation_reopen_20261103_082325\\C0_recovered_t065.sim",
+      "approved": true,
+      "kind": "kinematic",
+      "range_deg": [
+        -5,
+        5
+      ],
+      "initial_time_s": 0.65,
+      "gate": "C0_accepted_for_kinematics",
+      "runtime_guards": {
+        "maximum_overset_error_cells": 0
+      },
+      "approval_evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\audit\\C0_KINEMATIC_BASE_ACCEPTANCE_20261103.json"
+    }
+  ],
+  "pending_campaign": [
+    "C0 numerical qualification after native audit repair",
+    "Explain B/C force bias",
+    "Static +2, -2, +5, -5 only after C0 scientific gate",
+    "Dynamic sinusoidal only after all statics qualified"
+  ],
+  "prohibited": [
+    "W04",
+    "W07 lambda92.5m",
+    "Waves",
+    "DRL",
+    "Other campaign changes"
+  ],
+  "release_failure_hold": {
+    "c0_native_comparison_221832": {
+      "reason": "Read-only getter has wrong property name EnabledZeroDonorCheckOption; observed native property ZeroDonorCheckOption=true. Corrected exact property read. No geometry/physics changes.",
+      "at": "2026-11-02T22:21:51.81425+01:00"
+    },
+    "c0_native_comparison_v2": {
+      "reason": "Table export requires scalar velocity components; force and wall-pressure exports succeeded. Correct scalar components; native interface reset/rebuild only in unsaved audit memory. No physical timestep or source file changes.",
+      "at": "2026-11-02T22:25:56.399733+01:00"
+    },
+    "b0_native_comparison": {
+      "reason": "B has no Overset Mesh representation, as expected. Fixed optional representation lookup; comparison stays read-only.",
+      "at": "2026-11-02T22:28:44.390636+01:00"
+    },
+    "c0_inner40_sensitivity": {
+      "at": "2026-11-02T23:09:42.116403+01:00",
+      "reason": "Intentional Work conclusion after108 steps, 3 stable windows and full final connectivity audit. Original paused_by_marker/qualification=false retained; only diagnostic next test approved.",
+      "evidence": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\cases\\SP_C_split0_overset\\c0_inner40_20261102_223940\\work_review.json"
+    },
+    "c0_distance_interpolation": {
+      "at": "2026-11-02T23:15:44.598032+01:00",
+      "reason": "Initial isInitialized query occurred before native mesh/field loading. Replace this guard with exact saved-time and Fx/Fz/Mh/CL/CD readback against source history. No initializeSolution, clearSolution or remesh call. Previous launch solved zero steps; original control checkpoint retained."
+    },
+    "c0_distance_interpolation_readback": {
+      "at": "2026-11-02T23:20:38.999716+01:00",
+      "reason": "Saved physical time/forces successfully re-read without initialization; optional residual accessor AutoNormalizeIndex refers to absent native property. Removed this accessor; normalization factor and residual exports retained, optional errors explicitly recorded. Zero steps were solved; scientific gate remains false."
+    },
+    "c0_distance_interpolation_metadata_fixed": {
+      "at": "2026-11-02T23:43:14.475342+01:00",
+      "reason": "Intentional scientific rejection of remedy; partial result/paused status preserved. Only read-only setup audits authorized next, zero flow steps."
+    },
+    "c0_distance_fresh_initialization": "Work observed initialization divergence at40 iterations; failed output preserved. New fresh diagnostic disables continuity initialization only, never restarts failed fields.",
+    "c0_fresh_no_continuity_init": "Rejected: divergence at50 iterations; previous result preserved. Single additional numerical change: conservation NONE during clean startup.",
+    "c0_fresh_no_flux_init": "Early pressure-screen failure at10 iterations, not evidence of asymptotic divergence or proof against flux correction. Preserve test. Approve mesh-only local overlap diagnostic.",
+    "c0_overlap1mm_mesh": "Mesh integrity passed; full Overset state unavailable before field initialization. Recover saved mesh copy without remeshing, 1CPU audit.",
+    "c0_overlap_mesh_finalize": "Strict audit rejected one type4 stencil at x.7586638452,z-.0351466178; cell quality.572, ratio1.166, nativeerror0. Resolve by documented DISTANCE method on same mesh then re-audit.",
+    "c0_overlap_distance_mesh_audit": "Same single difficult type4 cell persisted with DISTANCE. Installed2606 field documentation advises local mesh improvement. Approve small local0.5mm patch only; no flow or gate relaxation.",
+    "c0_overlap_local_patch": "Original type4 point atx.758664 resolved; one new type4 atx.8943489,z-.0212401,quality.3857,ratio1.234. Broaden inner-overlap refinement to address the region, no guard relaxation.",
+    "c0_refined_initialization": "Documented failure at40: gross startup divergence at unchanged main-foil leading edge, no native Overset errors or SST floors. Preserve failed state; controlled lower-relaxation startup on same zero-step mesh.",
+    "c0_relaxed_initialization": "Work-paused430iterations with834omega-floor,5k-floor,viscosity cap and abnormal local mean-flow head. Controlled first-order continuation of saved fields, no reset; original result stays unapproved.",
+    "c0_first_order_continuation": "Reviewed deliberate pause of unapproved numerical initialization; next isolated numerical change documented; strict source and runtime guards retained.",
+    "c0_flux_continuation": "Reviewed deliberate pause of unapproved numerical initialization; next isolated numerical change documented; strict source and runtime guards retained.",
+    "c0_momentum2_continuation": "Pressure gate stopped90 iterations; pure momentum second-order restoration recreated near-wall Overset jet/pressure undershoot with zero SST clipping. No repeat; only1CPU native connectivity experiment on safe retained source.",
+    "c0_wall_layers36_zero_storage": "Reject36-layer candidate; allow only read-only localization of generated error6, no flow approval.",
+    "c0_tight_cage_v1_mesh_audit": "Native guide-surface sweep failed before any flow. Same cage coordinates now have separate side patches at sharp corners; fixed foil,flap,span and all numerical targets unchanged.",
+    "c0_tight_firstorder_initialization": "Preserved pressure-failed uniform-start fields; do not resume them. Separate original zero-step source and documented continuity-initialization diagnostic. Strict guards unchanged.",
+    "c0_tight_continuity_initialization": "Native CI100 executed but initial pressure was already unphysical before first10PDE iterations. Failed result rejected. Next action only maps preserved healthy1850 fields onto zero-step target, no PDE steps.",
+    "c0_tight_warm_continuation": "Reviewed deliberate pause of unapproved numerical initialization; next isolated numerical change documented; strict source and runtime guards retained.",
+    "c0_tight_momentum2_continuation": "Reviewed deliberate pause of unapproved numerical initialization; next isolated numerical change documented; strict source and runtime guards retained.",
+    "c0_tight_urans_matching": "Reviewed zero-step transition guard failure; exact source preserved, failure forces identical, no runtime physical limit violated. Separate v2 corrects check ordering and records both solver settings."
+  },
+  "technical_connectivity_audit": {
+    "passed": true,
+    "all_cells": 361532,
+    "error_cells": 0,
+    "source": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102\\validation\\BC_native_diagnosis.json",
+    "max_native_size_ratio": 9.211892538332323,
+    "accuracy_approved": false
+  },
+  "controller_exit_requested": true,
+  "relocation_pause": {
+    "at": "2026-11-03T07:34:41.879231+01:00",
+    "source": "explicit_user_relocation_pause",
+    "reason": "ThinkPad relocation within15minutes. Do not start new experiments or automatically resume.",
+    "requires_explicit_user_resume": true,
+    "archive": "F:\\ntnu\\flap_control\\checkpoints\\RELOCATION_20261103_073441",
+    "campaign": "F:\\ntnu\\flap_control\\hydro_validation_2606_20261102"
+  },
+  "accept_new_jobs": false
+}

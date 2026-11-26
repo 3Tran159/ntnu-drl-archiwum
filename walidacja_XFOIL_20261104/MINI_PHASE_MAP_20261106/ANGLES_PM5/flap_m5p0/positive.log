@@ -1,0 +1,519 @@
+
+ ===================================================
+  XFOIL Version 6.99
+  Copyright (C) 2000   Mark Drela, Harold Youngren
+
+  This software comes with ABSOLUTELY NO WARRANTY,
+    subject to the GNU General Public License.
+
+  Caveat computor
+ ===================================================
+
+ File  xfoil.def  not found
+
+   QUIT    Exit program
+
+  .OPER    Direct operating point(s)
+  .MDES    Complex mapping design routine
+  .QDES    Surface speed design routine
+  .GDES    Geometry design routine
+
+   SAVE f  Write airfoil to labeled coordinate file
+   PSAV f  Write airfoil to plain coordinate file
+   ISAV f  Write airfoil to ISES coordinate file
+   MSAV f  Write airfoil to MSES coordinate file
+   REVE    Reverse written-airfoil node ordering
+
+   LOAD f  Read buffer airfoil from coordinate file
+   NACA i  Set NACA 4,5-digit airfoil and buffer airfoil
+   INTE    Set buffer airfoil by interpolating two airfoils
+   NORM    Buffer airfoil normalization toggle
+   XYCM rr Change CM reference location, currently  0.25000 0.00000
+
+   BEND    Display structural properties of current airfoil
+
+   PCOP    Set current-airfoil panel nodes directly from buffer airfoil points
+   PANE    Set current-airfoil panel nodes ( 160 ) based on curvature
+  .PPAR    Show/change paneling
+
+  .PLOP    Plotting options
+
+   WDEF f  Write  current-settings file
+   RDEF f  Reread current-settings file
+   NAME s  Specify new airfoil name
+   NINC    Increment name version number
+
+   Z       Zoom    | (available in all menus)
+   U       Unzoom  | 
+
+ XFOIL   c>   ...............................................
+
+  G raphics-enable flag:        T
+  S ize of plot object          10.00"
+  A spect ratio of plot object   0.5500
+  P age dimensions              11.00 x  8.50"
+  M argins from page edges       0.00",  0.00"
+  F ont size (relative)          0.0150
+  W indow/screen size fraction   0.8000
+  B lowup input method:        Cursor    
+  O rientation of plot:        Landscape 
+  C olor PostScript output?     F
+
+      Option, Value   (or <Return>)    c>   ...............................................
+
+  G raphics-enable flag:        F
+  S ize of plot object          10.00"
+  A spect ratio of plot object   0.5500
+  P age dimensions              11.00 x  8.50"
+  M argins from page edges       0.00",  0.00"
+  F ont size (relative)          0.0150
+  W indow/screen size fraction   0.8000
+  B lowup input method:        Cursor    
+  O rientation of plot:        Landscape 
+  C olor PostScript output?     F
+
+      Option, Value   (or <Return>)    c>  
+ XFOIL   c>  
+ Labeled airfoil file.  Name:  NTNU sharp sealed foil                          
+
+ Number of input coordinate points: 591
+ Counterclockwise ordering
+ Max thickness =     0.119974  at x =   0.459
+ Max camber    =     0.016012  at x =   0.400
+
+  LE  x,y  =  -0.00032   0.00169  |   Chord =   1.00124
+  TE  x,y  =   1.00080   0.01750  |
+ Maximum number of panel nodes  :          495
+ Number of buffer airfoil points:          591
+ Current airfoil cannot be set.
+ Try executing PANE at Top Level instead.
+
+ XFOIL   c>   No current airfoil to plot
+
+    Present paneling parameters...
+  N  i   Number of panel nodes       160
+  P  r   Panel bunching parameter    1.000
+  T  r   TE/LE panel density ratio   0.150
+  R  r   Refined area/LE  panel density ratio   0.200
+  XT rr  Top    side refined area x/c limits    1.000 1.000
+  XB rr  Bottom side refined area x/c limits    1.000 1.000
+  Z oom
+  U nzoom
+
+Change what ? (<cr> if nothing else)   c>  
+Enter number of panel nodes   i>  
+Change what ? (<cr> if nothing else)   c>  
+ Sharp trailing edge
+
+ Maximum panel corner angle = 11.886   at  i,x,y  = 123  -0.0002   0.0009
+
+    Present paneling parameters...
+  N  i   Number of panel nodes       240
+  P  r   Panel bunching parameter    1.000
+  T  r   TE/LE panel density ratio   0.150
+  R  r   Refined area/LE  panel density ratio   0.200
+  XT rr  Top    side refined area x/c limits    1.000 1.000
+  XB rr  Bottom side refined area x/c limits    1.000 1.000
+  Z oom
+  U nzoom
+
+Change what ? (<cr> if nothing else)   c>  
+ XFOIL   c>  
+ Sharp trailing edge
+
+ Paneling parameters used...
+   Number of panel nodes       240
+   Panel bunching parameter    1.000
+   TE/LE panel density ratio   0.150
+   Refined-area/LE panel density ratio    0.200
+   Top    side refined area x/c limits  1.000 1.000
+   Bottom side refined area x/c limits  1.000 1.000
+
+ XFOIL   c>  
+.OPERi   c>  
+ M  =    0.0000
+ Re =  21300000
+
+.OPERv   c>  
+.OPERv   c>  
+ Xtr/c     =  1.0000    top    side
+ Xtr/c     =  1.0000    bottom side
+ Ncrit     =    9.00   ( 0.070 % turb. level )
+ Vacc      =  0.0100
+
+ Klag  =  5.6000     Uxwt  =    1.00
+ A     =  6.7000     B     =  0.7500       KCt = 0.01485
+ CtiniK=  1.8000     CtiniX=  3.3000
+
+..VPAR   c>  
+..VPAR   c>  
+.OPERv   c>  
+ Polar  1 newly created for accumulation
+ Airfoil archived with polar: NTNU sharp sealed foil                          
+
+Enter  polar save filename  OR  <return> for no file   s>  
+ New polar save file available
+
+Enter  polar dump filename  OR  <return> for no file   s>  
+ Polar dump file will NOT be written
+
+ Polar accumulation enabled
+
+.OPERva   c>   Calculating unit vorticity distributions ...
+ Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Initializing BL ...
+    side            1  ...
+    side            2  ...
+
+ Side 1 forced transition at x/c =  0.0100   10
+ Side 2 forced transition at x/c =  0.0100   15
+
+   1   rms: 0.3027E-01   max: -.2631E+00   D at  121  2
+       a =  0.000      CL =  0.0286
+      Cm = -0.0222     CD =  0.00662   =>   CDf =  0.00553    CDp =  0.00109
+
+ Side 1 forced transition at x/c =  0.0100   10
+ Side 2 forced transition at x/c =  0.0100   15
+
+   2   rms: 0.3074E-02   max: -.3821E-01   D at  121  2
+       a =  0.000      CL =  0.0288
+      Cm = -0.0222     CD =  0.00662   =>   CDf =  0.00555    CDp =  0.00107
+
+ Side 1 forced transition at x/c =  0.0100   10
+ Side 2 forced transition at x/c =  0.0100   15
+
+   3   rms: 0.5563E-04   max: -.8440E-03   D at  121  2
+       a =  0.000      CL =  0.0288
+      Cm = -0.0222     CD =  0.00662   =>   CDf =  0.00555    CDp =  0.00107
+ plradd ia,ip,cpol            1         119  9.11387056E-03
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   10
+ Side 2 forced transition at x/c =  0.0100   15
+
+   1   rms: 0.7999E-01   max: -.4866E-01   D at  122  2
+       a =  0.500      CL =  0.0855
+      Cm = -0.0228     CD =  0.00662   =>   CDf =  0.00556    CDp =  0.00105
+
+ Side 1 forced transition at x/c =  0.0100   11
+ Side 2 forced transition at x/c =  0.0100   14
+
+   2   rms: 0.2477E-02   max: 0.4268E-01   D at    3  1
+       a =  0.500      CL =  0.0854
+      Cm = -0.0228     CD =  0.00662   =>   CDf =  0.00556    CDp =  0.00106
+
+ Side 1 forced transition at x/c =  0.0100   11
+ Side 2 forced transition at x/c =  0.0100   14
+
+   3   rms: 0.4188E-04   max: -.5243E-03   D at    6  2
+       a =  0.500      CL =  0.0854
+      Cm = -0.0228     CD =  0.00662   =>   CDf =  0.00556    CDp =  0.00106
+ plradd ia,ip,cpol            2         120  9.11387056E-03
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   11
+ Side 2 forced transition at x/c =  0.0100   14
+
+   1   rms: 0.7981E-01   max: -.4855E-01   D at  121  2
+       a =  1.000      CL =  0.1421
+      Cm = -0.0234     CD =  0.00663   =>   CDf =  0.00556    CDp =  0.00107
+
+ Side 1 forced transition at x/c =  0.0100   12
+ Side 2 forced transition at x/c =  0.0100   13
+
+   2   rms: 0.2565E-02   max: 0.4436E-01   D at    3  1
+       a =  1.000      CL =  0.1420
+      Cm = -0.0233     CD =  0.00664   =>   CDf =  0.00556    CDp =  0.00107
+
+ Side 1 forced transition at x/c =  0.0100   12
+ Side 2 forced transition at x/c =  0.0100   13
+
+   3   rms: 0.4947E-04   max: 0.4974E-03   D at    5  2
+       a =  1.000      CL =  0.1420
+      Cm = -0.0233     CD =  0.00664   =>   CDf =  0.00556    CDp =  0.00107
+ plradd ia,ip,cpol            3         121  0.58550018    
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   12
+ Side 2 forced transition at x/c =  0.0100   13
+
+   1   rms: 0.7993E-01   max: -.4747E-01   D at  120  2
+       a =  1.500      CL =  0.1986
+      Cm = -0.0239     CD =  0.00666   =>   CDf =  0.00556    CDp =  0.00110
+
+ Side 1 forced transition at x/c =  0.0100   13
+ Side 2 forced transition at x/c =  0.0100   12
+
+   2   rms: 0.4013E-02   max: 0.6950E-01   D at    3  1
+       a =  1.500      CL =  0.1986
+      Cm = -0.0239     CD =  0.00667   =>   CDf =  0.00557    CDp =  0.00110
+
+ Side 1 forced transition at x/c =  0.0100   13
+ Side 2 forced transition at x/c =  0.0100   12
+
+   3   rms: 0.7561E-04   max: 0.7771E-03   D at    4  1
+       a =  1.500      CL =  0.1986
+      Cm = -0.0239     CD =  0.00667   =>   CDf =  0.00557    CDp =  0.00110
+ plradd ia,ip,cpol            4         122  0.44395113    
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   13
+ Side 2 forced transition at x/c =  0.0100   12
+
+   1   rms: 0.8012E-01   max: -.4713E-01   D at  119  2
+       a =  2.000      CL =  0.2551
+      Cm = -0.0245     CD =  0.00670   =>   CDf =  0.00556    CDp =  0.00114
+
+ Side 1 forced transition at x/c =  0.0100   14
+ Side 2 forced transition at x/c =  0.0100   11
+
+   2   rms: 0.4030E-03   max: 0.5706E-02   D at    3  1
+       a =  2.000      CL =  0.2551
+      Cm = -0.0245     CD =  0.00671   =>   CDf =  0.00557    CDp =  0.00114
+
+ Side 1 forced transition at x/c =  0.0100   14
+ Side 2 forced transition at x/c =  0.0100   11
+
+   3   rms: 0.7367E-05   max: 0.8058E-04   D at    6  1
+       a =  2.000      CL =  0.2551
+      Cm = -0.0245     CD =  0.00671   =>   CDf =  0.00557    CDp =  0.00114
+ plradd ia,ip,cpol            5         123  0.40592495    
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   14
+ Side 2 forced transition at x/c =  0.0100   11
+
+   1   rms: 0.8001E-01   max: -.4687E-01   D at  118  2
+       a =  2.500      CL =  0.3115
+      Cm = -0.0251     CD =  0.00676   =>   CDf =  0.00556    CDp =  0.00120
+
+ Side 1 forced transition at x/c =  0.0100   15
+ Side 2 forced transition at x/c =  0.0100   10
+
+   2   rms: 0.3069E-02   max: -.4720E-01   D at    2  1
+       a =  2.500      CL =  0.3114
+      Cm = -0.0251     CD =  0.00676   =>   CDf =  0.00557    CDp =  0.00119
+
+ Side 1 forced transition at x/c =  0.0100   15
+ Side 2 forced transition at x/c =  0.0100   10
+
+   3   rms: 0.3671E-03   max: 0.4574E-02   D at    5  1
+       a =  2.500      CL =  0.3114
+      Cm = -0.0251     CD =  0.00676   =>   CDf =  0.00557    CDp =  0.00119
+
+ Side 1 forced transition at x/c =  0.0100   15
+ Side 2 forced transition at x/c =  0.0100   10
+
+   4   rms: 0.3850E-06   max: 0.3458E-05   D at    5  1
+       a =  2.500      CL =  0.3114
+      Cm = -0.0251     CD =  0.00676   =>   CDf =  0.00557    CDp =  0.00119
+ plradd ia,ip,cpol            6         124  0.34890354    
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   15
+ Side 2 forced transition at x/c =  0.0100   10
+
+   1   rms: 0.7971E-01   max: -.4627E-01   D at  117  2
+       a =  3.000      CL =  0.3678
+      Cm = -0.0256     CD =  0.00682   =>   CDf =  0.00555    CDp =  0.00127
+
+ Side 1 forced transition at x/c =  0.0100   16
+ Side 2 forced transition at x/c =  0.0100    9
+
+   2   rms: 0.4063E-03   max: -.5047E-02   D at    3  1
+       a =  3.000      CL =  0.3677
+      Cm = -0.0256     CD =  0.00683   =>   CDf =  0.00557    CDp =  0.00125
+
+ Side 1 forced transition at x/c =  0.0100   16
+ Side 2 forced transition at x/c =  0.0100    9
+
+   3   rms: 0.3473E-04   max: -.4160E-03   D at    4  1
+       a =  3.000      CL =  0.3677
+      Cm = -0.0256     CD =  0.00683   =>   CDf =  0.00557    CDp =  0.00125
+ plradd ia,ip,cpol            7         125  0.22687092    
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   16
+ Side 2 forced transition at x/c =  0.0100    9
+
+   1   rms: 0.7975E-01   max: -.4593E-01   D at  116  2
+       a =  3.500      CL =  0.4239
+      Cm = -0.0262     CD =  0.00690   =>   CDf =  0.00557    CDp =  0.00133
+
+ Side 1 forced transition at x/c =  0.0100   16
+ Side 2 forced transition at x/c =  0.0100    9
+
+   2   rms: 0.1070E-03   max: -.5991E-03   D at  126  1
+       a =  3.500      CL =  0.4238
+      Cm = -0.0262     CD =  0.00690   =>   CDf =  0.00557    CDp =  0.00133
+
+ Side 1 forced transition at x/c =  0.0100   16
+ Side 2 forced transition at x/c =  0.0100    9
+
+   3   rms: 0.1389E-05   max: 0.8217E-05   C at  115  2
+       a =  3.500      CL =  0.4238
+      Cm = -0.0262     CD =  0.00690   =>   CDf =  0.00557    CDp =  0.00133
+ plradd ia,ip,cpol            8         125  7.25044357E-03
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   16
+ Side 2 forced transition at x/c =  0.0100    9
+
+   1   rms: 0.7949E-01   max: -.4533E-01   D at  116  2
+       a =  4.000      CL =  0.4799
+      Cm = -0.0267     CD =  0.00699   =>   CDf =  0.00554    CDp =  0.00145
+
+ Side 1 forced transition at x/c =  0.0100   17
+ Side 2 forced transition at x/c =  0.0100    8
+
+   2   rms: 0.2209E-02   max: -.3793E-01   D at    3  1
+       a =  4.000      CL =  0.4798
+      Cm = -0.0267     CD =  0.00699   =>   CDf =  0.00557    CDp =  0.00143
+
+ Side 1 forced transition at x/c =  0.0100   17
+ Side 2 forced transition at x/c =  0.0100    8
+
+   3   rms: 0.3063E-04   max: 0.3832E-03   D at    6  2
+       a =  4.000      CL =  0.4798
+      Cm = -0.0267     CD =  0.00699   =>   CDf =  0.00557    CDp =  0.00143
+ plradd ia,ip,cpol            9         126  7.25044357E-03
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   17
+ Side 2 forced transition at x/c =  0.0100    8
+
+   1   rms: 0.7960E-01   max: -.4471E-01   D at  115  2
+       a =  4.500      CL =  0.5356
+      Cm = -0.0272     CD =  0.00709   =>   CDf =  0.00553    CDp =  0.00156
+
+ Side 1 forced transition at x/c =  0.0100   18
+ Side 2 forced transition at x/c =  0.0100    7
+
+   2   rms: 0.2771E-02   max: -.4740E-01   D at    3  1
+       a =  4.500      CL =  0.5355
+      Cm = -0.0272     CD =  0.00710   =>   CDf =  0.00556    CDp =  0.00153
+
+ Side 1 forced transition at x/c =  0.0100   18
+ Side 2 forced transition at x/c =  0.0100    7
+
+   3   rms: 0.4513E-04   max: 0.5089E-03   D at    6  2
+       a =  4.500      CL =  0.5355
+      Cm = -0.0272     CD =  0.00710   =>   CDf =  0.00556    CDp =  0.00153
+ plradd ia,ip,cpol           10         127  5.50987292E-03
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>   Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Side 1 forced transition at x/c =  0.0100   18
+ Side 2 forced transition at x/c =  0.0100    7
+
+   1   rms: 0.7950E-01   max: -.4471E-01   D at  114  2
+       a =  5.000      CL =  0.5911
+      Cm = -0.0277     CD =  0.00721   =>   CDf =  0.00552    CDp =  0.00169
+
+ Side 1 forced transition at x/c =  0.0100   19
+ Side 2 forced transition at x/c =  0.0100    6
+
+   2   rms: 0.2417E-02   max: -.4226E-01   D at    3  1
+       a =  5.000      CL =  0.5910
+      Cm = -0.0277     CD =  0.00721   =>   CDf =  0.00556    CDp =  0.00165
+
+ Side 1 forced transition at x/c =  0.0100   19
+ Side 2 forced transition at x/c =  0.0100    6
+
+   3   rms: 0.5796E-04   max: 0.5909E-03   D at    5  1
+       a =  5.000      CL =  0.5910
+      Cm = -0.0277     CD =  0.00721   =>   CDf =  0.00556    CDp =  0.00165
+ plradd ia,ip,cpol           11         128  5.50987292E-03
+
+ Point added to stored polar  1
+ Point written to save file  positive.txt                                    
+ Dump file unspecified or not available
+
+.OPERva   c>  
+ Polar accumulation disabled
+
+.OPERv   c>  
+ XFOIL   c>  

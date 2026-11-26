@@ -1,0 +1,119 @@
+Position | Position | star.common.PrimitiveFieldFunction
+RegionIndex | Region Index | star.common.PrimitiveFieldFunction
+ConnectedCells | Connected Cells | star.common.PrimitiveFieldFunction
+UnmatchedEdgeCount | Unmatched Edge Count | star.common.PrimitiveFieldFunction
+ElemType | Element Type | star.common.PrimitiveFieldFunction
+FaceType | Face Type | star.common.PrimitiveFieldFunction
+LocalCellIndex | Cell Index | star.common.PrimitiveFieldFunction
+LocalFaceIndex | Face Index | star.common.PrimitiveFieldFunction
+InterfaceParent | Interface Parent Face Index | star.common.PrimitiveFieldFunction
+BoundaryIndex | Boundary Index | star.common.PrimitiveFieldFunction
+InterfaceParentBoundaryIndex | Interface Parent Boundary Index | star.common.PrimitiveFieldFunction
+PartSurfaceContactIndex | Part Surface Contact Index | star.common.PrimitiveFieldFunction
+PrismLayerCells | Prism Layer Cells | star.common.PrimitiveFieldFunction
+PrismLayerNumber | Prism Layer Number | star.common.PrimitiveFieldFunction
+ProstarCellIndex | pro-STAR Cell Id | star.common.PrimitiveFieldFunction
+NonConformalInterfaceFace | Non-Conformal Interface Faces | star.common.PrimitiveFieldFunction
+CellGeometryPartIndex | Cell Part Index | star.common.PrimitiveFieldFunction
+FacePartSurfaceIndex | Face Part Surface Index | star.common.PrimitiveFieldFunction
+PartitionId | Partition | star.common.PrimitiveFieldFunction
+BCB_Xi | Boundary Circumferential Bin Coordinate | star.common.PrimitiveFieldFunction
+BCB_BinIndex | Boundary Circumferential Bin Index | star.common.PrimitiveFieldFunction
+MappedFacetCount | Mapped Facet Count | star.common.PrimitiveFieldFunction
+MappedFacetAreaMatch | Mapped Facet Area Match | star.common.PrimitiveFieldFunction
+DeviationDistance.Root | DeviationDistance.Root | star.meshing.PartSurfaceDeviationDistanceFieldFunction
+Area | Area | star.common.PrimitiveFieldFunction
+Centroid | Centroid | star.common.PrimitiveFieldFunction
+EdgeLength | EdgeLength | star.meshing.EdgeLengthFieldFunction
+FaceQuality | FaceQuality | star.meshing.FaceQualityFieldFunction
+FreeEdges | FreeEdges | star.meshing.FreeEdgesFieldFunction
+NonmanifoldEdges | NonmanifoldEdges | star.meshing.NonmanifoldEdgesFieldFunction
+SurfacePatch | SurfacePatch | star.meshing.SurfacePatchFieldFunction
+Volume | Volume | star.common.PrimitiveFieldFunction
+Normal | Normal | star.common.PrimitiveFieldFunction
+RadialCoordinate | Radial Coordinate | star.common.PrimitiveFieldFunction
+PeriodicIndex | Periodic Index | star.common.PrimitiveFieldFunction
+FaceValidity | Face Validity | star.common.FaceValidityFunction
+SkewnessAngle | Skewness Angle | star.common.SkewnessAngleFunction
+LeastSquaresQuality | Least Squares Quality | star.metrics.LeastSquaresQualityFunction
+ZeroFaceAreaIndicator | Zero Face Area Indicator | star.common.ZeroFaceAreaIndicatorFunction
+BoundarySliverCellIndicator | Boundary Sliver Cell Indicator | star.metrics.BoundarySliverCellIndicatorFunction
+ChevronQuality | Chevron Quality | star.common.ChevronQualityFunction
+CellAspectRatio | Cell Aspect Ratio | star.metrics.CellAspectRatioFunction
+VolumeChange | Volume Change | star.common.VolumeChangeFunction
+PrismCellThickness | Prism Cell Thickness | star.common.PrimitiveFieldFunction
+FirstPrismLayerHeight | First Prism Layer Height | star.common.PrimitiveFieldFunction
+Iteration | Iteration | star.common.PrimitiveFieldFunction
+Density | Density | star.common.PrimitiveFieldFunction
+Pressure | Pressure | star.common.PrimitiveFieldFunction
+AbsolutePressure | Absolute Pressure | star.common.PrimitiveFieldFunction
+StaticPressure | Static Pressure | star.common.PrimitiveFieldFunction
+TotalPressure | Total Pressure | star.common.PrimitiveFieldFunction
+AbsoluteTotalPressure | Absolute Total Pressure | star.common.PrimitiveFieldFunction
+Velocity | Velocity | star.common.PrimitiveFieldFunction
+RelativeVelocity | Relative Velocity | star.common.PrimitiveFieldFunction
+RelativeTotalPressure | Relative Total Pressure | star.common.PrimitiveFieldFunction
+CellRelativeVelocity | Cell Relative Velocity | star.common.PrimitiveFieldFunction
+RadialVelocity | Radial Velocity | star.common.PrimitiveFieldFunction
+TangentialVelocity | Tangential Velocity | star.common.PrimitiveFieldFunction
+RelativeTangentialVelocity | Relative Tangential Velocity | star.common.PrimitiveFieldFunction
+MassImbalance | Mass Imbalance | star.common.PrimitiveFieldFunction
+FaceFlux | Mass Flow Rate | star.common.PrimitiveFieldFunction
+MassFlux | Mass Flux | star.common.PrimitiveFieldFunction
+PressureCoefficient | Pressure Coefficient | star.flow.PressureCoefficientFunction
+TotalPressureCoefficient | Total Pressure Coefficient | star.flow.TotalPressureCoefficientFunction
+FlowAngle | Flow Direction | star.common.PrimitiveFieldFunction
+WallShearStress | Wall Shear Stress | star.common.PrimitiveFieldFunction
+SkinFrictionCoefficient | Skin Friction Coefficient | star.flow.SkinFrictionCoefficientFunction
+VorticityVector | Vorticity | star.flow.VorticityVectorFunction
+Qcriterion | Q-Criterion | star.flow.QcriterionFunction
+Lambda2 | Lambda 2 criterion | star.flow.Lambda2Function
+Helicity | Helicity | star.flow.HelicityFunction
+LambVector | Lamb Vector | star.flow.LambVectorFunction
+TurbulentCharge | Turbulent Charge | star.flow.TurbulentChargeFunction
+EffectiveVolume | Effective Volume | star.common.PrimitiveFieldFunction
+GaussLSQ::Beta | LSQ gradient scaling factor | star.common.PrimitiveFieldFunction
+MaximumReconstructionCoefficient | Maximum Reconstruction Coefficient | star.common.PrimitiveFieldFunction
+DynamicViscosity | Dynamic Viscosity | star.common.PrimitiveFieldFunction
+EffectiveViscosity | Effective Viscosity | star.common.PrimitiveFieldFunction
+TurbulentViscosityRatio | Turbulent Viscosity Ratio | star.common.PrimitiveFieldFunction
+TurbulentViscosity | Turbulent Viscosity | star.common.PrimitiveFieldFunction
+TurbulentKineticEnergy | Turbulent Kinetic Energy | star.common.PrimitiveFieldFunction
+SpecificDissipationRate | Specific Dissipation Rate | star.common.PrimitiveFieldFunction
+TurbulentDissipationRate | Turbulent Dissipation Rate | star.common.PrimitiveFieldFunction
+WallDistance | Wall Distance | star.common.PrimitiveFieldFunction
+Ustar | Ustar | star.common.PrimitiveFieldFunction
+WallYplus | Wall Y+ | star.common.PrimitiveFieldFunction
+VirtualLocalHeatTransferCoefficient | Virtual Local Heat Transfer Coefficient | star.turbulence.VirtualLocalHeatTransferCoefficientFunction
+MINI_FxReport | Report: MINI_Fx | star.common.PrimitiveFieldFunction
+MINI_FyReport | Report: MINI_Fy | star.common.PrimitiveFieldFunction
+MINI_MhReport | Report: MINI_Mh | star.common.PrimitiveFieldFunction
+MINI_CLReport | Report: MINI_CL | star.common.PrimitiveFieldFunction
+MINI_CDReport | Report: MINI_CD | star.common.PrimitiveFieldFunction
+MINI_min_AbsolutePressureReport | Report: MINI_min_AbsolutePressure | star.common.PrimitiveFieldFunction
+MINI_min_FaceValidityReport | Report: MINI_min_FaceValidity | star.common.PrimitiveFieldFunction
+MINI_min_VolumeReport | Report: MINI_min_Volume | star.common.PrimitiveFieldFunction
+MINI_Cp | MINI_Cp | star.common.UserFieldFunction
+MassFlow1Report | Report: Mass Flow 1 | star.common.PrimitiveFieldFunction
+MassFlow2Report | Report: Mass Flow 2 | star.common.PrimitiveFieldFunction
+Minimum1Report | Report: Minimum 1 | star.common.PrimitiveFieldFunction
+Minimum2Report | Report: Minimum 2 | star.common.PrimitiveFieldFunction
+Minimum3Report | Report: Minimum 3 | star.common.PrimitiveFieldFunction
+Maximum1Report | Report: Maximum 1 | star.common.PrimitiveFieldFunction
+Maximum2Report | Report: Maximum 2 | star.common.PrimitiveFieldFunction
+MassFlow3Report | Report: Mass Flow 3 | star.common.PrimitiveFieldFunction
+MassFlow4Report | Report: Mass Flow 4 | star.common.PrimitiveFieldFunction
+Minimum4Report | Report: Minimum 4 | star.common.PrimitiveFieldFunction
+Minimum5Report | Report: Minimum 5 | star.common.PrimitiveFieldFunction
+Minimum6Report | Report: Minimum 6 | star.common.PrimitiveFieldFunction
+Maximum3Report | Report: Maximum 3 | star.common.PrimitiveFieldFunction
+Maximum4Report | Report: Maximum 4 | star.common.PrimitiveFieldFunction
+BadCellFlag | Bad Cell Indicator | star.common.PrimitiveFieldFunction
+MassFlow5Report | Report: Mass Flow 5 | star.common.PrimitiveFieldFunction
+MassFlow6Report | Report: Mass Flow 6 | star.common.PrimitiveFieldFunction
+Minimum7Report | Report: Minimum 7 | star.common.PrimitiveFieldFunction
+Minimum8Report | Report: Minimum 8 | star.common.PrimitiveFieldFunction
+Minimum9Report | Report: Minimum 9 | star.common.PrimitiveFieldFunction
+Maximum5Report | Report: Maximum 5 | star.common.PrimitiveFieldFunction
+Maximum6Report | Report: Maximum 6 | star.common.PrimitiveFieldFunction
+MINI_min_LeastSquaresQualityReport | Report: MINI_min_LeastSquaresQuality | star.common.PrimitiveFieldFunction

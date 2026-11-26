@@ -1,0 +1,80 @@
+{
+  "status": "PASS_SMOKE_DIAGNOSTIC",
+  "stage": "CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30",
+  "result": {
+    "status": "NUMERICAL_END_PASS",
+    "samples": 30,
+    "startup_s": 124.84300839999923,
+    "solver_step_median_s": 2.062945,
+    "solver_step_mean_s": 2.129318628,
+    "end_to_end_s": 248.09581059999982,
+    "dt_s": 0.0002,
+    "checkpoint_sha256_input": "f8f9d30841b48a96e4c9334f9077d1f328a180c7197f3496decef8aab706edec",
+    "checkpoint": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919\\FINAL.sim",
+    "checkpoint_sha256": "422d6a21752377008293c52d37b5190b9a8b1c202340abed010833ffa4c2cf1b",
+    "state": {
+      "solver_seconds": 63.71384499999999,
+      "time_s": 0.0059999999999999975,
+      "steps": 30,
+      "foil": true,
+      "status": "NUMERICAL_END_PASS",
+      "amplitude_target": 0.0,
+      "training_approved": false,
+      "reason": "",
+      "residual_pass": true
+    },
+    "transport_ok": true,
+    "training_approved": false
+  },
+  "AF_checkpoint": {
+    "time_s": 0.004999999999999999,
+    "history_states": {
+      "AF - Fixed VOF Solution History": 1,
+      "AF - Fixed VOF Solution History CALM_VOF_SHARP_SEALED_0_STABILIZE_FIRST_20261105_130636": 4,
+      "AF - Fixed VOF Solution History CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919": 2
+    },
+    "report_CL": 0.1524575032866682,
+    "step": 25,
+    "actual_flap_deg": 0.0,
+    "monitors": {
+      "AF_Fx Monitor": {
+        "count": 25,
+        "last": 46.341555986795235
+      },
+      "AF_Fz Monitor": {
+        "count": 25,
+        "last": 610.5306154907238
+      },
+      "AF_Mh Monitor": {
+        "count": 25,
+        "last": -10.630823947430311
+      },
+      "AF_CL Monitor": {
+        "count": 25,
+        "last": 0.1524575032866682
+      },
+      "AF_CD Monitor": {
+        "count": 25,
+        "last": 0.012019285192134879
+      },
+      "AF_Flap_pAbs_Min Monitor": {
+        "count": 25,
+        "last": 87566.80683876477
+      },
+      "AF_Time Monitor": {
+        "count": 25,
+        "last": 0.004999999999999999
+      },
+      "AF_Delta_Command_deg Monitor": {
+        "count": 25,
+        "last": 0.0
+      },
+      "AF_Delta_Measured_deg Monitor": {
+        "count": 25,
+        "last": 0.0
+      }
+    },
+    "report_CD": 0.012019285192134879
+  },
+  "case": "F:\\ntnu\\flap_control\\exploration_lab\\MINI_POC_2D_20261103\\mini_vof_20261103\\COMEBACK_20261104\\runs\\CALM_VOF_NATIVE_FULL_BAND_FIXED_SMOKE30_20261105_134919"
+}

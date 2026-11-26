@@ -1,0 +1,44 @@
+{
+  "status": "prepared_pending_compile_and_launch",
+  "case": "W01_W20L4_M10_FS020_dt05_diagnostic_r3",
+  "source": "E:\\ntnu\\quasi2d_waves_20261029\\W01_W20L4_M10_FS020_cycles_r2\\checkpoint_t0.668.sim",
+  "source_time_s": 0.668,
+  "source_history_sample": {
+    "time_s": "0.6680000000000005",
+    "step": "500",
+    "wall_s": "1453.6412017",
+    "max_speed_m_s": "22.146092550660438",
+    "max_CFL": "43.65576883733289",
+    "interface_CFL": "4.579445634408377",
+    "alpha_min": "0.0",
+    "alpha_max": "1.0",
+    "mass_kg": "38405.457743476385",
+    "water_volume_m3": "38.393933242272794",
+    "net_outward_mass_kg_s": "33.299281150084674",
+    "inward_mass_kg_s": "8533.381827706411",
+    "vof_substeps": "1",
+    "CD": "0.006145735627820072",
+    "CL_total": "0.34165951925924076",
+    "Fx_slice_N": "23.69549828662307",
+    "Fz_slice_N": "1317.3024424559287",
+    "pressure_drag_N": "3.0599950840367924",
+    "viscous_drag_N": "20.63550320258628"
+  },
+  "target_s": 1.2,
+  "dt_s": 0.0005,
+  "steps": 1064,
+  "inner": 10,
+  "changes": {
+    "dt_s": [
+      0.001,
+      0.0005
+    ]
+  },
+  "reinitialized": false,
+  "physical_speed_guard_m_s": 50,
+  "source_is_guard_failed": false,
+  "reason": "Air jet51.7866m/s in core at1.064 on1msbranch; wave-specific controlled temporal diagnosis on foil grid, distinct from historical no-foil mass-residual tests.",
+  "source_sha256": "5f74189d12aaa3689c52c64fd387855bf01da83c853b72e8578eb9b80ce18b72",
+  "macro_compile_pass": true,
+  "macro_sha256": "8fd7b3c4fe98f184bbfbe8b3ece769a3b547adfdc6025cc565c76f6e743e9b67"
+}

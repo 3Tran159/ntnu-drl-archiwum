@@ -1,0 +1,9 @@
+{
+  "change": "Split each imported native foil wall patch at 0.001-degree feature angle, exposing planar guide patches for unambiguous source-target correspondence; enable guide-edge cell quality enhancement",
+  "geometry_coordinates_unchanged": true,
+  "STL_unchanged": true,
+  "cell_size_controls_unchanged": true,
+  "reason": "Failed mesh had 41 negative-volume and 301 unclosed cells; minimum-volume centroid y=0.016234 rather than 0.020; bad cells also near leading edge, not only hinge",
+  "documentation": "Siemens 2606 Preparing Non-CAD Parts for Directed Meshing and Directed Meshing Reference",
+  "test_pending": true
+}

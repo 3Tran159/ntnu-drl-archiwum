@@ -1,0 +1,38 @@
+OVERNIGHT CFD SUMMARY - 30 OCTOBER 2026
+Campaign paused by the user for transport. Automation paused, STOP_ALL set. Separate HF_012_C003_regular_waves intentionally left running.
+
+SUPPORTED CALM RESULT
+M09:214908 cells, second-order time integration, dt1ms,10inner.
+Matched1.840-2.040s comparisons:
+M09/M07: CD+0.466698%, CL-0.164252%.
+M09/M08: CD-0.025574%, CL+0.016736%.
+Both coefficients satisfy1% against both finer comparable meshes.
+M09 half-dt sensitivity: CD-0.002423%, CL+0.001453%.
+Pressure/viscous drag remain separately reported; this is practical convergence support, not formal GCI.
+
+PREPARED WAVE INPUTS
+Depth24m retained; FifthOrderVofWave.
+M09 long80m domain:246885cells.
+M10 refined free-surface:282379cells shortdomain,317277cells longdomain.
+Foil/prisms preserved; calm and H0.5m/L20m paired inputs saved with matched BCs.
+Prepared inputs are not validated wave-force results.
+
+WAVE DIAGNOSTICS
+Environmental pressure outlet plus slip bed removed the prior short-pilot instability. Basepilot reached1.2s.
+The0.01% inlet-normalized mass criterion remains unmet.
+R11:40inner, native absolute phase peak0.011171%.
+R12:reporting-only trace proved VOF updates everyinner; error is not a reporting mismatch.
+R13:tighter VOF linear tolerance achieved, peak0.014625%; no remedy.
+R14:tighter pressure linear tolerance achieved, peak0.014248%; no remedy.
+Small gauge differences do not establish conservation. R14 calibrated local phase imbalance fields are saved for localization.
+No accepted original C01/W01/W02 foil-force comparisons or extra-wave campaign completed.
+
+TIMELINE AND LIMITATION
+Last own GPU test R14 ended02:05:40 local,0.750s,source unchanged,final.sim saved.
+Agent usage-limit errors occurred around02:03. No later own CFD launches are recorded; it would be incorrect to describe this as calculation continuing until morning.
+Morning work only verified/summarized saved output and paused the campaign.
+
+PRESENTATION
+English operational and professor dashboards were developed with mesh/control comparisons, experiment history, pressure/viscous drag, cost data and saved-state figures.
+Night readability checks covered1920/1360/390px and19-page print. R12/R13 diagnostic figure assets are saved; final optional figure integration should be verified after resume.
+Next work after explicit resume: localize the calibrated phase mass error, resolve it with a supported controlled test, then propagation/reflection/FS-grid/time checks and original waves.

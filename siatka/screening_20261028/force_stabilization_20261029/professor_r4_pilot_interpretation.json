@@ -1,0 +1,134 @@
+{
+  "status": "bounded_pilot_completed_configuration_diagnostics_pending",
+  "source_review": "wave_pilot_r4_review.json",
+  "source_spatial": "wave_pilot_r4_spatial_diagnostic.json",
+  "source_histories": "E:/ntnu/quasi2d_waves_20261029/W20_H24_X4_GPUprop_environmentalOutlet_dt1ms_r4",
+  "scope": "Independent read-only interpretation; no simulation or controller changes.",
+  "supported": [
+    "The Environmental pressure-outlet plus slip-bed configuration completed1.2s with finite independent histories and bounded phase fraction. Two settings changed, so improvement cannot be attributed uniquely to the pressure option.",
+    "Final water velocity maximum18.4707m/s is compatible with the target current plus wave motion. Final global maximum23.9395m/s occurs in air0.5m from the outlet; four final cells exceed20m/s, all air. This is a substantial improvement over R3's50m/s reversed water flow but still needs trend/local-field checks.",
+    "Core gauge first-cycle fundamental amplitude differences are+0.480 to+1.168percent and phase differences−0.369 to−0.475degrees. The first cycle includes startup, so these are preliminary propagation diagnostics."
+  ],
+  "inventory_vs_budget": {
+    "equal_phase_domain_inventory_difference_m3": 0.015254580515460248,
+    "equivalent_domain_level_difference_mm": 9.534112822162655,
+    "interpretation": "Difference of total water inventory versus the undamped analytical wave across the whole domain, not a measured uniform rise or core mean-level error. Outlet damping intentionally changes the downstream wave field; startup redistribution and numerical error must be separated.",
+    "core_gauge_first_cycle_mean_error_mm_range": [
+      -1.4411202372049268,
+      1.18425204995263
+    ],
+    "numerical_BDF2_residual": {
+      "all": {
+        "maxAbs_pct": 0.014519359569311293,
+        "signed_integral_kg": 0.03816105261190712,
+        "abs_integral_kg": 0.048717095299364174,
+        "sample_count": 1199
+      },
+      "toFirstT": {
+        "maxAbs_pct": 0.014519359569311293,
+        "signed_integral_kg": 0.028773922533240057,
+        "abs_integral_kg": 0.03654676301713435,
+        "sample_count": 846
+      },
+      "peak": [
+        {
+          "t": 0.6170000000000004,
+          "r": 1.1658915362365008,
+          "p": 0.013665850779015777
+        },
+        {
+          "t": 0.6180000000000004,
+          "r": 1.2386934620159948,
+          "p": 0.014519359569311293
+        },
+        {
+          "t": 0.6240000000000004,
+          "r": 0.9548213722773085,
+          "p": 0.011192584478626706
+        },
+        {
+          "t": 0.6250000000000004,
+          "r": 1.0022073091427757,
+          "p": 0.011748135211674803
+        }
+      ],
+      "from1to1p2": {
+        "maxAbs_pct": 0.0005954090900155253,
+        "signed_integral_kg": 0.0003346205822649991,
+        "abs_integral_kg": 0.0031049289354973955,
+        "sample_count": 201
+      }
+    },
+    "accumulated_BDF2_residual_mass_equivalent_to_first_period_mm": 0.01800530795281842,
+    "implication": "Summed dt*BDF2 residual to the first period is~0.02877kg, equivalent~0.018mm over the1.6m2 horizontal area under constant phase densities. Its scale is far below the9.53mm reference-inventory difference. Do not describe that difference as a numerical conservation leak or assume increasing inner iterations will eliminate it.",
+    "qualification": "Summed BDF2 residual is a discrete-budget diagnostic, not an independently measured physical water-level shift. Phase-specific budgets and zonal inventories improve interpretation.",
+    "analytic_inventory_discretization": "The spatially sampled analytical volume oscillates with phase even over four wavelengths. Equal-phase comparisons reduce this quadrature/phase effect; instantaneous whole-domain comparisons alone are insufficient.",
+    "next_reports": "Track actual, undamped-reference and flat-reference water inventories separately in inlet-forcing, protected-core and outlet-damping zones. Compare equal-phase values across complete cycles and report core gauge cycle means."
+  },
+  "guard_and_probe": {
+    "budget_peak_abs_pct_inlet": 0.01451935956931171,
+    "exceedance_times_s": [
+      0.617,
+      0.618,
+      0.624,
+      0.625
+    ],
+    "gate_pct_inlet": 0.01,
+    "gate_interpretation": "Existing campaign diagnostic criterion, not a universal CFD accuracy limit. Preserve it and investigate the exceedances; do not relax it to admit a longer run.",
+    "controlled_probe": "The same saved0.500s state continued to0.750s at20inner versus original10inner, with unchanged mesh, SO1ms and boundary conditions, brackets all four spikes and is a sound local inner-convergence comparison.",
+    "comparison_requirements": [
+      "Compare the identical0.500–0.750s interval, excluding only any explicitly documented restart-history initialization samples.",
+      "Compare signed/absolute integrated budget, peak residual, per-boundary flux, inventory, speed/phase bounds and core gauge differences; a smaller peak alone is insufficient.",
+      "The probe diagnoses inner sensitivity locally. It does not establish long-run propagation or a universally sufficient inner count."
+    ]
+  },
+  "wave_metrics": {
+    "RMS_gauge_error_mm_range": [
+      3.6134247193927638,
+      4.343983357362967
+    ],
+    "sampled_crest_to_trough_height_difference_pct": [
+      {
+        "x_m": -10,
+        "H_diff_pct": 1.695713573526314
+      },
+      {
+        "x_m": -5,
+        "H_diff_pct": 2.0047440040890985
+      },
+      {
+        "x_m": 0,
+        "H_diff_pct": 1.3294065754843931
+      },
+      {
+        "x_m": 2.5,
+        "H_diff_pct": 1.2589508959537588
+      },
+      {
+        "x_m": 5,
+        "H_diff_pct": 1.7352244250677051
+      },
+      {
+        "x_m": 10,
+        "H_diff_pct": 1.6470926036070255
+      },
+      {
+        "x_m": 15,
+        "H_diff_pct": 2.018012372664768
+      },
+      {
+        "x_m": 20,
+        "H_diff_pct": 1.431382145604232
+      }
+    ],
+    "distinction": "Fundamental-amplitude error and crest-to-trough wave-height error are different for a FifthOrder wave. The sampled height difference is+1.26 to+2.02percent, larger than the+0.48 to+1.17percent fundamental-amplitude difference. Report both."
+  },
+  "longer_run_gates": [
+    "Resolve the prescribed numerical-budget gate with matched evidence, and retain unchanged finite-value, phase-bound and50m/s guards.",
+    "Admit only a bounded continuation with checkpoints and zonal inventories; current1.2s is1.416periods, shorter than80m-domain phase transit~3.389s.",
+    "Require repeatable complete-cycle core height, fundamental phase, mean level and zonal inventory without secular drift; inspect outlet-air speed/pressure evolution.",
+    "Perform appropriate reflection/propagation assessment after enough transit time. A quiet central gauge or a boundary-zone analytical match alone cannot demonstrate low reflections.",
+    "Demonstrate wave-specific timestep and free-surface-grid sensitivity before final foil-force comparisons. Calm-mesh validation and this coarse no-foil mesh do not transfer automatically.",
+    "Once wave settings are supported, compare matched calm and wave cases using the same domain/grid/settings and average complete settled encounter cycles."
+  ]
+}

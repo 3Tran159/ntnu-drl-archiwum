@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "at": "2026-10-30T14:27:17.302434+01:00",
+  "scope": "Dynamic campaign_hold.json pause presentation only. No CFD, service, locks, STOP or control actions. Other agent mesh work untouched.",
+  "sources_changed": [
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\case_diagnostic_panel.py",
+    "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\build_manual_dashboard_copy.py"
+  ],
+  "widths_px": [
+    1920,
+    1360,
+    390
+  ],
+  "surfaces": [
+    "operational",
+    "professor"
+  ],
+  "browser_pass": true,
+  "workflow": {
+    "http": 200,
+    "paused": true,
+    "readiness": {
+      "ready": false,
+      "macro": "javac_passed",
+      "api_audit": "zero_step_API_audit_passed",
+      "tests": "passed",
+      "message": "Local recipe checks are still in progress"
+    }
+  },
+  "mock_checks": [
+    "active hold visible",
+    "absent hold hidden",
+    "hold reason HTML escaped"
+  ],
+  "print": [
+    {
+      "surface": "operational",
+      "pages": 47,
+      "diagnostic_pages": [
+        {
+          "page": 6,
+          "image": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\campaign_hold_ui_qa_20261030\\operational_print_diagnostics_page_6.png",
+          "pause_and_deferred": true,
+          "prior_error_retained": true
+        }
+      ]
+    },
+    {
+      "surface": "professor",
+      "pages": 26,
+      "diagnostic_pages": [
+        {
+          "page": 5,
+          "image": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\campaign_hold_ui_qa_20261030\\professor_print_diagnostics_page_5.png",
+          "pause_and_deferred": true,
+          "prior_error_retained": true
+        }
+      ]
+    }
+  ],
+  "visual_review": "Passed: operational desktop hold banner, professor mobile deferred card and professor diagnostic print page 5 visually inspected. No clipping or overlap; previous error and pause remain clear.",
+  "artifact_directory": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\campaign_hold_ui_qa_20261030",
+  "hold_record": {
+    "active": true,
+    "status": "paused_by_user_pending_mesh_study",
+    "reason": "Waiting for the other agent's mesh convergence and optimization results before any C01 or wave launch.",
+    "updated_at": "2026-10-30T14:24:26.098931+01:00",
+    "probe_launched": false,
+    "scope": "This quasi-2D campaign only; other mesh study and HF session remain untouched.",
+    "resume_requires": "User instruction after mesh convergence and optimization review",
+    "checkpoint_policy_on_future_resume_s": 0.05
+  },
+  "no_automatic_launch_claim": true,
+  "probe_label": "Deferred \u2014 not launched",
+  "prior_error_evidence_preserved": true
+}

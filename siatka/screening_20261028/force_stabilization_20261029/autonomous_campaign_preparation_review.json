@@ -1,0 +1,441 @@
+{
+  "title": "Reusable preparation and parameterization for autonomous bounded wave campaign",
+  "date": "2026-10-30",
+  "status": "Read-only source inspection; proposal only, no solvers or controllers modified",
+  "scope": {
+    "water_depth_m": 24,
+    "waterline_z_m": 2,
+    "z_bounds_m": [
+      -22,
+      8
+    ],
+    "span_y_m": [
+      0.01,
+      0.03
+    ],
+    "U_m_s": 18,
+    "foil_geometry_angle_submergence": "Preserve existing geometry/angle and2m submergence",
+    "wave_model": "FifthOrderVofWave",
+    "max_mesh_number": 15,
+    "cycle_policy": "Use each case's actual FifthOrder getter period, >=10 total wave periods and review at20 if not repeating; wave_cycle_repeatability.py. Do not reuse W01 period for other heights/wavelengths."
+  },
+  "ready_sources": {
+    "short_M10_mesh": "F:/ntnu/mesh_screening_20261028/quasi2d_012_20261029/M10_FS020_r1/mesh.CGNS",
+    "short_M10_sim": "F:/ntnu/mesh_screening_20261028/quasi2d_012_20261029/M10_FS020_r1/mesh.sim",
+    "short_cells": 282379,
+    "short_bounds_x_m": [
+      -11.9,
+      30.94
+    ],
+    "long_W20_X4_mesh": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2/mesh.CGNS",
+    "long_W20_X4_sim": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2/mesh.sim",
+    "long_cells": 317277,
+    "prepared_calm": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_env_setup_r1/prepared.sim",
+    "prepared_wave": "E:/ntnu/quasi2d_waves_20261029/W01_W20L4_M10_FS020_env_setup_r1/prepared.sim",
+    "note": "Prepared inputs have zero flow steps. Saved computed W01final.sim is only for its verified continuation, never a fresh H/L input."
+  },
+  "case_matrix": [
+    {
+      "id": "W01",
+      "height_m": 0.5,
+      "wavelength_m": 20,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -35,
+        45
+      ],
+      "forcing_zone_m": [
+        -35,
+        -15
+      ],
+      "unforced_core_m": [
+        -15,
+        25
+      ],
+      "damping_zone_m": [
+        25,
+        45
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "M10_FS020",
+      "append_compatible_with_M10_source": true,
+      "preparation": "Existing audited prepared input; continue authorized saved field in separate new continuation ID",
+      "matched_calm_key": "C_L20_X4_FS020",
+      "special": null
+    },
+    {
+      "id": "W02",
+      "height_m": 0.5,
+      "wavelength_m": 30,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -52.5,
+        67.5
+      ],
+      "forcing_zone_m": [
+        -52.5,
+        -22.5
+      ],
+      "unforced_core_m": [
+        -22.5,
+        37.5
+      ],
+      "damping_zone_m": [
+        37.5,
+        67.5
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "M10_FS020",
+      "append_compatible_with_M10_source": true,
+      "preparation": "New parameterized zero-step copy and audits",
+      "matched_calm_key": "C_L30_X4_FS020",
+      "special": null
+    },
+    {
+      "id": "W03",
+      "height_m": 0.25,
+      "wavelength_m": 20,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -35,
+        45
+      ],
+      "forcing_zone_m": [
+        -35,
+        -15
+      ],
+      "unforced_core_m": [
+        -15,
+        25
+      ],
+      "damping_zone_m": [
+        25,
+        45
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "New FS0125 candidate recommended for matched height study; M10 FS020 alone remains exploratory",
+      "append_compatible_with_M10_source": true,
+      "preparation": "New parameterized zero-step copy and audits",
+      "matched_calm_key": "C_L20_X4_FS0125",
+      "special": "Run H0.5 baseline on identical refined geometry/grid/numerics before attributing force changes to height."
+    },
+    {
+      "id": "W04",
+      "height_m": 0.75,
+      "wavelength_m": 20,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -35,
+        45
+      ],
+      "forcing_zone_m": [
+        -35,
+        -15
+      ],
+      "unforced_core_m": [
+        -15,
+        25
+      ],
+      "damping_zone_m": [
+        25,
+        45
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "M10_FS020",
+      "append_compatible_with_M10_source": true,
+      "preparation": "New parameterized zero-step copy and audits",
+      "matched_calm_key": "C_L20_X4_FS020",
+      "special": "Audit nonlinear crest/trough against refined FS band z1.6..2.4 and expand coherently only with a matched H0.5 baseline."
+    },
+    {
+      "id": "W05",
+      "height_m": 0.25,
+      "wavelength_m": 30,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -52.5,
+        67.5
+      ],
+      "forcing_zone_m": [
+        -52.5,
+        -22.5
+      ],
+      "unforced_core_m": [
+        -22.5,
+        37.5
+      ],
+      "damping_zone_m": [
+        37.5,
+        67.5
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "New FS0125 candidate recommended for matched height study; M10 FS020 alone remains exploratory",
+      "append_compatible_with_M10_source": true,
+      "preparation": "New parameterized zero-step copy and audits",
+      "matched_calm_key": "C_L30_X4_FS0125",
+      "special": "Run H0.5 baseline on identical refined geometry/grid/numerics before attributing force changes to height."
+    },
+    {
+      "id": "W06",
+      "height_m": 0.75,
+      "wavelength_m": 30,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -52.5,
+        67.5
+      ],
+      "forcing_zone_m": [
+        -52.5,
+        -22.5
+      ],
+      "unforced_core_m": [
+        -22.5,
+        37.5
+      ],
+      "damping_zone_m": [
+        37.5,
+        67.5
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "M10_FS020",
+      "append_compatible_with_M10_source": true,
+      "preparation": "New parameterized zero-step copy and audits",
+      "matched_calm_key": "C_L30_X4_FS020",
+      "special": "Audit nonlinear crest/trough against refined FS band z1.6..2.4 and expand coherently only with a matched H0.5 baseline."
+    },
+    {
+      "id": "W07",
+      "height_m": 0.5,
+      "wavelength_m": 10,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -17.5,
+        22.5
+      ],
+      "forcing_zone_m": [
+        -17.5,
+        -7.5
+      ],
+      "unforced_core_m": [
+        -7.5,
+        12.5
+      ],
+      "damping_zone_m": [
+        12.5,
+        22.5
+      ],
+      "remote_dx_max_m": 0.1,
+      "base_grid": "M10_FS020",
+      "append_compatible_with_M10_source": false,
+      "preparation": "New audited clipping/rebuild required",
+      "matched_calm_key": "C_L10_X4_FS020",
+      "special": null
+    },
+    {
+      "id": "W08",
+      "height_m": 0.5,
+      "wavelength_m": 40,
+      "domain_wavelengths": 4,
+      "x_bounds_m": [
+        -70,
+        90
+      ],
+      "forcing_zone_m": [
+        -70,
+        -30
+      ],
+      "unforced_core_m": [
+        -30,
+        50
+      ],
+      "damping_zone_m": [
+        50,
+        90
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "M10_FS020",
+      "append_compatible_with_M10_source": true,
+      "preparation": "New parameterized zero-step copy and audits",
+      "matched_calm_key": "C_L40_X4_FS020",
+      "special": null
+    },
+    {
+      "id": "W01_X3",
+      "height_m": 0.5,
+      "wavelength_m": 20,
+      "domain_wavelengths": 3,
+      "x_bounds_m": [
+        -25,
+        35
+      ],
+      "forcing_zone_m": [
+        -25,
+        -5
+      ],
+      "unforced_core_m": [
+        -5,
+        15
+      ],
+      "damping_zone_m": [
+        15,
+        35
+      ],
+      "remote_dx_max_m": 0.2,
+      "base_grid": "M10_FS020",
+      "append_compatible_with_M10_source": true,
+      "preparation": "New parameterized zero-step copy and audits",
+      "matched_calm_key": "C_L20_X3_FS020",
+      "special": "Proposed centered60m geometry, not a historical verified bound. Keep centerx5, unchanged20m zone lengths; review damping beginningx15 against foil/wake. Compare common core gauges."
+    }
+  ],
+  "reuse_components": {
+    "extension": {
+      "path": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/extend_m09_wave_domain.py",
+      "invocation": "scientific_python extender.py source.CGNS target.CGNS xmin xmax",
+      "dependencies": {
+        "scientific_python": "E:/Program Files/Siemens/21.02.007-R8/STAR-CCM+21.02.007-R8/star/lib/python/python.exe",
+        "numpy_h5py": "F:/ntnu/mesh_screening_20261028/quasi2d_012_20261029/deps311"
+      },
+      "current_hardcodes": [
+        "dxmax=.2",
+        "y=.01..03",
+        "z=-22..8",
+        "metadata M09 although M10 caller makes a copy with renamed provenance"
+      ],
+      "guard": "Requires xmin<old_xmin AND xmax>old_xmax. Both sides must extend; cannot crop or retain equal bounds.",
+      "preserves": "Every original polygon and coordinate; adds conforming vertical-chain strips, rebuilds signed NFACE and one-cell-span connectivity.",
+      "new_parameters": [
+        "dxmax (0.1 forL10;0.2 otherwise)",
+        "source_design_id",
+        "xmin/xmax",
+        "output unique path"
+      ],
+      "predicted_cells_not_acceptance": {
+        "L20_X3": 298627,
+        "L30_X4": 354378,
+        "L40_X4": 391852
+      },
+      "prediction_basis": "282379 source cells plus187 inlet segments*ceil(extension/.2)+186 outlet segments*ceil(extension/.2). Actual builder/audit count must govern."
+    },
+    "extension_controller": {
+      "path": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/run_wave_fs_extension_r2.py",
+      "one_shot_completed": true,
+      "reuse": "Use as template in a new parameterized controller; never rerun completed one-shot. Existing result gate, source hashes,24GB free-memory/12GB disk precheck, CPU1 import/topology checks must remain."
+    },
+    "finalizer": {
+      "path": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2/FinalizeC01W20L4M10FS.java",
+      "audit": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2/AuditC01W20L4M10FS.java",
+      "topology_audit": "E:/ntnu/quasi2d_waves_20261029/C01_W20L4_M10_FS020_mesh_r2/audit_imported_topology.py",
+      "parameterize": [
+        "Unique class names/output/import paths",
+        "Expected cells from mesh.validation.json",
+        "Audit output/source labels"
+      ],
+      "important": "Import new region, copy physics/boundary properties, rebind forces to new HF_012_wall, remove old region. Verify independent quality and re-exported topology."
+    },
+    "input_setup": {
+      "controller": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/run_foil_wave_m10_setup_r1.py",
+      "macro": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/PrepareFoilWaveM10R1.java",
+      "current_env": [
+        "NTNU_FOIL_PREP_OUT",
+        "NTNU_FOIL_PREP_WAVE"
+      ],
+      "new_parameters": [
+        "expected_cells",
+        "height",
+        "wavelength",
+        "xmin",
+        "xmax",
+        "forcing_length",
+        "damping_length",
+        "gauge_xs",
+        "source_volume/span_area",
+        "unique wave name"
+      ],
+      "one_shot_completed": true,
+      "warning": "Changing only wavelength/height would leave wrong zone lengths, boundary-plane/area expectations and fixed cell count."
+    },
+    "native_refinement": {
+      "macro": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/MeshRawM10_FS020_r1.java",
+      "audit_raw": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/AuditRawM10_FS020_r1.java",
+      "extrusion": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\exact_extrusion.py",
+      "finalize": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/FinalizeM10_FS020_r1.java",
+      "audit_final": "F:/ntnu/mesh_screening_20261028/force_stabilization_20261029/AuditFinalM10_FS020_r1.java",
+      "controls": {
+        "operation": "Q2D_directed",
+        "auto_source": "Q2D_polygon_prisms",
+        "free_surface_control": "Q2D_free_surface",
+        "free_surface_current_m": 0.02,
+        "free_surface_target_for_H025_m": 0.0125,
+        "free_surface_geometry_band_z_m": [
+          1.6,
+          2.4
+        ],
+        "base_m": 0.25,
+        "foil_control": "Q2D_foil_size",
+        "near_foil_control": "Q2D_near_foil",
+        "prism_first_m": 1.530612244897959e-06,
+        "prism_layers": 48,
+        "prism_total_m": 0.01546
+      },
+      "API": "((VolumeCustomMeshControl)auto.getCustomMeshControls().getObject(\"Q2D_free_surface\")).getCustomValues().get(VolumeControlSize.class).setRelativeSize(fs_m/base*100);",
+      "warning": "Native target extrusion required prior reconstruction; preserve source-plane audit/extrusion/final-import workflow. Regenerated foil edges/prisms must be compared, not assumed identical.",
+      "controller": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\build_wave_fs020_r1.py",
+      "verified_seed": "F:/ntnu/mesh_screening_20261028/quasi2d_012_20261029/M03/mesh.sim",
+      "macro_template": "F:\\ntnu\\mesh_screening_20261028\\force_stabilization_20261029\\MeshQ2DM04.java",
+      "native_builder_parameterization": "Clone completed one-shot builder to a newID. build(c) already reads free_surface_m; change design/id/mesh_number/publish paths/allocation exact-ID allowlist, keeping E-backed verified junctions, sourcehash, CPUlock, memory, quality, topology guards. Never rerun completedmain. ImportedM10mesh.sim is not the verified native-regeneration seed."
+    }
+  },
+  "setup_API": {
+    "wave": "wm.getVofWaveManager().createVofWave(FifthOrderVofWave.class, uniqueName)",
+    "wavelength": "w.getSpecificationOption().setSelected(VofWaveSpecificationOption.Type.WAVE_LENGTH_SPECIFIED);w.getVofWaveSpecification().getWaveLength().setValue(lambda);",
+    "height_depth": "w.getWaveHeight().setValue(H);w.getWaterDepth().setValue(24);",
+    "frame": "getPointOnLevel().setComponents(0,0,2);getVerticalDirection().setComponents(0,0,1);getAdvancingDirection().setComponents(1,0,0);getCurrent()/getWind().setComponents(18,0,0); preserve existing verified sign convention and audit encounter direction.",
+    "front": "getClass().getMethod(\"setFirstWaveFront\",boolean.class).invoke(w,false); verify getFirstWaveFront false.",
+    "period": "w.getWavePeriod().getValue(); persist actual result per case; reject nonfinite/nonpositive.",
+    "zones": "Region VofWaveZoneOptionEnum.FORCING_DAMPING; only inlet forcingYES/outlet dampingYES. Boundary VofWaveForcingLength/VofWaveDampingLength ConstantScalarProfileMethod.setConstant(lambda). All other flagsNO.",
+    "bindings": "Initial velocity/pressure/phase and inlet velocity/phase bind selected wave; outlet/top pressure/phase bind FlatVofWave Calm. ForcingVofWaveSpecification binds selected wave.",
+    "BCs": "ENVIRONMENTAL outlet with BOUNDARY_NORMAL backflow and SPECIFIED scalar; STATIC top with EXTRAPOLATED backflow direction and SPECIFIED scalar; bed SLIP; foil NO_SLIP; span symmetry.",
+    "zero_steps": "Fresh disposable zero-time mesh.sim copy only; clearSolutionWithoutMeshReset/initializeSolution; never use this initialization path on a computed continuation."
+  },
+  "audit_parameter_formulas": {
+    "domain_length": "xmax-xmin",
+    "inlet_outlet_area_m2": 0.6,
+    "top_bottom_area": "(xmax-xmin)*0.02",
+    "span_boundary_area": "mesh.validation.total_volume_m3 /0.02 (fluid cross-section, not full rectangle)",
+    "foil_area": "Measured preserved foil perimeter*0.02; baselineperimeter2.420247199693753m",
+    "planes": "inlet=xmin;outlet=xmax;bottom=-22;top=8;span=.01/.03",
+    "gauges": "Standard4lambda proposal x/lambda=[-.5,-.25,.125,.25,.5,.75,1] maps existingW01 gauges and stays in unforced core. Ensure no gauge intersects foil; planeheight30m, eta=integral(alpha)/.02-24. For3lambda comparison use shared core gauges such as[-2.5,2.5,5,10,12.5] and label any forcing/damping gauges separately."
+  },
+  "blocking_geometry": {
+    "W07": "Source x-width42.84m exceeds required40m domain. Existingappendbuilder correctly rejects outlet22.5<30.94. Implement separate conservative source-polygon clipping atx22.5 (preserve all interior/foil vertices), conforming boundary chain and signed-connectivity rebuild, or native remesh; then independent imported topology/quality/volume/foil-prism audits. Never relax append guard or label80m as4lambda.",
+    "W01_X3": "[-25,35] is a specific new proposed60m domain, append-compatible. Damping beginsx15, forcingendsx-5; this changes absorption positions along with boundary placement. Inspect near-wake overlap and report this in domain sensitivity.",
+    "lower_H": "M10 .020m gives only nominal12.5 cells/H forH.25 before actual polygon geometry. Initial use is exploratory. A defensible height refinement uses a newFS.0125 family plus identicalH.5 baseline andmatchedcalm; no simultaneousgrid+height attribution."
+  },
+  "mesh_number_budget": {
+    "existing": 10,
+    "proposed_next": "M11_FS0125 for lower-height matched studies",
+    "reserve": "M12 may identify L10 rebuilt/clipped domain if treated as a distinct mesh design; preserve M13\u2013M15 for demonstrated sensitivity needs. Extended-domain variants of the same audited source should keep family provenance and distinct domain IDs.",
+    "maximum": 15
+  },
+  "matched_calm_policy": [
+    "At least one calm reference per unique tuple(source-grid geometry,x-bounds,z-bounds,BCs/zone lengths,solver/time settings).",
+    "Existing80mM10 calm INPUT may be reused; no completed matchedcalm force result was established by preparation.",
+    "L30X4,L40X4,L10X4,L20X3 require their own calm; refinedFS0125 L20/L30 require their own calm.",
+    "H.25 needs H.5 on same refined grid. For a single coherentheightcurve use that grid also forH.75, or show separate pairwise comparisons against each grid-matchedH.5 baseline."
+  ],
+  "execution_order": [
+    "Finish authorizedW01 continuation; create/run its matchedC01 when resourcequeue permits.",
+    "Prepare audited L30X4 andmatchedC01/W02; run originals andW01X3/domain check.",
+    "Do required pairedgrid/time/propagation diagnostics, preserving exploratoryflags.",
+    "Only then boundedW03\u2013W08 with the statedmatched baselines. Missinggeometry is explicitblocked job, never silentlysubstituted."
+  ],
+  "autonomy_limits": [
+    "Use new IDs and manifests; completed one-shot scripts must not rerun.",
+    "SequentialownGPU underrootqueue.lock; CPUpreparation onlyafterfreshprocess/memory/CPUlock checks.",
+    "Preserve sourcehashes and everyattempt; no continuation ofphysicallyguardfailedfields.",
+    "Static0.01% mass-review threshold remainsvisible; userexploratoryexception isnotformalvalidation.",
+    "A preparedinput, completecyclecount, or repeatedforcewaveform doesnotindividuallyprovewaveforceaccuracy.",
+    "Use E forlargefiles. No private licensing/service data in HTML orlogs."
+  ]
+}

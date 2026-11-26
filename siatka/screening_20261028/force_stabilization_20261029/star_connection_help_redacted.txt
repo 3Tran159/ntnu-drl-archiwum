@@ -1,0 +1,194 @@
+
+
+Usage: starccm+ [-server] [<options> ...] [<simfile>]
+Where:
+  -server                # Starts the Simcenter STAR-CCM+ server. The default is to start the Simcenter STAR-CCM+ client.
+
+General options:
+  -info                  # Prints information about the simulation file.
+  -ini <file>            # Specify an .ini file to provide default Simcenter STAR-CCM+ arguments.
+  -new                   # Create a new simulation. If a simulation file is named and it does not exist, it is created.
+  -template <file>       # Create a new simulation using data from indicated template file.
+  -dmproject             # Specify Design Manager mode.
+  -loc                   # Prevent the server locator from starting.
+  -v, -vv                # Verbose mode. Prints environment changes and subcommands.
+  -version               # Print the version information and exit
+  <simfile>              # Use the supplied simulation file (eg. star.sim).
+
+License options:
+  -lite                  # Use Lite Session license (reduced functionality).
+  -powerpre              # Use 10 DOEtoken licenses (reduced functionality).
+  -nosuite               # Do not check out suite licenses for additional nodes.
+  -tokensonly            # Only use DOEtoken licenses.
+  -notokens              # Do not use DOEtoken licenses.
+  -doe-prefer-hpcdomains # Use hpcdomains licenses before using DOEtoken licenses for optimization studies.
+  -power                 # Use Power Session license option.
+  -podkey  REDACTED       # Specify a Power on Demand license key.
+  -doeuuid  <value>      # Specify a DoE UUID.
+  -doepower              # Use Power Session license for an optimization session license.
+  -readonly              # Open a simulation in read-only mode (no license required).
+  -dmnoshare             # Design Manager does not use shared session license.
+  -passtodesign          # Design Manager passes these options to the compute simulations.
+  -preallocpower         # Design Manager pre-allocate Power Session license for design studies.
+  -licpath <path:...>    # Specify a license path that overrides the default license path.
+  -reserve <lic1,...>    # Specify which add-on licenses to reserve when a simulation is created/restored.
+  -noreserve             # Specify that no add-on licenses will be reserved when a  simulation is created/restored.
+  -noretry               # Specify no retry of required licenses on critical operation.
+  -norelease             # Specify no release of reader licenses after geometry import.
+  -license <option>      # Use alternate license option. (cd, ugs, salt, cloud, unlimited)
+
+Client options:
+  -batch [command,...]   # Run in batch mode (no UI), commands are mesh, run, step or Java macro files.
+  -batch-report          # Write a summary report of system usage of a batch run.
+  -benchmark [<options>] # Collect performance data.
+  -benchmarkhelp         # Print usage information for -benchmark options.
+  -msjob                 # Submit to the Windows HPC Server job scheduler.
+  -headnode <machine>    # Specify the Windows HPC Server job scheduler to submit into.
+  -classpath <classpath> # Specify a classpath for macro files.
+  -config <id>           # Use a previously saved machine configuration (server command line).
+  -save-config <id>      # Save the current server command line as a machine configuration.
+  -fontsize <size>       # Specify the font size for the user interface.
+  -host <host>[:<port>]  # Specifies the server host and optional port to join an existing session.
+  -port <port>           # Specifies the server port to join an existing session.
+  -locale <locale>       # Override the default locale (en:US, ja, ru:RU, ko, zh).
+  -m[acro] <file>        # Runs the specified Java macro file upon client startup.
+  -noexit                # Do not shutdown the server after batch macro execution.
+  -on [user@]<host>      # Remote host and username to launch serial server.
+  -reset                 # Restore default client layout and settings.
+  -time                  # Print server elapsed and cpu times after a batch run.
+  -clientldlibpath <path;...>
+                         # Append directories to the client PATH.
+
+Visualization options:
+  -graphics <auto, native, mesa, mesa_swr>
+                         # Set graphics mode for client to automatic (default),
+                         # native system OpenGL, or software-based Mesa (SWR) OpenGL.
+  -rthreads <number_of_threads>
+                         # Specify the number of threads used for rendering on the client.
+  -rr <server, host:port, host>
+                         # Enables remote rendering. When the given argument equals 'server' then rendering is performed by
+                         # the server (server mode). When the argument is of the form 'host:port' then an existing renderer
+                         # will be used (dedicated mode). Otherwise, a new renderer is spawned on 'host' (ad hoc mode)
+  -rgraphics <auto, egl, native, mesa, mesa_swr>
+                         # Set graphics mode for remote rendering in server mode to automatic (default),
+                         # EGL, native system OpenGL, or software-based Mesa (SWR) OpenGL.
+  -agraphics <auto, egl, native, mesa, mesa_swr>
+                         # Set graphics modefor remote rendering in ad hoc mode to automatic (default),
+                         # EGL, native system OpenGL, or software-based Mesa (SWR) OpenGL.
+  -agpu <auto, gpu_index>
+                         # Selects a specific GPU to use for remote rendering in ad hoc mode
+  -rrthreads <number_of_threads>
+                         # Specify the number of threads used for remote rendering in server mode.
+  -arthreads <number_of_threads>
+                         # Specify the number of threads used for remote rendering in ad hoc mode.
+
+Server options:
+  -collab                # Enable collaboration (allow other users to connect to server).
+  -load                  # Load simulation file without waiting for a client to connect.
+  -port <port>           # Specify server port to open.
+  -portrange <range>     # Specify the number of ports the server can attempt to bind to.
+  -rsh <rsh command>     # Specify the remote shell command to use (default rsh).
+  -cpubind <policy[,v|vv]>
+                         # Bind processes to cores. Binding policies include off, bandwidth, or latency
+                         # (bandwidth is the default). Adding "v" requests a report showing the process
+                         # binding layout, and "vv" will show an extended version of the binding report.
+  -jobmanagerurl <URL>   # URL of the job manager instance (ReST interface).
+  -taskid <pid>          # Task ID from the Job Manager.
+  -noconnect             # Specify a session that is exclusive to the Simcenter STAR-CCM+ console session that launched it.
+  -ldlibpath <path;...>
+                         # Append directories to the server PATH.
+  -gpgpu <[force:]ids, auto[:n]
+                         # Specify the GPGPU indices 'ids' which should be used for the server.
+                         # Use 'force:ids' to force the indices without checking for validity.
+                         # The indices can be specified as a comma-separated list, e.g.: 1,2,5.
+                         # Use 'auto' for automatic GPGPU selection. Use 'auto:n' to automatically
+                         # select up to n GPGPUs on each host. Unoccupied/unutilized GPGPUs will be preferred.
+                         # Please refer to the User's Guide for more information.
+ -processdistribution <process distribution option>
+                          # Specify the process distribution procedure in undersubscribed multi-node runs.
+                          # Available options are:
+                          #   - compact    : Processes will fill whole nodes first before moving on to
+                          #                  the next node.
+                          #                  Default option in CPU-only execution.
+                          #   - spread     : Processes are distributed round-robin across all compute nodes,
+                          #                  such that they are distributed as equally as possible.
+                          #                  Default option in GPGPU-enabled execution.
+                          #   - gpgpuaware : Processes will be placed on one node until the number of
+                          #                  available GPGPUs is reached and only then the next node will
+                          #                  be used. Expects homogeneous hardware across all nodes
+                          #                  or explicit resource specification, i.e. '-gpgpu file.txt'
+                          #                  AND -on/-machinefile.
+                          # In fully subscribed runs all three options yield the same process placement
+   -pd <process distribution option>
+                          # Specify the process placement procedure in undersubscribed multi-node runs.
+  -flexiblaslib <lib>    # Select the math library that should be used by FlexiBLAS.
+                         # This must either be AOCL or MKL on x86_64 systems and uses the libraries
+                         # shipped with Simcenter STAR-CCM+.
+                         # To select a custom math library, the path to the dynamic library (.dll)
+                         # file can also be specified.
+
+Parallel options:
+  -machinefile <machine resource file>
+                         # Host resource file.
+                         #   - A list of machine hostnames on which processes can be spawned.
+                         #   - Each hostname must appear on a separate line and can be appended by a
+                         #     colon and the number of CPUs/Cores on the host.
+                         #   - Lines beginning with the hash symbol will be interpreted as comments.
+                         #   - Host loads are determined using round-robin fashion up to the total
+                         #     process count. Then processes will be allocated to the hosts using that
+                         #     loading and filling all the CPUs/Cores of a host before allocating to
+                         #     the next host.
+                         #   - Hosts may appear more than once.
+  -mpi <driver[:"driver specific expert options"]>
+                         # MPI driver used for communication between processes.
+                         #   - Available drivers :
+                         #       ms    - supports Microsoft MPI
+                         #       intel - supports Intel MPI
+  -fabric <fabric or fabric interface>
+                         # Specify the fabric to be used by MPI. If no fabric is specified MPI will
+                         # pick a fabric. a fabric. If option passed as upper-case then any possible
+                         # fallbacks are disabled. Options include:ons include:
+                         #   tcp,TCP     : Ethernet (Intel MPI)
+                         #   ibv,IBV     : Infiniband using OFED Verbs (Intel MPI)
+                         #   opa,OPA     : Intel Omni-Path (Intel MPI)
+                         #   psm,PSM     : Intel Performance Scaled Messaging (Intel MPI)
+                         #   psm2,PSM2   : Intel Performance Scaled Messaging 2 (Intel MPI)
+                         #   psm3,PSM3   : Intel Performance Scaled Messaging 3 (Intel MPI)
+                         #   ofi,OFI     : OpenFabrics Interfaces (Intel MPI)
+                         #   ucx,UCX     : Unified Communication X (Intel MPI)
+  -fabricverbose         # additional verbosity that can be used to identify the selected fabric
+  -mpiflags <options>    # Specify expert options to the MPI driver. -mpiflags and -mppflags are synonymous
+  -mpitest [<options>]   # Conduct a series of MPI stress tests and then exit.
+                         # Options include :
+                         #   -nsamples <number of samples per test>
+                         #   -msglens <command separated list of message lengths to use>
+                         #   -tests <comma separated lists of tests to run>
+                         #     available tests include :
+                         #        Broadcast       - simply broadcasts data from one process
+                         #        Reduce          - sums data from all processes
+                         #        AllReduce       - sums data from all processes and returns result on all processes
+                         #        Gather          - gathers identically sized data to one process
+                         #        AllGather       - gathers identically sized data and returns to all processes
+                         #        Scatter         - scatter identically sized data to from one process
+                         #        ISendRecv       - non-blocking send/recv between process pairs
+                         #        AsynchExchange  - exchange data between process pairs
+  -np <np[,npcosim]>     # Specify the number of parallel processes (and optionally for a co-simulating code).
+                         # If no hosts are specified via -on or -machinefile, all processes will be started on
+                         # the local host.
+  -tpp <tpp>             # Specify the number of threads per process (where applicable).
+  -on <host[:np],...>    # Specify hosts to run processes on.
+                         #   - Rather than specifying hosts in a machine file they may also be
+                         #     specified directly on the command line.
+                         #   - Each hostname can be appended with a colon and the number of CPU/Cores
+                         #   - If the -np option is also provided the processes will be spawned
+                         #     on the hosts in an identical round-robin fashion as when using the
+                         #     -machinefile option.
+                         #   - If the -np option is ommitted the total number of processes will be the
+                         #     sum of host CPU/Cores specified.
+  -printpids             # Print process IDs for each MPI rank.
+
+Simulation Parameter options:
+  -param <name> <value>  # Set global parameter.
+
+See the Users Guide for complete information.
+
